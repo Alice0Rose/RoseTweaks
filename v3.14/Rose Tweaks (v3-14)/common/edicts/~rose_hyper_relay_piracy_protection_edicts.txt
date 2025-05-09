@@ -1,0 +1,32 @@
+rose_hyper_relay_piracy_protection = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = 20
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = 20
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		local_trade_protection_add = 100000
+	}
+
+	prerequisites = {
+		"tech_hyper_relays"
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+		modifier = {
+			should_ai_focus_on_trade = yes
+			factor = 5
+		}
+	}
+}

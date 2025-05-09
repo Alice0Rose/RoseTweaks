@@ -1,0 +1,30 @@
+trait_rose_nanotech = {
+	icon = "gfx/interface/icons/traits/trait_rose_nanotech.dds"
+	cost = 0
+	category = robotic
+	initial = no
+	randomized = no
+	allowed_archetypes = { ROBOT MACHINE }
+
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
+	modifier = {
+		army_attack_health_mult = 3
+		army_defense_health_mult = 3
+		army_damage_mult = 1
+		army_morale_damage_mult = 0.5
+		pop_housing_usage_mult = -0.5
+	}
+
+	custom_tooltip = trait_rose_nanotech_tt
+
+	slave_cost = {
+		energy = 750
+	}
+}

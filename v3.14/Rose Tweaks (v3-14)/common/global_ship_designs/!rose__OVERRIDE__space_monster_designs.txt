@@ -1,0 +1,187 @@
+# Large Space Amoeba w/ warp
+ship_design = {
+	name = "NAME_Great_Space_Organism"
+	ship_size = space_amoeba_mother
+	hide_size = yes
+	upgrades_to = "NAME_rose_Colossal_Space_Organism_Blue"
+	newborn_ship_design = "NAME_Small_Space_Organism_Blue"
+
+	section = {
+		template = "space_amoeba_large_beige_blue"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT_BIO"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "BIO_AUTO_REPAIR"
+		}
+	}
+	required_component="BIO_DRIVE"
+}
+
+# Large Space Amoeba
+ship_design = {
+	name = "NAME_Large_Space_Organism_Blue"
+	ship_size = space_amoeba_mother
+	hide_size = yes
+	upgrades_to = "NAME_rose_Colossal_Space_Organism_Blue"
+	newborn_ship_design = "NAME_Small_Space_Organism_Blue"
+	creature_designer_template = yes
+
+	section = {
+		template = "space_amoeba_large_beige_blue"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT_BIO"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "BIO_AUTO_REPAIR"
+		}
+	}
+
+	required_component="BIO_DRIVE"
+	required_component="BIO_PROPULSION_1_CRUISER"
+	required_component="BIO_SENSORS"
+	required_component="NEUROCHIPS_SWARM_DEFAULT"
+}
+
+# Large Space Amoeba
+ship_design = {
+	name = "NAME_Large_Space_Organism_Teal"
+	ship_size = space_amoeba_mother
+	hide_size = yes
+	upgrades_to = "NAME_rose_Colossal_Space_Organism_Blue"
+	newborn_ship_design = "NAME_Small_Space_Organism_Teal"
+
+	section = {
+		template = "space_amoeba_large_yellow_teal"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT_BIO"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "BIO_AUTO_REPAIR"
+		}
+	}
+
+	required_component="BIO_DRIVE"
+}
+
+# Large Space Amoeba
+ship_design = {
+	name = "NAME_Large_Space_Organism_Orange"
+	ship_size = space_amoeba_mother
+	hide_size = yes
+	upgrades_to = "NAME_rose_Colossal_Space_Organism_Blue"
+	newborn_ship_design = "NAME_Small_Space_Organism_Orange"
+
+	section = {
+		template = "space_amoeba_large_black_orange"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT_BIO"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "BIO_AUTO_REPAIR"
+		}
+	}
+
+	required_component="BIO_DRIVE"
+}
+
+# Large Space Amoeba
+ship_design = {
+	name = "NAME_Large_Space_Organism_Zebra"
+	ship_size = space_amoeba_mother
+	hide_size = yes
+	upgrades_to = "NAME_rose_Colossal_Space_Organism_Blue"
+	newborn_ship_design = "NAME_Small_Space_Organism_Zebra"
+
+	section = {
+		template = "space_amoeba_large_zebra_blue"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT_BIO"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "BIO_AUTO_REPAIR"
+		}
+	}
+
+	required_component="BIO_DRIVE"
+}

@@ -1,0 +1,8 @@
+rose_nanite_machine_world = { 
+	icon = "gfx/interface/icons/planet_modifiers/pm_rose_nanite_machine_world.dds"
+	planet_jobs_produces_mult = 0.10
+	pop_housing_usage_mult = -0.15
+	planet_max_buildings_add = 6
+	job_replicator_add = 1
+	planet_resettlement_unemployed_destination_mult = 0.75
+}

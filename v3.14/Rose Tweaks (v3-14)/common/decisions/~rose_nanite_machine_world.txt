@@ -1,0 +1,56 @@
+decision_rose_nanite_machine_world = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_rose_nanite_machine_world
+	enactment_time = 1800
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 10000
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = { has_ascension_perk = ap_machine_worlds }
+		
+		is_inside_border = from
+		
+		is_planet_class = pc_nanotech
+		
+		NOT = { has_modifier = rose_nanite_machine_world }
+	}
+
+ 	abort_trigger = {		
+		OR = {
+			# If the colony dies or is lost control of
+			NAND = {
+				is_colony = yes
+				exists = owner
+				exists = controller
+				controller = { is_same_value = prev.owner }
+			}
+		
+			# If the planet stops being a nanite world
+			NOT = { is_planet_class = pc_nanotech }
+		}
+ 	}
+
+	effect = {
+		custom_tooltip = decision_rose_nanite_machine_world_effects
+		
+		hidden_effect = {
+			# Adds nanite machine world modifier to planet
+			add_modifier = {
+				modifier = rose_nanite_machine_world
+				years = -1
+			}
+		}	
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}

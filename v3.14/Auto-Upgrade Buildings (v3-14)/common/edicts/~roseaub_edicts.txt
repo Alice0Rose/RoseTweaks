@@ -1,0 +1,15 @@
+roseaub_enable_auto_upgrading = {
+	length = -1
+	icon = "GFX_building_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

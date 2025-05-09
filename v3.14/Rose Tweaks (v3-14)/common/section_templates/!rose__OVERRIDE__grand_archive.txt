@@ -1,0 +1,60 @@
+######################
+# Mutations Sections #
+######################
+
+ship_section_template = {
+	key = "mutation_section"
+	should_draw_components = no
+
+	fits_on_slot = mutations
+	entity = empty_section_entity
+	icon = "GFX_ship_part_core_mid"
+
+	compatible_with_all_ship_sizes = yes
+
+	component_slot = {
+		name = "ANY_1"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_2"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_3"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_4"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_5"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_6"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_7"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_8"
+		template = "invisible_any"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "ANY_9"
+		template = "invisible_any"
+		locatorname = "root"
+	}	
+}

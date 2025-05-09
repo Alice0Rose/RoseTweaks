@@ -1,0 +1,259 @@
+# Machine World
+col_mac = {
+	icon = GFX_colony_type_urban
+
+	potential = {
+		uses_district_set = machine_world
+		is_capital = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	planet_modifier = {
+		planet_district_industrial_build_speed_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				NOT = { has_valid_civic = civic_machine_servitor }
+			}
+			is_planet_class = pc_machine
+		}
+		modifier = {
+			planet_district_machine_coordination_build_speed_mult = 0.25
+		}
+	}
+
+	# Triggered to get the tooltip to display in a sensible way
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_district_mining_uncapped_build_speed_mult = 0.25
+			planet_district_generator_uncapped_build_speed_mult = 0.25
+			planet_jobs_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness_low
+			has_designation = col_mac
+		}
+		modifier = {
+			add = 10
+			num_sapient_pops < 10
+		}
+	}
+}
+
+# Machine World Foundry
+col_mac_foundry = {
+	icon = GFX_colony_type_foundry
+
+	potential = {
+		uses_district_set = machine_world
+		is_capital = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	custom_tooltip = col_foundry_custom
+	planet_modifier = {
+		planet_district_industrial_build_speed_mult = 0.25
+		planet_metallurgists_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_mac_foundry
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_industrial
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+			}
+		}
+		modifier = {
+			add = -5
+			OR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+		}
+		modifier = {
+			add = 11
+			has_designation = col_mac_factory
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = alloys value < 0 }
+				has_monthly_income = { resource = consumer_goods value >= 0 }
+			}
+		}
+	}
+}
+
+# Machine World Factory
+col_mac_factory = {
+	icon = GFX_colony_type_factory
+
+	potential = {
+		uses_district_set = machine_world
+		owner = { country_uses_consumer_goods = yes }
+		is_capital = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	custom_tooltip = col_factory_custom
+	planet_modifier = {
+		planet_district_industrial_build_speed_mult = 0.25
+		planet_artisans_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_mac_factory
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_industrial
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+		}
+		modifier = {
+			add = -5
+			OR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+			}
+		}
+		modifier = {
+			add = 11
+			has_designation = col_mac_foundry
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = consumer_goods value < 0 }
+				has_monthly_income = { resource = alloys value >= 0 }
+			}
+		}
+	}
+}
+
+# nanotech world
+col_nanotech_world = {
+	icon = GFX_colony_type_fringe
+
+	potential = {
+		is_planet_class = pc_nanotech
+		is_capital = no
+		owner = { has_active_tradition = tr_nanotech_3 }
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.35
+		planet_buildings_upkeep_mult = 0.1
+		planet_jobs_produces_mult = -0.25
+		planet_pop_assembly_mult = 0.1
+		planet_pops_robotics_upkeep_mult = -0.25
+	}
+
+	# Greater Good GalCom Resolution Bonus
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		base = 5
+	}
+}

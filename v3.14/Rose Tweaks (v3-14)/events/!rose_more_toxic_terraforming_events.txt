@@ -1,0 +1,41 @@
+namespace = rose_more_toxic_terraforming
+
+event = {
+	id = rose_more_toxic_terraforming.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_system = {
+			if = {
+				limit = { host_has_dlc = "Toxoids Species Pack" }
+				every_system_planet = {
+					limit = {
+						is_planet_class = pc_toxic
+						NOR = {
+							has_deposit = d_nanites_deposit
+							has_anomaly = yes
+							has_modifier = toxic_terraforming_candidate
+						}
+						planet_size > 9
+						planet_size < 31
+					}
+					random_list = {
+						100 = {}
+						15 = { #Detox only gives you this. About 50 planets in a huge galaxy
+							add_modifier = { modifier = toxic_terraforming_candidate }
+							set_planet_flag = toxic_terraforming_candidate
+							complex_trigger_modifier = {
+								trigger = check_galaxy_setup_value
+								parameters = {
+									setting = habitable_worlds_scale
+								}
+								mode = factor
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

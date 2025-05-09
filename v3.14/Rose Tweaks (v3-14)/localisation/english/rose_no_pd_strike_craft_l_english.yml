@@ -1,0 +1,18 @@
+﻿l_english:
+ ROSE_NO_PD_LARGE_SCOUT_HANGAR_1: "$SCOUT_HANGAR_1$£military_power£"
+ ROSE_NO_PD_LARGE_SCOUT_HANGAR_1_DESC: "$SCOUT_HANGAR_1_DESC$\n\n(No Point Defense Version: Ignores other fighters and focuses only on enemy ships.)"
+ 
+ ROSE_NO_PD_STRIKE_CRAFT_HANGAR_1: "$STRIKE_CRAFT_HANGAR_1$£military_power£"
+ ROSE_NO_PD_STRIKE_CRAFT_HANGAR_1_DESC: "$STRIKE_CRAFT_HANGAR_1_DESC$\n\n(No Point Defense Version: Ignores other fighters and focuses only on enemy ships.)"
+
+ ROSE_NO_PD_STRIKE_CRAFT_HANGAR_2: "$STRIKE_CRAFT_HANGAR_2$£military_power£"
+ ROSE_NO_PD_STRIKE_CRAFT_HANGAR_2_DESC: "$STRIKE_CRAFT_HANGAR_2_DESC$\n\n(No Point Defense Version: Ignores other fighters and focuses only on enemy ships.)"
+
+ ROSE_NO_PD_STRIKE_CRAFT_HANGAR_3: "$STRIKE_CRAFT_HANGAR_3$£military_power£"
+ ROSE_NO_PD_STRIKE_CRAFT_HANGAR_3_DESC: "$STRIKE_CRAFT_HANGAR_3_DESC$\n\n(No Point Defense Version: Ignores other fighters and focuses only on enemy ships.)"
+ 
+ ROSE_NO_PD_STRIKE_CRAFT_SKRAND: "$STRIKE_CRAFT_SKRAND$£military_power£"
+ ROSE_NO_PD_STRIKE_CRAFT_SKRAND_DESC: "$STRIKE_CRAFT_SKRAND_DESC$\n\n(No Point Defense Version: Ignores other fighters and focuses only on enemy ships.)"
+ 
+ ROSE_NO_PD_ARCHAEO_STRIKECRAFT: "$ARCHAEO_STRIKECRAFT$£military_power£"
+ ROSE_NO_PD_ARCHAEO_STRIKECRAFT_DESC: "$ARCHAEO_STRIKECRAFT_DESC$\n\n(No Point Defense Version: Ignores other fighters and focuses only on enemy ships.)"

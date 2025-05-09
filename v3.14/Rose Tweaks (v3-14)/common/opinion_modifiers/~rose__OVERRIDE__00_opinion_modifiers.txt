@@ -1,0 +1,31 @@
+opinion_fallen_wannabe = {
+	opinion = {
+		base = -10
+		
+		modifier = {
+			factor = 0.2
+			from = {
+				NOT = { 
+					has_ascension_perk = ap_cosmogenesis
+				}
+			}
+		}	
+	}
+	accumulative = yes
+}
+
+opinion_fallen_wannabe_materialist = {
+	opinion = {
+		base = -20
+	
+		modifier = {
+			factor = 0.2
+			from = {
+				NOT = { 
+					has_ascension_perk = ap_cosmogenesis
+				}
+			}
+		}
+	}
+	accumulative = yes
+}

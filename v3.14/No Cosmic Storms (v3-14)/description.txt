@@ -1,0 +1,11 @@
+[h1]Features[/h1]
+This mod prevents cosmic storms from spawning naturally, regardless of galaxy generation settings (scripted storms should still spawn).
+
+The reason I made a mod for this is because the mid-game storm settings are currently broken in the galaxy creation screen, so you can't properly disable storms without a mod :(
+
+[h1]Compatibility[/h1]
+This mod overwrites "cstorms.905" in "cosmic_storms_events_1.txt". That's all ^-^
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

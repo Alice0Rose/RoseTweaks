@@ -1,0 +1,163 @@
+namespace = rose_synthetic_choice
+
+# Fired by: monthly check during situation_digitization situation
+situation_event = { 
+	id = rose_synthetic_choice.1
+	title = rose_synthetic_choice.1.name
+	desc = rose_synthetic_choice.1.desc
+	picture = GFX_evt_synth_situation
+	situation = this
+
+	hide_window = no
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = { 
+			has_situation_flag = rose_synth_choose_portrait_happened
+			has_situation_flag = situation_digitization_pause
+		}
+		situation_progress >= 400
+	}
+
+	# Adds situation pause
+	immediate = {
+		set_situation_flag = situation_digitization_pause
+	}
+
+	# Option to keep current portrait
+	option = {
+		name = rose_synthetic_choice.1.a
+		owner = {
+			set_country_flag = rose_synth_chose_portrait_original
+		
+			owner_main_species = {
+				# Saves original species to be used for name and possibly portrait when ascending
+				save_global_event_target_as = rose_synthetic_choice_original_species@root.owner
+			}
+		}
+	}
+	
+	# Option to match top robot species
+	option = {
+		name = rose_synthetic_choice.1.b
+		trigger = {
+			owner = {
+				# Check country has a robot species
+				count_owned_pop = {
+					count > 0
+					limit = {
+						is_robot_pop = yes
+					} 
+				}	
+			}
+		}
+			
+		owner = {
+			set_country_flag = rose_synth_chose_portrait_robots
+			
+			# Gets the species of the largest owned robot pop
+			ordered_owned_species = {
+				limit = { 
+					is_robotic = yes 
+				}
+				position = 0
+				order_by = prev.trigger:num_traits
+				inverse = no
+				
+				# Saves largest owned robot pop portrait to be set as main species portrait
+				save_global_event_target_as = rose_synthetic_choice_largest_robot_pop@root.owner
+			}
+		}
+	}
+	
+	# Option to take a new form
+	option = {
+		name = rose_synthetic_choice.1.c
+		owner = {
+			set_country_flag = rose_synth_chose_portrait_new
+		}
+	}
+	
+	# Removes situation pause
+	after = {
+		set_situation_flag = rose_synth_choose_portrait_happened
+		remove_situation_flag = situation_digitization_pause
+	}
+}
+
+# Fired by: start of situation_synthetic_fertility_synthesization situation stage 1
+situation_event = { 
+	id = rose_synthetic_choice.2
+	title = rose_synthetic_choice.2.name
+	desc = rose_synthetic_choice.2.desc
+	picture = GFX_evt_synth_situation
+	situation = this
+
+	hide_window = no
+	is_triggered_only = yes
+
+	# Adds situation pause
+	immediate = {
+		set_situation_flag = situation_digitization_pause
+	}
+
+	# Option to keep current portrait
+	option = {
+		name = rose_synthetic_choice.2.a
+		owner = {
+			set_country_flag = rose_synth_chose_portrait_original
+		
+			owner_main_species = {
+				# Saves original species to be used for name and possibly portrait when ascending
+				save_global_event_target_as = rose_synthetic_choice_original_species@root.owner
+			}
+		}
+	}
+	
+	# Option to match top robot species
+	option = {
+		name = rose_synthetic_choice.2.b
+		trigger = {
+			owner = {
+				# Check country has a robot species
+				count_owned_pop = {
+					count > 0
+					limit = {
+						is_robot_pop = yes
+					} 
+				}	
+			}
+		}
+			
+		owner = {
+			set_country_flag = rose_synth_chose_portrait_robots
+			
+			# Gets the species of the largest owned robot pop
+			ordered_owned_species = {
+				limit = { 
+					is_robotic = yes 
+				}
+				position = 0
+				order_by = prev.trigger:num_traits
+				inverse = no
+				
+				# Saves largest owned robot pop portrait to be set as main species portrait
+				save_global_event_target_as = rose_synthetic_choice_largest_robot_pop@root.owner
+			}
+		}
+	}
+	
+	# Option to take a new form
+	option = {
+		name = rose_synthetic_choice.2.c
+		owner = {
+			set_country_flag = rose_synth_chose_portrait_new
+		}
+	}
+	
+	# Removes situation pause
+	after = {
+		set_situation_flag = rose_synth_choose_portrait_happened
+		remove_situation_flag = situation_digitization_pause
+	}
+}

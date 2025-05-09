@@ -1,0 +1,88 @@
+namespace = rose_remodel_ruler
+
+# Queues saving original ruler event
+country_event = {
+	id = rose_remodel_ruler.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {			
+		country_event = { id = rose_remodel_ruler.2 days = 1 }
+	}
+}
+
+# Saves original ruler appearance
+country_event = {
+	id = rose_remodel_ruler.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Creates a hidden species to store the name, gender, and portrait of the starting ruler
+		create_species = {
+			name = ruler
+			plural = "x"
+			class = random
+			portrait = random
+			traits = {  }
+			sapient = yes
+			is_mod = no
+			immortal = no
+			can_be_modified = no
+			gender = ruler
+			clear_parent_species_link = yes
+			extra_trait_points = 0
+			allow_negative_traits = no
+			namelist = random
+			effect = {
+				set_species_flag = rose_remodel_ruler_species@root
+				
+				change_species_characteristics = {
+					portrait = root.ruler
+				}
+			}
+		}
+	}
+}
+
+# Remodels leader
+country_event = {
+	id = rose_remodel_ruler.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Finds the starting ruler data for this country
+		random_galaxy_species = {
+			limit = {
+				has_species_flag = rose_remodel_ruler_species@root
+			}
+
+			save_event_target_as = rose_remodel_ruler_species
+		}
+
+		if = {
+			# Checks that saved starting ruler data exists
+			limit = {
+				exists = event_target:rose_remodel_ruler_species
+			}
+
+			# Updates the current ruler to match the saved starting ruler data
+			ruler = {
+				change_leader_portrait = event_target:rose_remodel_ruler_species
+				
+				set_name = event_target:rose_remodel_ruler_species
+				
+				event_target:rose_remodel_ruler_species = {			
+					switch = {
+						trigger = species_gender
+						female = { root.ruler = { set_gender = female } }
+						male = { root.ruler = { set_gender = male } }
+						indeterminable = { root.ruler = { set_gender = indeterminable } }
+						default = {}
+					}
+				}
+			}
+		}
+	}
+}

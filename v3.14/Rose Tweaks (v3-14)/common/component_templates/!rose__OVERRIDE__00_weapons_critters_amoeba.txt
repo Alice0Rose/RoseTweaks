@@ -1,0 +1,92 @@
+@attack_range = 10
+@engagement_range = 100
+@launch_time = 2
+@count = 8
+@regen = 0.5
+
+# ####################
+# Critter Weapons - Space Amoeba
+# ####################
+
+@critter_cost_value = 35
+
+
+### Standard Amoeba Weapon
+
+weapon_component_template = {
+	key = "LARGE_SPACE_AMOEBA_WEAPON"
+	size = large
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "space_amoeba_weapon"
+	tags = { weapon_type_energy weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor }
+	component_set = "SPACE_AMOEBA_WEAPON"
+	size_restriction = {
+		reanimated_space_amoeba_mother
+		reanimated_space_amoeba
+		reanimated_space_amoeba_centenarian
+		space_amoeba_mother
+		space_amoeba
+		space_amoeba_centenarian
+		rose_space_amoeba_centurion
+		rose_reanimated_space_amoeba_centurion
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = { is_design_space_fauna = no }
+			alloys = @critter_cost_value
+		}
+		cost = {
+			trigger = { is_design_space_fauna = yes }
+			food = 304
+			mult = @fauna_cost_scaling
+		}
+		upkeep = {
+			trigger = { is_design_space_fauna = yes }
+			energy = 0.48
+			food = 0.46
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_SPACE_AMOEBA_WEAPON"
+	size = small
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "small_space_amoeba_weapon"
+	tags = { weapon_type_energy weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor weapon_type_space_fauna }
+	component_set = "SPACE_AMOEBA_WEAPON"
+	size_restriction = {
+		reanimated_space_amoeba_mother
+		reanimated_space_amoeba
+		reanimated_space_amoeba_centenarian
+		space_amoeba_mother
+		space_amoeba
+		space_amoeba_centenarian
+		rose_space_amoeba_centurion
+		rose_reanimated_space_amoeba_centurion
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = { is_design_space_fauna = no }
+			alloys = @critter_cost_value
+		}
+		cost = {
+			trigger = { is_design_space_fauna = yes }
+			food = 76
+			mult = @fauna_cost_scaling
+		}
+		upkeep = {
+			trigger = { is_design_space_fauna = yes }
+			energy = 0.12
+			food = 0.11
+		}
+	}
+}

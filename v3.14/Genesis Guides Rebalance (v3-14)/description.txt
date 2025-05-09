@@ -1,0 +1,11 @@
+[h1]Features[/h1]
+This mod changes Genesis Guides to reward unity scaling with your monthly production, instead of a fixed multiple of 500. This means Genesis Guides won't be as powerful for unity generation if you don't have much unity generation to begin with. With this mod, it was scale with your unity between a minimum of 1/5 the vanilla value and a max of the vanilla value.
+
+The reason for this rebalance is because Genesis Guides has been extremely powerful since its release with Machine Age, giving unity, pops, and influence for barely any downside. This has made it a staple of most meta-builds and that hurts build diversity, which is one of the greatest strengths of Stellaris in my opinion :D
+
+[h1]Compatibility[/h1]
+This mod overwrites "cyber.7000", "cyber.7001", and "cyber.7020" in "machine_age_events.txt". That's all ^-^
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

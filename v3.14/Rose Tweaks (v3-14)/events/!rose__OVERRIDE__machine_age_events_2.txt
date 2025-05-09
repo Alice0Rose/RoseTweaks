@@ -1,0 +1,12 @@
+namespace = cybernetics
+
+event = {
+	id = cybernetics.5053
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Disabled because it is replaced with the rose_scaling_nanite_harvester_upgrade.1 event
+	}
+}

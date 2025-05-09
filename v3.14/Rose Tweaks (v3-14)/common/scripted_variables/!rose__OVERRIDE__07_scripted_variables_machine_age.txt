@@ -1,0 +1,7 @@
+@paperclip_quota_civilian = 8000
+@paperclip_quota_cadet = 8000
+@paperclip_quota_ensign = 8000
+@paperclip_quota_captain = 8000
+@paperclip_quota_commodore = 8000
+@paperclip_quota_admiral = 8000
+@paperclip_quota_grand_admiral = 8000

@@ -1,0 +1,127 @@
+[h1]Fixes and Tweaks:[/h1]
+[h3]Fleet and Ships[/h3]
+- Default command limit increased to 51
+- Command limit techs give +50 instead of +25
+- Command limit repeatable tech gives +50 instead of +10
+- Galactic Force Projection gives +200 command limit instead of +50
+- Increases Juggernaut shipyard number to 6 
+- Unlock events for psionic tech are more likely to happen
+- Reduces power consumption of Psionic Shields slightly
+- Buffed End of the Cycle with Hull and Armor regen
+- Psionic Covenant utility components are buffed to be worth using and limited to one per ship
+- AI empires not summon annoying Dimensional Fleets
+- AI empires will wait to attack Cetana's convoys, giving players more of a chance
+- Removed Quantum Catapult windup penalty
+- Fixed Voidworm L Spikespores having alloy upkeep
+- Energy upkeep and food/mineral upkeep of Space Fauna are swapped (less energy upkeep, more food/mineral upkeep)
+- Adds a repeatable tech with 3 levels that gives +1 mutation slot to space fauna
+- Adds versions of all strike craft (marked with an explosion icon) that ignoring other strike craft
+- Adds large space amoeba size
+
+
+[h3]Origins[/h3]
+- Slingshot to the Stars starts with the Quantum Catapult on a Neutron Star instead of a Pulsar (won't remove your shields)
+- Here Be Dragons "already ready" wait time reduced to 360 days
+- Here Be Dragons ascension trigger includes the 3 Machine ascension paths
+- AI will not randomly select origins that spawn other empires
+- Under One Rule localization fix and "The Fall" randomness reduction
+
+
+[h3]Species and Leaders[/h3]
+- Adds a unique icon for Eternal Machine
+- Lifespan Repeatable gives +10 years instead of +5
+- Gives Synthetically ascending empires the choice to keep their portrait when ascending and the ability to choose their new name
+- Modifies lifespan traits to scale with Lithoids and reallows Psychological Infertility
+- Targeted Gene Expressions tech gives +1 trait point and pick
+- Fixed Clone Army Origin not being able to modify pops after Synthetically Ascending
+- Allows you to choose your starting ruler's ethic
+- Improved and new Genetic traits
+- Synthetic Virtual pops can be lathed :O
+- Luminary Ascension traits buffed
+- Aquatics w/ Hydrocentric buffed
+
+
+[h3]Country-Related[/h3]
+- Oligarchic governments will let you choose any of your leaders
+- Disables country starting events like the cultists (they all just suck >:C)
+- Shared Burdens and Worker Cooperative increase happiness and reduce empire size from pops by 5% (yay socialism :3)
+- Shadow Council gives +10% council agenda speed
+- Crusader Spirit gives +1 unity from soldiers
+- Adds an edict that removes piracy for your empire once you have Hyper Relays researched
+- Gives Synthetically ascended empires access to all machine army techs
+- Re-allows taking Defender of the Galaxy if you have either crisis perk (or vise versa), but disables the +200 opinion bonus if you decide to be evil :O
+- Unlocks Sovereign Guardianship for all but Fanatic Pacifists
+- Cleaner Habitat Orbital tooltip
+- Psionic Ascension tech agenda now unlocks Zro distillation
+- Manually choosing a Shroud Patron is less dangerous for your leaders
+- Empire Size scaling for technology is reduced to 0.75 to 1 with traditions
+- Mercenary Enclaves cannot be created by AI empires (reduces spam and lag)
+- Added focused Mutual Aid policies for minerals and food (yay more socialism !!!)
+- Diplomatic subjugation acceptance bonus from power difference can be much higher
+- Virtual Synthetic ascension gives -15% empire size from pops
+- Sovereign civics won't shift you to opposite ethics or incompatible government types
+- Factions now form after 1 year and don't require contact with other empires (Parliamentary System now forms them after 1 day)
+- Buffed Aptitude Tradition and agenda
+- AI's will not propose secret fealty (yay no more spam!)
+- Executive Vigor ascension perk gives +2 sector size
+- Detox ascension perk gives -33% terraforming cost (and more toxic terraforming candidates exist)
+- Holy Covenant "A Union of Faith" perk gives +10% organic pop growth and +5% robotic pop assembly
+- Climate Restoration is moved from T4 to T3 and is more likely to show up if you have the Adaptability tradition
+- Obsessive Directive no longer scales with difficulty
+- Removed Preferred Leader Class modifier from elections
+- Buffed Technocracy (+0.05 science for researchers from council position and +1 unity to researchers)
+- AI's should prioritize ascending
+- Buffed Idyllic Bloom (starts with Bloomed)
+- Removed Advanced AI personality preference
+
+
+[h3]Planet-Related[/h3]
+- Adds a decision to instantly resettles all pops from a colony, destroy its orbital ring, and then abandons it
+- FE buildings can be unlocked to be researched by taking FE or AE planets (1+ planets for T1 buildings, 3+ for T2, 5+ for T3, 7+ for T4, T5 is reserved for Cosmogenesis)
+- Increases auto-migration restriction from devastation from 10% to 33%
+- Buffed Gaia worlds to have +15% pop output, +15% pop happiness, +10% growth/assembly, and +3 building slots
+- Building slots are shown as a planetary feature allowing fine tuning of building slots
+- Trade Capital habitats get -1 Clerk and +1 Trader in habitation districts
+- Adds a "Create Orbital Ring" decision
+- Adds "Redevelop Colony" decision to quickly redo planets
+
+
+[h1]New Features:[/h1]
+[h3]Ruler Restoration Initiative Edict[/h3]
+- Adds an edict that lets you copy the appearance of your starting ruler onto any future rulers 
+- It will only copy the phenotype of your starting ruler due to technical limitations, so results may vary :/
+
+
+[h3]Universal Assimilation[/h3]
+- Adds the Tier 4 Society research Universal Assimilation
+- Gives you access to an assimilation similar (but slower) to the one Synthetic Ascension has which turns pops assimilated into your main species
+- Unavailable to genocidal empires
+- Assimilating to/from gestalt pops requires additional tech or specific ascensions
+
+
+[h3]System Prospecting Tooltip[/h3]
+- When hovering over a system, if you have the necessary tech/traditions and it is a valid system, a tooltip will show you Dyson Swarm Potential and Nanite Harvester Potential
+[/list]
+
+
+[h3]Reworked Nanotech Ascension[/h3]
+- Minor fixes to the Nanite Swarmer and Nanite Interdictor
+- Adds an Artillery section to the Nanite Interdictor
+- Adds the Nanite Mothership to act as a larger nanite battleship equivalent
+- Subsuming a planet gives a clump sum of nanites based on the planet size upon completion and reduces devastation on the planet
+- Changes the basic Nanite World designation to reduce job output in exchange for building output, pop assembly speed, and robotic pop upkeep
+- Adds all the normal designation types for Nanite worlds and removes Machine World designations from them 
+- Allows you to turn your capital into a Nanite World C:
+- Nanite Harvester upgrade frequency scales with mid/end game date settings
+- Nanotech L1 tradition effect replaced with giving access to Nanite Conversion Center build which converts all mineral/food output on a planet to nanites
+- Nanotech tradition finisher gives all pops the Nanotech Enhancements trait, greatly increasing army health and damage while reducing pop housing usage, and gives leaders immortality and various military-based bonuses
+- Nanite Worlds can be enhanced with Machine World/Ecumenopolis decision after taking AP
+
+
+[h3]L-Cluster Lockdown Project[/h3]
+- Adds a special project to the L-Gate in Terminal Egress if a country has control of Terminal Egress and at least one other system with an L-Gate
+- Finishing this project lets the country choose one of the L-Gates under their control to leave open, and then destroys all other L-Gates
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

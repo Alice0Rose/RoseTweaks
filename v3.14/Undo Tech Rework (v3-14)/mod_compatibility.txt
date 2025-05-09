@@ -1,0 +1,29 @@
+common\defines\00_defines.txt
+- EMPIRE_SIZE_TECH_COST_PENALTY
+
+common\pop_jobs\01_ruler_jobs.txt
+- head_researcher
+
+common\pop_jobs\02_specialist_jobs.txt
+- researcher
+
+common\pop_jobs\04_gestalt_jobs.txt
+- brain_drone
+- calculator
+
+common\pop_jobs\11_astral_planes_jobs.txt
+- astral_researcher
+- astral_drone
+- astral_unit
+
+common\pop_jobs\12_machine_age_jobs.txt
+- nanotech_research_unit
+- nanotech_researcher
+
+common\static_modifiers\03_static_modifiers_leviathans.txt
+- curator_insight
+
+common\technology\00_phys_tech.txt
+- tech_administrative_ai
+- tech_sapient_ai
+- tech_positronic_implants

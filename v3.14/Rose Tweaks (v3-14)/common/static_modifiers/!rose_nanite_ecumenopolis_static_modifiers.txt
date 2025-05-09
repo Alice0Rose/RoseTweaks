@@ -1,0 +1,7 @@
+rose_nanite_ecumenopolis = { 
+	icon = "gfx/interface/icons/planet_modifiers/pm_rose_nanite_ecumenopolis.dds"
+	planet_jobs_produces_mult = 0.20
+	planet_pop_assembly_mult = 0.15
+	planet_max_buildings_add = 6
+	planet_resettlement_unemployed_destination_mult = 0.75
+}

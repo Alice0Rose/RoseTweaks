@@ -1,0 +1,4 @@
+﻿l_english:
+ decision_roseaub_cancel_upgrade: "Cancel Auto-Upgrade"
+ decision_roseaub_cancel_upgrade_desc: "Activation cancels the currently auto-upgrading building and is best used after disabling the auto-upgrade edict to ensure another auto-upgrade doesn't immediately take the old one's place."
+ decision_roseaub_cancel_upgrade_effects: "Cancels the currently auto-upgrading building on §Y[This.GetName]§!." 

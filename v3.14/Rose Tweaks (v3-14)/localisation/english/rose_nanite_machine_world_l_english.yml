@@ -1,0 +1,9 @@
+﻿l_english:
+ decision_rose_nanite_machine_world: "Build Machine World Infrastructure"
+ decision_rose_nanite_machine_world_desc: "Augments this Nanite World with the infrastructure of a Machine World, giving us the benefits of both world types."
+ decision_rose_nanite_machine_world_effects: "- $mod_planet_jobs_produces_mult$: §G+10%§!\n- $MOD_POP_HOUSING_USAGE_MULT$: §G-15%§!\n- $MOD_PLANET_MAX_BUILDINGS_ADD$: §G+6§!\n- $mod_job_replicator_add$: §G+1§!\n- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+75%§!"
+ 
+ rose_nanite_machine_world: "Machine World Infrastructure"
+ rose_nanite_machine_world_desc: "This Nanite World has been augmented with the infrastructure of a Machine World."
+ 
+ rose_nanite_machine_world_ap: "Allows using the §YBuild Machine World Infrastructure§! decision on Nanite Worlds."

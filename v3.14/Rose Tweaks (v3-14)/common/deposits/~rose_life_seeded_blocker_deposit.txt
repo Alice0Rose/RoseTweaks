@@ -1,0 +1,23 @@
+d_rose_untamed_nature = {
+	time = 360
+	icon = d_dense_jungle
+
+	category = deposit_cat_blockers
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_max_buildings_add = -3
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 3000
+		}
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}

@@ -1,0 +1,151 @@
+﻿l_english:
+ ### Capital Buildings ###
+ roseaub_capital: "Auto-Upgrading: $building_colony_shelter$"
+ roseaub_major_capital: "Auto-Upgrading: $building_capital$"
+ roseaub_system_capital: "Auto-Upgrading: $building_major_capital$"
+ roseaub_machine_capital: "Auto-Upgrading: $building_deployment_post$"
+ roseaub_machine_major_capital: "Auto-Upgrading: $building_machine_capital$"
+ roseaub_machine_system_capital: "Auto-Upgrading: $building_machine_major_capital$"
+ roseaub_hive_major_capital: "Auto-Upgrading: $building_hive_capital$"
+ roseaub_hab_major_capital: "Auto-Upgrading: $building_hab_capital$"
+ roseaub_hab_system_capital: "Auto-Upgrading: $building_hab_major_capital$"
+ roseaub_resort_major_capital: "Auto-Upgrading: $building_resort_capital$"
+ roseaub_slave_major_capital: "Auto-Upgrading: $building_slave_capital$"
+ roseaub_imperial_capital_FROM_system_capital: "Auto-Upgrading: $building_system_capital$"
+ roseaub_imperial_capital_FROM_hab_system_capital: "Auto-Upgrading: $building_hab_system_capital$"
+ roseaub_imperial_capital_FROM_system_capital_nanotech: "Auto-Upgrading: $building_system_capital_nanotech$"
+ roseaub_imperial_machine_capital_FROM_machine_system_capital: "Auto-Upgrading: $building_machine_system_capital$"
+ roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech: "Auto-Upgrading: $building_machine_system_capital_nanotech$"
+ roseaub_imperial_hive_capital: "Auto-Upgrading: $building_hive_major_capital$"
+ roseaub_capital_nanotech: "Auto-Upgrading: $building_colony_shelter_nanotech$"
+ roseaub_major_capital_nanotech: "Auto-Upgrading: $building_capital_nanotech$"
+ roseaub_system_capital_nanotech: "Auto-Upgrading: $building_major_capital_nanotech$"
+ roseaub_machine_capital_nanotech: "Auto-Upgrading: $building_deployment_post_nanotech$"
+ roseaub_machine_major_capital_nanotech: "Auto-Upgrading: $building_machine_capital_nanotech$"
+ roseaub_machine_system_capital_nanotech: "Auto-Upgrading: $building_machine_major_capital_nanotech$"
+ 
+ ### Pop Assembly Buildings ###
+ roseaub_robot_assembly_complex: "Auto-Upgrading: $building_robot_assembly_plant$"
+ roseaub_machine_assembly_complex: "Auto-Upgrading: $building_machine_assembly_plant$"
+ #roseaub_necrophage_house_of_apotheosis: "Auto-Upgrading: $building_necrophage_elevation_chamber$"
+ 
+ ### Government Buildings ###
+ roseaub_hall_judgment: "Auto-Upgrading: $building_precinct_house$"
+ roseaub_grand_embassy: "Auto-Upgrading: $building_embassy$"
+ roseaub_gaiaseeders_2: "Auto-Upgrading: $building_gaiaseeders_1$"
+ roseaub_gaiaseeders_3: "Auto-Upgrading: $building_gaiaseeders_2$"
+ #roseaub_gaiaseeders_4: "Auto-Upgrading: $building_gaiaseeders_3$"
+ 
+ ### Resource Buildings ###
+ roseaub_food_processing_center: "Auto-Upgrading: $building_food_processing_facility$"
+ roseaub_mineral_purification_hub: "Auto-Upgrading: $building_mineral_purification_plant$"
+ roseaub_energy_nexus: "Auto-Upgrading: $building_energy_grid$"
+ roseaub_bio_reactor_2: "Auto-Upgrading: $building_bio_reactor$"
+ 
+ ### Manufacturing Buildings ###
+ roseaub_foundry_2: "Auto-Upgrading: $building_foundry_1$"
+ roseaub_foundry_3: "Auto-Upgrading: $building_foundry_2$"
+ roseaub_factory_2: "Auto-Upgrading: $building_factory_1$"
+ roseaub_factory_3: "Auto-Upgrading: $building_factory_2$"
+ roseaub_coordinated_fulfillment_center_2: "Auto-Upgrading: $building_coordinated_fulfillment_center_1$"
+ 
+ ### Research Buildings ###
+ roseaub_research_lab_2: "Auto-Upgrading: $building_research_lab_1$"
+ roseaub_research_lab_3: "Auto-Upgrading: $building_research_lab_2$"
+ 
+ ### Trade Buildings ###
+ roseaub_commercial_megaplex: "Auto-Upgrading: $building_commercial_zone$"
+ 
+ ### Amenity Buildings ###
+ roseaub_paradise_dome: "Auto-Upgrading: $building_luxury_residence$"
+ roseaub_communal_housing_large: "Auto-Upgrading: $building_communal_housing$"
+ roseaub_drone_megastorage: "Auto-Upgrading: $building_drone_storage$"
+ roseaub_expanded_warren: "Auto-Upgrading: $building_hive_warren$"
+ roseaub_hyper_entertainment_forum: "Auto-Upgrading: $building_holo_theatres$"
+ roseaub_hospital: "Auto-Upgrading: $building_clinic$"
+ 
+ ### Unity Buildings ###
+ roseaub_heritage_site: "Auto-Upgrading: $building_autochthon_monument$"
+ roseaub_hypercomms_forum: "Auto-Upgrading: $building_heritage_site$"
+ roseaub_bureaucratic_2: "Auto-Upgrading: $building_bureaucratic_1$"
+ roseaub_bureaucratic_3: "Auto-Upgrading: $building_bureaucratic_2$"
+ roseaub_holotemple: "Auto-Upgrading: $building_temple$"
+ roseaub_sacred_nexus: "Auto-Upgrading: $building_holotemple$"
+ roseaub_network_junction: "Auto-Upgrading: $building_uplink_node$"
+ roseaub_system_conflux: "Auto-Upgrading: $building_network_junction$"
+ roseaub_hive_cluster: "Auto-Upgrading: $building_hive_node$"
+ roseaub_hive_confluence: "Auto-Upgrading: $building_hive_cluster$"
+ roseaub_sacrificial_temple_2: "Auto-Upgrading: $building_sacrificial_temple_1$"
+ roseaub_sacrificial_temple_3: "Auto-Upgrading: $building_sacrificial_temple_2$"
+ roseaub_galactic_memorial_2: "Auto-Upgrading: $building_galactic_memorial_1$"
+ roseaub_galactic_memorial_3: "Auto-Upgrading: $building_galactic_memorial_2$"
+ roseaub_simulation_2: "Auto-Upgrading: $building_simulation_1$"
+ roseaub_simulation_3: "Auto-Upgrading: $building_simulation_2$"
+ roseaub_corporate_site: "Auto-Upgrading: $building_corporate_monument$"
+ roseaub_corporate_forum: "Auto-Upgrading: $building_corporate_site$"
+ roseaub_sensorium_2: "Auto-Upgrading: $building_sensorium_1$"
+ roseaub_sensorium_3: "Auto-Upgrading: $building_sensorium_2$"
+ roseaub_organic_paradise: "Auto-Upgrading: $building_organic_sanctuary$"
+ 
+ ### Army Buildings ###
+ roseaub_fortress: "Auto-Upgrading: $building_stronghold$"
+ 
+ ### Event Buildings ###
+ roseaub_crystal_plant_2: "Auto-Upgrading: $building_crystal_plant$"
+ 
+ ### Fallen Empire Buildings ###
+ roseaub_affluence_center: "Auto-Upgrading: $building_affluence_emporium$"
+ roseaub_nourishment_center: "Auto-Upgrading: $building_nourishment_complex$"
+ roseaub_dimensional_fabricator: "Auto-Upgrading: $building_dimensional_replicator$"
+ roseaub_class_4_singularity: "Auto-Upgrading: $building_class_3_singularity$"
+ roseaub_nano_forge: "Auto-Upgrading: $building_micro_forge$"
+ roseaub_fe_dome: "Auto-Upgrading: $building_fe_sky_dome$"
+ roseaub_fe_stronghold: "Auto-Upgrading: $building_fe_fortress$"
+ roseaub_fe_administration_2: "Auto-Upgrading: $building_fe_administration_1$"
+ roseaub_fe_administration_hive_2: "Auto-Upgrading: $building_fe_administration_hive_1$"
+ roseaub_fe_administration_machine_2: "Auto-Upgrading: $building_fe_administration_machine_1$"
+ roseaub_fe_temple_2: "Auto-Upgrading: $building_fe_temple_1$"
+ roseaub_fe_assembly_2: "Auto-Upgrading: $building_fe_assembly_1$"
+ roseaub_fe_clinic_2: "Auto-Upgrading: $building_fe_clinic_1$"
+ roseaub_fe_security_2: "Auto-Upgrading: $building_fe_security_1$"
+ roseaub_fe_market_2: "Auto-Upgrading: $building_fe_market_1$"
+ roseaub_fe_silo_2: "Auto-Upgrading: $building_fe_silo_1$"
+ roseaub_fe_entertainment_2: "Auto-Upgrading: $building_fe_entertainment_1$"
+ roseaub_fe_lab_2: "Auto-Upgrading: $building_fe_lab_1$"
+ roseaub_fe_mine_2: "Auto-Upgrading: $building_fe_mine_1$"
+ 
+ ### First Contact Buildings ###
+ roseaub_capital_FROM_low_tech_capital: "Auto-Upgrading: $building_low_tech_capital$"
+ 
+ ### Astral Planes Buildings ###
+ roseaub_astral_siphon_2: "Auto-Upgrading: $building_astral_siphon_1$"
+ roseaub_astral_siphon_3: "Auto-Upgrading: $building_astral_siphon_2$"
+ 
+ ### Cosmic Storms Buildings ###
+ roseaub_advanced_storm_attraction_center: "Auto-Upgrading: $building_storm_attraction_center$"
+ roseaub_advanced_storm_repellent_center: "Auto-Upgrading: $building_storm_repellent_center$"
+ roseaub_advanced_storm_resistant_production: "Auto-Upgrading: $building_storm_resistant_production$"
+ roseaub_storm_holo_theater: "Auto-Upgrading: $building_storm_summoning_theater$"
+ roseaub_storm_grand_theater: "Auto-Upgrading: $building_storm_holo_theater$"
+ 
+ ### Machine Age Buildings ###
+ roseaub_grand_concert_hall_of_the_mind: "Auto-Upgrading: $building_amphitheater_of_the_mind$"
+ roseaub_grand_battlements_of_steel: "Auto-Upgrading: $building_battlement_of_steel$"
+ roseaub_grand_cathedral_of_toil: "Auto-Upgrading: $building_sanctuary_of_toil$"
+ roseaub_grand_forge_of_the_fellowship: "Auto-Upgrading: $building_forge_of_the_fellowship$"
+ roseaub_the_united_sanctum_of_augmentation: "Auto-Upgrading: $building_the_sanctum_of_augmentation$"
+ #roseaub_lathe_major_capital: "Auto-Upgrading: $building_lathe_capital$"
+ #roseaub_lathe_super_capital: "Auto-Upgrading: $building_lathe_major_capital$"
+ roseaub_nanolab_2: "Auto-Upgrading: $building_nanolab_1$"
+ 
+ ### Grand Archive Buildings ###
+ roseaub_wildlife_ranch_2: "Auto-Upgrading: $wildlife_ranch$"
+ roseaub_wildlife_ranch_3: "Auto-Upgrading: $wildlife_ranch_2$"
+ roseaub_hunting_grounds_2: "Auto-Upgrading: $hunting_grounds$"
+ roseaub_hunting_grounds_3: "Auto-Upgrading: $hunting_grounds_2$"
+ roseaub_wildlife_sanctuary_2: "Auto-Upgrading: $wildlife_sanctuary$"
+ roseaub_wildlife_sanctuary_3: "Auto-Upgrading: $wildlife_sanctuary_2$"
+ roseaub_primal_arena_2: "Auto-Upgrading: $primal_arena$"
+ roseaub_primal_arena_3: "Auto-Upgrading: $primal_arena_2$"
+ roseaub_symbiosis_nexus_2: "Auto-Upgrading: $symbiosis_nexus$"
+ roseaub_symbiosis_nexus_3: "Auto-Upgrading: $symbiosis_nexus_2$"

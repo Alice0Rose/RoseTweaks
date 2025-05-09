@@ -1,0 +1,14 @@
+[h1]Features[/h1]
+This mod prevents crisis empires from using hyper relays. It also adds an edict that empires can enable to prevent their ships from using hyper relays, allowing for more precise control of fleet movement :)
+
+I've found that when fighting crises, especially higher difficulty ones, hyper relays can cause them to teleport into systems right on top of fleets sent to combat them, making them much more difficult to fight. Hyper relays also allow crises to expand much faster than they would normally. This should prevent all of that!
+
+[h1]Compatibility[/h1]
+This mod only overwrites the "relay_bypass" section of "common\Stellaris\common\bypass", so it's pretty unlikely it'll cause issues with any other mods! ^-^
+
+However, it won't prevent modded crisis empires from using hyper relays unless they are specifically added, either to this mod or through a compatibility patch. The following mods have already had their crisis empires added and should be supported by this mod:
+- Gigastructural Engineering
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

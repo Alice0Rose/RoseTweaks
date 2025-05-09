@@ -1,0 +1,17 @@
+	NGameplay = {
+		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.0015	# Per empire size above base
+		COMMAND_LIMIT_MAX										= 10000	# Max value of Command Limit
+		COMMAND_LIMIT_BASE										= 51	# Base value of Command Limit
+	}
+
+	NShip = {
+		QC_WINDUP_SHIP_SIZE					= 15000 # Ship size after which the windup mult will be applied.
+	}
+
+	NAI = {
+		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MULT = 10
+		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MAX = 1000
+		VASSALIZATION_ACCEPTANCE_DISTANCE_MULT = -0.125 # per 1 border distance
+		SECRET_FEALTY_PLEDGE_TERMS_MULTIPLIER = 0 # Multiplied with the disloyalty of a subject. If this is higher, the AI subject is more likely to pledge Secret Fealty
+		CREATURE_DESIGNER_MUTATION_TYPE_PREFERENCES = { 5 2 2 }							# How many mutations of each type the AI attempts to apply ( Offensive, Defensive, Auxiliary )
+	}

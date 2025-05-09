@@ -1,0 +1,18 @@
+namespace = rose_nanite_ecumenopolis
+
+# Removes nanite ecumenopolis modifier if no longer on a nanite world
+planet_event = {
+	id = rose_nanite_ecumenopolis.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_modifier = rose_nanite_ecumenopolis
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	immediate = {
+		remove_modifier = rose_nanite_ecumenopolis
+	}
+}

@@ -1,0 +1,35 @@
+make_spiritualist_1 = {
+	custom_tooltip = make_spiritualist_1_effect
+	member_triggered_modifier = {
+		potential = {
+			is_spiritualist = yes
+		}
+		planet_priests_unity_produces_add = 1
+	}
+	members_modifier = {
+		pop_growth_speed = 0.1
+		planet_pop_assembly_mult = 0.05
+	}
+	on_activate = {
+		hidden_effect = {
+			every_member = {
+				limit = {
+					is_spiritualist = no
+					is_gestalt = no
+				}
+				if = {
+					limit = { has_technology = tech_colonial_bureaucracy }
+					give_technology = { tech = tech_holographic_rituals }
+				}
+				if = {
+					limit = { has_technology = tech_galactic_bureaucracy }
+					give_technology = { tech = tech_consecration_fields }
+				}
+				if = {
+					limit = { has_technology = tech_autocurating_vault }
+					give_technology = { tech = tech_transcendent_faith }
+				}
+			}
+		}
+	}
+}

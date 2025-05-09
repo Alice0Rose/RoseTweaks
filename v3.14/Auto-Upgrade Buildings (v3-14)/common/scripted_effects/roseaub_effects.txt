@@ -1,0 +1,559 @@
+roseaub_start_autoupgrading_building = {
+	# Sets that planet is upgrading a building
+	set_planet_flag = roseaub_upgrading_building
+	
+	# Gets local copies of building construction modifiers
+	export_modifier_to_variable = { modifier = planet_structures_cost_mult variable = roseaub_planet_structures_cost_mult }
+	change_variable = { which = roseaub_planet_structures_cost_mult value = 1 }
+	export_modifier_to_variable = { modifier = planet_building_build_speed_mult variable = roseaub_planet_building_build_speed_mult }
+	change_variable = { which = roseaub_planet_building_build_speed_mult value = 1 }
+	
+	### Saves scaled resource build cost of building upgrade and subtracts from country stockpile
+	[[ENERGY]
+		set_variable = {
+			which = roseaub_energy_cost
+			value = $ENERGY|0$
+		}
+	
+		multiply_variable = { 
+			which = roseaub_energy_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+	
+		owner = {
+			add_resource = { 
+				energy = -1 
+				mult = prev.roseaub_energy_cost
+			}
+		}
+	]
+	
+	[[MINERALS]
+		set_variable = {
+			which = roseaub_minerals_cost
+			value = $MINERALS|0$
+		}
+		
+		multiply_variable = { 
+			which = roseaub_minerals_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}		
+		
+		owner = {
+			add_resource = { 
+				minerals = -1 
+				mult = prev.roseaub_minerals_cost
+			}
+		}
+	]
+	
+	[[FOOD]
+		set_variable = {
+			which = roseaub_food_cost
+			value = $FOOD|0$
+		}
+		
+		multiply_variable = { 
+			which = roseaub_food_cost
+			value = roseaub_planet_structures_cost_mult 
+		}		
+		
+		owner = {
+			add_resource = { 
+				food = -1 
+				mult = prev.roseaub_food_cost
+			}
+		}
+	]
+	
+	[[ALLOYS]
+		set_variable = {
+			which = roseaub_alloys_cost
+			value = $ALLOYS|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_alloys_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				alloys = -1 
+				mult = prev.roseaub_alloys_cost 
+			}
+		}
+	]
+	
+	[[CONSUMER_GOODS]
+		set_variable = {
+			which = roseaub_consumer_goods_cost
+			value = $CONSUMER_GOODS|0$
+		}
+		
+		multiply_variable = { 
+			which = roseaub_consumer_goods_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				consumer_goods = -1 
+				mult = prev.roseaub_consumer_goods_cost 
+			}
+		}
+	]
+	
+	[[EXOTIC_GASES]
+		set_variable = {
+			which = roseaub_exotic_gases_cost
+			value = $EXOTIC_GASES|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_exotic_gases_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				exotic_gases = -1 
+				mult = prev.roseaub_exotic_gases_cost
+			}
+		}
+	]
+	
+	[[RARE_CRYSTALS]
+		set_variable = {
+			which = roseaub_rare_crystals_cost
+			value = $RARE_CRYSTALS|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_rare_crystals_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				rare_crystals = -1 
+				mult = prev.roseaub_rare_crystals_cost 
+			}
+		}
+	]
+	
+	[[VOLATILE_MOTES]
+		set_variable = {
+			which = roseaub_volatile_motes_cost
+			value = $VOLATILE_MOTES|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_volatile_motes_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				volatile_motes = -1 
+				mult = prev.roseaub_volatile_motes_cost
+			}
+		}
+	]
+	
+	[[ZRO]
+		set_variable = {
+			which = roseaub_zro_cost
+			value = $ZRO|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_zro_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				sr_zro = -1 
+				mult = prev.roseaub_zro_cost
+			}
+		}
+	]
+	
+	[[DARK_MATTER]
+		set_variable = {
+			which = roseaub_dark_matter_cost
+			value = $DARK_MATTER|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_dark_matter_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				sr_dark_matter = -1 
+				mult = prev.roseaub_dark_matter_cost 
+			}
+		}
+	]
+	
+	[[LIVING_METAL]		
+		set_variable = {
+			which = roseaub_living_metal_cost
+			value = $LIVING_METAL|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_living_metal_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				sr_living_metal = -1 
+				mult = prev.roseaub_living_metal_cost
+			}
+		}
+	]
+	
+	[[NANITES]		
+		set_variable = {
+			which = roseaub_nanites_cost
+			value = $NANITES|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_nanites_cost 
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				nanites = -1 
+				mult = prev.roseaub_nanites_cost 
+			}
+		}
+	]
+	
+	[[MINOR_ARTIFACTS]
+		set_variable = {
+			which = roseaub_minor_artifacts_cost
+			value = $MINOR_ARTIFACTS|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_minor_artifacts_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				minor_artifacts = -1 
+				mult = prev.roseaub_minor_artifacts_cost
+			}
+		}
+	]
+	
+	[[ASTRAL_THREADS]
+		set_variable = {
+			which = roseaub_astral_threads_cost
+			value = $ASTRAL_THREADS|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_astral_threads_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				astral_threads = -1 
+				mult = prev.roseaub_astral_threads_cost
+			}
+		}
+	]
+	
+	[[INFLUENCE]
+		set_variable = {
+			which = roseaub_influence_cost
+			value = $INFLUENCE|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_influence_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				influence = -1 
+				mult = prev.roseaub_influence_cost 
+			}
+		}
+	]
+	
+	[[UNITY]
+		set_variable = {
+			which = roseaub_unity_cost
+			value = $UNITY|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_unity_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				unity = -1 
+				mult = prev.roseaub_unity_cost 
+			}
+		}
+	]
+	
+	[[MENACE]
+		set_variable = {
+			which = roseaub_menace_cost
+			value = $MENACE|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_menace_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				menace = -1 
+				mult = prev.roseaub_menace_cost 
+			}
+		}
+	]
+
+	[[ADVANCED_LOGIC]
+		set_variable = {
+			which = roseaub_advanced_logic_cost
+			value = $ADVANCED_LOGIC|0$
+		}
+
+		multiply_variable = { 
+			which = roseaub_advanced_logic_cost
+			value = roseaub_planet_structures_cost_mult 
+		}
+		
+		owner = {
+			add_resource = { 
+				advanced_logic = -1 
+				mult = prev.roseaub_advanced_logic_cost 
+			}
+		}
+	]
+	
+	# Gets scaled upgrade time
+	set_variable = { which = roseaub_build_time value = $BUILD_TIME|0$ }
+	divide_variable = { which = roseaub_build_time value = roseaub_planet_building_build_speed_mult }
+	
+	# Sets build time to a static time of 25 days for testing only
+	#set_variable = { which = roseaub_build_time value = 25 }
+	
+	# Trigger event in scaled upgrade time days to simulate build time
+	planet_event = { 
+		id = roseaub.3 
+		days = 1 
+	}
+	
+	# Clears no longer needed variables
+	clear_variable = roseaub_planet_structures_cost_mult
+	clear_variable = roseaub_planet_building_build_speed_mult
+}
+
+roseaub_upgrade_building = {
+	# Upgrades the old building if it is present still
+	if = {
+		limit = {
+			has_building = $OLD$
+		}
+		
+		remove_building = $OLD$ 
+		add_building = $NEW$ 
+	}
+	
+	# Refunds the upgrade if the old building isn't there
+	else = {
+		roseaub_refund_upgrade = {}
+	}
+}
+
+roseaub_refund_upgrade = {
+	if = {
+		limit = { is_variable_set = roseaub_energy_cost }
+		owner = { add_resource = { energy = 1 mult = prev.roseaub_energy_cost } }
+		clear_variable = roseaub_energy_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_minerals_cost }
+		owner = { add_resource = { minerals = 1 mult = prev.roseaub_minerals_cost } }
+		clear_variable = roseaub_minerals_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_food_cost }
+		owner = { add_resource = { food = 1 mult = prev.roseaub_food_cost } }
+		clear_variable = roseaub_food_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_alloys_cost }
+		owner = { add_resource = { alloys = 1 mult = prev.roseaub_alloys_cost } }
+		clear_variable = roseaub_alloys_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_consumer_goods_cost }
+		owner = { add_resource = { consumer_goods = 1 mult = prev.roseaub_consumer_goods_cost } }
+		clear_variable = roseaub_consumer_goods_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_exotic_gases_cost }
+		owner = { add_resource = { exotic_gases = 1 mult = prev.roseaub_exotic_gases_cost } }
+		clear_variable = roseaub_exotic_gases_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_rare_crystals_cost }
+		owner = { add_resource = { rare_crystals = 1 mult = prev.roseaub_rare_crystals_cost } }
+		clear_variable = roseaub_rare_crystals_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_volatile_motes_cost }
+		owner = { add_resource = { volatile_motes = 1 mult = prev.roseaub_volatile_motes_cost } }
+		clear_variable = roseaub_volatile_motes_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_zro_cost }
+		owner = { add_resource = { sr_zro = 1 mult = prev.roseaub_zro_cost } }
+		clear_variable = roseaub_zro_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_dark_matter_cost }
+		owner = { add_resource = { sr_dark_matter = 1 mult = prev.roseaub_dark_matter_cost } }
+		clear_variable = roseaub_dark_matter_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_living_metal_cost }
+		owner = { add_resource = { sr_living_metal = 1 mult = prev.roseaub_living_metal_cost } }
+		clear_variable = roseaub_living_metal_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_nanites_cost }
+		owner = { add_resource = { nanites = 1 mult = prev.roseaub_nanites_cost } }
+		clear_variable = roseaub_nanites_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_minor_artifacts_cost }
+		owner = { add_resource = { minor_artifacts = 1 mult = prev.roseaub_minor_artifacts_cost } }
+		clear_variable = roseaub_minor_artifacts_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_astral_threads_cost }
+		owner = { add_resource = { astral_threads = 1 mult = prev.roseaub_astral_threads_cost } }
+		clear_variable = roseaub_astral_threads_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_influence_cost }
+		owner = { add_resource = { influence = 1 mult = prev.roseaub_influence_cost } }
+		clear_variable = roseaub_influence_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_unity_cost }
+		owner = { add_resource = { unity = 1 mult = prev.roseaub_unity_cost } }
+		clear_variable = roseaub_unity_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_menace_cost }
+		owner = { add_resource = { menace = 1 mult = prev.roseaub_menace_cost } }
+		clear_variable = roseaub_menace_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_advanced_logic_cost }
+		owner = { add_resource = { advanced_logic = 1 mult = prev.roseaub_advanced_logic_cost } }
+		clear_variable = roseaub_advanced_logic_cost
+	}
+}
+
+roseaub_clear_upgrade_vars = {
+	if = {
+		limit = { is_variable_set = roseaub_energy_cost }
+		clear_variable = roseaub_energy_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_minerals_cost }
+		clear_variable = roseaub_minerals_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_food_cost }
+		clear_variable = roseaub_food_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_alloys_cost }
+		clear_variable = roseaub_alloys_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_consumer_goods_cost }
+		clear_variable = roseaub_consumer_goods_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_exotic_gases_cost }
+		clear_variable = roseaub_exotic_gases_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_rare_crystals_cost }
+		clear_variable = roseaub_rare_crystals_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_volatile_motes_cost }
+		clear_variable = roseaub_volatile_motes_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_zro_cost }
+		clear_variable = roseaub_zro_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_dark_matter_cost }
+		clear_variable = roseaub_dark_matter_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_living_metal_cost }
+		clear_variable = roseaub_living_metal_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_nanites_cost }
+		clear_variable = roseaub_nanites_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_minor_artifacts_cost }
+		clear_variable = roseaub_minor_artifacts_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_astral_threads_cost }
+		clear_variable = roseaub_astral_threads_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_influence_cost }
+		clear_variable = roseaub_influence_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_unity_cost }
+		clear_variable = roseaub_unity_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_menace_cost }
+		clear_variable = roseaub_menace_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_advanced_logic_cost }
+		clear_variable = roseaub_advanced_logic_cost
+	}
+	if = {
+		limit = { is_variable_set = roseaub_build_time }
+		clear_variable = roseaub_build_time
+	}
+}

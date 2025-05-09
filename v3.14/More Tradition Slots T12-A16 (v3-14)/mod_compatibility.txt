@@ -1,0 +1,6 @@
+common\defines\00_defines.txt
+- ASCENSION_PERKS_SLOTS
+- TRADITION_CATEGORIES_MAX
+
+common\scripted_variables\07_scripted_variables_machine_age.txt
+- max_tradition_trees

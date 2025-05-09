@@ -1,0 +1,150 @@
+### Capital Buildings ###
+roseaub_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_system_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_system_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hive_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hab_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hab_system_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_resort_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_slave_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_imperial_capital_FROM_system_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_imperial_capital_FROM_hab_system_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_imperial_capital_FROM_system_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_imperial_machine_capital_FROM_machine_system_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_imperial_hive_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_major_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_system_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_major_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_system_capital_nanotech = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Pop Assembly Buildings ###
+roseaub_robot_assembly_complex = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_machine_assembly_complex = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+#roseaub_necrophage_house_of_apotheosis = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Government Buildings ###
+roseaub_hall_judgment = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_grand_embassy = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_gaiaseeders_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_gaiaseeders_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+#roseaub_gaiaseeders_4 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Resource Buildings ###
+roseaub_food_processing_center = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_mineral_purification_hub = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_energy_nexus = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_bio_reactor_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Manufacturing Buildings ###
+roseaub_foundry_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_foundry_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_factory_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_factory_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_coordinated_fulfillment_center_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Research Buildings ###
+roseaub_research_lab_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_research_lab_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Trade Buildings ###
+roseaub_commercial_megaplex = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Amenity Buildings ###
+roseaub_paradise_dome = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_communal_housing_large = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_drone_megastorage = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_expanded_warren = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hyper_entertainment_forum = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hospital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Unity Buildings ###
+roseaub_heritage_site = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hypercomms_forum = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_bureaucratic_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_bureaucratic_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_holotemple = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_sacred_nexus = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_network_junction = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_system_conflux = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hive_cluster = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hive_confluence = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_sacrificial_temple_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_sacrificial_temple_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_galactic_memorial_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_galactic_memorial_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_simulation_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_simulation_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_corporate_site = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_corporate_forum = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_sensorium_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_sensorium_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_organic_paradise = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Army Buildings ###
+roseaub_fortress = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Event Buildings ###
+roseaub_crystal_plant_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Fallen Empire Buildings ###
+roseaub_affluence_center = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_nourishment_center = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_dimensional_fabricator = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_class_4_singularity = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_nano_forge = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_dome = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_stronghold = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_administration_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_administration_hive_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_administration_machine_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_temple_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_assembly_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_clinic_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_security_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_market_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_silo_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_entertainment_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_lab_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_fe_mine_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### First Contact Buildings ###
+roseaub_capital_FROM_low_tech_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Astral Planes Buildings ###
+roseaub_astral_siphon_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_astral_siphon_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Cosmic Storms Buildings ###
+roseaub_advanced_storm_attraction_center = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_advanced_storm_repellent_center = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_advanced_storm_resistant_production = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_storm_holo_theater = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_storm_grand_theater = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Machine Age Buildings ###
+roseaub_grand_concert_hall_of_the_mind = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_grand_battlements_of_steel = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_grand_cathedral_of_toil = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_grand_forge_of_the_fellowship = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_the_united_sanctum_of_augmentation = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+#roseaub_lathe_major_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+#roseaub_lathe_super_capital = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_nanolab_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+
+### Grand Archive Buildings ###
+roseaub_wildlife_ranch_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_wildlife_ranch_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hunting_grounds_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_hunting_grounds_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_wildlife_sanctuary_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_wildlife_sanctuary_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_primal_arena_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_primal_arena_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_symbiosis_nexus_2 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }
+roseaub_symbiosis_nexus_3 = { icon = "gfx/interface/icons/planet_modifiers/pm_roseaub_upgrading_building.dds" }

@@ -1,0 +1,85 @@
+has_fortress_designation = {
+	or = {
+		has_designation = col_fortress
+		has_designation = col_habitat_fortress
+		has_designation = rose_col_fortress_nanotech
+	}
+}
+
+has_factory_designation = {
+	OR = {
+		has_designation = col_capital_factory
+		has_designation = col_factory
+		has_designation = col_mac_factory
+		has_designation = col_ecu_factory
+		has_designation = col_habitat_factory
+		has_designation = rose_col_factory_nanotech
+	}
+}
+
+has_foundry_designation = {
+	OR = {
+		has_designation = col_capital_foundry
+		has_designation = col_foundry
+		has_designation = col_ecu_foundry
+		has_designation = col_habitat_foundry
+		has_designation = col_mac_foundry
+		has_designation = col_hiv_foundry
+		has_designation = rose_col_foundry_nanotech
+	}
+}
+
+has_generator_designation = {
+	OR = {
+		has_designation = col_generator
+		has_designation = col_habitat_energy
+		has_designation = col_ring_generator
+		has_designation = rose_col_generator_nanotech
+	}
+}
+
+has_mining_designation = {
+	OR = {
+		has_designation = col_habitat_mining
+		has_designation = col_mining
+		has_designation = rose_col_mining_nanotech
+	}
+}
+
+has_research_designation = {
+	OR = {
+		has_designation = col_research
+		has_designation = col_ring_research
+		has_designation = col_habitat_research
+		has_designation = col_ecu_research
+		has_designation = rose_col_research_nanotech
+	}
+}
+
+has_unity_designation = {
+	OR = {
+		has_designation = col_bureau
+		has_designation = col_habitat_bureau
+		has_designation = col_bureau_machine
+		has_designation = col_trophy_machine
+		has_designation = col_habitat_bureau_machine
+		has_designation = col_bureau_hive
+		has_designation = col_habitat_bureau_hive
+		has_designation = col_bureau_spiritualist
+		has_designation = col_habitat_bureau_spiritualist
+		has_designation = rose_col_bureau_nanotech
+		has_designation = rose_col_bureau_spiritualist_nanotech
+		has_designation = rose_col_bureau_machine_nanotech
+	}
+}
+
+has_trade_designation = {
+	OR = {
+		has_designation = col_capital_trade
+		has_designation = col_city
+		has_designation = col_habitat_trade
+		has_designation = col_ring_trade
+		has_designation = col_ecu_mix
+		has_designation = rose_col_trade_nanotech
+	}
+}

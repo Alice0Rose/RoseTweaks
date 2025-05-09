@@ -1,0 +1,10 @@
+[h1]Features[/h1]
+Allows a total of 9 tradition slots and 12 ascension perks (2 obtained through a repeatable society tech)! \o/
+
+12 Tradition and 16 Ascension Perk Version: https://steamcommunity.com/sharedfiles/filedetails/?id=3385410973
+
+A modified version of [url= https://steamcommunity.com/sharedfiles/filedetails/?id=2808131570]9 traditions + 12 slots AP[/url] by [url= https://steamcommunity.com/id/coolnet]coolnet[/url] without the unnecessary overrides and with changes to the repeatable and UI.
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

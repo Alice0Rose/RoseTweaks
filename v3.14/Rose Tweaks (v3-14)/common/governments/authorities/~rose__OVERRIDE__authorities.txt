@@ -1,0 +1,322 @@
+# These may be overwitten in an "extendable" manner, meaning (for example) you can create a second "auth_democratic" with extra swaps in it.
+# WARNING: The extend functionality breaks if you make changes in runtime and will require a restart to work correctly.
+#auth_example = {
+#	potential = {}										# requirements list, see ../readme_requirements.txt
+#	possible = {}										# requirements list, see ../readme_requirements.txt
+#	random_weight = { value = 1 }						# random weight, no scope; default: 1
+#
+#	traits = { trait = tait1 trait = tait2 }			# force listed traits on the founder species (only verified for empire designs, no effect after game start)
+#
+#	has_heir = yes / no									# default: no; you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#	election_type = oligarchic / democratic	/ none		# default: none; oligarchic generate candidates only from leaders in the country
+#	election_term_years = 40							# default: 0
+#	election_term_variance = 10							# default: 0; actual election term = election_term_years +/- election_term_variance
+#	re_election_allowed = yes / no						# default: no
+#	can_have_emergency_elections = yes / no				# default: no
+#	max_election_candidates = 5							# default: -1; -1 == no limit
+#	can_reform = yes / no								# default = yes, whether you can reform into/out of this government type
+#	ruler_council_position = <>							# decides the authority's ruler council position, these are defined in 00_councilors.txt
+#
+#	has_agendas = yes / no								# default: no, replaced with Council Agendas
+#	uses_mandates = yes / no							# default: no, replaced with Council Agendas
+#
+#	color = { 81 140 44 255 }							# RGBA color used in some UI. If not specified, the AUTHORITY_DEFAULT_COLOR define is used.
+#
+#	advanced_authority_swap	= {							# To make sure everything is updated correctly after triggering a swap, use <advanced_authority_refresh = yes>
+#		name = "<name key>"								# Will also be used to attempt and find an icon from "interface/icons/governments/authorities/"
+#		description = "<localization key>"				# Used to customize the description in the case of a swap
+#		inherit_icon = yes/no							# Decides if we should inherit the icon of the original authority
+#		inherit_effects = yes/no						# Decides if we should inherit the modifiers from the base Authority and combine it with the advanced authority
+#		ruler_council_position = <>						# Used to swap out the ruler council position
+#		trigger = {}									# This will decide when the swap to advanced authority type will be made
+#		modifier = {}									# The modifiers that are used instead of the authority after the swap, can include the original by using inherit_effects
+#		tags = { <key> <key2> }							# Translation tags used for the authority swap
+#		has_heir = yes / no								# you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#		election_type = oligarchic / democratic	/ none	# oligarchic generate candidates only from leaders in the country
+#		election_term_years = 40						#
+#		election_term_variance = 10						# actual election term = election_term_years +/- election_term_variance
+#		can_have_emergency_elections = yes / no			#
+#		max_election_candidates = 5						# -1 == no limit
+#		weight = {}										# If there are multiple options, the one with the highest weight is picked. Scope: Country
+#	}
+#
+#	tags = { <key> <key2> }								# add these translation tags to the description
+#}
+
+auth_oligarchic = {
+	election_term_years = 20
+	election_type = oligarchic
+	re_election_allowed = yes
+	can_have_emergency_elections = yes
+	max_election_candidates = -1
+
+	has_agendas = yes
+
+	color = { 164 135 18 255 }
+	
+	ruler_council_position = councilor_ruler_oligarchic
+
+	possible = {
+		origin = {
+			NOR = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+
+	country_modifier = {
+		councilor_skill_add = 2
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_oligarchic"
+		description = "auth_cyber_creed_oligarchic_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_oligarchic_individualist"
+		description = "auth_cyber_oligarchic_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarchic_individualist_tt
+			planet_stability_add = 10
+			pop_cat_ruler_happiness = 0.25
+			pop_cat_ruler_political_power = 2
+			planet_jobs_specialist_produces_mult = 0.1
+			pop_cat_specialist_happiness = -0.1
+			pop_cat_specialist_political_power = -1
+			planet_jobs_worker_produces_mult = -0.15
+			pop_cat_worker_political_power = -1
+			pop_demotion_time_mult = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_oligarchic_collectivist"
+		description = "auth_cyber_oligarchic_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarchic_collectivist_tt
+			planet_jobs_specialist_produces_mult = 0.1
+			planet_jobs_worker_produces_mult = -0.15
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_oligarchic_physical"
+		description = "auth_synth_oligarchic_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
+			pop_category_rulers_upkeep_mult = 0.15
+			planet_administrators_unity_produces_mult = 0.25
+			planet_administrators_upkeep_mult = -0.10
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_oligarchic_virtual"
+		description = "auth_synth_oligarchic_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
+			pop_category_rulers_upkeep_mult = 0.15
+			edicts_upkeep_mult = -0.2
+			edicts_cost_mult = -0.75
+			empire_size_districts_mult = -0.10
+			empire_size_colonies_mult = -0.50
+			show_only_custom_tooltip = no
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_OLIGARCHIC_SUCCESSION
+	}
+}
+
+auth_corporate = {
+	election_term_years = 20
+	election_type = oligarchic
+	re_election_allowed = yes
+	can_have_emergency_elections = yes
+	max_election_candidates = -1
+	localization_postfix = corporate
+
+	has_agendas = yes
+
+	color = { 132 143 38 255 }
+
+	ruler_council_position = councilor_ruler_corporate
+
+	potential = {
+		country_type = { NOT = { value = primitive } }
+	}
+
+	#playable = {
+	#	has_megacorp = yes
+	#}
+	possible = {
+		origin = {
+			NOR = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+
+	country_modifier = {
+		commercial_pact_mult = 0.20
+		empire_size_colonies_mult = 0.50
+		external_leader_pool_add = 1
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_corporate"
+		description = "auth_cyber_creed_corporate_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_corporate_individualist"
+		description = "auth_cyber_corporate_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_corporate_individualist_tt
+			starbase_trade_protection_add = 15
+			planet_crime_add = 20
+			pop_lifestyle_trade_value_add = 1
+			pop_cyborg_happiness = 0.1
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_corporate_collectivist"
+		description = "auth_cyber_corporate_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_corporate_collectivist_tt
+			starbase_trade_protection_add = 15
+			planet_crime_add = 20
+			council_agenda_progress_speed = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_corporate_physical"
+		description = "auth_synth_corporate_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			custom_tooltip = auth_synth_corporate_physical_tt
+			trade_value_mult = 0.05
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_corporate_virtual"
+		description = "auth_synth_corporate_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			custom_tooltip = auth_synth_corporate_virtual_tt
+			intel_decryption_add = 1
+			show_only_custom_tooltip = no
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_OLIGARCHIC_SUCCESSION
+	}
+}

@@ -1,0 +1,37 @@
+mutual_aid_minerals_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_mutual_aid_minerals
+	}
+
+	weight = {
+		weight = 100
+	}
+
+	conversion_rate = {
+		energy = 0.325
+		minerals = 0.325
+		unity = 0.15
+	}
+
+	economic_category = trade_routes
+}
+
+mutual_aid_food_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_mutual_aid_food
+	}
+
+	weight = {
+		weight = 100
+	}
+
+	conversion_rate = {
+		energy = 0.325
+		food = 0.325
+		unity = 0.15
+	}
+
+	economic_category = trade_routes
+}

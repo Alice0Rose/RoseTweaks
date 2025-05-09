@@ -1,0 +1,679 @@
+# Nanotech Mining Planet
+rose_col_mining_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_mining
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+	
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1	
+		planet_district_mining_build_speed_mult = 0.25
+		planet_miners_produces_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_mining_nanotech
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_mineral_purification_plant
+				has_building = building_mineral_purification_hub
+			}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_modifier = asteroid_belt
+				has_modifier = mineral_rich
+				has_modifier = ultra_rich
+				has_modifier = extensive_moon_system
+				has_modifier = asteroid_impacts
+				has_modifier = carbon_world
+			}
+		}
+		modifier = {
+			add = -10
+			has_modifier = mineral_poor
+		}
+	}
+}
+
+# Nanotech Generator Planet
+rose_col_generator_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_generator
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+	
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1	
+		planet_district_generator_build_speed_mult = 0.25
+		planet_technician_produces_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_generator_nanotech
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_modifier = hazardous_weather
+				has_modifier = strong_magnetic_field
+			}
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_energy_grid
+				has_building = building_energy_nexus
+			}
+		}
+		modifier = {
+			add = 5
+			has_building = building_betharian_power_plant
+		}
+		modifier = {
+			add = -10
+			has_modifier = energy_poor
+		}
+	}
+}
+
+# Nanotech Trade Planet
+rose_col_trade_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_trade
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		owner = { is_regular_empire = yes }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_structures_upkeep_mult = -0.10
+		planet_district_city_build_speed_mult = 0.25
+		trade_value_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_city
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_city
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = merchant
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = trader
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = numistic_priest
+			}
+			mode = add
+		}
+	}
+}
+
+# Nanotech Forge Planet
+rose_col_foundry_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_foundry
+
+	# used by AI to estimate what will happen when we change the designation
+	ai_resource_conversion = {
+		consumer_goods = 0
+		alloys = 2
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	ai_resource_current_conversion = {
+		alloys = 0.5
+		consumer_goods = -2
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+	
+	custom_tooltip = col_factory_custom
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1	
+		planet_district_industrial_build_speed_mult = 0.25
+		planet_metallurgists_upkeep_mult = -0.20
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_finish }
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_foundry_nanotech
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_industrial
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+			}
+		}
+		modifier = {
+			add = -5
+			OR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+		}
+		modifier = {
+			add = 10
+			num_districts = { type = district_industrial value >= 1 }
+			exists = owner
+			owner = {
+				OR = {
+					country_uses_consumer_goods = no
+					has_monthly_income = { resource = consumer_goods value >= 0 }
+				}
+				resource_revenue_compare = {
+					resource = alloys
+					value < trigger:years_passed
+				}
+			}
+		}
+		modifier = {
+			add = 10
+			has_designation = col_factory
+			exists = owner
+			owner = {
+				resource_revenue_compare = {
+					resource = alloys
+					value >= trigger:years_passed
+				}
+				has_monthly_income = { resource = alloys value < 0 }
+			}
+		}
+	}
+}
+
+# Nanotech Factory Planet
+rose_col_factory_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_factory
+
+	# used by AI to estimate what will happen when we change the designation
+	ai_resource_conversion = {
+		consumer_goods = 2
+		alloys = 0
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	# Used by AI to estimate the current effects of this designation
+	ai_resource_current_conversion = {
+		consumer_goods = 0.5
+		alloys = -0.5
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		owner = { country_uses_consumer_goods = yes }
+		is_special_colony_type = no
+		is_capital = no
+	}
+	
+	custom_tooltip = col_factory_custom
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1	
+		planet_district_industrial_build_speed_mult = 0.25
+		planet_artisans_upkeep_mult = -0.20
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_factory_nanotech
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_industrial
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+		}
+		modifier = {
+			add = -5
+			OR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+			}
+		}
+		modifier = {
+			add = 10
+			num_districts = { type = district_industrial value >= 1 }
+			exists = owner
+			owner = {
+				resource_revenue_compare = {
+					resource = consumer_goods
+					value >= trigger:years_passed
+				}
+				has_monthly_income = { resource = consumer_goods value < 0 }
+			}
+		}
+		modifier = {
+			add = 10
+			has_designation = col_foundry
+			exists = owner
+			owner = {
+				resource_revenue_compare = {
+					resource = consumer_goods
+					value >= trigger:years_passed
+				}
+				has_monthly_income = { resource = consumer_goods value < 0 }
+			}
+		}
+	}
+}
+
+# Nanotech Unification Center
+rose_col_bureau_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_bureaucratic
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
+			has_make_spiritualist_perk = no
+		}
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+		}
+		job_priest_per_pop = 0.04
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		job_haruspex_per_pop = 0.04
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_bureau_nanotech
+		}
+		inline_script = {
+			script = colony_types/shared_weights_admin
+		}
+	}
+}
+
+# Nanotech Unification Center (Spiritualist)
+rose_col_bureau_spiritualist_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_bureaucratic
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				is_spiritualist = yes
+				has_make_spiritualist_perk = yes
+			}
+		}
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+		}
+		job_priest_per_pop = 0.04
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		job_haruspex_per_pop = 0.04
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_bureau_spiritualist_nanotech
+		}
+		inline_script = {
+			script = colony_types/shared_weights_priests
+		}
+	}
+}
+
+# Nanotech Unification Center (Machine)
+rose_col_bureau_machine_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_bureaucratic
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		owner = {
+			is_machine_empire = yes
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_bureau_machine_nanotech
+		}
+		inline_script = {
+			script = colony_types/shared_weights_network
+		}
+	}
+}
+
+# Nanotech Research Planet
+rose_col_research_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_research
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+	
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1	
+		planet_building_research_lab_1_build_speed_mult = 0.25
+		planet_researchers_upkeep_mult = -0.2
+		planet_researchers_engineering_research_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_research_nanotech
+		}
+		inline_script = {
+			script = colony_types/shared_weights_research
+		}
+	}
+}
+
+# Nanotech Fortress Planet
+rose_col_fortress_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_fortress
+
+	potential = {
+		is_planet_class = pc_nanotech
+		is_capital = no
+	}
+	
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1	
+		planet_building_stronghold_build_speed_mult = 0.25
+		planet_orbital_bombardment_damage = -0.25
+		army_defense_damage_mult = 0.25
+		army_defense_health_mult = 0.25
+		army_defense_morale_mult = 0.25
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_fortress_nanotech
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_stronghold
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_fortress
+			}
+			mode = add
+			mult = 4
+		}
+	}
+}

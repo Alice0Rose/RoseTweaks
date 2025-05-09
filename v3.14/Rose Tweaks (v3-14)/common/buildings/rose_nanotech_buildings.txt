@@ -1,0 +1,357 @@
+building_rose_nanite_conversion_center = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = resource
+	
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_nanotech_1 }
+		
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_farming_district_or_buildings = yes
+			has_any_mining_district = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = { owner = { has_tradition = tr_nanotech_1 } }
+			
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+				has_any_mining_district = no
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_add = -5
+		planet_farmers_nanites_produces_add = 5
+		planet_miners_minerals_produces_add = -4
+		planet_miners_nanites_produces_add = 4
+	}
+	
+	# Farmer modifiers
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_food_processing_facility
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -1
+			planet_farmers_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_food_processing_center
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_food_processing_center
+			has_ringworld_output_boost = yes
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_baol_organic_plant
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -1
+			planet_farmers_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_bio_reactor
+		}
+		modifier = {
+			planet_farmers_food_produces_add = 2
+			planet_farmers_nanites_produces_add = -2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_bio_reactor_2
+		}
+		modifier = {
+			planet_farmers_food_produces_add = 3
+			planet_farmers_nanites_produces_add = -3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_solarpunk_sapling
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_holding = { 
+				holding = holding_tree_of_life_sapling 
+				owner = owner.overlord
+			}
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -1
+			planet_farmers_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			solar_system = {
+				has_star_flag = storm_system
+			}
+			has_building = building_storm_resistant_production
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -1
+			planet_farmers_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			solar_system = {
+				has_star_flag = storm_system
+			}
+			has_building = building_advanced_storm_resistant_production
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = orbital_defence
+			
+			orbital_defence = {
+				starbase = { 
+					has_starbase_building = ring_food_hub
+				}
+			}
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = orbital_defence
+			
+			orbital_defence = {
+				starbase = { 
+					has_starbase_building = ring_feeder
+				}
+			}
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -1
+			planet_farmers_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = bleak_planet
+		}
+		modifier = {
+			planet_farmers_food_produces_add = 1
+			planet_farmers_nanites_produces_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = hostile_planet
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = hyper_ecosystem
+		}
+		modifier = {
+			planet_farmers_food_produces_add = -2
+			planet_farmers_nanites_produces_add = 2
+		}
+	}
+	
+	# Miner modifiers
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_mineral_purification_plant
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -1
+			planet_miners_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_mineral_purification_hub
+			NOT = { is_planet_class = pc_shattered_ring_habitable }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -2
+			planet_miners_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_mineral_purification_hub
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -1
+			planet_miners_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_mineral_purification_hub
+			has_ringworld_output_boost = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -2
+			planet_miners_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			solar_system = {
+				has_star_flag = storm_system
+			}
+			has_building = building_storm_resistant_production
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -1
+			planet_miners_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			solar_system = {
+				has_star_flag = storm_system
+			}
+			has_building = building_advanced_storm_resistant_production
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -2
+			planet_miners_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_civic = civic_mining_guilds }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -1
+			planet_miners_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_civic = civic_machine_rockbreakers }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -1
+			planet_miners_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_civic = civic_machine_astromining_drones }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 2
+			planet_miners_nanites_produces_add = -2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = orbital_defence
+			
+			orbital_defence = {
+				starbase = {
+					has_starbase_building = ring_minerals_hub
+				}
+			}
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -2
+			planet_miners_nanites_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = molten_mineral_rivers
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -1
+			planet_miners_nanites_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = ship_junkyard
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 2
+			planet_miners_nanites_produces_add = -2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = metal_planet
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -3
+			planet_miners_nanites_produces_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = metal_planet
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = -3
+			planet_miners_nanites_produces_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			nanites = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+}

@@ -1,0 +1,39 @@
+namespace = colony
+
+situation_event = { #You have slurped up everything you could from this world
+	id = colony.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		target = {
+			if = {
+				limit = {
+					has_planet_flag = fallen_empire_capital
+				}
+				owner = {
+					set_country_flag = past_the_expiration_date_achievement
+				}
+			}
+			slushify_world = yes
+			slushify_world = yes
+			remove_modifier = being_devoured_modifier_nanotech
+			change_pc = pc_nanotech
+			add_planet_devastation = -30
+			planet_event = { id = action.68 }
+			owner = {
+				change_variable = {
+					which = nanotech_worlds_created
+					value = 1
+				}
+				
+				# Gives slushifier a sum of nanites based on the size of the planet
+				add_resource = {
+					nanites = 333s
+					mult = prev.trigger:planet_size
+				}
+			}
+		}
+		destroy_situation = this
+	}
+}

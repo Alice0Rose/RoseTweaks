@@ -1,0 +1,172 @@
+namespace = rose_choose_starting_ruler_ethic
+
+# Queues choosing starting ruler's ethic event
+country_event = {
+	id = rose_choose_starting_ruler_ethic.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {			
+		if = {
+			limit = {
+				# No reason for ai to get this choice
+				is_ai = no
+				
+				# Only empires with 3 ethics (ie no fanatic ethic or gestalts) get this choice
+				num_ethics = 3
+			}
+				
+			country_event = { id = rose_choose_starting_ruler_ethic.2 days = 1 }
+		}
+	}
+}
+
+# Lets players choose the ethic of their starting ruler
+country_event = { 
+	id = rose_choose_starting_ruler_ethic.2
+	title = rose_choose_starting_ruler_ethic.2.name
+	desc = rose_choose_starting_ruler_ethic.2.desc
+	picture = GFX_evt_legendary_leader
+	hide_window = no
+	is_triggered_only = yes
+
+	# Choose pacifist/militarist as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.a
+		
+		trigger = {
+			OR = {
+				is_pacifist = yes
+				is_militarist = yes
+			}
+		}
+		
+		ruler = {
+			if = {
+				limit = {
+					owner = {
+						is_pacifist = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_pacifist"
+			}
+			
+			else_if = {
+				limit = {
+					owner = {
+						is_militarist = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_militarist"
+			}
+
+		}
+	}
+	
+	# Choose materialist/spiritualist as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.b
+
+		trigger = {
+			OR = {
+				is_materialist = yes
+				is_spiritualist = yes
+			}
+		}
+		
+		ruler = {
+			if = {
+				limit = {
+					owner = {
+						is_materialist = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_materialist"
+			}
+			
+			else_if = {
+				limit = {
+					owner = {
+						is_spiritualist = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_spiritualist"
+			}
+
+		}
+	}
+	
+	# Choose egalitarian/authoritarian as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.c
+
+		trigger = {
+			OR = {
+				is_egalitarian = yes
+				is_authoritarian = yes
+			}
+		}
+		
+		ruler = {
+			if = {
+				limit = {
+					owner = {
+						is_egalitarian = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_egalitarian"
+			}
+			
+			else_if = {
+				limit = {
+					owner = {
+						is_authoritarian = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_authoritarian"
+			}
+
+		}
+	}
+	
+	# Choose xenophile/xenophobe as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.d
+
+		trigger = {
+			OR = {
+				is_xenophile = yes
+				is_xenophobe = yes
+			}
+		}
+		
+		ruler = {
+			if = {
+				limit = {
+					owner = {
+						is_xenophile = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_xenophile"
+			}
+			
+			else_if = {
+				limit = {
+					owner = {
+						is_xenophobe = yes
+					}
+				}
+				
+				change_background_ethic = "ethic_xenophobe"
+			}
+
+		}
+	}
+}

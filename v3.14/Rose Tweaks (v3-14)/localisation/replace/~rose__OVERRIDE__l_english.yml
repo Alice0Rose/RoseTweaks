@@ -1,0 +1,6 @@
+﻿l_english:
+ trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.21667§!, £minerals£ §Y0.21667§!, £food£ §Y0.21667§!, and £unity£ §Y0.15§!§!"
+
+ trait_drake_scaled: "Drake-Scaled"
+ trait_drake_scaled_desc: "§LThis species has the genetic material from a stellar dragon spliced into its DNA. As such, they shed scales which can be recycled into useful alloys and exotic resources.§!"
+ TRAIT_DRAKE_SCALED_EFFECT: "Each pop working as a slave or better produces 0.05 £alloys£ §Y$alloys$§! and 0.015 £volatile_motes£ §Y$volatile_motes$§!, £exotic_gases£ §Y$exotic_gases$§!, and £rare_crystals£ §Y$rare_crystals$§! per month."

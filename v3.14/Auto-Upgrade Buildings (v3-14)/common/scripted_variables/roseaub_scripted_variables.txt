@@ -1,0 +1,6 @@
+@b_ring_resource_minerals = 900
+@b_ring_resource_rare_cost = 200
+@b_ring_manufacturing_minerals = 1500
+@b_ring_manufacturing_rare_cost = 600
+@b_ring_unity_minerals = 1200
+@b_ring_unity_rare_cost = 375

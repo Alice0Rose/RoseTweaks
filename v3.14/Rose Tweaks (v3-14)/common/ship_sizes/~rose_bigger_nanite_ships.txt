@@ -1,0 +1,62 @@
+# Nanite Mothership
+rose_nanite_mothership = {
+	formation_priority = @titan_formation_priority
+	max_speed = @speed_default
+	acceleration = 0.25
+	rotation_speed = 0.175
+	collision_radius = @titan_collision_radius
+	max_hitpoints = 4000
+	modifier = {
+		ship_evasion_add = 5
+		ship_piracy_suppression_add = 1
+		ship_hull_regen_add_static = 30
+		ship_armor_add = 2000
+		ship_armor_regen_add_static = 30	
+	}
+	size_multiplier = 8
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon = ship_size_military_8
+	base_buildtime = @battleship_build_time
+	can_have_federation_design = yes
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = carrier
+	ship_roles = { carrier } # artillery
+
+	potential_country = {
+		has_tradition = tr_nanotech_5
+	}
+	
+	prerequisites = { "tech_battleships" }
+
+	combat_disengage_chance = 1.25
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			nanites = 17000
+	    }
+	}
+
+	min_upgrade_cost = {
+		nanites = 1
+	}
+	
+	graphical_culture = no
+	entity = gatebuilder_01_mothership_entity
+	hull_scale = 0.75
+	use_shipnames_from = battleship
+}

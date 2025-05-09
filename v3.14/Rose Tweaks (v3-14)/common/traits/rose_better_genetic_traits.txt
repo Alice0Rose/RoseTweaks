@@ -1,0 +1,59 @@
+trait_rose_wraithful = {
+	cost = 3
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+		exists = from
+		from = {
+			has_technology = tech_leviathan_transgenesis
+			has_country_flag = harvested_wraith_dna
+		}
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		pop_amenities_usage_mult = -0.33
+		pop_housing_usage_mult = -0.33
+	}
+
+	slave_cost = {
+		energy = 1500
+	}
+}
+
+trait_rose_metabolic_overdrive = {
+	cost = 2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	custom_tooltip_with_modifiers = TRAIT_ROSE_METABOLIC_OVERDRIVE_EFFECT
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		pop_job_trade_mult = 0.25
+	}
+	slave_cost = {
+		energy = 3000
+	}
+	assembly_score = {
+		modifier = {
+			add = 0.5 #always good
+		}
+	}
+}

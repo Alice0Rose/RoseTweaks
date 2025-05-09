@@ -1,0 +1,37 @@
+﻿l_english:
+ rose_col_capital_nanotech: "Nanotech Capital"
+ rose_col_capital_nanotech_desc: "$col_capital_desc$"
+ 
+ rose_col_capital_machine_nanotech: "Nanotech Machine Capital"
+ rose_col_capital_machine_nanotech_desc: "$col_capital_machine_desc$" 
+ 
+ rose_col_mining_nanotech: "Nanotech Mining World"
+ rose_col_mining_nanotech_desc: "$col_mining_desc$"
+
+ rose_col_generator_nanotech: "Nanotech Generator World"
+ rose_col_generator_nanotech_desc: "$col_generator_desc$"
+
+ rose_col_trade_nanotech: "Nanotech Trade World"
+ rose_col_trade_nanotech_desc: "$col_city_desc$"
+
+ rose_col_foundry_nanotech: "Nanotech Forge World"
+ rose_col_foundry_nanotech_desc: "$col_foundry_desc$"
+
+ rose_col_factory_nanotech: "Nanotech Factory World"
+ rose_col_factory_nanotech_desc: "$col_factory_desc$"
+
+ rose_col_bureau_nanotech: "Nanotech Unification World"
+ rose_col_bureau_nanotech_desc: "$col_bureau_desc$"
+
+ rose_col_bureau_spiritualist_nanotech: "Nanotech Ecclesiastical World"
+ rose_col_bureau_spiritualist_nanotech_desc: "$col_bureau_spiritualist_desc$"
+
+ rose_col_bureau_machine_nanotech: "Nanotech Unification World"
+ rose_col_bureau_machine_nanotech_desc: "$col_bureau_machine_desc$"
+
+ rose_col_research_nanotech: "Nanotech Tech-World"
+ rose_col_research_nanotech_desc: "$col_research_desc$"
+
+ rose_col_fortress_nanotech: "Nanotech Fortress World"
+ rose_col_fortress_nanotech_desc: "$col_fortress_desc$"
+ 

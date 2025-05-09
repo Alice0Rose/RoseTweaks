@@ -1,0 +1,10 @@
+﻿l_english:
+ decision_rose_redevelop_colony: "Redevelop Colony"
+ decision_rose_redevelop_colony_desc: "Sometimes the needs of the empire change, and large scale redevelopment of entire planets is necessary."
+ decision_rose_redevelop_colony_effects: "Destroys all the buildings and districts on §Y[This.GetName]§! and temporarily increases building speed and building slots while greatly reducing planetary output."
+ 
+ rose_redevelop_colony_fail_capital: "£trigger_no£ Cannot redevelop empire capital"
+ rose_redevelop_colony_fail_uncontrolled: "£trigger_no£ Cannot redevelop if not under our control"
+
+ rose_redevelop_colony: "Redeveloping Colony"
+ rose_redevelop_colony_desc: "This colony is in the process of being redeveloped."

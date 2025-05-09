@@ -1,0 +1,9 @@
+﻿l_english:
+ decision_rose_nanite_ecumenopolis: "Build Ecumenopolis Infrastructure"
+ decision_rose_nanite_ecumenopolis_desc: "Augments this Nanite World with the infrastructure of an Ecumenopolis, giving us the benefits of both world types."
+ decision_rose_nanite_ecumenopolis_effects: "- $mod_planet_jobs_produces_mult$: §G+20%§!\n- $MOD_PLANET_POP_ASSEMBLY_MULT$: §G+15%§!\n- $MOD_PLANET_MAX_BUILDINGS_ADD$: §G+6§!\n- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+75%§!"
+ 
+ rose_nanite_ecumenopolis: "Ecumenopolis Infrastructure"
+ rose_nanite_ecumenopolis_desc: "This Nanite World has been augmented with the infrastructure of a Ecumenopolis."
+ 
+ rose_nanite_ecumenopolis_ap: "Allows using the §YBuild Ecumenopolis Infrastructure§! decision on Nanite Worlds."

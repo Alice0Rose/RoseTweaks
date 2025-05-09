@@ -1,0 +1,15 @@
+[h1]Features[/h1]
+This mod adds an edict that when toggled, automatically upgrades the buildings on each of your planets :D
+
+Especially in the late game when you have a lot of planets, manually upgrading each of them can be tedious and time consuming. This mod aims to address this QoL issue! 
+
+Due to a lack of support for functions to directly upgrade buildings, this mod has to use a very round-about way of achieving it's goal. This means that auto-upgrading buildings won't be visible in the planetary build queue. They will, however, use the correct amount of resources and take the correct amount of time to upgrade, including pausing if something is put in the build queue. The upgrades can also be canceled via a decision on each planet, and disabling the edict will prevent future auto-upgrades from starting until it is reactivated. You can also see which building is upgrading by looking at the name of the planetary modifier :)
+
+[h1]Compatibility[/h1]
+This mod doesn't overwrite any vanilla files, so it shouldn't cause issues with any other mods! :D
+
+However, it also won't automatically upgrade buildings from any other mods unless a compatibility patch is created. This can be done by overriding "common\scripted_effects\roseaub_building_selector_effects.txt", "common\static_modifiers\roseaub_static_modifiers.txt", and "localisation\english\roseaub_modifiers_l_english.yml" and adding all the necessary information for the modded buildings to each of the files. Use the way the existing vanilla buildings are added as a template, and don't hesitate to reach out to me if you need help ^-^
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

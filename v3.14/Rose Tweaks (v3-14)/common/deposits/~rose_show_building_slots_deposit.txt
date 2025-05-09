@@ -1,0 +1,9 @@
+d_rose_show_building_slots = {
+	is_for_colonizable = yes
+	icon = "d_building_complex"
+	category = deposit_cat_rare
+
+	potential = { has_owner = yes }
+
+	custom_tooltip = rose_show_building_slots_tooltip
+}

@@ -1,0 +1,240 @@
+namespace = machine_age
+
+#Everyone is dead
+situation_event = {
+	id = machine_age.3200
+	title = "machine_age.3200.name"
+	desc = "machine_age.3200.desc"
+	picture = GFX_evt_city_ruins
+	show_sound = event_radio_chatter
+	event_chain = synthetic_fertility_chain
+
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_situation = this
+		owner = {
+			set_country_flag = synthetic_fertility_no_bodies_left
+			owner_main_species = {
+				# Saves original species to be used for name and possibly portrait when ascending
+				save_global_event_target_as = rose_synthetic_choice_original_species@root.owner
+				
+				set_species_flag = holographic_appearance
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = owner
+					NOT = {
+						has_trait = leader_trait_intemporal
+					}
+				}
+				change_species = event_target:synth_fert_surrogate@root.owner
+				add_trait_no_notify = leader_trait_robotic_surrogate
+				set_age = 1
+
+			}
+			random_owned_leader = {
+				limit = {
+					is_ruler = yes
+					NOT = {
+						has_trait = leader_trait_intemporal
+					}
+				}
+				change_leader_portrait = event_target:synth_fert_surrogate@root.owner
+				add_trait_no_notify = leader_trait_robotic_surrogate
+				set_age = 1
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = owner
+				}
+				change_species = event_target:synth_fert_surrogate@root.owner
+				add_trait_no_notify = leader_trait_robotic_surrogate
+				set_age = 1
+			}
+			refresh_portraits = character
+		}
+	}
+
+	option = {
+		name = UNDERSTOOD
+	}
+}
+
+#Final Choice for the Pops and Identities
+situation_event = {
+	id = machine_age.3305
+	title = "machine_age.3305.name"
+	desc = "machine_age.3305.desc"
+	picture = GFX_evt_virtual_world
+	show_sound = event_radio_chatter
+	event_chain = synthetic_fertility_chain
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			every_owned_planet = {
+				reset_decline = yes
+			}
+		}
+	}
+
+	option = {
+		name = "machine_age.3305.a"
+		custom_tooltip = "machine_age.3305.a.tooltip"
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "machine_age.3305.b"
+		custom_tooltip = "machine_age.3305.b.tooltip"
+		hidden_effect = {
+			owner = {
+				while = {
+					limit = {
+						any_owned_pop = {
+							NOT = { is_same_species = owner.species }
+							is_robot_pop = yes
+						}
+					}
+					count = num_dead_identities
+					random_owned_pop = {
+						limit = {
+							NOT = { is_same_species = owner.species }
+							is_robot_pop = yes
+						}
+						change_species = event_target:synthspecies@root.owner
+					}
+					change_variable = {
+						which = num_dead_identities
+						value = -1
+					}
+				}
+				while = {
+					count = num_dead_identities
+					capital_scope = {
+						create_pop = {
+							species = event_target:synthspecies@root.owner
+						}
+					}
+					change_variable = {
+						which = num_dead_identities
+						value = -1
+					}
+				}
+				set_country_flag = synthetic_fertility_no_identity_left_behind
+				every_owned_planet = {
+					remove_building = building_identity_repository
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			owner = {
+				every_owned_leader = {
+					limit = {
+						has_trait = leader_trait_robotic_surrogate
+					}
+					change_species = event_target:synthspecies@root.owner
+					add_trait_no_notify = leader_trait_synthetic
+					set_age = 1
+					remove_trait = leader_trait_robotic_surrogate
+				}
+				random_owned_leader = {
+					limit = {
+						is_ruler = yes
+						NOT = {
+							has_trait = leader_trait_intemporal
+						}
+					}
+					add_trait_no_notify = leader_trait_synthetic
+					set_age = 1
+					remove_trait = leader_trait_robotic_surrogate
+					
+					# Changes ruler portrait to new portrait if was surrogate after all pops died
+					if = {
+						limit = {
+							owner = {
+								has_country_flag = synthetic_fertility_no_bodies_left
+							}
+						}
+						change_leader_portrait = species
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						has_trait = leader_trait_robotic_surrogate
+					}
+					change_species = event_target:synthspecies@root.owner
+					add_trait_no_notify = leader_trait_synthetic
+					set_age = 1
+					remove_trait = leader_trait_robotic_surrogate
+				}
+				every_envoy = {
+					limit = {
+						exists = species
+						species = {
+							is_robotic = no
+							is_livestock = no
+						}
+					}
+					change_species = event_target:synthspecies@root.owner
+					change_leader_portrait = species
+					set_age = 1
+				}
+				every_controlled_ship = {
+					limit = {
+						is_ship_class = shipclass_colonizer
+						species = {
+							is_robotic = no
+							is_livestock = no
+						}
+					}
+					change_species = event_target:synthspecies@root.owner
+				}
+				every_owned_army = {
+					limit = {
+						exists = species
+						species = {
+							is_robotic = no
+							is_livestock = no
+						}
+						army_type = assault_army
+					}
+					modify_army = {
+						name = random
+						type = "robotic_army"
+						species = event_target:synthspecies@root.owner
+					}
+				}
+				every_owned_army = {
+					limit = {
+						exists = species
+						exists = planet
+						species = {
+							is_robotic = no
+							is_livestock = no
+						}
+						OR = {
+							army_type = defense_army
+							army_type = fanatic_guardian
+						}
+					}
+					modify_army = {
+						name = random
+						type = "robotic_defense_army"
+						species = event_target:synthspecies@root.owner
+					}
+				}
+			}
+		}
+	}
+}

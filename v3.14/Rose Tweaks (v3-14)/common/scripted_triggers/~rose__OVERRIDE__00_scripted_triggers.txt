@@ -1,0 +1,28 @@
+is_faction_allowed = {
+	OR = {
+		AND = {
+			years_passed > 1
+			#has_encountered_other_species = yes
+		}
+		AND = {
+			days_passed > 1
+			has_valid_civic = civic_parliamentary_system
+		}
+		AND = {
+			days_passed > 350
+			has_origin = origin_broken_shackles
+		}
+	}
+	NOT = { has_ethic = ethic_gestalt_consciousness }
+	NOT = { has_country_flag = suppress_vanilla_factions }
+}
+
+harvested_leviathan_dna = {
+	OR = {
+		has_country_flag = harvested_voidspawn_dna
+		has_country_flag = harvested_dragon_dna
+		has_country_flag = harvested_tiyanki_dna
+		has_country_flag = harvested_devourer_dna
+		has_country_flag = harvested_wraith_dna
+	}
+}

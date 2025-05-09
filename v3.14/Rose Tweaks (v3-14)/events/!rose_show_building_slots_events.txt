@@ -1,0 +1,40 @@
+namespace = rose_show_building_slots
+
+# Adds show building slots deposit to scoped planet if not already present
+planet_event = {
+	id = rose_show_building_slots.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_rose_show_building_slots
+				}
+			}
+			add_deposit = d_rose_show_building_slots			
+		} 			
+	}
+}
+
+# Adds show building slots deposit to all planets 
+event = {
+	id = rose_show_building_slots.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_galaxy_planet = { 
+			limit = { 
+				has_owner = yes 
+			} 			
+			
+			planet_event = {
+				id = rose_show_building_slots.1
+			}
+		}
+	}
+}

@@ -1,0 +1,3 @@
+﻿l_english: 
+ habitat_system_tt: "§EHabitat Orbital Capacity:§!$TABBED_NEW_LINE$- Major: §Y[root.GetNumMajorOrbitals]/[root.GetMaxMajorOrbitals]§! | Minor: §Y[root.GetNumMinorOrbitals]/[root.GetMaxMinorOrbitals]§!$TABBED_NEW_LINE$- £minerals£: §Y[root.GetNumOrbitalsMining]/[root.GetMaxOrbitalsMining]§! | £research£: §Y[root.GetNumOrbitalsScience]/[root.GetMaxOrbitalsScience]§! | £energy£: §Y[root.GetNumOrbitalsEnergy]/[root.GetMaxOrbitalsEnergy]§!"
+ 

@@ -1,0 +1,113 @@
+@attack_range = 10
+@engagement_range = 100
+@launch_time = 2
+@regen = 0.5
+@ship_aura_range = 80
+
+### Leechcraft
+
+strike_craft_component_template = {
+	key = "LEECHCRAFT_SMALL"
+	entity = "space_amoeba_small_entity"
+	size = small
+	weapon_type = instant
+	icon = "GFX_mutation_leechcraft"
+	icon_frame = 1
+	prerequisites = { "tech_unique_mutation_space_amoeba" }
+	size_restriction = { space_amoeba space_amoeba_mother rose_space_amoeba_centurion }
+	component_set = "LEECHCRAFT"
+	projectile_gfx = "small_space_amoeba_weapon"
+	tags = { weapon_type_strike_craft weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield }
+
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 80
+		}
+	}
+
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+
+	count = 2
+	regeneration_per_day = @regen
+	launch_time = @launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 5
+	range = @attack_range
+	engagement_range = @engagement_range
+	accuracy = 0.70
+	tracking = 0.50
+
+	health = 20
+	armor = 0
+	shield = 0
+	evasion = 0.50
+
+	speed = 500
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_damage = 1.5
+
+	ship_behavior = "bombers_behavior"
+}
+
+strike_craft_component_template = {
+	key = "LEECHCRAFT_LARGE"
+	entity = "space_amoeba_small_entity"
+	size = large
+	weapon_type = instant
+	icon = "GFX_mutation_leechcraft"
+	icon_frame = 1
+	prerequisites = { "tech_unique_mutation_space_amoeba" }
+	size_restriction = { space_amoeba space_amoeba_mother rose_space_amoeba_centurion }
+	component_set = "LEECHCRAFT"
+	projectile_gfx = "small_space_amoeba_weapon"
+	tags = { weapon_type_strike_craft weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield }
+
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 320
+		}
+	}
+
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+
+	count = 8
+	regeneration_per_day = @regen
+	launch_time = @launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 5
+	range = @attack_range
+	engagement_range = @engagement_range
+	accuracy = 0.70
+	tracking = 0.50
+
+	health = 20
+	armor = 0
+	shield = 0
+	evasion = 0.50
+
+	speed = 500
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_damage = 1.5
+
+	ship_behavior = "bombers_behavior"
+}

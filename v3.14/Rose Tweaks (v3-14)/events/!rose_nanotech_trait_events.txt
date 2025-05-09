@@ -1,0 +1,125 @@
+namespace = rose_nanotech_traits
+
+# Pops get Nanotech trait
+country_event = {
+	id = rose_nanotech_traits.1
+	hide_window = yes
+	location = FROM
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_tradition = tr_nanotech_finish
+	}
+
+	immediate = {
+		# Main machine species is given the trait
+		modify_species = {
+			species = owner_main_species
+			add_trait = trait_rose_nanotech
+		}		
+		change_dominant_species = {
+			species = last_created_species
+			change_all = yes
+		}		
+		
+		# All other machine pops are given trait
+		every_owned_species = {
+			limit = {
+				NOT = {
+					is_same_value = owner_main_species
+				}
+				
+				OR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+		
+			modify_species = {
+				add_trait = trait_rose_nanotech
+			}
+		}
+	}
+}
+
+# Current Leaders get Nanotech Trait
+country_event = {
+	id = rose_nanotech_traits.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_tradition = tr_nanotech_finish
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				species = {
+					has_trait = trait_rose_nanotech
+				}
+				
+				NOR = {
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
+				
+				is_gestalt_node = no
+			}
+			
+			add_trait_no_notify = leader_trait_rose_nanotech
+		}
+		
+		every_pool_leader = {
+			limit = {
+				species = {
+					has_trait = trait_rose_nanotech
+				}
+			}
+			
+			add_trait_no_notify = leader_trait_rose_nanotech
+		}
+		
+		create_message = {
+			type = MESSAGE_ALL_GAINED_TRAIT
+			localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+			days = @toast_message_days
+			variable = {
+				type = key
+				value = leader_trait_rose_nanotech
+				localization = TRAIT
+			}
+			variable = {
+				key = TRAIT_KEY
+				value = leader_trait_rose_nanotech
+			}
+			variable = {
+				key = "border"
+				value = "GFX_invisible"
+			}
+		}
+	}
+}
+
+# New Leaders Get Nanotech Trait
+country_event = {
+	id = rose_nanotech_traits.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_tradition = tr_nanotech_finish
+		from = {
+			species = {
+				has_trait = trait_rose_nanotech
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait_no_notify = leader_trait_rose_nanotech
+		}
+	}
+}

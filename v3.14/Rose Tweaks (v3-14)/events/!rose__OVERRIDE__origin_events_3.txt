@@ -1,0 +1,86 @@
+namespace = origin
+
+# Start Game event
+country_event = {
+	id = origin.3500
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Find Quantum Catapult Star
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = {
+					NOR = {
+						has_star_flag = empire_home_system
+						has_star_flag = hostile_system
+						is_binary_star = yes
+						is_trinary_star = yes
+					}
+				}
+				save_event_target_as = quantum_catapult_system
+			}
+		}
+		set_country_flag = slingshot_origin_arcsite_owner
+		set_visited = event_target:quantum_catapult_system
+		event_target:quantum_catapult_system = {
+			set_star_class = sc_neutron_star
+			set_star_flag = quantum_catapult_system_flag@root
+
+			spawn_megastructure = {
+				type = "quantum_catapult_ruined_slingshot"
+				planet = event_target:quantum_catapult_system.star
+
+				init_effect = {
+					create_ambient_object = {
+						type = "large_debris_object"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 20
+						}
+					}
+					create_ambient_object = {
+						type = "large_debris_object"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 150
+						}
+					}
+					create_ambient_object = {
+						type = "medium_debris_01_object"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 35
+							angle = 90
+						}
+					}
+					create_ambient_object = {
+						type = "medium_debris_02_object"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 3
+							angle = 270
+						}
+					}
+				}
+			}
+
+			star = { create_archaeological_site = slingshot_digsite }
+		}
+	}
+}

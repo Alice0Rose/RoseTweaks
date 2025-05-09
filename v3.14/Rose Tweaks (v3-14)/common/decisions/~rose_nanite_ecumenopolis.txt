@@ -1,0 +1,57 @@
+decision_rose_nanite_ecumenopolis = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_rose_nanite_ecumenopolis
+	enactment_time = 1800
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 20000
+			influence = 200
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = { has_ascension_perk = ap_arcology_project }
+		
+		is_inside_border = from
+		
+		is_planet_class = pc_nanotech
+		
+		NOT = { has_modifier = rose_nanite_ecumenopolis }
+	}
+
+ 	abort_trigger = {		
+		OR = {
+			# If the colony dies or is lost control of
+			NAND = {
+				is_colony = yes
+				exists = owner
+				exists = controller
+				controller = { is_same_value = prev.owner }
+			}
+		
+			# If the planet stops being a nanite world
+			NOT = { is_planet_class = pc_nanotech }
+		}
+ 	}
+
+	effect = {
+		custom_tooltip = decision_rose_nanite_ecumenopolis_effects
+		
+		hidden_effect = {
+			# Adds nanite machine world modifier to planet
+			add_modifier = {
+				modifier = rose_nanite_ecumenopolis
+				years = -1
+			}
+		}	
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}

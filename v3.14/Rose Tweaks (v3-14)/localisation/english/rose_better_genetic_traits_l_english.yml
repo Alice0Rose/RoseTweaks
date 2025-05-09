@@ -1,0 +1,15 @@
+﻿l_english:
+ trait_enduring_lithoid: "$trait_enduring$"
+ trait_enduring_lithoid_desc: "$trait_enduring_desc$"
+ trait_venerable_lithoid: "$trait_venerable$"
+ trait_venerable_lithoid_desc: "$trait_venerable_desc$"
+
+ trait_rose_wraithful: "Wraithful"
+ trait_rose_wraithful_desc: "§LThis species has the genetic material from a spectral wraith spliced into its DNA. Because of this, they can phase in and out of space, allowing for more efficient usage of housing and entertainment.§!"
+ 
+ trait_rose_metabolic_overdrive: "Metabolic Overdrive"
+ trait_rose_metabolic_overdrive_desc: "By massively increasing the speed of this species's metabolism, they are able to be much more productive at the cost of requiring far more sustenance."
+ TRAIT_ROSE_METABOLIC_OVERDRIVE_EFFECT: "$r_food$, $r_minerals$, or $r_energy$ Upkeep: §R+2§!" 
+ 
+ rose_devourer_dna_harvested_tooltip: "Unlocks the §Y$trait_voidling$§! trait for §YLeviathan Transgenesis§!."
+ rose_wraith_dna_harvested_tooltip: "Unlocks the §Y$trait_rose_wraithful$§! trait for §YLeviathan Transgenesis§!."

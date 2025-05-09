@@ -1,0 +1,4 @@
+﻿l_english:
+ d_rose_show_building_slots: "Building Slot Counter"
+ d_rose_show_building_slots_desc: "Shows the total number of building slots on the planet, including ones above the maximum usable."
+ rose_show_building_slots_tooltip: "Total Building Slots: §Y[RoseGetBuildingSlots]§! (§R[RoseGetExcessBuildingSlots]§!)"

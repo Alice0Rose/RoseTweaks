@@ -1,0 +1,3 @@
+﻿l_english:
+ tr_nanotech_finish_modifier_desc: "§YUnlocks Ship:§! Nanite Interdictor\n§YUnlocks Ship:§! Nanite Mothership (requires Battleships technology)\n§Y$sm_nanite_harvester_plural$§! yield improvements every §Y5§! years, either increasing the size of $r_nanites$ deposits or yielding a sum of nanites. This effect is limited by the size of the planet that deposits are created upon.\nAll §Y$trait_machine_unit$§! pops and leaders gain §Y$leader_trait_rose_nanotech$§!"
+ tr_nanotech_1_modifier_desc: "§Y$AVAILABLE_BUILDINGS$§! $building_nanolab_2$\n§Y$AVAILABLE_BUILDINGS$§! $building_rose_nanite_conversion_center$"

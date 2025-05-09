@@ -1,0 +1,94 @@
+defined_text = {
+	name = GetSystemProspectingDysonSwarmEnergy
+	value = value:system_prospecting_dyson_swarm_energy_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmMinerals
+	value = value:system_prospecting_dyson_swarm_minerals_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmFood
+	value = value:system_prospecting_dyson_swarm_food_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmConsumerGoods
+	value = value:system_prospecting_dyson_swarm_consumergoods_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmAlloys
+	value = value:system_prospecting_dyson_swarm_alloys_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmPhysics
+	value = value:system_prospecting_dyson_swarm_physics_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmSociety
+	value = value:system_prospecting_dyson_swarm_society_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmEngineering
+	value = value:system_prospecting_dyson_swarm_engineering_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmPhysics
+	value = value:system_prospecting_dyson_swarm_physics_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmMotes
+	value = value:system_prospecting_dyson_swarm_motes_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmGases
+	value = value:system_prospecting_dyson_swarm_gases_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmCrystals
+	value = value:system_prospecting_dyson_swarm_crystals_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmLivingMetal
+	value = value:system_prospecting_dyson_swarm_livingmetal_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmZro
+	value = value:system_prospecting_dyson_swarm_zro_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmDarkMatter
+	value = value:system_prospecting_dyson_swarm_darkmatter_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmNanites
+	value = value:system_prospecting_dyson_swarm_nanites_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmThreads
+	value = value:system_prospecting_dyson_swarm_threads_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmArtifacts
+	value = value:system_prospecting_dyson_swarm_artifacts_value
+}
+
+defined_text = {
+	name = GetSystemProspectingDysonSwarmTrade
+	value = value:system_prospecting_dyson_swarm_trade_value
+}

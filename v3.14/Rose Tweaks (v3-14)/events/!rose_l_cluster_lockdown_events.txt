@@ -1,0 +1,859 @@
+namespace = rose_l_cluster_lockdown
+
+# Event to give L-Cluster lockdown special project if system gained was terminal egress or another lgate
+# Triggered on_system_gained
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+country_event = {
+	id = rose_l_cluster_lockdown.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		# Prevents the project being given to ai countries
+		is_ai = no
+		
+		# Only continue event if l-cluster has been opened and is not already in lockdown
+		AND = {
+			has_global_flag = l_cluster_opened
+			
+			NOT = {
+				has_global_flag = rose_l_cluster_locked_down
+			}
+		}
+		
+		# Checks new owner does not have the special project already
+		NOT = {
+			has_special_project = ROSE_L_CLUSTER_LOCKDOWN
+		}
+		
+		# Checks if new owner has terminal egress and another system with an lgate
+		AND = {
+			# Has terminal egress
+			any_system_within_border = {
+				has_star_flag = terminal_egress
+			}
+			
+			# Has another lgate system
+			any_system_within_border = {
+				NOT = {
+					has_star_flag = terminal_egress
+				}
+				has_star_flag = lgate
+			}
+		}
+	}
+
+	immediate = {			
+		# Get lgate in terminal egress system
+		event_target:lcluster1 = {
+			random_system_megastructure = {
+				limit = {
+					is_megastructure_type = lgate_base				
+				}
+				save_event_target_as = rose_l_cluster_lockdown_terminal_egress_lgate
+			}
+		}
+		
+		# Adds special project to terminal egress lgate
+		event_target:rose_l_cluster_lockdown_terminal_egress_lgate = {
+			enable_special_project = {
+				name = "ROSE_L_CLUSTER_LOCKDOWN"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Event to remove L-Cluster lockdown special project if system lost causes previous owner to no longer have a terminal egress and another lgate
+# Triggered on_system_lost
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+country_event = {
+	id = rose_l_cluster_lockdown.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		# Only continue event if l-cluster has been opened and is not already in lockdown
+		AND = {
+			has_global_flag = l_cluster_opened
+			
+			NOT = {
+				has_global_flag = rose_l_cluster_locked_down
+			}
+		}
+		
+		# Previous owner had the lockdown special project
+		has_special_project = ROSE_L_CLUSTER_LOCKDOWN
+		
+		# Previous owner no longer has terminal egress and at least one other lgate
+		OR = {
+			# System lost was terminal egress
+			from = {
+				has_star_flag = terminal_egress
+			}
+
+			# Previous owner no longer has a non-egress lgate
+			AND = {
+				# Lost system was a non-egress lgate system
+				from = {
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				
+				# Previous owner does not have another non-egress lgate system
+				NOT = {
+					any_system_within_border = {
+						NOT = {
+							has_star_flag = terminal_egress
+						}
+						has_star_flag = lgate
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {			
+		# Get lgate in terminal egress system
+		event_target:lcluster1 = {
+			random_system_megastructure = {
+				limit = {
+					is_megastructure_type = lgate_base				
+				}
+				save_event_target_as = rose_l_cluster_lockdown_terminal_egress_lgate
+			}
+		}
+		
+		# Removes special project from terminal egress for previous owner
+		abort_special_project = { 
+			type = "ROSE_L_CLUSTER_LOCKDOWN" 
+			location = event_target:rose_l_cluster_lockdown_terminal_egress_lgate
+		}
+	}
+}
+
+# Prompts country to choose which lgate to leave open and then closes all other lgates, leaving only one way into the l-cluster
+# Triggered by: completing l-cluster lockdown special project
+country_event = {
+	id = rose_l_cluster_lockdown.3
+	title = rose_l_cluster_lockdown.3.name
+	desc = rose_l_cluster_lockdown.3.desc
+	picture = GFX_evt_l-gateway	
+	hide_window = no
+	is_triggered_only = yes
+
+	immediate = {			
+		# Gets the number of lgate systems in the countries boarder that can be options to leave open
+		export_trigger_value_to_variable = {
+			trigger = count_system_within_border
+			parameters = {
+				limit = { 
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+			}
+			variable = rose_l_cluster_lockdown_lgate_option_num
+		}
+
+		# Gets 1st system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 1
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 0
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_1
+			}
+		}
+		
+		# Gets 2nd system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 2
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 1
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_2
+			}
+		}
+		
+		# Gets 3rd system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 3
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 2
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_3
+			}
+		}
+		
+		# Gets 4th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 4
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 5
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_4
+			}
+		}
+		
+		# Gets 5th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 5
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 4
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_5
+			}
+		}
+		
+		# Gets 6th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 6
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 5
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_6
+			}
+		}
+		
+		# Gets 7th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 7
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 6
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_7
+			}
+		}
+		
+		# Gets 8th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 8
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 7
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_8
+			}
+		}
+		
+		# Gets 9th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 9
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 8
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_9
+			}
+		}
+		
+		# Gets 10th system option
+		if = {
+			limit = {
+				check_variable = { 
+					which = rose_l_cluster_lockdown_lgate_option_num 
+					value >= 10
+				}
+			}
+		
+			ordered_system_within_border = {
+				limit = { 
+					# Gets system with lgate that isn't terminal egress
+					NOT = {
+						has_star_flag = terminal_egress
+					}
+					has_star_flag = lgate
+				}
+				position = 9
+				order_by = trigger:distance_to_capital
+				inverse = yes
+				
+				save_event_target_as = rose_l_cluster_lockdown_lgate_option_10
+			}
+		}
+	}
+	
+	# Option to lock all but 1st owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.a
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_1
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_1
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 2nd owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.b
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_2
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_2
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 3rd owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.c
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_3
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_3
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 4th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.d
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_4
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_4
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 5th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.e
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_5
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_5
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 6th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.f
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_6
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_6
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 7th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.g
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_7
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_7
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}		
+		}
+	}
+	
+	# Option to lock all but 8th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.h
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_8
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_8
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+			
+			set_global_flag = rose_l_cluster_locked_down
+			
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 9th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.i
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_9
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_9
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+
+			set_global_flag = rose_l_cluster_locked_down
+
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}
+	
+	# Option to lock all but 10th owned lgate 
+	option = {
+		name = rose_l_cluster_lockdown.3.j
+		default_hide_option = yes
+		trigger = {
+			exists = event_target:rose_l_cluster_lockdown_lgate_option_10
+		}
+		
+		hidden_effect = {
+			# Destroys all other lgates except terminal egress and chosen lgate
+			every_megastructure = { 
+				limit = { 
+					is_megastructure_type = lgate_base
+					
+					solar_system = {
+						# lgate isn't terminal egress lgate or chosen lgate
+						NOR = {
+							has_star_flag = terminal_egress
+							is_same_value = event_target:rose_l_cluster_lockdown_lgate_option_10
+						}
+					}
+				} 
+
+				remove_megastructure = this
+			}
+			
+			set_global_flag = rose_l_cluster_locked_down
+			
+			# Sends a notification to all other non-ai empires that the lcluster has been put back on lockdown
+			every_country = { 
+				limit = { 
+					is_ai = no
+					NOT = { is_same_empire = root }
+					has_country_flag = encountered_first_lgate
+				} 
+				
+				country_event = { id = rose_l_cluster_lockdown.4 } 
+			}
+		}
+	}	
+}
+
+# Notifies other empires when another empire puts the lcluster on lockdown
+country_event = {
+	id = rose_l_cluster_lockdown.4
+	title = rose_l_cluster_lockdown.4.name
+	desc = rose_l_cluster_lockdown.4.desc
+	picture = GFX_evt_l-gateway
+	hide_window = no
+	is_triggered_only = yes
+	
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+event = {
+	id = rose_l_cluster_lockdown.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+					
+				country_event = { id = rose_l_cluster_lockdown.1 }
+			}
+		}
+	}
+}

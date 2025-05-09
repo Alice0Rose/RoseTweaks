@@ -1,0 +1,28 @@
+# root/this = planet
+universal_assimilation_effect = {
+	random_owned_pop = {
+		limit = {
+			has_citizenship_type = {
+				type = citizenship_universal_assimilation
+				country = root.owner
+			}
+		}
+		
+		# Creates a new pop of the main species of the country assimilating to replace the one being assimilated
+		root = {
+			create_pop = {
+				species = root.owner
+				ethos = prev
+			}
+			owner = {
+				if = {
+					limit = { has_ascension_perk = ap_become_the_crisis }
+					complete_crisis_objective = crisobj_purge_pops
+				}
+			}
+		}		
+		
+		# Deletes the now-assimilated pop
+		kill_pop = yes
+	}
+}

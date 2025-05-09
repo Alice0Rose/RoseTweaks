@@ -1,0 +1,30 @@
+tech_more_mutations = {
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	area = society
+	tier = @repeatableTechTier
+	category = { biology }
+	levels = 3
+	weight = @repeatableTechWeight
+	prerequisites = { tech_controlled_mutations_2 }
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		mutation_slots_add = 1
+	}
+}

@@ -1,0 +1,34 @@
+namespace = paragon
+
+country_event = { #UTILITY - ascension launcher failsafe event, for players continuing their old saved games
+	id = paragon.5960
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_origin = origin_legendary_leader_dictatorial
+			AND = {
+				has_country_flag = paragon_origin_reformists_gone
+				has_origin = origin_legendary_leader_imperial
+			}
+		}
+		OR = {
+			has_tradition = tr_psionics_finish
+			has_tradition = tr_cybernetics_finish
+			has_country_flag = synthetic_empire
+			has_tradition = tr_genetics_finish
+		}
+		NOT = { has_country_flag = luminary_ascension_path }
+		exists = ruler
+		ruler = { has_leader_flag = paragon_origin_legendary_leader }
+	}
+
+	immediate = {
+		country_event = {
+			#Change from 7200 (20 years) randomness on top of 10 year base to 720 (2 years) randomness on top of 15 year base
+			id = paragon.5201 days = 4800 random = 720 
+		}
+	}
+}

@@ -1,0 +1,60 @@
+namespace = rose_scaling_nanite_harvester_upgrade
+
+event = {
+	id = rose_scaling_nanite_harvester_upgrade.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_system = {
+			get_galaxy_setup_value = { 
+				which = harvester_scaled_upgrade_frequency
+				setting = end_game_year					
+			}	
+			
+			multiply_variable = {
+				which = harvester_scaled_upgrade_frequency
+				value = 9
+			}
+						
+			round_variable_to_closest = {
+				which = harvester_scaled_upgrade_frequency
+				value = 30
+			}
+			
+			set_variable = {
+				which = local_days_passed
+				value = trigger:days_passed
+			}
+		
+			if = {
+				limit = {				
+					# Determines if it is one of the modified-game-length-scaled months to upgrade the nanite harvesters
+					check_variable_arithmetic = {
+						which = local_days_passed
+						modulo = harvester_scaled_upgrade_frequency
+						value = 0
+					}
+				}
+
+				every_system = {
+					limit = {
+						exists = owner
+						owner = {
+							has_tradition = tr_nanotech_finish
+						}
+						exists = starbase
+						starbase = {
+							has_starbase_building = nanite_harvester
+						}
+					}
+					system_event = { id = cybernetics.5054 }
+				}
+			}
+			
+			clear_variable = harvester_scaled_upgrade_frequency
+			clear_variable = local_days_passed
+		}
+	}
+}

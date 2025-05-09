@@ -1,0 +1,72 @@
+decision_rose_redevelop_colony = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_expel_population
+	enactment_time = 0
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 10
+			energy = 100
+			minerals = 25
+			multiplier = trigger:planet_size
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = {
+			# AI empires from getting the decision	
+			is_ai = no
+		}
+		
+		NOT = { has_modifier = rose_redevelop_colony }
+	}
+
+	allow = {
+		# Planet cannot be capital
+		custom_tooltip_fail = {
+			text = rose_redevelop_colony_fail_capital
+			is_capital = no
+		}
+		
+		# Planet must be controlled by the owner
+		custom_tooltip_fail = {
+			text = rose_redevelop_colony_fail_uncontrolled
+			is_controlled_by = owner
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_rose_redevelop_colony_effects
+		
+		hidden_effect = {
+			# Destroys all buildings except capital building
+			while = {
+				limit = {
+					num_buildings = {  
+						type = any  
+						value > 1 
+					}
+				}
+			
+				remove_last_built_building = yes
+			}
+			
+			# Destroys all districts except city districts
+			remove_all_districts = yes
+
+			# Adds redevelop colony modifier to planet
+			add_modifier = {
+				modifier = rose_redevelop_colony
+				years = 10 # it should take 15 to build 11 city districts without any modifiers, but much less with modifiers
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

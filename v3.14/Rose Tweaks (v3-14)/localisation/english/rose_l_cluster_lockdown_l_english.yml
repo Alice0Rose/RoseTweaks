@@ -1,0 +1,19 @@
+﻿l_english:
+ ROSE_L_CLUSTER_LOCKDOWN: "Lock Down L-Cluster"
+ ROSE_L_CLUSTER_LOCKDOWN_DESC: "With control over Terminal Egress, our scientists believe they have found a way to force all other L-Gates, save for one, to self-destruct. This would make the L-Cluster significantly easier to fortify if we choose to expand or even relocate there."
+
+ rose_l_cluster_lockdown.3.name: "Lock Down L-Cluster"
+ rose_l_cluster_lockdown.3.desc: "We are ready to lock down the L-Cluster. All we need to do now is choose which L-Gate to leave open, as to not repeat the mistakes of the Gate-Builders."
+ rose_l_cluster_lockdown.3.a: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_1.GetName]§! system"
+ rose_l_cluster_lockdown.3.b: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_2.GetName]§! system"
+ rose_l_cluster_lockdown.3.c: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_3.GetName]§! system"
+ rose_l_cluster_lockdown.3.d: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_4.GetName]§! system"
+ rose_l_cluster_lockdown.3.e: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_5.GetName]§! system"
+ rose_l_cluster_lockdown.3.f: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_6.GetName]§! system"
+ rose_l_cluster_lockdown.3.g: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_7.GetName]§! system"
+ rose_l_cluster_lockdown.3.h: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_8.GetName]§! system"
+ rose_l_cluster_lockdown.3.i: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_9.GetName]§! system"
+ rose_l_cluster_lockdown.3.j: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_10.GetName]§! system"
+ 
+ rose_l_cluster_lockdown.4.name: "L-Cluster Locked Down"
+ rose_l_cluster_lockdown.4.desc: "We have just learned that the §Y[from.GetName]§! has initiated some sort of lockdown on all L-Gates, causing all but one of them to self-destruct. This will make getting to the L-Cluster much more difficult."

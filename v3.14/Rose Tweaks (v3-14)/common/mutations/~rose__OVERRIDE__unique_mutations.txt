@@ -1,0 +1,11 @@
+leechcraft = {
+	type = offensive
+	icon = "GFX_mutation_leechcraft"
+	ship_components = {
+		small = "LEECHCRAFT_SMALL"
+		large = "LEECHCRAFT_LARGE"
+		extra_large = "ROSE_LEECHCRAFT_EXTRA_LARGE"
+	}
+
+	is_unique = yes
+}

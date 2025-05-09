@@ -1,0 +1,47 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_capital"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_capital.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_mining"
+		texturefile = "gfx/interface/planetview/GFX_rose_colony_type_nanotech_mining.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_generator"
+		texturefile = "gfx/interface/planetview/GFX_rose_colony_type_nanotech_generator.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_trade"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_trade.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_factory"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_factory.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_foundry"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_foundry.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_bureaucratic"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_bureaucratic.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_research"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_research.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rose_colony_type_nanotech_fortress"
+		texturefile = "GFX/interface/planetview/GFX_rose_colony_type_nanotech_fortress.dds"
+	}
+}
+

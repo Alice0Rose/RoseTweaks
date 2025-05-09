@@ -1,0 +1,4 @@
+﻿l_english:
+ decision_rose_orbital_ring: "Construct Orbital Ring"
+ decision_rose_orbital_ring_desc: "By creating the orbital ring from the planet up instead of starting in space, we can finish construction much more quickly, at the cost of temporarily disrupting other planetary construction projects."
+ decision_rose_orbital_ring_effects: "Creates an orbital ring around §Y[This.GetName]§! using the planetary construction queue."

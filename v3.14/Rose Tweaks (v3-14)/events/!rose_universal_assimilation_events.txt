@@ -1,0 +1,135 @@
+namespace = rose_universal_assimilation
+
+# Assimilate Pops on Yearly Pulse
+event = {
+	id = rose_universal_assimilation.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			num_unique_species > 1
+			any_owned_species = {
+				has_citizenship_type = {
+					type = citizenship_universal_assimilation
+					country = prev
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "rose_universal_assimilation.1"
+		set_update_modifiers_batch = begin
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				any_owned_species = {
+					has_citizenship_type = {
+						type = citizenship_universal_assimilation
+						country = prev
+					}
+				}
+			}
+			log = "rose_universal_assimilation.1.epc"
+
+			every_owned_planet = {
+				planet_event = { id = rose_universal_assimilation.2 }
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+# Assimilate Pops
+planet_event = {
+	id = rose_universal_assimilation.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_species = {
+			has_citizenship_type = {
+				type = citizenship_universal_assimilation
+				country = root.owner
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = { # 2 pops
+				set_variable = {
+					which = assimilation_counter
+					value = 2
+				}
+				while = {
+					count = 2
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_universal_assimilation
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = assimilation_counter
+							value > 0
+						}
+					}
+					universal_assimilation_effect = yes
+				}
+			}
+
+			1 = { # 4 pops
+				set_variable = {
+					which = assimilation_counter
+					value = 4
+				}
+				while = {
+					count = 4
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_universal_assimilation
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = assimilation_counter
+							value > 0
+						}
+					}
+					universal_assimilation_effect = yes
+				}
+			}
+
+			1 = { # 6 pops
+				set_variable = {
+					which = assimilation_counter
+					value = 6
+				}
+				while = {
+					count = 6
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_universal_assimilation
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = assimilation_counter
+							value > 0
+						}
+					}
+					universal_assimilation_effect = yes
+				}
+			}
+		}
+		set_variable = {
+			which = assimilation_counter
+			value = 0
+		}
+	}
+}

@@ -1,0 +1,198 @@
+namespace = utopia
+
+# Transcendence
+country_event = {
+	id = utopia.2650
+	title = "utopia.2650.name"
+	desc = "utopia.2650.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_the_great_awakening
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_tradition = tr_psionics_psionic_assimilation
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				has_trait = trait_latent_psionic
+			}
+			modify_species = {
+				species = this
+				remove_trait = trait_latent_psionic
+				add_trait = trait_psionic
+				effect = {
+					save_event_target_as = psionic_species
+				}
+			}	
+		}
+		change_dominant_species = { species = event_target:psionic_species change_all = yes }
+	}
+	option = {
+		name = "utopia.2650.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						species = {
+							OR = {
+								has_trait = trait_psionic
+								is_same_species = event_target:psionic_species
+							}
+						}
+						NOT = { has_trait = leader_trait_psionic }
+					}
+					add_trait_no_notify = leader_trait_psionic
+					owner = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = psionic_leader_toast
+								}
+							}
+							set_timed_country_flag = {
+								flag = psionic_leader_toast
+								days = 30
+							}
+						}
+					}
+				}
+
+				every_pool_leader = {
+					limit = {
+						species = {
+							OR = {
+								has_trait = trait_psionic
+								is_same_species = event_target:psionic_species
+							}
+						}
+						NOT = { has_trait = leader_trait_psionic }
+					}
+					add_trait_no_notify = leader_trait_psionic
+					owner = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = psionic_leader_toast
+								}
+							}
+							set_timed_country_flag = {
+								flag = psionic_leader_toast
+								days = 30
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						has_country_flag = psionic_leader_toast
+					}
+					create_message = {
+						type = MESSAGE_ALL_GAINED_TRAIT
+						localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+						days = @toast_message_days
+						variable = {
+							type = key
+							value = leader_trait_psionic
+							localization = TRAIT
+						}
+						variable = {
+							key = TRAIT_KEY
+							value = leader_trait_psionic
+						}
+						variable = {
+							key = "border"
+							value = "GFX_invisible"
+						}
+					}
+				}
+			}
+			observer_event = { id = observer.6 }
+			every_country = {
+				limit = {
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = { id = utopia.2652 }
+			}
+		}
+	}
+}
+
+# Eater of Worlds add Upkeep at peace
+country_event = {
+	id = utopia.2660
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			is_at_war = no
+			has_crisis = no
+		}
+		
+		OR = {
+			has_modifier = covenant_eater_of_worlds_0
+			has_modifier = covenant_eater_of_worlds
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = covenant_eater_of_worlds_0
+			}
+			add_modifier = { modifier = covenant_eater_of_worlds_debuff_0 days = -1 }
+		}
+		else = {
+			add_modifier = { modifier = covenant_eater_of_worlds_debuff days = -1 }
+		}
+	}
+}
+
+# Eater of Worlds remove Upkeep at war
+country_event = {
+	id = utopia.2661
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			is_at_war = yes
+			has_crisis = yes
+		}
+		
+		OR = {
+			has_modifier = covenant_eater_of_worlds_debuff_0
+			has_modifier = covenant_eater_of_worlds_debuff
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = covenant_eater_of_worlds_debuff_0
+			}
+			remove_modifier = covenant_eater_of_worlds_debuff_0
+		}
+		else_if = {
+			limit = {
+				has_modifier = covenant_eater_of_worlds_debuff
+			}
+			remove_modifier = covenant_eater_of_worlds_debuff
+		}
+	}
+}

@@ -1,0 +1,3505 @@
+#@b0_time = 180
+#@b0_minerals = 200
+#
+#@b1_time = 360
+#@b1_minerals = 400
+#
+#@b2_time = 480
+#@b2_minerals = 600
+#@b2_rare_cost = 50
+#
+#@b3_time = 600
+#@b3_minerals = 800
+#@b3_rare_cost = 100
+#
+#@b4_time = 900
+#@b4_minerals = 2000
+#@b4_rare_cost = 200
+#
+#@b_ring_resource_minerals = 900
+#@b_ring_resource_rare_cost = 200
+#@b_ring_manufacturing_minerals = 1500
+#@b_ring_manufacturing_rare_cost = 600
+
+# Upgrades from the previous building tier of the flagged building to the flagged building's tier
+# Called by "roseaub.3"
+roseaub_building_selector_finish_upgrade = {
+	switch = {
+		trigger = has_planet_flag
+		# roseaub_ = { roseaub_upgrade_building = { OLD = "" NEW = "" } }
+		### Capital Buildings ###
+		roseaub_capital = { roseaub_upgrade_building = { OLD = "building_colony_shelter" NEW = "building_capital" } }
+		roseaub_major_capital = { roseaub_upgrade_building = { OLD = "building_capital" NEW = "building_major_capital" } }
+		roseaub_system_capital = { roseaub_upgrade_building = { OLD = "building_major_capital" NEW = "building_system_capital" } }
+		roseaub_machine_capital = { roseaub_upgrade_building = { OLD = "building_deployment_post" NEW = "building_machine_capital" } }
+		roseaub_machine_major_capital = { roseaub_upgrade_building = { OLD = "building_machine_capital" NEW = "building_machine_major_capital" } }
+		roseaub_machine_system_capital = { roseaub_upgrade_building = { OLD = "building_machine_major_capital" NEW = "building_machine_system_capital" } }
+		roseaub_hive_major_capital = { roseaub_upgrade_building = { OLD = "building_hive_capital" NEW = "building_hive_major_capital" } }
+		roseaub_hab_major_capital = { roseaub_upgrade_building = { OLD = "building_hab_capital" NEW = "building_hab_major_capital" } }
+		roseaub_hab_system_capital = { roseaub_upgrade_building = { OLD = "building_hab_major_capital" NEW = "building_hab_system_capital" } }
+		roseaub_resort_major_capital = { roseaub_upgrade_building = { OLD = "building_resort_capital" NEW = "building_resort_major_capital" } }
+		roseaub_slave_major_capital = { roseaub_upgrade_building = { OLD = "building_slave_capital" NEW = "building_slave_major_capital" } }
+		roseaub_imperial_capital_FROM_system_capital = { roseaub_upgrade_building = { OLD = "building_system_capital" NEW = "building_imperial_capital" } }
+		roseaub_imperial_capital_FROM_hab_system_capital = { roseaub_upgrade_building = { OLD = "building_hab_system_capital" NEW = "building_imperial_capital" } }
+		roseaub_imperial_capital_FROM_system_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_system_capital_nanotech" NEW = "building_imperial_capital" } }
+		roseaub_imperial_machine_capital_FROM_machine_system_capital = { roseaub_upgrade_building = { OLD = "building_machine_system_capital" NEW = "building_imperial_machine_capital" } }
+		roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_machine_system_capital_nanotech" NEW = "building_imperial_machine_capital" } }
+		roseaub_imperial_hive_capital = { roseaub_upgrade_building = { OLD = "building_hive_major_capital" NEW = "building_imperial_hive_capital" } }
+		roseaub_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_colony_shelter_nanotech" NEW = "building_capital_nanotech" } }
+		roseaub_major_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_capital_nanotech" NEW = "building_major_capital_nanotech" } }
+		roseaub_system_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_major_capital_nanotech" NEW = "building_system_capital_nanotech" } }
+		roseaub_machine_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_deployment_post_nanotech" NEW = "building_machine_capital_nanotech" } }
+		roseaub_machine_major_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_machine_capital_nanotech" NEW = "building_machine_major_capital_nanotech" } }
+		roseaub_machine_system_capital_nanotech = { roseaub_upgrade_building = { OLD = "building_machine_major_capital_nanotech" NEW = "building_machine_system_capital_nanotech" } }
+		
+		### Pop Assembly Buildings ###
+		roseaub_robot_assembly_complex = { roseaub_upgrade_building = { OLD = "building_robot_assembly_plant" NEW = "building_robot_assembly_complex" } }
+		roseaub_machine_assembly_complex = { roseaub_upgrade_building = { OLD = "building_machine_assembly_plant" NEW = "building_machine_assembly_complex" } }
+		#roseaub_necrophage_house_of_apotheosis = { roseaub_upgrade_building = { OLD = "building_necrophage_elevation_chamber" NEW = "building_necrophage_house_of_apotheosis" } }
+		
+		### Government Buildings ###
+		roseaub_hall_judgment = { roseaub_upgrade_building = { OLD = "building_precinct_house" NEW = "building_hall_judgment" } }
+		roseaub_grand_embassy = { roseaub_upgrade_building = { OLD = "building_embassy" NEW = "building_grand_embassy" } }
+		roseaub_gaiaseeders_2 = { roseaub_upgrade_building = { OLD = "building_gaiaseeders_1" NEW = "building_gaiaseeders_2" } }
+		roseaub_gaiaseeders_3 = { roseaub_upgrade_building = { OLD = "building_gaiaseeders_2" NEW = "building_gaiaseeders_3" } }
+		#roseaub_gaiaseeders_4 = { roseaub_upgrade_building = { OLD = "building_gaiaseeders_3" NEW = "building_gaiaseeders_4" } }
+		
+		### Resource Buildings ###
+		roseaub_food_processing_center = { roseaub_upgrade_building = { OLD = "building_food_processing_facility" NEW = "building_food_processing_center" } }
+		roseaub_mineral_purification_hub = { roseaub_upgrade_building = { OLD = "building_mineral_purification_plant" NEW = "building_mineral_purification_hub" } }
+		roseaub_energy_nexus = { roseaub_upgrade_building = { OLD = "building_energy_grid" NEW = "building_energy_nexus" } }
+		roseaub_bio_reactor_2 = { roseaub_upgrade_building = { OLD = "building_bio_reactor" NEW = "building_bio_reactor_2" } }
+	
+		### Manufacturing Buildings ###
+		roseaub_foundry_2 = { roseaub_upgrade_building = { OLD = "building_foundry_1" NEW = "building_foundry_2" } }
+		roseaub_foundry_3 = { roseaub_upgrade_building = { OLD = "building_foundry_2" NEW = "building_foundry_3" } }
+		roseaub_factory_2 = { roseaub_upgrade_building = { OLD = "building_factory_1" NEW = "building_factory_2" } }
+		roseaub_factory_3 = { roseaub_upgrade_building = { OLD = "building_factory_2" NEW = "building_factory_3" } }
+		roseaub_coordinated_fulfillment_center_2 = { roseaub_upgrade_building = { OLD = "building_coordinated_fulfillment_center_1" NEW = "building_coordinated_fulfillment_center_2" } }
+		
+		### Research Buildings ###
+		roseaub_research_lab_2 = { roseaub_upgrade_building = { OLD = "building_research_lab_1" NEW = "building_research_lab_2" } }
+		roseaub_research_lab_3 = { roseaub_upgrade_building = { OLD = "building_research_lab_2" NEW = "building_research_lab_3" } }
+
+		### Trade Buildings ###
+		roseaub_commercial_megaplex = { roseaub_upgrade_building = { OLD = "building_commercial_zone" NEW = "building_commercial_megaplex" } }
+	
+		### Amenity Buildings ###
+		roseaub_paradise_dome = { roseaub_upgrade_building = { OLD = "building_luxury_residence" NEW = "building_paradise_dome" } }
+		roseaub_communal_housing_large = { roseaub_upgrade_building = { OLD = "building_communal_housing" NEW = "building_communal_housing_large" } }
+		roseaub_drone_megastorage = { roseaub_upgrade_building = { OLD = "building_drone_storage" NEW = "building_drone_megastorage" } }
+		roseaub_expanded_warren = { roseaub_upgrade_building = { OLD = "building_hive_warren" NEW = "building_expanded_warren" } }
+		roseaub_hyper_entertainment_forum = { roseaub_upgrade_building = { OLD = "building_holo_theatres" NEW = "building_hyper_entertainment_forum" } }
+		roseaub_hospital = { roseaub_upgrade_building = { OLD = "building_clinic" NEW = "building_hospital" } }
+		
+		### Unity Buildings ###
+		roseaub_heritage_site = { roseaub_upgrade_building = { OLD = "building_autochthon_monument" NEW = "building_heritage_site" } }
+		roseaub_hypercomms_forum = { roseaub_upgrade_building = { OLD = "building_heritage_site" NEW = "building_hypercomms_forum" } }
+		roseaub_bureaucratic_2 = { roseaub_upgrade_building = { OLD = "building_bureaucratic_1" NEW = "building_bureaucratic_2" } }
+		roseaub_bureaucratic_3 = { roseaub_upgrade_building = { OLD = "building_bureaucratic_2" NEW = "building_bureaucratic_3" } }
+		roseaub_holotemple = { roseaub_upgrade_building = { OLD = "building_temple" NEW = "building_holotemple" } }
+		roseaub_sacred_nexus = { roseaub_upgrade_building = { OLD = "building_holotemple" NEW = "building_sacred_nexus" } }
+		roseaub_network_junction = { roseaub_upgrade_building = { OLD = "building_uplink_node" NEW = "building_network_junction" } }
+		roseaub_system_conflux = { roseaub_upgrade_building = { OLD = "building_network_junction" NEW = "building_system_conflux" } }
+		roseaub_hive_cluster = { roseaub_upgrade_building = { OLD = "building_hive_node" NEW = "building_hive_cluster" } }
+		roseaub_hive_confluence = { roseaub_upgrade_building = { OLD = "building_hive_cluster" NEW = "building_hive_confluence" } }
+		roseaub_sacrificial_temple_2 = { roseaub_upgrade_building = { OLD = "building_sacrificial_temple_1" NEW = "building_sacrificial_temple_2" } }
+		roseaub_sacrificial_temple_3 = { roseaub_upgrade_building = { OLD = "building_sacrificial_temple_2" NEW = "building_sacrificial_temple_3" } }
+		roseaub_galactic_memorial_2 = { roseaub_upgrade_building = { OLD = "building_galactic_memorial_1" NEW = "building_galactic_memorial_2" } }
+		roseaub_galactic_memorial_3 = { roseaub_upgrade_building = { OLD = "building_galactic_memorial_2" NEW = "building_galactic_memorial_3" } }
+		roseaub_simulation_2 = { roseaub_upgrade_building = { OLD = "building_simulation_1" NEW = "building_simulation_2" } }
+		roseaub_simulation_3 = { roseaub_upgrade_building = { OLD = "building_simulation_2" NEW = "building_simulation_3" } }
+		roseaub_corporate_site = { roseaub_upgrade_building = { OLD = "building_corporate_monument" NEW = "building_corporate_site" } }
+		roseaub_corporate_forum = { roseaub_upgrade_building = { OLD = "building_corporate_site" NEW = "building_corporate_forum" } }
+		roseaub_sensorium_2 = { roseaub_upgrade_building = { OLD = "building_sensorium_1" NEW = "building_sensorium_2" } }
+		roseaub_sensorium_3 = { roseaub_upgrade_building = { OLD = "building_sensorium_2" NEW = "building_sensorium_3" } }
+		roseaub_organic_paradise = { roseaub_upgrade_building = { OLD = "building_organic_sanctuary" NEW = "building_organic_paradise" } }
+		
+		### Army Buildings ###
+		roseaub_fortress = { roseaub_upgrade_building = { OLD = "building_stronghold" NEW = "building_fortress" } }
+		
+		### Event Buildings ###
+		roseaub_crystal_plant_2 = { roseaub_upgrade_building = { OLD = "building_crystal_plant" NEW = "building_crystal_plant_2" } }
+	
+		### Fallen Empire Buildings ###
+		roseaub_affluence_center = { roseaub_upgrade_building = { OLD = "building_affluence_emporium" NEW = "building_affluence_center" } }
+		roseaub_nourishment_center = { roseaub_upgrade_building = { OLD = "building_nourishment_complex" NEW = "building_nourishment_center" } }
+		roseaub_dimensional_fabricator = { roseaub_upgrade_building = { OLD = "building_dimensional_replicator" NEW = "building_dimensional_fabricator" } }
+		roseaub_class_4_singularity = { roseaub_upgrade_building = { OLD = "building_class_3_singularity" NEW = "building_class_4_singularity" } }
+		roseaub_nano_forge = { roseaub_upgrade_building = { OLD = "building_micro_forge" NEW = "building_nano_forge" } }
+		roseaub_fe_dome = { roseaub_upgrade_building = { OLD = "building_fe_sky_dome" NEW = "building_fe_dome" } }
+		roseaub_fe_stronghold = { roseaub_upgrade_building = { OLD = "building_fe_fortress" NEW = "building_fe_stronghold" } }
+		roseaub_fe_administration_2 = { roseaub_upgrade_building = { OLD = "building_fe_administration_1" NEW = "building_fe_administration_2" } }
+		roseaub_fe_administration_hive_2 = { roseaub_upgrade_building = { OLD = "building_fe_administration_hive_1" NEW = "building_fe_administration_hive_2" } }
+		roseaub_fe_administration_machine_2 = { roseaub_upgrade_building = { OLD = "building_fe_administration_machine_1" NEW = "building_fe_administration_machine_2" } }
+		roseaub_fe_temple_2 = { roseaub_upgrade_building = { OLD = "building_fe_temple_1" NEW = "building_fe_temple_2" } }
+		roseaub_fe_assembly_2 = { roseaub_upgrade_building = { OLD = "building_fe_assembly_1" NEW = "building_fe_assembly_2" } }
+		roseaub_fe_clinic_2 = { roseaub_upgrade_building = { OLD = "building_fe_clinic_1" NEW = "building_fe_clinic_2" } }
+		roseaub_fe_security_2 = { roseaub_upgrade_building = { OLD = "building_fe_security_1" NEW = "building_fe_security_2" } }
+		roseaub_fe_market_2 = { roseaub_upgrade_building = { OLD = "building_fe_market_1" NEW = "building_fe_market_2" } }
+		roseaub_fe_silo_2 = { roseaub_upgrade_building = { OLD = "building_fe_silo_1" NEW = "building_fe_silo_2" } }
+		roseaub_fe_entertainment_2 = { roseaub_upgrade_building = { OLD = "building_fe_entertainment_1" NEW = "building_fe_entertainment_2" } }
+		roseaub_fe_lab_2 = { roseaub_upgrade_building = { OLD = "building_fe_lab_1" NEW = "building_fe_lab_2" } }
+		roseaub_fe_mine_2 = { roseaub_upgrade_building = { OLD = "building_fe_mine_1" NEW = "building_fe_mine_2" } }
+	
+		### First Contact Buildings ###
+		roseaub_capital_FROM_low_tech_capital = { roseaub_upgrade_building = { OLD = "building_low_tech_capital" NEW = "building_capital" } }
+	
+		### Astral Planes Buildings ###
+		roseaub_astral_siphon_2 = { roseaub_upgrade_building = { OLD = "building_astral_siphon_1" NEW = "building_astral_siphon_2" } }
+		roseaub_astral_siphon_3 = { roseaub_upgrade_building = { OLD = "building_astral_siphon_2" NEW = "building_astral_siphon_3" } }
+
+		### Cosmic Storms Buildings ###
+		roseaub_advanced_storm_attraction_center = { roseaub_upgrade_building = { OLD = "building_storm_attraction_center" NEW = "building_advanced_storm_attraction_center" } }
+		roseaub_advanced_storm_repellent_center = { roseaub_upgrade_building = { OLD = "building_storm_repellent_center" NEW = "building_advanced_storm_repellent_center" } }
+		roseaub_advanced_storm_resistant_production = { roseaub_upgrade_building = { OLD = "building_storm_resistant_production" NEW = "building_advanced_storm_resistant_production" } }
+		roseaub_storm_holo_theater = { roseaub_upgrade_building = { OLD = "building_storm_summoning_theater" NEW = "building_storm_holo_theater" } }
+		roseaub_storm_grand_theater = { roseaub_upgrade_building = { OLD = "building_storm_holo_theater" NEW = "building_storm_grand_theater" } }
+
+		### Machine Age Buildings ###
+		roseaub_grand_concert_hall_of_the_mind = { roseaub_upgrade_building = { OLD = "building_amphitheater_of_the_mind" NEW = "building_grand_concert_hall_of_the_mind" } }
+		roseaub_grand_battlements_of_steel = { roseaub_upgrade_building = { OLD = "building_battlement_of_steel" NEW = "building_grand_battlements_of_steel" } }
+		roseaub_grand_cathedral_of_toil = { roseaub_upgrade_building = { OLD = "building_sanctuary_of_toil" NEW = "building_grand_cathedral_of_toil" } }
+		roseaub_grand_forge_of_the_fellowship = { roseaub_upgrade_building = { OLD = "building_forge_of_the_fellowship" NEW = "building_grand_forge_of_the_fellowship" } }
+		roseaub_the_united_sanctum_of_augmentation = { roseaub_upgrade_building = { OLD = "building_the_sanctum_of_augmentation" NEW = "building_the_united_sanctum_of_augmentation" } }
+		#roseaub_lathe_major_capital = { roseaub_upgrade_building = { OLD = "building_lathe_capital" NEW = "building_lathe_major_capital" } }
+		#roseaub_lathe_super_capital = { roseaub_upgrade_building = { OLD = "building_lathe_major_capital" NEW = "building_lathe_super_capital" } }
+		roseaub_nanolab_2 = { roseaub_upgrade_building = { OLD = "building_nanolab_1" NEW = "building_nanolab_2" } }
+	
+		### Grand Archive Buildings ###
+		roseaub_wildlife_ranch_2 = { roseaub_upgrade_building = { OLD = "wildlife_ranch" NEW = "wildlife_ranch_2" } }
+		roseaub_wildlife_ranch_3 = { roseaub_upgrade_building = { OLD = "wildlife_ranch_2" NEW = "wildlife_ranch_3" } }
+		roseaub_hunting_grounds_2 = { roseaub_upgrade_building = { OLD = "hunting_grounds" NEW = "hunting_grounds_2" } }
+		roseaub_hunting_grounds_3 = { roseaub_upgrade_building = { OLD = "hunting_grounds_2" NEW = "hunting_grounds_3" } }
+		roseaub_wildlife_sanctuary_2 = { roseaub_upgrade_building = { OLD = "wildlife_sanctuary" NEW = "wildlife_sanctuary_2" } }
+		roseaub_wildlife_sanctuary_3 = { roseaub_upgrade_building = { OLD = "wildlife_sanctuary_2" NEW = "wildlife_sanctuary_3" } }
+		roseaub_primal_arena_2 = { roseaub_upgrade_building = { OLD = "primal_arena" NEW = "primal_arena_2" } }
+		roseaub_primal_arena_3 = { roseaub_upgrade_building = { OLD = "primal_arena_2" NEW = "primal_arena_3" } }
+		roseaub_symbiosis_nexus_2 = { roseaub_upgrade_building = { OLD = "symbiosis_nexus" NEW = "symbiosis_nexus_2" } }
+		roseaub_symbiosis_nexus_3 = { roseaub_upgrade_building = { OLD = "symbiosis_nexus_2" NEW = "symbiosis_nexus_3" } }
+	}
+}
+
+# Cancels the upgrade if the previous building tier of the flagged building doesn't exist anymore
+# Called by "roseaub.4"	
+roseaub_building_selector_cancel_upgrade = {
+	switch = {
+		# roseaub_ = { if = { limit = { NOT = { has_building = "" } } planet_event = { id = roseaub.2 } } }
+		trigger = has_planet_flag
+		### Capital Buildings ###
+		roseaub_capital = { if = { limit = { NOT = { has_building = "building_colony_shelter" } } planet_event = { id = roseaub.2 } } }
+		roseaub_major_capital = { if = { limit = { NOT = { has_building = "building_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_system_capital = { if = { limit = { NOT = { has_building = "building_major_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_capital = { if = { limit = { NOT = { has_building = "building_deployment_post" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_major_capital = { if = { limit = { NOT = { has_building = "building_machine_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_system_capital = { if = { limit = { NOT = { has_building = "building_machine_major_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hive_major_capital = { if = { limit = { NOT = { has_building = "building_hive_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hab_major_capital = { if = { limit = { NOT = { has_building = "building_hab_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hab_system_capital = { if = { limit = { NOT = { has_building = "building_hab_major_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_resort_major_capital = { if = { limit = { NOT = { has_building = "building_resort_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_slave_major_capital = { if = { limit = { NOT = { has_building = "building_slave_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_imperial_capital_FROM_system_capital = { if = { limit = { NOT = { has_building = "building_system_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_imperial_capital_FROM_hab_system_capital = { if = { limit = { NOT = { has_building = "building_hab_system_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_imperial_capital_FROM_system_capital_nanotech = { if = { limit = { NOT = { has_building = "building_system_capital_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_imperial_machine_capital_FROM_machine_system_capital = { if = { limit = { NOT = { has_building = "building_machine_system_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech = { if = { limit = { NOT = { has_building = "building_machine_system_capital_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_imperial_hive_capital = { if = { limit = { NOT = { has_building = "building_hive_major_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_capital_nanotech = { if = { limit = { NOT = { has_building = "building_colony_shelter_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_major_capital_nanotech = { if = { limit = { NOT = { has_building = "building_capital_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_system_capital_nanotech = { if = { limit = { NOT = { has_building = "building_major_capital_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_capital_nanotech = { if = { limit = { NOT = { has_building = "building_deployment_post_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_major_capital_nanotech = { if = { limit = { NOT = { has_building = "building_machine_capital_nanotech" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_system_capital_nanotech = { if = { limit = { NOT = { has_building = "building_machine_major_capital_nanotech" } } planet_event = { id = roseaub.2 } } }
+		
+		### Pop Assembly Buildings ###
+		roseaub_robot_assembly_complex = { if = { limit = { NOT = { has_building = "building_robot_assembly_plant" } } planet_event = { id = roseaub.2 } } }
+		roseaub_machine_assembly_complex = { if = { limit = { NOT = { has_building = "building_machine_assembly_plant" } } planet_event = { id = roseaub.2 } } }
+		#roseaub_necrophage_house_of_apotheosis = { if = { limit = { NOT = { has_building = "building_necrophage_elevation_chamber" } } planet_event = { id = roseaub.2 } } }
+
+		### Government Buildings ###
+		roseaub_hall_judgment = { if = { limit = { NOT = { has_building = "building_precinct_house" } } planet_event = { id = roseaub.2 } } }
+		roseaub_grand_embassy = { if = { limit = { NOT = { has_building = "building_embassy" } } planet_event = { id = roseaub.2 } } }
+		roseaub_gaiaseeders_2 = { if = { limit = { NOT = { has_building = "building_gaiaseeders_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_gaiaseeders_3 = { if = { limit = { NOT = { has_building = "building_gaiaseeders_2" } } planet_event = { id = roseaub.2 } } }
+		#roseaub_gaiaseeders_4 = { if = { limit = { NOT = { has_building = "building_gaiaseeders_3" } } planet_event = { id = roseaub.2 } } }
+		
+		### Resource Buildings ###
+		roseaub_food_processing_center = { if = { limit = { NOT = { has_building = "building_food_processing_facility" } } planet_event = { id = roseaub.2 } } }
+		roseaub_mineral_purification_hub = { if = { limit = { NOT = { has_building = "building_mineral_purification_plant" } } planet_event = { id = roseaub.2 } } }
+		roseaub_energy_nexus = { if = { limit = { NOT = { has_building = "building_energy_grid" } } planet_event = { id = roseaub.2 } } }
+		roseaub_bio_reactor_2 = { if = { limit = { NOT = { has_building = "building_bio_reactor" } } planet_event = { id = roseaub.2 } } }
+
+		### Manufacturing Buildings ###
+		roseaub_foundry_2 = { if = { limit = { NOT = { has_building = "building_foundry_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_foundry_3 = { if = { limit = { NOT = { has_building = "building_foundry_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_factory_2 = { if = { limit = { NOT = { has_building = "building_factory_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_factory_3 = { if = { limit = { NOT = { has_building = "building_factory_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_coordinated_fulfillment_center_2 = { if = { limit = { NOT = { has_building = "building_coordinated_fulfillment_center_1" } } planet_event = { id = roseaub.2 } } }
+
+		### Research Buildings ###
+		roseaub_research_lab_2 = { if = { limit = { NOT = { has_building = "building_research_lab_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_research_lab_3 = { if = { limit = { NOT = { has_building = "building_research_lab_2" } } planet_event = { id = roseaub.2 } } }
+
+		### Trade Buildings ###
+		roseaub_commercial_megaplex = { if = { limit = { NOT = { has_building = "building_commercial_zone" } } planet_event = { id = roseaub.2 } } }
+
+		### Amenity Buildings ###
+		roseaub_paradise_dome = { if = { limit = { NOT = { has_building = "building_luxury_residence" } } planet_event = { id = roseaub.2 } } }
+		roseaub_communal_housing_large = { if = { limit = { NOT = { has_building = "building_communal_housing" } } planet_event = { id = roseaub.2 } } }
+		roseaub_drone_megastorage = { if = { limit = { NOT = { has_building = "building_drone_storage" } } planet_event = { id = roseaub.2 } } }
+		roseaub_expanded_warren = { if = { limit = { NOT = { has_building = "building_hive_warren" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hyper_entertainment_forum = { if = { limit = { NOT = { has_building = "building_holo_theatres" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hospital = { if = { limit = { NOT = { has_building = "building_clinic" } } planet_event = { id = roseaub.2 } } }
+		
+		### Unity Buildings ###
+		roseaub_heritage_site = { if = { limit = { NOT = { has_building = "building_autochthon_monument" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hypercomms_forum = { if = { limit = { NOT = { has_building = "building_heritage_site" } } planet_event = { id = roseaub.2 } } }
+		roseaub_bureaucratic_2 = { if = { limit = { NOT = { has_building = "building_bureaucratic_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_bureaucratic_3 = { if = { limit = { NOT = { has_building = "building_bureaucratic_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_holotemple = { if = { limit = { NOT = { has_building = "building_temple" } } planet_event = { id = roseaub.2 } } }
+		roseaub_sacred_nexus = { if = { limit = { NOT = { has_building = "building_holotemple" } } planet_event = { id = roseaub.2 } } }
+		roseaub_network_junction = { if = { limit = { NOT = { has_building = "building_uplink_node" } } planet_event = { id = roseaub.2 } } }
+		roseaub_system_conflux = { if = { limit = { NOT = { has_building = "building_network_junction" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hive_cluster = { if = { limit = { NOT = { has_building = "building_hive_node" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hive_confluence = { if = { limit = { NOT = { has_building = "building_hive_cluster" } } planet_event = { id = roseaub.2 } } }
+		roseaub_sacrificial_temple_2 = { if = { limit = { NOT = { has_building = "building_sacrificial_temple_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_sacrificial_temple_3 = { if = { limit = { NOT = { has_building = "building_sacrificial_temple_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_galactic_memorial_2 = { if = { limit = { NOT = { has_building = "building_galactic_memorial_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_galactic_memorial_3 = { if = { limit = { NOT = { has_building = "building_galactic_memorial_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_simulation_2 = { if = { limit = { NOT = { has_building = "building_simulation_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_simulation_3 = { if = { limit = { NOT = { has_building = "building_simulation_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_corporate_site = { if = { limit = { NOT = { has_building = "building_corporate_monument" } } planet_event = { id = roseaub.2 } } }
+		roseaub_corporate_forum = { if = { limit = { NOT = { has_building = "building_corporate_site" } } planet_event = { id = roseaub.2 } } }
+		roseaub_sensorium_2 = { if = { limit = { NOT = { has_building = "building_sensorium_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_sensorium_3 = { if = { limit = { NOT = { has_building = "building_sensorium_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_organic_paradise = { if = { limit = { NOT = { has_building = "building_organic_sanctuary" } } planet_event = { id = roseaub.2 } } }
+		
+		### Army Buildings ###
+		roseaub_fortress = { if = { limit = { NOT = { has_building = "building_stronghold" } } planet_event = { id = roseaub.2 } } }
+	
+		### Event Buildings ###
+		roseaub_crystal_plant_2 = { if = { limit = { NOT = { has_building = "building_crystal_plant" } } planet_event = { id = roseaub.2 } } }
+	
+		### Fallen Empire Buildings ###
+		roseaub_affluence_center = { if = { limit = { NOT = { has_building = "building_affluence_emporium" } } planet_event = { id = roseaub.2 } } }
+		roseaub_nourishment_center = { if = { limit = { NOT = { has_building = "building_nourishment_complex" } } planet_event = { id = roseaub.2 } } }
+		roseaub_dimensional_fabricator = { if = { limit = { NOT = { has_building = "building_dimensional_replicator" } } planet_event = { id = roseaub.2 } } }
+		roseaub_class_4_singularity = { if = { limit = { NOT = { has_building = "building_class_3_singularity" } } planet_event = { id = roseaub.2 } } }
+		roseaub_nano_forge = { if = { limit = { NOT = { has_building = "building_micro_forge" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_dome = { if = { limit = { NOT = { has_building = "building_fe_sky_dome" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_stronghold = { if = { limit = { NOT = { has_building = "building_fe_fortress" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_administration_2 = { if = { limit = { NOT = { has_building = "building_fe_administration_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_administration_hive_2 = { if = { limit = { NOT = { has_building = "building_fe_administration_hive_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_administration_machine_2 = { if = { limit = { NOT = { has_building = "building_fe_administration_machine_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_temple_2 = { if = { limit = { NOT = { has_building = "building_fe_temple_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_assembly_2 = { if = { limit = { NOT = { has_building = "building_fe_assembly_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_clinic_2 = { if = { limit = { NOT = { has_building = "building_fe_clinic_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_security_2 = { if = { limit = { NOT = { has_building = "building_fe_security_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_market_2 = { if = { limit = { NOT = { has_building = "building_fe_market_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_silo_2 = { if = { limit = { NOT = { has_building = "building_fe_silo_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_entertainment_2 = { if = { limit = { NOT = { has_building = "building_fe_entertainment_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_lab_2 = { if = { limit = { NOT = { has_building = "building_fe_lab_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_fe_mine_2 = { if = { limit = { NOT = { has_building = "building_fe_mine_1" } } planet_event = { id = roseaub.2 } } }
+
+		### First Contact Buildings ###
+		roseaub_capital_FROM_low_tech_capital = { if = { limit = { NOT = { has_building = "building_low_tech_capital" } } planet_event = { id = roseaub.2 } } }
+
+		### Astral Planes Buildings ###
+		roseaub_astral_siphon_2 = { if = { limit = { NOT = { has_building = "building_astral_siphon_1" } } planet_event = { id = roseaub.2 } } }
+		roseaub_astral_siphon_3 = { if = { limit = { NOT = { has_building = "building_astral_siphon_2" } } planet_event = { id = roseaub.2 } } }
+
+		### Cosmic Storms Buildings ###
+		roseaub_advanced_storm_attraction_center = { if = { limit = { NOT = { has_building = "building_storm_attraction_center" } } planet_event = { id = roseaub.2 } } }
+		roseaub_advanced_storm_repellent_center = { if = { limit = { NOT = { has_building = "building_storm_repellent_center" } } planet_event = { id = roseaub.2 } } }
+		roseaub_advanced_storm_resistant_production = { if = { limit = { NOT = { has_building = "building_storm_resistant_production" } } planet_event = { id = roseaub.2 } } }
+		roseaub_storm_holo_theater = { if = { limit = { NOT = { has_building = "building_storm_summoning_theater" } } planet_event = { id = roseaub.2 } } }
+		roseaub_storm_grand_theater = { if = { limit = { NOT = { has_building = "building_storm_holo_theater" } } planet_event = { id = roseaub.2 } } }
+
+		### Machine Age Buildings ###
+		roseaub_grand_concert_hall_of_the_mind = { if = { limit = { NOT = { has_building = "building_amphitheater_of_the_mind" } } planet_event = { id = roseaub.2 } } }
+		roseaub_grand_battlements_of_steel = { if = { limit = { NOT = { has_building = "building_battlement_of_steel" } } planet_event = { id = roseaub.2 } } }
+		roseaub_grand_cathedral_of_toil = { if = { limit = { NOT = { has_building = "building_sanctuary_of_toil" } } planet_event = { id = roseaub.2 } } }
+		roseaub_grand_forge_of_the_fellowship = { if = { limit = { NOT = { has_building = "building_forge_of_the_fellowship" } } planet_event = { id = roseaub.2 } } }
+		roseaub_the_united_sanctum_of_augmentation = { if = { limit = { NOT = { has_building = "building_the_sanctum_of_augmentation" } } planet_event = { id = roseaub.2 } } }
+		roseaub_lathe_major_capital = { if = { limit = { NOT = { has_building = "building_lathe_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_lathe_super_capital = { if = { limit = { NOT = { has_building = "building_lathe_major_capital" } } planet_event = { id = roseaub.2 } } }
+		roseaub_nanolab_2 = { if = { limit = { NOT = { has_building = "building_nanolab_1" } } planet_event = { id = roseaub.2 } } }
+	
+		### Grand Archive Buildings ###
+		roseaub_wildlife_ranch_2 = { if = { limit = { NOT = { has_building = "wildlife_ranch" } } planet_event = { id = roseaub.2 } } }
+		roseaub_wildlife_ranch_3 = { if = { limit = { NOT = { has_building = "wildlife_ranch_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hunting_grounds_2 = { if = { limit = { NOT = { has_building = "hunting_grounds" } } planet_event = { id = roseaub.2 } } }
+		roseaub_hunting_grounds_3 = { if = { limit = { NOT = { has_building = "hunting_grounds_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_wildlife_sanctuary_2 = { if = { limit = { NOT = { has_building = "wildlife_sanctuary" } } planet_event = { id = roseaub.2 } } }
+		roseaub_wildlife_sanctuary_3 = { if = { limit = { NOT = { has_building = "wildlife_sanctuary_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_primal_arena_2 = { if = { limit = { NOT = { has_building = "primal_arena" } } planet_event = { id = roseaub.2 } } }
+		roseaub_primal_arena_3 = { if = { limit = { NOT = { has_building = "primal_arena_2" } } planet_event = { id = roseaub.2 } } }
+		roseaub_symbiosis_nexus_2 = { if = { limit = { NOT = { has_building = "symbiosis_nexus" } } planet_event = { id = roseaub.2 } } }
+		roseaub_symbiosis_nexus_3 = { if = { limit = { NOT = { has_building = "symbiosis_nexus_2" } } planet_event = { id = roseaub.2 } } }	
+	}
+}
+
+# Removes the planet flag for the flagged building
+roseaub_building_selector_clear_flag_and_modifier = {
+	switch = {
+		# roseaub_ = { remove_planet_flag = roseaub_ remove_modifier = roseaub_ }
+		trigger = has_planet_flag
+		### Capital Buildings ###
+		roseaub_capital = { remove_planet_flag = roseaub_capital remove_modifier = roseaub_capital }
+		roseaub_major_capital = { remove_planet_flag = roseaub_major_capital remove_modifier = roseaub_major_capital }
+		roseaub_system_capital = { remove_planet_flag = roseaub_system_capital remove_modifier = roseaub_system_capital }
+		roseaub_machine_capital = { remove_planet_flag = roseaub_machine_capital remove_modifier = roseaub_machine_capital }
+		roseaub_machine_major_capital = { remove_planet_flag = roseaub_machine_major_capital remove_modifier = roseaub_machine_major_capital }
+		roseaub_machine_system_capital = { remove_planet_flag = roseaub_machine_system_capital remove_modifier = roseaub_machine_system_capital }
+		roseaub_hive_major_capital = { remove_planet_flag = roseaub_hive_major_capital remove_modifier = roseaub_hive_major_capital }
+		roseaub_hab_major_capital = { remove_planet_flag = roseaub_hab_major_capital remove_modifier = roseaub_hab_major_capital }
+		roseaub_hab_system_capital = { remove_planet_flag = roseaub_hab_system_capital remove_modifier = roseaub_hab_system_capital }
+		roseaub_resort_major_capital = { remove_planet_flag = roseaub_resort_major_capital remove_modifier = roseaub_resort_major_capital }
+		roseaub_slave_major_capital = { remove_planet_flag = roseaub_slave_major_capital remove_modifier = roseaub_slave_major_capital }
+		roseaub_imperial_capital_FROM_system_capital = { remove_planet_flag = roseaub_imperial_capital_FROM_system_capital remove_modifier = roseaub_imperial_capital_FROM_system_capital }
+		roseaub_imperial_capital_FROM_hab_system_capital = { remove_planet_flag = roseaub_imperial_capital_FROM_hab_system_capital remove_modifier = roseaub_imperial_capital_FROM_hab_system_capital }
+		roseaub_imperial_capital_FROM_system_capital_nanotech = { remove_planet_flag = roseaub_imperial_capital_FROM_system_capital_nanotech remove_modifier = roseaub_imperial_capital_FROM_system_capital_nanotech }
+		roseaub_imperial_machine_capital_FROM_machine_system_capital = { remove_planet_flag = roseaub_imperial_machine_capital_FROM_machine_system_capital remove_modifier = roseaub_imperial_machine_capital_FROM_machine_system_capital }
+		roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech = { remove_planet_flag = roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech remove_modifier = roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech }
+		roseaub_imperial_hive_capital = { remove_planet_flag = roseaub_imperial_hive_capital remove_modifier = roseaub_imperial_hive_capital }
+		roseaub_capital_nanotech = { remove_planet_flag = roseaub_capital_nanotech remove_modifier = roseaub_capital_nanotech }
+		roseaub_major_capital_nanotech = { remove_planet_flag = roseaub_major_capital_nanotech remove_modifier = roseaub_major_capital_nanotech }
+		roseaub_system_capital_nanotech = { remove_planet_flag = roseaub_system_capital_nanotech remove_modifier = roseaub_system_capital_nanotech }
+		roseaub_machine_capital_nanotech = { remove_planet_flag = roseaub_machine_capital_nanotech remove_modifier = roseaub_machine_capital_nanotech }
+		roseaub_machine_major_capital_nanotech = { remove_planet_flag = roseaub_machine_major_capital_nanotech remove_modifier = roseaub_machine_major_capital_nanotech }
+		roseaub_machine_system_capital_nanotech = { remove_planet_flag = roseaub_machine_system_capital_nanotech remove_modifier = roseaub_machine_system_capital_nanotech }
+		
+		### Pop Assembly Buildings ###
+		roseaub_robot_assembly_complex = { remove_planet_flag = roseaub_robot_assembly_complex remove_modifier = roseaub_robot_assembly_complex }
+		roseaub_machine_assembly_complex = { remove_planet_flag = roseaub_machine_assembly_complex remove_modifier = roseaub_machine_assembly_complex }
+		#roseaub_necrophage_house_of_apotheosis = { remove_planet_flag = roseaub_necrophage_house_of_apotheosis remove_modifier = roseaub_necrophage_house_of_apotheosis }
+
+		### Government Buildings ###
+		roseaub_hall_judgment = { remove_planet_flag = roseaub_hall_judgment remove_modifier = roseaub_hall_judgment }
+		roseaub_grand_embassy = { remove_planet_flag = roseaub_grand_embassy remove_modifier = roseaub_grand_embassy }
+		roseaub_gaiaseeders_2 = { remove_planet_flag = roseaub_gaiaseeders_2 remove_modifier = roseaub_gaiaseeders_2 }
+		roseaub_gaiaseeders_3 = { remove_planet_flag = roseaub_gaiaseeders_3 remove_modifier = roseaub_gaiaseeders_3 }
+		#roseaub_gaiaseeders_4 = { remove_planet_flag = roseaub_gaiaseeders_4 remove_modifier = roseaub_gaiaseeders_4 }
+		
+		### Resource Buildings ###		
+		roseaub_food_processing_center = { remove_planet_flag = roseaub_food_processing_center remove_modifier = roseaub_food_processing_center }
+		roseaub_mineral_purification_hub = { remove_planet_flag = roseaub_mineral_purification_hub remove_modifier = roseaub_mineral_purification_hub }
+		roseaub_energy_nexus = { remove_planet_flag = roseaub_energy_nexus remove_modifier = roseaub_energy_nexus }
+		roseaub_bio_reactor_2 = { remove_planet_flag = roseaub_bio_reactor_2 remove_modifier = roseaub_bio_reactor_2 }
+
+		### Manufacturing Buildings ###
+		roseaub_foundry_2 = { remove_planet_flag = roseaub_foundry_2 remove_modifier = roseaub_foundry_2 }
+		roseaub_foundry_3 = { remove_planet_flag = roseaub_foundry_3 remove_modifier = roseaub_foundry_3 }
+		roseaub_factory_2 = { remove_planet_flag = roseaub_factory_2 remove_modifier = roseaub_factory_2 }
+		roseaub_factory_3 = { remove_planet_flag = roseaub_factory_3 remove_modifier = roseaub_factory_3 }
+		roseaub_coordinated_fulfillment_center_2 = { remove_planet_flag = roseaub_coordinated_fulfillment_center_2 remove_modifier = roseaub_coordinated_fulfillment_center_2 }		
+
+		### Research Buildings ###
+		roseaub_research_lab_2 = { remove_planet_flag = roseaub_research_lab_2 remove_modifier = roseaub_research_lab_2 }
+		roseaub_research_lab_3 = { remove_planet_flag = roseaub_research_lab_3 remove_modifier = roseaub_research_lab_3 }
+
+		### Trade Buildings ###
+		roseaub_commercial_megaplex = { remove_planet_flag = roseaub_commercial_megaplex remove_modifier = roseaub_commercial_megaplex }
+
+		### Amenity Buildings ###
+		roseaub_paradise_dome = { remove_planet_flag = roseaub_paradise_dome remove_modifier = roseaub_paradise_dome }
+		roseaub_communal_housing_large = { remove_planet_flag = roseaub_communal_housing_large remove_modifier = roseaub_communal_housing_large }
+		roseaub_drone_megastorage = { remove_planet_flag = roseaub_drone_megastorage remove_modifier = roseaub_drone_megastorage }
+		roseaub_expanded_warren = { remove_planet_flag = roseaub_expanded_warren remove_modifier = roseaub_expanded_warren }
+		roseaub_hyper_entertainment_forum = { remove_planet_flag = roseaub_hyper_entertainment_forum remove_modifier = roseaub_hyper_entertainment_forum }
+		roseaub_hospital = { remove_planet_flag = roseaub_hospital remove_modifier = roseaub_hospital }
+		
+		### Unity Buildings ###
+		roseaub_heritage_site = { remove_planet_flag = roseaub_heritage_site remove_modifier = roseaub_heritage_site }
+		roseaub_hypercomms_forum = { remove_planet_flag = roseaub_hypercomms_forum remove_modifier = roseaub_hypercomms_forum }
+		roseaub_bureaucratic_2 = { remove_planet_flag = roseaub_bureaucratic_2 remove_modifier = roseaub_bureaucratic_2 }
+		roseaub_bureaucratic_3 = { remove_planet_flag = roseaub_bureaucratic_3 remove_modifier = roseaub_bureaucratic_3 }
+		roseaub_holotemple = { remove_planet_flag = roseaub_holotemple remove_modifier = roseaub_holotemple }
+		roseaub_sacred_nexus = { remove_planet_flag = roseaub_sacred_nexus remove_modifier = roseaub_sacred_nexus }
+		roseaub_network_junction = { remove_planet_flag = roseaub_network_junction remove_modifier = roseaub_network_junction }
+		roseaub_system_conflux = { remove_planet_flag = roseaub_system_conflux remove_modifier = roseaub_system_conflux }
+		roseaub_hive_cluster = { remove_planet_flag = roseaub_hive_cluster remove_modifier = roseaub_hive_cluster }
+		roseaub_hive_confluence = { remove_planet_flag = roseaub_hive_confluence remove_modifier = roseaub_hive_confluence }
+		roseaub_sacrificial_temple_2 = { remove_planet_flag = roseaub_sacrificial_temple_2 remove_modifier = roseaub_sacrificial_temple_2 }
+		roseaub_sacrificial_temple_3 = { remove_planet_flag = roseaub_sacrificial_temple_3 remove_modifier = roseaub_sacrificial_temple_3 }
+		roseaub_galactic_memorial_2 = { remove_planet_flag = roseaub_galactic_memorial_2 remove_modifier = roseaub_galactic_memorial_2 }
+		roseaub_galactic_memorial_3 = { remove_planet_flag = roseaub_galactic_memorial_3 remove_modifier = roseaub_galactic_memorial_3 }
+		roseaub_simulation_2 = { remove_planet_flag = roseaub_simulation_2 remove_modifier = roseaub_simulation_2 }
+		roseaub_simulation_3 = { remove_planet_flag = roseaub_simulation_3 remove_modifier = roseaub_simulation_3 }
+		roseaub_corporate_site = { remove_planet_flag = roseaub_corporate_site remove_modifier = roseaub_corporate_site }
+		roseaub_corporate_forum = { remove_planet_flag = roseaub_corporate_forum remove_modifier = roseaub_corporate_forum }
+		roseaub_sensorium_2 = { remove_planet_flag = roseaub_sensorium_2 remove_modifier = roseaub_sensorium_2 }
+		roseaub_sensorium_3 = { remove_planet_flag = roseaub_sensorium_3 remove_modifier = roseaub_sensorium_3 }
+		roseaub_organic_paradise = { remove_planet_flag = roseaub_organic_paradise remove_modifier = roseaub_organic_paradise }
+		
+		### Army Buildings ###
+		roseaub_fortress = { remove_planet_flag = roseaub_fortress remove_modifier = roseaub_fortress }
+
+		### Event Buildings ###
+		roseaub_crystal_plant_2 = { remove_planet_flag = roseaub_crystal_plant_2 remove_modifier = roseaub_crystal_plant_2 }
+
+		### Fallen Empire Buildings ###
+		roseaub_affluence_center = { remove_planet_flag = roseaub_affluence_center remove_modifier = roseaub_affluence_center }
+		roseaub_nourishment_center = { remove_planet_flag = roseaub_nourishment_center remove_modifier = roseaub_nourishment_center }
+		roseaub_dimensional_fabricator = { remove_planet_flag = roseaub_dimensional_fabricator remove_modifier = roseaub_dimensional_fabricator }
+		roseaub_class_4_singularity = { remove_planet_flag = roseaub_class_4_singularity remove_modifier = roseaub_class_4_singularity }
+		roseaub_nano_forge = { remove_planet_flag = roseaub_nano_forge remove_modifier = roseaub_nano_forge }
+		roseaub_fe_dome = { remove_planet_flag = roseaub_fe_dome remove_modifier = roseaub_fe_dome }
+		roseaub_fe_stronghold = { remove_planet_flag = roseaub_fe_stronghold remove_modifier = roseaub_fe_stronghold }
+		roseaub_fe_administration_2 = { remove_planet_flag = roseaub_fe_administration_2 remove_modifier = roseaub_fe_administration_2 }
+		roseaub_fe_administration_hive_2 = { remove_planet_flag = roseaub_fe_administration_hive_2 remove_modifier = roseaub_fe_administration_hive_2 }
+		roseaub_fe_administration_machine_2 = { remove_planet_flag = roseaub_fe_administration_machine_2 remove_modifier = roseaub_fe_administration_machine_2 }
+		roseaub_fe_temple_2 = { remove_planet_flag = roseaub_fe_temple_2 remove_modifier = roseaub_fe_temple_2 }
+		roseaub_fe_assembly_2 = { remove_planet_flag = roseaub_fe_assembly_2 remove_modifier = roseaub_fe_assembly_2 }
+		roseaub_fe_clinic_2 = { remove_planet_flag = roseaub_fe_clinic_2 remove_modifier = roseaub_fe_clinic_2 }
+		roseaub_fe_security_2 = { remove_planet_flag = roseaub_fe_security_2 remove_modifier = roseaub_fe_security_2 }
+		roseaub_fe_market_2 = { remove_planet_flag = roseaub_fe_market_2 remove_modifier = roseaub_fe_market_2 }
+		roseaub_fe_silo_2 = { remove_planet_flag = roseaub_fe_silo_2 remove_modifier = roseaub_fe_silo_2 }
+		roseaub_fe_entertainment_2 = { remove_planet_flag = roseaub_fe_entertainment_2 remove_modifier = roseaub_fe_entertainment_2 }
+		roseaub_fe_lab_2 = { remove_planet_flag = roseaub_fe_lab_2 remove_modifier = roseaub_fe_lab_2 }
+		roseaub_fe_mine_2 = { remove_planet_flag = roseaub_fe_mine_2 remove_modifier = roseaub_fe_mine_2 }
+
+		### First Contact Buildings ###
+		roseaub_capital_FROM_low_tech_capital = { remove_planet_flag = roseaub_capital_FROM_low_tech_capital remove_modifier = roseaub_capital_FROM_low_tech_capital }
+
+		### Astral Planes Buildings ###
+		roseaub_astral_siphon_2 = { remove_planet_flag = roseaub_astral_siphon_2 remove_modifier = roseaub_astral_siphon_2 }
+		roseaub_astral_siphon_3 = { remove_planet_flag = roseaub_astral_siphon_3 remove_modifier = roseaub_astral_siphon_3 }
+
+		### Cosmic Storms Buildings ###
+		roseaub_advanced_storm_attraction_center = { remove_planet_flag = roseaub_advanced_storm_attraction_center remove_modifier = roseaub_advanced_storm_attraction_center }
+		roseaub_advanced_storm_repellent_center = { remove_planet_flag = roseaub_advanced_storm_repellent_center remove_modifier = roseaub_advanced_storm_repellent_center }
+		roseaub_advanced_storm_resistant_production = { remove_planet_flag = roseaub_advanced_storm_resistant_production remove_modifier = roseaub_advanced_storm_resistant_production }
+		roseaub_storm_holo_theater = { remove_planet_flag = roseaub_storm_holo_theater remove_modifier = roseaub_storm_holo_theater }
+		roseaub_storm_grand_theater = { remove_planet_flag = roseaub_storm_grand_theater remove_modifier = roseaub_storm_grand_theater }
+
+		### Machine Age Buildings ###
+		roseaub_grand_concert_hall_of_the_mind = { remove_planet_flag = roseaub_grand_concert_hall_of_the_mind remove_modifier = roseaub_grand_concert_hall_of_the_mind }
+		roseaub_grand_battlements_of_steel = { remove_planet_flag = roseaub_grand_battlements_of_steel remove_modifier = roseaub_grand_battlements_of_steel }
+		roseaub_grand_cathedral_of_toil = { remove_planet_flag = roseaub_grand_cathedral_of_toil remove_modifier = roseaub_grand_cathedral_of_toil }
+		roseaub_grand_forge_of_the_fellowship = { remove_planet_flag = roseaub_grand_forge_of_the_fellowship remove_modifier = roseaub_grand_forge_of_the_fellowship }
+		roseaub_the_united_sanctum_of_augmentation = { remove_planet_flag = roseaub_the_united_sanctum_of_augmentation remove_modifier = roseaub_the_united_sanctum_of_augmentation }
+		#roseaub_lathe_major_capital = { remove_planet_flag = roseaub_lathe_major_capital remove_modifier = roseaub_lathe_major_capital }
+		#roseaub_lathe_super_capital = { remove_planet_flag = roseaub_lathe_super_capital remove_modifier = roseaub_lathe_super_capital }
+		roseaub_nanolab_2 = { remove_planet_flag = roseaub_nanolab_2 remove_modifier = roseaub_nanolab_2 }
+	
+		### Grand Archive Buildings ###
+		roseaub_wildlife_ranch_2 = { remove_planet_flag = roseaub_wildlife_ranch_2 remove_modifier = roseaub_wildlife_ranch_2 }
+		roseaub_wildlife_ranch_3 = { remove_planet_flag = roseaub_wildlife_ranch_3 remove_modifier = roseaub_wildlife_ranch_3 }
+		roseaub_hunting_grounds_2 = { remove_planet_flag = roseaub_hunting_grounds_2 remove_modifier = roseaub_hunting_grounds_2 }
+		roseaub_hunting_grounds_3 = { remove_planet_flag = roseaub_hunting_grounds_3 remove_modifier = roseaub_hunting_grounds_3 }
+		roseaub_wildlife_sanctuary_2 = { remove_planet_flag = roseaub_wildlife_sanctuary_2 remove_modifier = roseaub_wildlife_sanctuary_2 }
+		roseaub_wildlife_sanctuary_3 = { remove_planet_flag = roseaub_wildlife_sanctuary_3 remove_modifier = roseaub_wildlife_sanctuary_3 }
+		roseaub_primal_arena_2 = { remove_planet_flag = roseaub_primal_arena_2 remove_modifier = roseaub_primal_arena_2 }
+		roseaub_primal_arena_3 = { remove_planet_flag = roseaub_primal_arena_3 remove_modifier = roseaub_primal_arena_3 }
+		roseaub_symbiosis_nexus_2 = { remove_planet_flag = roseaub_symbiosis_nexus_2 remove_modifier = roseaub_symbiosis_nexus_2 }
+		roseaub_symbiosis_nexus_3 = { remove_planet_flag = roseaub_symbiosis_nexus_3 remove_modifier = roseaub_symbiosis_nexus_3 }
+	}
+}
+
+# Starts upgrade process for found upgradable building
+# Called by "roseaub.100"
+roseaub_building_selector_start_upgrade = {
+	#########################
+	### Capital Buildings ###
+	#########################
+	# building_capital
+	if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_colony_shelter" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_planetary_government }			
+			num_sapient_pops >= 10
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_capital
+		add_modifier = { modifier = roseaub_capital }
+	}
+	
+	# building_major_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_centralization }			
+			num_sapient_pops >= 25
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_major_capital
+		add_modifier = { modifier = roseaub_major_capital }
+	}
+	
+	# building_system_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_major_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_galactic_administration }			
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_system_capital
+		add_modifier = { modifier = roseaub_system_capital }
+	}
+	
+	# building_machine_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_deployment_post" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_planetary_government }			
+			num_sapient_pops >= 10
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_machine_capital
+		add_modifier = { modifier = roseaub_machine_capital }
+	}
+	
+	# building_machine_major_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_centralization }			
+			num_sapient_pops >= 25
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_machine_major_capital
+		add_modifier = { modifier = roseaub_machine_major_capital }
+	}
+	
+	# building_machine_system_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_major_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_galactic_administration }			
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_machine_system_capital
+		add_modifier = { modifier = roseaub_machine_system_capital }
+	}
+	
+	# building_hive_major_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hive_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_centralization }			
+			num_sapient_pops >= 25
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_hive_major_capital
+		add_modifier = { modifier = roseaub_hive_major_capital }
+	}
+	
+	# building_hab_major_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hab_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_habitat_2 }			
+			num_sapient_pops >= 10
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_hab_major_capital
+		add_modifier = { modifier = roseaub_hab_major_capital }
+	}
+	
+	# building_hab_system_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hab_major_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_habitat_3 }			
+			num_sapient_pops >= 25
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_hab_system_capital
+		add_modifier = { modifier = roseaub_hab_system_capital }
+	}
+	
+	# building_resort_major_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_resort_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			num_sapient_pops >= 20
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_resort_major_capital
+		add_modifier = { modifier = roseaub_resort_major_capital }
+	}
+	
+	# building_slave_major_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_slave_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			num_sapient_pops >= 20
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > 500 mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = 500
+		}
+		set_planet_flag = roseaub_slave_major_capital
+		add_modifier = { modifier = roseaub_slave_major_capital }
+	}
+	
+	# building_imperial_capital_FROM_building_system_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_system_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = {
+				is_regular_empire = yes
+				is_galactic_emperor = yes
+			}
+			
+			is_capital = yes
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_imperial_capital_FROM_system_capital
+		add_modifier = { modifier = roseaub_imperial_capital_FROM_system_capital }
+	}
+	
+	# building_imperial_capital_FROM_building_hab_system_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hab_system_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = {
+				is_regular_empire = yes
+				is_galactic_emperor = yes
+			}
+			
+			is_capital = yes
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_imperial_capital_FROM_hab_system_capital
+		add_modifier = { modifier = roseaub_imperial_capital_FROM_hab_system_capital }
+	}
+	
+	# building_imperial_capital_FROM_building_system_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_system_capital_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = {
+				is_regular_empire = yes
+				is_galactic_emperor = yes
+			}
+			
+			is_capital = yes
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_imperial_capital_FROM_system_capital_nanotech
+		add_modifier = { modifier = roseaub_imperial_capital_FROM_system_capital_nanotech }
+	}
+
+	# building_imperial_machine_capital_FROM_building_machine_system_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_system_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = {
+				OR = {
+					is_machine_empire = yes
+					is_country_type = ai_empire
+				}
+				is_galactic_emperor = yes
+			}
+			
+			is_capital = yes
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_imperial_machine_capital_FROM_machine_system_capital
+		add_modifier = { modifier = roseaub_imperial_machine_capital_FROM_machine_system_capital }
+	}
+
+	# building_imperial_machine_capital_FROM_building_machine_system_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_system_capital_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = {
+				OR = {
+					is_machine_empire = yes
+					is_country_type = ai_empire
+				}
+				is_galactic_emperor = yes
+			}
+			
+			is_capital = yes
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech
+		add_modifier = { modifier = roseaub_imperial_machine_capital_FROM_machine_system_capital_nanotech }
+	}
+
+	# building_imperial_hive_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hive_major_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = {
+				OR = {
+					is_hive_empire = yes
+					is_country_type = swarm
+				}
+				is_galactic_emperor = yes
+			}
+			
+			is_capital = yes
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_imperial_hive_capital
+		add_modifier = { modifier = roseaub_imperial_hive_capital }
+	}
+
+	# building_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_colony_shelter_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_planetary_government }
+			num_sapient_pops >= 10
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_capital_nanotech
+		add_modifier = { modifier = roseaub_capital_nanotech }
+	}
+
+	# building_major_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_capital_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_centralization }
+			num_sapient_pops >= 25
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_major_capital_nanotech
+		add_modifier = { modifier = roseaub_major_capital_nanotech }
+	}
+
+	# building_system_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_capital_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_galactic_administration }
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_system_capital_nanotech
+		add_modifier = { modifier = roseaub_system_capital_nanotech }
+	}
+
+	# building_machine_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_deployment_post_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_planetary_government }
+			num_sapient_pops >= 10
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_machine_capital_nanotech
+		add_modifier = { modifier = roseaub_machine_capital_nanotech }
+	}
+
+	# building_machine_major_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_capital_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_centralization }
+			num_sapient_pops >= 25
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_machine_major_capital_nanotech
+		add_modifier = { modifier = roseaub_machine_major_capital_nanotech }
+	}
+
+	# building_machine_system_capital_nanotech
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_major_capital_nanotech" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_galactic_administration }
+			num_sapient_pops >= 50
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b4_time
+			MINERALS = @b4_minerals
+		}
+		set_planet_flag = roseaub_machine_major_capital_nanotech
+		add_modifier = { modifier = roseaub_machine_major_capital_nanotech }
+	}
+
+	##############################
+	### Pop Assembly Buildings ###
+	##############################
+	# building_robot_assembly_complex
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_robot_assembly_plant" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_robot_assembly_complex }
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			RARE_CRYSTALS = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_robot_assembly_complex
+		add_modifier = { modifier = roseaub_robot_assembly_complex }
+	}
+
+	# building_machine_assembly_complex
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_machine_assembly_plant" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_mega_assembly }
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			RARE_CRYSTALS = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_machine_assembly_complex
+		add_modifier = { modifier = roseaub_machine_assembly_complex }
+	}
+
+	# building_necrophage_house_of_apotheosis
+	#else_if = { 
+	#	limit = { 
+	#		# Building to upgrade 
+	#		has_building = "building_necrophage_elevation_chamber" 
+	#		
+	#		# Applicable building potential/allow/prerequisites triggers
+	#		owner = { has_technology = tech_glandular_acclimation }
+	#
+	#		# Resources to upgrade building
+	#		owner = {
+	#			resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+	#			resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+	#		}
+	#	}
+	#	roseaub_start_autoupgrading_building = {
+	#		BUILD_TIME = @b3_time
+	#		MINERALS = @b2_minerals
+	#		EXOTIC_GASES = @b2_rare_cost
+	#	}
+	#	set_planet_flag = roseaub_necrophage_house_of_apotheosis
+	#	add_modifier = { modifier = roseaub_necrophage_house_of_apotheosis }
+	#}
+
+	############################
+	### Government Buildings ###
+	############################
+	# building_hall_judgment
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_precinct_house" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_centralization }
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			VOLATILE_MOTES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_hall_judgment
+		add_modifier = { modifier = roseaub_hall_judgment }
+	}
+
+	# building_grand_embassy
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_embassy" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_xeno_relations }
+			has_major_upgraded_capital = yes
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			VOLATILE_MOTES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_grand_embassy
+		add_modifier = { modifier = roseaub_grand_embassy }
+	}
+
+	# building_gaiaseeders_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_gaiaseeders_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			can_build_gaiaseeder = yes
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = energy value > 1500 mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ENERGY = 1500
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_gaiaseeders_2
+		add_modifier = { modifier = roseaub_gaiaseeders_2 }
+	}
+
+	# building_gaiaseeders_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_gaiaseeders_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			can_build_gaiaseeder = yes
+
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = energy value > 1500 mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ENERGY = 1500
+			EXOTIC_GASES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_gaiaseeders_3
+		add_modifier = { modifier = roseaub_gaiaseeders_3 }
+	}
+	
+	# building_gaiaseeders_4
+	#else_if = { 
+	#	limit = { 
+	#		# Building to upgrade 
+	#		has_building = "building_gaiaseeders_3" 
+	#		
+	#		# Applicable building potential/allow/prerequisites triggers
+	#		can_build_gaiaseeder = yes
+	#
+	#		# Resources to upgrade building
+	#		owner = {
+	#			resource_stockpile_compare = { resource = energy value > 1500 mult = root.roseaub_planet_structures_cost_mult }
+	#			resource_stockpile_compare = { resource = exotic_gases value > @b4_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+	#		}
+	#	}
+	#	roseaub_start_autoupgrading_building = {
+	#		BUILD_TIME = @b2_time
+	#		ENERGY = 1500
+	#		EXOTIC_GASES = @b4_rare_cost
+	#	}
+	#	set_planet_flag = roseaub_gaiaseeders_4
+	#	add_modifier = { modifier = roseaub_gaiaseeders_4 }
+	#}	
+	
+	##########################
+	### Resource Buildings ###
+	##########################
+	# building_food_processing_center
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_food_processing_facility" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_food_processing_2 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			if = {
+				limit = { has_ringworld_output_boost = no }
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+			else = {
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b_ring_resource_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b_ring_resource_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+		}
+		if = {
+			limit = { has_ringworld_output_boost = no }
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b2_minerals
+				VOLATILE_MOTES = @b2_rare_cost
+			}
+		}
+		else = {
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b_ring_resource_minerals
+				VOLATILE_MOTES = @b_ring_resource_rare_cost
+			}
+		}
+		set_planet_flag = roseaub_food_processing_center
+		add_modifier = { modifier = roseaub_food_processing_center }
+	}
+	
+	# building_mineral_purification_hub
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_mineral_purification_plant" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_mineral_purification_2 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			if = {
+				limit = { 
+					has_ringworld_output_boost = no 
+					owner = { is_robot_empire = no }
+				}
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}	
+			else_if = {
+				limit = { 
+					has_ringworld_output_boost = no 
+					owner = { is_robot_empire = yes }
+				}
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > 900 mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = alloys value > 150 mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}		
+			else_if = {
+				limit = { 
+					has_ringworld_output_boost = yes 
+					owner = { is_robot_empire = no }
+				}
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b_ring_resource_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b_ring_resource_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}		
+			else_if = {
+				limit = { 
+					has_ringworld_output_boost = yes 
+					owner = { is_robot_empire = yes }
+				}
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > 1200 mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = alloys value > 150 mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}	
+		}
+		if = {
+			limit = { 
+				has_ringworld_output_boost = no 
+				owner = { is_robot_empire = no }
+			}
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b2_minerals
+				VOLATILE_MOTES = @b2_rare_cost
+			}
+		}
+		else_if = {
+			limit = { 
+				has_ringworld_output_boost = no 
+				owner = { is_robot_empire = yes }
+			}
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = 900
+				ALLOYS = 150
+				VOLATILE_MOTES = @b2_rare_cost
+			}
+		}
+		else_if = {
+			limit = { 
+				has_ringworld_output_boost = yes 
+				owner = { is_robot_empire = no }
+			}
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b_ring_resource_minerals
+				VOLATILE_MOTES = @b_ring_resource_rare_cost
+			}
+		}
+		else_if = {
+			limit = { 
+				has_ringworld_output_boost = yes 
+				owner = { is_robot_empire = yes }
+			}
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = 1200
+				ALLOYS = 150
+				VOLATILE_MOTES = @b2_rare_cost
+			}
+		}
+		set_planet_flag = roseaub_mineral_purification_hub
+		add_modifier = { modifier = roseaub_mineral_purification_hub }
+	}
+	
+	# building_energy_nexus
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_energy_grid" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_power_hub_2 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			if = {
+				limit = { has_ringworld_output_boost = no }
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+			else = {
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b_ring_resource_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = exotic_gases value > @b_ring_resource_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+		}
+		if = {
+			limit = { has_ringworld_output_boost = no }
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b2_minerals
+				EXOTIC_GASES = @b2_rare_cost
+			}
+		}
+		else = {
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b_ring_resource_minerals
+				EXOTIC_GASES = @b_ring_resource_rare_cost
+			}
+		}
+		set_planet_flag = roseaub_energy_nexus
+		add_modifier = { modifier = roseaub_energy_nexus }
+	}
+	
+	# building_bio_reactor_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_bio_reactor" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_bio_reactor_2 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_bio_reactor_2
+		add_modifier = { modifier = roseaub_bio_reactor_2 }
+	}
+
+	###############################
+	### Manufacturing Buildings ###
+	###############################
+	# building_foundry_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_foundry_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_alloys_1 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			VOLATILE_MOTES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_foundry_2
+		add_modifier = { modifier = roseaub_foundry_2 }
+	}
+
+	# building_foundry_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_foundry_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_alloys_2 }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			if = {
+				limit = { has_ringworld_output_boost = no }
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b4_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+			else = {
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b_ring_manufacturing_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = volatile_motes value > @b_ring_manufacturing_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+		}
+		if = {
+			limit = { has_ringworld_output_boost = no }
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b3_time
+				MINERALS = @b3_minerals
+				VOLATILE_MOTES = @b4_rare_cost
+			}
+		}
+		else = {
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b_ring_manufacturing_minerals
+				VOLATILE_MOTES = @b_ring_manufacturing_rare_cost
+			}
+		}
+		set_planet_flag = roseaub_foundry_3
+		add_modifier = { modifier = roseaub_foundry_3 }
+	}	
+	
+	# building_factory_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_factory_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_luxuries_1 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_factory_2
+		add_modifier = { modifier = roseaub_factory_2 }
+	}
+
+	# building_factory_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_factory_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_luxuries_2 }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			if = {
+				limit = { has_ringworld_output_boost = no }
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = rare_crystals value > @b4_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+			else = {
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b_ring_manufacturing_minerals mult = root.roseaub_planet_structures_cost_mult }
+					resource_stockpile_compare = { resource = rare_crystals value > @b_ring_manufacturing_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}
+		}
+		if = {
+			limit = { has_ringworld_output_boost = no }
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b3_time
+				MINERALS = @b3_minerals
+				RARE_CRYSTALS = @b4_rare_cost
+			}
+		}
+		else = {
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b_ring_manufacturing_minerals
+				RARE_CRYSTALS = @b_ring_manufacturing_rare_cost
+			}
+		}
+		set_planet_flag = roseaub_factory_3
+		add_modifier = { modifier = roseaub_factory_3 }
+	}	
+	
+	# building_coordinated_fulfillment_center_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_coordinated_fulfillment_center_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_global_production_strategy }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			VOLATILE_MOTES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_coordinated_fulfillment_center_2
+		add_modifier = { modifier = roseaub_coordinated_fulfillment_center_2 }
+	}
+
+	##########################
+	### Research Buildings ###
+	##########################
+	# building_research_lab_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_research_lab_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_basic_science_lab_2 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_research_lab_2
+		add_modifier = { modifier = roseaub_research_lab_2 }
+	}
+
+	# building_research_lab_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_research_lab_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_basic_science_lab_3 }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			EXOTIC_GASES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_research_lab_3
+		add_modifier = { modifier = roseaub_research_lab_3 }
+	}
+
+	#######################
+	### Trade Buildings ###
+	#######################
+	# building_commercial_megaplex
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_commercial_zone" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_interstellar_economics }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_commercial_megaplex
+		add_modifier = { modifier = roseaub_commercial_megaplex }
+	}	
+
+	#########################
+	### Amenity Buildings ###
+	#########################
+	# building_paradise_dome
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_luxury_residence" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_paradise_dome }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_paradise_dome
+		add_modifier = { modifier = roseaub_paradise_dome }
+	}
+
+	# building_communal_housing_large
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_communal_housing" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_paradise_dome }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_communal_housing_large
+		add_modifier = { modifier = roseaub_communal_housing_large }
+	}
+
+	# building_drone_megastorage
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_drone_storage" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_micro_replicators }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_drone_megastorage
+		add_modifier = { modifier = roseaub_drone_megastorage }
+	}
+
+	# building_expanded_warren
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hive_warren" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_housing_2 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_expanded_warren
+		add_modifier = { modifier = roseaub_expanded_warren }
+	}
+
+	# building_hyper_entertainment_forum
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_holo_theatres" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hyper_entertainment_forum }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_hyper_entertainment_forum
+		add_modifier = { modifier = roseaub_hyper_entertainment_forum }
+	}
+
+	# building_hospital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_clinic" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_frontier_hospital }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_hospital
+		add_modifier = { modifier = roseaub_hospital }
+	}
+
+	#######################
+	### Unity Buildings ###
+	#######################
+	# building_heritage_site
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_autochthon_monument" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_heritage_site
+		add_modifier = { modifier = roseaub_heritage_site }
+	}	
+	
+	# building_hypercomms_forum
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_heritage_site" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_hypercomms_forum
+		add_modifier = { modifier = roseaub_hypercomms_forum }
+	}	
+	
+	# building_bureaucratic_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_bureaucratic_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_bureaucracy }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_bureaucratic_2
+		add_modifier = { modifier = roseaub_bureaucratic_2 }
+	}		
+	
+	# building_bureaucratic_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_bureaucratic_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_galactic_bureaucracy }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			RARE_CRYSTALS = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_bureaucratic_3
+		add_modifier = { modifier = roseaub_bureaucratic_3 }
+	}	
+	
+	# building_holotemple
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_temple" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_holographic_rituals }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_holotemple
+		add_modifier = { modifier = roseaub_holotemple }
+	}		
+	
+	# building_sacred_nexus
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_holotemple" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_consecration_fields }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			RARE_CRYSTALS = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_sacred_nexus
+		add_modifier = { modifier = roseaub_sacred_nexus }
+	}	
+	
+	# building_network_junction
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_uplink_node" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_colonial_bureaucracy }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_network_junction
+		add_modifier = { modifier = roseaub_network_junction }
+	}		
+	
+	# building_system_conflux
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_network_junction" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_galactic_bureaucracy }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			RARE_CRYSTALS = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_system_conflux
+		add_modifier = { modifier = roseaub_system_conflux }
+	}	
+
+	# building_hive_cluster
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hive_node" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hive_cluster }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_hive_cluster
+		add_modifier = { modifier = roseaub_hive_cluster }
+	}		
+	
+	# building_hive_confluence
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_hive_cluster" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hive_confluence }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			EXOTIC_GASES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_hive_confluence
+		add_modifier = { modifier = roseaub_hive_confluence }
+	}
+	
+	# building_sacrificial_temple_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_sacrificial_temple_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_holographic_rituals }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_sacrificial_temple_2
+		add_modifier = { modifier = roseaub_sacrificial_temple_2 }
+	}		
+	
+	# building_sacrificial_temple_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_sacrificial_temple_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_consecration_fields }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			EXOTIC_GASES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_sacrificial_temple_3
+		add_modifier = { modifier = roseaub_sacrificial_temple_3 }
+	}	
+	
+	# building_galactic_memorial_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_galactic_memorial_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_galactic_memorial_2
+		add_modifier = { modifier = roseaub_galactic_memorial_2 }
+	}		
+	
+	# building_galactic_memorial_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_galactic_memorial_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			EXOTIC_GASES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_galactic_memorial_3
+		add_modifier = { modifier = roseaub_galactic_memorial_3 }
+	}
+	
+	# building_simulation_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_simulation_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_simulation_2
+		add_modifier = { modifier = roseaub_simulation_2 }
+	}		
+	
+	# building_simulation_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_simulation_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_simulation_3
+		add_modifier = { modifier = roseaub_simulation_3 }
+	}
+	
+	# building_corporate_site
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_corporate_monument" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_corporate_site
+		add_modifier = { modifier = roseaub_corporate_site }
+	}		
+	
+	# building_corporate_forum
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_corporate_site" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_corporate_forum
+		add_modifier = { modifier = roseaub_corporate_forum }
+	}
+	
+	# building_sensorium_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_sensorium_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hive_cluster }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_sensorium_2
+		add_modifier = { modifier = roseaub_sensorium_2 }
+	}		
+	
+	# building_sensorium_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_sensorium_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hive_confluence }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_sensorium_3
+		add_modifier = { modifier = roseaub_sensorium_3 }
+	}		
+	
+	# building_organic_paradise
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_organic_sanctuary" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_paradise_dome }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = exotic_gases value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			EXOTIC_GASES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_organic_paradise
+		add_modifier = { modifier = roseaub_organic_paradise }
+	}	
+	
+	######################
+	### Army Buildings ###
+	######################
+	# building_fortress
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_stronghold" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_global_defense_grid }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			VOLATILE_MOTES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_fortress
+		add_modifier = { modifier = roseaub_fortress }
+	}
+
+	#######################
+	### Event Buildings ###
+	#######################
+	# building_crystal_plant_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_crystal_plant" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_rare_crystals }
+			has_upgraded_capital = yes
+			owner = { has_country_flag = lithoid_crystal_plant }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > 1000 mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = 800
+			MINERALS = 1000
+		}
+		set_planet_flag = roseaub_crystal_plant_2
+		add_modifier = { modifier = roseaub_crystal_plant_2 }
+	}
+	
+	###############################
+	### Fallen Empire Buildings ###
+	###############################
+	# building_affluence_center
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_affluence_emporium" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_affluence_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_affluence_center
+		add_modifier = { modifier = roseaub_affluence_center }
+	}
+	
+	# building_nourishment_center
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_nourishment_complex" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_nourishment_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_nourishment_center
+		add_modifier = { modifier = roseaub_nourishment_center }
+	}
+	
+	# building_dimensional_fabricator
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_dimensional_replicator" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_fabricator_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_dimensional_fabricator
+		add_modifier = { modifier = roseaub_dimensional_fabricator }
+	}
+	
+	# building_class_4_singularity
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_class_3_singularity" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_singularity_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_class_4_singularity
+		add_modifier = { modifier = roseaub_class_4_singularity }
+	}
+	
+	# building_nano_forge
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_micro_forge" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_forge_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_nano_forge
+		add_modifier = { modifier = roseaub_nano_forge }
+	}
+	
+	# building_fe_dome
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_sky_dome" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_dome_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_dome
+		add_modifier = { modifier = roseaub_fe_dome }
+	}
+	
+	# building_fe_stronghold
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_fortress" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_fortress_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_stronghold
+		add_modifier = { modifier = roseaub_fe_stronghold }
+	}
+	
+	# building_fe_administration_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_administration_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_administration_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_administration_2
+		add_modifier = { modifier = roseaub_fe_administration_2 }
+	}
+	
+	# building_fe_administration_hive_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_administration_hive_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_administration_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_administration_hive_2
+		add_modifier = { modifier = roseaub_fe_administration_hive_2 }
+	}
+	
+	# building_fe_administration_machine_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_administration_machine_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_administration_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_administration_machine_2
+		add_modifier = { modifier = roseaub_fe_administration_machine_2 }
+	}
+	
+	# building_fe_temple_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_temple_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_administration_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_temple_2
+		add_modifier = { modifier = roseaub_fe_temple_2 }
+	}
+	
+	# building_fe_assembly_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_assembly_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_assembly_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_assembly_2
+		add_modifier = { modifier = roseaub_fe_assembly_2 }
+	}
+	
+	# building_fe_clinic_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_clinic_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_clinic_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_clinic_2
+		add_modifier = { modifier = roseaub_fe_clinic_2 }
+	}
+	
+	# building_fe_security_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_security_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_security_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_security_2
+		add_modifier = { modifier = roseaub_fe_security_2 }
+	}
+	
+	# building_fe_market_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_market_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_market_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_market_2
+		add_modifier = { modifier = roseaub_fe_market_2 }
+	}
+	
+	# building_fe_silo_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_silo_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_silo_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_silo_2
+		add_modifier = { modifier = roseaub_fe_silo_2 }
+	}
+	
+	# building_fe_entertainment_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_entertainment_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_entertainment_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_entertainment_2
+		add_modifier = { modifier = roseaub_fe_entertainment_2 }
+	}
+	
+	# building_fe_lab_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_lab_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_lab_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_lab_2
+		add_modifier = { modifier = roseaub_fe_lab_2 }
+	}
+	
+	# building_fe_mine_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_fe_mine_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_fe_mine_2 }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = alloys value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			ALLOYS = @b3_minerals
+		}
+		set_planet_flag = roseaub_fe_mine_2
+		add_modifier = { modifier = roseaub_fe_mine_2 }
+	}
+	
+	###############################
+	### First Contact Buildings ###
+	###############################
+	# building_capital_FROM_building_low_tech_capital
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_low_tech_capital" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_planetary_government }
+			num_sapient_pops >= 10
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_capital_FROM_low_tech_capital
+		add_modifier = { modifier = roseaub_capital_FROM_low_tech_capital }
+	}
+	
+	###############################
+	### Astral Planes Buildings ###
+	###############################
+	# building_astral_siphon_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_astral_siphon_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { check_variable = { which = astral_siphon_unlocked value >= 2 } }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_astral_siphon_2
+		add_modifier = { modifier = roseaub_astral_siphon_2 }
+	}
+	
+	# building_astral_siphon_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_astral_siphon_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { check_variable = { which = astral_siphon_unlocked value >= 3 } }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_astral_siphon_3
+		add_modifier = { modifier = roseaub_astral_siphon_3 }
+	}	
+	
+	###############################
+	### Cosmic Storms Buildings ###
+	###############################	
+	# building_advanced_storm_attraction_center
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_storm_attraction_center" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_advanced_storm_manipulation }
+			
+			# Resources to upgrade building
+			if = {
+				limit = {
+					NOT = { owner = { has_origin = origin_storm_chasers } }
+					
+					owner = {
+						resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+						resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+					}					
+				}
+			}
+			else = {
+				owner = {
+					resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				}
+			}			
+		}
+		if = {
+			limit = { NOT = { owner = { has_origin = origin_storm_chasers } } }
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b2_minerals
+				RARE_CRYSTALS = @b2_rare_cost
+			}
+		}
+		else = {
+			roseaub_start_autoupgrading_building = {
+				BUILD_TIME = @b2_time
+				MINERALS = @b2_minerals
+			}
+		}		
+		set_planet_flag = roseaub_advanced_storm_attraction_center
+		add_modifier = { modifier = roseaub_advanced_storm_attraction_center }
+	}
+
+	# building_advanced_storm_repellent_center
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_storm_repellent_center" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_advanced_storm_manipulation }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_advanced_storm_repellent_center
+		add_modifier = { modifier = roseaub_advanced_storm_repellent_center }
+	}
+
+	# building_advanced_storm_resistant_production
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_storm_resistant_production" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_advanced_industrial_storm_protection }
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = rare_crystals value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b2_minerals
+			RARE_CRYSTALS = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_advanced_storm_resistant_production
+		add_modifier = { modifier = roseaub_advanced_storm_resistant_production }
+	}
+
+	# building_storm_holo_theater
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_storm_summoning_theater" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			has_upgraded_capital = yes	
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b2_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+			VOLATILE_MOTES = @b2_rare_cost
+		}
+		set_planet_flag = roseaub_storm_holo_theater
+		add_modifier = { modifier = roseaub_storm_holo_theater }
+	}
+
+	# building_storm_grand_theater
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_storm_holo_theater" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			has_major_upgraded_capital = yes	
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = volatile_motes value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+			VOLATILE_MOTES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_storm_grand_theater
+		add_modifier = { modifier = roseaub_storm_grand_theater }
+	}	
+
+	#############################
+	### Machine Age Buildings ###
+	#############################
+	# building_grand_concert_hall_of_the_mind
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_amphitheater_of_the_mind" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_country_flag = cybernetic_creed_research }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_grand_concert_hall_of_the_mind
+		add_modifier = { modifier = roseaub_grand_concert_hall_of_the_mind }
+	}	
+	
+	# building_grand_battlements_of_steel
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_battlement_of_steel" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_country_flag = cybernetic_creed_war }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b1_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b1_minerals
+		}
+		set_planet_flag = roseaub_grand_battlements_of_steel
+		add_modifier = { modifier = roseaub_grand_battlements_of_steel }
+	}		
+	
+	# building_grand_cathedral_of_toil
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_sanctuary_of_toil" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_country_flag = cybernetic_creed_labor }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_grand_cathedral_of_toil
+		add_modifier = { modifier = roseaub_grand_cathedral_of_toil }
+	}
+	
+	# building_grand_forge_of_the_fellowship
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_forge_of_the_fellowship" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_country_flag = cybernetic_creed_construction }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_grand_forge_of_the_fellowship
+		add_modifier = { modifier = roseaub_grand_forge_of_the_fellowship }
+	}
+	
+	# building_the_united_sanctum_of_augmentation
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_the_sanctum_of_augmentation" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_country_flag = cybernetic_creed_general }
+			has_major_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_the_united_sanctum_of_augmentation
+		add_modifier = { modifier = roseaub_the_united_sanctum_of_augmentation }
+	}
+	
+	## building_lathe_major_capital
+	#else_if = { 
+	#	limit = { 
+	#		# Building to upgrade 
+	#		has_building = "building_lathe_capital" 
+	#					
+	#		# Resources to upgrade building
+	#		owner = {
+	#			resource_stockpile_compare = { resource = alloys value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+	#		}
+	#	}
+	#	roseaub_start_autoupgrading_building = {
+	#		BUILD_TIME = @b2_time
+	#		ALLOYS = @b4_minerals
+	#	}
+	#	set_planet_flag = roseaub_lathe_major_capital
+	#	add_modifier = { modifier = roseaub_lathe_major_capital }
+	#}
+	#
+	## building_lathe_super_capital
+	#else_if = { 
+	#	limit = { 
+	#		# Building to upgrade 
+	#		has_building = "building_lathe_major_capital" 
+	#					
+	#		# Resources to upgrade building
+	#		owner = {
+	#			resource_stockpile_compare = { resource = alloys value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+	#		}
+	#	}
+	#	roseaub_start_autoupgrading_building = {
+	#		BUILD_TIME = @b3_time
+	#		ALLOYS = @b4_minerals
+	#	}
+	#	set_planet_flag = roseaub_lathe_super_capital
+	#	add_modifier = { modifier = roseaub_lathe_super_capital }
+	#}
+	
+	# building_nanolab_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "building_nanolab_1" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_tradition = tr_nanotech_1 }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b4_minerals mult = root.roseaub_planet_structures_cost_mult }
+				resource_stockpile_compare = { resource = nanites value > @b3_rare_cost mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b4_minerals
+			NANITES = @b3_rare_cost
+		}
+		set_planet_flag = roseaub_nanolab_2
+		add_modifier = { modifier = roseaub_nanolab_2 }
+	}	
+	
+	###############################
+	### Grand Archive Buildings ###
+	###############################
+	# wildlife_ranch_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "wildlife_ranch" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_wildlife_ranch_2
+		add_modifier = { modifier = roseaub_wildlife_ranch_2 }
+	}
+	
+	# wildlife_ranch_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "wildlife_ranch_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_wildlife_ranch_3
+		add_modifier = { modifier = roseaub_wildlife_ranch_3 }
+	}
+	
+	# hunting_grounds_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "hunting_grounds" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_hunting_grounds_2
+		add_modifier = { modifier = roseaub_hunting_grounds_2 }
+	}
+	
+	# hunting_grounds_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "hunting_grounds_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_hunting_grounds_3
+		add_modifier = { modifier = roseaub_hunting_grounds_3 }
+	}
+	
+	# wildlife_sanctuary_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "wildlife_sanctuary" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_wildlife_sanctuary_2
+		add_modifier = { modifier = roseaub_wildlife_sanctuary_2 }
+	}
+	
+	# wildlife_sanctuary_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "wildlife_sanctuary_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_wildlife_sanctuary_3
+		add_modifier = { modifier = roseaub_wildlife_sanctuary_3 }
+	}
+	
+	# primal_arena_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "primal_arena" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_primal_arena_2
+		add_modifier = { modifier = roseaub_primal_arena_2 }
+	}
+	
+	# primal_arena_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "primal_arena_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_primal_arena_3
+		add_modifier = { modifier = roseaub_primal_arena_3 }
+	}
+	
+	# symbiosis_nexus_2
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "symbiosis_nexus" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_heritage_site }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b2_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b2_time
+			MINERALS = @b2_minerals
+		}
+		set_planet_flag = roseaub_symbiosis_nexus_2
+		add_modifier = { modifier = roseaub_symbiosis_nexus_2 }
+	}
+	
+	# symbiosis_nexus_3
+	else_if = { 
+		limit = { 
+			# Building to upgrade 
+			has_building = "symbiosis_nexus_2" 
+			
+			# Applicable building potential/allow/prerequisites triggers
+			owner = { has_technology = tech_hypercomms_forum }
+			has_upgraded_capital = yes
+			
+			# Resources to upgrade building
+			owner = {
+				resource_stockpile_compare = { resource = minerals value > @b3_minerals mult = root.roseaub_planet_structures_cost_mult }
+			}
+		}
+		roseaub_start_autoupgrading_building = {
+			BUILD_TIME = @b3_time
+			MINERALS = @b3_minerals
+		}
+		set_planet_flag = roseaub_symbiosis_nexus_3
+		add_modifier = { modifier = roseaub_symbiosis_nexus_3 }
+	}
+}

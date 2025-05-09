@@ -1,0 +1,4 @@
+defined_text = {
+	name = GetSystemProspectingNaniteHarvester
+	value = value:system_prospecting_nanite_harvester_value
+}

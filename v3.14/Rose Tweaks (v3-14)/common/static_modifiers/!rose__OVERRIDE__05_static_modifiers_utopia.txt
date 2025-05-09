@@ -1,0 +1,29 @@
+covenant_composer_of_strands_0 = {
+	pop_growth_speed = 0.10
+	leader_lifespan_add = 10
+	BIOLOGICAL_species_trait_points_add = -1
+}
+covenant_composer_of_strands = {
+	pop_growth_speed = 0.20
+	leader_lifespan_add = 20
+	BIOLOGICAL_species_trait_points_add = -2
+}
+
+covenant_eater_of_worlds_0 = {
+	ship_fire_rate_mult = 0.075
+	ship_weapon_damage = 0.075
+	army_damage_mult = 0.25
+}
+covenant_eater_of_worlds_debuff_0 = {
+	ships_upkeep_mult = 0.25
+	armies_upkeep_mult = 1
+}
+covenant_eater_of_worlds = {
+	ship_fire_rate_mult = 0.15
+	ship_weapon_damage = 0.15
+	army_damage_mult = 0.5
+}
+covenant_eater_of_worlds_debuff = {
+	ships_upkeep_mult = 0.5
+	armies_upkeep_mult = 2
+}

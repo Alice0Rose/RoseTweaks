@@ -1,0 +1,3 @@
+﻿l_english:
+ edict_rosebcnhr_ignore_hyper_relays: "Ignore Hyper Relays"
+ edict_rosebcnhr_ignore_hyper_relays_desc: "Forces all fleets to ignore hyper relays and use other forms of FTL travel instead."

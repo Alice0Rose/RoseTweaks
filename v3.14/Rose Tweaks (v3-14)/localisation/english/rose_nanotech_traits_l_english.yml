@@ -1,0 +1,10 @@
+﻿l_english:
+ trait_rose_nanotech: "Nanotech Enhancements"
+ trait_rose_nanotech_desc: "Many parts form one whole, be it an empire or an individual."
+ trait_rose_nanotech_tt: "Army Health: §G+300%§!\nArmy Damage: §G+100%§!\nArmy Morale Damage: §G+50%§!\nPop Housing Usage: §G-50%§!\n"
+  
+ leader_trait_rose_nanotech: "$trait_rose_nanotech$"
+ leader_trait_rose_nanotech_desc: "Made up of billions of nanites, this leader infinitely adapts and evolves to overcome any challenge."
+ 
+ mod_planet_jobs_nanites_produces_mult: "£nanites£ $nanites$ from £job£ Jobs"
+ mod_planet_jobs_nanites_upkeep_mult: "Job Nanite Upkeep"

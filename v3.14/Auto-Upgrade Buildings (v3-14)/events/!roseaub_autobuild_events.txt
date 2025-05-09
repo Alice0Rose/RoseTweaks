@@ -1,0 +1,206 @@
+namespace = roseaub
+
+# Starts the upgrade process for all planets in all auto-upgrade enabled countries
+# Called by "on_monthly_pulse"
+event = {
+	id = roseaub.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = { 
+			limit = { 
+				exists = this
+				is_ai = no
+				has_edict = roseaub_enable_auto_upgrading
+			} 
+			
+			set_variable = {
+				which = days_to_wait_to_upgrade
+				value = 0
+			}
+			
+			# Spaces planet upgrade events out by 1 day to spread out the performance load
+			every_controlled_planet = {
+				limit = { 
+					is_colony = yes
+				}
+
+				planet_event = {
+					id = roseaub.100
+					days = owner.days_to_wait_to_upgrade
+				}
+				
+				owner = {
+					change_variable = { 
+						which = days_to_wait_to_upgrade
+						value = 1
+					}
+				}			
+			}
+		}
+	}
+}
+
+# Cancels currently upgrading building
+# Called by "decision_roseaub_cancel_upgrade" and "roseaub.4"
+planet_event = {
+	id = roseaub.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = this
+		has_planet_flag = roseaub_upgrading_building
+	}
+
+	immediate = {
+		# Refunds upgrade cost and clears upgrade cost variables and flags
+		roseaub_refund_upgrade = {}
+		roseaub_building_selector_clear_flag_and_modifier = {}
+		
+		# Marks planet as having it's upgrade canceled
+		set_planet_flag = roseaub_upgrade_canceled
+	}
+}
+
+# Performs upgrade for building
+# Called by "roseaub.100" for the specific building type being upgraded
+planet_event = {
+	id = roseaub.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = this
+		has_planet_flag = roseaub_upgrading_building
+	}
+
+	immediate = {
+		# Stops upgrade if it was canceled
+		if = {
+			limit = {
+				has_planet_flag = roseaub_upgrade_canceled
+			}
+			
+			if = {
+				limit = { is_variable_set = roseaub_build_time }
+				clear_variable = roseaub_build_time
+			}
+			
+			remove_planet_flag = roseaub_upgrade_canceled
+			remove_planet_flag = roseaub_upgrading_building
+		}
+		
+		else = {
+			# Only decrements the build time if there is no building construction, essentially pausing the upgrade if there is construction
+			if = {
+				limit = {
+					has_building_construction = no
+				}
+	
+				subtract_variable = { 
+					which = roseaub_build_time 
+					value = 1 
+				}
+			}
+					
+			# Calls event again in 1 day to continue decrementing build time if there is still time remaining
+			if = {
+				limit = {
+					check_variable = { 
+						which = roseaub_build_time 
+						value > 0 
+					}
+				}
+				
+				planet_event = { 
+					id = roseaub.3 
+					days = 1 
+				}
+			}
+			
+			# Attempts to complete upgrade if build time remaining is 0
+			else_if = {
+				limit = {
+					check_variable = { 
+						which = roseaub_build_time 
+						value <= 0 
+					}
+				}
+			
+				# Finishes the upgrade process for the currently auto-upgrading building
+				roseaub_building_selector_finish_upgrade = {}
+				
+				roseaub_clear_upgrade_vars = {}
+				roseaub_building_selector_clear_flag_and_modifier = {}
+			
+				# Marks planet as no longer auto-upgrading something
+				remove_planet_flag = roseaub_upgrading_building
+			}
+		}			
+	}	
+}
+
+# Checks if upgrading building is still there on each planet, canceling upgrade if not
+# Called by "on_monthly_pulse"
+event = {
+	id = roseaub.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = { 
+			limit = { 
+				exists = this
+				is_ai = no
+			} 
+			
+			every_controlled_planet = {
+				limit = { 
+					exists = this
+					is_colony = yes
+					has_planet_flag = roseaub_upgrading_building
+				}
+
+				roseaub_building_selector_cancel_upgrade = {}
+			}
+		}
+	}
+}
+
+# Handler event for starting the upgrade process for the first upgradable building on the planet
+# Called on each planet by "roseaub.1"
+planet_event = {
+	id = roseaub.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = owner
+		# Doesn't work for AIs or if the edict is disabled
+		owner = {
+			is_ai = no
+			has_edict = roseaub_enable_auto_upgrading
+		}
+		
+		# Stops upgrade process if already upgrading a building or using the planet construction queue
+		NOT = { has_planet_flag = roseaub_upgrading_building }
+		has_building_construction = no
+	}
+	
+	immediate = {		
+		# Gets local copies of building construction modifiers
+		export_modifier_to_variable = { modifier = planet_structures_cost_mult variable = roseaub_planet_structures_cost_mult }
+		change_variable = { which = roseaub_planet_structures_cost_mult value = 1 }
+		
+		# Starts the upgrade process for the first upgradable building on the planet
+		roseaub_building_selector_start_upgrade = {}		
+		
+		# Clears no longer needed variable
+		if = {
+			limit = { is_variable_set = roseaub_planet_structures_cost_mult }
+			clear_variable = roseaub_planet_structures_cost_mult
+		}
+	}
+}

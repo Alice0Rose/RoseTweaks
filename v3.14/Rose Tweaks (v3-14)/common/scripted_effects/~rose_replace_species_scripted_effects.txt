@@ -1,0 +1,67 @@
+# Replaces the ORIGINAL species with the REPLACEMENT species in the scoped country
+# Scope: country
+# Usage: rose_replace_species = { ORIGINAL = event_target:... REPLACEMENT = event_target:... }
+rose_replace_species = {
+	if = {
+		limit = {
+			exists = $ORIGINAL$
+			exists = $REPLACEMENT$
+		}
+
+		every_owned_pop = {
+			limit = {
+				species = { is_same_value = $ORIGINAL$ }
+			}
+			change_species = $REPLACEMENT$
+		}
+
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = { is_same_value = $ORIGINAL$ }
+			}
+			change_species = $REPLACEMENT$
+		}
+
+		every_owned_army = {
+			limit = {
+				species = { is_same_value = $ORIGINAL$ }
+			}
+			change_species = $REPLACEMENT$
+		}
+
+		every_owned_leader = {
+			limit = {
+				species = { is_same_value = $ORIGINAL$ }
+			}
+			
+			# Does not change the leader portrait the species portrait isn't changing
+			if = {
+				limit = {
+					species = {
+						species_portrait = $REPLACEMENT$.species_portrait
+					}
+				}
+				change_leader_portrait = $REPLACEMENT$
+			}
+			
+			change_species = $REPLACEMENT$
+		}
+		
+		every_pool_leader = {
+			limit = {
+				species = { is_same_value = $ORIGINAL$ }
+			}
+			change_species = $REPLACEMENT$
+			change_leader_portrait = species
+		}
+		
+		every_envoy = {
+			limit = {
+				species = { is_same_value = $ORIGINAL$ }
+			}
+			change_species = $REPLACEMENT$
+			change_leader_portrait = species
+		}
+	}
+}

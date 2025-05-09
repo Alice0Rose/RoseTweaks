@@ -1,0 +1,126 @@
+on_game_start = {
+	events = {
+		rose_show_building_slots.2 # Adds show building slots to all planets to start
+		rose_more_toxic_terraforming.1 # More toxic terraforming candidates
+	}
+}
+
+on_game_start_country = {
+	events = { # country_event
+		rose_remodel_ruler.1 # Copies the starting ruler for each country
+		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+		rose_choose_starting_ruler_ethic.1 # Lets players choose their starting ruler's ethic
+	}
+}
+
+# A country is created via create_country or create_rebels
+# This = created country
+# From = root of context where create_country/create_rebels happens
+on_country_created = {
+	events = { # country_event
+		rose_remodel_ruler.1 # Copies the starting ruler for each country
+		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+	}
+}
+
+on_monthly_pulse = {
+	events = { # event
+		rose_scaling_nanite_harvester_upgrade.1 # Nanite harvester upgrade scaled with game settings
+		rose_l_cluster_lockdown.5 # Tries to gives L-Cluster lockdown project to any valid non-ai country
+	}
+}
+
+on_yearly_pulse = {
+	events = { # event
+		rose_universal_assimilation.1 # Universal assimilation yearly trigger
+	}
+}
+
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+on_system_gained = {
+	events = { # country_event
+		rose_l_cluster_lockdown.1 # Gives L-Cluster lockdown project 
+	}
+}
+
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+on_system_lost = {
+	events = { # country_event
+		rose_l_cluster_lockdown.2 # Removes L-Cluster lockdown project
+	}
+}
+
+# Fired whenever a new owner is set for a planet, following a war or through trade
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Country scope (previous owner, if any)
+on_planet_transfer = {
+	events = {
+		rose_fe_tech_from_planet.2 # Increments the number of FE planets a country has taken
+		rose_show_building_slots.1 # Adds show building slots to planet
+	}
+}
+
+# a new leader is created
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		rose_nanotech_traits.11 # New Leaders Get Nanite Trait
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		rose_show_building_slots.1 # Adds show building slots to planet
+	}
+}
+
+# A building construction has been queued.
+# This = Planet
+on_building_queued = {
+	events = {
+		rose_show_building_slots.1 # Adds show building slots to planet
+	}
+}
+
+#A building construction has been completed.
+# This = Planet
+on_building_complete = {
+	events = {
+		rose_show_building_slots.1 # Adds show building slots to planet
+	}
+}
+
+#A district construction has been completed.
+# This = Planet
+on_district_complete = {
+	events = {
+		rose_show_building_slots.1 # Adds show building slots to planet
+	}
+}
+
+# Planet has been terraformed
+# This = Planet
+# From = Terraforming country
+on_terraforming_complete = {
+	events = {
+		rose_show_building_slots.1 # Adds show building slots to planet
+	}
+}
+
+# Planet has changed planet class in whatever way. Note that this is also called during galaxy creation in some places.
+# This = Planet
+on_planet_class_changed = {
+	events = {
+		rose_show_building_slots.1 # Adds show building slots to planet
+		rose_nanite_machine_world.1 # Removes modifier if no longer nanite world
+		rose_nanite_ecumenopolis.1 # Removes modifier if no longer nanite world
+	}
+}
+

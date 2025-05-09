@@ -1,0 +1,37 @@
+namespace = grand_archive
+
+ship_event = {
+	id = grand_archive.10000
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_space_fauna = yes
+		owner = {
+			is_country_type = default
+			has_technology = tech_controlled_mutations_2
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = is_ship_size
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_amoeba SHIP_CATEGORY = space_amoeba EVENT_ID = grand_archive.10005 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_amoeba_mother SHIP_CATEGORY = space_amoeba EVENT_ID = grand_archive.10005 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = rose_space_amoeba_centurion SHIP_CATEGORY = space_amoeba EVENT_ID = grand_archive.10005 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_whale_1 SHIP_CATEGORY = tiyanki EVENT_ID = grand_archive.10006 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_whale_2 SHIP_CATEGORY = tiyanki EVENT_ID = grand_archive.10006 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_whale_3 SHIP_CATEGORY = tiyanki EVENT_ID = grand_archive.10006 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_whale_4 SHIP_CATEGORY = tiyanki EVENT_ID = grand_archive.10006 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = space_whale_5 SHIP_CATEGORY = tiyanki EVENT_ID = grand_archive.10006 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = voidworms_small SHIP_CATEGORY = voidworm EVENT_ID = grand_archive.10007 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = voidworms_medium SHIP_CATEGORY = voidworm EVENT_ID = grand_archive.10007 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = voidworms_large SHIP_CATEGORY = voidworm EVENT_ID = grand_archive.10007 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = voidworms_titan SHIP_CATEGORY = voidworm EVENT_ID = grand_archive.10007 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = cutholoids_hatchling SHIP_CATEGORY = cutholoid EVENT_ID = grand_archive.10008 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = cutholoids_juvenile SHIP_CATEGORY = cutholoid EVENT_ID = grand_archive.10008 }
+			inline_script = { script = grand_archive/mutations/unique_mutation_trigger_check_case SHIP_SIZE = cutholoids SHIP_CATEGORY = cutholoid EVENT_ID = grand_archive.10008 }
+		}
+	}
+}

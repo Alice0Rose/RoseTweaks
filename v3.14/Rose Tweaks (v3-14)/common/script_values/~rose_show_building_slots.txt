@@ -1,0 +1,22 @@
+rose_get_building_slots = {
+	base = 1
+	add = modifier:planet_max_buildings_add
+	add = modifier:planet_non_artificial_max_buildings_add
+}
+
+rose_get_excess_building_slots = {
+	base = 1
+	add = modifier:planet_max_buildings_add
+	add = modifier:planet_non_artificial_max_buildings_add
+	
+	complex_trigger_modifier = { 	
+		trigger = num_buildings
+		parameters = {
+			type = any   
+			owner_type = normal
+		}
+		mode = subtract 
+	}
+
+	subtract = trigger:free_building_slots
+}

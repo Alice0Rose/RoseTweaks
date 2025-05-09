@@ -1,0 +1,12 @@
+﻿l_english:
+ rose_synthetic_choice.1.name: "The Shape of Our Future"
+ rose_synthetic_choice.1.desc: "As we approach our ascension, questions are being asked by our citizens as to how our new robotic bodies will look. Some groups are advocating for using this as an opportunity to completely change our appearance, while others are pushing to mimic our current look using synthetic skin."
+ rose_synthetic_choice.1.a: "Our new forms should match our §Ycurrent§! ones."
+ rose_synthetic_choice.1.b: "We should match our §Yexisting robotic§! population."
+ rose_synthetic_choice.1.c: "This is our chance to become something §Ynew§!."
+ 
+ rose_synthetic_choice.2.name: "The Shape of Our Future"
+ rose_synthetic_choice.2.desc: "Before we begin the process of transferring our remaining pops to robotic bodies, we need to decide how these bodies will look. Some groups are advocating for using this as an opportunity to completely change our appearance, while others are pushing to mimic our original look using synthetic skin to honor those who perished from the disease."
+ rose_synthetic_choice.2.a: "Our new forms should match our §Yoriginal§! ones."
+ rose_synthetic_choice.2.b: "We should match our §Yexisting robotic§! population."
+ rose_synthetic_choice.2.c: "This is our chance to become something §Ynew§!."

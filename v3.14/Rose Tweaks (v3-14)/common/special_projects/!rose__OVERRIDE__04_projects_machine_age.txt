@@ -1,0 +1,30 @@
+special_project = {
+	key = "THE_SYNTH_QUEENS_CONVOY_AMBUSH"
+	event_chain = "the_synth_queen_raids_chain"
+	picture = GFX_evt_cargoship_caravan
+	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
+	cost = 0
+	days_to_research = 1
+	sound = yes
+	location = yes
+
+	event_scope = ship_event
+
+	requirements = {
+		fleet_power >= 50000
+	}
+
+	abort_trigger = {
+		owner = {
+			has_global_flag = synth_queen_war_started
+		}
+	}
+
+	on_success = {
+		ship_event = { id = crisis.8136 }
+	}
+	
+	AI_wait_days = {
+		weight = 360
+	}
+}

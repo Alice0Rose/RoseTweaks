@@ -1,0 +1,3 @@
+﻿l_english:
+ edict_roseaub_enable_auto_upgrading: "Auto-Upgrade Buildings"
+ edict_roseaub_enable_auto_upgrading_desc: "Automatically upgrades all buildings, one at a time, on each planet, if necessary resources and time for each upgrade is available."

@@ -1,0 +1,6 @@
+on_monthly_pulse = {
+	events = { # event
+		roseaub.1 # Starts auto-upgraded process on every colony
+		roseaub.4 # Checks if upgrading building is still there, canceling upgrade if not
+	}
+}
