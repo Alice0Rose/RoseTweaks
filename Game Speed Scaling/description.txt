@@ -1,0 +1,29 @@
+[h1]Features[/h1]
+This mod adds a modifier that is given to all empires at the start of the game which provides a bonus to various game stats. This bonus scales based on the end-game date setting. For example, if the end-game date is set to 2350 (150 years from game start), the bonuses will be +25% as 150 is 25% smaller than 200 (default end-game date of 2400). This also works in reverse if the end-game date is later than it usually would be :D
+
+The goal of this is to keep accelerated games balanced with regular length games. Sometimes it can be daunting and too time consuming to do a full length game, but you may be hesitant to shorten the game as that will make it more difficult. Scaling many of the important stats of the game helps alleviate that added difficulty ^-^
+
+The bonuses scaled are:
+- Megastructure Build Speed
+- Ship Build Speed
+- Army Build Speed
+- Planetary Build Speed
+- Colonization Speed
+- Pop Growth Speed
+- Organic Pop Bonus Growth Speed
+- Mechanical Pop Assembly Speed
+- Council Agenda Speed
+- Leader Experience Gain
+- Survey Speed
+- Space Fauna Growth Speed
+- Space Fauna Breeding Speed
+- Influence Production
+
+Notably, technology and tradition costs are NOT affected, as they can be adjusted with the galaxy creation settings. Additionally, resource production is not modified, as that could result in double scaling due to the other stats scaled such as pop growth and planetary build speed :o
+
+[h1]Compatibility[/h1]
+This mod does not override or modify any vanilla files, so it should be compatible with all other mods :)
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
