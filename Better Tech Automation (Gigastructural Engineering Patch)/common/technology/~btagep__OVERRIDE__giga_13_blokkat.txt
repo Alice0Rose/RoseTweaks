@@ -1,0 +1,110 @@
+giga_tech_blokkat_society_repeatable = {
+	cost = @giga_tier9cost2
+	cost_per_level = @giga_tier9cost2
+	area = society
+	tier = 5
+	category = { blokkats }
+	is_rare = yes
+	weight = @tier4weight2
+	levels = 40
+	is_reverse_engineerable = no
+	prerequisites = { giga_tech_blokkat_sociology_study }
+
+	modifier = {
+		country_unity_produces_mult = 0.10
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = blokkat_crisis_defeated
+		}
+		
+		modifier = {
+			factor = 0
+			has_edict = btagep_no_blokkat_research_repeatables
+		}
+	}
+
+	prereqfor_desc = {
+		custom = { title = "blokkat_knowledge_repeatable_title"	desc = "blokkat_knowledge_repeatable_title" }
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium
+	}
+}
+
+giga_tech_blokkat_physics_repeatable = {
+	cost = @giga_tier9cost2
+	cost_per_level = @giga_tier9cost2
+	area = physics
+	tier = 5
+	category = { blokkats }
+	is_rare = yes
+	weight = @tier4weight2
+	levels = 40
+	is_reverse_engineerable = no
+	prerequisites = { giga_tech_blokkat_dimension_study }
+
+	modifier = {
+		megastructure_build_speed_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = blokkat_crisis_defeated
+		}
+		
+		modifier = {
+			factor = 0
+			has_edict = btagep_no_blokkat_research_repeatables
+		}
+	}
+
+	prereqfor_desc = {
+		custom = { title = "blokkat_knowledge_repeatable_title"	desc = "blokkat_knowledge_repeatable_title" }
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium
+	}
+}
+
+giga_tech_blokkat_engineering_repeatable = {
+	cost = @giga_tier9cost2
+	cost_per_level = @giga_tier9cost2
+	area = engineering
+	tier = 5
+	category = { blokkats }
+	is_rare = yes
+	weight = @tier4weight2
+	levels = 40
+	is_reverse_engineerable = no
+	prerequisites = { giga_tech_blokkat_armor_study }
+
+	modifier = {
+		planet_building_build_speed_mult = 0.15
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = blokkat_crisis_defeated
+		}
+		
+		modifier = {
+			factor = 0
+			has_edict = btagep_no_blokkat_research_repeatables
+		}
+	}
+
+	prereqfor_desc = {
+		custom = { title = "blokkat_knowledge_repeatable_title"	desc = "blokkat_knowledge_repeatable_title" }
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium
+	}
+}

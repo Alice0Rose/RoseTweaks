@@ -1,0 +1,238 @@
+bta_no_energy_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = physics }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_cosmogenesis_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		has_ascension_perk = ap_cosmogenesis
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_shield_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = physics }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_energyweapons_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = physics }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_food_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_unity_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_lifespan_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_army_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_strikecraft_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_mineral_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_platform_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_armor_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_explosive_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_kinetic_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+

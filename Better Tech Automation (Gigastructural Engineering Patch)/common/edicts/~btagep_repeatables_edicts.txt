@@ -1,0 +1,149 @@
+btagep_no_blokkat_research_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		OR = {
+			has_technology = giga_tech_blokkat_sociology_study
+			has_technology = giga_tech_blokkat_dimension_study
+			has_technology = giga_tech_blokkat_armor_study
+		}
+		NOT = { has_global_flag = blokkat_crisis_defeated }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_storage_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = physics }
+		has_technology = giga_tech_tetradimensional_engineering
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_frameworld_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+		giga_has_frameworld_origin = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_thaumaturgy_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = society }
+		has_country_flag = giga_tech_eawaf_weapons_repeatable_possible
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_mega_speed_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+		has_technology = tech_mega_engineering
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_asteroid_artillery_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+		has_technology = giga_tech_asteroid_artillery_planetcraft_upgrade
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_strike_corvette_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 5 area = engineering }
+		has_technology = giga_tech_defense_nexus_production_2
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+btagep_no_katzen_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+		can_research_tier = { tier = 4 area = engineering }
+		NOT = { has_country_flag = katzen_vassal }
+		has_country_flag = studied_kaiser_moon
+		NOT = { no_scope = { has_global_flag = katzenartig_imperium_defeated } }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

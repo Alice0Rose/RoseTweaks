@@ -1,0 +1,34 @@
+giga_tech_repeatable_defense_nexus_capacity_upgrade = {
+	area = engineering
+	cost = @giga_expensive_repeatable_cost
+	cost_per_level = @giga_expensive_repeatable_techlevelcost
+	tier = 5
+	category = { voidcraft }
+	levels = 20
+	prerequisites = { "giga_tech_defense_nexus_production_2" }
+	weight = @tier5weight3
+	weight_groups = { repeatable }
+	mod_weight_if_group_picked = { repeatable = 0.01 }
+
+	potential = {
+		has_any_megastructure_dlc = yes
+		NOT = { has_global_flag = planetshipyard_disabled }
+	}
+
+	weight_modifier = {
+		modifier = { factor = 0 not = { any_owned_megastructure = { is_megastructure_type = planetary_drive_yard_1_fortress } } }
+		
+		modifier = {
+			factor = 0
+			has_edict = btagep_no_strike_corvette_repeatables
+		}
+	}
+
+	prereqfor_desc = {
+		custom = { title = "increases_defense_nexus_capacity"	desc = "increases_defense_nexus_capacity" }
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_questionable # this costs way too much
+	}
+}

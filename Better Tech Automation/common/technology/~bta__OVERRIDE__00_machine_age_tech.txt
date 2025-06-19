@@ -1,0 +1,91 @@
+tech_cosmogenesis_crisis_4 = {
+    area = physics
+    cost = 200000
+    tier = 5
+    category = { computing }
+    ai_update_type = all
+    is_rare = yes
+    weight = 9999
+
+    potential = {
+        has_machine_age_dlc = yes
+        has_ascension_perk = ap_cosmogenesis
+		NOT = {
+			has_edict = bta_no_cosmogenesis_repeatables
+		}
+		has_crisis_level = crisis_cosmogenesis_level_4
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = cosmogenesis_level_4_tech_title
+            desc = cosmogenesis_level_4_tech_desc
+        }
+    }
+}
+
+tech_cosmogenesis_crisis_5 = {
+    area = physics
+    cost = 300000
+    tier = 5
+    category = { computing }
+    ai_update_type = all
+    is_rare = yes
+    weight = 9999
+
+    potential = {
+        has_machine_age_dlc = yes
+        has_ascension_perk = ap_cosmogenesis
+		NOT = {
+			has_edict = bta_no_cosmogenesis_repeatables
+		}
+		has_crisis_level = crisis_cosmogenesis_level_5
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = cosmogenesis_level_5_tech_title
+            desc = cosmogenesis_level_5_tech_desc
+        }
+    }
+}
+
+tech_cosmogenesis_thesis = {
+    area = physics
+    cost = 75000
+    cost_per_level = @fallentechcost
+    tier = 4
+    category = { computing }
+    levels = -1
+    is_dangerous = yes
+    weight = @repeatableTechWeight
+
+    potential = {
+        has_machine_age_dlc = yes
+        has_ascension_perk = ap_cosmogenesis
+		NOT = {
+			has_edict = bta_no_cosmogenesis_repeatables
+		}
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = { has_crisis_level = crisis_cosmogenesis_level_4 }
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 5
+            has_technology = tech_cosmogenesis_crisis_3
+        }
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = cosmogenesis_thesis_tech_title
+            desc = cosmogenesis_thesis_tech_desc
+        }
+    }
+}
