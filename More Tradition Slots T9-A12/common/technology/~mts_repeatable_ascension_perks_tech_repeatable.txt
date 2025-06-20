@@ -1,0 +1,31 @@
+tech_mts_repeatable_ascension_perks = {
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	area = society
+	tier = @repeatableTechTier
+	category = { biology }
+	levels = 2
+	weight = @repeatableTechWeight
+	is_rare = yes
+	prerequisites = { "tech_ascension_theory" }
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 9999.0
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		ascension_perks_add = 1
+	}
+}

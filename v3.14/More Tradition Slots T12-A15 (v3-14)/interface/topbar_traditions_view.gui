@@ -19,18 +19,21 @@ guiTypes = {
 	# ASCENSION PERKS ENTRY POSITIONS
 	################################################################
 
-	positionType = { name = "ap_0"	position = { x =  19 y =  58 } }
-	positionType = { name = "ap_1"	position = { x = 109 y =  58 } }
-	positionType = { name = "ap_2"	position = { x = 199 y =  58 } }
-	positionType = { name = "ap_3"	position = { x =  19 y = 174 } }
-	positionType = { name = "ap_4"	position = { x = 109 y = 174 } }
-	positionType = { name = "ap_5"	position = { x = 199 y = 174 } }
-	positionType = { name = "ap_6"	position = { x =  19 y = 290 } }
-	positionType = { name = "ap_7"	position = { x = 109 y = 290 } }
-	positionType = { name = "ap_8"	position = { x = 199 y = 290 } }
-	positionType = { name = "ap_9"	position = { x =  19 y = 406 } }
-	positionType = { name = "ap_10"	position = { x = 109 y = 406 } }
-	positionType = { name = "ap_11"	position = { x = 199 y = 406 } }
+	positionType = { name = "ap_0"	position = { x =  19 y =  47 } }
+	positionType = { name = "ap_1"	position = { x = 109 y =  47 } }
+	positionType = { name = "ap_2"	position = { x = 199 y =  47 } }
+	positionType = { name = "ap_3"	position = { x =  19 y = 144 } }
+	positionType = { name = "ap_4"	position = { x = 109 y = 144 } }
+	positionType = { name = "ap_5"	position = { x = 199 y = 144 } }
+	positionType = { name = "ap_6"	position = { x =  19 y = 241 } }
+	positionType = { name = "ap_7"	position = { x = 109 y = 241 } }
+	positionType = { name = "ap_8"	position = { x = 199 y = 241 } }
+	positionType = { name = "ap_9"	position = { x =  19 y = 338 } }
+	positionType = { name = "ap_10"	position = { x = 109 y = 338 } }
+	positionType = { name = "ap_11"	position = { x = 199 y = 338 } }
+	positionType = { name = "ap_12"	position = { x =  19 y = 435 } }
+	positionType = { name = "ap_13"	position = { x = 109 y = 435 } }
+	positionType = { name = "ap_14"	position = { x = 199 y = 435 } }
 
 	containerWindowType = {
 		name = "traditions_ascension_perk_entry"
@@ -248,7 +251,7 @@ guiTypes = {
 				gridBoxType = {
 					name = "tradition_category_gridbox"
 					position = { x = 0 y = 0 }
-					size = { width = 950 height = 785 }
+					size = { width = 950 height = 1052 }
 					slotSize = { width = 314 height = 266 }
 					max_slots_horizontal = 3
 					format = "UPPER_LEFT"
