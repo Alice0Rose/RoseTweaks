@@ -1,0 +1,21 @@
+[h1]Features[/h1]
+This mod allows you to take the Defender of the Galaxy ascension perk along side any of the Player Crisis ascension perks. After all, this is your galaxy to destroy, not anyone elses >:D
+
+Note that you will lose the +200 opinion modifier from the Defender of the Galaxy ascension perk if you become a crisis :o 
+
+[h1]Compatibility[/h1]
+This mod overrides the Defender of the Galaxy and all crisis ascension perks along with the description for the Defender of the Galaxy ascension perk (listed below), so it should generally be compatible with other mods :) If a mod adds its own crisis and adds a modifier to Defender of the Galaxy for extra damage against that crisis, that damage modifier would have to be added to this mod (this is already done for Gigastructures).
+
+common\defines\00_defines.txt
+- ap_defender_of_the_galaxy
+- ap_become_the_crisis
+- ap_cosmogenesis
+- ap_behemoths
+
+localisation\english\traditions_l_english.txt
+- ap_defender_of_the_galaxy_effect_opinion
+- ap_defender_of_the_galaxy_modifier_desc
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
