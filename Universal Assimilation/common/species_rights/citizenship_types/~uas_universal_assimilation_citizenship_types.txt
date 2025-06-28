@@ -1,0 +1,141 @@
+# from = country
+# this = species
+citizenship_universal_assimilation = {
+	is_assimilation = yes
+
+	potential = {
+		exists = from
+		from = {
+			AND = {
+				has_technology = tech_universal_assimilation
+				
+				# Genocidal/assimilator civic empires wouldn't universally assimilate other species
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_machine_terminator
+					has_valid_civic = civic_machine_assimilator
+					has_valid_civic = civic_hive_devouring_swarm
+				}
+				
+				# Virtual empires would cause jank with universal assimilation lol
+				NOT = { 	
+					has_tradition = tr_virtuality_adopt
+				}
+				
+				# Wilderness empires wouldn't make sense for this
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = MUST_NOT_BE_DOMINANT_SPECIES
+			NOT = { is_exact_same_species = from }
+		}
+		custom_tooltip = {
+			fail_text = "pre_sapients_citizenship"
+			is_sapient = yes
+		}
+		custom_tooltip = {
+			fail_text = "universal_assimilation_lonely_hive_fail_citizenship"
+			OR = {
+				# Prevents showing on pops that aren't lonely hiveminds
+				is_lonely_hive_mind_pop = no
+				
+				# Prevents showing on empires with the necessary advanced assimilation traditions/tech
+				from = {
+					OR = {
+						has_tradition = tr_genetics_finish
+						has_tradition = tr_modularity_finish
+						
+						AND = {
+							has_technology = tech_ascension_theory
+							has_technology = tech_mega_engineering
+							OR = {
+								has_technology = tech_positronic_implants
+								has_technology = tech_sapient_ai
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "universal_assimilation_disconnected_machine_fail_citizenship"
+			OR = {
+				# Prevents showing on pops that aren't disconnected machines
+				is_disconnected_machine_pop = no
+				
+				# Prevents showing on empires with the necessary advanced assimilation traditions/tech
+				from = {
+					OR = {
+						has_tradition = tr_genetics_finish
+						has_tradition = tr_modularity_finish
+						
+						AND = {
+							has_technology = tech_ascension_theory
+							has_technology = tech_mega_engineering
+							OR = {
+								has_technology = tech_positronic_implants
+								has_technology = tech_sapient_ai
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "universal_assimilation_unruly_individualist_fail_citizenship"
+			OR = {
+				# Prevents showing error on gestalt pops that are covered by other errors
+				has_trait = trait_machine_unit
+				has_trait = trait_hive_mind
+				
+				# Prevents showing on individualistic empires that are able to assimilate individualistic pops
+				NOT = { 
+					from = { 
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}				
+				
+				# Prevents showing on empires with the necessary advanced assimilation traditions/tech
+				from = {
+					OR = {
+						has_tradition = tr_genetics_finish
+						has_tradition = tr_modularity_finish
+						
+						AND = {
+							has_technology = tech_ascension_theory
+							has_technology = tech_mega_engineering
+							OR = {
+								has_technology = tech_positronic_implants
+								has_technology = tech_sapient_ai
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_machine_terminator
+					has_valid_civic = civic_machine_assimilator
+					has_valid_civic = civic_hive_devouring_swarm
+
+					has_tradition = tr_virtuality_adopt
+					
+					is_wilderness_empire = no
+				}
+			}
+		}
+	}
+}

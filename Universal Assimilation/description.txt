@@ -1,0 +1,11 @@
+[h1]Features[/h1]
+This mod adds a Tier 4 Society technology called "Universal Assimilation", which unlocks the aptly-named "Universal Assimilation" citizenship type. Any species set to Universal Assimilation will slowly convert into the primary species of the empire they are in. 
+
+Normally Universal Assimilation only works on pops of the same level of individualism (individualist to individualist or gestalt to gestalt). This restriction does not apply to empires that complete the "Mega-Engineering", "Ascension Theory", and "Positronic Implants" technologies or empires that complete the Modularity or Genetic ascensions :)
+
+[h1]Compatibility[/h1]
+This mod doesn't override any vanilla files and should be compatible with all other mods :D
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

@@ -1,0 +1,68 @@
+# Universal Assimilation
+tech_universal_assimilation = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { biology }
+	weight = @tier4weight3
+
+    prereqfor_desc = {
+       diplo_action = {
+           title = "FEATURE_UNIVERSAL_ASSIMILATION"
+           desc = "FEATURE_UNIVERSAL_ASSIMILATION_DESC"
+       }
+	}
+
+	potential = {
+		# Genocidal/assimilator civic empires wouldn't universally assimilate other species
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+		
+		# Virtual empires would cause jank with universal assimilation lol
+		NOT = { 	
+			has_tradition = tr_virtuality_adopt
+		}
+		
+		# Wilderness empires wouldn't make sense for this
+		is_wilderness_empire = no
+	}
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0.5
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}

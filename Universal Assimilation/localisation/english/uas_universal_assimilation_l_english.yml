@@ -1,0 +1,17 @@
+﻿l_english:
+ citizenship_universal_assimilation: "Universal Assimilation"
+ citizenship_universal_assimilation_tooltip: "Pops of this species are §Yaltered§! over time to better match the dominant species of the Empire. Pops that are in the process of being assimilated will not produce any resources."
+ citizenship_universal_assimilation_tooltip_delayed: "§LWe will combine your distinctiveness with our own and together we will triumph!§!"
+ living_standard_universal_assimilation: "Universal Assimilation"
+ living_standard_universal_assimilation_tooltip: "Pops of this species are §Yaltered§! over time to better match the dominant species of the Empire. Pops that are in the process of being assimilated will not produce any resources."
+ living_standard_universal_assimilation_tooltip_delayed: "§LWe will combine your distinctiveness with our own and together we will triumph!§!"
+ job_universal_assimilation: "Universal Assimilation"
+ job_universal_assimilation_desc: "This species is being assimilated. Every month, some of them will be altered to better match the dominant species of our empire."
+ job_universal_assimilation_plural: "Universal Assimilation"
+ tech_universal_assimilation: "Universal Assimilation"
+ tech_universal_assimilation_desc: "Advancements in genetics and robotics allow us to safely and easily perform full-body modifications on all of our sapient citizens. Together we can face the stars as one united species."
+ FEATURE_UNIVERSAL_ASSIMILATION: "§HUnlocks Feature:§! Universal Assimilation" 
+ FEATURE_UNIVERSAL_ASSIMILATION_DESC: "Allows us to set species to §RU§Sn§Hi§Yv§Ge§Br§Ms§Ra§Sl §HA§Ys§Gs§Bi§Mm§Ri§Sl§Ha§Yt§Gi§Bo§Mn§T to gradually assimilate them into our main species." # §YUniversal Assimilation§!
+ universal_assimilation_lonely_hive_fail_citizenship: "$TRIGGER_FAIL$Hive pops separated from their hivemind cannot be assimilated through normal means. We require mastery of genetic modification, machine modularity, or multiple advanced technologies (§Y$tech_ascension_theory$§!, §Y$tech_mega_engineering$§! and §Y$tech_sapient_ai$/$tech_positronic_implants$§!) to assimilate them."
+ universal_assimilation_disconnected_machine_fail_citizenship: "$TRIGGER_FAIL$Machine pops severed from from their central intelligence cannot be assimilated through normal means. We require mastery of genetic modification, machine modularity, or multiple advanced technologies (§Y$tech_ascension_theory$§!, §Y$tech_mega_engineering$§! and §Y$tech_sapient_ai$/$tech_positronic_implants$§!) to assimilate them."
+ universal_assimilation_unruly_individualist_fail_citizenship: "$TRIGGER_FAIL$These pops are too §Yindividualistic§! to be safely assimilated into our consciousness. We require mastery of genetic modification, machine modularity, or multiple advanced technologies (§Y$tech_ascension_theory$§!, §Y$tech_mega_engineering$§! and §Y$tech_positronic_implants$§!) to assimilate them."

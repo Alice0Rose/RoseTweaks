@@ -1,0 +1,5 @@
+on_monthly_pulse = {
+	events = { # event
+		uas_universal_assimilation.1 # Universal assimilation monthly trigger
+	}
+}
