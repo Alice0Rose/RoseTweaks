@@ -7,7 +7,9 @@ juggernaut = {
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		starbase_shipyard_capacity_add = 6
+		ship_armor_mult = 1
+		ship_shield_mult = 1
+		ship_weapon_damage = 0.5
 	}
 
 	base_buildtime = @juggernaut_build_time
@@ -23,7 +25,9 @@ juggernaut = {
 	size_multiplier = 32
 	fleet_slot_size = 32
 	section_slots = {
-		"core" = { locator = "part1" }
+		"wing1" = { locator = "part1" }
+		"body" = { locator = "part1" }
+		"wing2" = { locator = "part1" }
 	}
 
 	potential_construction = {
@@ -93,7 +97,7 @@ juggernaut = {
 	ship_roles = { carrier artillery }
 
 	prerequisites = { "tech_juggernaut" }
-	class = shipclass_starbase
+	class = shipclass_military
 	construction_type = starbase_shipyard
 
 	required_component_set = "power_core"

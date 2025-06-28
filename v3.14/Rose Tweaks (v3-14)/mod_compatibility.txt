@@ -51,7 +51,6 @@
 - common\ship_sizes\~rose__OVERRIDE__02_event_ships.txt
 - common\ship_sizes\~rose__OVERRIDE__07_space_monsters.txt
 - common\ship_sizes\~rose__OVERRIDE__12_psionic.txt
-- common\ship_sizes\~rose__OVERRIDE__juggernauts.txt
 - common\situations\~rose__OVERRIDE__08_machine_age_situations.txt
 - common\special_projects\!rose__OVERRIDE__04_projects_machine_age.txt
 - common\static_modifiers\!rose__OVERRIDE__05_static_modifiers_utopia.txt

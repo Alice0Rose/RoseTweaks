@@ -4,7 +4,6 @@
 - Command limit techs give +50 instead of +25
 - Command limit repeatable tech gives +50 instead of +10
 - Galactic Force Projection gives +200 command limit instead of +50
-- Increases Juggernaut shipyard number to 6 
 - Unlock events for psionic tech are more likely to happen
 - Reduces power consumption of Psionic Shields slightly
 - Buffed End of the Cycle with Hull and Armor regen
