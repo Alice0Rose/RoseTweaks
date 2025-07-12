@@ -1,0 +1,252 @@
+[h1]Features[/h1]
+This mod reworks cosmic storms to be less impactful and significantly less punishing if you choose not to interact with them. This is done by removing devastation from all storms except Nexus storms, making Planetary Shields more effective and reducing the negatives of storms, reducing and changing the modifiers for all storms, and making Nexus storms unable to spawn naturally and restricted to specific events like the Storm Chasers final situation or the adAkkaria heckin angy relic.
+
+A detailed breakdown of all storm effects (with reduced negatives from Planetary Shields shown in parentheses) follows:
+[list]
+[*]Electrical Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] +5% Resources from Jobs
+		[*] +25% (+10%) job upkeep
+		[/list]
+	[*]Ships:
+		[list]
+		[*] +25% Sublight speed
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] +2.5%/5%/7.5% Energy from jobs
+		[*] -5%/10%/15% Planetary build speed
+		[/list]
+	[/list]
+	
+[*]Particle Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] +0.1 Volatile motes from Farmers, Miners, and Technicians
+		[*] +25% (+10%) job upkeep
+		[/list]
+	[*]Ships:
+		[list]
+		[*] +0.25 Unity per ship in the storm
+		[*] +15% (+5%) Ship upkeep
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] +0.02/0.04/0.06 Volatile motes per pop
+		[*] -1.5%/3%/4.5% Mechanical pop assembly speed
+		[*] -5%/10%%/15% Minerals from jobs
+		[/list]
+	[/list]
+	
+[*]Gravity Storm 
+	[list]
+	[*]Planets:
+		[list]
+		[*] +25% Enforcer Output
+		[*] +25% Entertainer Output
+		[*] +25% Administrator Output
+		[*] +0.25 (+0.1) Consumer Goods for Individualistic or Energy for Gestalt upkeep for Farmers, Miners, and Technicians
+		[*] +25% (+10%) job upkeep 
+		[/list]
+	[*]Ships:
+		[list]
+		[*] +5% Sublight speed per ship size
+		[*] -2.5% (0%) Ship weapons damage per ship size
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] +5%/10%/15% Unity from jobs
+		[*] +10%/20%/30% Building and district cost
+		[/list]
+	[/list]
+
+[*]Magnetic Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] -75% Metallurgist Upkeep
+		[*] +50% (+10%) Station upkeep
+		[*] -25% (-10%) Planetary build speed
+		[*] +25% (+10%) job upkeep
+		[/list]
+	[*]Ships:
+		[list]
+		[*] -15% Ship upkeep
+		[*] -15% (-5%) Ship build speed
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] -5%/7.5%/10% Metallurgist Upkeep
+		[*] -2.5%/5%/7.5% Planetary build speed
+		[/list]
+	[/list]
+	
+[*]Radiant Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] +75% Mining station output
+		[*] +125% Research station output
+		[*] +25% (+10%) job upkeep
+		[/list]
+	[*]Ships:
+		[list]
+		[*] Disables cloaking
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] +25%/50%/75% Defense army damage
+		[*] −1.5%/3%/4.5% Pop growth speed
+		[*] +2.5%/5%/7.5% Pop amenities usage
+		[/list]
+	[/list]
+
+[*]Stardust Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] +25% Strategic resource gatherer output
+		[*] +25% Farmer output
+		[*] +25% Miner output
+		[*] +25% Technician output
+		[*] +15% (+5%) Enforcer upkeep
+		[*] +15% (+5%) Entertainer upkeep
+		[*] +15% (+5%) Administrator upkeep
+		[*] Lowers Intel
+		[*] +25% (+10%) job upkeep
+		[/list]
+	[*]Ships:
+		[list]
+		[*] Can cross closed borders
+		[*] -15% (-5%) Sublight speed
+		[*] +10 Cloaking strength
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] +0.02/0.04/0.06 Rare crystals per pop
+		[*] +5%/10%/15% Crime
+		[*] −2.5%/5%/7.5% Food from jobs
+		[/list]
+	[/list]
+
+[*]Shroud Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] +25% Telepath output
+		[*] -5% (-0%) Stability
+		[*] Uncolonized habitable planets are terraformed
+		[*] Uninhabitable planets are terraformed into one of the following:
+				[list]
+				[*]	Broken World with a 1-5 Alloys deposit
+				[*]	Shattered World with a 1-5 Minerals deposit
+				[*]	Shrouded World with a 1-5 Zro deposit
+				[*]	Nanite World with a 1 Nanites deposit
+				[/list]
+		[*] +25% (+10%) job upkeep
+		[/list]
+	[*]Ships:
+		[list]
+		[*] Empire hasn't breached the Shroud:
+			[list]
+			[*] +5% Evasion
+			[/list]
+		[*] Empire has breached the Shroud:
+			[list]
+			[*] +10% Evasion
+			[*] +15% Ship weapons damage
+			[/list]
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] +10%/20%/30% Psionic worker pop resource output
+		[*] −2.5%/5%/7.5% Non-Psionic happiness
+		[/list]
+	[/list]
+
+[*]Nexus Storm
+	[list]
+	[*]Planets:
+		[list]
+		[*] +1.2 monthly devastation
+		[/list]
+	[*]Ships:
+		[list]
+		[*] Disables shield regen
+		[*] Disables armor regen
+		[*] Disables hull regen
+		[*] Deals 60 damage to ships with above 20% health
+		[/list]
+	[*]Aftermath:
+		[list]
+		[*] Max severity effect of any of the other storm types
+		[/list]
+	[/list]
+
+[h1]Compatibility[/h1]
+This mod only overwrites files related to cosmic storms, so it should generally be compatible with other mods ^-^
+
+common\scripted_variables\07_scripted_variables_cosmic_storms.txt
+- cosmic_storm_base_monthly_devastation
+- shroud_storm_evasion
+- shroud_storm_damage
+- nexus_storm_spawn_chance
+- particle_storm_unity_per_ship
+- gravity_storm_dmg_malus
+
+common\static_modifiers\21_static_modifiers_cosmic_storms.txt
+- electric_storm_aftermath_modifier_severity_1
+- electric_storm_aftermath_modifier_severity_2
+- electric_storm_aftermath_modifier_severity_3
+- particle_storm_aftermath_modifier_severity_1
+- particle_storm_aftermath_modifier_severity_2
+- particle_storm_aftermath_modifier_severity_3
+- gravity_storm_aftermath_modifier_severity_1
+- gravity_storm_aftermath_modifier_severity_2
+- gravity_storm_aftermath_modifier_severity_3
+- magnetic_storm_aftermath_modifier_severity_1
+- magnetic_storm_aftermath_modifier_severity_2
+- magnetic_storm_aftermath_modifier_severity_3
+- solar_storm_aftermath_modifier_severity_1
+- solar_storm_aftermath_modifier_severity_2
+- solar_storm_aftermath_modifier_severity_3
+- celestial_storm_aftermath_modifier_severity_1
+- celestial_storm_aftermath_modifier_severity_2
+- celestial_storm_aftermath_modifier_severity_3
+- shroud_storm_aftermath_modifier_severity_1
+- shroud_storm_aftermath_modifier_severity_2
+- shroud_storm_aftermath_modifier_severity_3
+
+common\storm_types\00_storm_types.txt
+- electric_storm
+- particle_storm
+- gravity_storm
+- magnetic_storm
+- solar_storm
+- celestial_storm
+- shroud_storm
+- nexus_storm
+
+events\cosmic_storm_events_1.txt
+- cstorms.1050
+- cstorms.1100
+
+localisation\english\cosmic_storms_l_english.yml
+- particle_storm_fleet_tt
+- gravity_storm_consumer_goods_upkeep_tt
+- gravity_storm_energy_upkeep_tt
+- gravity_storm_ship_tt
+- electric_storm_aftermath_modifier_tooltip 
+- particle_storm_aftermath_modifier_tooltip
+- gravity_storm_aftermath_modifier_tooltip
+- magnetic_storm_aftermath_modifier_tooltip
+- solar_storm_aftermath_modifier_tooltip
+- celestial_storm_aftermath_modifier_tooltip
+- shroud_storm_aftermath_modifier_tooltip
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
