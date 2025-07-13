@@ -1,0 +1,8 @@
+@cosmic_storm_base_monthly_devastation = 0
+
+@shroud_storm_evasion = 0.05
+@shroud_storm_damage = 0.15
+
+@nexus_storm_spawn_chance = 0
+
+@particle_storm_unity_per_ship = 0.25

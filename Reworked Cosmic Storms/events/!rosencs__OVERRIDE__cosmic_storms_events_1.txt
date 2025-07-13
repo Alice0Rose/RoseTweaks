@@ -1,0 +1,66 @@
+namespace = cstorms
+
+# Monthly unity gain from low health ships affected by Particle Storm (see on_monthly_pulse)
+event = {
+	id = cstorms.1050
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_cosmic_storms_dlc = yes
+		has_global_flag = cosmic_storm_has_occurred
+	}
+
+	immediate = {
+		every_playable_country = {
+			# Reset counters
+			set_variable = { which = storm_affected_ship_count value = 0 }
+			create_variable_if_not_exists = { VARIABLE = prev_storm_affected_ship_count VALUE_IF_CREATED = 0 }
+
+			# Count
+			if = {
+				every_owned_ship = {
+					limit = {
+						exists = solar_system
+						solar_system = { is_inside_storm = particle_storm }
+					}
+
+					PREV = { change_variable = { which = storm_affected_ship_count value = 1 } }
+				}
+			}
+
+			# Update/remove modifier as needed
+			update_modifier_amount_if_needed = {
+				MODIFIER = particle_storm_ship_unity_gain_modifier
+				MULT_VAR = storm_affected_ship_count
+				PREV_MULT_VAR = prev_storm_affected_ship_count
+			}
+		}
+	}
+}
+
+# Cosmic Storms monthly affects
+event = {
+	id = cstorms.1100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_cosmic_storms_dlc = yes
+		has_global_flag = cosmic_storm_has_occurred
+	}
+
+	immediate = {
+		every_cosmic_storm = {
+			if = {
+				limit = { is_storm_type = nexus_storm }
+				every_system_within_storm = {
+					every_ship_in_system = {
+						limit = { has_hp_percentage > @storm_hp_perc_limit }
+						damage_ship = value:storm_ship_damage_received|DMG|@storm_monthly_dmg_high|
+					}
+				}
+			}
+		}
+	}
+}
