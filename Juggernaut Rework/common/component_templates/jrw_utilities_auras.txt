@@ -1,6 +1,6 @@
 # Strike Craft
 utility_component_template = {
-	key = "SHIP_AURA_STRIKE_CRAFT"
+	key = "SHIP_AURA_STRIKE_CRAFT_JRW"
 	size = medium
 	icon = "GFX_ship_part_aura_strike_craft"
 	icon_frame = 1
@@ -8,8 +8,8 @@ utility_component_template = {
 
 	potential = {
 		OR = {
-			#ship_uses_juggernaut_components = yes
-			ship_uses_dsc_components = yes
+			ship_uses_juggernaut_components = yes
+			#ship_uses_dsc_components = yes
 		}
 	}
 	component_set = "ship_aura_components"
@@ -26,6 +26,9 @@ utility_component_template = {
 		modifier = {
 			weapon_type_strike_craft_weapon_damage_mult = 0.2
 			weapon_type_strike_craft_speed_mult = 0.2
+			
+			ship_hull_regen_add_perc = 0.1
+			ship_armor_regen_add_perc = 0.1
 		}
 	}
 
@@ -41,7 +44,7 @@ utility_component_template = {
 
 # Weapon Range
 utility_component_template = {
-	key = "SHIP_AURA_RANGE"
+	key = "SHIP_AURA_RANGE_JRW"
 	size = medium
 	icon = "GFX_ship_part_aura_range"
 	icon_frame = 1
@@ -49,8 +52,8 @@ utility_component_template = {
 
 	potential = {
 		OR = {
-			#ship_uses_juggernaut_components = yes
-			ship_uses_dsc_components = yes
+			ship_uses_juggernaut_components = yes
+			#ship_uses_dsc_components = yes
 		}
 	}
 	component_set = "ship_aura_components"
@@ -66,6 +69,9 @@ utility_component_template = {
 
 		modifier = {
 			ship_weapon_range_mult = 0.4
+			
+			ship_hull_regen_add_perc = 0.1
+			ship_armor_regen_add_perc = 0.1
 		}
 	}
 
@@ -81,7 +87,7 @@ utility_component_template = {
 
 # Hyperlane
 utility_component_template = {
-	key = "SHIP_AURA_HYPERLANE"
+	key = "SHIP_AURA_HYPERLANE_JRW"
 	size = medium
 	icon = "GFX_ship_part_aura_hyperlane"
 	icon_frame = 1
@@ -89,8 +95,8 @@ utility_component_template = {
 
 	potential = {
 		OR = {
-			#ship_uses_juggernaut_components = yes
-			ship_uses_dsc_components = yes
+			ship_uses_juggernaut_components = yes
+			#ship_uses_dsc_components = yes
 		}
 	}
 	component_set = "ship_aura_components"
@@ -108,6 +114,9 @@ utility_component_template = {
 			ship_windup_mult = -0.4
 			ship_winddown_mult = -0.4
 			ship_jumpdrive_cooldown_mult = -0.4
+			
+			ship_hull_regen_add_perc = 0.1
+			ship_armor_regen_add_perc = 0.1
 		}
 	}
 
@@ -123,7 +132,7 @@ utility_component_template = {
 
 # PD Penetration
 utility_component_template = {
-	key = "SHIP_AURA_PD_PENETRATION"
+	key = "SHIP_AURA_PD_PENETRATION_JRW"
 	size = medium
 	icon = "GFX_ship_part_aura_pd_penetration"
 	icon_frame = 1
@@ -131,8 +140,8 @@ utility_component_template = {
 
 	potential = {
 		OR = {
-			#ship_uses_juggernaut_components = yes
-			ship_uses_dsc_components = yes
+			ship_uses_juggernaut_components = yes
+			#ship_uses_dsc_components = yes
 		}
 	}
 	component_set = "ship_aura_components"
@@ -149,6 +158,9 @@ utility_component_template = {
 		modifier = {
 			weapon_type_point_defense_weapon_damage_mult = -0.3
 			weapon_type_point_defense_weapon_fire_rate_mult = -0.3
+			
+			ship_hull_regen_add_perc = 0.1
+			ship_armor_regen_add_perc = 0.1
 		}
 	}
 
@@ -164,7 +176,7 @@ utility_component_template = {
 
 # Bombardment
 utility_component_template = {
-	key = "SHIP_AURA_BOMBARDMENT"
+	key = "SHIP_AURA_BOMBARDMENT_JRW"
 	size = medium
 	icon = "GFX_ship_part_aura_bombardment"
 	icon_frame = 1
@@ -172,7 +184,6 @@ utility_component_template = {
 
 	potential = {
 		ship_uses_juggernaut_components = yes
-		ship_uses_juggernaut_components = no
 	}
 	component_set = "ship_aura_components"
 
@@ -187,6 +198,9 @@ utility_component_template = {
 
 		modifier = {
 			ship_orbital_bombardment_mult = 1.0
+			
+			ship_hull_regen_add_perc = 0.1
+			ship_armor_regen_add_perc = 0.1
 		}
 	}
 
