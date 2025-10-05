@@ -19,6 +19,7 @@ ap_defender_of_the_galaxy = {
 		damage_vs_country_type_ai_empire_mult = 0.5
 		damage_vs_country_type_gray_goo_mult = 0.5
 		damage_vs_player_crisis_mult = 0.5
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 		# Gigastructures Compat
 		damage_vs_country_type_compound_empire_mult = 0.5
 		damage_vs_country_type_katzenartig_imperium_mult = 0.5
@@ -57,6 +58,7 @@ ap_defender_of_the_galaxy = {
 			damage_vs_country_type_voidworms_crisis_mult = @ap_defender_of_the_galaxy_voidworm_dmg_mult
 			damage_vs_country_type_voidworms_treasure_hunters_mult = @ap_defender_of_the_galaxy_voidworm_dmg_mult
 			damage_vs_country_type_frenzied_voidworms_mult = @ap_defender_of_the_galaxy_voidworm_dmg_mult
+		    add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 			# Gigastructures Compat
 			damage_vs_country_type_compound_empire_mult = 0.5
 			damage_vs_country_type_katzenartig_imperium_mult = 0.5
@@ -165,14 +167,6 @@ ap_become_the_crisis = {
 			fail_text = "must_not_be_emperor"
 			is_galactic_emperor = no
 		}
-		NOR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-			has_civic = civic_machine_servitor
-			has_valid_civic = civic_hive_familiar_face
-		}
 	}
 
 	on_enabled = {
@@ -221,6 +215,17 @@ ap_become_the_crisis = {
 		modifier = {
 			factor = 0
 			blocks_disruptive_gameplay = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_familiar_face
+			}
 		}
 	}
 }
@@ -343,12 +348,6 @@ ap_behemoths = {
 			fail_text = "must_use_bioships"
 			country_uses_bio_ships = yes
 		}
-		NOR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-		}
 	}
 
 	on_enabled = {
@@ -402,5 +401,14 @@ ap_behemoths = {
 			factor = 2
 			galaxy_percentage > 0.2
 		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}		
 	}
 }
