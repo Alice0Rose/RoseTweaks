@@ -48,6 +48,9 @@ citizenship_universal_assimilation = {
 				from = {
 					OR = {
 						has_tradition = tr_genetics_finish
+						has_tradition = tr_mutation_finish
+						has_tradition = tr_purity_finish
+						has_tradition = tr_cloning_finish
 						has_tradition = tr_modularity_finish
 						
 						AND = {
@@ -72,6 +75,9 @@ citizenship_universal_assimilation = {
 				from = {
 					OR = {
 						has_tradition = tr_genetics_finish
+						has_tradition = tr_mutation_finish
+						has_tradition = tr_purity_finish
+						has_tradition = tr_cloning_finish
 						has_tradition = tr_modularity_finish
 						
 						AND = {
@@ -104,6 +110,9 @@ citizenship_universal_assimilation = {
 				from = {
 					OR = {
 						has_tradition = tr_genetics_finish
+						has_tradition = tr_mutation_finish
+						has_tradition = tr_purity_finish
+						has_tradition = tr_cloning_finish
 						has_tradition = tr_modularity_finish
 						
 						AND = {
