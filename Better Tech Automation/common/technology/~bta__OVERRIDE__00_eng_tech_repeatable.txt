@@ -70,6 +70,21 @@ tech_repeatable_improved_military_station_damage = {
 	modifier = {
 		shipclass_military_station_damage_mult = 0.1
 	}
+	
+	technology_swap = {
+		#name = tech_repeatable_improved_military_station_damage
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_mod_rose_tweaks_active = yes
+		}
+
+		modifier = {
+			shipclass_military_station_damage_mult = 0.1
+			deep_space_citadel_limit_add = 0.1
+		}
+	}
 }
 
 tech_repeatable_improved_military_station_health = {
@@ -101,9 +116,24 @@ tech_repeatable_improved_military_station_health = {
 	mod_weight_if_group_picked = {
 		repeatable = 0.01
 	}
-
+	
 	modifier = {
 		shipclass_military_station_hull_mult = 0.1
+	}
+	
+	technology_swap = {
+		#name = tech_repeatable_improved_military_station_health
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_mod_rose_tweaks_active = yes
+		}
+
+		modifier = {
+			shipclass_military_station_hull_mult = 0.1
+			deep_space_citadel_limit_add = 0.1
+		}
 	}
 }
 

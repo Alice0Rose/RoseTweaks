@@ -1,0 +1,3 @@
+is_mod_rose_tweaks_active = {
+	always = no
+}

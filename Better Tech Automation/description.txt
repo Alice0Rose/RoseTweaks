@@ -6,9 +6,8 @@ Note that there will always be a one tech delay between activation or deactivati
 The edicts will also only show up once you have the ability to research the technologies they would remove, as to not clog the edict menu in the early game ^-^
 
 [h1]Compatibility[/h1]
-Because of the way this mod works, it has to override all technologies that the edicts affect (by default, all the infinite repeatables and the Cosmogenesis level 5 entry tech). This means the mod requires a patch mod to work with other mods that modify these technologies or add other technologies. Below are some I have already created for my own mods and mods I regularly play with, which can be used as a template for creating your own patch mods :)
+Because of the way this mod works, it has to override all technologies that the edicts affect (by default, all the infinite repeatables and the Cosmogenesis level 5 entry tech). This means the mod requires either a patch mod or detection code to work with other mods that modify these technologies or add other technologies. Below is one I've already created for Gigastructures.
 
-[url= https://steamcommunity.com/sharedfiles/filedetails/?id=3394682430]Better Tech Automation (Rose Tweaks Patch)[/url]
 [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3394682592]Better Tech Automation (Gigastructural Engineering Patch)[/url]
 
 [h1]Source Code and Wiki[/h1]
