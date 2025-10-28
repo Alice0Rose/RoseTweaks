@@ -1,4 +1,5 @@
 	NGameplay = {
 		ASCENSION_PERKS_SLOTS	= 12
+		PLANET_ASCENSION_HARD_CAP			= 14	# Based of current formula, maximum planetary ascension possible
 		TRADITION_CATEGORIES_MAX	= 9
 	}
