@@ -1,0 +1,173 @@
+the_composer_of_strands = {
+	category = major_patron
+	color = { 0.125 0.608 0.208 1 }
+	text_color_code = "G"
+	first_contact_event = shroud.4020
+	covenant_event = shroud.4650
+	covenant_confirmation_time = @covenant_confirmation_time_days
+	add_modifier = yes
+
+	pre_communications_name_format = "{<composer_adj> {<patron_noun>}}"
+
+	position = { x = 0 y = -1 }
+
+	callings = {
+        calling_establish_colony
+        calling_terraform_planet
+		calling_grow_pops
+		calling_construct_outposts
+		calling_apply_pops_template
+		calling_clone_space_fauna_naval_capacity
+    }
+
+    deeds = {
+        deed_clone_space_fauna
+        deed_consecrate_planet
+        deed_pick_adaptability_or_expansion_tradition
+        deed_apply_species_template
+        deed_host_new_species
+		deed_pass_ecology_resolution
+		deed_pass_divinity_resolution
+		deed_terraform_planet
+		deed_colonize_gaia_world
+		deed_psionically_assimilate_pop
+		deed_sector_as_vassal
+		deed_colonize_tomb_world
+    }
+
+	covenant = {
+		name = "COVENANT_COMPOSER"
+		icon = "GFX_composer_covenant"
+		desc = covenant_composer_desc
+		triggered_modifier = {
+			potential = { has_country_flag = composer_covenant_confirmed }
+			custom_tooltip = covenant_composer_telepath_tt
+			show_only_custom_tooltip = no
+		}
+		triggered_modifier = {
+			#BIOLOGICAL_species_trait_picks_add = -2
+			planet_structures_cost_mult = 0.25
+		}
+			
+		triggered_modifier = {
+			potential = {
+				owner = {
+					is_gestalt = no
+				}
+			}
+			modifier = {
+				pop_miner_bonus_workforce_mult = -0.10
+				pop_foundry_bonus_workforce_mult = -0.05
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = {
+					is_gestalt = yes
+					is_hive_empire = no
+				}
+			}
+			modifier = {
+				pop_mining_drone_bonus_workforce_mult = -0.10
+				pop_fabricator_bonus_workforce_mult = -0.05
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = {
+					is_gestalt = yes
+					is_hive_empire = yes
+				}
+			}
+			modifier = {
+				pop_mining_drone_bonus_workforce_mult = -0.10
+				pop_alloy_drone_bonus_workforce_mult = -0.05
+			}
+		}
+	}
+
+	passive_accord = {
+		name = "ACCORD_LIFE"
+		icon = "GFX_accord_life"
+		triggered_modifier = {
+			founder_species_growth_mult = 0.20
+			country_base_influence_produces_add = 0.15
+		}
+	}
+
+	passive_accord = {
+		name = "ACCORD_FERTILITY"
+		icon = "GFX_accord_fertility"
+		on_unlock = {
+			custom_tooltip = fertility_accord_tt
+			set_country_flag = fertility_accord
+		}
+		on_revert = {
+			remove_country_flag = fertility_accord
+		}
+	}
+
+	active_accord = {
+		name = "ACCORD_TRANSFORMATION"
+		icon = "GFX_accord_transformation"
+		sound = "accord_activation_composer_transformation"
+
+		cooldown = 3600
+		first_cooldown = 3600
+		activation_cost = {
+			cost = {
+				sr_zro = 50
+			}
+		}
+
+		effect = {
+			custom_tooltip = ACCORD_TRANSFORMATION_TT
+			hidden_effect = {
+				country_event = { id = shroud.4860 }
+			}
+		}
+	}
+
+	active_accord = {
+		name = "ACCORD_GENERATION"
+		icon = "GFX_accord_generation"
+		sound = "accord_activation_composer_generation"
+
+		cooldown = 3600
+		first_cooldown = 7200
+		activation_cost = {
+			cost = {
+				sr_zro = 150
+			}
+		}
+
+		possible = {
+			has_technology = tech_psionic_aura
+			any_system_with_aura = {
+				any_system_colony = {
+					has_owner = yes
+					is_owned_by = root
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = ACCORD_GENERATION_TT
+			hidden_effect = {
+				country_event = { id = shroud.4870 }
+			}
+		}
+
+		ai_will_do = {
+			NOT = {
+				any_system_with_aura = {
+					any_system_colony = {
+						has_owner = yes
+						is_owned_by = root
+						free_housing < 0
+					}
+				}
+			}
+		}
+	}
+}

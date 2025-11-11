@@ -1,0 +1,5 @@
+﻿l_english:
+ paragon.6000.desc.ap_synthetic_evolution: "Our roboticists have a suggestion to repair §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§!: while expensive, we can move [Ruler.GetHerHis] mind into a new, self-correcting, positronic network. This would give [Ruler.GetHerHis] the ability to network with the entire population, improving [Ruler.GetHerHis] already considerable skills."
+ paragon.6020.desc: "Success! §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§!'s consciousness has been transferred to a new synthetic frame. Quantum processing allows [Ruler.GetHimHer] instantaneous networking with every synthetic unit.\n\nThis powerful meta-awareness has begun to change our leader's point of view. Now, [Ruler.GetRegnalName] is focused on macro processing patterns, aiming to improve the overall efficiency of our civilization."
+ paragon.6035.desc: "Not long after recovering from the procedure, a grand celebration was held on [capital_scope.GetName]. §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§! gave a speech thanking citizens and scientists, and spoke of the bright and prosperous future [Ruler.GetSheHe] has planned for the §Y[Owner.GetName]§!."
+ 

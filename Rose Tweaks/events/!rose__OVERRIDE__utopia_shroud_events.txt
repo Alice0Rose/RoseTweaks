@@ -1,0 +1,285 @@
+namespace = utopia
+
+# Covenant Side Effects - Gatekeeper event
+country_event = {
+	id = utopia.3330
+	hide_window = yes
+
+	trigger = {
+		NOT = { has_country_flag = covenant_side_effects }
+		OR = {
+			has_covenant_with_whisperers_in_the_void = yes
+			has_covenant_with_the_composer_of_strands = yes
+			has_covenant_with_the_eater_of_worlds = yes
+			has_covenant_with_the_instrument_of_desire = yes
+			has_covenant_with_the_cradle_of_souls = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 15
+	}
+
+	immediate = {
+		set_timed_country_flag = { flag = covenant_side_effects days = 3600 }
+		if = {
+			limit = {
+				has_covenant_with_whisperers_in_the_void = yes
+			}
+			random_list = {
+				45 = { # Leader turns to substance abuse
+					modifier = {
+						factor = 0
+						OR = {
+							is_gestalt = yes
+							is_robot_empire = yes
+						}
+					}
+					country_event = { id = utopia.3331 }
+				}
+				#STOP RANDOMLY KILLING LEADERS OMG	25 = { country_event = { id = utopia.3332 } }	# Suicide of leader
+				20 = { country_event = { id = utopia.3333 } }	# Dissident Factions
+				10 = { country_event = { id = utopia.3334 } }	# Fractured Society
+			}
+		}
+		if = {
+			limit = {
+				has_covenant_with_the_eater_of_worlds = yes
+			}
+			random_list = {
+				#STOP RANDOMLY KILLING LEADERS OMG	15 = { country_event = { id = utopia.3335 } }	# Leader devoured
+				30 = { country_event = { id = utopia.3342 } }	# Part of Planet devoured
+				30 = { country_event = { id = utopia.3336 } }	# Pops devoured
+				15 = { country_event = { id = utopia.3343 } }	# Pop devoured
+				10 = { country_event = { id = utopia.3337 } }	# Planet devoured
+
+			}
+		}
+		if = {
+			limit = {
+				has_covenant_with_the_instrument_of_desire = yes
+			}
+			random_list = {
+				40 = { country_event = { id = utopia.3340 } }	# Empire gets increased desire for a rare resource
+				#40 = { country_event = { id = utopia.3338 } }	# Planet gets deviant ethics
+				#20 = { country_event = { id = utopia.3339 } }	# Empire gets deviant ethics
+				40 = {											# Leader gets Lavish Lifestyle trait
+					modifier = {
+						factor = 0
+						has_shroud_dlc = no
+					}
+					country_event = { id = utopia.3350 }
+				}
+				20 = {											# Planet gets distracted
+					modifier = {
+						factor = 0
+						has_shroud_dlc = no
+					}
+					country_event = { id = utopia.3351 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_covenant_with_the_composer_of_strands = yes
+			}
+			random_list = {
+				60 = { country_event = { id = utopia.3341 } }   # Composer messes with species traits
+				25 = { 											# Pops get devolved 
+					modifier = {
+						factor = 0
+						OR = {
+							is_robot_empire = yes
+							has_shroud_dlc = yes
+						}
+					}
+					country_event = { id = utopia.3346 }
+				}
+				#STOP RANDOMLY KILLING LEADERS OMG	15 = { country_event = { id = utopia.3345 } }   # Leader gets devolved
+			}
+		}
+		if = {
+			limit = {
+				has_covenant_with_the_cradle_of_souls = yes
+			}
+			random_list = {
+				45 = { country_event = { id = utopia.3348 } }	# Cradle - Empire gets Anguish of the Cradle
+				35 = { country_event = { id = utopia.3349 } }	# Cradle - Empire gets Limit of the Cradle
+				20 = { country_event = { id = utopia.3347 } }   # Cradle - Ships get destroyed
+			}
+		}
+	}
+}
+
+# Chosen One becomes ruler
+country_event = {
+	id = utopia.3400
+	title = "utopia.3400.name"
+	desc = "utopia.3400.desc"
+	picture = GFX_evt_chosen_leader
+	show_sound = event_mystic_reveal
+
+	trigger = {
+		is_country_type = default
+		NOT = { has_country_flag = chosen_one_ruler_event }
+		OR = {
+			# Either you've not Imperial and have a Chosen One
+			AND = {
+				OR = {
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_dictatorial_authority = yes
+					# MegaCorps deliberately excluded.
+				}
+				any_owned_leader = {
+					has_any_chosen_one_leader_trait = yes
+				}
+			}
+			# Or you're Imperial and the Chosen One is your current ruler or heir.
+			AND = {
+				is_imperial_authority = yes
+				any_owned_leader = {
+					has_any_chosen_one_leader_trait = yes
+					has_trait = trait_imperial_heir
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		set_country_flag = chosen_one_ruler_event
+		if = {
+			limit = {
+				OR = {
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_dictatorial_authority = yes
+					# MegaCorps deliberately excluded.
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					has_any_chosen_one_leader_trait = yes
+				}
+				save_event_target_as = chosen_one
+				species = { save_event_target_as = chosen_one_species }
+			}
+		}
+		else = {
+			random_owned_leader = {
+				limit = {
+					has_any_chosen_one_leader_trait = yes
+					has_trait = trait_imperial_heir
+				}
+				save_event_target_as = chosen_one
+				species = { save_event_target_as = chosen_one_species }
+			}
+		}
+	}
+
+	option = {
+		name = "utopia.3400.a"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 40
+				has_ethic = ethic_egalitarian
+			}
+				modifier = {
+				factor = 80
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		custom_tooltip = reject_god_emperor
+	}
+	option = {
+		name = "utopia.3400.b"
+		ai_chance = {
+			factor = 150
+			modifier = {
+				factor = 40
+				has_ethic = ethic_authoritarian
+			}
+				modifier = {
+				factor = 80
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		if = {
+			limit = {
+				has_origin = origin_legendary_leader_dictatorial
+			}
+			set_origin = origin_legendary_leader_imperial
+		}
+		
+		# Prevents egalitarian empires having their ethic and government shifted
+		if = {
+			limit = {
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+			
+			shift_ethic = ethic_fanatic_authoritarian
+			change_government = {
+				authority = auth_imperial
+				cooldown = no
+				remove_invalid_civics = yes
+			}		
+		}
+		
+		# Prevents materialist empires having their ethic shifted
+		if = {
+			limit = {
+				NOT = {
+					has_ethic = ethic_materialist
+				}
+			}
+			
+			shift_ethic = ethic_spiritualist		
+		}		
+		
+		force_add_civic = civic_psionic_sovereign
+		set_government_cooldown = no
+		
+		# The ruler doesn't need to abdicate if they're being crowned.
+		if = {
+			limit = {
+				ruler = {
+					NOT = {
+						is_same_value = event_target:chosen_one
+					}
+				}
+			}
+			
+			# The old ruler is only exiled if the new government is an imperium
+			if = { 
+				limit = {
+					is_imperial_authority = yes
+				}
+				
+				ruler = {
+					exile_leader_as = destituted_ruler_chosen_one
+				}
+			}
+			set_leader = event_target:chosen_one
+		}		
+		
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = { is_same_value = root }
+					has_communications = root
+				}
+				country_event = { id = utopia.3401 days = 4 }
+			}
+			country_event = { id = utopia.3402 days = 5 }
+		}
+	}
+}

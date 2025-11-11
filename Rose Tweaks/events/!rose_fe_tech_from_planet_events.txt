@@ -1,0 +1,242 @@
+namespace = rose_fe_tech_from_planet
+
+# Creates variable to track number of FE planets taken
+# This = created country
+# From = root of context where create_country/create_rebels happens
+country_event = {
+	id = rose_fe_tech_from_planet.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = "rose_fe_planets_taken"
+			value = 0
+		}
+	}
+}
+
+# Increments the number of FE planets the FROM country has if the FROMFROM country was an FE or AE or Cosmogenesis T5, 
+# and then awards any tech options that are unlocked from that number
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Country scope (previous owner, if any)
+planet_event = {
+	id = rose_fe_tech_from_planet.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		# Planet must have be a fallen empire planet or owned by a level 5 cosmogenesis empire
+		OR = {
+			has_planet_flag = fallen_empire_world
+		
+			AND = {
+				exists = fromfrom
+			
+				fromfrom = {
+					has_crisis_level = crisis_cosmogenesis_level_5
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			# Increments number of FE planets new owner has taken 
+			change_variable = {
+				which = "rose_fe_planets_taken"
+				value = 1
+			}
+		
+			# Awards tech options
+			if = {
+				limit = {
+					check_variable = {
+						which = "rose_fe_planets_taken" 
+						value >= 1
+					}
+				}
+				
+				add_research_option = tech_fe_dome_1
+				add_research_option = tech_fe_security_1
+				add_research_option = tech_fe_silo_1
+			}
+		
+			#if = {
+			#	limit = {
+			#		check_variable = {
+			#			which = "rose_fe_planets_taken" 
+			#			value >= 2
+			#		}
+			#	}
+			#	
+			#	add_research_option = tech_fe_dome_2
+			#	add_research_option = tech_fe_security_2
+			#	add_research_option = tech_fe_silo_2
+			#}
+		
+			if = {
+				limit = {
+					check_variable = {
+						which = "rose_fe_planets_taken" 
+						value >= 3
+					}
+				}
+				
+				add_research_option = tech_fe_nourishment_1
+				add_research_option = tech_fe_singularity_1
+				add_research_option = tech_fe_mine_1
+			}
+			
+			#if = {
+			#	limit = {
+			#		check_variable = {
+			#			which = "rose_fe_planets_taken" 
+			#			value >= 4
+			#		}
+			#	}
+			#	
+			#	add_research_option = tech_fe_nourishment_2
+			#	add_research_option = tech_fe_singularity_2
+			#	add_research_option = tech_fe_mine_2
+			#}
+			
+			if = {
+				limit = {
+					check_variable = {
+						which = "rose_fe_planets_taken" 
+						value >= 5
+					}
+				}
+				
+				add_research_option = tech_fe_fortress_1
+				add_research_option = tech_fe_administration_1
+				
+				if = {
+					limit = {
+						is_gestalt = no
+					}
+				
+					add_research_option = tech_fe_market_1
+				}
+			}
+			
+			#if = {
+			#	limit = {
+			#		check_variable = {
+			#			which = "rose_fe_planets_taken" 
+			#			value >= 6
+			#		}
+			#	}
+			#	
+			#	add_research_option = tech_fe_fortress_2
+			#	add_research_option = tech_fe_administration_2
+			#	
+			#	if = {
+			#		limit = {
+			#			is_gestalt = no
+			#		}
+			#	
+			#		add_research_option = tech_fe_market_2
+			#	}
+			#}
+			
+			if = {
+				limit = {
+					check_variable = {
+						which = "rose_fe_planets_taken" 
+						value >= 7
+					}
+				}
+				
+				add_research_option = tech_fe_fabricator_1
+
+				if = {
+					limit = {
+						is_hive_empire = no
+					}
+				
+					add_research_option = tech_fe_assembly_1
+				}
+				
+				if = {
+					limit = {
+						is_machine_empire = no
+					}
+				
+					add_research_option = tech_fe_clinic_1
+				}
+
+				if = {
+					limit = {
+						is_gestalt = no
+					}
+				
+					add_research_option = tech_fe_entertainment_1
+				}
+			}
+			
+			#if = {
+			#	limit = {
+			#		check_variable = {
+			#			which = "rose_fe_planets_taken" 
+			#			value >= 8
+			#		}
+			#	}
+			#	
+			#	add_research_option = tech_fe_fabricator_2
+			#
+			#	if = {
+			#		limit = {
+			#			is_hive_empire = no
+			#		}
+			#	
+			#		add_research_option = tech_fe_assembly_2
+			#	}
+			#	
+			#	if = {
+			#		limit = {
+			#			is_machine_empire = no
+			#		}
+			#	
+			#		add_research_option = tech_fe_clinic_2
+			#	}
+			#
+			#	if = {
+			#		limit = {
+			#			is_gestalt = no
+			#		}
+			#	
+			#		add_research_option = tech_fe_entertainment_2
+			#	}
+			#}
+			
+			#if = {
+			#	limit = {
+			#		check_variable = {
+			#			which = "rose_fe_planets_taken" 
+			#			value >= 9
+			#		}
+			#	}
+			#	
+			#	add_research_option = tech_fe_affluence_1
+			#	add_research_option = tech_fe_forge_1
+			#	add_research_option = tech_fe_lab_1
+			#}
+			
+			#if = {
+			#	limit = {
+			#		check_variable = {
+			#			which = "rose_fe_planets_taken" 
+			#			value >= 10
+			#		}
+			#	}
+			#	
+			#	add_research_option = tech_fe_affluence_2
+			#	add_research_option = tech_fe_forge_2
+			#	add_research_option = tech_fe_lab_2
+			#}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+﻿l_english:
+ rose_choose_starting_ruler_ethic.2.name: "Ethical Considerations"
+ rose_choose_starting_ruler_ethic.2.desc: "When we embarked on our journey across the stars, our [Root.GetRulerTitle] [Root.GetRulerName] met with representatives from each of our empire's leading factions to discuss what [Root.Leader.GetHerHim] guiding ethics should be as [Root.Leader.GetSheHe] leads us into the future."
+ 
+ rose_choose_starting_ruler_ethic.2.a: "Focus on how we use force against others."
+ rose_choose_starting_ruler_ethic.2.b: "Focus on how we balance science and belief."
+ rose_choose_starting_ruler_ethic.2.c: "Focus on how we treat our citizens."
+ rose_choose_starting_ruler_ethic.2.d: "Focus on how we view other lifeforms."
+ 

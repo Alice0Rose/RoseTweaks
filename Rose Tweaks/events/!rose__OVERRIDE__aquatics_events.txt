@@ -1,0 +1,41 @@
+namespace = aquatics
+
+# The Dragon has something to say...
+country_event = {
+	id = aquatics.270
+	title = aquatics.120.diplo_name
+	diplomatic_title = aquatics.270.name
+	desc = aquatics.270.desc
+	show_sound = event_aqu_dragon
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = aquatics.270.A
+		custom_tooltip = aquatics.270.A.tooltip
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+			min = @tier3unitymin
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = origin_dragon_not_ready
+			#Fires the finale with a slight delay if you actually already qualify for it
+			#Since the country flag is removed by the fired event, we need not worry about it happening twice
+			country_event = { id = aquatics.120 days = 360 } # default is 2400 days
+
+			from.contact_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+#fleet scope
+is_merc_enclave_founding_allowed = {
+	owner = {
+		# No AI enclaves, too laggy, sorry D:
+		is_ai = no
+	
+		NOR = {
+			has_origin = origin_mindwardens
+			AND = {
+				has_ethic = ethic_gestalt_consciousness
+				NOT = { has_valid_civic = civic_machine_tactical_algorithms }
+			}
+			has_civic = civic_fanatic_purifiers
+		}
+	}
+	is_enclave_founding_allowed = {
+		FLEET_SIZE = 50
+		STARBASE_SHIP_SIZE = enclave_mercenary_station
+	}
+}

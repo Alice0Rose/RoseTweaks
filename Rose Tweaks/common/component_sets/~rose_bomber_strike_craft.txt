@@ -1,0 +1,18 @@
+component_set = {
+	key = "ROSE_BOMBER_STRIKE_CRAFT"
+	icon = "GFX_ship_part_strike_craft_bomber_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ROSE_BOMBER_BIO_STRIKE_CRAFT"
+	icon = "GFX_rose_bomber_fauna_strike_craft"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ROSE_BOMBER_FAUNA_STRIKE_CRAFT"
+	icon = "GFX_rose_bomber_fauna_strike_craft"
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}

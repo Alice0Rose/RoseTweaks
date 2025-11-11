@@ -1,0 +1,9 @@
+﻿l_english:
+ trait_rose_revered: "Revered"
+ trait_rose_revered_desc: "§LHealth and wellness come naturally to this species, giving them an enviable lifespan.§!\n"
+ trait_rose_inflexible_chassis: "Inflexible Chassis"
+ trait_rose_inflexible_chassis_desc: "§LThe chassis of these machines is only designed to function in specific environments.§!\n"
+ trait_rose_hardwired: "Hardwired"
+ trait_rose_hardwired_desc: "§LThese machines require a direct connection to the mainframe to operate, making relocation a highly difficult and expensive endeavor.§!\n"
+ AUTO_MIGRATE_HARDWIRED: "§RHardwired Pops cannot migrate.§!" 
+ trait_rose_hardwired_effect: "§RPops will not Automatically Resettle§!\n    - Resettlement Cost: §R+200%§!"

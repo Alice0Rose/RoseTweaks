@@ -1,0 +1,8 @@
+﻿l_english:
+ trade_policy_mutual_aid_minerals: "Mutual Aid (Mineral Focus)"
+ trade_policy_mutual_aid_minerals_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y70%§! of our collected $r_trade$ earns us earns us £energy£ §Y0.3§!, £minerals£ §Y0.3§!, and £unity£ §Y0.1§!§!"
+ trade_policy_mutual_aid_food: "Mutual Aid (Food Focus)"
+ trade_policy_mutual_aid_food_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y70%§! of our collected $r_trade$ earns us earns us £energy£ §Y0.3§!, £food£ §Y0.3§!, and £unity£ §Y0.1§!§!"
+ 
+ trade_conversion_mutual_aid_minerals_name: "$trade_policy_mutual_aid_minerals$"
+ trade_conversion_mutual_aid_food_name: "$trade_policy_mutual_aid_food$"

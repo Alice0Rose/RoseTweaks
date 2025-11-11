@@ -1,0 +1,286 @@
+namespace = rose_abandon_colony
+
+planet_event = {
+	id = rose_abandon_colony.1
+	title = rose_abandon_colony.1.name
+	desc = rose_abandon_colony.1.desc
+	picture = GFX_evt_colony_settlement
+	hide_window = no
+	is_triggered_only = yes
+	
+	# Don't abandon colony and refund cost of decision
+	option = {
+		# Empire has the choice not to abandon planet
+		name = {
+			trigger = {
+				rose_can_abandon_colony = yes
+			}
+			
+			text = rose_abandon_colony.1.a_choose
+		}
+		
+		# Empire cannot be virtual
+		name = {
+			trigger = {
+				owner = {
+					has_tradition = tr_virtuality_adopt
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_virtual
+		}
+		
+		# Empire cannot have the horizon needle unlocked (to prevent cheesing the cosmogenesis ending)
+		name = {
+			trigger = {
+				owner = {
+					has_technology = tech_cosmogenesis_crisis_5
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_horizon_needle
+		}		
+		
+		# Planet cannot be capital
+		name = {
+			trigger = {
+				is_capital = yes
+			}
+			
+			text = rose_abandon_colony.1.a_capital
+		}			
+		
+		# Planet must be controlled by the owner
+		name = {
+			trigger = {
+				NOT = { 
+					is_controlled_by = owner
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_uncontrolled
+		}
+		
+		# Empire cannot be in a non-total war
+		name = {
+			trigger = {
+				NOT = {
+					owner = {
+						count_war = {
+							count = all
+							limit = { 
+								is_total_war = yes
+							}
+						}
+					}
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_at_war
+		}			
+		
+		# Planet cannot have unwilling/uncontrolled pops
+		name = {
+			trigger = {
+				OR = {
+				# Planet cannot have any pops that have traits that prevent them from resettling
+					any_owned_pop_group = {
+						OR = { 
+							has_trait = trait_self_modified
+							has_trait = trait_pathogenic_genes
+						}
+					}
+					
+					# Reformist planet cannot be abandoned, that'd be too easy!
+					has_modifier = paragon_origin_reformists
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_unwilling_pops
+		}
+		
+		# Genesis Guides cannot abandon their presapient wards
+		name = {
+			trigger = {
+				AND = {
+					has_deposit = d_genesis_preserve
+					
+					owner = {
+						is_guided_sapience_empire = yes
+					}
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_abandon_presapients
+		}
+		
+		# Assault armies cannot be abandoned
+		name = {
+			trigger = {
+				any_planet_army = { 
+					is_defensive_army = no 
+				}
+			}
+			
+			text = rose_abandon_colony.1.a_abandon_armies
+		}
+		
+		default_hide_option = yes
+		
+		custom_tooltip = rose_abandon_colony.1.a.effects
+		
+		# Refunds cost of decision
+		hidden_effect = {
+			owner = {
+				add_resource = {
+					unity = 0.1
+					energy = 1
+					multiplier = root.trigger:pop_amount
+				}
+			}
+		}
+	}
+	
+	# Abandon colony
+	option = {
+		name = rose_abandon_colony.1.b
+		custom_tooltip = rose_abandon_colony.1.b.effects
+		
+		trigger = {
+			rose_can_abandon_colony = yes
+		}
+		
+		# Resettles all pops and abandons colony
+		hidden_effect = {
+			# Marks planet as being abandoned
+			set_planet_flag = rose_abandon_colony_in_progress
+			
+			# Removes Orbital Ring if present
+			if = {
+				limit = {
+					exists = orbital_defence
+				}
+				
+				orbital_defence = {
+					dismantle = yes
+				}
+			}
+
+			# Gets how many planets are valid relocation targets
+			owner = {
+				export_trigger_value_to_variable = {
+					trigger = count_owned_planet
+					parameters = { 
+						limit = {
+							NOR = {
+								# Prevents resettling to a planet that is being abandoned
+								has_planet_flag = rose_abandon_colony_in_progress
+								
+								# Prevents resettling to the synaptic lathe
+								is_planet_class = pc_cosmogenesis_world
+							}
+							
+							# Prevents resettling to a planet that is being colonized
+							is_under_colonization = no
+						}
+					}
+					variable = rose_abandon_colony_num_valid_planet
+				}
+				
+				save_event_target_as = abandoned_planet_owner
+			}
+
+			# Resettles pops from colony being abandoned
+			every_owned_pop_group = {
+				limit = {
+					pop_group_size > 0
+				}
+				save_event_target_as = current_pop_group
+				
+				export_trigger_value_to_variable = {
+					trigger = pop_group_size
+					variable = rose_abandon_colony_num_pops_per_planet
+				}
+				
+				set_variable = {
+					which = rose_abandon_colony_num_pops_per_planet_extra
+					value = rose_abandon_colony_num_pops_per_planet
+				}
+				
+				# Gets how many pops to send to each planet
+				divide_variable = {
+					which = rose_abandon_colony_num_pops_per_planet
+					value = event_target:abandoned_planet_owner.rose_abandon_colony_num_valid_planet
+				}
+				
+				# Gets how many planets should have an extra pop sent to them to account for the remainder
+				modulo_variable = {
+					which = rose_abandon_colony_num_pops_per_planet_extra
+					value = event_target:abandoned_planet_owner.rose_abandon_colony_num_valid_planet
+				}
+				
+				floor_variable = rose_abandon_colony_num_pops_per_planet				
+				
+				event_target:abandoned_planet_owner = {
+					every_owned_planet = {
+						limit = {
+							NOR = {
+								# Prevents resettling to a planet that is being abandoned
+								has_planet_flag = rose_abandon_colony_in_progress
+								
+								# Prevents resettling to the synaptic lathe
+								is_planet_class = pc_cosmogenesis_world
+							}
+							
+							# Prevents resettling to a planet that is being colonized
+							is_under_colonization = no
+						}
+						
+						# Resettles main portion of pop group
+						resettle_pop_group = {
+							POP_GROUP = event_target:current_pop_group
+							PLANET = this
+							AMOUNT = event_target:current_pop_group.rose_abandon_colony_num_pops_per_planet
+						}
+						
+						event_target:current_pop_group = {
+							# Handles remainder pops so no pops are lost in the distribution
+							if = {
+								limit = {
+									check_variable = { 
+										which = rose_abandon_colony_num_pops_per_planet_extra
+										value > 0
+									}
+								}
+							
+								resettle_pop_group = {
+									POP_GROUP = this
+									PLANET = prev
+									AMOUNT = 1
+								}
+								
+								subtract_variable = { 
+									which = rose_abandon_colony_num_pops_per_planet_extra
+									value = 1
+								}
+							}
+						}
+					}
+				}
+				
+				clear_variable = rose_abandon_colony_num_pops_per_planet
+				clear_variable = rose_abandon_colony_num_pops_per_planet_extra
+			}
+			
+			# Destroy colony
+			remove_all_buildings = yes
+			remove_all_districts = yes
+
+			destroy_colony = yes
+			
+			# Removes flags/variable as colony has been abandoned
+			remove_planet_flag = rose_abandon_colony_in_progress
+			event_target:abandoned_planet_owner = { clear_variable = rose_abandon_colony_num_valid_planet }
+		}
+	}
+}

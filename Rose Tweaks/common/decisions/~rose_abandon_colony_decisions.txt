@@ -1,0 +1,69 @@
+decision_rose_abandon_colony = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_expel_population
+	enactment_time = 0
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 0.1
+			energy = 1
+			multiplier = trigger:pop_amount
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = {
+			# AI empires from getting the decision	
+			is_ai = no
+			
+			# Empire cannot be virtual
+			custom_tooltip_fail = {
+				text = rose_abandon_colony_fail_virtual
+				NOT = {
+					has_tradition = tr_virtuality_adopt
+				}
+			}
+		}
+	}
+
+	allow = {
+		# Empires cannot have the horizon needle unlocked (to prevent cheesing the cosmogenesis ending)
+		custom_tooltip_fail = {
+			text = rose_abandon_colony_fail_horizon_needle
+			owner = {
+				NOT = {
+					has_technology = tech_cosmogenesis_crisis_5
+				}
+			}
+		}
+		
+		# Planet cannot be capital
+		custom_tooltip_fail = {
+			text = rose_abandon_colony_fail_capital
+			is_capital = no
+		}
+		
+		# Planet must be controlled by the owner
+		custom_tooltip_fail = {
+			text = rose_abandon_colony_fail_uncontrolled
+			is_controlled_by = owner
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_rose_abandon_colony_effects
+		
+		# Event to abandon colony
+		hidden_effect = {
+			planet_event = { id = rose_abandon_colony.1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

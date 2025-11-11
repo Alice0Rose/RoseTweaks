@@ -1,0 +1,45 @@
+# 1.5x the default "nuked" vars
+@nukedCost = 15000
+@nukedTime = 10800
+@nukedBiomassCost = 7500
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_gaia"
+
+	resources = {
+		category = terraforming
+
+		inline_script = {
+			script = terraform/triggered_costs
+			ENERGY_COST = @nukedCost
+			BIOMASS_COST = @nukedBiomassCost
+		}
+	}
+
+	inline_script = {
+		script = terraform/wilderness_biomass
+	}
+
+	duration = @nukedTime
+
+	potential = {
+		exists = owner
+		from = { has_modifier = toxic_terraforming_candidate }
+	}
+	condition = {
+		has_ascension_perk = "ap_detox"
+		has_ascension_perk = "ap_world_shaper"
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = toxic_terraforming_candidate }
+			remove_modifier = toxic_terraforming_candidate
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}

@@ -1,0 +1,72 @@
+decision_rose_gaia_arcology = {
+	owned_planets_only = yes
+	icon = decision_gaia_arcology
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_gaia
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+			has_modifier = pm_wenkwort_custodian
+			has_modifier = holy_planet
+		}
+		is_artificial = no
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_arcology_project 
+		}
+		NOT = { has_designation = col_nanotech_world }
+		NOT = { has_modifier = rose_gaia_arcology }
+	}
+
+	allow = {
+		if = {
+			limit = { owner = { is_ai = no } }
+			free_district_slots < 1
+			custom_tooltip = {
+				fail_text = legendary_leader_decision_arcology_project
+				NOT = { has_planet_flag = legendary_leader_planet }
+			}
+		}
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		# Change to gaia arcology planet
+		custom_tooltip = decision_rose_gaia_arcology_effects
+		hidden_effect = {
+			add_modifier = { modifier = rose_gaia_arcology }
+			
+			set_planet_flag = uncapped_generator_districts
+			set_planet_flag = uncapped_mining_districts
+			set_planet_flag = uncapped_farming_districts
+			
+			relic_world_conversion_effect = {
+				DISTRICT = district_city
+				VARIABLE = num_housing_districts
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 100
+			exists = owner
+			OR = {
+				pop_amount >= 7000
+				is_capital = yes
+			}
+		}
+	}
+}

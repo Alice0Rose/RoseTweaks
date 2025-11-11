@@ -1,0 +1,12 @@
+defined_text = {
+	name = HabitatTooltipEnergyDistrictMax
+	value = value:habitat_tooltip_energy_district_max
+}
+defined_text = {
+	name = HabitatTooltipMiningDistrictMax
+	value = value:habitat_tooltip_mining_district_max
+}
+defined_text = {
+	name = HabitatTooltipScienceDistrictMax
+	value = value:habitat_tooltip_science_district_max
+}

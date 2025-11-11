@@ -1,0 +1,1596 @@
+##################################
+######### ENERGY CREDITS #########
+##################################
+system_prospecting_dyson_swarm_energy_value = {
+	# Energy deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+	
+	# Energy deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_2
+			}
+		}
+		mult = 2
+		mode = add
+	}	
+
+	# Energy deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_3
+			}
+		}
+		mult = 3
+		mode = add
+	}	
+
+	# Energy deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_4
+			}
+		}
+		mult = 4
+		mode = add
+	}	
+
+	# Energy deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_5
+			}
+		}
+		mult = 5
+		mode = add
+	}		
+	
+	# Energy deposit of 6
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_6
+			}
+		}
+		mult = 6
+		mode = add
+	}	
+	
+	# Energy deposit of 7
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_7
+			}
+		}
+		mult = 7
+		mode = add
+	}		
+	
+	# Energy deposit of 8
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_8
+			}
+		}
+		mult = 8
+		mode = add
+	}		
+	
+	# Energy deposit of 9
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_9
+			}
+		}
+		mult = 9
+		mode = add
+	}		
+	
+	# Energy deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_energy_10
+			}
+		}
+		mult = 10
+		mode = add
+	}
+	
+	# Energy deposit of 30
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_guardian_dragon_hoard
+			}
+		}
+		mult = 30
+		mode = add
+	}
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+############ MINERALS ############
+##################################
+system_prospecting_dyson_swarm_minerals_value = {
+	# Minerals deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+	
+	# Minerals deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_2
+			}
+		}
+		mult = 2
+		mode = add
+	}	
+
+	# Minerals deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_3
+			}
+		}
+		mult = 3
+		mode = add
+	}	
+
+	# Minerals deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_4
+			}
+		}
+		mult = 4
+		mode = add
+	}	
+
+	# Minerals deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_5
+			}
+		}
+		mult = 5
+		mode = add
+	}		
+	
+	# Minerals deposit of 6
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_6
+			}
+		}
+		mult = 6
+		mode = add
+	}	
+	
+	# Minerals deposit of 7
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_7
+			}
+		}
+		mult = 7
+		mode = add
+	}		
+	
+	# Minerals deposit of 8
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_8
+			}
+		}
+		mult = 8
+		mode = add
+	}		
+	
+	# Minerals deposit of 9
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_9
+			}
+		}
+		mult = 9
+		mode = add
+	}		
+	
+	# Minerals deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_minerals_10
+			}
+		}
+		mult = 10
+		mode = add
+	}
+
+	# Minerals deposit of 30
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_guardian_dragon_hoard
+			}
+		}
+		mult = 30
+		mode = add
+	}
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	 FOOD	  ############
+##################################
+system_prospecting_dyson_swarm_food_value = {
+	# Food deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_food_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Food deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_food_10
+			}
+		}
+		mult = 10
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#######  CONSUMER GOODS  #########
+##################################
+system_prospecting_dyson_swarm_consumergoods_value = {
+	# Consumer Goods deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_consumer_goods_obsessional_directive
+			}
+		}
+		mult = 2
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	 ALLOYS	   ###########
+##################################
+system_prospecting_dyson_swarm_alloys_value = {
+	# Alloys deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Alloys deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+	
+	# Alloys deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Alloys deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+	
+	# Alloys deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_5
+			}
+		}
+		mult = 5
+		mode = add
+	}
+	
+	# Alloys deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_10
+			}
+		}
+		mult = 10
+		mode = add
+	}
+	
+	# Alloys deposit of 25
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_alloys_25
+			}
+		}
+		mult = 25
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########     UNITY      #########
+##################################
+system_prospecting_dyson_swarm_unity_value = {
+	# Unity deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_vast_unity_deposit
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Unity deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_crystal_rift
+			}
+		}
+		mult = 10
+		mode = add
+	}
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	 PHYSICS	 #########
+##################################
+system_prospecting_dyson_swarm_physics_value = {
+	# Physics deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Physics deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Physics deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Physics deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+
+	# Physics deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_5
+			}
+		}
+		mult = 5
+		mode = add
+	}
+
+	# Physics deposit of 6
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_6
+			}
+		}
+		mult = 6
+		mode = add
+	}
+
+	# Physics deposit of 7
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_7
+			}
+		}
+		mult = 7
+		mode = add
+	}
+
+	# Physics deposit of 8
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_8
+			}
+		}
+		mult = 8
+		mode = add
+	}
+
+	# Physics deposit of 9
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_9
+			}
+		}
+		mult = 9
+		mode = add
+	}
+	
+	# Physics deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				OR = {
+					is_deposit_type = d_physics_10
+					is_deposit_type = d_crystal_rift
+				}
+			}
+		}
+		mult = 10
+		mode = add
+	}
+	
+	# Physics deposit of 25
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_physics_25
+			}
+		}
+		mult = 25
+		mode = add
+	}
+
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	 SOCIETY	 #########
+##################################
+system_prospecting_dyson_swarm_society_value = {
+	# Society deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Society deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Society deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Society deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+
+	# Society deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_5
+			}
+		}
+		mult = 5
+		mode = add
+	}
+
+	# Society deposit of 6
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_6
+			}
+		}
+		mult = 6
+		mode = add
+	}
+
+	# Society deposit of 7
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_7
+			}
+		}
+		mult = 7
+		mode = add
+	}
+
+	# Society deposit of 8
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_8
+			}
+		}
+		mult = 8
+		mode = add
+	}
+
+	# Society deposit of 9
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_9
+			}
+		}
+		mult = 9
+		mode = add
+	}
+	
+	# Society deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_10
+			}
+		}
+		mult = 10
+		mode = add
+	}
+	
+	# Society deposit of 15
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_15
+			}
+		}
+		mult = 15
+		mode = add
+	}	
+	
+	# Society deposit of 25
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_society_25
+			}
+		}
+		mult = 25
+		mode = add
+	}
+
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########   ENGINEERING	 #########
+##################################
+system_prospecting_dyson_swarm_engineering_value = {
+	# Engineering deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Engineering deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Engineering deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Engineering deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+
+	# Engineering deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_5
+			}
+		}
+		mult = 5
+		mode = add
+	}
+
+	# Engineering deposit of 6
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_6
+			}
+		}
+		mult = 6
+		mode = add
+	}
+
+	# Engineering deposit of 7
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_7
+			}
+		}
+		mult = 7
+		mode = add
+	}
+
+	# Engineering deposit of 8
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_8
+			}
+		}
+		mult = 8
+		mode = add
+	}
+
+	# Engineering deposit of 9
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_9
+			}
+		}
+		mult = 9
+		mode = add
+	}
+	
+	# Engineering deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_10
+			}
+		}
+		mult = 10
+		mode = add
+	}
+
+	# Engineering deposit of 25
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_engineering_25
+			}
+		}
+		mult = 25
+		mode = add
+	}
+
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########     MOTES	     #########
+##################################
+system_prospecting_dyson_swarm_motes_value = {
+	# Volatile Motes deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_volatile_motes_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Volatile Motes deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_volatile_motes_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+	
+	# Volatile Motes deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_volatile_motes_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Volatile Motes deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_volatile_motes_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+	
+	# Volatile Motes deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_volatile_motes_5
+			}
+		}
+		mult = 5
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	  GASES  	 #########
+##################################
+system_prospecting_dyson_swarm_gases_value = {
+	# Exotic Gases deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_exotic_gases_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Exotic Gases deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_exotic_gases_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+	
+	# Exotic Gases deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_exotic_gases_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Exotic Gases deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_exotic_gases_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+	
+	# Exotic Gases deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_exotic_gases_5
+			}
+		}
+		mult = 5
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	 CRYSTALS	 #########
+##################################
+system_prospecting_dyson_swarm_crystals_value = {
+	# Rare Crystals deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_rare_crystals_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Rare Crystals deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_rare_crystals_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+	
+	# Rare Crystals deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_rare_crystals_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Rare Crystals deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_rare_crystals_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+	
+	# Rare Crystals deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_rare_crystals_5
+			}
+		}
+		mult = 5
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########  LIVING METAL  #########
+##################################
+system_prospecting_dyson_swarm_livingmetal_value = {
+	# Living Metal deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_living_metal_deposit
+			}
+		}
+		mult = 1
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########      ZRO       #########
+##################################
+system_prospecting_dyson_swarm_zro_value = {
+	# Zro deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_zro_deposit_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+	
+	# Zro deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_zro_deposit_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Zro deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_zro_deposit_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Zro deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_zro_deposit_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+
+	# Zro deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_zro_deposit_5
+			}
+		}
+		mult = 5
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+########   DARK MATTER    ########
+##################################
+system_prospecting_dyson_swarm_darkmatter_value = {
+	# Dark Matter deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_dark_matter_deposit_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+	
+	# Dark Matter deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_dark_matter_deposit_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Dark Matter deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_dark_matter_deposit_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Dark Matter deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_dark_matter_deposit_10
+			}
+		}
+		mult = 10
+		mode = add
+	}	
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+#########	 NANITES	 #########
+##################################
+system_prospecting_dyson_swarm_nanites_value = {
+	# Nanites deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_nanites_deposit
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Full swarm multiplier
+	multiply = 30
+}
+
+##################################
+########  ASTRAL THREADS  ########
+##################################
+system_prospecting_dyson_swarm_threads_value = {
+	# Astral Threads deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_astral_threads_deposit_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+	
+	# Astral Threads deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_astral_threads_deposit_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Astral Threads deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_astral_threads_deposit_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Full swarm multiplier	
+	multiply = 30
+}
+
+##################################
+######	  MINOR ARTIFACTS   ######
+##################################
+system_prospecting_dyson_swarm_artifacts_value = {
+	# Minor Artifacts deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				OR = {
+					is_deposit_type = d_artifacts_research_1
+					is_deposit_type = d_artifacts_mining_1
+					is_deposit_type = d_artifacts_planet_1
+				}
+			}
+		}
+		mult = 1
+		mode = add
+	}
+	
+	# Minor Artifacts deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				OR = {
+					is_deposit_type = d_artifacts_research_2
+					is_deposit_type = d_artifacts_mining_2
+					is_deposit_type = d_artifacts_planet_2
+				}
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Minor Artifacts deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				OR = {
+					is_deposit_type = d_artifacts_research_3
+					is_deposit_type = d_artifacts_mining_3
+					is_deposit_type = d_artifacts_planet_3
+				}
+			}
+		}
+		mult = 3
+		mode = add
+	}
+	
+	# Full swarm multiplier	
+	multiply = 30
+}
+
+##################################
+######### TRADE VALUE	#########
+##################################
+system_prospecting_dyson_swarm_trade_value = {
+	# Trade Value deposit of 1
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_1
+			}
+		}
+		mult = 1
+		mode = add
+	}
+
+	# Trade Value deposit of 2
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_2
+			}
+		}
+		mult = 2
+		mode = add
+	}
+
+	# Trade Value deposit of 3
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_3
+			}
+		}
+		mult = 3
+		mode = add
+	}
+
+	# Trade Value deposit of 4
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_4
+			}
+		}
+		mult = 4
+		mode = add
+	}
+
+	# Trade Value deposit of 5
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_5
+			}
+		}
+		mult = 5
+		mode = add
+	}
+
+	# Trade Value deposit of 6
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_6
+			}
+		}
+		mult = 6
+		mode = add
+	}
+
+	# Trade Value deposit of 7
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_7
+			}
+		}
+		mult = 7
+		mode = add
+	}
+
+	# Trade Value deposit of 8
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_8
+			}
+		}
+		mult = 8
+		mode = add
+	}
+
+	# Trade Value deposit of 9
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_9
+			}
+		}
+		mult = 9
+		mode = add
+	}
+	
+	# Trade Value deposit of 10
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		trigger_scope = system_star
+		parameters = {
+			limit = {
+				is_deposit_type = d_trade_value_10
+			}
+		}
+		mult = 10
+		mode = add
+	}
+
+	# Full swarm multiplier
+	multiply = 30
+}

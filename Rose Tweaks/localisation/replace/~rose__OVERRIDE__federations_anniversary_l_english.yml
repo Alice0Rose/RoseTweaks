@@ -1,0 +1,2 @@
+﻿l_english: 
+ habitat_system_tt: "§EHabitat Potential:§!$TABBED_NEW_LINE$- Maximum Districts: §Y[root.GetHabitatMaxDistricts]§!$TABBED_NEW_LINE$- £energy£: §Y[root.HabitatTooltipEnergyDistrictMax]§! | £minerals£: §Y[root.HabitatTooltipMiningDistrictMax]§! | £research£: §Y[root.HabitatTooltipScienceDistrictMax]§!"

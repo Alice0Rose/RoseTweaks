@@ -1,0 +1,32 @@
+on_game_start = {
+	events = {
+		rose_more_toxic_terraforming.1 # More toxic terraforming candidates
+		rose_early_ethic_correction.1 # Allows ethics to switch to their proper distribution at the start of the game for players
+	}
+}
+
+on_game_start_country = {
+	events = { # country_event
+		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+		rose_choose_starting_ruler_ethic.1 # Lets players choose their starting ruler's ethic
+	}
+}
+
+# A country is created via create_country or create_rebels
+# This = created country
+# From = root of context where create_country/create_rebels happens
+on_country_created = {
+	events = { # country_event
+		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+	}
+}
+
+# Fired whenever a new owner is set for a planet, following a war or through trade
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Country scope (previous owner, if any)
+on_planet_transfer = {
+	events = {
+		rose_fe_tech_from_planet.2 # Increments the number of FE planets a country has taken
+	}
+}

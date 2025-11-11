@@ -1,0 +1,10 @@
+﻿l_english:
+ zone_rose_habitat_food: "Expanded $zone_habitat_hydroponics$"
+ zone_rose_habitat_food_desc: "$zone_food_desc$"
+ zone_rose_habitat_urban_energy: "$zone_urban_energy$"
+ zone_rose_habitat_urban_energy_desc: "$zone_urban_energy$"
+ zone_rose_habitat_urban_minerals: "$zone_urban_minerals$"
+ zone_rose_habitat_urban_minerals_desc: "$zone_urban_minerals_desc$"
+ zone_rose_habitat_urban_food: "$zone_urban_food$"
+ zone_rose_habitat_urban_food_desc: "$zone_urban_food_desc$"
+ 

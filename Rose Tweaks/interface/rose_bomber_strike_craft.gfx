@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_rose_bomber_fauna_strike_craft"
+		textureFile = "gfx/interface/icons/mutations/rose_bomber_fauna_strike_craft.dds"
+	}
+}

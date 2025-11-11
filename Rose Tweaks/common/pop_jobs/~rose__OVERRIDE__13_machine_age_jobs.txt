@@ -1,0 +1,87 @@
+neural_chip = {
+	category = chip_slave
+	first_come_first_served = yes
+	purge = purge_cosmogenesis
+	is_capped_by_modifier = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_lathe_capital
+			icon = organic_battery
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		has_planet = yes
+		is_sapient = yes
+	}
+	possible = {
+		owner = { has_ascension_perk = ap_cosmogenesis }
+		planet = { is_planet_class = pc_cosmogenesis_world }
+		NOT = { has_trait = trait_robot_digital_2 }
+	}
+
+	resources = {
+		category = planet_neural_chips
+		produces = {
+			society_research = 0.75
+			engineering_research = 0.75
+			physics_research = 0.75
+			advanced_logic = 0.025
+			mult = value:num_chip_slave
+		}
+		upkeep = {
+			energy = 4.5
+			mult = value:num_chip_slave_halved
+		}
+	}
+
+	weight = {
+		weight = 90000
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+}
+
+neural_chip_processing = {
+	category = chip_slave
+	first_come_first_served = yes
+	is_capped_by_modifier = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_lathe_capital
+			icon = organic_battery
+		}
+	}
+
+	promotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = chip_slave
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		has_planet = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = { has_ascension_perk = ap_cosmogenesis }
+		NOT = { is_pop_category = chip_slave }
+		planet = { is_planet_class = pc_cosmogenesis_world }
+		NOT = { has_trait = trait_robot_digital_2 }
+	}
+	
+	weight = {
+		weight = 99999
+	}
+}

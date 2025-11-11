@@ -1,0 +1,283 @@
+zone_rose_habitat_food = {
+	icon = GFX_district_specialization_food
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			has_technology = tech_hydroponics
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		habitat_energy
+	}
+
+	included_building_sets = {
+		hydroponics
+		farming
+		fallen_empire_farming
+	}
+
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = 200
+	}
+	
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+			}
+			planet_is_habitat_equivalent = yes
+		}
+		job_technician_add = -100
+		mult = owner.value:hab_void_dweller_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+	
+	swap_type = district_farming
+	swap_type_weight = 5
+}
+
+zone_rose_habitat_urban_energy = {
+	icon = GFX_district_specialization_energy
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOT = {
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = 0
+
+	zone_sets = {
+		habitat_urban
+	}
+
+	included_building_sets = {
+		generator
+		urban
+		fallen_empire_generator
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
+		planet_technician_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_ringworld_habitable
+		}
+		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
+		planet_technician_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
+		mult = 5
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 13
+}
+
+zone_rose_habitat_urban_minerals = {
+	icon = GFX_district_specialization_minerals
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		habitat_urban
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = 0
+
+	included_building_sets = {
+		mining
+		urban
+		fallen_empire_mining
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
+		planet_miners_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_ringworld_habitable
+		}
+		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
+		planet_miners_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
+		mult = 5
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 13
+}
+
+zone_rose_habitat_urban_food = {
+	icon = GFX_district_specialization_food
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOT = {
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = 0
+
+	zone_sets = {
+		habitat_urban
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		urban
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
+		planet_farmers_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_ringworld_habitable
+		}
+		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
+		planet_farmers_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
+		mult = 5
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 13
+}

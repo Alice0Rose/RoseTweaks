@@ -1,0 +1,468 @@
+@research_policy_speed = 0.10
+@research_policy_speed_slow = 0.05
+@research_policy_draw_chance = 1.00
+
+physics_research_policy = {
+	potential = {
+		has_ascension_perk = ap_technological_ascendancy
+	}
+	option = {
+		name = "research_policy_no_focus"
+
+		modifier = {
+			country_physics_tech_research_speed = @research_policy_speed
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = "research_policy_field_manipulation"
+
+		modifier = {
+			country_physics_tech_research_speed = @research_policy_speed_slow
+			category_field_manipulation_research_speed_mult = @research_policy_speed
+			category_field_manipulation_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_particles"
+
+		modifier = {
+			country_physics_tech_research_speed = @research_policy_speed_slow
+			category_particles_research_speed_mult = @research_policy_speed
+			category_particles_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_computing"
+
+		modifier = {
+			country_physics_tech_research_speed = @research_policy_speed_slow
+			category_computing_research_speed_mult = @research_policy_speed
+			category_computing_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+society_research_policy = {
+	potential = {
+		has_ascension_perk = ap_technological_ascendancy
+	}
+
+	option = {
+		name = "research_policy_no_focus"
+
+		modifier = {
+			country_society_tech_research_speed = @research_policy_speed
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = "research_policy_new_worlds"
+
+		modifier = {
+			country_society_tech_research_speed = @research_policy_speed_slow
+			category_new_worlds_research_speed_mult = @research_policy_speed
+			category_new_worlds_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_statecraft"
+
+		modifier = {
+			country_society_tech_research_speed = @research_policy_speed_slow
+			category_statecraft_research_speed_mult = @research_policy_speed
+			category_statecraft_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_biology"
+
+		modifier = {
+			country_society_tech_research_speed = @research_policy_speed_slow
+			category_biology_research_speed_mult = @research_policy_speed
+			category_biology_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_military_theory"
+
+		modifier = {
+			country_society_tech_research_speed = @research_policy_speed_slow
+			category_military_theory_research_speed_mult = @research_policy_speed
+			category_military_theory_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+engineering_research_policy = {
+	potential = {
+		has_ascension_perk = ap_technological_ascendancy
+	}
+
+	option = {
+		name = "research_policy_no_focus"
+
+		modifier = {
+			country_engineering_tech_research_speed = @research_policy_speed
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = "research_policy_materials"
+
+		modifier = {
+			country_engineering_tech_research_speed = @research_policy_speed_slow
+			category_materials_research_speed_mult = @research_policy_speed
+			category_materials_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_propulsion"
+
+		modifier = {
+			country_engineering_tech_research_speed = @research_policy_speed_slow
+			category_propulsion_research_speed_mult = @research_policy_speed
+			category_propulsion_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_voidcraft"
+
+		modifier = {
+			country_engineering_tech_research_speed = @research_policy_speed_slow
+			category_voidcraft_research_speed_mult = @research_policy_speed
+			category_voidcraft_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "research_policy_industry"
+
+		modifier = {
+			country_engineering_tech_research_speed = @research_policy_speed_slow
+			category_industry_research_speed_mult = @research_policy_speed
+			category_industry_draw_chance_mult = @research_policy_draw_chance
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+trade_policy = {
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	option = {
+		name = "trade_policy_default"
+
+		potential = {
+			is_worker_coop_empire = no
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_trade_conversions = {
+					trade = 0.5
+					energy = 0.5
+				}
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				set_trade_conversions = { }
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_consumer_goods"
+		potential = {
+			OR = {
+				has_federation = no
+				AND = {
+					has_federation = yes
+					federation = { NOT = { has_federation_perk = trade_federation_passive } }
+				}
+			}
+			has_tradition = tr_mercantile_adaptive_economic_policies
+			is_worker_coop_empire = no
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				consumer_goods = 0.25
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_consumer_goods
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "trade_policy_unity"
+		potential = {
+			OR = {
+				has_federation = no
+				AND = {
+					has_federation = yes
+					federation = {
+						NOR = {
+							has_federation_perk = trade_federation_passive
+							has_federation_perk = unity_trade_1
+						}
+					}
+				}
+			}
+			has_tradition = tr_mercantile_adaptive_economic_policies
+			is_worker_coop_empire = no
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.50
+				unity = 0.25
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_unity
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_trade_league"
+		potential = {
+			has_federation = yes
+			federation = { has_federation_perk = trade_federation_passive }
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.50
+				energy = 0.15
+				consumer_goods = 0.15
+				unity = 0.15
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_trade_league
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+
+	option = {
+		name = "trade_policy_holy_covenant"
+		potential = {
+			has_federation = yes
+			federation = { has_federation_perk = unity_trade_1 }
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.50
+				unity = 0.375
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_holy_covenant
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+
+	option = {
+		name = "trade_policy_mutual_aid"
+		potential = {
+			is_worker_coop_empire = yes
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.25
+				energy = 0.20
+				minerals = 0.20
+				food = 0.20
+				unity = 0.15
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_mutual_aid
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+
+#	option = {
+#		name = "trade_policy_research"
+#
+#		potential = {
+#			is_worker_coop_empire = no
+#		}
+#
+#		on_enabled = {
+#			set_trade_conversions = {
+#				physics_research = 0.1
+#				society_research = 0.1
+#				engineering_research = 0.1
+#			}
+#		}
+#
+#		AI_weight = {
+#			factor = 0
+#		}
+#	}
+	
+	option = {
+		name = "trade_policy_mutual_aid_minerals"
+		potential = {
+			is_worker_coop_empire = yes
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.30
+				energy = 0.30
+				minerals = 0.30
+				unity = 0.10
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_mutual_aid_minerals
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "trade_policy_mutual_aid_food"
+		potential = {
+			is_worker_coop_empire = yes
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.30
+				energy = 0.30
+				food = 0.30
+				unity = 0.10
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_mutual_aid_food
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 100
+		}
+	}
+}

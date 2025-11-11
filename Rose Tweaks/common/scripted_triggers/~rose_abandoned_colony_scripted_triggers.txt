@@ -1,0 +1,88 @@
+# this = planet
+rose_can_abandon_colony = {
+	# AI empires from getting the decision	
+	owner = {
+		is_ai = no
+	}
+	
+	# Empire cannot be virtual
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_virtual
+		owner = {
+			NOT = {
+				has_tradition = tr_virtuality_adopt
+			}
+		}
+	}
+
+	# Empire cannot have the horizon needle unlocked (to prevent cheesing the cosmogenesis ending)
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_horizon_needle
+		owner = {
+			NOT = {
+				has_technology = tech_cosmogenesis_crisis_5
+			}
+		}
+	}
+	
+	# Planet cannot be capital
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_capital
+		is_capital = no
+	}
+
+	# Empire cannot be in a non-total war
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_at_war
+		owner = {
+			count_war = {
+				count = all
+				limit = { 
+					is_total_war = yes
+				}
+			}
+		}
+	}
+	
+	# Planet cannot have unwilling/uncontrolled pops
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_unwilling_pops
+		
+		# Planet cannot have any pops that have traits that prevent them from resettling
+		NOT = {
+			any_owned_pop_group = {
+				OR = { 
+					has_trait = trait_self_modified
+					has_trait = trait_pathogenic_genes
+				}
+			}
+		}
+		
+		# Reformist planet cannot be abandoned, that'd be too easy!
+		NOT = { 
+			has_modifier = paragon_origin_reformists
+		}
+	}
+
+	# Genesis Guides cannot abandon their presapient wards
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_abandon_presapients
+		NAND = {
+			has_deposit = d_genesis_preserve
+			
+			owner = {
+				is_guided_sapience_empire = yes
+			}
+		}
+	}
+
+	# Assault armies cannot be abandoned
+	custom_tooltip_fail = {
+		text = rose_abandon_colony_fail_abandon_armies
+		NOT = {
+			any_planet_army = { 
+				is_defensive_army = no 
+			}
+		}
+	}
+}

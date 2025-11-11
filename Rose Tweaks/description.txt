@@ -1,0 +1,172 @@
+Armies:
+- Machine armies (Individualistic and Machine Intelligence) are linked to species, making them affected by species traits.
+- Synthetic empires have access to Individualistic machine armies and associated technologies.
+
+Ascension Perks:
+- Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th (cus that's stooopid)
+- Galactic Force Projection gives +250 fleet capacity instead of +50.
+- Executive Vigor gives +2 sector size.
+- Transcendent Learning gives +10% leader lifespan.
+- Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
+- Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
+
+Astral Actions:
+- Summon Dimensional Fleet can no longer be used by AI empires.
+
+Components:
+- Added Advanced Bomber Wings (along with versions for bio ships and space fauna) which have equivalent stats to Advanced Strike Craft, but only target enemy ships, ignoring other strike craft. Unlocked alongside tier 3 strike craft with the corresponding tech.
+
+Agendas:
+- Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
+- Mind over Matter (Psionic tech agenda) gives Zro Distillation after Thought Enforcement
+- Ascension tech agendas are heavily prioritized by AIs, pushing them to complete their ascensions more reliably and quickly than vanilla
+
+Decisions:
+- The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
+- The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
+- The "Create Nature Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds
+
+Diplomacy:
+- Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires but 50% more slowly, requiring a significant power difference before vassalization is an option
+- Vassalization acceptance loss scales less with distance, making vassalization across large distances easier
+- AI empires are much less likely to propose secret fealty, reducing spam
+
+Fleet Management:
+- Maximum possible command limit raised from 500 to 10000
+- Default command limit raised from 20 to 50 
+- Fleet command limit repeatable tech gives +50 instead of +20 and has 10 levels instead of 5
+- Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
+- Mercenary Enclaves cannot be created by AI empires to reduce lag
+- Behemoths won't enrage when they run into each other if they're in their owners system (listen to your mother and stop fighting you two!!)
+
+Empire Size:
+- Empire size effect on tech is reduced by 25%
+
+Federations:
+- "A Union of Faith" Level 5 Holy Covenant perk gives +10% pop growth speed and +5% mechanical pop assembly speed instead of +15% pop growth speed and -30% mechanical pop assembly speed
+
+Elections:
+- Civic ruler class preferences no longer affect elections
+- Oligarchies and Corporate authorities can select any leader during their election, always including the current ruler
+
+Civics:
+- Technocracy gives +1 Unity per researcher
+- Technocracy council position gives +0.05 of each science type per skill level to researchers
+- Shadow Council gives +15% council agenda speed
+- Miners Guild gives +1 unity per miner
+- Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
+- Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops (also the message lasts less time to be less spammy lol)
+- Crusader Spirit gives +1 Unity from Soldiers
+- Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist
+- Obsessional Directive quota no longer scales with difficulty
+- Superstitious Beliefs civic can now be removed if you have over 1000 of each science category
+- Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
+
+Origins:
+- Origins which spawn other AI empires cannot be selected by randomly generated AI empires
+	- Imperial Fiefdom
+	- Common Ground
+	- Hegemon
+	- Lost Colony
+- Here Be Dragons won't punish you for ascending too quickly by making you wait 2400 days before talking to you x-x
+- Slingshot to the Stars starts with the Quantum Catapult on a Neutron Star instead of a Pulsar (won't remove your shields)
+- Under One Rule ascension event changed from 10-30 years to 15-17 years to trigger
+- Under One Rule English localisation fixed in certain events
+
+Opinion Modifiers:
+- Fallen Empires dislike you 5x less for researching their tech if you aren't Cosmogenesis, since you aren't as much of a threat ;)
+
+Galaxy Generation:
+- All AI personality types have the same probability of being an advanced AI
+
+Planet Classes:
+- Gaia World gives an additional +5% happiness and job efficiency (totaling +15%) and give +10% pop assembly speed (machine and organic)
+- Toxic Worlds can be terraformed directly to Gaia worlds if you have both APs
+
+Policies:
+- Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy (0.3 and 0.3 instead of 0.2, 0.2, and 0.2)
+- Research Focus Policies from taking the Technological Ascendancy ascension perk now give a +100% draw chance and +5% type research speed if specialized
+
+Jobs:
+- Virtual Synthetic pops (but not Full Virtual pops) can be used in the Synthetic Lathe
+
+Factions:
+- Factions will now spawn after 1 year for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowd Sourcing empires
+
+Techs:
+- Techs required for ascension will be heavily prioritized for AIs
+- Climate Restoration tech is T3 instead of T4 and is more likely to show up if you have the Adaptability tradition
+- Xenomorph tech no longer requires uplifting tech
+- Targeted Gene Expressions gives +1 trait points and picks so all empires can use auto-modding regardless of ascension
+- Synthetic Personality Matrix gives +5% robotic workforce and -5% robotic amenity usage (just so it actually does something for synthetic empires)
+- Both defense platform repeatables now give partial Deep Space Citadel capacity
+
+Tooltips:
+- Hovering over valid systems will show the max output of a Dyson Swarm if placed in the system
+- Orbital habitat tooltip shows the potential districts of each type again (why did they remove this oml)
+
+Traditions:
+- Aptitude reworked to be more viable :)
+- Synthetics gives -15% empire size from pops for Synthetic Virtual empires
+
+Traits:
+- Luminary ascension traits are reworked to all be similarly useful :D
+	- Cybernetic: 
+		- Leader pool size +1
+		- Leader cap for all categories +2
+		- Leader XP gain +25%
+		- Cyborg bonus workforce +10%
+		- Cyborg happiness +10%
+		- Non-Cyborg happiness -15%
+		- Pop growth speed +20%
+	- Psionic:
+		- Monthly influence +2
+		- Psionic bonus workforce +20%
+		- Non-psionic happiness -20%
+		- Governing ethics attraction +25%
+		- Crime -20
+		- Decryption and encryption +2
+	- Synthetic:
+		- Robotic bonus workforce +25%
+		- Ethics shift speed +25%
+		- Mechanical pop assembly +1
+		- Pop happiness -15%
+	- Genetic:
+		- Biological species trait points and picks +1
+		- Modify species cost -20%
+		- Organic pop assembly +1.5
+		- Organic pop assembly +25%
+		- Pop growth speed -15%
+- Psionic starting traits are available to all portraits :)
+- Added the Revered trait which gives +40 lifespan for 2 trait points
+- Added Inflexible Chassis for robots which reduces minimum habitability by 25% for +2 trait points
+- Added Hardwired for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
+	
+Politics:
+- Egalitarian governments that become Galactic Emperor maintain their ethics
+- Egalitarian and materialist empires that chose to gain a God Emperor via psionic ascension maintain their ethics
+
+Government:
+- Empires with 2 or more ethics will get an event at the start of the game to choose what their ruler's and homeworld governor's ethic will be
+- For the first 2 years, pops are much more likely to switch ethics
+
+Ascension:
+- Psionic covenant negative side effects no longer can randomly kill your leaders
+- Composer of Strands negative is changed from -2 bio trait picks to:
+	- +25% planetary build cost
+	- -10% miner job efficiency
+	- -5% metallurgist job efficiency
+- Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
+
+Zones:
+- Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs
+- Added the basic resource support zones to habitat urban zones
+
+Fixes:
+- Removes the alloy cost and upkeep of T2 Spikespores
+
+
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

@@ -1,0 +1,60 @@
+trait_rose_revered = {
+	cost = 2
+	category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	modifier = { leader_lifespan_add = 40 }
+	opposites = { "trait_enduring" "trait_venerable" "trait_fleeting" "trait_fleeting_lithoid" "trait_syncretic_proles" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	tags = { organic positive leader }
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_rose_inflexible_chassis = {
+	cost = -2
+	category = robotic
+	allowed_archetypes = { ROBOT MACHINE }
+	tags = { machine negative habitability }
+	modifier = {
+		habitability_floor_add = -0.25
+	}
+	slave_cost = {
+		energy = -200
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_rose_hardwired = {
+	host_has_dlc = "BioGenesis"
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	tags = { machine negative migration }
+	custom_tooltip = trait_rose_hardwired_effect
+	modifier = {
+		pop_resettlement_cost_mult = 2
+	}
+
+	slave_cost = {
+		energy = -500
+	}
+	assembly_score = {
+		modifier = {
+			from = { free_jobs = 0 }
+			add = -2
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

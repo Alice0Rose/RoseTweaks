@@ -1,0 +1,26 @@
+namespace = rose_early_ethic_correction
+
+event = {
+	id = rose_early_ethic_correction.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {  
+			if = {
+				limit = {
+					NOR = {
+						has_modifier = rose_early_ethic_correction
+						is_ai = yes
+					}
+				}
+					
+				add_modifier = {
+					modifier = rose_early_ethic_correction
+					years = 1
+				}
+			}
+		}
+	}
+}

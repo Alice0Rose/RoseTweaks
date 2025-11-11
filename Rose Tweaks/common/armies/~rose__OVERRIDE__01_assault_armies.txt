@@ -1,0 +1,168 @@
+# Mega-Warform
+machine_assault_3 = {
+	damage = 4.0
+	health = 6.0
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 4.0
+	war_exhaustion = 4.0
+	time = 500
+	has_species = yes
+
+	icon = GFX_army_type_machine_assault
+
+	resources = {
+		category = armies
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			minerals = 800
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 800
+			mult = @mineral_to_food_cost_ratio
+		}
+
+		upkeep = {
+			energy = 8
+		}
+	}
+
+	potential_country = {
+		is_machine_empire = yes
+	}
+
+	prerequisites = { "tech_biomechanics" }
+
+	ai_weight = {
+		base = 50
+	}
+}
+
+# IM Armies 2
+individual_machine_assault_2 = {
+	damage = 1.5
+	health = 2.5
+	morale = 1.5
+	morale_damage = 1.5
+	collateral_damage = 2.0
+	war_exhaustion = 1.0
+	time = 120
+	has_species = yes
+
+	icon = GFX_army_type_machine_assault
+
+	resources = {
+		category = armies
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			minerals = 200
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 200
+			mult = @mineral_to_food_cost_ratio
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	potential_country = {
+		OR = {
+			is_individual_machine = yes
+			has_country_flag = synthetic_empire
+		}
+	}
+	potential = {
+		from = {
+			OR = {
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_mechanical"
+			}
+		}
+	}
+
+	prerequisites = { "tech_adaptive_combat_algorithms" }
+
+	ai_weight = {
+		base = 100
+	}
+}
+
+# IM Armies 3
+individual_machine_assault_3 = {
+	damage = 4.0
+	health = 6.0
+	morale = 2.0
+	morale_damage = 1.5
+	collateral_damage = 4.0
+	war_exhaustion = 4.0
+	time = 500
+	has_species = yes
+
+	icon = GFX_army_type_machine_assault
+
+	resources = {
+		category = armies
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			minerals = 800
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 800
+			mult = @mineral_to_food_cost_ratio
+		}
+
+		upkeep = {
+			energy = 8
+		}
+	}
+
+	potential_country = {
+		OR = {
+			is_individual_machine = yes
+			has_country_flag = synthetic_empire
+		}
+	}
+	potential = {
+		from = {
+			OR = {
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_mechanical"
+			}
+		}
+	}
+	
+	prerequisites = { "tech_biomechanics" }
+
+	ai_weight = {
+		base = 50
+	}
+}

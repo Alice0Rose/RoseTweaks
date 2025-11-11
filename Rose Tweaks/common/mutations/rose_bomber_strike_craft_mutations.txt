@@ -1,0 +1,10 @@
+rose_bomber_fauna_strike_craft = {
+	type = offensive
+	icon = "GFX_rose_bomber_fauna_strike_craft"
+	ship_components = {
+		small = "ROSE_BOMBER_FAUNA_STRIKE_CRAFT_SMALL"
+		medium = "ROSE_BOMBER_FAUNA_STRIKE_CRAFT_MEDIUM"
+		large = "ROSE_BOMBER_FAUNA_STRIKE_CRAFT_LARGE"
+		extra_large = "ROSE_BOMBER_FAUNA_STRIKE_CRAFT_EXTRA_LARGE"
+	}
+}

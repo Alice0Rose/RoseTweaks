@@ -1,0 +1,715 @@
+decision_rose_orbital_ring = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_orbital_ring
+	enactment_time = 360
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = no }
+			}
+			influence = 50
+			alloys = 1000
+		}
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = yes }
+			}
+			influence = 50
+			alloys = 500
+			food = 1750
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = {
+			# Prevents AI empires from getting the decision	
+			is_ai = no
+			
+			# Must have orbital ring tech to build it...duh :P
+			has_technology = tech_orbital_ring_tier_1
+		}
+		
+		exists = starbase
+		is_inside_border = from
+		
+		# Doesn't show if a orbital ring is already present or is a ringworld for obvious reasons
+		NOR = {
+			exists = orbital_defence
+			is_ringworld = yes
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_surveyed_planet"
+			is_surveyed = { # prevent leaking habitability information
+				who = prev.from
+				status = yes
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_anomaly"
+			NOT = { has_anomaly = yes }
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet_orbital_ring"
+			is_colony = yes
+			exists = owner
+			exists = controller
+			controller = { is_same_value = prev.owner }
+		}
+		
+		# Prevents it on megastructure planets and on planets with megastructures built around them
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOR = {
+				has_planet_flag = megastructure
+				AND = {
+					has_planet_flag = has_megastructure
+					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+					NOR = {
+						has_planet_flag = has_payback_habitat
+						any_megastructure = {
+							is_megastructure_type = grand_archive_0
+						}
+					}
+				}
+				has_planet_flag = ruined_orbital_ring_planet
+				solar_system = {
+					has_star_flag = ring_world_built
+				}
+				is_artificial = yes
+			}
+		}		
+		
+		custom_tooltip = {
+			fail_text = "requires_not_hostile_or_primitive"
+			NOR = {
+				planet_is_hostile_or_crisis = yes
+				AND = {
+					exists = owner
+					owner = {
+						is_country_type = primitive
+					}
+				}
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_orbital_debris"
+			NOT = {
+				has_planet_flag = has_orbital_debris
+			}
+		}
+		
+		# Prevents if a construction ship is currently building a megastructure on the planet
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOT = {
+				solar_system = {
+					any_fleet_in_system = {
+						distance = {
+							source = root
+							min_distance >= 0
+							max_distance <= 15
+							type=euclidean
+							same_solar_system = yes
+						}
+						
+						is_constructing = megastructure
+					}
+				}
+			}
+		}
+	}
+
+ 	abort_trigger = {		
+		OR = {
+			# If an anomaly pops up somehow
+			has_anomaly = yes
+			
+			# If the colony dies or is lost control of
+			NAND = {
+				is_colony = yes
+				exists = owner
+				exists = controller
+				controller = { is_same_value = prev.owner }
+			}
+			
+			# If the planet becomes a crisis planet somehow
+			planet_is_hostile_or_crisis = yes
+			
+			# If the planet gets taken over by primitives
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+			
+			# If the planet becomes a megastructure (I don't think this can happen)
+			has_planet_flag = megastructure
+		
+			# If the planet gets some other megastructure built on it other than the Grand Archive or Payback habitat
+			AND = {
+				has_planet_flag = has_megastructure
+				NOR = {
+					has_planet_flag = has_payback_habitat
+					any_megastructure = {
+						is_megastructure_type = grand_archive_0
+					}
+				}
+			}
+			
+			# If the planet becomes artificial (ring world/other edge-case check)
+			is_artificial = yes
+		
+			# If the planet liters too much in orbit and creates debris
+			has_planet_flag = has_orbital_debris
+		}
+ 	}
+
+	abort_effect = {
+		# Refunds resources after aborting the decision
+		owner = {
+			if = {
+				limit = {
+					owner = { country_uses_bio_ships = no }
+				}
+				add_resource = {
+					influence = 50
+					alloys = 1000
+				}
+			}
+			if = {
+				limit = {
+					owner = { country_uses_bio_ships = yes }
+				}
+				add_resource = {
+					influence = 50
+					alloys = 500
+					food = 1750
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_rose_orbital_ring_effects
+		
+		hidden_effect = {
+			set_planet_flag = has_megastructure
+			save_event_target_as = orbital_ring_planet
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			
+			create_starbase = {
+				size = orbital_ring_tier_1
+				owner = FROM
+				effect = { }
+			}
+
+			from = {
+				country_event = { id = tutorial.2121 }
+			}
+		}	
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_rose_orbital_ring_2 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_orbital_ring
+	enactment_time = 810
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = no }
+			}
+			influence = 150
+			alloys = 2500
+		}
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = yes }
+			}
+			influence = 150
+			alloys = 1250
+			food = 4375
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = {
+			# Prevents AI empires from getting the decision	
+			is_ai = no
+			
+			# Must have orbital ring tech to build it...duh :P
+			has_technology = tech_orbital_ring_tier_1
+		}
+		
+		exists = starbase
+		is_inside_border = from
+		
+		# Doesn't show if a orbital ring is already present or is a ringworld for obvious reasons
+		NOR = {
+			exists = orbital_defence
+			is_ringworld = yes
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_surveyed_planet"
+			is_surveyed = { # prevent leaking habitability information
+				who = prev.from
+				status = yes
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_anomaly"
+			NOT = { has_anomaly = yes }
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet_orbital_ring"
+			is_colony = yes
+			exists = owner
+			exists = controller
+			controller = { is_same_value = prev.owner }
+		}
+		
+		# Prevents it on megastructure planets and on planets with megastructures built around them
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOR = {
+				has_planet_flag = megastructure
+				AND = {
+					has_planet_flag = has_megastructure
+					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+					NOR = {
+						has_planet_flag = has_payback_habitat
+						any_megastructure = {
+							is_megastructure_type = grand_archive_0
+						}
+					}
+				}
+				has_planet_flag = ruined_orbital_ring_planet
+				solar_system = {
+					has_star_flag = ring_world_built
+				}
+				is_artificial = yes
+			}
+		}		
+		
+		custom_tooltip = {
+			fail_text = "requires_not_hostile_or_primitive"
+			NOR = {
+				planet_is_hostile_or_crisis = yes
+				AND = {
+					exists = owner
+					owner = {
+						is_country_type = primitive
+					}
+				}
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_orbital_debris"
+			NOT = {
+				has_planet_flag = has_orbital_debris
+			}
+		}
+		
+		# Prevents if a construction ship is currently building a megastructure on the planet
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOT = {
+				solar_system = {
+					any_fleet_in_system = {
+						distance = {
+							source = root
+							min_distance >= 0
+							max_distance <= 15
+							type=euclidean
+							same_solar_system = yes
+						}
+						
+						is_constructing = megastructure
+					}
+				}
+			}
+		}
+		
+		# Makes sure the planet meets the requirements for a t2 orbital ring
+		owner = { has_technology = tech_starbase_4 }
+		OR = {
+			has_planetary_ascension_tier >= 3
+			has_major_upgraded_capital = yes
+		}
+	}
+
+ 	abort_trigger = {		
+		OR = {
+			# If an anomaly pops up somehow
+			has_anomaly = yes
+			
+			# If the colony dies or is lost control of
+			NAND = {
+				is_colony = yes
+				exists = owner
+				exists = controller
+				controller = { is_same_value = prev.owner }
+			}
+			
+			# If the planet becomes a crisis planet somehow
+			planet_is_hostile_or_crisis = yes
+			
+			# If the planet gets taken over by primitives
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+			
+			# If the planet becomes a megastructure (I don't think this can happen)
+			has_planet_flag = megastructure
+		
+			# If the planet gets some other megastructure built on it other than the Grand Archive or Payback habitat
+			AND = {
+				has_planet_flag = has_megastructure
+				NOR = {
+					has_planet_flag = has_payback_habitat
+					any_megastructure = {
+						is_megastructure_type = grand_archive_0
+					}
+				}
+			}
+			
+			# If the planet becomes artificial (ring world/other edge-case check)
+			is_artificial = yes
+		
+			# If the planet liters too much in orbit and creates debris
+			has_planet_flag = has_orbital_debris
+		}
+ 	}
+
+	abort_effect = {
+		# Refunds resources after aborting the decision
+		owner = {
+			if = {
+				limit = {
+					owner = { country_uses_bio_ships = no }
+				}
+				add_resource = {
+					influence = 150
+					alloys = 2500
+				}
+			}
+			if = {
+				limit = {
+					owner = { country_uses_bio_ships = yes }
+				}
+				add_resource = {
+					influence = 150
+					alloys = 1250
+					food = 4375
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_rose_orbital_ring_2_effects
+		
+		hidden_effect = {
+			set_planet_flag = has_megastructure
+			save_event_target_as = orbital_ring_planet
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			
+			create_starbase = {
+				size = orbital_ring_tier_2
+				owner = FROM
+				effect = { }
+			}
+
+			from = {
+				country_event = { id = tutorial.2121 }
+			}
+		}	
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_rose_orbital_ring_3 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_orbital_ring
+	enactment_time = 1350
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = no }
+			}
+			influence = 300
+			alloys = 4500
+		}
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = yes }
+			}
+			influence = 300
+			alloys = 2250
+			food = 7875
+		}
+	}
+
+	potential = {
+		exists = owner
+		
+		owner = {
+			# Prevents AI empires from getting the decision	
+			is_ai = no
+			
+			# Must have orbital ring tech to build it...duh :P
+			has_technology = tech_orbital_ring_tier_1
+		}
+		
+		exists = starbase
+		is_inside_border = from
+		
+		# Doesn't show if a orbital ring is already present or is a ringworld for obvious reasons
+		NOR = {
+			exists = orbital_defence
+			is_ringworld = yes
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_surveyed_planet"
+			is_surveyed = { # prevent leaking habitability information
+				who = prev.from
+				status = yes
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_anomaly"
+			NOT = { has_anomaly = yes }
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet_orbital_ring"
+			is_colony = yes
+			exists = owner
+			exists = controller
+			controller = { is_same_value = prev.owner }
+		}
+		
+		# Prevents it on megastructure planets and on planets with megastructures built around them
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOR = {
+				has_planet_flag = megastructure
+				AND = {
+					has_planet_flag = has_megastructure
+					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+					NOR = {
+						has_planet_flag = has_payback_habitat
+						any_megastructure = {
+							is_megastructure_type = grand_archive_0
+						}
+					}
+				}
+				has_planet_flag = ruined_orbital_ring_planet
+				solar_system = {
+					has_star_flag = ring_world_built
+				}
+				is_artificial = yes
+			}
+		}		
+		
+		custom_tooltip = {
+			fail_text = "requires_not_hostile_or_primitive"
+			NOR = {
+				planet_is_hostile_or_crisis = yes
+				AND = {
+					exists = owner
+					owner = {
+						is_country_type = primitive
+					}
+				}
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_orbital_debris"
+			NOT = {
+				has_planet_flag = has_orbital_debris
+			}
+		}
+		
+		# Prevents if a construction ship is currently building a megastructure on the planet
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOT = {
+				solar_system = {
+					any_fleet_in_system = {
+						distance = {
+							source = root
+							min_distance >= 0
+							max_distance <= 15
+							type=euclidean
+							same_solar_system = yes
+						}
+						
+						is_constructing = megastructure
+					}
+				}
+			}
+		}
+		
+		# Makes sure the planet meets the requirements for a t3 orbital ring
+		owner = { has_technology = tech_starbase_5 }
+		OR = {
+			has_planetary_ascension_tier >= 5
+			has_fully_upgraded_capital = yes
+		}
+	}
+
+ 	abort_trigger = {		
+		OR = {
+			# If an anomaly pops up somehow
+			has_anomaly = yes
+			
+			# If the colony dies or is lost control of
+			NAND = {
+				is_colony = yes
+				exists = owner
+				exists = controller
+				controller = { is_same_value = prev.owner }
+			}
+			
+			# If the planet becomes a crisis planet somehow
+			planet_is_hostile_or_crisis = yes
+			
+			# If the planet gets taken over by primitives
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+			
+			# If the planet becomes a megastructure (I don't think this can happen)
+			has_planet_flag = megastructure
+		
+			# If the planet gets some other megastructure built on it other than the Grand Archive or Payback habitat
+			AND = {
+				has_planet_flag = has_megastructure
+				NOR = {
+					has_planet_flag = has_payback_habitat
+					any_megastructure = {
+						is_megastructure_type = grand_archive_0
+					}
+				}
+			}
+			
+			# If the planet becomes artificial (ring world/other edge-case check)
+			is_artificial = yes
+		
+			# If the planet liters too much in orbit and creates debris
+			has_planet_flag = has_orbital_debris
+		}
+ 	}
+
+	abort_effect = {
+		# Refunds resources after aborting the decision
+		owner = {
+			if = {
+				limit = {
+					owner = { country_uses_bio_ships = no }
+				}
+				add_resource = {
+					influence = 300
+					alloys = 4500
+				}
+			}
+			if = {
+				limit = {
+					owner = { country_uses_bio_ships = yes }
+				}
+				add_resource = {
+					influence = 300
+					alloys = 2250
+					food = 7875
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_rose_orbital_ring_3_effects
+		
+		hidden_effect = {
+			set_planet_flag = has_megastructure
+			save_event_target_as = orbital_ring_planet
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			
+			create_starbase = {
+				size = orbital_ring_tier_3
+				owner = FROM
+				effect = { }
+			}
+
+			from = {
+				country_event = { id = tutorial.2121 }
+			}
+		}	
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

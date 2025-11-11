@@ -1,0 +1,37 @@
+weapon_component_template = {
+	key = "SPIKESPORES_2"
+	size = large
+
+	icon = "GFX_ship_part_spikespores"
+	icon_frame = 1
+	type = missile
+
+	potential = {
+		OR = {
+			is_ship_size = voidworms_small
+			is_ship_size = voidworms_medium
+			is_ship_size = voidworms_large
+			is_ship_size = voidworms_titan
+		}
+	}
+
+	projectile_gfx = "spikespores"
+	tags = { weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			food = 136
+			minerals = 136
+			mult = @fauna_cost_scaling
+		}
+		upkeep = {
+			energy = 0.44
+			food = 0.2
+			minerals = 0.2
+		}
+	}
+
+	component_set = "SPIKESPORES"
+}

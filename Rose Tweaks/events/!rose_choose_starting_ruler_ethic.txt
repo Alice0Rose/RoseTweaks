@@ -1,0 +1,224 @@
+namespace = rose_choose_starting_ruler_ethic
+
+# Queues choosing starting ruler's ethic event
+country_event = {
+	id = rose_choose_starting_ruler_ethic.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {			
+		if = {
+			limit = {
+				# No reason for ai to get this choice
+				is_ai = no
+				
+				# No reason for 1 ethic empires to get this event
+				num_ethics > 1
+			}
+				
+			country_event = { id = rose_choose_starting_ruler_ethic.2 days = 0 }
+		}
+	}
+}
+
+# Lets players choose the ethic of their starting ruler
+country_event = { 
+	id = rose_choose_starting_ruler_ethic.2
+	title = rose_choose_starting_ruler_ethic.2.name
+	desc = rose_choose_starting_ruler_ethic.2.desc
+	picture = GFX_evt_legendary_leader
+	hide_window = no
+	is_triggered_only = yes
+
+	# Choose pacifist/militarist as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.a
+		
+		trigger = {
+			OR = {
+				is_pacifist = yes
+				is_militarist = yes
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					is_pacifist = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_pacifist"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_pacifist"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				owner = {
+					is_militarist = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_militarist"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_militarist"
+				}
+			}
+		}
+	}
+	
+	# Choose materialist/spiritualist as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.b
+
+		trigger = {
+			OR = {
+				is_materialist = yes
+				is_spiritualist = yes
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_materialist = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_materialist"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_materialist"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				owner = {
+					is_spiritualist = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_spiritualist"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_spiritualist"
+				}
+			}
+		}
+	}
+	
+	# Choose egalitarian/authoritarian as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.c
+
+		trigger = {
+			OR = {
+				is_egalitarian = yes
+				is_authoritarian = yes
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_egalitarian = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_egalitarian"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_egalitarian"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				owner = {
+					is_authoritarian = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_authoritarian"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	# Choose xenophile/xenophobe as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.d
+
+		trigger = {
+			OR = {
+				is_xenophile = yes
+				is_xenophobe = yes
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_xenophile = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_xenophile"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_xenophile"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				owner = {
+					is_xenophobe = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_xenophobe"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_xenophobe"
+				}
+			}
+		}
+	}
+}

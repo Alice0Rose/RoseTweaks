@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_district_specialization_rose_rural"
+		texturefile = "gfx/interface/icons/districts/district_specialization_icons/district_specialization_rose_rural.dds"
+	}
+}

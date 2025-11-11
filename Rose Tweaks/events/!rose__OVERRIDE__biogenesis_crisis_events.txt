@@ -1,0 +1,45 @@
+namespace = biocrisis
+
+# 90 - Behemoth meets other behemoth, they rage out
+fleet_event = {
+	id = biocrisis.90
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		owner = {
+			NOT = { has_menace_perk	= menp_behemoth_mind_meld }
+		}
+		any_owned_ship = {
+			NOT = { has_ship_flag = raging }
+			OR = {
+				is_ship_size = behemoth_01
+				is_ship_size = behemoth_02
+				is_ship_size = behemoth_03
+			}
+		}
+		from = {
+			any_fleet_in_system = {
+				NOT = { is_same_value = root }
+				OR = {
+					is_ship_size = behemoth_01
+					is_ship_size = behemoth_02
+					is_ship_size = behemoth_03
+					is_ship_size = behemoth_04
+				}
+			}
+			
+			NAND = {
+				exists = owner
+				owner = {
+					is_same_value = root.owner
+				}
+			}
+		}
+	}
+
+	immediate = {
+		enrage_behemoth = yes
+	}
+}
