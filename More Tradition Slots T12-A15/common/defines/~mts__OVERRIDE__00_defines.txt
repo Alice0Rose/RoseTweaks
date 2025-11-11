@@ -1,5 +1,6 @@
 	NGameplay = {
 		ASCENSION_PERKS_SLOTS	= 15
 		PLANET_ASCENSION_HARD_CAP			= 17	# Based of current formula, maximum planetary ascension possible
+		PLANET_ASCENSION_SPRAWL_MODIFIER   = -0.035	# Reduction of planet sprawl per level of ascension
 		TRADITION_CATEGORIES_MAX	= 12
 	}

@@ -9,6 +9,7 @@ This mod overwrites a few defines, a scripted variable, and the tradition interf
 common\defines\00_defines.txt
 - ASCENSION_PERKS_SLOTS
 - PLANET_ASCENSION_HARD_CAP
+- PLANET_ASCENSION_SPRAWL_MODIFIER
 - TRADITION_CATEGORIES_MAX
 
 common\scripted_variables\07_scripted_variables_machine_age.txt
