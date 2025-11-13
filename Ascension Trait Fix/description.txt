@@ -1,0 +1,9 @@
+[h1]Features[/h1]
+This mod fixes the on again, off again bug of leaders not getting the proper ascension traits. Paradox has tried to fix this several times but it's still an issue sometimes :/ This mod runs an event monthly to apply the traits if they aren't applied, so regardless of what shenanigans Paradox does to this game, it should work.
+
+[h1]Compatibility[/h1]
+This mod does not override or modify any vanilla files, so it should be compatible with all other mods :)
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
