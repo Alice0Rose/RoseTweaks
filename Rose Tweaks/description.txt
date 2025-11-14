@@ -20,6 +20,7 @@ Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
 - Mind over Matter (Psionic tech agenda) gives Zro Distillation after Thought Enforcement
 - Ascension tech agendas are heavily prioritized by AIs, pushing them to complete their ascensions more reliably and quickly than vanilla
+- Psionic Supremacy agenda is available to psionic individualistic machines
 
 Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
@@ -60,6 +61,7 @@ Civics:
 - Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist
 - Obsessional Directive quota no longer scales with difficulty
 - Superstitious Beliefs civic can now be removed if you have over 1000 of each science category
+- Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
 
 Origins:

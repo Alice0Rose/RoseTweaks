@@ -1,0 +1,43 @@
+namespace = shroud
+
+# Bad luck event 6
+country_event = {
+	id = shroud.725
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = shroud_725_triggered }
+		any_owned_leader = {
+			sb_high_profile_traffic_accident_leader_trigger = yes
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_725_triggered
+		random_owned_planet = {
+			save_event_target_as = high_profile_traffic_accident_planet
+		}
+		random_owned_leader = {
+			limit = {
+				sb_high_profile_traffic_accident_leader_trigger = yes
+				is_councilor = no
+			}
+			weights = {
+				base = 3
+				modifier = {
+					factor = 3
+					is_same_species = root.species
+					has_total_skill > 3
+				}
+				modifier = {
+					factor = 0.333
+					NOT = { is_leader_tier = leader_tier_default }
+				}
+			}
+			leader_event = {
+				id = shroud.728
+			}
+		}
+	}
+}

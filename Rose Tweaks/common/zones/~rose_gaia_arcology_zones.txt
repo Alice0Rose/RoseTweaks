@@ -96,6 +96,7 @@ zone_rose_gaia_arcology_research_physics = {
 			has_modifier = rose_gaia_arcology
 		}
 		job_technician_add = -200
+		planet_housing_add = 400
 	}
 
 	swap_type = district_arcology_research_physics
@@ -133,6 +134,7 @@ zone_rose_gaia_arcology_research_society = {
 			has_modifier = rose_gaia_arcology
 		}
 		job_farmer_add = -200
+		planet_housing_add = 400
 	}
 	
 	swap_type = district_arcology_research_society
@@ -170,6 +172,7 @@ zone_rose_gaia_arcology_research_engineering = {
 			has_modifier = rose_gaia_arcology
 		}
 		job_miner_add = -200
+		planet_housing_add = 400
 	}
 
 	swap_type = district_arcology_research_engineering
