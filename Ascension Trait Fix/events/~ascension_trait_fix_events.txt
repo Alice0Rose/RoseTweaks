@@ -49,7 +49,16 @@ country_event = {
 			if = {
 				limit = {
 					species = { is_psionic_species = yes }
-					NOT = {	has_trait = leader_trait_psionic }
+					NOR = {
+						has_trait = leader_trait_psionic 
+						has_trait = leader_trait_chosen 
+						has_trait = leader_trait_composer_chosen 
+						has_trait = leader_trait_instrument_chosen 
+						has_trait = leader_trait_eater_chosen 
+						has_trait = leader_trait_cradle_chosen 
+						has_trait = leader_trait_whisperers_chosen 
+						has_trait = leader_trait_shroudshaper 
+					}
 				}
 				add_trait = {
 					trait = leader_trait_psionic
