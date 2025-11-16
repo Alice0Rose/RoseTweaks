@@ -1,0 +1,2 @@
+﻿l_english:
+ civic_tooltip_environmentalist_effects: "$t$- $AVAILABLE_BUILDINGS$ £building£ ['building:building_ranger_lodge']$TABBED_NEW_LINE$- $ADDITIONAL_BUILDINGS_STRING$ £building£ §Y$building_ranger_lodge$§!\n$t$- $AVAILABLE_HOLDINGS$ £building£ ['building:holding_park_ranger_lodge']$TABBED_NEW_LINE$- Unlocks the §Y$rose_natural_arcologies$§! Decision on all natural worlds §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!"

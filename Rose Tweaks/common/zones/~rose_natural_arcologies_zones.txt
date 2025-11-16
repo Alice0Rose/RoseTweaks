@@ -1,0 +1,113 @@
+zone_rose_natural_arcologies_research_physics = {
+	inline_script = {
+		script = zones/shared_research_physics_zone
+		AMOUNT = @doubled_scaling_district_1_job
+	}
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+	
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+		has_modifier = rose_natural_arcologies
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			has_modifier = rose_natural_arcologies
+		}
+		job_technician_add = -200
+		planet_housing_add = 200
+	}
+
+	swap_type = district_arcology_research_physics
+	swap_type_weight = 5
+
+	zone_sets = {
+		energy
+	}	
+
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}
+
+zone_rose_natural_arcologies_research_society = {
+	inline_script = {
+		script = zones/shared_research_society_zone
+		AMOUNT = @doubled_scaling_district_1_job
+	}
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+		has_modifier = rose_natural_arcologies
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			has_modifier = rose_natural_arcologies
+		}
+		job_farmer_add = -200
+		planet_housing_add = 200
+	}
+	
+	swap_type = district_arcology_research_society
+	swap_type_weight = 5
+
+	zone_sets = {
+		food
+	}
+
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}
+
+zone_rose_natural_arcologies_research_engineering = {
+	inline_script = {
+		script = zones/shared_research_engineering_zone
+		AMOUNT = @doubled_scaling_district_1_job
+	}	
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+		has_modifier = rose_natural_arcologies
+	}
+	
+	triggered_district_planet_modifier = {
+		potential = {
+			has_modifier = rose_natural_arcologies
+		}
+		job_miner_add = -200
+		planet_housing_add = 200
+	}
+
+	swap_type = district_arcology_research_engineering
+	swap_type_weight = 5
+
+	zone_sets = {
+		minerals
+	}
+
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}

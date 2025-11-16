@@ -1,77 +1,3 @@
-zone_rose_gaia_arcology_rural_support = {
-	icon = GFX_district_specialization_rose_rural
-	base_buildtime = @zone_buildtime
-	potential = { # planet scope
-		hidden_trigger = { exists = owner }
-		owner = {
-			is_wilderness_empire = no
-			is_ai = no						# AI isn't great at handling these
-		}
-		has_modifier = rose_gaia_arcology
-	}
-
-	unlock = { # planet scope
-		hidden_trigger = {
-			exists = owner
-			owner = {
-				is_wilderness_empire = no
-			}
-		}
-	}
-
-	resources = {
-		category = planet_zones
-		cost = {
-			minerals = @zone_cost
-		}
-	}
-
-	inline_script = {
-		script = jobs/zone_trader_add
-		AMOUNT = @scaling_district_2_jobs
-	}
-	inline_script = {
-		script = jobs/zone_trader_add
-		AMOUNT = @scaling_district_2_jobs
-	}
-	inline_script = {
-		script = jobs/zone_trader_add
-		AMOUNT = @scaling_district_2_jobs
-	}
-
-	max_buildings = 0
-
-	zone_sets = {
-		urban
-	}
-
-	included_building_sets = {
-		urban
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			has_modifier = rose_gaia_arcology
-		}
-		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
-		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
-		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
-		planet_technician_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
-		planet_miners_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
-		planet_farmers_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
-		mult = 0.5
-	}
-
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_urban_triggered_desc
-	}
-
-	ai_priority = 13
-}
-
 zone_rose_gaia_arcology_research_physics = {
 	inline_script = {
 		script = zones/shared_research_physics_zone
@@ -96,7 +22,7 @@ zone_rose_gaia_arcology_research_physics = {
 			has_modifier = rose_gaia_arcology
 		}
 		job_technician_add = -200
-		planet_housing_add = 400
+		planet_housing_add = 200
 	}
 
 	swap_type = district_arcology_research_physics
@@ -134,7 +60,7 @@ zone_rose_gaia_arcology_research_society = {
 			has_modifier = rose_gaia_arcology
 		}
 		job_farmer_add = -200
-		planet_housing_add = 400
+		planet_housing_add = 200
 	}
 	
 	swap_type = district_arcology_research_society
@@ -172,7 +98,7 @@ zone_rose_gaia_arcology_research_engineering = {
 			has_modifier = rose_gaia_arcology
 		}
 		job_miner_add = -200
-		planet_housing_add = 400
+		planet_housing_add = 200
 	}
 
 	swap_type = district_arcology_research_engineering

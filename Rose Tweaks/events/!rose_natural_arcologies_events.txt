@@ -1,0 +1,19 @@
+namespace = rose_natural_arcologies
+
+planet_event = {
+	id = rose_natural_arcologies.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_valid_for_natural_arcologies = no
+	}
+
+	immediate = {
+		remove_modifier = rose_natural_arcologies
+		remove_modifier = rose_gaia_arcology # DEPRECATED
+		remove_planet_flag = uncapped_generator_districts
+		remove_planet_flag = uncapped_mining_districts
+		remove_planet_flag = uncapped_farming_districts
+	}
+}

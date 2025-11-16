@@ -1,0 +1,33 @@
+﻿l_english:
+ rose_natural_arcologies: "Natural Arcologies"
+ rose_natural_arcologies_desc: "Arcologies compliment the natural landscape of this planet, creating a world of idyllic productivity and prosperity."
+ 
+ decision_rose_natural_arcologies: "Create $rose_natural_arcologies$"
+ decision_rose_natural_arcologies_desc: "Arcologies will be built with an adherence to conservation, resulting in a seamless blend between cities and nature."
+ decision_rose_natural_arcologies_effects: "Increases §Y$mod_district_jobs_mult$§! and £mod_planet_housing_add£ §Y$MOD_PLANET_HOUSING_ADD$§! and unlocks unlimited £district£ §YRural Districts§!"
+ not_allowed_decision_rose_natural_arcologies: "$TRIGGER_FAIL$Requires a §YGaia§! world, the §Y$civic_environmentalist$§! Civic, or an §YOcean§! world and the §Y$ap_hydrocentric$§! Ascension Perk"
+ 
+ zone_rose_natural_arcologies_research_physics: "$zone_research_physics$"
+ zone_rose_natural_arcologies_research_physics_desc: "$zone_research_physics_desc$" 
+ zone_rose_natural_arcologies_research_society: "$zone_research_society$"
+ zone_rose_natural_arcologies_research_society_desc: "$zone_research_society_desc$" 
+ zone_rose_natural_arcologies_research_engineering: "$zone_research_engineering$"
+ zone_rose_natural_arcologies_research_engineering_desc: "$zone_research_engineering_desc$"
+
+ allow_natural_arcologies: "§HUnlocks Decision:§! $decision_rose_natural_arcologies$"
+ allow_natural_arcologies_newline: "\n$allow_natural_arcologies$"
+ requires_technology_housing_arcology: "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_housing_2$§! technology or the £society£ §Y$tech_housing_agrarian_idyll$§! technology."
+
+ # DEPRECATED
+ rose_gaia_arcology: "$rose_natural_arcologies$"
+ rose_gaia_arcology_desc: "$rose_natural_arcologies_desc$"
+ 
+ decision_rose_gaia_arcology: "$decision_rose_natural_arcologies$"
+ decision_rose_gaia_arcology_desc: "$decision_rose_natural_arcologies_desc$"
+ 
+ zone_rose_gaia_arcology_research_physics: "$zone_research_physics$"
+ zone_rose_gaia_arcology_research_physics_desc: "$zone_research_physics_desc$" 
+ zone_rose_gaia_arcology_research_society: "$zone_research_society$"
+ zone_rose_gaia_arcology_research_society_desc: "$zone_research_society_desc$" 
+ zone_rose_gaia_arcology_research_engineering: "$zone_research_engineering$"
+ zone_rose_gaia_arcology_research_engineering_desc: "$zone_research_engineering_desc$"

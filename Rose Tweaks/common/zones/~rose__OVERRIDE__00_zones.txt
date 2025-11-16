@@ -49,7 +49,10 @@ zone_urban_energy = {
 		potential = {
 			NOR = {
 				is_planet_class = pc_ringworld_habitable
-				has_modifier = rose_gaia_arcology
+				OR = {
+					has_modifier = rose_natural_arcologies
+					has_modifier = rose_gaia_arcology # DEPRECATED
+				}
 			}
 		}
 		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
@@ -58,18 +61,14 @@ zone_urban_energy = {
 
 	triggered_district_planet_modifier = {
 		potential = {
-			has_modifier = rose_gaia_arcology
+			OR = {
+				has_modifier = rose_natural_arcologies
+				has_modifier = rose_gaia_arcology # DEPRECATED
+			}
 		}
 		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
 		planet_technician_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
 		mult = 1.5
-	}
-	
-	triggered_district_planet_modifier = {
-		potential = {
-			has_modifier = rose_gaia_arcology
-		}
-		job_trader_add = 300
 	}
 	
 	triggered_district_planet_modifier = {
@@ -143,7 +142,10 @@ zone_urban_minerals = {
 		potential = {
 			NOR = {
 				is_planet_class = pc_ringworld_habitable
-				has_modifier = rose_gaia_arcology
+				OR = {
+					has_modifier = rose_natural_arcologies
+					has_modifier = rose_gaia_arcology # DEPRECATED
+				}
 			}
 		}
 		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
@@ -152,18 +154,14 @@ zone_urban_minerals = {
 
 	triggered_district_planet_modifier = {
 		potential = {
-			has_modifier = rose_gaia_arcology
+			OR = {
+				has_modifier = rose_natural_arcologies
+				has_modifier = rose_gaia_arcology # DEPRECATED
+			}
 		}
 		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
 		planet_miners_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
 		mult = 1.5
-	}
-	
-	triggered_district_planet_modifier = {
-		potential = {
-			has_modifier = rose_gaia_arcology
-		}
-		job_trader_add = 300
 	}
 	
 	triggered_district_planet_modifier = {
@@ -236,7 +234,10 @@ zone_urban_food = {
 		potential = {
 			NOR = {
 				is_planet_class = pc_ringworld_habitable
-				has_modifier = rose_gaia_arcology
+				OR = {
+					has_modifier = rose_natural_arcologies
+					has_modifier = rose_gaia_arcology # DEPRECATED
+				}
 			}
 		}
 		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
@@ -245,18 +246,14 @@ zone_urban_food = {
 
 	triggered_district_planet_modifier = {
 		potential = {
-			has_modifier = rose_gaia_arcology
+			OR = {
+				has_modifier = rose_natural_arcologies
+				has_modifier = rose_gaia_arcology # DEPRECATED
+			}
 		}
 		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
 		planet_farmers_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
 		mult = 1.5
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			has_modifier = rose_gaia_arcology
-		}
-		job_trader_add = 300
 	}
 	
 	triggered_district_planet_modifier = {

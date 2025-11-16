@@ -1,0 +1,29 @@
+is_potential_for_natural_arcologies = {
+	NOR = {
+		has_modifier = resort_colony
+		has_modifier = penal_colony
+		has_modifier = slave_colony
+		has_modifier = pm_wenkwort_custodian
+		has_modifier = holy_planet
+	}
+	is_artificial = no
+	NOT = { has_designation = col_nanotech_world }
+}
+
+is_allowed_for_natural_arcologies = {
+	OR = {
+		is_planet_class = pc_gaia
+	
+		AND = {
+			is_planet_class = pc_ocean
+			owner = { has_ascension_perk = ap_hydrocentric }
+		}
+	
+		owner = { has_valid_civic = civic_environmentalist }
+	}
+}
+
+is_valid_for_natural_arcologies = {
+	is_potential_for_natural_arcologies = yes
+	is_allowed_for_natural_arcologies = yes
+}

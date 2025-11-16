@@ -1,32 +1,23 @@
-decision_rose_gaia_arcology = {
+decision_rose_natural_arcologies = {
 	owned_planets_only = yes
-	icon = decision_gaia_arcology
+	icon = decision_rose_natural_arcologies
 
 	enactment_time = 3600
 	resources = {
 		category = decisions
 		cost = {
 			influence = 200
-			minerals = 20000
+			minerals = 12500
+			food = 12500
 		}
 	}
 
 	potential = {
-		is_planet_class = pc_gaia
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = penal_colony
-			has_modifier = slave_colony
-			has_modifier = pm_wenkwort_custodian
-			has_modifier = holy_planet
-		}
-		is_artificial = no
+		is_potential_for_natural_arcologies = yes	
+		NOT = { has_modifier = rose_natural_arcologies }
+		NOT = { has_modifier = rose_gaia_arcology } # DEPRECATED
 		exists = owner
-		owner = {
-			has_ascension_perk = ap_arcology_project 
-		}
-		NOT = { has_designation = col_nanotech_world }
-		NOT = { has_modifier = rose_gaia_arcology }
+		owner = { has_ascension_perk = ap_arcology_project }
 	}
 
 	allow = {
@@ -38,14 +29,18 @@ decision_rose_gaia_arcology = {
 				NOT = { has_planet_flag = legendary_leader_planet }
 			}
 		}
+		custom_tooltip = {
+			fail_text = not_allowed_decision_rose_natural_arcologies
+			is_allowed_for_natural_arcologies = yes
+		}
 		num_uncleared_blockers < 1
 	}
 
 	effect = {
-		# Change to gaia arcology planet
-		custom_tooltip = decision_rose_gaia_arcology_effects
+		# Apply natural arcologies benefits
+		custom_tooltip = decision_rose_natural_arcologies_effects
 		hidden_effect = {
-			add_modifier = { modifier = rose_gaia_arcology }
+			add_modifier = { modifier = rose_natural_arcologies }
 			
 			set_planet_flag = uncapped_generator_districts
 			set_planet_flag = uncapped_mining_districts

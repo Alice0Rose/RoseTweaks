@@ -179,12 +179,12 @@ ap_arcology_project = {
 			
 			custom_tooltip = "allow_arcology_project"
 			custom_tooltip = "decision_arcology_project_effects"
-			custom_tooltip = "allow_gaia_arcology_newline"
+			custom_tooltip = "allow_natural_arcologies_newline"
 		}
 		else = {
-			custom_tooltip = "allow_gaia_arcology"
+			custom_tooltip = "allow_natural_arcologies"
 		}
-		custom_tooltip = "decision_rose_gaia_arcology_effects"
+		custom_tooltip = "decision_rose_natural_arcologies_effects"
 	}
 
 	modifier = {

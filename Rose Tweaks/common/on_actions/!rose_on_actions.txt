@@ -12,12 +12,11 @@ on_game_start_country = {
 	}
 }
 
-# A country is created via create_country or create_rebels
-# This = created country
-# From = root of context where create_country/create_rebels happens
-on_country_created = {
-	events = { # country_event
-		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+# Planet has changed planet class in whatever way. Note that this is also called during galaxy creation in some places.
+# This = Planet
+on_planet_class_changed = {
+	events = {
+		rose_natural_arcologies.0 # Removes the Natural Arcologies modifier if a planet gets changed somehow
 	}
 }
 
@@ -28,5 +27,14 @@ on_country_created = {
 on_planet_transfer = {
 	events = {
 		rose_fe_tech_from_planet.2 # Increments the number of FE planets a country has taken
+	}
+}
+
+# A country is created via create_country or create_rebels
+# This = created country
+# From = root of context where create_country/create_rebels happens
+on_country_created = {
+	events = { # country_event
+		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
 	}
 }
