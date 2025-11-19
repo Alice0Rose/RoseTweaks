@@ -6,8 +6,7 @@ is_potential_for_natural_arcologies = {
 		has_modifier = pm_wenkwort_custodian
 		has_modifier = holy_planet
 	}
-	is_artificial = no
-	NOT = { has_designation = col_nanotech_world }
+	is_habitable_for_wilderness = yes
 }
 
 is_allowed_for_natural_arcologies = {

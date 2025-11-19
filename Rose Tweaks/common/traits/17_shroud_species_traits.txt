@@ -24,22 +24,11 @@ trait_tankbound = {
 	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT }
 	species_class = { NECROID TOX AQUATIC ROBOT }
 	portrait_override = { nec9 tox13 psionic_07 }
-
-	triggered_species_modifier = {
-		potential = {
-			is_robotic = no
-		}
+	
+	modifier = {
 		planet_pops_food_upkeep_mult = -0.5
 		pop_amenities_usage_mult = 0.5
-		logistic_growth_mult = -0.25
-	}
-	
-	triggered_species_modifier = {
-		potential = {
-			is_robotic = yes
-		}
-		pop_amenities_usage_mult = 0.5
-		planet_pop_assembly_mult = -0.25
+		founder_species_growth_mult = -0.25
 	}
 }
 
