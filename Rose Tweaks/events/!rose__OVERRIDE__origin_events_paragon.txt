@@ -15,7 +15,7 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 			}
 		}
 		OR = {
-			has_tradition = tr_psionics_finish
+			has_finished_psionic_tradition = yes
 			has_tradition = tr_cybernetics_finish
 			has_country_flag = synthetic_empire
 			has_tradition = tr_genetics_finish

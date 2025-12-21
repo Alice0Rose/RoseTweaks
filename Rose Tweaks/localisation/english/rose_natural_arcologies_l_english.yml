@@ -17,17 +17,3 @@
  allow_natural_arcologies: "§HUnlocks Decision:§! $decision_rose_natural_arcologies$"
  allow_natural_arcologies_newline: "\n$allow_natural_arcologies$"
  requires_technology_housing_arcology: "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_housing_2$§! technology or the £society£ §Y$tech_housing_agrarian_idyll$§! technology."
-
- # DEPRECATED
- rose_gaia_arcology: "$rose_natural_arcologies$"
- rose_gaia_arcology_desc: "$rose_natural_arcologies_desc$"
- 
- decision_rose_gaia_arcology: "$decision_rose_natural_arcologies$"
- decision_rose_gaia_arcology_desc: "$decision_rose_natural_arcologies_desc$"
- 
- zone_rose_gaia_arcology_research_physics: "$zone_research_physics$"
- zone_rose_gaia_arcology_research_physics_desc: "$zone_research_physics_desc$" 
- zone_rose_gaia_arcology_research_society: "$zone_research_society$"
- zone_rose_gaia_arcology_research_society_desc: "$zone_research_society_desc$" 
- zone_rose_gaia_arcology_research_engineering: "$zone_research_engineering$"
- zone_rose_gaia_arcology_research_engineering_desc: "$zone_research_engineering_desc$"

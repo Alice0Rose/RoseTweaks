@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Defender of the Galaxy Crisis"
-supported_version="v4.1.*"
+supported_version="v4.2.*"
 remote_file_id="3509233144"

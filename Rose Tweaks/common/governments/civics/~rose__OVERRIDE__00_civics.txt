@@ -88,7 +88,7 @@ civic_shadow_council = {
 	}
 	random_weight = { base = @civic_default_random_weight }
 	modifier = {
-		election_term_variance_add = 5	# Only use positive values for this modifier
+		election_term_years_mult = 0.5
 		country_election_cost_mult = -0.75
 		councilor_skill_add = 1
 		intel_decryption_add = 1
@@ -133,8 +133,8 @@ civic_mining_guilds = {
 	}
 	modifier = {
 		planet_miners_minerals_produces_add = 1
-		planet_miners_unity_produces_add = 1
 		add_attunement_the_instrument_of_desire = @civic_attunement1
+		planet_miners_unity_produces_add = 1
 	}
 }
 
@@ -229,6 +229,13 @@ civic_idyllic_bloom = {
 				value = civic_relentless_industrialists
 				value = civic_corporate_relentless_industrialists
 			}
+			NOR = {
+				text = civic_tooltip_not_world_forgers
+				value = civic_world_forgers
+				value = civic_hive_world_forgers
+				value = civic_machine_world_forgers
+				value = civic_corporate_world_forgers
+			}
 		}
 	}
 	random_weight = {
@@ -275,6 +282,7 @@ civic_crusader_spirit = {
 		civics = {
 			NOR = {
 				value = civic_fanatic_purifiers
+				value = civic_scorched_earth
 				value = civic_beacon_of_liberty
 			}
 		}
@@ -331,6 +339,7 @@ civic_sovereign_guardianship = {
 				value = civic_corporate_sovereign_guardianship
 				value = civic_reanimated_armies
 				value = civic_fanatic_purifiers
+				value = civic_scorched_earth
 			}
 			NOR = {
 				# Or low tech starts
@@ -397,6 +406,9 @@ civic_superstitious_beliefs = {
 				value = origin_cybernetic_creed
 			}
 		}
+		civics = {
+			NOT = { value = civic_corporate_superstitious_beliefs }
+		}
 	}
 
 	alternate_civic_version = civic_corporate_superstitious_beliefs
@@ -446,6 +458,7 @@ civic_tankbound = {
 				value = origin_clone_army
 				value = origin_primal_calling
 				value = origin_syncretic_evolution
+				value = origin_unplugged
 			}
 		}
 		civics = {
@@ -455,6 +468,7 @@ civic_tankbound = {
 				value = civic_agrarian_idyll
 				value = civic_citizen_service
 				value = civic_slaver_guilds
+				value = civic_tankbound_corporate
 			}
 		}
 		
@@ -463,6 +477,7 @@ civic_tankbound = {
 				value = NECROID
 				value = TOX
 				value = AQUATIC
+				value = INF
 				value = ROBOT
 			}
 		}
@@ -492,6 +507,8 @@ civic_tankbound = {
 		planet_districts_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
 		planet_districts_rw_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
 		planet_districts_rw_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_energy_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
 	}
 	hide_modifiers = yes
 

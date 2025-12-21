@@ -177,18 +177,18 @@ building_rose_clone_vats_1 = {
 		cost = {
 			minerals = 500
 		}
-		# Org/Lith cost
+		# Organic/Lithoid/infernal cost
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = no }
+				owner = { is_lithoid_or_infernal_empire = no }
 			}
 			food = 500
 		}
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = yes }
+				owner = { is_lithoid_or_infernal_empire = yes }
 			}
 			energy = 500
 		}
@@ -197,22 +197,21 @@ building_rose_clone_vats_1 = {
 		upkeep = {
 			energy = 4
 		}
-		# Org/Lith upkeep
+		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 				}
 			}
-			food = 15
-			mult = 2
+			food = 30
 		}
 		upkeep = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
 			}
@@ -236,6 +235,25 @@ building_rose_clone_vats_1 = {
 				}
 			}
 			minerals = 30
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+				}
+			}
+			alloys = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			alloys = 6
 		}
 	}
 
@@ -431,18 +449,18 @@ building_rose_clone_vats_2 = {
 		cost = {
 			minerals = 500
 		}
-		# Org/Lith cost
+		# Organic/Lithoid/infernal cost
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = no }
+				owner = { is_lithoid_or_infernal_empire = no }
 			}
 			food = 500
 		}
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = yes }
+				owner = { is_lithoid_or_infernal_empire = yes }
 			}
 			energy = 500
 		}
@@ -451,12 +469,12 @@ building_rose_clone_vats_2 = {
 		upkeep = {
 			energy = 6
 		}
-		# Org/Lith upkeep
+		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 				}
 			}
 			food = 45
@@ -465,7 +483,7 @@ building_rose_clone_vats_2 = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
 			}
@@ -489,6 +507,25 @@ building_rose_clone_vats_2 = {
 				}
 			}
 			minerals = 45
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+				}
+			}
+			alloys = 9
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			alloys = 9
 		}
 	}
 
@@ -680,18 +717,18 @@ building_rose_clone_vats_3 = {
 		cost = {
 			minerals = 500
 		}
-		# Org/Lith cost
+		# Organic/Lithoid/infernal cost
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = no }
+				owner = { is_lithoid_or_infernal_empire = no }
 			}
 			food = 500
 		}
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = yes }
+				owner = { is_lithoid_or_infernal_empire = yes }
 			}
 			energy = 500
 		}
@@ -700,12 +737,12 @@ building_rose_clone_vats_3 = {
 		upkeep = {
 			energy = 8
 		}
-		# Org/Lith upkeep
+		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 				}
 			}
 			food = 60
@@ -714,7 +751,7 @@ building_rose_clone_vats_3 = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
 			}
@@ -738,6 +775,25 @@ building_rose_clone_vats_3 = {
 				}
 			}
 			minerals = 60
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+				}
+			}
+			alloys = 12
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			alloys = 12
 		}
 	}
 

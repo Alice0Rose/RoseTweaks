@@ -1,8 +1,0 @@
-rose_gaia_arcology = {
-	district_jobs_mult = 2
-	planet_housing_mult = 2
-	planet_resettlement_unemployed_destination_mult = 0.5
-
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-	icon_frame = 1
-}

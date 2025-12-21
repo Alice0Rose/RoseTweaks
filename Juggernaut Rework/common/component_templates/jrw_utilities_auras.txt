@@ -1,215 +1,33 @@
 # Strike Craft
 utility_component_template = {
-	key = "SHIP_AURA_STRIKE_CRAFT_JRW"
+	key = "SHIP_AURA_JRW_REPAIR"
 	size = medium
-	icon = "GFX_ship_part_aura_strike_craft"
+	icon = "GFX_ship_part_aura_nanobot"
 	icon_frame = 1
 	power = 0
 
 	potential = {
-		OR = {
-			ship_uses_juggernaut_components = yes
-			#ship_uses_dsc_components = yes
-		}
+		is_ship_size = juggernaut_cr
 	}
-	component_set = "ship_aura_components"
+	component_set = "ship_jrw_repair_aura_components"
 
 	friendly_aura = {
-		name = "aura_strike_craft"
+		name = "aura_jrw_repair"
 		system_wide = yes
 
 		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
-			id = friendly_strike_craft
+			id = friendly_jrw_repair
 			priority = 1
 		}
-
+		
 		modifier = {
-			weapon_type_strike_craft_weapon_damage_mult = 0.2
-			weapon_type_strike_craft_speed_mult = 0.2
-			
-			ship_hull_regen_add_perc = 0.1
-			ship_armor_regen_add_perc = 0.1
+			ship_hull_regen_add_perc = 0.20
+			ship_armor_regen_add_perc = 0.20
 		}
 	}
 
 	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 2
-			is_ai = yes
-			is_preferred_weapons = weapon_type_energy
-		}
+		weight = 100
 	}
 }
 
-# Weapon Range
-utility_component_template = {
-	key = "SHIP_AURA_RANGE_JRW"
-	size = medium
-	icon = "GFX_ship_part_aura_range"
-	icon_frame = 1
-	power = 0
-
-	potential = {
-		OR = {
-			ship_uses_juggernaut_components = yes
-			#ship_uses_dsc_components = yes
-		}
-	}
-	component_set = "ship_aura_components"
-
-	friendly_aura = {
-		name = "aura_range"
-		system_wide = yes
-
-		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
-			id = friendly_range
-			priority = 1
-		}
-
-		modifier = {
-			ship_weapon_range_mult = 0.4
-			
-			ship_hull_regen_add_perc = 0.1
-			ship_armor_regen_add_perc = 0.1
-		}
-	}
-
-	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 2
-			is_ai = yes
-			is_preferred_weapons = weapon_type_energy
-		}
-	}
-}
-
-# Hyperlane
-utility_component_template = {
-	key = "SHIP_AURA_HYPERLANE_JRW"
-	size = medium
-	icon = "GFX_ship_part_aura_hyperlane"
-	icon_frame = 1
-	power = 0
-
-	potential = {
-		OR = {
-			ship_uses_juggernaut_components = yes
-			#ship_uses_dsc_components = yes
-		}
-	}
-	component_set = "ship_aura_components"
-
-	friendly_aura = {
-		name = "aura_hyperlane"
-		system_wide = yes
-
-		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
-			id = friendly_hyperlane
-			priority = 1
-		}
-
-		modifier = {
-			ship_windup_mult = -0.4
-			ship_winddown_mult = -0.4
-			ship_jumpdrive_cooldown_mult = -0.4
-			
-			ship_hull_regen_add_perc = 0.1
-			ship_armor_regen_add_perc = 0.1
-		}
-	}
-
-	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 2
-			is_ai = yes
-			is_preferred_weapons = weapon_type_energy
-		}
-	}
-}
-
-# PD Penetration
-utility_component_template = {
-	key = "SHIP_AURA_PD_PENETRATION_JRW"
-	size = medium
-	icon = "GFX_ship_part_aura_pd_penetration"
-	icon_frame = 1
-	power = 0
-
-	potential = {
-		OR = {
-			ship_uses_juggernaut_components = yes
-			#ship_uses_dsc_components = yes
-		}
-	}
-	component_set = "ship_aura_components"
-
-	hostile_aura = {
-		name = "aura_pd_penetration"
-		system_wide = yes
-
-		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
-			id = hostile_pd_penetration
-			priority = 1
-		}
-
-		modifier = {
-			weapon_type_point_defense_weapon_damage_mult = -0.3
-			weapon_type_point_defense_weapon_fire_rate_mult = -0.3
-			
-			ship_hull_regen_add_perc = 0.1
-			ship_armor_regen_add_perc = 0.1
-		}
-	}
-
-	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 2
-			is_ai = yes
-			is_preferred_weapons = weapon_type_energy
-		}
-	}
-}
-
-# Bombardment
-utility_component_template = {
-	key = "SHIP_AURA_BOMBARDMENT_JRW"
-	size = medium
-	icon = "GFX_ship_part_aura_bombardment"
-	icon_frame = 1
-	power = 0
-
-	potential = {
-		ship_uses_juggernaut_components = yes
-	}
-	component_set = "ship_aura_components"
-
-	friendly_aura = {
-		name = "aura_bombardment"
-		system_wide = yes
-
-		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
-			id = friendly_bombardment
-			priority = 1
-		}
-
-		modifier = {
-			ship_orbital_bombardment_mult = 1.0
-			
-			ship_hull_regen_add_perc = 0.1
-			ship_armor_regen_add_perc = 0.1
-		}
-	}
-
-	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 2
-			is_ai = yes
-			is_preferred_weapons = weapon_type_energy
-		}
-	}
-}

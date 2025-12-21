@@ -12,20 +12,21 @@ the_composer_of_strands = {
 	position = { x = 0 y = -1 }
 
 	callings = {
-        calling_establish_colony
-        calling_terraform_planet
+		calling_establish_colony
+		calling_terraform_planet
 		calling_grow_pops
 		calling_construct_outposts
 		calling_apply_pops_template
 		calling_clone_space_fauna_naval_capacity
-    }
+	}
 
-    deeds = {
-        deed_clone_space_fauna
-        deed_consecrate_planet
-        deed_pick_adaptability_or_expansion_tradition
-        deed_apply_species_template
-        deed_host_new_species
+	deeds = {
+		deed_clone_space_fauna
+		deed_consecrate_planet
+		deed_pick_adaptability_or_expansion_tradition
+		deed_pick_versatility_or_expansion_tradition
+		deed_apply_species_template
+		deed_host_new_species
 		deed_pass_ecology_resolution
 		deed_pass_divinity_resolution
 		deed_terraform_planet
@@ -33,7 +34,7 @@ the_composer_of_strands = {
 		deed_psionically_assimilate_pop
 		deed_sector_as_vassal
 		deed_colonize_tomb_world
-    }
+	}
 
 	covenant = {
 		name = "COVENANT_COMPOSER"

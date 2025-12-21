@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Bad Crisis, No Hyper Relay"
-supported_version="v4.0.*"
+supported_version="v4.2.*"
 remote_file_id="3455896725"

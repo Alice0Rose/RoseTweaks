@@ -1,0 +1,33 @@
+ship_uses_juggernaut_components = {
+	OR = {
+		is_ship_size = juggernaut
+		is_ship_size = juggernaut_cr
+	}
+}
+
+ship_uses_juggernaut_reactors = {
+	OR = {
+		# Regular Ships
+		is_ship_size = juggernaut
+		is_ship_size = juggernaut_cr
+		# Galactic Nemesis Ships
+		is_ship_size = star_eater
+		# Cosmogenesis Ships
+		is_ship_size = cosmo_crisis_titan
+		# Special Ships
+		is_ship_size = synth_queen_titan
+	}
+}
+
+ship_uses_colossus_thrusters = {
+	OR = {
+		# Regular Ships
+		is_ship_size = colossus
+		is_ship_size = juggernaut
+		is_ship_size = juggernaut_cr
+		# Galactic Nemesis Ships
+		is_ship_size = star_eater
+		# Special Ships
+		is_ship_size = synth_queen_titan
+	}
+}

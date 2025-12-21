@@ -11,7 +11,6 @@ planet_event = {
 
 	immediate = {
 		remove_modifier = rose_natural_arcologies
-		remove_modifier = rose_gaia_arcology # DEPRECATED
 		remove_planet_flag = uncapped_generator_districts
 		remove_planet_flag = uncapped_mining_districts
 		remove_planet_flag = uncapped_farming_districts

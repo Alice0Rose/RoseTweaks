@@ -11,11 +11,14 @@ weapon_component_template = {
 	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
-	prerequisites = { "tech_juggernaut" }
+	prerequisites = { "tech_titans" }
 	component_set = "JUGGERNAUT_PERDITION_BEAM"
 	projectile_gfx = "perdition_beam"
 	potential = {
-		is_ship_size = juggernaut
+		OR = {
+			is_ship_size = juggernaut
+			is_ship_size = juggernaut_cr
+		}
 	}
 	resources = {
 		category = ship_components
@@ -59,7 +62,7 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 	}
-
+	
 	power = -500.00
 	damage = { min = 5000 max = 10000 }
 	hull_damage = 1.25
@@ -92,7 +95,10 @@ weapon_component_template = {
 	component_set = "JUGGERNAUT_ARCHAEO_TITAN_BEAM"
 	projectile_gfx = "perdition_beam"
 	potential = {
-		is_ship_size = juggernaut
+		OR = {
+			is_ship_size = juggernaut
+			is_ship_size = juggernaut_cr
+		}
 	}
 	resources = {
 		category = ship_components
@@ -154,7 +160,7 @@ weapon_component_template = {
 			}
 		}
 	}
-
+	
 	power = -500.00
 	damage = { min = 5000 max = 10000 }
 	hull_damage = 1.25

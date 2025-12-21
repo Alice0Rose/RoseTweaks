@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="More Tradition Slots T12-A15"
-supported_version="v4.1.*"
+supported_version="v4.2.*"
 remote_file_id="3385410973"

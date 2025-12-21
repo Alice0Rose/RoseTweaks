@@ -2027,6 +2027,121 @@ decadent_capitalists = {
 	}
 }
 
+scorching_infernals = {
+	aggressiveness = 2.0
+	trade_willingness = 0.25
+	bravery = 1.0
+	combat_bravery = 1.25
+
+	military_spending = 1.35
+	colony_spending = 1.15
+
+	federation_acceptance = -1000
+	migration_pact_acceptance = -1000
+	loyalty_acceptance = 0.25
+
+	advanced_start_chance = 50
+
+	weapon_preferences = weapon_type_kinetic # Because they have a bonus for the engineering tech tree.
+	armor_ratio = 0.4
+	shields_ratio = 0.5
+	hull_ratio = 0.1
+
+	threat_modifier = 0
+	threat_others_modifier = 0
+	friction_modifier = 0
+	claims_modifier = 0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = yes
+		displacer = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = no
+		attack_neutrals = yes
+	}
+
+	allow = {
+		host_has_dlc = "Infernals Species Pack"
+		OR = {
+			has_valid_civic = civic_scorched_earth
+			has_valid_civic = civic_hive_scorched_earth
+		}
+	}
+
+	weight_modifier = {
+		weight = 1000
+	}
+}
+
+hyperthermia_empire = {
+	aggressiveness = 2.0
+	trade_willingness = 0.5
+	bravery = 1.0
+	combat_bravery = 2.0
+
+	military_spending = 2.0
+	colony_spending = 0.5
+
+	advanced_start_chance = 50
+
+	loyalty_acceptance = 0.25
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.6
+	shields_ratio = 0.4
+	hull_ratio = 0.1
+
+	threat_modifier = 0
+	threat_others_modifier = 0
+	friction_modifier = 0
+	claims_modifier = 0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = no
+		displacer = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = no
+		attack_neutrals = no
+	}
+
+	allow = {
+		has_infernals = yes
+		is_country_type = default
+		has_ascension_perk = "ap_galactic_hyperthermia"
+	}
+
+	weight_modifier = {
+		weight = 10000
+	}
+
+	ai_module_overrides = {
+		player_crisis_foreign_minister_module
+		player_crisis_military_minister_module
+	}
+}
+
 # POST-RELEASE LINEUP:
 # Peacekeeping Interventionists
 # Alluring Diplomats

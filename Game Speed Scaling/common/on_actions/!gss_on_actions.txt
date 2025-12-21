@@ -1,0 +1,11 @@
+on_game_start = {
+	events = {
+		game_speed_scaling.1 # Scaling based on game speed, should hit all players
+	}
+}
+
+on_monthly_pulse = {
+	events = { # event
+		game_speed_scaling.1 # Scaling based on game speed, repeats monthly to catch any new AI countries that may have spawned
+	}
+}

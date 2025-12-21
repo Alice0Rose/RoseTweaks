@@ -1,0 +1,11 @@
+juggernaut_ships_limit = {
+	ship_types = {
+		juggernaut
+		juggernaut_cr
+	}
+	base = 32 # 1 * juggernaut's size_multiplier
+	show = {
+		is_scope_valid = yes
+		has_technology = tech_juggernaut
+	}
+}

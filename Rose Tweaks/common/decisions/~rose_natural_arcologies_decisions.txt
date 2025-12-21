@@ -15,7 +15,6 @@ decision_rose_natural_arcologies = {
 	potential = {
 		is_potential_for_natural_arcologies = yes	
 		NOT = { has_modifier = rose_natural_arcologies }
-		NOT = { has_modifier = rose_gaia_arcology } # DEPRECATED
 		exists = owner
 		owner = { has_ascension_perk = ap_arcology_project }
 	}

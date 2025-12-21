@@ -101,50 +101,6 @@ ap_transcendent_learning = {
 	}
 }
 
-ap_detox = {
-	potential = {
-		host_has_dlc = "Toxoids Species Pack"
-		NOT = {
-			has_ascension_perk = ap_detox
-		}
-	}
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_technology_tech_climate_restoration"
-			has_technology = tech_climate_restoration
-		}
-	}
-
-	on_enabled = {
-		custom_tooltip = "detox_tox_worlds"
-	}
-
-	modifier = {
-		terraform_speed_mult = 0.33
-		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
-	}
-
-	ai_weight = {
-		factor = 20
-		modifier = {
-			factor = 0
-			NOT = {
-				any_planet_within_border = {
-					has_modifier = toxic_terraforming_candidate
-				}
-			}
-		}
-		modifier = {
-			factor = 3
-			count_planet_within_border = {
-				count > 2
-				limit = { has_modifier = toxic_terraforming_candidate }
-			}
-		}
-	}
-}
-
 ap_arcology_project = {
 	potential = {
 		host_has_dlc = "Megacorp"
@@ -208,6 +164,51 @@ ap_arcology_project = {
 		modifier = {
 			factor = 3
 			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_detox = {
+	potential = {
+		host_has_dlc = "Toxoids Species Pack"
+		NOT = {
+			has_ascension_perk = ap_detox
+			has_country_flag = knights_detox
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_tech_climate_restoration"
+			has_technology = tech_climate_restoration
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = "detox_tox_worlds"
+	}
+
+	modifier = {
+		terraform_speed_mult = 0.33
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 0
+			NOT = {
+				any_planet_within_border = {
+					has_modifier = toxic_terraforming_candidate
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			count_planet_within_border = {
+				count > 2
+				limit = { has_modifier = toxic_terraforming_candidate }
+			}
 		}
 	}
 }

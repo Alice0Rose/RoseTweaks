@@ -31,6 +31,7 @@ zone_rose_habitat_food = {
 		hydroponics
 		farming
 		fallen_empire_farming
+		farming_automation
 	}
 
 	inline_script = {
@@ -74,9 +75,11 @@ zone_rose_habitat_urban_energy = {
 	}
 
 	unlock = { # planet scope
-		hidden_trigger = { exists = owner }
-		owner = {
-			is_wilderness_empire = no
+		hidden_trigger = { 
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
 		}
 	}
 
@@ -149,9 +152,11 @@ zone_rose_habitat_urban_minerals = {
 	}
 
 	unlock = { # planet scope
-		hidden_trigger = { exists = owner }
-		owner = {
-			is_wilderness_empire = no
+		hidden_trigger = { 
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
 		}
 	}
 
@@ -217,15 +222,15 @@ zone_rose_habitat_urban_food = {
 			is_wilderness_empire = no
 			is_ai = no						# AI isn't great at handling these
 		}
-		NOT = {
-			is_planet_class = pc_city
-		}
+		NOT = { is_planet_class = pc_city }
 	}
 
 	unlock = { # planet scope
-		hidden_trigger = { exists = owner }
-		owner = {
-			is_wilderness_empire = no
+		hidden_trigger = { 
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
 		}
 	}
 

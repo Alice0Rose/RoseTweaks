@@ -93,10 +93,7 @@ ap_defender_of_the_galaxy = {
 						who = prev
 						value > equivalent
 					}
-					OR = {
-						has_ascension_perk = ap_become_the_crisis
-						has_ascension_perk = ap_cosmogenesis
-					}
+					is_player_crisis = yes
 				}
 			}
 		}
@@ -109,8 +106,7 @@ ap_defender_of_the_galaxy = {
 				has_valid_civic = civic_hive_familiar_face
 				any_country = {
 					OR = {
-						has_crisis_level = crisis_level_5
-						has_crisis_level = crisis_cosmogenesis_level_5
+						is_level_5_player_crisis = yes
 						is_crisis_faction = yes
 					}
 				}
@@ -128,8 +124,7 @@ ap_defender_of_the_galaxy = {
 			NOT = {
 				any_country = {
 					OR = {
-						has_crisis_level = crisis_level_5
-						has_crisis_level = crisis_cosmogenesis_level_5
+						is_level_5_player_crisis = yes
 						is_crisis_faction = yes
 					}
 				}
@@ -142,19 +137,14 @@ ap_become_the_crisis = {
 	potential = {
 		has_nemesis = yes
 		NOR = {
-			has_ascension_perk = ap_become_the_crisis
-			has_ascension_perk = ap_cosmogenesis
-			has_ascension_perk = ap_behemoths
+			is_player_crisis = yes
 			has_origin = origin_slavers
+			has_origin = origin_endbringers # No additional crisis for Endbringers
 		}
 		is_wilderness_empire = no
 	}
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_3"
-			num_ascension_perks > 2
-		}
 		custom_tooltip = {
 			fail_text = "requires_independence"
 			is_subject = no
@@ -166,6 +156,36 @@ ap_become_the_crisis = {
 		custom_tooltip = {
 			fail_text = "must_not_be_emperor"
 			is_galactic_emperor = no
+		}
+		custom_tooltip = {
+			fail_text = "must_finish_shroud_forged_situation"
+			OR = {
+				NOT = { has_origin = origin_shroud_forged }
+				NOT = {
+					any_situation = {
+						is_situation_type = situation_shroud_forged
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "locked_by_shroud_forged_situation"
+			OR = {
+				NOT = { has_origin = origin_shroud_forged }
+				NOT = { has_country_flag = finish_shroud_forged_liberation_flag }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_origin = origin_shroud_forged }
+					NOT = { has_country_flag = shroud_forged_can_become_the_crisis }
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_ascension_perks_3"
+				num_ascension_perks > 2
+			}
 		}
 	}
 
@@ -200,6 +220,10 @@ ap_become_the_crisis = {
 			galaxy_percentage < 0.1
 		}
 		modifier = {
+			factor = 0.5
+			is_infernal_empire = yes
+		}
+		modifier = {
 			factor = 2
 			galaxy_percentage > 0.2
 		}
@@ -219,10 +243,8 @@ ap_become_the_crisis = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
+				is_xenophile = yes
+				is_pacifist = yes
 				has_civic = civic_machine_servitor
 				has_valid_civic = civic_hive_familiar_face
 			}
@@ -234,10 +256,9 @@ ap_cosmogenesis = {
 	potential = {
 		has_machine_age_dlc = yes
 		NOR = {
-			has_ascension_perk = ap_become_the_crisis
-			has_ascension_perk = ap_cosmogenesis
-			has_ascension_perk = ap_behemoths
+			is_player_crisis = yes
 			has_origin = origin_slavers # No crisis for MSI
+			has_origin = origin_endbringers # No additional crisis for Endbringers
 		}
 		is_wilderness_empire = no
 	}
@@ -273,13 +294,6 @@ ap_cosmogenesis = {
 
 	ai_weight = {
 		factor = 7.5
-		modifier = {
-			factor = 0
-			OR = {
-				is_egalitarian = yes
-				is_xenophile = yes
-			}
-		}
 		modifier = {
 			factor = 2
 			has_tradition = tr_discovery_finish
@@ -320,10 +334,9 @@ ap_behemoths = {
 	potential = {
 		has_biogenesis_dlc = yes
 		NOR = {
-			has_ascension_perk = ap_become_the_crisis
-			has_ascension_perk = ap_cosmogenesis
-			has_ascension_perk = ap_behemoths
+			is_player_crisis = yes
 			has_origin = origin_slavers # No crisis for MSI
+			has_origin = origin_endbringers # No additional crisis for Endbringers
 		}
 	}
 
@@ -356,11 +369,6 @@ ap_behemoths = {
 
 	ai_weight = {
 		factor = 7.5
-		modifier = {
-			factor = 0
-			is_xenophile = yes
-			is_spiritualist = yes
-		}
 
 		modifier = {
 			factor = 0.5
@@ -404,11 +412,98 @@ ap_behemoths = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
+				is_xenophile = yes
+				is_pacifist = yes
 			}
 		}		
+	}
+}
+
+ap_galactic_hyperthermia = {
+	potential = {
+		has_infernals = yes
+		NOR = {
+			is_player_crisis = yes
+			has_origin = origin_slavers
+			has_origin = origin_endbringers
+			is_wilderness_empire = yes
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			OR = {
+				num_ascension_perks > 2
+				has_country_flag = red_giant_discovered_crystallized_entropy
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_independence"
+			is_subject = no
+		}
+		custom_tooltip = {
+			fail_text = "must_not_be_custodian"
+			is_galactic_custodian = no
+		}
+		custom_tooltip = {
+			fail_text = "must_not_be_emperor"
+			is_galactic_emperor = no
+		}
+	}
+
+	on_enabled = {
+		hidden_effect = {
+			set_ai_personality = hyperthermia_empire
+			country_event = { id = infernals.1000 }
+		}
+		activate_crisis_progression = hyperthermia_path
+	}
+
+	ai_weight = {
+		factor = 7.5
+		modifier = {
+			factor = 10
+			is_homicidal = yes
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_supremacy_finish
+		}
+		modifier = {
+			factor = 1.5
+			is_genocidal_infernal = yes
+		}
+		modifier = {
+			factor = 2
+			galaxy_percentage > 0.2
+		}
+		modifier = {
+			factor = 0
+			galaxy_percentage < 0.1
+		}
+		modifier = {
+			factor = 0
+			count_playable_country = {
+				count > 0
+				limit = { has_ascension_perk = ap_galactic_hyperthermia }
+			}
+		}
+		modifier = {
+			factor = 0
+			blocks_disruptive_gameplay = yes
+		}
+		modifier = {
+			factor = 0
+			is_infernal_empire = no
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_xenophile = yes
+				is_pacifist = yes
+				has_valid_civic = civic_hive_familiar_face
+			}
+		}
 	}
 }

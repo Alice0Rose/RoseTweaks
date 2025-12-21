@@ -1,33 +1,39 @@
 [h1]Features[/h1]
-This mod reworks the Juggernaut to be less of a crappy mobile shipyard, and more of a combat powerhouse. The following changes are made to the Juggernaut:
-- Designated as a ship instead of a starbase, allowing them to be added to fleets with other ships
-- Shipyards are removed, but a hull and armor repair aura is added to all Juggernaut auras to allow system-wide repairs
-- Given 3 T slots and 2 modular sections that can be set as Carrier or Artillery sections, giving the Juggernaut orders of magnitude more firepower than any other ship
-- Given more armor slots and a +100% multiplier to armor and shield health
-- Has a innate modifier that makes weapons 50% more powerful
-- Is capable of having Afterburners equipped to it, but has 3 Aux slots instead of 4 to compensate 
+This mod reworks the Juggernaut and adds an alternative Juggernaut class, the Juggernaut CR, which lacks shipyards but has enhanced combat capabilities and can be slotted into fleets with other ships.
 
-Additionally, the Juggernaut aura that improves orbital bombardment damage gives +100% instead of +30% damage
+The following changes have been made to the Juggernaut (and the Juggernaut CR):
+- Given 3 T slots and 2 modular sections that can be set as Carrier or Artillery sections, giving the Juggernaut orders of magnitude more firepower than any other ship
+- Given more defensive utility slots
+- Given a +75% multiplier to armor and shield health and a +50% multiplier to weapon damage
+- Has 3 instead of 4 Aux slots
+
+Additionally, the Juggernaut CR has the following changes from a regular Juggernaut:
+- Designated as a ship instead of a starbase, allowing it to be added to fleets with other ships and equipped with Afterburners
+- Shipyards are removed, but has a hull and armor repair aura to allow system-wide repairs
+- Given an additional +75% multiplier to armor and shield health and a +50% multiplier to weapon damage (totaling +150% armor and shield health and +100% weapon damage respectively)
 
 [h1]Compatibility[/h1]
-This mod overwrites the Juggernaut (duhh), all of the Juggernaut's auras, and a few localisation lines (files listed below). This mean's it's pretty unlikely it'll cause issues with any other mods unless they add to or modify Juggernaut functionality! ^-^
+This mod overwrites the Juggernaut (duhh), a few triggers related to the Juggernaut, and a few events related to the Juggernaut (files listed below). This mean's it's pretty unlikely it'll cause issues with any other mods unless they add to or modify Juggernaut functionality! ^-^
 
-common/component_templates/00_utilities_auras.txt
-- SHIP_AURA_STRIKE_CRAFT
-- SHIP_AURA_RANGE
-- SHIP_AURA_HYPERLANE
-- SHIP_AURA_PD_PENETRATION
-- SHIP_AURA_BOMBARDMENT
+common/country_limits/ship_of_size_limits/00_ship_of_size_limits.txt
+- juggernaut_ships_limit
+
+common/scripted_triggers/07_scripted_triggers_ships.txt
+- ship_uses_juggernaut_components
+- ship_uses_juggernaut_reactors
+- ship_uses_colossus_thrusters
 
 common/ship_sizes/18_juggernauts.txt
 - juggernaut
 
-localisation/english/federations_l_english.yml
-- fedev.9500.desc
-- fedev.9505.desc
+events/federations_events_1.txt
+- fedev.9500
 
-localisation/english/main_2_l_english.yml
-- TECH_UNLOCK_JUGGERNAUT_CONSTRUCTION_DESC
+events/focus_events_1.txt
+- focus.715
+
+events/timeline_events.txt
+- timeline.48
 
 [h1]Source Code and Wiki[/h1]
 [url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]

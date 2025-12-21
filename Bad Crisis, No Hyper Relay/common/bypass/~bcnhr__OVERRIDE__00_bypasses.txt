@@ -1,0 +1,54 @@
+relay_bypass = {
+	name = HYPER_RELAY_GALACTIC
+	is_pathfind = yes
+	uses_action = no
+	always_active = yes
+	windup_time = 10
+	winddown_time = 0
+	icon_frame = 30
+	remember_instances = no
+	galactic_map_tooltip_header = HYPER_RELAY_GALACTIC
+	galactic_map_tooltip_desc = HYPER_RELAY_GALACTIC_DESC
+	connection_type = hyper_relay
+	animation_time = 1
+	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+
+	country_can_use = {
+		NOR = {
+			is_country_type = synth_queen_convoys
+			
+			# Vanilla crises
+			is_country_type = awakened_marauders
+			is_country_type = swarm
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+			is_country_type = ai_empire
+			is_country_type = cybrex_empire
+			is_country_type = sentinels
+			is_country_type = synth_queen_storm
+			is_country_type = synth_queen
+			is_country_type = awakened_synth_queen
+			is_country_type = gray_goo
+			is_country_type = formless
+			is_country_type = voidworms_crisis
+			is_country_type = voidspawn_boss
+			is_country_type = the_reckoning
+			
+			# Empires with edict active
+			has_edict = bcnhr_ignore_hyper_relays
+			
+			# Modded crises
+			# Gigastructural Engineering
+			is_country_type = compound_empire
+			is_country_type = katzenartig_imperium
+			is_country_type = dormant_aeternum
+			is_country_type = blokkat_stripminers
+			is_country_type = giga_eawaf_sirens
+		}
+	}
+
+	respect_closed_borders = yes
+	block_access_if_hostile = yes
+}

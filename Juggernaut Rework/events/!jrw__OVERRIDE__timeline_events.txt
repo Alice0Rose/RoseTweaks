@@ -1,0 +1,78 @@
+namespace = timeline
+
+# First Titan/Juggernaut/BioTitan/BioJuggernaut
+ship_event = {
+	id = timeline.48
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				root = {
+					OR = {
+						is_ship_size = titan
+						is_ship_size = bio_titan
+					}
+				}
+				from.owner = {
+					is_country_type = default
+					NOT = { has_country_flag = first_titan }
+				}
+			}
+			AND = {
+				root = {
+					OR = {
+						is_ship_size = juggernaut
+						is_ship_size = juggernaut_cr
+					}
+				}
+				from.owner = {
+					is_country_type = default
+					NOT = { has_country_flag = first_juggernaut }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		root = {
+			save_event_target_as = this_ship
+			switch = {
+				trigger = is_ship_size
+				titan = {
+					from.owner = {
+						set_country_flag = first_titan
+					}
+				}
+				bio_titan = {
+					from.owner = {
+						set_country_flag = first_titan
+					}
+				}
+				juggernaut = {
+					from.owner = {
+						set_country_flag = first_juggernaut
+					}
+				}
+				juggernaut_cr = {
+					from.owner = {
+						set_country_flag = first_juggernaut
+					}
+				}
+			}
+		}
+		from.owner = {
+			save_event_target_as = this_country
+			add_timeline_event = {
+				type = timeline_milestone
+				override_id = timeline_first_big_ship
+				override_tooltip = "TIMELINE_EVENT_FIRST_BIG_SHIP_TOOLTIP"
+				override_types = { country ship }
+				override_text = { "text:TIMELINE_FIRST_BIG_SHIP" }
+				override_texture = { "background:GFX_evt_juggernaut" }
+				targets = { event_target:this_country event_target:this_ship }
+			}
+		}
+	}
+}

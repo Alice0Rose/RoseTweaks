@@ -1,6 +1,6 @@
 #Climate Transformation
 tech_climate_restoration = {
-	cost = @tier3cost3
+	cost = @tier4cost1
 	area = society
 	tier = 3
 	category = { new_worlds }
@@ -53,90 +53,13 @@ tech_climate_restoration = {
 	}
 }
 
-#Genome Mapping
-tech_genome_mapping = {
-	cost = @tier1cost1
-	area = society
-	tier = 1
-	category = { biology }
-	weight = @tier1weight1
-
-	gateway = biological
-
-	modifier = {
-		logistic_growth_mult = 0.1
-	}
-
-	potential = {
-		OR = {
-			is_machine_empire = no
-			has_civic = civic_machine_assimilator
-			has_civic = civic_machine_servitor
-			has_civic = civic_machine_guided_sapience
-		}
-	}
-
-	weight_modifier = {
-		factor = 1.5	# genetech needs to be a bit more common
-		modifier = {
-			factor = 1.25
-			is_hive_empire = yes
-		}
-		modifier = {
-			factor = 1.25
-			has_tradition = tr_supremacy_adopt
-		}
-		modifier = {
-			factor = 2
-			has_relic = r_pox_sample
-		}
-		modifier = {
-			factor = 0.5
-			is_individual_machine = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_origin = origin_synthetic_fertility
-		}
-		modifier = {
-			factor = 2
-			AND = {
-				OR = {
-					is_individual_machine = yes
-					has_origin = origin_synthetic_fertility
-				}
-				any_owned_species = {
-					is_organic_species = yes
-				}
-			}
-		}
-	}
-
-	technology_swap = {
-		name = tech_genome_mapping_wilderness
-		inherit_icon = yes
-		inherit_effects = yes
-		trigger = {
-			is_wilderness_empire = yes
-		}
-	}
-
-	ai_weight = {
-		factor = @pop_growth_tech_ai_factor
-		
-		modifier = {
-			factor = 999999
-			has_ascension_perk = ap_engineered_evolution
-		}
-	}
-}
-
 tech_morphogenetic_field_mastery = {
 	cost = @tier4cost1
 	area = society
 	category = { biology }
 	tier = 4
 	is_rare = yes
+	#prerequisites = { "tech_epigenetic_triggers" }
 	weight = @tier4weight1
 
 	# unlocks xeno-armies
@@ -285,85 +208,6 @@ tech_gene_tailoring = {
 	}
 }
 
-#Targeted Gene Expressions
-@tech_gene_expressions_POINTS = 1
-@tech_gene_expressions_PICKS = 1
-tech_gene_expressions = {
-	cost = @tier3cost3
-	area = society
-	category = { biology }
-	tier = 3
-	is_rare = yes
-	prerequisites = { "tech_gene_tailoring" }
-	weight = @tier3weight3
-
-	prereqfor_desc = {
-		custom = {
-			title = "TECH_UNLOCK_GENE_EXPRESSIONS_TITLE"
-			desc = "TECH_UNLOCK_GENE_EXPRESSIONS_DESC"
-		}
-	}
-
-	prereqfor_desc = {
-		custom = {
-			title = "TECH_UNLOCK_VOCATIONAL_GENES_TITLE"
-			desc = "TECH_UNLOCK_VOCATIONAL_GENES_DESC"
-		}
-	}
-
-	modifier = {
-		description = tech_gene_expressions_modifier_desc
-		description_parameters = {
-			POINTS = @tech_gene_expressions_POINTS
-			PICKS = @tech_gene_expressions_PICKS
-		}
-		BIOLOGICAL_species_trait_points_add = @tech_gene_expressions_POINTS
-		BIOLOGICAL_species_trait_picks_add = @tech_gene_expressions_PICKS
-	}
-
-	potential = {
-		OR = {
-			NOR = {
-				is_machine_empire = yes
-				is_individual_machine = yes
-			}
-			has_civic = civic_machine_assimilator
-			has_civic = civic_machine_servitor
-		}
-		NOR = {
-			has_valid_civic = civic_natural_design
-			has_valid_civic = civic_hive_natural_design
-		}
-	}
-
-	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			is_hive_empire = yes
-		}
-		modifier = {
-			factor = 0.50
-			NOR = {
-				has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
-				has_trait_in_council = { TRAIT = leader_trait_curator }
-				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
-				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
-			}
-		}
-		inline_script = {
-			script = technologies/rare_technologies_weight_modifiers
-			TECHNOLOGY = tech_gene_expressions
-		}
-		modifier = {
-			factor = 2
-			has_relic = r_pox_sample
-		}
-	}
-
-	ai_weight = {
-	}
-}
-
 #Psionic Theory
 tech_psionic_theory = {
 	cost = @tier3cost1
@@ -480,10 +324,7 @@ tech_psionic_theory = {
 	ai_weight = {
 		modifier = {
 			factor = 5
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = yes
 		}
 
 		modifier = {

@@ -18,6 +18,8 @@ origin_imperial_vassal = {
 				value = civic_fanatic_purifiers
 				value = civic_hive_devouring_swarm
 				value = civic_machine_terminator
+				value = civic_scorched_earth
+				value = civic_hive_scorched_earth
 			}
 		}
 	}
@@ -26,6 +28,10 @@ origin_imperial_vassal = {
 	flags = { custom_start_screen }
 
 	traits = {}
+
+	random_weight = {
+		base = 0
+	}
 }
 
 origin_common_ground = {
@@ -56,6 +62,8 @@ origin_common_ground = {
 				value = civic_fanatic_purifiers
 				value = civic_hive_devouring_swarm
 				value = civic_machine_terminator
+				value = civic_scorched_earth
+				value = civic_hive_scorched_earth
 			}
 		}
 	}
@@ -64,6 +72,10 @@ origin_common_ground = {
 	flags = { custom_start_screen }
 
 	traits = {
+	}
+
+	random_weight = {
+		base = 0
 	}
 }
 
@@ -86,8 +98,8 @@ origin_hegemon = {
 			}
 			NOR = {
 				text = civic_tooltip_not_egalitarian
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 		civics = {
@@ -99,6 +111,8 @@ origin_hegemon = {
 				value = civic_fanatic_purifiers
 				value = civic_hive_devouring_swarm
 				value = civic_machine_terminator
+				value = civic_scorched_earth
+				value = civic_hive_scorched_earth
 			}
 		}
 	}
@@ -107,6 +121,10 @@ origin_hegemon = {
 	flags = { custom_start_screen }
 
 	traits = {
+	}
+
+	random_weight = {
+		base = 0
 	}
 }
 
@@ -128,5 +146,9 @@ origin_lost_colony = {
 	flags = { custom_start_screen }
 
 	traits = {
+	}
+
+	random_weight = {
+		base = 0
 	}
 }

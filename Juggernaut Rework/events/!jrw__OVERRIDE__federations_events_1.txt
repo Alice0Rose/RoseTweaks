@@ -1,0 +1,48 @@
+namespace = fedev
+
+### JUGGERNAUT CONSTRUCTED - BUILDER EVENT
+ship_event = {
+	id = fedev.9500
+	title = "fedev.9500.name"
+	desc = "fedev.9500.desc"
+	picture = GFX_evt_juggernaut
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			is_ship_size = juggernaut
+			is_ship_size = juggernaut_cr
+		}
+		
+		owner = {
+			NOT = { has_country_flag = juggernaut_constructed }
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = juggernaut_constructed
+		}
+		every_playable_country = {
+			limit = {
+				has_communications = root.owner
+				NOT = { is_same_value = root.owner }
+				has_intel_level = {
+					who = root.owner
+					category = military
+					level >= 2
+				}
+			}
+			country_event = { id = fedev.9505 }
+		}
+	}
+
+	after = {
+	}
+
+	option = {
+		name = fedev.9500.a
+	}
+}

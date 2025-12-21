@@ -1,0 +1,12 @@
+[h1]Features[/h1]
+This mod prevents any of the annoying early game events such as the wandering scientist, lost probes, or rebel cultists from spawning; yay for no more random restarts!! ^-^
+
+[h1]Compatibility[/h1]
+This mod only overrides the event that spawns the starting events (listed below), so unless another mod modifies that event, at which point you shouldn't be using this mod, there won't be any compatibility issue :D
+
+events\country_events_2.txt
+- country.900
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

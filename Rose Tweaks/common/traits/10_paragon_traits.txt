@@ -1550,7 +1550,7 @@ leader_trait_the_cybernetic_luminary = {
 		country_commander_cap_add = 2
 		country_scientist_cap_add = 2
 		species_leader_exp_gain = 0.25
-		cyborg_pop_bonus_workforce_mult = 0.1
+		planet_jobs_produces_mult = 0.1
 		pop_cyborg_happiness = 0.1
 		pop_non_cyborg_happiness = -0.15
 		logistic_growth_mult = 0.20
@@ -1585,7 +1585,7 @@ leader_trait_the_psionic_luminary = {
 
 	councilor_modifier = {
 		country_councilor_influence_produces_add = 2
-		psionic_pop_bonus_workforce_mult = 0.2
+		planet_jobs_produces_mult = 0.2
 		pop_non_psionic_happiness = -0.2
 		pop_government_ethic_attraction = 0.25
 		planet_crime_add = -20
@@ -1617,7 +1617,7 @@ leader_trait_the_synth_luminary = {
 	}
 
 	councilor_modifier = {
-		robotic_pop_bonus_workforce_mult = 0.25
+		planet_jobs_produces_mult = 0.25
 		pop_ethics_shift_speed_mult = 0.25
 		planet_pop_assembly_add = 1
 		pop_happiness = -0.15
@@ -1668,7 +1668,7 @@ leader_trait_the_genetic_luminary = {
 
 # Nameless Apostate
 leader_trait_unholy = {
-	cost = 0
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1695,7 +1695,7 @@ leader_trait_unholy = {
 }
 
 leader_trait_unholy_node = {
-	cost = 0
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander

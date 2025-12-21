@@ -18,7 +18,6 @@ Components:
 
 Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
-- Mind over Matter (Psionic tech agenda) gives Zro Distillation after Thought Enforcement
 - Ascension tech agendas are heavily prioritized by AIs, pushing them to complete their ascensions more reliably and quickly than vanilla
 - Psionic Supremacy agenda is available to psionic individualistic machines
 
@@ -38,7 +37,7 @@ Fleet Management:
 - Fleet command limit repeatable tech gives +50 instead of +20 and has 10 levels instead of 5
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
-- Behemoths won't enrage when they run into each other if they're in their owners system (listen to your mother and stop fighting you two!!)
+- Behemoths won't enrage when they run into each other if they're in their owner's system (listen to your mother and stop fighting you two!!)
 
 Empire Size:
 - Empire size effect on tech is reduced by 25%
@@ -53,13 +52,12 @@ Elections:
 Civics:
 - Technocracy gives +1 Unity per researcher
 - Technocracy council position gives +0.05 of each science type per skill level to researchers
-- Shadow Council gives +15% council agenda speed
+- Shadow Council gives +15% council agenda speed and +50% election term instead of election variance
 - Miners Guild gives +1 unity per miner
 - Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
 - Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops (also the message lasts less time to be less spammy lol)
 - Crusader Spirit gives +1 Unity from Soldiers
 - Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist
-- Obsessional Directive quota no longer scales with difficulty
 - Superstitious Beliefs civic can now be removed if you have over 1000 of each science category
 - Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
@@ -82,7 +80,7 @@ Galaxy Generation:
 - All AI personality types have the same probability of being an advanced AI
 
 Planet Classes:
-- Gaia World gives an additional +5% happiness and job efficiency (totaling +15%) and give +10% pop assembly speed (machine and organic)
+- Gaia Worlds give +10% pop assembly speed (machine and organic)
 - Toxic Worlds can be terraformed directly to Gaia worlds if you have both APs
 
 Policies:
@@ -93,13 +91,12 @@ Jobs:
 - Virtual Synthetic pops (but not Full Virtual pops) can be used in the Synthetic Lathe
 
 Factions:
-- Factions will now spawn after 1 year for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowd Sourcing empires
+- Factions will now spawn after 2 years for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowd Sourcing empires
 
 Techs:
 - Techs required for ascension will be heavily prioritized for AIs
 - Climate Restoration tech is T3 instead of T4 and is more likely to show up if you have the Adaptability tradition
 - Xenomorph tech no longer requires uplifting tech
-- Targeted Gene Expressions gives +1 trait points and picks so all empires can use auto-modding regardless of ascension
 - Synthetic Personality Matrix gives +5% robotic workforce and -5% robotic amenity usage (just so it actually does something for synthetic empires)
 - Both defense platform repeatables now give partial Deep Space Citadel capacity
 
@@ -117,19 +114,19 @@ Traits:
 		- Leader pool size +1
 		- Leader cap for all categories +2
 		- Leader XP gain +25%
-		- Cyborg bonus workforce +10%
+		- Resources from jobs +10%
 		- Cyborg happiness +10%
 		- Non-Cyborg happiness -15%
 		- Pop growth speed +20%
 	- Psionic:
 		- Monthly influence +2
-		- Psionic bonus workforce +20%
+		- Resources from jobs +20%
 		- Non-psionic happiness -20%
 		- Governing ethics attraction +25%
 		- Crime -20
 		- Decryption and encryption +2
 	- Synthetic:
-		- Robotic bonus workforce +25%
+		- Resources from jobs +25%
 		- Ethics shift speed +25%
 		- Mechanical pop assembly +1
 		- Pop happiness -15%

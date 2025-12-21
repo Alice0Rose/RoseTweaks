@@ -7,9 +7,7 @@ zone_urban_energy = {
 			is_wilderness_empire = no
 			is_ai = no						# AI isn't great at handling these
 		}
-		NOT = {
-			is_planet_class = pc_city
-		}
+		NOT = { is_planet_class = pc_city }
 	}
 
 	unlock = { # planet scope
@@ -49,10 +47,7 @@ zone_urban_energy = {
 		potential = {
 			NOR = {
 				is_planet_class = pc_ringworld_habitable
-				OR = {
-					has_modifier = rose_natural_arcologies
-					has_modifier = rose_gaia_arcology # DEPRECATED
-				}
+				has_modifier = rose_natural_arcologies
 			}
 		}
 		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
@@ -61,10 +56,7 @@ zone_urban_energy = {
 
 	triggered_district_planet_modifier = {
 		potential = {
-			OR = {
-				has_modifier = rose_natural_arcologies
-				has_modifier = rose_gaia_arcology # DEPRECATED
-			}
+			has_modifier = rose_natural_arcologies
 		}
 		planet_technician_produces_mult = @zone_urban_rural_worker_produces_mult
 		planet_technician_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
@@ -142,10 +134,7 @@ zone_urban_minerals = {
 		potential = {
 			NOR = {
 				is_planet_class = pc_ringworld_habitable
-				OR = {
-					has_modifier = rose_natural_arcologies
-					has_modifier = rose_gaia_arcology # DEPRECATED
-				}
+				has_modifier = rose_natural_arcologies
 			}
 		}
 		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
@@ -154,10 +143,7 @@ zone_urban_minerals = {
 
 	triggered_district_planet_modifier = {
 		potential = {
-			OR = {
-				has_modifier = rose_natural_arcologies
-				has_modifier = rose_gaia_arcology # DEPRECATED
-			}
+			has_modifier = rose_natural_arcologies
 		}
 		planet_miners_produces_mult = @zone_urban_rural_worker_produces_mult
 		planet_miners_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add
@@ -192,9 +178,7 @@ zone_urban_food = {
 			is_wilderness_empire = no
 			is_ai = no						# AI isn't great at handling these
 		}
-		NOT = {
-			is_planet_class = pc_city
-		}
+		NOT = { is_planet_class = pc_city }
 	}
 
 	unlock = { # planet scope
@@ -234,10 +218,7 @@ zone_urban_food = {
 		potential = {
 			NOR = {
 				is_planet_class = pc_ringworld_habitable
-				OR = {
-					has_modifier = rose_natural_arcologies
-					has_modifier = rose_gaia_arcology # DEPRECATED
-				}
+				has_modifier = rose_natural_arcologies
 			}
 		}
 		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
@@ -246,10 +227,7 @@ zone_urban_food = {
 
 	triggered_district_planet_modifier = {
 		potential = {
-			OR = {
-				has_modifier = rose_natural_arcologies
-				has_modifier = rose_gaia_arcology # DEPRECATED
-			}
+			has_modifier = rose_natural_arcologies
 		}
 		planet_farmers_produces_mult = @zone_urban_rural_worker_produces_mult
 		planet_farmers_trade_upkeep_add = @zone_urban_rural_worker_trade_upkeep_add

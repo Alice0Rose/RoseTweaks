@@ -1,0 +1,34 @@
+namespace = focus
+
+# Build 1 Juggernaut
+# Called from on_ship_built
+# Root = Ship
+# From = Planet
+ship_event = {
+	id = focus.715
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			is_ship_size = juggernaut
+			is_ship_size = juggernaut_cr
+		}
+		owner = {
+			check_variable = {
+				which = focus_built_juggernut
+				value < @focus_goal_built_juggernaut
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			change_variable = {
+				which = focus_built_juggernaut
+				value = 1
+			}
+		}
+	}
+}

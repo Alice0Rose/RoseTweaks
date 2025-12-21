@@ -1,0 +1,14 @@
+namespace = country
+
+# Starting Event gatekeeper
+country_event = {
+	id = country.900
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Sets the flag so no event can spawn
+		set_country_flag = starting_event
+	}
+}

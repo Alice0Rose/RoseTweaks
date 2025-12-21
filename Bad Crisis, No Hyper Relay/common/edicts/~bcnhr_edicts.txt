@@ -1,0 +1,15 @@
+bcnhr_ignore_hyper_relays = {
+	length = -1
+	icon = "GFX_fleet_presence_icons"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_ai = no
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

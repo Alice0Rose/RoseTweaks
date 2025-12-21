@@ -1,7 +1,7 @@
 is_faction_allowed = {
 	OR = {
 		AND = {
-			years_passed >= 1
+			years_passed > 1
 			#has_encountered_other_species = yes
 		}
 		AND = {

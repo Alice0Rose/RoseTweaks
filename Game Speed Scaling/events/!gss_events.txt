@@ -1,0 +1,49 @@
+namespace = game_speed_scaling
+
+event = {
+	id = game_speed_scaling.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_system = {
+			get_galaxy_setup_value = { 
+				which = game_speed_scalar
+				setting = end_game_year					
+			}
+			
+			divide_variable = {
+				which = game_speed_scalar
+				value = -200
+			}
+			
+			# Gets percent (in decimal form) that game is faster than default game
+			change_variable = {
+				which = game_speed_scalar
+				value = 1
+			}
+		
+			every_country = {  
+				if = {
+					limit = {
+						NOR = {
+							has_modifier = game_speed_scaling
+							check_galaxy_setup_value = {
+								setting = end_game_year
+								value = 200 
+							}
+						}
+					}
+						
+					add_modifier = {
+						modifier = game_speed_scaling
+						multiplier = prev.game_speed_scalar
+					}
+				}
+			}
+			
+			clear_variable = game_speed_scalar
+		}
+	}
+}

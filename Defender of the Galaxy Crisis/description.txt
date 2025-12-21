@@ -1,5 +1,5 @@
 [h1]Features[/h1]
-This mod allows you to take the Defender of the Galaxy ascension perk along side any of the player crisis ascension perks. After all, this is your galaxy to destroy, not anyone elses >:D
+This mod allows you to take the Defender of the Galaxy ascension perk along side any of the player crisis ascension perks. After all, this galaxy isn't theirs to conquer >:D
 
 Note that you will lose the +200 opinion modifier from the Defender of the Galaxy ascension perk if you become a crisis :o 
 
@@ -13,6 +13,7 @@ common\defines\00_defines.txt
 - ap_become_the_crisis
 - ap_cosmogenesis
 - ap_behemoths
+- ap_galactic_hyperthermia
 
 localisation\english\traditions_l_english.txt
 - ap_defender_of_the_galaxy_effect_opinion

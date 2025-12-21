@@ -1,0 +1,13 @@
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		ascension_trait_fix.1
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		ascension_trait_fix.2
+	}
+}

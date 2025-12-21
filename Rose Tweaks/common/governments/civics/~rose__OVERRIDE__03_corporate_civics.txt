@@ -163,6 +163,9 @@ civic_corporate_superstitious_beliefs = {
 				value = origin_cybernetic_creed
 			}
 		}
+		civics = {
+			NOT = { value = civic_superstitious_beliefs }
+		}
 	}
 
 	alternate_civic_version = civic_superstitious_beliefs
@@ -212,6 +215,7 @@ civic_tankbound_corporate = {
 				value = origin_clone_army
 				value = origin_primal_calling
 				value = origin_syncretic_evolution
+				value = origin_unplugged
 			}
 		}
 		civics = {
@@ -219,6 +223,7 @@ civic_tankbound_corporate = {
 				value = civic_corporate_anglers
 				value = civic_indentured_assets
 				value = civic_private_military_companies
+				value = civic_tankbound
 			}
 		}
 		species_class = {
@@ -226,6 +231,7 @@ civic_tankbound_corporate = {
 				value = NECROID
 				value = TOX
 				value = AQUATIC
+				value = INF
 				value = ROBOT
 			}
 		}
@@ -255,6 +261,8 @@ civic_tankbound_corporate = {
 		planet_districts_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
 		planet_districts_rw_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
 		planet_districts_rw_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_energy_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
 	}
 	hide_modifiers = yes
 

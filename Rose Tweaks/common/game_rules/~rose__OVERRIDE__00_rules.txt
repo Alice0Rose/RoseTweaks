@@ -109,18 +109,6 @@ leader_election_weight = {
 		mult = 1.05
 	}
 
-	## Governments (based on Ethics and Civics) might prefer certain Leader classes. Hide if +/- 0%.
-	#modifier = {
-	#	custom_tooltip = {
-	#		success_text = election_weight.leader_class_government_approves
-	#		check_variable_arithmetic = {
-	#			which = value:leader_class_government_match_bonus_mult
-	#			value != 1
-	#		}
-	#	}
-	#	mult = value:leader_class_government_match_bonus_mult
-	#}
-
 	# Extra bonus for Councilor Subclass (which is a Trait).
 	modifier = {
 		custom_tooltip = {
@@ -229,7 +217,7 @@ leader_election_weight = {
 	modifier = {
 		custom_tooltip = {
 			success_text = Xeno
-			owner = { has_ethic = ethic_fanatic_xenophile }
+			owner = { is_fanatic_xenophile = yes }
 			exists = owner.ruler
 			NOT = {
 				is_same_species = owner.ruler
