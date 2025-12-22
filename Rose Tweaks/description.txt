@@ -99,6 +99,7 @@ Techs:
 - Xenomorph tech no longer requires uplifting tech
 - Synthetic Personality Matrix gives +5% robotic workforce and -5% robotic amenity usage (just so it actually does something for synthetic empires)
 - Both defense platform repeatables now give partial Deep Space Citadel capacity
+- Added Habitation Module unlock to Agrarian Idyll housing tech, along with the ability to pick the Arcology Project ascension perk (tho this is only usable to create Natural Arcologies, not full Ecumonopli)
 
 Tooltips:
 - Hovering over valid systems will show the max output of a Dyson Swarm if placed in the system
