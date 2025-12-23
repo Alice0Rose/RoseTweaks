@@ -12,7 +12,10 @@ country_event = {
 				limit = {
 					owner = {
 						OR = {
-							has_tradition = tr_synthetics_finish
+							AND = {
+								has_tradition = tr_synthetics_finish
+								has_country_flag = synthetic_empire
+							}
 							has_tradition = tr_modularity_finish
 						}
 					}
