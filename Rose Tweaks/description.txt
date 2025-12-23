@@ -38,6 +38,7 @@ Fleet Management:
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
 - Behemoths won't enrage when they run into each other if they're in their owner's system (listen to your mother and stop fighting you two!!)
+- Gave Menacing Corvettes access to artillery combat computers
 
 Empire Size:
 - Empire size effect on tech is reduced by 25%
@@ -61,6 +62,7 @@ Civics:
 - Superstitious Beliefs civic can now be removed if you have over 1000 of each science category
 - Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
+- Environmentalist allows building Natural Arcologies without needing to clear all blockers first
 
 Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires

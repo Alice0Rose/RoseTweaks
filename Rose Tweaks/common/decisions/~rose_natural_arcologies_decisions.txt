@@ -32,7 +32,13 @@ decision_rose_natural_arcologies = {
 			fail_text = not_allowed_decision_rose_natural_arcologies
 			is_allowed_for_natural_arcologies = yes
 		}
-		num_uncleared_blockers < 1
+		
+		if = {
+			limit = {
+				owner = { NOT = { has_civic = civic_environmentalist } }
+			}
+			num_uncleared_blockers < 1
+		}
 	}
 
 	effect = {
