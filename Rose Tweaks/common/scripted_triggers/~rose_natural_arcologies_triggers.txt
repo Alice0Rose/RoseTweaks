@@ -6,7 +6,10 @@ is_potential_for_natural_arcologies = {
 		has_modifier = pm_wenkwort_custodian
 		has_modifier = holy_planet
 	}
-	is_habitable_for_wilderness = yes
+	OR = {
+		is_habitable_for_wilderness = yes
+		is_planet_class = pc_volcanic
+	}
 }
 
 is_allowed_for_natural_arcologies = {
@@ -19,6 +22,14 @@ is_allowed_for_natural_arcologies = {
 		}
 	
 		owner = { has_valid_civic = civic_environmentalist }
+		
+		AND = {
+			is_planet_class = pc_volcanic
+			OR = {
+				owner = { has_valid_civic = civic_world_forgers }
+				owner = { has_valid_civic = civic_corporate_world_forgers }
+			}
+		}
 	}
 }
 

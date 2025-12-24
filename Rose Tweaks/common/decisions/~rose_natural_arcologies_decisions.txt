@@ -6,9 +6,20 @@ decision_rose_natural_arcologies = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				NOT = { is_planet_class = pc_volcanic }
+			}
 			influence = 200
 			minerals = 12500
 			food = 12500
+		}
+		cost = {
+			trigger = {
+				is_planet_class = pc_volcanic
+			}
+			influence = 200
+			minerals = 12500
+			alloys = 3125
 		}
 	}
 

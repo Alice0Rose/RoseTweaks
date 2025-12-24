@@ -24,7 +24,7 @@ Agendas:
 Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
-- The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, or any natural world with the Environmentalist Civic
+- The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
 
 Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires but 50% more slowly, requiring a significant power difference before vassalization is an option
