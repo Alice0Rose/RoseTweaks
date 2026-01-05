@@ -1,0 +1,3 @@
+﻿l_english:
+ civic_secret_societies_effects: "Clandestine ['concept_ss_factions'] will emerge after contacting other empires.\nStarts with the ability to conduct ['concept_proxy_wars'].\n$job_bureaucrat_plural_with_icon$ will produce $i_unity$ per started §YProxy War§!.\nStarts in ['concept_first_contact'] with two neighboring empires.\n$INFILTRATION_LEVEL$ gained on empires after §Y$first_contact$§!: §G+$@secret_society_infiltration_gain|0$§!"
+ secret_societies_proxy_war_bonus_tt: "[GetBureaucratPluralWithIcon] produces §G+$@secret_societies_unity_per_proxy_war|1$§! $i_unity$ per started §HProxy War§!."

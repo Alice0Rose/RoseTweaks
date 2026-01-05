@@ -1,0 +1,12 @@
+space_dragon_origin_babies_limit = {
+	ship_types = {
+		space_dragon_origin_baby
+	}
+
+	base = 99999 # 10 * dragon baby's size_multiplier
+	show = {
+		is_scope_valid = yes
+		is_dragon_breeder_country = yes
+		always = no
+	}
+}

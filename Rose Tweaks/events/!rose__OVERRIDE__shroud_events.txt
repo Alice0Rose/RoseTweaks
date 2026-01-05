@@ -41,3 +41,101 @@ country_event = {
 		}
 	}
 }
+
+# Secret Societies proxy war bonus
+# Root = instigator
+# From = victim
+country_event = {
+	id = shroud.5040
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_secret_societies_empire = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { has_modifier = secret_societies_proxy_war_bonus }
+			remove_modifier = secret_societies_proxy_war_bonus
+		}
+		
+		if = {
+			limit = { NOT = { is_variable_set = proxy_wars_variable } }
+			set_variable = { 
+				which = proxy_wars_variable 
+				value = 0
+			}
+		}
+			
+		if = {
+			limit = {
+				# Limits bonus to 10 proxy wars (+5 unity from bureaucrats)
+				check_variable = { 
+					which = proxy_wars_variable
+					value < 10
+				}
+			}
+
+			change_variable = { 
+				which = proxy_wars_variable 
+				value = 1
+			}
+		}
+		
+		if = {
+			limit = {
+				check_variable = {
+					which = proxy_wars_variable
+					value > 0
+				}
+			}
+			add_modifier = {
+				modifier = secret_societies_proxy_war_bonus
+				mult = proxy_wars_variable
+				days = -1
+			}
+		}
+	}
+}
+
+# Secret Societies proxy war bonus refresh from war ending
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+country_event = {
+	id = shroud.5045
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		fromfrom.instigator = {
+			country_event = { id = shroud.5040 }
+		}
+	}
+}
+
+# Root = Actor
+# From = Recipient
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+country_event = {
+	id = shroud.5046
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		fromfromfromfrom.instigator = {
+			country_event = { id = shroud.5040 }
+		}
+	}
+}
