@@ -12,8 +12,8 @@ country_event = {
 				# No reason for ai to get this choice
 				is_ai = no
 				
-				# No reason for 1 ethic empires to get this event
-				num_ethics > 1
+				# No reason for gestalt empires to get this event
+				NOT = { has_ethic = ethic_gestalt_consciousness }
 			}
 				
 			country_event = { id = rose_choose_starting_ruler_ethic.2 days = 0 }
@@ -217,6 +217,103 @@ country_event = {
 			home_planet = {
 				leader = {
 					change_background_ethic = "ethic_xenophobe"
+				}
+			}
+		}
+	}
+	
+	### Ethics and Civics Classic compat
+	# Choose green/industrial as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.e
+
+		trigger = {
+			OR = {
+				is_green = yes
+				is_industrial = yes
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_green = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_green"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_green"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				owner = {
+					is_industrial = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_industrial"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_industrial"
+				}
+			}
+		}
+	}
+	
+	# Choose socialist/capitalist as starting ruler ethic
+	option = {
+		name = rose_choose_starting_ruler_ethic.2.f
+
+		trigger = {
+			OR = {
+				is_socialism = yes
+				is_capitalism = yes
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_socialism = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_socialism"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_socialism"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				owner = {
+					is_capitalism = yes
+				}
+			}
+			
+			# Changes the ethic of the ruler and the homeworld governor
+			ruler = {
+				change_background_ethic = "ethic_capitalism"
+			}
+			home_planet = {
+				leader = {
+					change_background_ethic = "ethic_capitalism"
 				}
 			}
 		}

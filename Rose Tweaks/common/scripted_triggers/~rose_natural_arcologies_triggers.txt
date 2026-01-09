@@ -1,4 +1,60 @@
+is_valid_natural_arcologies_gaia_planet_class = {
+	OR = {
+		is_planet_class = pc_gaia
+		
+		# Planetary Diversity
+		pd_is_planet_class_gaia = yes
+	}
+}
+
+is_valid_natural_arcologies_ocean_planet_class = {
+	OR = {
+		is_planet_class = pc_ocean
+		
+		# Planetary Diversity
+		pd_is_ocean = yes
+		pd_ocean_modifier = yes
+	}
+}
+
+is_valid_natural_arcologies_volcanic_planet_class = {
+	OR = {
+		is_planet_class = pc_volcanic		
+	}
+}
+
+is_valid_natural_arcologies_planet_class = {
+	OR = { 
+		is_planet_class = pc_desert
+		is_planet_class = pc_tropical
+		is_planet_class = pc_arid
+		is_planet_class = pc_continental
+		is_planet_class = pc_ocean
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_alpine
+		is_planet_class = pc_savannah
+		is_planet_class = pc_gaia 
+		is_planet_class = pc_volcanic
+		
+		# Planetary Diversity
+		pd_is_continental = yes
+		pd_is_ocean = yes
+		pd_is_tropical = yes
+		pd_is_desert = yes
+		pd_is_arid = yes
+		pd_is_savannah = yes
+		pd_is_arctic = yes
+		pd_is_alpine = yes
+		pd_is_tundra = yes
+		pd_is_planet_class_gaia = yes
+		has_pd_modifier = yes
+	}
+}
+
 is_potential_for_natural_arcologies = {
+	is_valid_natural_arcologies_planet_class = yes
+	
 	NOR = {
 		has_modifier = resort_colony
 		has_modifier = penal_colony
@@ -6,25 +62,21 @@ is_potential_for_natural_arcologies = {
 		has_modifier = pm_wenkwort_custodian
 		has_modifier = holy_planet
 	}
-	OR = {
-		is_habitable_for_wilderness = yes
-		is_planet_class = pc_volcanic
-	}
 }
 
 is_allowed_for_natural_arcologies = {
 	OR = {
-		is_planet_class = pc_gaia
+		is_valid_natural_arcologies_gaia_planet_class = yes
 	
 		AND = {
-			is_planet_class = pc_ocean
+			is_valid_natural_arcologies_ocean_planet_class = yes
 			owner = { has_ascension_perk = ap_hydrocentric }
 		}
 	
 		owner = { has_valid_civic = civic_environmentalist }
 		
 		AND = {
-			is_planet_class = pc_volcanic
+			is_valid_natural_arcologies_volcanic_planet_class = yes
 			OR = {
 				owner = { has_valid_civic = civic_world_forgers }
 				owner = { has_valid_civic = civic_corporate_world_forgers }
