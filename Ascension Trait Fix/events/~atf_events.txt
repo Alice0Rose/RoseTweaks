@@ -14,7 +14,7 @@ country_event = {
 						OR = {
 							AND = {
 								has_tradition = tr_synthetics_finish
-								has_country_flag = synthetic_empire
+								has_country_flag = synthetics_traditions_unlocked
 							}
 							has_tradition = tr_modularity_finish
 						}

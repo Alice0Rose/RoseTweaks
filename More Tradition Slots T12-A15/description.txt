@@ -1,7 +1,8 @@
 [h1]Features[/h1]
 Allows a total of 12 tradition slots and 15 ascension perks (2 obtained through a repeatable society tech)! \o/ The planetary ascension maximum is also increased to 17 to match the ascension perk increase :)
 
-9 Tradition and 12 Ascension Perk Version: https://steamcommunity.com/sharedfiles/filedetails/?id=3385412088
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3385412088]  9 Tradition and 12 Ascension Perk Version [/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3642359832] 33 Tradition and 36 Ascension Perk Version [/url]
 
 [h1]Compatibility[/h1]
 This mod overwrites a few defines, a scripted variable, and the tradition interface ui, which are listed below. There shouldn't be any issue with other mods unless they add tradition slots or ascension perk slots :)

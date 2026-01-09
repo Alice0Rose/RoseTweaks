@@ -1,0 +1,1 @@
+@max_tradition_trees = 32	# In case modders increase the limit
