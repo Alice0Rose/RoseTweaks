@@ -1,0 +1,212 @@
+system_prospecting_nanite_harvester_value = {
+	# Planets smaller than 3
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				planet_size < 3
+			}
+		}
+		mode = add
+		mult = 0.2
+	}
+
+	# Planets 3 to 6 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 3
+					planet_size <= 6
+				}
+			}
+		}
+		mode = add
+		mult = 0.4
+	}
+
+	# Planets 7 to 8 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 7
+					planet_size <= 8
+				}
+			}
+		}
+		mode = add
+		mult = 0.8
+	}
+
+	# Planets 9 to 11 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 9
+					planet_size <= 11
+				}			
+			}
+		}
+		mode = add
+		mult = 1.6
+	}
+
+	# Planets 12 to 14 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 12
+					planet_size <= 14
+				}
+			}
+		}
+		mode = add
+		mult = 3.2
+	}
+
+	# Planets 15 to 17 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 15
+					planet_size <= 17
+				}
+			}
+		}
+		mode = add
+		mult = 6.4
+	}
+	
+	# Planets 18 to 20 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 18
+					planet_size <= 20
+				}
+			}
+		}
+		mode = add
+		mult = 12.8
+	}
+	
+	# Planets 21 to 24 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					is_colonizable = no
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				AND = {
+					planet_size >= 21
+					planet_size <= 24
+				}
+			}
+		}
+		mode = add
+		mult = 25.2
+	}	
+
+	# Planets larger than or equal to 25 
+	complex_trigger_modifier = {
+		trigger = count_system_planet
+		parameters = {
+			limit = {
+				# Planets viable for nanite harvester to give deposits to
+				AND = {
+					can_have_mineral_deposits = yes
+					NOT = {
+						has_deposit_for = shipclass_research_station
+					}
+				}
+				
+				# Planet size check to determine max deposit tier
+				planet_size >= 25
+			}
+		}
+		mode = add
+		mult = 50.4
+	}	
+}

@@ -473,3 +473,32 @@ agenda_synthetic_age = {
 		base = @ascension_tech_agenda_weight
 	}
 }
+
+agenda_nanotech_unstoppable_swarm = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_nanotech_adopt
+	}
+	potential = {
+		has_machine_age_dlc = yes
+		OR = {
+			is_individual_machine = yes
+			is_machine_empire = yes
+		}
+		NOR = {
+			has_cybernetic_ascension = yes
+			has_country_flag = modularity_traditions_unlocked
+			has_country_flag = virtuality_traditions_unlocked
+		}
+
+	}
+	modifier = {
+		shipsize_nanite_swarmer_build_speed_mult = 0.20
+		shipsize_nanite_interdictor_build_speed_mult = 0.20
+		starbase_shipyard_build_nanites_cost_mult = -0.15
+	}
+	finish_modifier = agenda_nanotech_unstoppable_swarm_finish
+	ai_weight = {
+		base = @ascension_agenda_weight
+	}
+}

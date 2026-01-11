@@ -35,3 +35,83 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 		}
 	}
 }
+
+# Story Chain Enging Speech #
+country_event = {
+	id = paragon.6035
+	title = "paragon.6035.name"
+	desc = paragon.6035.desc
+	picture = GFX_evt_legendary_leader
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = owner.ruler
+		room = owner
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = ruler
+		ruler = { has_leader_flag = paragon_origin_legendary_leader }
+	}
+
+	option = { #Null choice, status quo
+		name = paragon.6035.a
+	}
+
+	option = { #Become Democratic/Oligarchic (Authoritarian empires can't be democratic, so they will become Oligarchic instead)
+		name = paragon.6035.b
+		trigger = {
+			NOR = {
+				is_fanatic_authoritarian = yes
+				ruler = { has_trait = leader_trait_legendary_delusional }
+			}
+		}
+		hidden_effect = {
+			ruler = {
+				if = {
+					limit = { has_leader_flag = leader_rift_blocks_death_events }
+					remove_leader_flag = leader_rift_blocks_death_events
+				}
+				else = {
+					remove_leader_flag = leader_death_events_blocked
+				}
+				remove_leader_flag = paragon_origin_legendary_leader
+			}
+		}
+		set_origin = origin_default
+		if = {
+			limit = {
+				has_ethic = ethic_authoritarian
+			}
+			change_government = {
+				authority = auth_oligarchic
+				remove_invalid_civics = yes
+			}
+		}
+		else = {
+			change_government = {
+				authority = auth_democratic
+				remove_invalid_civics = yes
+			}
+			shift_ethic = ethic_egalitarian
+		}
+		paragon_origin_gain_modifier = yes
+		custom_tooltip = paragon.6035.b.tt
+	}
+	after = {
+		hidden_effect = {
+			save_event_target_as = this_country
+			add_timeline_event = {
+				type = timeline_origin_specific
+				override_id = timeline_under_one_rule_destiny_fulfilled
+				override_tooltip = "TIMELINE_EVENT_LEGENDARY_LEADER_TOOLTIP"
+				override_types = { }
+				override_text = { "text:TIMELINE_EVENT_LEGENDARY_LEADER" }
+				override_texture = { "background:GFX_origin_legendary_leader" }
+				targets = { }
+			}
+		}
+	}
+}

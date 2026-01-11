@@ -12,6 +12,29 @@ on_game_start_country = {
 	}
 }
 
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		rose_nanotech_traits.2
+		rose_scaling_nanite_harvester_upgrade.1
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		rose_nanotech_traits.3
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		rose_nanotech_traits.10 # Colony ship straggler
+	}
+}
+
 # Planet has changed planet class in whatever way. Note that this is also called during galaxy creation in some places.
 # This = Planet
 on_planet_class_changed = {
@@ -36,5 +59,13 @@ on_planet_transfer = {
 on_country_created = {
 	events = { # country_event
 		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+	}
+}
+
+# Executed when a country picks any tradition (including starters and finishers)
+# THIS = country
+on_tradition_picked = {
+	events = {
+		rose_nanotech_traits.0
 	}
 }

@@ -1,0 +1,28 @@
+#root = system
+#from = player
+system_prospecting_nanite_harvester_tooltip = {
+	custom_tooltip = {
+		success_text = system_prospecting_nanite_harvester
+
+		exists = from
+		
+		# Checks the system is surveyed by the player
+		is_surveyed = { 
+			who = from
+			status = yes 
+		}
+		
+		# Checks the country has the nanotech ascension path
+		from = {
+			has_tradition = tr_nanotech_adopt
+		}
+
+		# Checks system has at least one valid planet for a deposit
+		any_system_planet = {
+			can_have_mineral_deposits = yes
+			NOT = {
+				has_deposit_for = shipclass_research_station
+			}
+		}
+	}
+}

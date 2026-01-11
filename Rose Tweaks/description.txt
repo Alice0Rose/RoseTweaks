@@ -20,11 +20,13 @@ Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
 - Ascension tech agendas are heavily prioritized by AIs, pushing them to complete their ascensions more reliably and quickly than vanilla
 - Psionic Supremacy agenda is available to psionic individualistic machines
+- Nanotech Unstoppable Swarm agenda includes Nanite Interdictors too
 
 Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 - The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
+- "Subsume World" agenda can be used by nanotech empires on their capital now
 
 Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires but 50% more slowly, requiring a significant power difference before vassalization is an option
@@ -106,7 +108,7 @@ Techs:
 - Added Habitation Module unlock to Agrarian Idyll housing tech, along with the ability to pick the Arcology Project ascension perk (tho this is only usable to create Natural Arcologies, not full Ecumonopli)
 
 Tooltips:
-- Hovering over valid systems will show the max output of a Dyson Swarm if placed in the system
+- Hovering over valid systems will show the max output of a Dyson Swarm and Nanite Harvester (if Nanotech) if built in the system
 - Orbital habitat tooltip shows the potential districts of each type again (why did they remove this oml)
 
 Traditions:
@@ -143,8 +145,9 @@ Traits:
 		- Pop growth speed -15%
 - Psionic starting traits are available to all portraits :)
 - Added the Revered trait which gives +40 lifespan for 2 trait points
-- Added Inflexible Chassis for robots which reduces minimum habitability by 25% for +2 trait points
-- Added Hardwired for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
+- Added Inflexible Chassis trait for robots which reduces minimum habitability by 25% for +2 trait points
+- Added Hardwired trait for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
+- Added Nanotech Enhancements trait for the main species and its leaders of nanotech empires
 	
 Politics:
 - Egalitarian governments that become Galactic Emperor maintain their ethics
@@ -161,6 +164,7 @@ Ascension:
 	- -10% miner job efficiency
 	- -5% metallurgist job efficiency
 - Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
+- Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 
 Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs
