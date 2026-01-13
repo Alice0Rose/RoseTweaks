@@ -1,0 +1,713 @@
+# Urban Planet
+rose_col_trade_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_trade
+
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_structures_upkeep_mult = -0.10
+		planet_district_city_build_speed_mult = 0.25
+		planet_jobs_trade_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness_low
+			has_designation = rose_col_trade_nanotech
+		}
+		modifier = {
+			num_zones = {
+				type = zone_trade
+				value > 0
+			}
+			add = @zone_rural # intended, this is not a particularly great colony designation
+		}
+		inline_script = {
+			script = colony_types/shared_weights_urban
+		}
+	}
+}
+
+# Mining Planet
+rose_col_mining_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_mining
+
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_district_mining_build_speed_mult = 0.25
+		planet_miners_produces_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = { is_planet_class = pc_volcanic }
+		planet_district_melting_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_mining_nanotech
+		}
+		modifier = {
+			planet_size > @rural_max_size
+			add = @rural_over_max_size
+		}
+		modifier = {
+			num_zones = {
+				type = zone_minerals
+				value > 0
+			}
+			add = @zone_rural
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_mining
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_melting
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_free_districts
+			parameters = {
+				type = district_mining
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_free_districts
+			parameters = {
+				type = district_melting
+			}
+			mode = add
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_modifier = asteroid_belt
+				has_modifier = mineral_rich
+				has_modifier = ultra_rich
+				has_modifier = extensive_moon_system
+				has_modifier = asteroid_impacts
+				has_modifier = carbon_world
+				# Volcanic Worlds
+				has_modifier = volcanic_mineral_rich
+				has_modifier = volcanic_ultra_rich
+				has_modifier = volcanic_subterranean
+				has_modifier = volcanic_asteroid_impacts
+				has_modifier = volcanic_hollow_planet
+				has_modifier = volcanic_lavafall
+			}
+		}
+		modifier = {
+			add = -10
+			has_modifier = mineral_poor
+		}
+	}
+}
+
+# Generator Planet
+rose_col_generator_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_generator
+
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_district_generator_build_speed_mult = 0.25
+		planet_technician_produces_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = { is_planet_class = pc_volcanic }
+		planet_district_geothermal_build_speed_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_generator_nanotech
+		}
+		modifier = {
+			planet_size > @rural_max_size
+			add = @rural_over_max_size
+		}
+		modifier = {
+			num_zones = {
+				type = zone_energy
+				value > 0
+			}
+			add = @zone_rural
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_generator
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_geothermal # are always uncapped
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_free_districts
+			parameters = {
+				type = district_generator
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_free_districts
+			parameters = {
+				type = district_geothermal
+			}
+			mode = add
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_modifier = hazardous_weather
+				has_modifier = strong_magnetic_field
+			}
+		}
+		modifier = {
+			add = -10
+			has_modifier = energy_poor
+		}
+	}
+}
+
+# Forge Planet
+rose_col_foundry_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_foundry
+
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_metallurgists_upkeep_mult = -0.20
+	}
+
+	triggered_planet_modifier = {
+		potential = { uses_district_set = ring_world }
+		logistic_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_foundry_nanotech
+		}
+		modifier = {
+			has_any_foundry_zone = yes
+			has_any_factory_zone = no
+			add = @zone_urban
+		}
+		inline_script = {
+			script = colony_types/shared_weights_urban
+		}
+	}
+}
+
+# Factory Planet
+rose_col_factory_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_factory
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = { country_uses_consumer_goods = yes }
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_artisans_upkeep_mult = -0.20
+	}
+
+	triggered_planet_modifier = {
+		potential = { uses_district_set = ring_world }
+		logistic_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_factory_nanotech
+		}
+		modifier = {
+			has_any_foundry_zone = no
+			has_any_factory_zone = yes
+			add = @zone_urban
+		}
+		inline_script = {
+			script = colony_types/shared_weights_urban
+		}
+	}
+}
+
+# Unification Center
+rose_col_bureau_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_bureaucratic
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
+			has_make_spiritualist_perk = no
+		}
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_bureaucrats_produces_mult = 0.10
+		planet_bureaucrats_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = { uses_district_set = ring_world }
+		logistic_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner.federation
+			owner_or_space_owner.federation = { has_federation_perk = all_the_priests_1 }
+		}
+		job_bureaucrat_per_pop = 0.04
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_bureau_nanotech
+		}
+		modifier = {
+			num_zones = {
+				type = zone_unity
+				value > 0
+			}
+			add = @zone_urban
+		}
+		inline_script = {
+			script = colony_types/shared_weights_admin
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_city
+			}
+			mode = add
+		}
+	}
+}
+
+rose_col_bureau_spiritualist_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_bureaucratic
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			is_regular_empire = yes
+			OR = {
+				is_spiritualist = yes
+				has_make_spiritualist_perk = yes
+			}
+		}
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_bureaucrats_produces_mult = 0.10
+		planet_bureaucrats_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = { uses_district_set = ring_world }
+		logistic_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner.federation
+			owner_or_space_owner.federation = { has_federation_perk = all_the_priests_1 }
+		}
+		job_bureaucrat_per_pop = 0.04
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_bureau_spiritualist_nanotech
+		}
+		modifier = {
+			num_zones = {
+				type = zone_unity_spiritualist
+				value > 0
+			}
+			add = @zone_urban
+		}
+		inline_script = {
+			script = colony_types/shared_weights_priests
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_city
+			}
+			mode = add
+		}
+	}
+}
+
+rose_col_bureau_machine_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_bureaucratic
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			is_machine_empire = yes
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_bureaucrats_produces_mult = 0.10
+		planet_bureaucrats_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = { uses_district_set = ring_world }
+		logistic_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_bureau_machine_nanotech
+		}
+		modifier = {
+			num_zones = {
+				type = zone_unity
+				value > 0
+			}
+			add = @zone_urban
+		}
+		inline_script = {
+			script = colony_types/shared_weights_network
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_nexus
+			}
+			mode = add
+		}
+	}
+}
+
+# Research Planet
+rose_col_research_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_research
+
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_building_research_lab_1_build_speed_mult = 0.25
+		planet_researchers_upkeep_mult = -0.2
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_research_nanotech
+		}
+		modifier = {
+			OR = {
+				num_zones = {
+					type = zone_research
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_engineering
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_physics
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_society
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_unity
+					value > 0
+				}
+			}
+
+			add = @zone_urban
+		}
+		inline_script = {
+			script = colony_types/shared_weights_research
+		}
+		inline_script = {
+			script = colony_types/shared_weights_urban
+		}
+		# Volcanic Worlds
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_polytechnic
+			}
+			mode = add
+		}
+		complex_trigger_modifier = {
+			trigger = num_free_districts
+			parameters = {
+				type = district_polytechnic
+			}
+			mode = add
+		}
+	}
+}
+
+# Fortress Planet
+rose_col_fortress_nanotech = {
+	icon = GFX_rose_colony_type_nanotech_fortress
+
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.15
+		planet_buildings_upkeep_mult = 0.1
+		planet_building_stronghold_build_speed_mult = 0.25
+		planet_orbital_bombardment_damage = -0.10
+		army_defense_damage_mult = 0.25
+		army_defense_health_mult = 0.25
+		army_defense_morale_mult = 0.25
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = rose_col_fortress_nanotech
+		}
+		modifier = {
+			num_zones = {
+				type = zone_fortress
+				value > 0
+			}
+			add = @zone_urban
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_stronghold
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_fortress
+			}
+			mode = add
+			mult = 4
+		}
+		inline_script = {
+			script = colony_types/shared_weights_urban
+		}
+	}
+}

@@ -26,7 +26,7 @@ Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 - The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
-- "Subsume World" agenda can be used by nanotech empires on their capital now
+- "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 
 Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires but 50% more slowly, requiring a significant power difference before vassalization is an option
@@ -88,6 +88,7 @@ Galaxy Generation:
 Planet Classes:
 - Gaia Worlds give +10% pop assembly speed (machine and organic)
 - Toxic Worlds can be terraformed directly to Gaia worlds if you have both APs
+- Added more designations to nanite worlds for Nanotech empires
 
 Policies:
 - Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy (0.3 and 0.3 instead of 0.2, 0.2, and 0.2)
