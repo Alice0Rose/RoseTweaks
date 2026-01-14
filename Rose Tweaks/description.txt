@@ -77,6 +77,7 @@ Origins:
 - Here Be Dragons no longer has a limit on the number of baby dragons you can make ^^
 - Slingshot to the Stars starts with the Quantum Catapult on a Neutron Star instead of a Pulsar (won't remove your shields)
 - Under One Rule ascension event changed from 10-30 years to 15-17 years to trigger
+- Under One Rule ending event fixed to not trigger until reformists are gone and given a failsafe trigger
 - Under One Rule English localisation fixed in certain events
 
 Opinion Modifiers:

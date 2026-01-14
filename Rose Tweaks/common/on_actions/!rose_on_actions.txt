@@ -27,6 +27,13 @@ on_yearly_pulse = {
 	}
 }
 
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		paragon.6035 # Ending of "Under One Rule" event failsafe if reformists are still vibin when it triggers naturally
+	}
+}
+
 # A planet has been colonized.
 # Scope = Planet
 on_colonized = {

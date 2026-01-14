@@ -1,5 +1,59 @@
 namespace = paragon
 
+country_event = { #Little conclusion of first situation
+	id = paragon.5020
+	title = "paragon.5020.name"
+	desc = "paragon.5020.desc"
+	picture = GFX_evt_enclave_overlord
+	show_sound = event_factions
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = { #Change to Imperial
+		name = paragon.5020.a
+		custom_tooltip = paragon.5020.a.tt
+		hidden_effect = {
+			set_origin = origin_legendary_leader_imperial
+			ruler = {
+				change_variable = {
+					which = paragon_origin_story_ruling
+					value = 1
+				}
+			}
+			country_event = {
+				id = paragon.5021 days = 90
+			}
+		}
+		change_government = {
+			authority = auth_imperial
+			remove_invalid_civics = yes
+		}
+	}
+	option = { #Stay Dictatorship
+		name = paragon.5020.b
+		custom_tooltip = paragon.5020.b.tt
+		hidden_effect = {
+			country_event = {
+				id = paragon.5059 days = 3600 random = 3600
+			}
+			country_event = {
+				id = paragon.5058 days = 7200 random = 3600
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			set_country_flag = rose_origin_legendary_leader_proclaim
+		}
+	}
+}
+
 country_event = { #UTILITY - ascension launcher failsafe event, for players continuing their old saved games
 	id = paragon.5960
 	hide_window = yes
@@ -26,6 +80,7 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 		NOT = { has_country_flag = luminary_ascension_path }
 		exists = ruler
 		ruler = { has_leader_flag = paragon_origin_legendary_leader }
+		NOT = { has_country_flag = rose_origin_legendary_leader_ascension_failsafe_triggered }
 	}
 
 	immediate = {
@@ -33,6 +88,7 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 			# Change from 7200 (20 years) randomness on top of 10 year base to 720 (2 years) randomness on top of 15 year base
 			id = paragon.5201 days = 4800 random = 720 
 		}
+		set_country_flag = rose_origin_legendary_leader_ascension_failsafe_triggered
 	}
 }
 
@@ -54,6 +110,34 @@ country_event = {
 	trigger = {
 		exists = ruler
 		ruler = { has_leader_flag = paragon_origin_legendary_leader }
+		
+		# Checks the unifying situation is done and you've had the choice to proclaim
+		has_country_flag = rose_origin_legendary_leader_proclaim
+		
+		# Checks you took the imperial path, the questline is done
+		OR = {
+			has_origin = origin_legendary_leader_dictatorial
+			
+			AND = {
+				has_origin = origin_legendary_leader_imperial
+				has_country_flag = paragon_origin_reformists_gone
+			}
+		}
+		
+		# Checks you finished the luminary ascension or have a chosen one trait
+		ruler = {
+			OR = {
+				has_trait = leader_trait_the_apparatus_luminary
+				has_trait = leader_trait_the_cybernetic_luminary
+				has_trait = leader_trait_the_psionic_luminary
+				has_trait = leader_trait_the_synth_luminary
+				has_trait = leader_trait_the_genetic_luminary
+				has_any_chosen_one_leader_trait = yes
+			}
+		}
+		
+		# Prevents failsafe triggering this event more than once
+		NOT = { has_country_flag = rose_origin_legendary_leader_ending }
 	}
 
 	option = { #Null choice, status quo
@@ -112,6 +196,8 @@ country_event = {
 				override_texture = { "background:GFX_origin_legendary_leader" }
 				targets = { }
 			}
+			
+			set_country_flag = rose_origin_legendary_leader_ending
 		}
 	}
 }
