@@ -1,0 +1,12 @@
+on_game_start = {
+	events = {
+		ship_count_reducer.1 # Adds modifier to increase ship naval usage and buff ships, should hit all players
+	}
+}
+
+on_monthly_pulse = {
+	events = { # event
+		ship_count_reducer.1 # Adds modifier to increase ship naval usage and buff ships, repeats monthly to catch any new AI countries that may have spawned
+		ship_count_reducer.2 # Removes modifier for nanotech empires
+	}
+}

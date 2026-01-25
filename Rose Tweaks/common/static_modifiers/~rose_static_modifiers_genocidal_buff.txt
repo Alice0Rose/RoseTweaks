@@ -1,0 +1,38 @@
+rose_genocidal_buff_fanatic_purifier = {
+	planet_jobs_upkeep_mult = -0.05
+	country_alloys_produces_mult = 0.05
+	all_technology_research_speed = 0.1
+	country_unity_produces_mult = 0.1
+	planet_bureaucrats_unity_produces_add = 1
+}
+
+rose_genocidal_buff_determined_exterminator = {
+	country_alloys_produces_mult = 0.075
+	all_technology_research_speed = 0.1
+	country_unity_produces_mult = 0.15
+	planet_bureaucrats_unity_produces_add = 1
+}
+
+rose_genocidal_buff_devouring_swarm = {
+	planet_jobs_upkeep_mult = -0.075
+	country_food_produces_mult = 0.05
+	country_alloys_produces_mult = 0.05
+	all_technology_research_speed = 0.075
+	country_unity_produces_mult = 0.125
+	planet_bureaucrats_unity_produces_add = 1
+}
+
+rose_genocidal_buff_scorched_world_herald = {
+	country_alloys_produces_mult = 0.1
+	all_technology_research_speed = 0.075
+	country_unity_produces_mult = 0.1
+	planet_bureaucrats_unity_produces_add = 1
+}
+
+rose_genocidal_buff_crusader_spirit = {
+	planet_jobs_upkeep_mult = -0.1
+	country_alloys_produces_mult = 0.025
+	all_technology_research_speed = 0.05
+	country_unity_produces_mult = 0.1
+	planet_bureaucrats_unity_produces_add = 0.5
+}

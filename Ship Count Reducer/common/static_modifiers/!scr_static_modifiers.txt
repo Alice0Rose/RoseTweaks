@@ -1,0 +1,55 @@
+ship_count_reducer = {
+	custom_tooltip = ship_count_reducer_tt
+	show_only_custom_tooltip = yes
+	
+	space_fauna_naval_cap_usage_mult = 1
+	artificial_ship_naval_cap_usage_mult = 1
+	starbase_shipyard_build_cost_mult = 1
+	shipclass_military_build_speed_mult = -0.5
+	ship_damage_against_starbases_mult = 1
+
+	ship_hull_mult = 1
+	ship_armor_mult = 1
+	ship_shield_mult = 1
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 1
+		
+	shipclass_military_station_hull_mult = -1
+	shipclass_military_station_armor_mult = -1
+	shipclass_military_station_damage = -0.5
+		
+	shipsize_asteroid_artillery_naval_cap_usage_mult = -1
+	shipsize_asteroid_artillery_hull_mult = -1
+	shipsize_asteroid_artillery_armor_mult = -1
+	shipsize_asteroid_artillery_shield_mult = -1
+	shipsize_asteroid_artillery_weapon_damage = -0.5
+	shipsize_asteroid_artillery_fire_rate_mult = -1
+	
+	shipsize_giga_massive_planet_naval_cap_usage_mult = -1
+	shipsize_giga_massive_planet_hull_mult = -1
+	shipsize_giga_massive_planet_armor_mult = -1
+	shipsize_giga_massive_planet_shield_mult = -1
+	shipsize_giga_massive_planet_weapon_damage = -0.5
+	shipsize_giga_massive_planet_fire_rate_mult = -1
+	
+	shipsize_giga_planet_behemoth_naval_cap_usage_mult = -1
+	shipsize_giga_planet_behemoth_hull_mult = -1
+	shipsize_giga_planet_behemoth_armor_mult = -1
+	shipsize_giga_planet_behemoth_shield_mult = -1
+	shipsize_giga_planet_behemoth_weapon_damage = -0.5
+	shipsize_giga_planet_behemoth_fire_rate_mult = -1
+	
+	shipsize_giga_systemcraft_naval_cap_usage_mult = -1
+	shipsize_giga_systemcraft_hull_mult = -1
+	shipsize_giga_systemcraft_armor_mult = -1
+	shipsize_giga_systemcraft_shield_mult = -1
+	shipsize_giga_systemcraft_weapon_damage = -0.5
+	shipsize_giga_systemcraft_fire_rate_mult = -1
+	
+	shipsize_strategic_defence_command_platform_naval_cap_usage_mult = -1
+	shipsize_strategic_defence_command_platform_hull_mult = -1
+	shipsize_strategic_defence_command_platform_armor_mult = -1
+	shipsize_strategic_defence_command_platform_shield_mult = -1
+	shipsize_strategic_defence_command_platform_weapon_damage = -0.5
+	shipsize_strategic_defence_command_platform_fire_rate_mult = -1
+}

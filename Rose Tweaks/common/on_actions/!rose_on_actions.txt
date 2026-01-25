@@ -50,6 +50,28 @@ on_planet_class_changed = {
 	}
 }
 
+# A war has ended
+# Root = Loser
+# From = Main Winner
+on_war_ended = {
+	events = {
+		rose_genocidal_buffs.1
+		rose_genocidal_buffs.2
+		rose_genocidal_buffs.3
+		rose_genocidal_buffs.4
+	}
+}
+
+# A war has been won
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+on_war_won = {
+	events = {
+		rose_genocidal_buffs.100
+	}
+}
+
 # Fired whenever a new owner is set for a planet, following a war or through trade
 # This = Planet scope
 # From = Country scope (new owner)

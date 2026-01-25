@@ -7,6 +7,7 @@ Ascension Perks:
 - Galactic Force Projection gives +250 fleet capacity instead of +50.
 - Executive Vigor gives +2 sector size.
 - Transcendent Learning gives +10% leader lifespan.
+- Master Builders gives +1 building queue capacity.
 - Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
 - Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
 
@@ -66,6 +67,7 @@ Civics:
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
 - Environmentalist allows building Natural Arcologies without needing to clear all blockers first
 - Secret Societies now gets a unity bonus from the total number of proxy wars started (up to 10) instead of only the current number active
+- Genocidal Civics and Crusader Spirit now give an empire buff after winning a purification or liberation war respectively
 
 Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires

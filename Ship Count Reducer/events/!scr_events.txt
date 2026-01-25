@@ -1,0 +1,53 @@
+namespace = ship_count_reducer
+
+event = {
+	id = ship_count_reducer.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		mid_game_years_passed > 0
+	}
+
+	immediate = {		
+		every_country = {  
+			if = {
+				limit = {
+					NOR = { 
+						has_modifier = ship_count_reducer 
+						has_tradition = tr_nanotech_adopt # Excluded cus ignores naval cap anyways
+						NOT = { is_country_type = default } # Regular empires only
+					}
+				}
+					
+				add_modifier = {
+					modifier = ship_count_reducer
+					multiplier = 1
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = ship_count_reducer.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {		
+		every_country = {  
+			if = {
+				limit = {
+					OR = {
+						has_tradition = tr_nanotech_adopt # Excluded cus ignores naval cap anyways
+						NOT = { is_country_type = default } # Regular empires only
+					}
+				}
+					
+				remove_modifier = ship_count_reducer
+			}
+		}
+	}
+}

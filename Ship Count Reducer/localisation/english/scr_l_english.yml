@@ -1,0 +1,3 @@
+﻿l_english:
+ ship_count_reducer: "Reduced Ship Count Scaling"
+ ship_count_reducer_tt: "Doubles the naval cap, build cost, and build time of ships in exchange for doubling their lethality and survivability. Also gives double damage against starbases to account for their incidental increased strength."

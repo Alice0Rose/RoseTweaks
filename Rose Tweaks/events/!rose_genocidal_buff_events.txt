@@ -1,0 +1,294 @@
+namespace = rose_genocidal_buffs
+
+### Fanatic Purifier wins genocide war
+# A war has ended
+# Root = Loser
+# From = Main Winner
+country_event = {
+	id = rose_genocidal_buffs.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_civic = civic_fanatic_purifiers
+		
+		# Only gives modifier if war target was wiped out, implying successful war
+		NOT = { exists = from }
+	}
+
+	immediate = {
+		# Gives mod for 10 years + current remaining duration
+		if = {
+			limit = {
+				has_modifier = rose_genocidal_buff_fanatic_purifier
+			}
+			
+			set_variable = {
+				which = rose_genocidal_buff_fanatic_purifier_mod_duration 
+				value = 0 
+			}
+			
+			export_modifier_duration_to_variable = { 
+				modifier = rose_genocidal_buff_fanatic_purifier 
+				variable = rose_genocidal_buff_fanatic_purifier_mod_duration 
+			}
+			
+			change_variable = { 
+				which = rose_genocidal_buff_fanatic_purifier_mod_duration 
+				value = 3600
+			}
+			
+			remove_modifier = rose_genocidal_buff_fanatic_purifier
+			
+			add_modifier = {
+				modifier = rose_genocidal_buff_fanatic_purifier
+				days = 1
+				time_multiplier = rose_genocidal_buff_fanatic_purifier_mod_duration
+			}
+		}
+		
+		# Gives mod for 10 years
+		else = {
+			add_modifier = {
+				modifier = rose_genocidal_buff_fanatic_purifier
+				days = 3600
+			}
+		}
+	}
+}
+
+### Determined Exterminator wins genocide war
+# A war has ended
+# Root = Loser
+# From = Main Winner
+country_event = {
+	id = rose_genocidal_buffs.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_civic = civic_machine_terminator
+		
+		# Only gives modifier if war target was wiped out, implying successful war
+		NOT = { exists = from }
+	}
+
+	immediate = {			
+		# Gives mod for 10 years + current remaining duration
+		if = {
+			limit = {
+				has_modifier = rose_genocidal_buff_determined_exterminator
+			}
+			
+			set_variable = {
+				which = rose_genocidal_buff_determined_exterminator_mod_duration 
+				value = 0 
+			}
+			
+			export_modifier_duration_to_variable = { 
+				modifier = rose_genocidal_buff_determined_exterminator 
+				variable = rose_genocidal_buff_determined_exterminator_mod_duration 
+			}
+			
+			change_variable = { 
+				which = rose_genocidal_buff_determined_exterminator_mod_duration 
+				value = 3600
+			}
+			
+			remove_modifier = rose_genocidal_buff_determined_exterminator
+			
+			add_modifier = {
+				modifier = rose_genocidal_buff_determined_exterminator
+				days = 1
+				time_multiplier = rose_genocidal_buff_determined_exterminator_mod_duration
+			}
+		}
+		
+		# Gives mod for 10 years
+		else = {
+			add_modifier = {
+				modifier = rose_genocidal_buff_determined_exterminator
+				days = 3600
+			}
+		}
+	}
+}
+
+### Devouring Swarm wins genocide war
+# A war has ended
+# Root = Loser
+# From = Main Winner
+country_event = {
+	id = rose_genocidal_buffs.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_civic = civic_hive_devouring_swarm
+		
+		# Only gives modifier if war target was wiped out, implying successful war
+		NOT = { exists = from }
+	}
+
+	immediate = {			
+		# Gives mod for 10 years + current remaining duration
+		if = {
+			limit = {
+				has_modifier = rose_genocidal_buff_devouring_swarm
+			}
+			
+			set_variable = {
+				which = rose_genocidal_buff_devouring_swarm_mod_duration 
+				value = 0 
+			}
+			
+			export_modifier_duration_to_variable = { 
+				modifier = rose_genocidal_buff_devouring_swarm 
+				variable = rose_genocidal_buff_devouring_swarm_mod_duration 
+			}
+			
+			change_variable = { 
+				which = rose_genocidal_buff_devouring_swarm_mod_duration 
+				value = 3600
+			}
+			
+			remove_modifier = rose_genocidal_buff_devouring_swarm
+			
+			add_modifier = {
+				modifier = rose_genocidal_buff_devouring_swarm
+				days = 1
+				time_multiplier = rose_genocidal_buff_devouring_swarm_mod_duration
+			}
+		}
+		
+		# Gives mod for 10 years
+		else = {
+			add_modifier = {
+				modifier = rose_genocidal_buff_devouring_swarm
+				days = 3600
+			}
+		}
+	}
+}
+
+### Scorched World Heralds wins genocide war
+# A war has ended
+# Root = Loser
+# From = Main Winner
+country_event = {
+	id = rose_genocidal_buffs.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_civic = civic_scorched_earth
+			has_civic = civic_hive_scorched_earth
+		}
+		
+		# Only gives modifier if war target was wiped out, implying successful war
+		NOT = { exists = from }
+	}
+
+	immediate = {
+		# Gives mod for 10 years + current remaining duration
+		if = {
+			limit = {
+				has_modifier = rose_genocidal_buff_scorched_world_herald
+			}
+			
+			set_variable = {
+				which = rose_genocidal_buff_scorched_world_herald_mod_duration 
+				value = 0 
+			}
+			
+			export_modifier_duration_to_variable = { 
+				modifier = rose_genocidal_buff_scorched_world_herald 
+				variable = rose_genocidal_buff_scorched_world_herald_mod_duration 
+			}
+			
+			change_variable = { 
+				which = rose_genocidal_buff_scorched_world_herald_mod_duration 
+				value = 3600
+			}
+			
+			remove_modifier = rose_genocidal_buff_scorched_world_herald
+			
+			add_modifier = {
+				modifier = rose_genocidal_buff_scorched_world_herald
+				days = 1
+				time_multiplier = rose_genocidal_buff_scorched_world_herald_mod_duration
+			}
+		}
+		
+		# Gives mod for 10 years
+		else = {
+			add_modifier = {
+				modifier = rose_genocidal_buff_scorched_world_herald
+				days = 3600
+			}
+		}
+	}
+}
+
+### Crusader Spirit wins liberation war
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+country_event = {
+	id = rose_genocidal_buffs.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_civic = civic_crusader_spirit
+		
+		# Only gives buff on liberation wars
+		fromfrom = {
+			using_war_goal = { 
+				type = wg_force_ideology 
+				owner = root 
+			}
+		}
+	}
+
+	immediate = {		
+		# Gives mod for 10 years + current remaining duration
+		if = {
+			limit = {
+				has_modifier = rose_genocidal_buff_crusader_spirit
+			}
+			
+			set_variable = {
+				which = rose_genocidal_buff_crusader_spirit_mod_duration 
+				value = 0 
+			}
+			
+			export_modifier_duration_to_variable = { 
+				modifier = rose_genocidal_buff_crusader_spirit 
+				variable = rose_genocidal_buff_crusader_spirit_mod_duration 
+			}
+			
+			change_variable = { 
+				which = rose_genocidal_buff_crusader_spirit_mod_duration 
+				value = 3600
+			}
+			
+			remove_modifier = rose_genocidal_buff_crusader_spirit
+			
+			add_modifier = {
+				modifier = rose_genocidal_buff_crusader_spirit
+				days = 1
+				time_multiplier = rose_genocidal_buff_crusader_spirit_mod_duration
+			}
+		}
+		
+		# Gives mod for 10 years
+		else = {
+			add_modifier = {
+				modifier = rose_genocidal_buff_crusader_spirit
+				days = 3600
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+[h1]Features[/h1]
+This mod effectively removes the command limit for fleets by setting it to 9999 from the start of the game :)
+
+[h1]Compatibility[/h1]
+This mod overrides the two defines for COMMAND_LIMIT_MAX and COMMAND_LIMIT_BASE and should be placed near the bottom of the load order :)
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
