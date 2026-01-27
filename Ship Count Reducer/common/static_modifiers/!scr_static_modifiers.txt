@@ -17,7 +17,41 @@ ship_count_reducer = {
 	shipclass_military_station_hull_mult = -1
 	shipclass_military_station_armor_mult = -1
 	shipclass_military_station_damage = -0.5
-		
+
+	# Vanilla Bio Ships (Why tf dont bio ships count as artificial ships istg)
+	shipsize_mauler_stage_1_naval_cap_usage_mult = 1 
+	shipsize_mauler_stage_2_naval_cap_usage_mult = 1 
+	shipsize_mauler_stage_3_naval_cap_usage_mult = 1 
+	shipsize_weaver_stage_1_naval_cap_usage_mult = 1 
+	shipsize_weaver_stage_2_naval_cap_usage_mult = 1 
+	shipsize_weaver_stage_3_naval_cap_usage_mult = 1 
+	shipsize_harbinger_stage_1_naval_cap_usage_mult = 1
+	shipsize_harbinger_stage_2_naval_cap_usage_mult = 1
+	shipsize_harbinger_stage_3_naval_cap_usage_mult = 1
+	shipsize_stinger_stage_1_naval_cap_usage_mult = 1
+	shipsize_stinger_stage_2_naval_cap_usage_mult = 1
+	shipsize_stinger_stage_3_naval_cap_usage_mult = 1
+	shipsize_bio_titan_naval_cap_usage_mult = 1
+
+	shipsize_offspring_mauler_stage_1_naval_cap_usage_mult = 1
+	shipsize_offspring_mauler_stage_2_naval_cap_usage_mult = 1
+	shipsize_offspring_mauler_stage_3_naval_cap_usage_mult = 1
+	shipsize_offspring_weaver_stage_1_naval_cap_usage_mult = 1
+	shipsize_offspring_weaver_stage_2_naval_cap_usage_mult = 1
+	shipsize_offspring_weaver_stage_3_naval_cap_usage_mult = 1
+	shipsize_offspring_harbinger_stage_1_naval_cap_usage_mult = 1
+	shipsize_offspring_harbinger_stage_2_naval_cap_usage_mult = 1
+	shipsize_offspring_harbinger_stage_3_naval_cap_usage_mult = 1
+	shipsize_offspring_stinger_stage_1_naval_cap_usage_mult = 1
+	shipsize_offspring_stinger_stage_2_naval_cap_usage_mult = 1
+	shipsize_offspring_stinger_stage_3_naval_cap_usage_mult = 1
+
+	shipsize_cosmo_crisis_mauler_naval_cap_usage_mult = 1
+	shipsize_cosmo_crisis_weaver_naval_cap_usage_mult = 1
+	shipsize_cosmo_crisis_harbinger_naval_cap_usage_mult = 1
+	shipsize_cosmo_crisis_stinger_naval_cap_usage_mult = 1
+
+	# Modded Regular Ships
 	shipsize_asteroid_artillery_naval_cap_usage_mult = -1
 	shipsize_asteroid_artillery_hull_mult = -1
 	shipsize_asteroid_artillery_armor_mult = -1
@@ -52,4 +86,14 @@ ship_count_reducer = {
 	shipsize_strategic_defence_command_platform_shield_mult = -1
 	shipsize_strategic_defence_command_platform_weapon_damage = -0.5
 	shipsize_strategic_defence_command_platform_fire_rate_mult = -1
+	
+	# Modded Bio Ships
+	shipsize_acot_mauler_stage_4_naval_cap_usage_mult = 1 
+	shipsize_acot_weaver_stage_4_naval_cap_usage_mult = 1 
+	shipsize_acot_harbinger_stage_4_naval_cap_usage_mult = 1
+	shipsize_acot_stinger_stage_4_naval_cap_usage_mult = 1
+	shipsize_acot_bio_titan_stage_1_naval_cap_usage_mult = 1
+	shipsize_acot_bio_titan_stage_2_naval_cap_usage_mult = 1
+	shipsize_acot_bio_titan_stage_3_naval_cap_usage_mult = 1
+	shipsize_acot_bio_titan_stage_4_naval_cap_usage_mult = 1
 }

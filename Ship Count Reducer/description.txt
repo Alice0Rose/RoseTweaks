@@ -1,12 +1,14 @@
 [h1]Features[/h1]
 This mod aims to halve the number of ships in the galaxy while roughly maintaining the same amount of ship power. It does this by doubling how much naval cap every ship uses, their cost, and their build time, but also doubling their hull, shields, armor, and damage and fire rate. 
 
-The mod does have limitations due to a bunch of modifiers just not working for some reason, so civilian ships such as science, construction, and colony ships, are also increased in cost (but not build time). Starbases are also affected kinda weirdly, which is why ships also gain a damage bonus to starbases.
+The mod does have limitations due to a bunch of modifiers just not working for some reason, so civilian ships such as science, construction, and colony ships, are also increased in cost (but not build time). Starbases are also affected kinda weirdly, which is why ships also gain a damage bonus to starbases. Because of these quarks, the modifier waits until year 5 to activate.
 
 Ideally this should all reduce lag from there being too many ships, similar to what v4.3 will do (which is why this mod won't be updated to v4.3, its meant as more of a stop gap for before that version is released).
 
 [h1]Compatibility[/h1]
 This mod does not override or modify any vanilla files, so it should be compatible with all other mods :)
+
+It also has limited built in compatibility with Gigastructures and ACoT!
 
 [h1]Source Code and Wiki[/h1]
 [url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]

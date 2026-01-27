@@ -7,7 +7,7 @@ event = {
 	is_triggered_only = yes
 
 	trigger = {
-		mid_game_years_passed > 0
+		years_passed > 4
 	}
 
 	immediate = {		
