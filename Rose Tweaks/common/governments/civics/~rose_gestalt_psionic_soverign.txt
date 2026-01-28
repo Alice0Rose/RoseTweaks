@@ -1,0 +1,15 @@
+civic_rose_psionic_sovereign_gestalt = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_psionic_sovereign.dds"
+	potential = {
+		civics = {
+			value = civic_rose_psionic_sovereign_gestalt # Added via event - this trigger prevents the civic from being picked by others
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_government_civic_points_add = 1
+		country_unity_produces_mult = 0.10
+		psionic_pop_bonus_workforce_mult = 0.20
+	}
+}

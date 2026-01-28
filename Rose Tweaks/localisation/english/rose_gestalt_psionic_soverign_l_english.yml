@@ -1,0 +1,8 @@
+﻿l_english:
+ civic_rose_psionic_sovereign_gestalt: "Divine Consciousness"
+ civic_rose_psionic_sovereign_gestalt_desc: "This consciousness has achieved unparallelled attunement to the Shroud, enabling greater efficiency throughout its empire."
+ 
+ rose_gestalt_psionic_soverign.1.name: "A $civic_rose_psionic_sovereign_gestalt$"
+ rose_gestalt_psionic_soverign.1.desc: "The [Ruler.GetTitle] §H[Ruler.GetName]§! has reached critical attunement to the Shroud. Our empire will see greater efficiency from all psionic drones."
+ rose_gestalt_psionic_soverign.1.a: "Affirmative."
+ 

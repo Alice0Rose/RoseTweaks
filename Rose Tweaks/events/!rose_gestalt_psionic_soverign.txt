@@ -1,0 +1,35 @@
+namespace = rose_gestalt_psionic_soverign
+
+# Empire gains gestalt psionic soverign civic
+country_event = {
+	id = rose_gestalt_psionic_soverign.1
+	title = "rose_gestalt_psionic_soverign.1.name"
+	desc = "rose_gestalt_psionic_soverign.1.desc"
+	picture = GFX_evt_chosen_leader
+	show_sound = event_mystic_reveal
+
+	# Changed so can happen to any authority (except gestalt, they have seperate event) so long as they have a chosen leader
+	trigger = {
+		is_country_type = default
+		is_gestalt = yes
+		NOT = { has_country_flag = chosen_one_ruler_event }
+		ruler = {
+			has_any_chosen_one_leader_trait = yes
+		}
+	}
+
+	# Reduced from 10 years to 5 years
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	immediate = {
+		set_country_flag = chosen_one_ruler_event
+	}
+	
+	# No God Empress :(
+	option = {
+		name = "rose_gestalt_psionic_soverign.1.a"		
+		force_add_civic = civic_rose_psionic_sovereign_gestalt
+	}
+}

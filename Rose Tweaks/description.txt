@@ -168,6 +168,10 @@ Ascension:
 	- +25% planetary build cost
 	- -10% miner job efficiency
 	- -5% metallurgist job efficiency
+- Divine Sovereign civic no longer requires imperial authority
+- Added the Divine Consiousness civic for gestalts which gives +20% bonus workforce and output for psionic pops, mimicing the bonus of the council position from the Divine Sovereign civic
+- Divine Sovereign event is reworked to trigger for all authorities (including a version for gestalts) and always gives the Divine Sovereign (or Divine Consiousness) civic, regardless of if you choose to switch to imperial or not
+- Reworked the bonuses from the Psionic Covenant ship components to be more significant and thematic
 - Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 
