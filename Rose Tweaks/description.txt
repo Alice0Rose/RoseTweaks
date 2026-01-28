@@ -62,12 +62,13 @@ Civics:
 - Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops (also the message lasts less time to be less spammy lol)
 - Crusader Spirit gives +1 Unity from Soldiers
 - Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist
-- Superstitious Beliefs civic can now be removed if you have over 1000 of each science category
+- Superstitious Beliefs civic can be removed if you have over 1000 of each science category
 - Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
 - Environmentalist allows building Natural Arcologies without needing to clear all blockers first
-- Secret Societies now gets a unity bonus from the total number of proxy wars started (up to 10) instead of only the current number active
-- Genocidal Civics and Crusader Spirit now give an empire buff after winning a purification or liberation war respectively
+- Secret Societies gets a unity bonus from the total number of proxy wars started (up to 10) instead of only the current number active
+- Genocidal Civics and Crusader Spirit give an empire buff after winning a purification or liberation war respectively
+- Lubrication Pools is available to Synthetically ascended empires
 
 Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires

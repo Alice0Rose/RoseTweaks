@@ -383,6 +383,55 @@ civic_sovereign_guardianship = {
 	}
 }
 
+civic_toxic_baths_individual_machine = {
+	playable = { has_toxoids = yes }
+	ai_playable = { has_toxoids = yes }
+	description = "civic_tooltip_machine_toxic_baths_effects"
+	potential = {
+		species_archetype = {
+			OR = { 
+				value = MACHINE
+				value = ROBOT
+			}
+		}
+		authority = { NOT = { value = auth_corporate } }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		origin = { NOT = { value = origin_life_seeded } }
+		civics = {
+			NOT = {
+				value = civic_corporate_toxic_baths_individual_machine
+			}
+		}
+	}
+	random_weight = {
+		base = @civic_uncommon_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = decadent_hierarchy
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = honorbound_warriors
+				has_ai_personality = evangelising_zealots
+			}
+		}
+	}
+
+	modifier = {
+		add_attunement_the_composer_of_strands = @civic_attunement1
+	}
+	hide_modifiers = yes
+}
+
 civic_superstitious_beliefs = {
 	playable = { has_shroud_dlc = yes }
 	ai_playable = { has_shroud_dlc = yes }
