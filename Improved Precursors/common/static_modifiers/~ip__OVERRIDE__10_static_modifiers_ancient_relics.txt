@@ -1,0 +1,3 @@
+yuht_cryo_core = {
+	planet_building_capacity_add = 1
+}

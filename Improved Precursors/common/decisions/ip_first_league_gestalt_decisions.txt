@@ -1,0 +1,159 @@
+decision_ip_first_league_gestalt_hive = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_relic
+		is_artificial = no
+		has_planet_flag = first_league_homeworld
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+		owner = { has_technology = tech_climate_restoration }
+	}
+
+	on_queued = {
+		set_planet_flag = arcology_project_construction
+	}
+
+	on_unqueued = {
+		remove_planet_flag = arcology_project_construction
+	}
+
+	effect = {
+		remove_planet_flag = arcology_project_construction
+		# Make hive world
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			save_deposits = yes
+			clear_deposits = yes
+			restore_saved_deposits = yes
+			change_pc = pc_hive
+
+			#set_planet_entity = {
+			#	entity = pc_hive
+			#}
+			
+			planet_event = { id = action.68 }
+			add_deposit = d_former_relic_world
+			while = {
+				count = 4
+				solar_system = {
+					random_system_ambient_object = {
+						limit = { has_ambient_object_flag = relic_world_debris }
+						destroy_ambient_object = this
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_ip_first_league_gestalt_machine = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_relic
+		is_artificial = no
+		has_planet_flag = first_league_homeworld
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+		}
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+		owner = { has_technology = tech_climate_restoration }
+	}
+
+	on_queued = {
+		set_planet_flag = arcology_project_construction
+	}
+
+	on_unqueued = {
+		remove_planet_flag = arcology_project_construction
+	}
+
+	effect = {
+		remove_planet_flag = arcology_project_construction
+		# Make machine world
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			save_deposits = yes
+			clear_deposits = yes
+			restore_saved_deposits = yes
+			change_pc = pc_machine
+
+			#set_planet_entity = {
+			#	entity = pc_machine
+			#}
+			
+			planet_event = { id = action.68 }
+			add_deposit = d_former_relic_world
+			while = {
+				count = 4
+				solar_system = {
+					random_system_ambient_object = {
+						limit = { has_ambient_object_flag = relic_world_debris }
+						destroy_ambient_object = this
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+	}
+}

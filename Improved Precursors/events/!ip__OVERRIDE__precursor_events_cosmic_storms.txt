@@ -1,0 +1,97 @@
+namespace = cstorms
+@precursor_easy = 6
+@precursor_medium = 8
+@precursor_hard = 10
+@storm_fused_chance = 1
+@storm_fused_supercharged_chance = 4
+
+# A Storm Nevermore
+country_event = {
+	id = cstorms.2350
+	title = cstorms.2350.name
+	desc = cstorms.2350.desc
+	picture = GFX_evt_cosmic_storms_the_storm_speaks
+	show_sound = evn_ove_shroudwalker_enclave
+
+	is_triggered_only = yes
+
+	specimen = piece_of_invocator
+
+	option = {
+		name = cstorms.2350.a
+
+		set_country_flag = adakkaria_world_found
+
+		# Change to previously_terraformed_planet
+		event_target:adSul_capital = {
+			change_pc = "pc_gaia"
+			hidden_effect = {
+				reset_planet = yes
+				clear_blockers = yes
+				# Adding the zro deposit back, since it was a shrouded world
+				add_deposit = d_zro_deposit_2
+				set_planet_size = 30
+			}
+			set_planet_entity = {
+				entity = "pc_gaia"
+			}
+			add_modifier = {
+				modifier = previously_terraformed_planet
+				days = -1
+			}
+			if = {
+				limit = { is_colony = yes }
+				set_timed_planet_flag = {
+					flag = ignore_ai_building_limitations
+					days = 1
+				}
+
+				add_building = building_adakkaria_patriotic_institute
+				# This is duplicated from the patriotic institute's 'on_built', because that doesn't trigger when using 'add_building'.
+				start_patriotic_institute_spawn_storm_repeated = yes
+			}
+			else = {
+				add_modifier = {
+					modifier = has_patriotic_institute
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+# Pain Rage Grief Fear
+country_event = {
+	id = cstorms.2355
+	title = cstorms.2355.name
+	desc = cstorms.2355.desc
+	picture = GFX_evt_cosmic_storms_the_storm_speaks
+	show_sound = event_screams
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = tempest_invocator_found
+	}
+
+	option = {
+		name = cstorms.2355.a
+		add_relic = r_the_tempest_invocator
+		end_event_chain = cs_adAkkaria_chain
+		
+		# Change to previously_terraformed_planet
+		event_target:adSul_capital = {
+			change_pc = pc_nuked
+			hidden_effect = {
+				reset_planet = yes
+				clear_blockers = yes
+				# Adding the zro deposit back, since it was a shrouded world
+				add_deposit = d_zro_deposit_2
+				set_planet_size = 25
+			}
+			set_planet_entity = {
+				entity = "pc_nuked"
+			}
+		}
+	}
+}

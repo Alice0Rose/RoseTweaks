@@ -1,0 +1,83 @@
+namespace = ancrel
+
+# Baol Artifact Research Complete
+country_event = {
+	id = ancrel.10300
+	title = ancrel.10300.name
+	desc = ancrel.10300.desc.terraform
+
+	picture = GFX_evt_baol_grunur
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		exclusive_trigger = {
+			NOR = { 
+				has_technology = tech_terrestrial_sculpting 
+				has_technology = tech_ecological_adaptation
+				has_technology = tech_climate_restoration 
+			}
+		}
+
+		random_owned_leader = {
+			limit = {
+				OR = {
+					is_councilor_type = councilor_research
+					is_councilor_type = councilor_gestalt_cognitive
+				}
+			}
+			add_expertise_trait_effect = {
+				TRAIT = leader_trait_expertise_biology
+			}
+		}
+
+		name = INTERESTING
+		owner = {
+			give_technology = { tech = tech_terrestrial_sculpting }
+			give_technology = { tech = tech_ecological_adaptation }
+			add_research_option = tech_climate_restoration
+			add_tech_progress = {
+				tech = tech_secrets_baol
+				progress = 0.1
+			}
+		}
+		add_modifier = {
+			modifier = artifact_baol_research_completed # terraforming speed
+			days = -1
+		}
+	}
+
+	option = {
+		name = INTERESTING
+
+		random_owned_leader = {
+			limit = {
+				OR = {
+					is_councilor_type = councilor_research
+					is_councilor_type = councilor_gestalt_cognitive
+				}
+			}
+			add_expertise_trait_effect = {
+				TRAIT = leader_trait_expertise_biology
+			}
+		}
+
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
+			add_tech_progress = {
+				tech = tech_secrets_baol
+				progress = 0.1
+			}
+		}
+		add_modifier = {
+			modifier = artifact_baol_research_completed # terraforming speed bonus
+			days = -1
+		}
+	}
+}

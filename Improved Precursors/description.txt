@@ -1,0 +1,79 @@
+[h1]Features[/h1]
+This mod buffs all of the precursors (except the Cybrex because they obviously don't need any buffs) to make them all roughly equal in value. The goal of this mod is to make hunting down your precursor's artifacts and finishing their quest an important part of every match, not just the ones you get lucky enough to roll the Cybrex :P
+
+The changes to the precursors are as follows:
+
+Vultaum:
+	- Homeworld changed to a tomb world and increased to size 35
+	- Vultaum Reality Computer gives +0.5 Society to Biologists and Engineering to Engineers
+	- Relic now gives -15% pop amenities usage and +5 stability
+
+Yuht:
+	- Homeworld changed to a tomb world and increased to size 35
+	- Relic now gives the -25% ship upkeep permenantly and when actived gives +1 planet build queue
+
+First League:
+	- Homeworld increased to size 30 and given a decision for Hive and Machine empires to convert it to a Hive/Machine world
+
+Irassian:
+	- Homeworld changed to a tomb world and increased to size 35
+	- Relic now gives +20 years and +20% leader lifespan
+
+Zroni:
+	- Homeworld given a tomb world moon of size 30
+	- Relic now gives +25% damage against psionic empires and +15% monthly unity and +5% society research to non-psionic empires
+
+Baol:
+	- Homeworld increased to size 35
+	- Relic now gives +15% pop growth and mechanical assembly (or +25% society research for Wilderness empires)
+	- Completeing the Secrets of the Baol special project now gives Terrestrial Sculpting and Ecological Adaptation techs and gives Climate Restoration as a guarenteed research option
+
+adAkkaria:
+	- Final event choice between freeing and keeping the souls now changes the homeworld to a size 30 gaia world if you free the souls or changes the homeworld to a tomb world of size 25 if you don't
+
+Inetians:
+	- Precursor system now has 3 habitable worlds, each size 25
+	- Relic now gives -50% orbital bombardment damage and gives +25% monthly trade and -50% ship logistic upkeep
+
+[h1]Compatibility[/h1]
+This mod overrides a collection of files related to the precursors and their relics, but it should generally be compatible with other mods so long as they don't also override things related to the precursors.
+
+common\buildings\05_research_buildings.txt
+- building_vultaum_reality_computer
+
+common\relics\relics.txt
+- r_zro_crystal
+- r_the_last_baol
+- r_reality_perforator
+- r_pox_sample
+- r_cryo_core
+- r_weather_manipulator
+
+common\solar_system_initializers\ancient_relics_initializers.txt
+- Zrocursor_system
+- last_baol_system
+
+common\solar_system_initializers\cosmic_storm_initializers.txt
+- weathermanipulators_home_system
+- adSalivul_system
+- adSul_system
+
+common\solar_system_initializers\prescripted_species_systems.txt
+- vultaumar_system
+- yuhtaan_system
+- fen_habbanis_system
+- irass_system
+
+common\static_modifiers\10_static_modifiers_ancient_relics.txt
+- yuht_cryo_core
+
+events\ancient_relics_arcsite_events_2.txt
+- ancrel.10300
+
+events\precursor_events_cosmic_storms.txt
+- cstorms.2350
+- cstorms.2355
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
