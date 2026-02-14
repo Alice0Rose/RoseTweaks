@@ -4,7 +4,7 @@ This mod buffs all of the precursors (except the Cybrex because they obviously d
 The changes to the precursors are as follows:
 
 Vultaum:
-	- Homeworld changed to a tomb world and increased to size 35
+	- Homeworld changed to a tomb world and increased to size 30
 	- Vultaum Reality Computer gives +0.5 Society to Biologists and Engineering to Engineers
 	- Relic now gives -15% pop amenities usage and +5 stability
 
@@ -36,7 +36,7 @@ Inetians:
 	- Relic now gives -50% orbital bombardment damage and gives +25% monthly trade and -50% ship logistic upkeep
 
 [h1]Compatibility[/h1]
-This mod overrides a collection of files related to the precursors and their relics, but it should generally be compatible with other mods so long as they don't also override things related to the precursors.
+This mod overrides a collection of files related to the precursors and their relics, but it should generally be compatible with other mods so long as they don't also override things related to the precursors. This mod has built-in compatibility with "Guilli's Planet Modifiers and Features" :)
 
 common\buildings\05_research_buildings.txt
 - building_vultaum_reality_computer

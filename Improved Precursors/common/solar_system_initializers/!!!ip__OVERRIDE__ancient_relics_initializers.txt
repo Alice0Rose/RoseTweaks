@@ -1,6 +1,3 @@
-@distance = 50
-@base_moon_distance = 10
-
 # Zrocursor Home System
 Zrocursor_system = {
 	name = "NAME_Zron"
@@ -10,11 +7,21 @@ Zrocursor_system = {
 		type = rocky_asteroid_belt
 		radius = 125
 	}
-	flags = { Zrocursor precursor_system }
+	flags = { Zrocursor precursor_system gpm_is_precursor_system }
 
 	planet = {
 		class = star
 		orbit_distance = 0
+		init_effect = {
+			if = {
+				limit = { gpm_mod_active = yes }
+			
+				if = { 
+					limit = { NOT = { host_has_dlc = Federations } }
+					gpm_precursor_star_shipyards = yes
+				}
+			}
+		}
 	}
 
 	planet = {
@@ -225,6 +232,37 @@ Zrocursor_system = {
 		orbit_angle = 45
 		size = 20
 		has_ring = no
+		init_effect = {			
+			if = {
+				limit = { gpm_mod_active = yes }
+				# space doodad engine
+				gpm_precursor_ambient_object_generator= yes
+				prevent_anomaly = yes
+				set_planet_flag = gpm_is_precursor_homesystem_planet
+				gpm_precursor_planet_setup_no_modifiers = yes
+				if = {
+					limit = { gpm_are_precursors_enabled = yes }
+					add_modifier = { modifier = gpm_precursor_ruins }
+					# random themed for precursor story
+					random_list = {
+						10 = { add_modifier = { modifier = gpm_precursor_planetary_gun } }
+						10 = { add_modifier = { modifier = gpm_precursor_bunker_grid } }
+						10 = { add_modifier = { modifier = gpm_precursor_mechs } }
+						10 = { add_modifier = { modifier = gpm_precursor_eternal_fortress } }
+						10 = { add_modifier = { modifier = gpm_precursor_crashed_spacestation } }
+						10 = { add_modifier = { modifier = gpm_precursor_battleground_ruins } }
+					}
+					# random prized one
+					random_list = {
+						10 = { add_modifier = { modifier = gpm_precursor_energy_grid } }
+						10 = { add_modifier = { modifier = gpm_precursor_singularity_drive } }
+						10 = { add_modifier = { modifier = gpm_precursor_mines } }
+						10 = { add_modifier = { modifier = gpm_precursor_manufactorium } }
+						10 = { add_modifier = { modifier = gpm_precursor_vaults } }
+					}
+				}
+			}
+		}
 	}
 
 	planet = {
@@ -241,6 +279,12 @@ Zrocursor_system = {
 			clear_deposits = yes
 			create_archaeological_site = zroni_digsite_6
 			add_deposit = d_zro_deposit_5
+			
+			if = {
+				limit = { gpm_mod_active = yes }
+				gpm_precursor_home_planet_setup = yes
+				gpm_roll_planetary_features_unique = yes
+			}
 		}
 		
 		moon = {
@@ -271,6 +315,32 @@ Zrocursor_system = {
 			orbit_distance = 12
 			orbit_angle = 320
 			has_ring = no
+			init_effect = {
+				if = {
+					limit = { gpm_mod_active = yes }
+					prevent_anomaly = yes
+					set_planet_flag = gpm_is_precursor_homesystem_planet
+					gpm_precursor_planet_setup_no_modifiers = yes
+					add_modifier = { modifier = gpm_precursor_ruins }
+					# random themed for precursor story
+					random_list = {
+						10 = { add_modifier = { modifier = gpm_precursor_planetary_gun } }
+						10 = { add_modifier = { modifier = gpm_precursor_bunker_grid } }
+						10 = { add_modifier = { modifier = gpm_precursor_mechs } }
+						10 = { add_modifier = { modifier = gpm_precursor_eternal_fortress } }
+						10 = { add_modifier = { modifier = gpm_precursor_crashed_spacestation } }
+						10 = { add_modifier = { modifier = gpm_precursor_battleground_ruins } }
+					}
+					# random prized one
+					random_list = {
+						10 = { add_modifier = { modifier = gpm_precursor_energy_grid } }
+						10 = { add_modifier = { modifier = gpm_precursor_singularity_drive } }
+						10 = { add_modifier = { modifier = gpm_precursor_mines } }
+						10 = { add_modifier = { modifier = gpm_precursor_manufactorium } }
+						10 = { add_modifier = { modifier = gpm_precursor_vaults } }
+					}
+				}
+			}
 		}
 
 		moon = {
@@ -352,6 +422,34 @@ Zrocursor_system = {
 			}
 		}
 	}
+	
+	init_effect = {
+		if = {
+			limit = { gpm_mod_active = yes }
+			if = { 
+				limit = { host_has_dlc = Federations }
+				
+				spawn_megastructure = {
+					type = "gpm_mega_shipyard_ruined_precursor"
+					planet = star
+
+					init_effect = {
+						create_ambient_object = {
+							type = "large_debris_object"
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 20
+								angle = 20
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 # The Last Baol System
@@ -362,7 +460,7 @@ last_baol_system = {
 		type = icy_asteroid_belt
 		radius = 250
 	}
-	flags = { last_baol_system }
+	flags = { last_baol_system precursor_system gpm_is_precursor_system }
 
 	planet = {
 		class = star
@@ -370,6 +468,13 @@ last_baol_system = {
 		orbit_angle = 1
 		init_effect = {
 			prevent_anomaly = yes
+			if = {
+				limit = { gpm_mod_active = yes }
+				if = { 
+					limit = { NOT = { host_has_dlc = Federations } }
+					gpm_precursor_star_shipyards = yes
+				}
+			}
 		}
 	}
 
@@ -399,7 +504,32 @@ last_baol_system = {
 		orbit_angle = 120
 		size = 12
 		init_effect = {
-			prevent_anomaly = yes
+			if = {
+				limit = { gpm_mod_active = yes }
+				# space doodad engine
+				gpm_precursor_ambient_object_generator= yes
+				prevent_anomaly = yes
+				set_planet_flag = gpm_is_precursor_homesystem_planet
+				gpm_precursor_planet_setup_no_modifiers = yes
+				add_modifier = { modifier = gpm_precursor_ruins }
+				# random themed for precursor story
+				random_list = {
+					10 = { add_modifier = { modifier = gpm_precursor_planetary_gun } }
+					10 = { add_modifier = { modifier = gpm_precursor_bunker_grid } }
+					10 = { add_modifier = { modifier = gpm_precursor_mechs } }
+					10 = { add_modifier = { modifier = gpm_precursor_eternal_fortress } }
+					10 = { add_modifier = { modifier = gpm_precursor_crashed_spacestation } }
+					10 = { add_modifier = { modifier = gpm_precursor_battleground_ruins } }
+				}
+				# random prized one
+				random_list = {
+					10 = { add_modifier = { modifier = gpm_precursor_energy_grid } }
+					10 = { add_modifier = { modifier = gpm_precursor_singularity_drive } }
+					10 = { add_modifier = { modifier = gpm_precursor_mines } }
+					10 = { add_modifier = { modifier = gpm_precursor_manufactorium } }
+					10 = { add_modifier = { modifier = gpm_precursor_vaults } }
+				}
+			}
 		}
 	}
 
@@ -442,6 +572,13 @@ last_baol_system = {
 			add_deposit = d_city_ruins
 			add_deposit = d_city_ruins
 			set_planet_flag = grunur_prime
+			
+			if = {
+				limit = { gpm_mod_active = yes }
+				gpm_precursor_home_planet_setup = yes
+				gpm_roll_planetary_features_unique = yes
+				create_archaeological_site = gpm_precursor_generic_digsite
+			}
 		}
 	}
 
@@ -479,6 +616,54 @@ last_baol_system = {
 			orbit_angle = 100
 			init_effect = {
 				prevent_anomaly = yes
+				if = {
+					limit = { gpm_mod_active = yes }
+					set_planet_flag = gpm_is_precursor_homesystem_planet
+					gpm_precursor_planet_setup_no_modifiers = yes
+					add_modifier = { modifier = gpm_precursor_ruins }
+					# random themed for precursor story
+					random_list = {
+						10 = { add_modifier = { modifier = gpm_precursor_planetary_gun } }
+						10 = { add_modifier = { modifier = gpm_precursor_bunker_grid } }
+						10 = { add_modifier = { modifier = gpm_precursor_mechs } }
+						10 = { add_modifier = { modifier = gpm_precursor_eternal_fortress } }
+						10 = { add_modifier = { modifier = gpm_precursor_crashed_spacestation } }
+						10 = { add_modifier = { modifier = gpm_precursor_battleground_ruins } }
+					}
+					# random prized one
+					random_list = {
+						10 = { add_modifier = { modifier = gpm_precursor_energy_grid } }
+						10 = { add_modifier = { modifier = gpm_precursor_singularity_drive } }
+						10 = { add_modifier = { modifier = gpm_precursor_mines } }
+						10 = { add_modifier = { modifier = gpm_precursor_manufactorium } }
+						10 = { add_modifier = { modifier = gpm_precursor_vaults } }
+					}
+					if = {
+						limit = {
+							gpm_mod_active = yes 
+						}
+						set_planet_flag = gpm_is_precursor_homesystem_planet
+						gpm_precursor_planet_setup_no_modifiers = yes
+						add_modifier = { modifier = gpm_precursor_ruins }
+						# random themed for precursor story
+						random_list = {
+							10 = { add_modifier = { modifier = gpm_precursor_planetary_gun } }
+							10 = { add_modifier = { modifier = gpm_precursor_bunker_grid } }
+							10 = { add_modifier = { modifier = gpm_precursor_mechs } }
+							10 = { add_modifier = { modifier = gpm_precursor_eternal_fortress } }
+							10 = { add_modifier = { modifier = gpm_precursor_crashed_spacestation } }
+							10 = { add_modifier = { modifier = gpm_precursor_battleground_ruins } }
+						}
+						# random prized one
+						random_list = {
+							10 = { add_modifier = { modifier = gpm_precursor_energy_grid } }
+							10 = { add_modifier = { modifier = gpm_precursor_singularity_drive } }
+							10 = { add_modifier = { modifier = gpm_precursor_mines } }
+							10 = { add_modifier = { modifier = gpm_precursor_manufactorium } }
+							10 = { add_modifier = { modifier = gpm_precursor_vaults } }
+						}
+					}
+				}
 			}
 		}
 	}
