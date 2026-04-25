@@ -197,6 +197,10 @@ ap_become_the_crisis = {
 		activate_crisis_progression = nemesis_path
 	}
 
+	modifier = {
+		refugee_attraction = -0.50
+	}
+
 	ai_weight = {
 		factor = 7.5
 		modifier = {
@@ -292,6 +296,10 @@ ap_cosmogenesis = {
 		activate_crisis_progression = cosmogenesis_path
 	}
 
+	modifier = {
+		refugee_attraction = -0.50
+	}
+
 	ai_weight = {
 		factor = 7.5
 		modifier = {
@@ -367,8 +375,17 @@ ap_behemoths = {
 		activate_crisis_progression = behemoth_path
 	}
 
+	modifier = {
+		refugee_attraction = -0.50
+	}
+
 	ai_weight = {
 		factor = 7.5
+		modifier = {
+			factor = 0
+			is_xenophile = yes
+			is_spiritualist = yes
+		}
 
 		modifier = {
 			factor = 0.5
@@ -460,8 +477,20 @@ ap_galactic_hyperthermia = {
 		activate_crisis_progression = hyperthermia_path
 	}
 
+	modifier = {
+		refugee_attraction = -0.50
+	}
+
 	ai_weight = {
 		factor = 7.5
+		modifier = {
+			factor = 0
+			NOR = {
+				is_militarist = yes
+				is_xenophobe = yes
+				is_gestalt = yes
+			}
+		}
 		modifier = {
 			factor = 10
 			is_homicidal = yes

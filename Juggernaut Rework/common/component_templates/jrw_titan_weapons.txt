@@ -7,7 +7,6 @@ weapon_component_template = {
 	icon = "GFX_ship_part_perdition_beam"
 	icon_frame = 1
 
-	firing_arc = 10.0
 	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
@@ -45,6 +44,15 @@ weapon_component_template = {
 			}
 			food = @titanic_t6_upkeep_energy
 		}
+	}
+
+	on_hit = {
+		inline_script = {
+			script = ship_components/collateral_damage
+			RANGE = @perdition_beam_collateral_range
+			DAMAGE = @perdition_beam_fleet_damage
+		}
+		custom_tooltip = "PERDITION_BEAM_FLEET_EFFECT"
 	}
 
 	target_weights = {
@@ -86,7 +94,6 @@ weapon_component_template = {
 	icon = "GFX_ship_part_archaeo_titan_beam"
 	icon_frame = 1
 
-	firing_arc = 10.0
 	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
@@ -125,6 +132,15 @@ weapon_component_template = {
 			}
 			food = @titanic_t6_upkeep_energy
 		}
+	}
+
+	on_hit = {
+		inline_script = {
+			script = ship_components/collateral_damage
+			RANGE = @perdition_beam_collateral_range
+			DAMAGE = @perdition_beam_fleet_damage
+		}
+		custom_tooltip = "PERDITION_BEAM_FLEET_EFFECT"
 	}
 
 	target_weights = {

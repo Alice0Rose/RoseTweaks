@@ -60,7 +60,7 @@ building_vultaum_reality_computer = {
 			exists = owner
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
-		planet_physicists_physics_research_produces_add = 0.1
+		planet_physicists_physics_research_produces_add = 0.5
 		planet_biologists_society_research_produces_add = 0.5
 		planet_engineers_engineering_research_produces_add = 0.5
 	}
@@ -72,7 +72,7 @@ building_vultaum_reality_computer = {
 				has_ascension_perk = ap_cosmogenesis
 			}
 		}
-		planet_physicists_advanced_logic_produces_add = 0.5
+		planet_physicists_advanced_logic_produces_add = 0.25
 	}
 
 	inline_script = {

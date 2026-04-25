@@ -5,9 +5,10 @@ tech_repeatable_improved_tile_food_output = {
 	tier = @repeatableTechTier
 	category = { biology }
 	levels = -1
+
 	potential = {
 		is_wilderness_empire = no
-	}	
+	}
 	prerequisites = { "tech_gene_crops" }
 	
 	weight = @repeatableTechWeight
@@ -24,7 +25,7 @@ tech_repeatable_improved_tile_food_output = {
 	ai_weight = {
 		factor = 1.0
 	}
-	
+
 	weight_groups = {
 		repeatable
 	}
@@ -59,7 +60,7 @@ tech_repeatable_improved_core_system_cap = {
 	ai_weight = {
 		factor = 1.0
 	}
-	
+
 	weight_groups = {
 		repeatable
 	}
@@ -125,7 +126,7 @@ tech_repeatable_improved_army_health = {
 			has_edict = bta_no_army_repeatables
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 1.0
 	}
@@ -164,7 +165,7 @@ tech_repeatable_improved_leader_life_span = {
 	ai_weight = {
 		factor = 1.0
 	}
-	
+
 	weight_groups = {
 		repeatable
 	}

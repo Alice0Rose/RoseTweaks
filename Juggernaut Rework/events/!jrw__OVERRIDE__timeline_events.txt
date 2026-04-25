@@ -45,11 +45,6 @@ ship_event = {
 						set_country_flag = first_titan
 					}
 				}
-				bio_titan = {
-					from.owner = {
-						set_country_flag = first_titan
-					}
-				}
 				juggernaut = {
 					from.owner = {
 						set_country_flag = first_juggernaut

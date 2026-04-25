@@ -7,7 +7,7 @@
 		PLANET_ASCENSION_SUM_SCALE			= 0.157	# Scaling factor for Planetary Ascension cost based on the empire-wide sum of Ascension Tiers
 		PLANET_ASCENSION_SPRAWL_MODIFIER   = -0.014 # Reduction of planet sprawl per level of ascension
 
-		PLANET_ASCENSION_MODIFIER_SCALE		= 0.066	# Scaling factor of the designation benefits, multiple instances will sum (first will be 1.25, then 1.50...)
+		PLANET_ASCENSION_MODIFIER_SCALE		= 0.0264 # Scaling factor of the designation benefits, multiple instances will sum (first will be 1.25, then 1.50...)
 		
 		## tradition cost = ( base_cost + ( cost_tradition * num_traditions )^traditions_exponential ) * ( 1 + cost_planet*num_planets + cost_system*num_systems )
 		TRADITION_COST_TRADITION				= 7		# change this value if you want to increase all costs
