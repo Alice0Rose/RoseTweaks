@@ -119,6 +119,7 @@ situation_synthetic_fertility_synthesization = {
 }
 
 ### Digitization - Turning people into virtual minds
+
 situation_digitization = {
 	category = neutral
 	picture = GFX_evt_synth_situation
@@ -128,6 +129,9 @@ situation_digitization = {
 		custom_tooltip = "situation_digitization_outcome"
 		hidden_effect = {
 			situation_event = { id = synth.2 }
+			owner = {
+				set_country_flag = situation_digitization_complete
+			}
 		}
 		set_situation_locked = yes
 	}
@@ -225,8 +229,8 @@ situation_digitization = {
 			synth.405	# Stage 4 story event
 		}
 	}
-	monthly_progress = { #On average, the situation should take about 7 years to complete
-		base = 10
+	monthly_progress = { #On average, the situation should take about 14 years to complete
+		base = 5
 		# Modifiers are defined in tooltip order, most important first
 		modifier = {
 			mult = 1.2

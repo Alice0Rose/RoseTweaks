@@ -3,8 +3,7 @@ Armies:
 - Synthetic empires have access to Individualistic machine armies and associated technologies.
 
 Ascension Perks:
-- Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th (cus that's stooopid)
-- Galactic Force Projection gives +250 fleet capacity instead of +50.
+- Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th
 - Executive Vigor gives +2 sector size.
 - Transcendent Learning gives +10% leader lifespan.
 - Master Builders gives +1 building queue capacity.
@@ -30,13 +29,12 @@ Decisions:
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 
 Diplomacy:
-- Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires but 50% more slowly, requiring a significant power difference before vassalization is an option
+- Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires
 - Vassalization acceptance loss scales less with distance, making vassalization across large distances easier
-- AI empires are much less likely to propose secret fealty, reducing spam
 
 Fleet Management:
 - Maximum possible command limit raised from 500 to 10000
-- Default command limit raised from 20 to 50 
+- Default command limit raised from 50 to 100 
 - Fleet command limit repeatable tech gives +50 instead of +20 and has 10 levels instead of 5
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
@@ -54,15 +52,14 @@ Elections:
 - Oligarchies and Corporate authorities can select any leader during their election, always including the current ruler
 
 Civics:
-- Technocracy gives +1 Unity per researcher
-- Technocracy council position gives +0.05 of each science type per skill level to researchers
+- Technocracy gives +0.5 Unity per researcher
 - Shadow Council gives +15% council agenda speed and +50% election term instead of election variance
-- Miners Guild gives +1 unity per miner
+- Miners Guild gives +0.5 unity per miner
 - Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
 - Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops (also the message lasts less time to be less spammy lol)
-- Crusader Spirit gives +1 Unity from Soldiers
-- Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist
-- Superstitious Beliefs civic can be removed if you have over 1000 of each science category
+- Crusader Spirit gives +0.5 Unity from Soldiers
+- Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist, and is slightly buffed in empires size reduction
+- Superstitious Beliefs civic can be removed if you have over 500 of each science category
 - Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
 - Environmentalist allows building Natural Arcologies without needing to clear all blockers first
@@ -72,7 +69,6 @@ Civics:
 
 Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires
-	- Imperial Fiefdom
 	- Common Ground
 	- Hegemon
 	- Lost Colony
@@ -117,8 +113,8 @@ Tooltips:
 - Orbital habitat tooltip shows the potential districts of each type again (why did they remove this oml)
 
 Traditions:
-- Aptitude reworked to be more viable :)
-- Synthetics gives -15% empire size from pops for Synthetic Virtual empires
+- Aptitude given a +10% leader xp bonus
+- Synthetics gives -5% empire size from pops and -75% housing usage for Synthetic Virtual empires
 
 Traits:
 - Luminary ascension traits are reworked to all be similarly useful :D
@@ -143,7 +139,7 @@ Traits:
 		- Mechanical pop assembly +1
 		- Pop happiness -15%
 	- Genetic:
-		- Biological species trait points and picks +1
+		- Biological species trait points and picks +2
 		- Modify species cost -20%
 		- Organic pop assembly +1.5
 		- Organic pop assembly +25%
@@ -169,11 +165,12 @@ Ascension:
 	- -10% miner job efficiency
 	- -5% metallurgist job efficiency
 - Divine Sovereign civic no longer requires imperial authority
-- Added the Divine Consiousness civic for gestalts which gives +20% bonus workforce and output for psionic pops, mimicing the bonus of the council position from the Divine Sovereign civic
+- Added the Divine Consiousness civic for gestalts which gives +20% bonus workforce for psionic pops, mimicing the bonus of the council position from the Divine Sovereign civic
 - Divine Sovereign event is reworked to trigger for all authorities (including a version for gestalts) and always gives the Divine Sovereign (or Divine Consiousness) civic, regardless of if you choose to switch to imperial or not
 - Reworked the bonuses from the Psionic Covenant ship components to be more significant and thematic
 - Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
+- The Powered Exoskeletons tech is given for free when taking the Synthetic Evolution ascension perk if you don't already have it
 
 Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs

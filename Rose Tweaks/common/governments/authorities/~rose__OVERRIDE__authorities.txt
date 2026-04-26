@@ -46,7 +46,8 @@ auth_oligarchic = {
 			pop_cyborg_happiness = 0.15
 			pop_non_cyborg_happiness = -0.15
 			pop_factions_produces_mult = 0.1
-			all_technology_research_speed = 0.05
+			planet_jobs_specialist_produces_mult = 0.1
+			planet_stability_add = 3
 		}
 	}
 
@@ -65,7 +66,7 @@ auth_oligarchic = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_oligarchic_individualist_tt
-			planet_stability_add = 10
+			planet_stability_add = 6
 			pop_cat_ruler_happiness = 0.25
 			pop_cat_ruler_political_power = 2
 			planet_jobs_specialist_produces_mult = 0.1
@@ -73,7 +74,6 @@ auth_oligarchic = {
 			pop_cat_specialist_political_power = -1
 			planet_jobs_worker_produces_mult = -0.15
 			pop_cat_worker_political_power = -1
-			pop_unemployment_demotion_time_mult = 0.25
 			show_only_custom_tooltip = no
 		}
 	}
@@ -168,7 +168,7 @@ auth_oligarchic = {
 			custom_tooltip = auth_bio_oligarchic_cloning_tt
 			show_only_custom_tooltip = no
 			councilor_skill_add = 2
-			pop_category_rulers_unity_produces_add = 3
+			planet_politicians_unity_produces_add = 2
 		}
 	}
 
@@ -301,7 +301,7 @@ auth_corporate = {
 	country_modifier = {
 		planet_jobs_trade_produces_mult = 0.10
 		empire_size_colonies_mult = 0.50
-		external_leader_pool_add = 1
+		envoys_add = 1
 	}
 
 	advanced_authority_swap	= {

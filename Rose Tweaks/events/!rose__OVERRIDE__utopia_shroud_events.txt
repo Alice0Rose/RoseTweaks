@@ -85,7 +85,7 @@ country_event = {
 			}
 			random_list = {
 				60 = { country_event = { id = utopia.3341 } }   # Composer messes with species traits
-				25 = { 											# Pops get devolved 
+				25 = { 											# Pops get devolved
 					modifier = {
 						factor = 0
 						OR = {
@@ -119,7 +119,7 @@ country_event = {
 	picture = GFX_evt_chosen_leader
 	show_sound = event_mystic_reveal
 
-	# Changed so can happen to any authority (except gestalt, they have seperate event) so long as they have a chosen leader
+	# Changed so can happen to any authority (except gestalt, they have separate event) so long as they have a chosen leader
 	trigger = {
 		is_country_type = default
 		is_gestalt = no

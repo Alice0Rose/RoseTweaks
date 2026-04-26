@@ -85,8 +85,8 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 
 	immediate = {
 		country_event = {
-			# Change from 7200 (20 years) randomness on top of 10 year base to 720 (2 years) randomness on top of 15 year base
-			id = paragon.5201 days = 4800 random = 720 
+			# Change from 7200 (20 years) randomness to 720 (2 years) randomness
+			id = paragon.5201 days = 3600 random = 720 
 		}
 		set_country_flag = rose_origin_legendary_leader_ascension_failsafe_triggered
 	}

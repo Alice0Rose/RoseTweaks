@@ -8,6 +8,7 @@ is_faction_allowed = {
 			days_passed >= 1
 			OR = {
 				has_valid_civic = civic_parliamentary_system
+				has_valid_civic = civic_media_conglomerate
 				has_valid_civic = civic_crowdsourcing
 				has_valid_civic = civic_corporate_crowdsourcing
 			}

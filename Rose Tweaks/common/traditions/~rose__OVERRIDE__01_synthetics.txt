@@ -73,7 +73,8 @@ tr_synthetics_finish = {
 			ROBOT_species_trait_points_add = 2
 			modify_species_cost_mult = -0.5
 			ascension_perks_add = 1
-			empire_size_pops_mult = -0.15
+			empire_size_pops_mult = -0.05
+			pop_housing_usage_mult = -0.75
 		}
 	}
 }

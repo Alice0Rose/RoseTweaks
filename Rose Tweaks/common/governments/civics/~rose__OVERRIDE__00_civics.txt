@@ -20,9 +20,11 @@ civic_technocracy = {
 	}
 	modifier = {
 		num_tech_alternatives_add = 1
-		planet_physicists_unity_produces_add = 1
-		planet_biologists_unity_produces_add = 1
-		planet_engineers_unity_produces_add = 1
+		country_scientist_cap_add = 1
+		country_official_cap_add = -1
+		planet_physicists_unity_produces_add = 0.5
+		planet_biologists_unity_produces_add = 0.5
+		planet_engineers_unity_produces_add = 0.5
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
@@ -134,7 +136,7 @@ civic_mining_guilds = {
 	modifier = {
 		planet_miners_minerals_produces_add = 1
 		add_attunement_the_instrument_of_desire = @civic_attunement1
-		planet_miners_unity_produces_add = 1
+		planet_miners_unity_produces_add = 0.5
 	}
 }
 
@@ -163,7 +165,6 @@ civic_shared_burden = {
 	}
 	modifier = {
 		planet_stability_add = 5
-		pop_unemployment_demotion_time_mult = -0.45
 		add_attunement_the_composer_of_strands = @civic_attunement1
 		pop_happiness = 0.05
 		empire_size_pops_mult = -0.05
@@ -290,7 +291,7 @@ civic_crusader_spirit = {
 	modifier = {
 		ship_weapon_damage = 0.05
 		starbase_shipyard_build_speed_mult = 0.05
-		planet_soldiers_unity_produces_add = 1
+		planet_soldiers_unity_produces_add = 0.5
 		add_attunement_the_cradle_of_souls = @civic_attunement1
 	}
 
@@ -364,10 +365,10 @@ civic_sovereign_guardianship = {
 	}
 
 	modifier = {
-		empire_size_colonies_mult = 1
+		empire_size_colonies_mult = 0.66
 		empire_size_branch_office_mult = 1
 		empire_size_systems_mult = 1.50
-		empire_size_pops_mult = -0.50
+		empire_size_pops_mult = -0.33
 		empire_size_districts_mult = -0.50
 		diplo_weight_mult = 0.2
 
@@ -471,15 +472,15 @@ civic_superstitious_beliefs = {
 		remove = {
 			has_monthly_income = { 
 				resource = physics_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = society_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = engineering_research  
-				value > 1000
+				value > 500
 			}
 		}
 	}
@@ -520,9 +521,9 @@ civic_tankbound = {
 				value = civic_tankbound_corporate
 			}
 		}
-		
 		species_class = {
 			OR = {
+				text = tankbound_species_class_requirement
 				value = NECROID
 				value = TOX
 				value = AQUATIC
@@ -547,19 +548,12 @@ civic_tankbound = {
 	traits = {
 		trait = trait_tankbound
 	}
-
 	modifier = {
-		planet_jobs_upkeep_mult = @civic_tankbound_job_upkeep
-		planet_districts_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_rw_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_rw_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_hab_energy_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_hab_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_automated_jobs_upkeep_mult = @civic_tankbound_job_upkeep
+		job_farmer_automated_workforce_mult = 1.0
+		job_miner_automated_workforce_mult = 1.0
+		job_technician_automated_workforce_mult = 1.0
 	}
-	hide_modifiers = yes
 
 	random_weight = { base = @civic_default_random_weight }
 }

@@ -55,15 +55,15 @@ civic_hive_superstitious_beliefs = {
 		remove = {
 			has_monthly_income = { 
 				resource = physics_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = society_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = engineering_research  
-				value > 1000
+				value > 500
 			}
 		}
 	}
@@ -89,15 +89,15 @@ civic_machine_superstitious_beliefs = {
 		remove = {
 			has_monthly_income = { 
 				resource = physics_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = society_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = engineering_research  
-				value > 1000
+				value > 500
 			}
 		}
 	}

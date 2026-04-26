@@ -85,6 +85,7 @@ building_rose_clone_vats_1 = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = no
 			}
@@ -104,6 +105,7 @@ building_rose_clone_vats_1 = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = yes
 				NOT = {
@@ -357,6 +359,7 @@ building_rose_clone_vats_2 = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = no
 			}
@@ -376,6 +379,7 @@ building_rose_clone_vats_2 = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = yes
 				NOT = {
@@ -625,6 +629,7 @@ building_rose_clone_vats_3 = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = no
 			}
@@ -644,6 +649,7 @@ building_rose_clone_vats_3 = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = yes
 				NOT = {

@@ -8,8 +8,9 @@ col_mac_foundry = {
 		NOT = { is_planet_class = pc_nanotech }
 	}
 
-	planet_modifier = {
-		planet_metallurgists_upkeep_mult = -0.2
+	inline_script = {
+		script = colony_types/colony_type_planet_modifier
+		MODIFIER = foundry_jobs_bonus_workforce_mult
 	}
 
 	triggered_planet_modifier = {
@@ -24,7 +25,7 @@ col_mac_foundry = {
 			}
 		}
 		modifier = {
-			planet_metallurgists_produces_mult = 0.05
+			foundry_jobs_bonus_workforce_mult = 0.05
 		}
 	}
 
@@ -56,8 +57,9 @@ col_mac_factory = {
 		NOT = { is_planet_class = pc_nanotech }
 	}
 
-	planet_modifier = {
-		planet_artisans_upkeep_mult = -0.2
+	inline_script = {
+		script = colony_types/colony_type_planet_modifier
+		MODIFIER = artisan_jobs_bonus_workforce_mult
 	}
 
 	triggered_planet_modifier = {
@@ -72,7 +74,7 @@ col_mac_factory = {
 			}
 		}
 		modifier = {
-			planet_artisans_produces_mult = 0.05
+			artisan_jobs_bonus_workforce_mult = 0.05
 		}
 	}
 

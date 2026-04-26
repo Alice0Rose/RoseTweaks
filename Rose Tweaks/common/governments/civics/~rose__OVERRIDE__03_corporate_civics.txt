@@ -52,7 +52,6 @@ civic_worker_coop = {
 	}
 	modifier = {
 		election_term_years_mult = -0.50
-		pop_unemployment_demotion_time_mult = -0.66
 		pop_ethic_egalitarian_attraction_mult = 0.5
 		add_attunement_the_cradle_of_souls = @civic_attunement1
 		pop_happiness = 0.05
@@ -120,10 +119,10 @@ civic_corporate_sovereign_guardianship = {
 	}
 
 	modifier = {
-		empire_size_colonies_mult = 1
+		empire_size_colonies_mult = 0.66
 		empire_size_branch_office_mult = 1
 		empire_size_systems_mult = 1.50
-		empire_size_pops_mult = -0.50
+		empire_size_pops_mult = -0.33
 		empire_size_districts_mult = -0.50
 		diplo_weight_mult = 0.2
 
@@ -179,15 +178,15 @@ civic_corporate_superstitious_beliefs = {
 		remove = {
 			has_monthly_income = { 
 				resource = physics_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = society_research  
-				value > 1000
+				value > 500
 			}
 			has_monthly_income = { 
 				resource = engineering_research  
-				value > 1000
+				value > 500
 			}
 		}
 	}
@@ -203,7 +202,10 @@ civic_tankbound_corporate = {
 
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { value = auth_corporate }
+		OR = {
+            authority = { value = auth_corporate }
+            civics = { value = civic_galactic_sovereign_megacorp }
+        }
 		civics = { NOT = { value = civic_tankbound } }
 	}
 	possible = {
@@ -228,6 +230,7 @@ civic_tankbound_corporate = {
 		}
 		species_class = {
 			OR = {
+				text = tankbound_species_class_requirement
 				value = NECROID
 				value = TOX
 				value = AQUATIC
@@ -254,17 +257,11 @@ civic_tankbound_corporate = {
 	}
 
 	modifier = {
-		planet_jobs_upkeep_mult = @civic_tankbound_job_upkeep
-		planet_districts_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_rw_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_rw_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_hab_energy_energy_upkeep_add = @civic_tankbound_district_upkeep
-		planet_districts_hab_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_automated_jobs_upkeep_mult = @civic_tankbound_job_upkeep
+		job_farmer_automated_workforce_mult = 1.0
+		job_miner_automated_workforce_mult = 1.0
+		job_technician_automated_workforce_mult = 1.0
 	}
-	hide_modifiers = yes
 
 	random_weight = { base = @civic_default_random_weight }
 }

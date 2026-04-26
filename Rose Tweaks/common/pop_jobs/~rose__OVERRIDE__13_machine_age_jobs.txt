@@ -27,9 +27,9 @@ neural_chip = {
 	resources = {
 		category = planet_neural_chips
 		produces = {
-			society_research = 0.75
-			engineering_research = 0.75
-			physics_research = 0.75
+			society_research = 0.375
+			engineering_research = 0.375
+			physics_research = 0.375
 			advanced_logic = 0.025
 			mult = value:num_chip_slave
 		}
@@ -55,6 +55,16 @@ neural_chip_processing = {
 		default = {
 			building_icon = building_lathe_capital
 			icon = organic_battery
+		}
+	}
+
+	demotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = chip_slave
+				AMOUNT = local_pop_amount
+			}
 		}
 	}
 

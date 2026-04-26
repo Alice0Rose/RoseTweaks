@@ -1,1 +1,63 @@
-WIP
+Aside from files with "__OVERRIDE__" in their name, the following files are fully overwritten or rely on other files or vanilla data:
+- common\buildings\~rose_clone_vat_upgrades.txt
+	- relies on stats of building_clone_vats
+		- common\buildings\pop_assembly_buildings
+
+- common\colony_types\~rose_extra_nanite_colony_types.txt
+	- relies on stats of nanite designations
+		- common\colony_types\00_colony_types.txt
+
+- common\component_templates\!rose_bomber_strike_craft.txt
+	- relies on stats of T3 strike craft for regular, bio, and fauna ships
+		- common\component_templates\00_strike_craft.txt
+		- common\component_templates\00_biogenesis_weapons.txt
+		- common\component_templates\01_mutation_strike_craft_components.txt
+
+- common\component_templates\!rose_menacing_corvette_artillery_computers.txt
+	- relies on stats of artillery computers
+		- common\component_templates\00_utilities_roles.txt
+
+- common\decisions\~rose_natural_arcologies_decisions.txt
+	- relies on some restrictions of ecumonopolis decision
+		- common\decisions\02_special_decisions.txt
+
+- common\decisions\~rose_orbital_ring_decisions.txt
+	- relies on stats of orbital ring construction costs
+		- common\megastructures\15_orbital_ring.txt
+
+- common\governments\civics\~rose_gestalt_psionic_soverign.txt
+	- relies on stats of vanilla psionic soverign civic
+		- common\governments\civics\01_special_civics.txt
+
+- common\scripted_triggers\~rose_natural_arcologies_triggers.txt
+	- relies on some restrictions of ecumonopolis decision along with changes/additions to planet classes
+		- common\Stellaris\common\planet_classes\00_planet_classes.txt
+
+- common\terraform\rose_extra_toxic_terraform_links.txt
+	- relies on terraforming options for the other from = "pc_toxic" links but at 1.5x rates
+		- common\terraform\02_special_terraform_links.txt
+
+- common\traits\02_species_traits_basic_characteristics.txt
+	- FULL OVERRIDE
+
+- common\traits\10_paragon_traits.txt
+	- FULL OVERRIDE
+
+- common\traits\17_shroud_species_traits.txt
+	- FULL OVERRIDE
+
+- common\zones\~rose_extra_habitat_zones.txt
+	- relies on combination of stats of habitat energy zone and regular food zones
+
+- common\zones\~rose_natural_arcologies_zones.txt
+	- relies on stats of specified science zones of ecumonopolis
+
+- events\!rose_choose_starting_ruler_ethic.txt
+	- relies on names of ethics
+
+- events\!rose_fe_tech_from_planet_events.txt
+	- relies on names of FE techs
+		- common\buildings\13_fallen_empire_buildings.txt
+
+- events\!rose_gestalt_psionic_soverign.txt
+	- relies on regular psionic sovereign event (tho moreso my modified version of the event)
