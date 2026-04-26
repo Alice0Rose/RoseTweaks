@@ -38,11 +38,8 @@ Fleet Management:
 - Fleet command limit repeatable tech gives +50 instead of +20 and has 10 levels instead of 5
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
-- Behemoths won't enrage when they run into each other if they're in their owner's system (listen to your mother and stop fighting you two!!)
+- Behemoths won't enrage when they run into each other if they're in their owner's system or owned by the same empire
 - Gave Menacing Corvettes access to artillery combat computers
-
-Empire Size:
-- Empire size effect on tech is reduced by 25%
 
 Federations:
 - "A Union of Faith" Level 5 Holy Covenant perk gives +10% pop growth speed and +5% mechanical pop assembly speed instead of +15% pop growth speed and -30% mechanical pop assembly speed
@@ -56,7 +53,7 @@ Civics:
 - Shadow Council gives +15% council agenda speed and +50% election term instead of election variance
 - Miners Guild gives +0.5 unity per miner
 - Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
-- Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops (also the message lasts less time to be less spammy lol)
+- Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops
 - Crusader Spirit gives +0.5 Unity from Soldiers
 - Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist, and is slightly buffed in empires size reduction
 - Superstitious Beliefs civic can be removed if you have over 500 of each science category
@@ -102,7 +99,8 @@ Factions:
 
 Techs:
 - Techs required for ascension will be heavily prioritized for AIs
-- Climate Restoration tech is T3 instead of T4 and is more likely to show up if you have the Adaptability tradition
+- Climate Restoration tech is more likely to show up if you have the Adaptability tradition
+- Switched order of Ecological Adaptation and Climate Restoration when given by events or agendas
 - Xenomorph tech no longer requires uplifting tech
 - Synthetic Personality Matrix gives +5% robotic workforce and -5% robotic amenity usage (just so it actually does something for synthetic empires)
 - Both defense platform repeatables now give partial Deep Space Citadel capacity
