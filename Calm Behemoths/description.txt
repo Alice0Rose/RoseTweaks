@@ -1,0 +1,12 @@
+[h1]Features[/h1]
+This mod prevent behemoths from raging when they run into other behemoths. This means that so long as you keep your behemoths fed/fully grown, they you can safely have a whole heard of them!!
+
+[h1]Compatibility[/h1]
+This mod only overrides 1 vanilla event, which means it should be compatible with any mods that don't specifically touch this event, and don't add some other event to trigger behemoth rage :)
+
+events\biogenesis_crisis_events.txt
+- biocrisis.90
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

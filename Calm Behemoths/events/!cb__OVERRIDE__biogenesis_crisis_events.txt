@@ -1,0 +1,17 @@
+namespace = biocrisis
+
+# 90 - Behemoth meets other behemoth, they rage out
+fleet_event = {
+	id = biocrisis.90
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		enrage_behemoth = no
+	}
+}
