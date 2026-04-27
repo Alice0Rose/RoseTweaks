@@ -60,6 +60,51 @@ civic_worker_coop = {
 	description = "civic_tooltip_worker_coop_effects"
 }
 
+civic_corporate_dark_consortium = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_corporate_dark_consortium_effects"
+	potential = {
+		OR = {
+			authority = {
+				value = auth_corporate
+			}
+			civics = {
+				value = civic_galactic_sovereign_megacorp
+			}
+		}
+		civics = {
+			NOT = { value = civic_dark_consortium }
+		}
+	}
+	possible = {
+		origin = {
+			NOT = {
+				value = origin_unplugged
+			}
+		}
+	}
+	modification = {
+		add = {
+			has_technology = tech_mine_dark_matter
+		}
+		remove = {
+			has_monthly_income = { 
+				resource = physics_research  
+				value > 1500
+			}
+		}
+	}
+	alternate_civic_version = civic_dark_consortium
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
+
 civic_corporate_sovereign_guardianship = {
 	playable = { has_astral_planes_dlc = yes }
 	ai_playable = { has_astral_planes_dlc = yes }

@@ -38,7 +38,6 @@ Fleet Management:
 - Fleet command limit repeatable tech gives +50 instead of +20 and has 10 levels instead of 5
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
-- Behemoths won't enrage when they run into each other if they're in their owner's system or owned by the same empire
 - Gave Menacing Corvettes access to artillery combat computers
 
 Federations:
@@ -63,6 +62,7 @@ Civics:
 - Secret Societies gets a unity bonus from the total number of proxy wars started (up to 10) instead of only the current number active
 - Genocidal Civics and Crusader Spirit give an empire buff after winning a purification or liberation war respectively
 - Lubrication Pools is available to Synthetically ascended empires
+- Dark Consortium can be removed after the game has started once you have over 1500 monthly physics research
 
 Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires
