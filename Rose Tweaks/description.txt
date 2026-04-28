@@ -1,8 +1,8 @@
-Armies:
+## Armies:
 - Machine armies (Individualistic and Machine Intelligence) are linked to species, making them affected by species traits.
 - Synthetic empires have access to Individualistic machine armies and associated technologies.
 
-Ascension Perks:
+## Ascension Perks:
 - Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th
 - Executive Vigor gives +2 sector size.
 - Transcendent Learning gives +10% leader lifespan.
@@ -10,44 +10,43 @@ Ascension Perks:
 - Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
 - Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
 
-Astral Actions:
+## Astral Actions:
 - Summon Dimensional Fleet can no longer be used by AI empires.
 
-Components:
+## Components:
 - Added Advanced Bomber Wings (along with versions for bio ships and space fauna) which have equivalent stats to Advanced Strike Craft, but only target enemy ships, ignoring other strike craft. Unlocked alongside tier 3 strike craft with the corresponding tech.
 
-Agendas:
+## Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
 - Ascension tech agendas are heavily prioritized by AIs, pushing them to complete their ascensions more reliably and quickly than vanilla
 - Psionic Supremacy agenda is available to psionic individualistic machines
 - Nanotech Unstoppable Swarm agenda includes Nanite Interdictors too
 
-Decisions:
+## Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 - The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 
-Diplomacy:
+## Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires
 - Vassalization acceptance loss scales less with distance, making vassalization across large distances easier
 
-Fleet Management:
+## Fleet Management:
 - Maximum possible command limit raised from 500 to 10000
 - Default command limit raised from 50 to 100 
-- Fleet command limit repeatable tech gives +50 instead of +20 and has 10 levels instead of 5
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
 - Gave Menacing Corvettes access to artillery combat computers
 
-Federations:
+## Federations:
 - "A Union of Faith" Level 5 Holy Covenant perk gives +10% pop growth speed and +5% mechanical pop assembly speed instead of +15% pop growth speed and -30% mechanical pop assembly speed
 
-Elections:
+## Elections:
 - Civic ruler class preferences no longer affect elections
 - Oligarchies and Corporate authorities can select any leader during their election, always including the current ruler
 
-Civics:
+## Civics:
 - Technocracy gives +0.5 Unity per researcher
 - Shadow Council gives +15% council agenda speed and +50% election term instead of election variance
 - Miners Guild gives +0.5 unity per miner
@@ -64,7 +63,7 @@ Civics:
 - Lubrication Pools is available to Synthetically ascended empires
 - Dark Consortium can be removed after the game has started once you have over 1500 monthly physics research
 
-Origins:
+## Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires
 	- Common Ground
 	- Hegemon
@@ -76,29 +75,28 @@ Origins:
 - Under One Rule ending event fixed to not trigger until reformists are gone and given a failsafe trigger
 - Under One Rule English localisation fixed in certain events
 
-Opinion Modifiers:
+## Opinion Modifiers:
 - Fallen Empires dislike you 5x less for researching their tech if you aren't Cosmogenesis, since you aren't as much of a threat ;)
 
-Galaxy Generation:
+## Galaxy Generation:
 - All AI personality types have the same probability of being an advanced AI
 
-Planet Classes:
+## Planet Classes:
 - Gaia Worlds give +10% pop assembly speed (machine and organic)
 - Toxic Worlds can be terraformed directly to Gaia worlds if you have both APs
 - Added more designations to nanite worlds for Nanotech empires
 
-Policies:
+## Policies:
 - Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy (0.3 and 0.3 instead of 0.2, 0.2, and 0.2)
 - Research Focus Policies from taking the Technological Ascendancy ascension perk now give a +100% draw chance and +5% type research speed if specialized
 
-Jobs:
+## Jobs:
 - Virtual Synthetic pops (but not Full Virtual pops) can be used in the Synthetic Lathe
 
-Factions:
+## Factions:
 - Factions will now spawn after 2 years for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowd Sourcing empires
 
-Techs:
-- Techs required for ascension will be heavily prioritized for AIs
+## Techs:
 - Climate Restoration tech is more likely to show up if you have the Adaptability tradition
 - Switched order of Ecological Adaptation and Climate Restoration when given by events or agendas
 - Xenomorph tech no longer requires uplifting tech
@@ -106,15 +104,15 @@ Techs:
 - Both defense platform repeatables now give partial Deep Space Citadel capacity
 - Added Habitation Module unlock to Agrarian Idyll housing tech, along with the ability to pick the Arcology Project ascension perk (tho this is only usable to create Natural Arcologies, not full Ecumonopli)
 
-Tooltips:
+## Tooltips:
 - Hovering over valid systems will show the max output of a Dyson Swarm and Nanite Harvester (if Nanotech) if built in the system
 - Orbital habitat tooltip shows the potential districts of each type again (why did they remove this oml)
 
-Traditions:
+## Traditions:
 - Aptitude given a +10% leader xp bonus
 - Synthetics gives -5% empire size from pops and -75% housing usage for Synthetic Virtual empires
 
-Traits:
+## Traits:
 - Luminary ascension traits are reworked to all be similarly useful :D
 	- Cybernetic: 
 		- Leader pool size +1
@@ -148,15 +146,15 @@ Traits:
 - Added Hardwired trait for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
 - Added Nanotech Enhancements trait for the main species and its leaders of nanotech empires
 	
-Politics:
+## Politics:
 - Egalitarian governments that become Galactic Emperor maintain their ethics
 - Egalitarian and materialist empires that chose to gain a God Emperor via psionic ascension maintain their ethics
 
-Government:
+## Government:
 - Empires with 2 or more ethics will get an event at the start of the game to choose what their ruler's and homeworld governor's ethic will be
 - For the first 2 years, pops are much more likely to switch ethics
 
-Ascension:
+## Ascension:
 - Psionic covenant negative side effects no longer can randomly kill your leaders
 - Composer of Strands negative is changed from -2 bio trait picks to:
 	- +25% planetary build cost
@@ -170,11 +168,11 @@ Ascension:
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 - The Powered Exoskeletons tech is given for free when taking the Synthetic Evolution ascension perk if you don't already have it
 
-Zones:
+## Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs
 - Added the basic resource support zones to habitat urban zones
 
-Fixes:
+## Fixes:
 - Removes the alloy cost and upkeep of T2 Spikespores
 
 

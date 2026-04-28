@@ -1,0 +1,55 @@
+#PLACEHOLDER_TECH_NAME = {
+#	area = physics
+#	cost = 999999
+#   tier = 5
+#	potential = { always = no }
+#	weight = 0
+#}
+
+giga_tech_tetradimensional_engineering = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+giga_tech_asteroid_artillery_planetcraft_upgrade = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+giga_tech_blokkat_sociology_study = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+giga_tech_blokkat_dimension_study = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+giga_tech_blokkat_armor_study = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+giga_tech_defense_nexus_production_2 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}

@@ -1,3 +1,6 @@
 is_mod_rose_tweaks_active = {
 	always = no
 }
+has_gigastructures = {
+	always = no
+}

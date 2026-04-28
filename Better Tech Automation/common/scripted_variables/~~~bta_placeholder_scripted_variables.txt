@@ -1,0 +1,10 @@
+@giga_aiweight_multiplier_weak = 0
+@giga_aiweight_multiplier_medium = 0
+@giga_aiweight_multiplier_strong = 0
+@giga_aiweight_multiplier_questionable = 0
+
+@giga_expensive_repeatable_cost = 0
+@giga_expensive_repeatable_techlevelcost = 0
+@giga_expensive_repeatable_weight = 0
+
+@giga_tier9cost2 = 0

@@ -6,9 +6,56 @@ Note that there will always be a one tech delay between activation or deactivati
 The edicts will also only show up once you have the ability to research the technologies they would remove, as to not clog the edict menu in the early game ^-^
 
 [h1]Compatibility[/h1]
-Because of the way this mod works, it has to override all technologies that the edicts affect (by default, all the infinite repeatables and the Cosmogenesis level 5 entry tech). This means the mod requires either a patch mod or detection code to work with other mods that modify these technologies or add other technologies. Below is one I've already created for Gigastructures, which can be used as a template for creating your own patch mods :)
+Because of the way this mod works, it has to override all technologies that the edicts affect (by default, all the infinite repeatables and the Cosmogenesis level 5 entry tech). This means the mod requires either a patch mod or detection code to work with other mods that modify these technologies or add other technologies. 
 
-[url= https://steamcommunity.com/sharedfiles/filedetails/?id=3394682592]Better Tech Automation (Gigastructural Engineering Patch)[/url]
+The following mods already have built-in compatibility:
+- Gigastructural Engineering
+
+The following technologies are overridden:
+common\technology\00_eng_tech_repeatable.txt
+- tech_repeatable_improved_tile_mineral_output
+- tech_repeatable_improved_military_station_damage
+- tech_repeatable_improved_military_station_health
+- tech_repeatable_improved_armor_output
+- tech_repeatable_weapon_type_explosive_damage
+- tech_repeatable_weapon_type_explosive_fire_rate
+- tech_repeatable_weapon_type_kinetic_damage
+- tech_repeatable_weapon_type_kinetic_fire_rate
+
+common\technology\00_machine_age_tech_repeatable.txt
+- tech_cosmogenesis_crisis_4
+- tech_cosmogenesis_crisis_5
+- tech_cosmogenesis_thesis
+
+common\technology\00_phys_tech_repeatable.txt
+- tech_repeatable_improved_tile_energy_output
+- tech_repeatable_improved_shield_output
+- tech_repeatable_weapon_type_energy_damage
+- tech_repeatable_weapon_type_energy_fire_rate
+
+common\technology\00_soc_tech_repeatable.txt
+- tech_repeatable_improved_tile_food_output
+- tech_repeatable_improved_core_system_cap
+- tech_repeatable_improved_army_damage
+- tech_repeatable_improved_army_health
+- tech_repeatable_improved_leader_life_span
+- tech_repeatable_weapon_type_strike_craft_fire_damage
+- tech_repeatable_weapon_type_strike_craft_fire_rate
+
+common\technology\04_repeatables.txt
+- giga_tech_repeatable_dimensional_storage
+- giga_tech_repeatable_reduced_mega_building_time
+
+common\technology\12_asteroid_artillery.txt
+- giga_tech_repeatable_asteroid_artillery_upgrade
+
+common\technology\13_blokkat.txt
+- giga_tech_blokkat_society_repeatable
+- giga_tech_blokkat_physics_repeatable
+- giga_tech_blokkat_engineering_repeatable
+
+common\technology\14_defense_nexus_repeatables.txt
+- giga_tech_repeatable_defense_nexus_capacity_upgrade
 
 [h1]Source Code and Wiki[/h1]
 [url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]

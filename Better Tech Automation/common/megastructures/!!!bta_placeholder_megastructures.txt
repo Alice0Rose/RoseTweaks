@@ -1,0 +1,11 @@
+#PLACEHOLDER_MEGASTRUCTURE_NAME = {
+#  entity = ""
+#}
+
+planetary_drive_yard_1_fortress = {
+  entity = ""
+}
+
+asteroid_artillery_1 = {
+  entity = ""
+}
