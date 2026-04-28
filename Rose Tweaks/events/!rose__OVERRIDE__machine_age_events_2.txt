@@ -1,5 +1,113 @@
 namespace = cybernetics
 
+# Add Virtual Leader Trait
+country_event = {
+	id = cybernetics.5046
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_tradition = tr_virtuality_finish
+			has_country_flag = synth_virtual
+		}
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				species = {
+					OR = {
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+					}
+				}
+				NOR = {
+					has_trait = leader_trait_virtual
+				}
+				is_leader_tier = leader_tier_default
+				is_gestalt_node = no
+			}
+			if = {
+				limit = {
+					has_trait = trait_machine_unit
+				}
+				add_trait = {
+					trait = leader_trait_virtual
+					show_message = no
+				}
+			}
+			else = {
+				remove_trait = leader_trait_synthetic
+				add_trait = {
+					trait = leader_trait_virtual
+					show_message = no
+				}
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				species = {
+					OR = {
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+					}
+				}
+				NOT = { has_trait = leader_trait_virtual }
+			}
+			if = {
+				limit = {
+					has_trait = trait_machine_unit
+				}
+				add_trait = {
+					trait = leader_trait_virtual
+					show_message = no
+				}
+			}
+			else = {
+				remove_trait = leader_trait_synthetic
+				add_trait = {
+					trait = leader_trait_virtual
+					show_message = no
+				}
+			}
+		}
+		create_message = {
+			type = MESSAGE_ALL_GAINED_TRAIT
+			localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+			days = @toast_message_days
+			variable = {
+				type = key
+				value = leader_trait_virtual
+				localization = TRAIT
+			}
+			variable = {
+				key = TRAIT_KEY
+				value = leader_trait_virtual
+			}
+			variable = {
+				key = "border"
+				value = "GFX_invisible"
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = synth_virtual
+			}
+			owner = {
+				modify_species = {
+					species = owner_main_species
+					add_trait = trait_rose_synthetic_virtual_bonus
+				}
+				change_dominant_species = {
+					species = last_created_species
+					change_all = yes
+				}
+			}
+		}
+	}
+}
+
 event = {
 	id = cybernetics.5053
 	hide_window = yes

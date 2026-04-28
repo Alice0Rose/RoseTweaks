@@ -7,3 +7,5 @@
  trait_rose_hardwired_desc: "§LThese machines require a direct connection to the mainframe to operate, making relocation a highly difficult and expensive endeavor.§!\n"
  AUTO_MIGRATE_HARDWIRED: "§RHardwired Pops cannot migrate.§!" 
  trait_rose_hardwired_effect: "§RPops will not Automatically Resettle§!\n    - Resettlement Cost: §R+200%§!"
+ trait_rose_synthetic_virtual_bonus: "Synthetic Surrogates"
+ trait_rose_synthetic_virtual_bonus_desc: "§LThese machines spend the majority of their time in virtual space, only using physical shells when necessary.§!\n"

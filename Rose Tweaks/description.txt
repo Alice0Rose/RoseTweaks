@@ -53,7 +53,7 @@
 - Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
 - Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops
 - Crusader Spirit gives +0.5 Unity from Soldiers
-- Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist, and is slightly buffed in empires size reduction
+- Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist, and is changed to +50% empire size from planets and -30% empire size from pops 
 - Superstitious Beliefs civic can be removed if you have over 500 of each science category
 - Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
@@ -110,7 +110,6 @@
 
 ## Traditions:
 - Aptitude given a +10% leader xp bonus
-- Synthetics gives -5% empire size from pops and -75% housing usage for Synthetic Virtual empires
 
 ## Traits:
 - Luminary ascension traits are reworked to all be similarly useful :D
@@ -167,6 +166,7 @@
 - Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 - The Powered Exoskeletons tech is given for free when taking the Synthetic Evolution ascension perk if you don't already have it
+- Synthetic Virtuality gives a trait to pops that gives -10% empire size from pops and -50% housing usage upon finishing the authority event chain
 
 ## Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs

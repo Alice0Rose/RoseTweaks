@@ -403,10 +403,10 @@ civic_sovereign_guardianship = {
 	}
 
 	modifier = {
-		empire_size_colonies_mult = 0.66
+		empire_size_colonies_mult = 0.50
 		empire_size_branch_office_mult = 1
 		empire_size_systems_mult = 1.50
-		empire_size_pops_mult = -0.33
+		empire_size_pops_mult = -0.30
 		empire_size_districts_mult = -0.50
 		diplo_weight_mult = 0.2
 

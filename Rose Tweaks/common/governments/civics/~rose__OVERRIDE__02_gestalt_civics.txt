@@ -40,6 +40,43 @@ civic_hive_idyllic_bloom = {
 	}
 }
 
+civic_hive_sovereign_guardianship = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_hive_sovereign_guardianship_effects"
+	potential = {
+		authority = { value = auth_hive_mind }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_hive_devouring_swarm
+				value = civic_hive_scorched_earth
+			}
+		}
+	}
+
+	modification = no
+
+	modifier = {
+		empire_size_colonies_mult = 0.50
+		empire_size_systems_mult = 1.50
+		empire_size_pops_mult = -0.30
+		empire_size_districts_mult = -0.50
+		diplo_weight_mult = 0.2
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+		planet_soldiers_unity_produces_add = @sovereign_guardianship_soldier_unity
+		add_attunement_the_cradle_of_souls = @civic_attunement1
+	}
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
+
 civic_hive_superstitious_beliefs = {
 	playable = { has_shroud_dlc = yes }
 	ai_playable = { has_shroud_dlc = yes }
@@ -71,6 +108,40 @@ civic_hive_superstitious_beliefs = {
 
 	modifier = {
 		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_sovereign_guardianship = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_machine_sovereign_guardianship_effects"
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	possible = {
+		civics = {
+			NOT = { value = civic_machine_terminator }
+		}
+	}
+
+	modification = no
+
+	modifier = {
+		empire_size_colonies_mult = 0.50
+		empire_size_systems_mult = 1.50
+		empire_size_pops_mult = -0.30
+		empire_size_districts_mult = -0.50
+		diplo_weight_mult = 0.2
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+		planet_soldiers_unity_produces_add = @sovereign_guardianship_soldier_unity
+		add_attunement_the_cradle_of_souls = @civic_attunement1
+	}
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
 	}
 }
 
