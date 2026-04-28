@@ -1,11 +1,14 @@
 #PLACEHOLDER_MEGASTRUCTURE_NAME = {
-#  entity = ""
+#	entity = ""
+#	potential = { always = no }
 #}
 
 planetary_drive_yard_1_fortress = {
-  entity = ""
+	entity = ""
+	potential = { always = no }
 }
 
 asteroid_artillery_1 = {
-  entity = ""
+	entity = ""
+	potential = { always = no }
 }
