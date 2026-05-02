@@ -2,7 +2,9 @@ rose_natural_arcologies = {
 	district_jobs_mult = 2
 	planet_housing_mult = 2
 	planet_resettlement_unemployed_destination_mult = 0.5
-
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	planet_jobs_energy_produces_mult = 0.2
+	planet_jobs_minerals_produces_mult = 0.2
+	planet_jobs_food_produces_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_arcologies.dds"
 	icon_frame = 1
 }
