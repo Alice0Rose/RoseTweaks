@@ -10,7 +10,7 @@ decision_rose_natural_arcologies = {
 				NOT = { is_planet_class = pc_volcanic }
 			}
 			influence = 200
-			minerals = 12500
+			alloys = 6250
 			food = 12500
 		}
 		cost = {
@@ -18,8 +18,8 @@ decision_rose_natural_arcologies = {
 				is_planet_class = pc_volcanic
 			}
 			influence = 200
+			alloys = 6250
 			minerals = 12500
-			alloys = 3125
 		}
 	}
 

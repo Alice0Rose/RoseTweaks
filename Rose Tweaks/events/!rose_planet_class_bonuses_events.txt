@@ -1,0 +1,87 @@
+namespace = rose_planet_class_bonuses
+
+# Adds modifiers to all planets at empire creation
+event = {
+	id = rose_planet_class_bonuses.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_galaxy_planet = { 
+			limit = { 
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_ringworld_habitable
+				}
+			}
+			planet_event = { id = rose_planet_class_bonuses.1 }
+		}
+	}
+}
+
+# Adds and removes bonus modifiers to planets based on planet class
+# Fired by on_planet_class_changed and on_planet_transfer
+# This = planet
+planet_event = {
+	id = rose_planet_class_bonuses.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			# Gaia without mod or Not-gaia with mod
+			AND = { 
+				is_planet_class = pc_gaia
+				NOT = { has_modifier = rose_gaia_world_bonus}
+			}
+			AND = { 
+				NOT = { is_planet_class = pc_gaia }
+				has_modifier = rose_gaia_world_bonus
+			}			
+
+			# Ring world without mod or Not-ring world with mod
+			AND = { 
+				is_planet_class = pc_ringworld_habitable
+				NOT = { has_modifier = rose_ring_world_bonus}
+			}
+			AND = { 
+				NOT = { is_planet_class = pc_ringworld_habitable }
+				has_modifier = rose_ring_world_bonus
+			}
+		}
+	}
+
+	immediate = {
+		# Gaia worlds
+		if = {
+			limit = {
+				is_planet_class = pc_gaia
+				NOT = { has_modifier = rose_gaia_world_bonus}
+			}
+			add_modifier = { modifier = rose_gaia_world_bonus }
+		}
+		else_if = {
+			limit = {
+				NOT = { is_planet_class = pc_gaia }
+				has_modifier = rose_gaia_world_bonus
+			}
+			remove_modifier = rose_gaia_world_bonus
+		}
+
+		# Ring worlds
+		if = {
+			limit = {
+				is_planet_class = pc_ringworld_habitable
+				NOT = { has_modifier = rose_ring_world_bonus}
+			}
+			add_modifier = { modifier = rose_ring_world_bonus }
+		}
+		else_if = {
+			limit = {
+				NOT = { is_planet_class = pc_ringworld_habitable }
+				has_modifier = rose_ring_world_bonus
+			}
+			remove_modifier = rose_ring_world_bonus
+		}
+	}
+}

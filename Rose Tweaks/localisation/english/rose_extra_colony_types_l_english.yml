@@ -1,0 +1,8 @@
+﻿l_english:
+ rose_col_ecu_fortress: "Ecumenopolis Fortress"
+ rose_col_ecu_fortress_tt: "A vast city-planet that specializes in military infrastructure."
+ rose_col_ecu_fortress_desc: "$col_fortress_desc$"
+ 
+ rose_col_ring_fortress: "Fortress Ring World"
+ rose_col_ring_fortress_tt: "Endless strongholds and emplacements cover this ring world creating an impregnable bastion guarding our empire."
+ rose_col_ring_fortress_desc: "$col_fortress_desc$"
