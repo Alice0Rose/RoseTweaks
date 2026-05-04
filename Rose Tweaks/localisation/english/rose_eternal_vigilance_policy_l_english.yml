@@ -1,0 +1,13 @@
+﻿l_english:
+ ap_eternal_vigilance_tt: "Every 6 months a §YDefense Platform§! will be built around every §YStarbase§! depending on the §Y$ap_eternal_vigilance$§! policy, up to a max of §Y33%§! capacity at the cost of a percentage of §Y$mod_country_alloys_produces_mult$§!"
+ policy_rose_eternal_vigilance_policy: "$ap_eternal_vigilance$"
+ policy_rose_eternal_vigilance_policy_desc: "A shield is only as strong as the one that holds it."
+ rose_eternal_vigilance_policy_full_spending: "Full Spending"
+ rose_eternal_vigilance_policy_full_spending_name: "$eternal_vigilance_full_spending$"
+ rose_eternal_vigilance_policy_full_spending_desc: "Every starbase needs to be properly defended. Spare no cost.\nAutomatically builds §YDefense Platforms§! around every §YStarbase§!"
+ rose_eternal_vigilance_policy_half_spending: "Half Spending"
+ rose_eternal_vigilance_policy_half_spending_name: "$eternal_vigilance_half_spending$"
+ rose_eternal_vigilance_policy_half_spending_desc: "Only our strongest redoubts require our support.\nAutomatically builds §YDefense Platforms§! around §YBastion Starbases§!"
+ rose_eternal_vigilance_policy_no_spending: "No Spending"
+ rose_eternal_vigilance_policy_no_spending_name: "$eternal_vigilance_no_spending$"
+ rose_eternal_vigilance_policy_no_spending_desc: "There is no need to further enhance our defenses.\nAutomatically builds §YDefense Platforms§! around no §YStarbases§!"
