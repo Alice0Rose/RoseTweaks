@@ -1,0 +1,84 @@
+[h1]Features[/h1]
+This mod adds a variety of balance changes, bug fixes, and new features. These range from small things, like fixing the incorrect alloy cost on a specific space fauna component, to game-changing features like Natural Arcologies, which alloy individualistic empires to turn Gaia worlds (or non-Gaia worlds with specific civics/traits) into the equivalent of a Hive or Machine world. 
+
+[h2]Tweaked Stuff[/h2]
+[list]
+[*]Divine Sovereign event is reworked to trigger for all authorities (including a version for gestalts) and always gives the Divine Sovereign (or Divine Consiousness) civic, regardless of if you choose to switch to imperial or not
+
+[*]Reworked the bonuses from the Psionic Covenant ship components to be more significant and thematic
+
+[*]Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
+
+[*]Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
+
+[*]Luminary ascension traits are reworked to all be similarly useful :D
+
+[*]Both defense platform repeatables now give partial Deep Space Citadel capacity
+
+[*]Factions will now spawn after 2 years for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowd Sourcing empires
+
+[*]Here Be Dragons no longer has a limit on the number of baby dragons you can make ^^
+
+[*]Secret Societies gets a unity bonus from the total number of proxy wars started (up to 10) instead of only the current number active
+
+[*]Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
+
+[*]Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops
+
+[*]Oligarchies and Corporate authorities can select any leader during their election, always including the current ruler
+
+[*]Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
+
+[*]Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th
+
+[*]Executive Vigor gives +2 sector size.
+
+[*]Transcendent Learning gives +10% leader lifespan.
+
+[*]Master Builders gives +1 building queue capacity.
+
+[*]Synthetic empires have access to Individualistic machine armies and associated technologies.
+
+[*]Eternal Vigilance unlocks a policy that builds free defense platforms every 6 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
+
+[*]Orbital habitat tooltip shows the potential districts of each type again (why did they remove this oml)
+[/list]
+
+[h2]New Stuff[/h2]
+[list]
+[*]Added the Divine Consiousness civic for gestalts which gives +20% bonus workforce for psionic pops, mimicing the bonus of the council position from the Divine Sovereign civic
+
+[*]Added Advanced Bomber Wings (along with versions for bio ships and space fauna) which have equivalent stats to Advanced Strike Craft, but only target enemy ships, ignoring other strike craft. Unlocked alongside tier 3 strike craft with the corresponding tech.
+
+[*]The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
+
+[*]The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
+
+[*]The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
+
+[*]"Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
+
+[*]Hovering over valid systems will show the max output of a Dyson Swarm and Nanite Harvester (if Nanotech) if built in the system
+
+[*]Empires with 2 or more ethics will get an event at the start of the game to choose what their ruler's and homeworld governor's ethic will be
+
+[*]Added the Revered trait which gives +40 lifespan for 2 trait points
+
+[*]Added Inflexible Chassis trait for robots which reduces minimum habitability by 25% for +2 trait points
+
+[*]Added Hardwired trait for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
+
+[*]Added Nanotech Enhancements trait for the main species and its leaders of nanotech empires
+[/list]
+
+This is just a highlight of the the things added/changed because listing them all requires far more than the 8000 character limit Steam allows in workshop descriptions. To see the full list, see the [url=https://github.com/Alice0Rose/RoseTweaks/wiki/Rose-Tweaks] GitHub Wiki
+[/url]
+
+[h1]Compatibility[/h1]
+Wherever possible I've implemented things without overriding vanilla files, but that's only possible sometimes. Due to the extent of changes, there are a lot of files overridden, more than can be listed here. However I've tested this mod with both Gigastructures and ACoT, and it doesn't have any conflicts I've noticed.
+
+This mod should be put near or at the top of the load order, and defintely above any mods you want to work more than this one :)
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

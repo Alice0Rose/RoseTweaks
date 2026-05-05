@@ -9,6 +9,7 @@
 - Master Builders gives +1 building queue capacity.
 - Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
 - Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
+- Eternal Vigilance unlocks a policy that builds free defense platforms every 6 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
 
 ## Astral Actions:
 - Summon Dimensional Fleet can no longer be used by AI empires.
@@ -83,6 +84,7 @@
 
 ## Planet Classes:
 - Gaia Worlds give +10% pop assembly speed (machine and organic)
+- Ring Worlds gives the same bonuses as Ecumonopli
 - Toxic Worlds can be terraformed directly to Gaia worlds if you have both APs
 - Added more designations to nanite worlds for Nanotech empires
 
@@ -151,7 +153,6 @@
 
 ## Government:
 - Empires with 2 or more ethics will get an event at the start of the game to choose what their ruler's and homeworld governor's ethic will be
-- For the first 2 years, pops are much more likely to switch ethics
 
 ## Ascension:
 - Psionic covenant negative side effects no longer can randomly kill your leaders
@@ -174,9 +175,3 @@
 
 ## Fixes:
 - Removes the alloy cost and upkeep of T2 Spikespores
-
-
-
-[h1]Source Code and Wiki[/h1]
-[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
-[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

@@ -12,7 +12,8 @@ rose_eternal_vigilance_policy = {
 		}
 
 		modifier = {
-			country_alloys_produces_mult = -0.10
+			country_alloys_produces_mult = -0.05
+			country_base_alloys_produces_add = -30
 		}
 
 		AI_weight = {
@@ -53,7 +54,8 @@ rose_eternal_vigilance_policy = {
 		}
 
 		modifier = {
-			country_alloys_produces_mult = -0.05
+			country_alloys_produces_mult = -0.025
+			country_base_alloys_produces_add = -15
 		}
 
 		AI_weight = { #This is the option if you are doing just fine on the economy front
