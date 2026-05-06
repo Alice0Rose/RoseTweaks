@@ -7,8 +7,10 @@
 
  edict_bta_no_mega_speed_repeatables: "BTA: No §HMegastructure§! Repeatables"
  edict_bta_no_mega_speed_repeatables_desc: "Prevents tech automation from picking megastructure build speed repeatables."
+ 
  edict_bta_no_asteroid_artillery_repeatables: "BTA: No §HAsteroid§! Repeatables"
  edict_bta_no_asteroid_artillery_repeatables_desc: "Prevents tech automation from picking asteroid artillery repeatables."
+ 
  edict_bta_no_strike_corvette_repeatables: "BTA: No §HStrike Corvette§! Repeatables"
  edict_bta_no_strike_corvette_repeatables_desc: "Prevents tech automation from picking strike corvette repeatables."
  

@@ -1,0 +1,111 @@
+esc_tech_repeatable_nanite_damage = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { computing }
+	levels = -1
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_extra_ship_components_activate = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	modifier = {
+		weapon_type_nanite_weapon_damage_mult = 0.05
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_nanite_cannon_1
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_bomber
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = no
+		}
+		modifier = {
+			factor = 0
+			has_edict = bta_no_nanite_weapon_repeatables
+		}
+	}
+
+	ai_weight = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_nanite_cannon_1
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_bomber
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = no
+		}
+	}
+}
+
+esc_tech_repeatable_nanite_fire_rate = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { computing }
+	levels = -1
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_extra_ship_components_activate = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	modifier = {
+		weapon_type_nanite_weapon_fire_rate_mult = 0.05
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_nanite_cannon_1
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_bomber
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = no
+		}
+		modifier = {
+			factor = 0
+			has_edict = bta_no_nanite_weapon_repeatables
+		}
+	}
+
+	ai_weight = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_nanite_cannon_1
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_bomber
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = no
+		}
+	}
+}

@@ -10,6 +10,7 @@ Because of the way this mod works, it has to override all technologies that the 
 
 The following mods already have built-in compatibility:
 - Gigastructural Engineering
+- Extra Ship Components NEXT
 
 The following technologies are overridden:
 common\technology\00_eng_tech_repeatable.txt
@@ -56,6 +57,18 @@ common\technology\13_blokkat.txt
 
 common\technology\14_defense_nexus_repeatables.txt
 - giga_tech_repeatable_defense_nexus_capacity_upgrade
+
+common\technology\esc_technology_biological.txt
+- esc_tech_repeatable_bio_damage
+- esc_tech_repeatable_bio_fire_rate
+
+common\technology\esc_technology_nanites.txt
+- esc_tech_repeatable_nanite_damage
+- esc_tech_repeatable_nanite_fire_rate
+
+common\technology\esc_technology_psionic.txt
+- esc_tech_repeatable_psionic_damage
+- esc_tech_repeatable_psionic_fire_rate
 
 [h1]Source Code and Wiki[/h1]
 [url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]

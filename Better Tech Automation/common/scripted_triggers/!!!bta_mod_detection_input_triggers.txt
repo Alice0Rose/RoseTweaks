@@ -4,3 +4,6 @@ is_mod_rose_tweaks_active = {
 has_gigastructures = {
 	always = no
 }
+is_extra_ship_components_activate = { 
+	always = no 
+}

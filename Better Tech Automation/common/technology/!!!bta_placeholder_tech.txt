@@ -53,3 +53,91 @@ giga_tech_defense_nexus_production_2 = {
 	potential = { always = no }
 	weight = 0
 }
+
+esc_tech_biological_weapons = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_bio_cannon_1 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_bio_missile_1 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_synthetic_lifeform_studies = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_nanite_cannon_1 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_nanite_torpedo_1 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_nanite_bomber = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_psionic_weapons = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_psionic_cannon_1 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_psionic_torpedo_1 = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}
+
+esc_tech_psionic_interceptors = {
+	area = physics
+	cost = 999999
+	tier = 5
+	potential = { always = no }
+	weight = 0
+}

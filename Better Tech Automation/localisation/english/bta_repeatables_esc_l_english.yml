@@ -1,0 +1,10 @@
+﻿l_english: 
+ edict_bta_no_bio_weapon_repeatables: "BTA: No §BBio Weapon§! Repeatables"
+ edict_bta_no_bio_weapon_repeatables_desc: "Prevents tech automation from picking bio weapon damage or fire-rate repeatables." 
+
+ edict_bta_no_nanite_weapon_repeatables: "BTA: No §BNanite Weapon§! Repeatables"
+ edict_bta_no_nanite_weapon_repeatables_desc: "Prevents tech automation from picking nanite weapon damage or fire-rate repeatables."
+
+ edict_bta_no_psionic_weapon_repeatables: "BTA: No §GPsionic Weapon§! Repeatables"
+ edict_bta_no_psionic_weapon_repeatables_desc: "Prevents tech automation from picking psionic weapon damage or fire-rate repeatables."
+ 

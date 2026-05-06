@@ -1,0 +1,68 @@
+bta_no_bio_weapon_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_extra_ship_components_activate = yes
+		is_ai = no
+		has_technology = esc_tech_biological_weapons
+		OR = {
+			has_technology = esc_tech_bio_cannon_1
+			has_technology = esc_tech_bio_missile_1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_nanite_weapon_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_extra_ship_components_activate = yes
+		is_ai = no
+		has_technology = esc_tech_synthetic_lifeform_studies
+		OR = {
+			has_technology = esc_tech_nanite_cannon_1
+			has_technology = esc_tech_nanite_torpedo_1
+			has_technology = esc_tech_nanite_bomber
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+bta_no_psionic_weapon_repeatables = {
+	length = -1
+	icon = "GFX_research_icon"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_extra_ship_components_activate = yes
+		is_ai = no
+		has_technology = esc_tech_psionic_weapons
+		OR = {
+			has_technology = esc_tech_psionic_cannon_1
+			has_technology = esc_tech_psionic_torpedo_1
+			has_technology = esc_tech_psionic_interceptors
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+

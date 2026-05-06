@@ -1,3 +1,21 @@
 has_any_megastructure_dlc = {
 	always = no
 }
+ESC_TRIGGER_may_research_bio_weapon_damage_repeatable = {
+	always = no
+}
+ESC_TRIGGER_may_research_bio_weapon_fire_rate_repeatable = {
+	always = no
+}
+ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = {
+	always = no
+}
+ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = {
+	always = no
+}
+ESC_TRIGGER_may_research_psionic_weapon_damage_repeatable = {
+	always = no
+}
+ESC_TRIGGER_may_research_psionic_weapon_fire_rate_repeatable = {
+	always = no
+}
