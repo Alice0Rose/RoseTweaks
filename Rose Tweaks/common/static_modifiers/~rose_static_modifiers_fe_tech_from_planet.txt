@@ -1,0 +1,4 @@
+rose_fe_tech_from_planet_counter = {
+	icon = "gfx/interface/icons/modifiers/mod_pc_cosmogenesis_world_max_buildings_add.dds"
+	custom_tooltip = rose_fe_tech_from_planet_counter_tt
+}

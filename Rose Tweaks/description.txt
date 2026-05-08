@@ -9,7 +9,7 @@
 - Master Builders gives +1 building queue capacity.
 - Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
 - Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
-- Eternal Vigilance unlocks a policy that builds free defense platforms every 6 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
+- Eternal Vigilance unlocks a policy that builds free defense platforms every 9 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
 
 ## Astral Actions:
 - Summon Dimensional Fleet can no longer be used by AI empires.
@@ -26,7 +26,7 @@
 ## Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
-- The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
+- The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic or T3 of Galactic Hyperthermia, or any natural world with the Environmentalist Civic
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 
 ## Diplomacy:
@@ -105,6 +105,7 @@
 - Synthetic Personality Matrix gives +5% robotic workforce and -5% robotic amenity usage (just so it actually does something for synthetic empires)
 - Both defense platform repeatables now give partial Deep Space Citadel capacity
 - Added Habitation Module unlock to Agrarian Idyll housing tech, along with the ability to pick the Arcology Project ascension perk (tho this is only usable to create Natural Arcologies, not full Ecumonopli)
+- Fallen Empire buildings can be progressively unlocked by taking the worlds of Fallen/Awakened Empires or T5 Cosmogenesis empires
 
 ## Tooltips:
 - Hovering over valid systems will show the max output of a Dyson Swarm and Nanite Harvester (if Nanotech) if built in the system

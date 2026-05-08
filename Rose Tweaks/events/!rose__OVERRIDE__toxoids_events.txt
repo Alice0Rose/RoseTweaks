@@ -1,0 +1,23 @@
+namespace = toxoids
+
+ship_event = {
+	id = toxoids.499
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = { has_modifier = toxic_terraforming_candidate }
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = found_toxic_terraform_candidate }
+				}
+			}
+			owner = {
+				set_country_flag = found_toxic_terraform_candidate
+			}
+		}
+	}
+}

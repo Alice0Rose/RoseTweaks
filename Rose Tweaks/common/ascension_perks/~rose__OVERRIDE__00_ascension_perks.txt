@@ -32,7 +32,7 @@ ap_eternal_vigilance = {
 		hidden_effect = {
 			country_event = {
 				id = rose_eternal_vigilance_policy.1
-				days = 180
+				days = 270
 			}
 		}
 	}

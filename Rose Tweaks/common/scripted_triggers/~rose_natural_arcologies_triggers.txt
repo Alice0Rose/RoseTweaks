@@ -80,6 +80,7 @@ is_allowed_for_natural_arcologies = {
 			OR = {
 				owner = { has_valid_civic = civic_world_forgers }
 				owner = { has_valid_civic = civic_corporate_world_forgers }
+				owner = { has_crisis_level = crisis_hyperthermia_level_3 }
 			}
 		}
 	}
