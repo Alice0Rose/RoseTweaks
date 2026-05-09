@@ -176,3 +176,4 @@
 
 ## Fixes:
 - Removes the alloy cost and upkeep of T2 Spikespores
+- Fixed Scorched World Heralds not having a Casus Beli to attack Fallen Empires 
