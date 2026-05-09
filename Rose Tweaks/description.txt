@@ -147,6 +147,7 @@
 - Added Inflexible Chassis trait for robots which reduces minimum habitability by 25% for +2 trait points
 - Added Hardwired trait for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
 - Added Nanotech Enhancements trait for the main species and its leaders of nanotech empires
+- Increased number of destiny trait choices from 3 to 4 at level 8
 	
 ## Politics:
 - Egalitarian governments that become Galactic Emperor maintain their ethics

@@ -1,4 +1,5 @@
 	NGameplay = {
+		NUM_DESTINY_TRAIT_OPTIONS				= 4	# Default number of destiny traits to select from
 		POP_ETHOS_LOWER_ETHIC_THRESHOLD					= 0.75	# If the % of pops following an ethic is <= this relative to its attraction do not diverge away from it
 		POP_ETHOS_UPPER_ETHIC_THRESHOLD					= 1.25	# If the % of pops following an ethic is >= this relative to its attraction do not diverge to it		
 		POP_MIN_ETHIC_RELATIVE_ATTRACTION				= 0.20	# If relative attraction is less than this, do not diverge to this ethic

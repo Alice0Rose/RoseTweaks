@@ -25,7 +25,7 @@ tech_repeatable_improved_military_station_damage = {
 
 	modifier = {
 		shipclass_military_station_damage_mult = 0.1
-		deep_space_citadel_limit_add = 0.125
+		deep_space_citadel_limit_add = 0.25
 	}
 }
 
@@ -56,6 +56,6 @@ tech_repeatable_improved_military_station_health = {
 
 	modifier = {
 		shipclass_military_station_hull_mult = 0.1
-		deep_space_citadel_limit_add = 0.125
+		deep_space_citadel_limit_add = 0.25
 	}
 }
