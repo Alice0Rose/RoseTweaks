@@ -13,6 +13,13 @@ civic_psionic_sovereign = {
 		pop_government_ethic_attraction = 0.25
 	}
 	swap_type = {
+		name = civic_rose_psionic_sovereign_megacorp
+		trigger = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+	}
+	swap_type = {
 		name = civic_psionic_sovereign_organic_gestalt
 		trigger = {
 			exists = owner

@@ -148,6 +148,9 @@ country_event = {
 	
 	# No God Empress :(
 	option = {
+		trigger = {
+			is_megacorp = no
+		}
 		name = "utopia.3400.a"
 		ai_chance = {
 			factor = 100
@@ -167,6 +170,16 @@ country_event = {
 		custom_tooltip = reject_god_emperor
 		
 		# Adds psionic soverign civic without changing government
+		force_add_civic = civic_psionic_sovereign
+	}
+
+	# Rejection option for MegaCorps
+	option = {
+		trigger = {
+			is_megacorp = yes
+		}
+		name = "utopia.3400.c"
+		custom_tooltip = reject_god_emperor
 		force_add_civic = civic_psionic_sovereign
 	}
 	

@@ -42,6 +42,24 @@
 
 ## Federations:
 - "A Union of Faith" Level 5 Holy Covenant perk gives +10% pop growth speed and +5% mechanical pop assembly speed instead of +15% pop growth speed and -30% mechanical pop assembly speed
+- Gestalts can create/change to Trade and Holy federations if they have Logistics or Synchronicity completed respectively
+- Added more civic exceptions for Gestalts to access more federation types at the start of Common Ground:
+	Holy Covenant:
+	- Elevational Hypotheses
+	- Memorialist (MI)
+	- Apostle Network
+	- Pattern Finders
+	- Elevational Contemplations
+	- Memorialist (Hive)
+	- Chosen Many
+	- Zodiac Nexus
+	
+	Martial Alliance:
+	- Stalwart Network
+	- Guardian Matrix
+	- Tactical Algorithms
+	- Guardian Cluster
+	- Aerospace Adaptation
 
 ## Elections:
 - Civic ruler class preferences no longer affect elections
@@ -163,6 +181,7 @@
 	- -10% miner job efficiency
 	- -5% metallurgist job efficiency
 - Divine Sovereign civic no longer requires imperial authority
+- MegaCorps have access to Divine Executive (renamed Divine Sovereign with same benefits)
 - Added the Divine Consiousness civic for gestalts which gives +20% bonus workforce for psionic pops, mimicing the bonus of the council position from the Divine Sovereign civic
 - Divine Sovereign event is reworked to trigger for all authorities (including a version for gestalts) and always gives the Divine Sovereign (or Divine Consiousness) civic, regardless of if you choose to switch to imperial or not
 - Reworked the bonuses from the Psionic Covenant ship components to be more significant and thematic
