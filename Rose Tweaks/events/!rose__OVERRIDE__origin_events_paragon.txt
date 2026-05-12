@@ -49,7 +49,55 @@ country_event = { #Little conclusion of first situation
 	}
 	after = {
 		hidden_effect = {
+			# Saves that you had the chance to proclaim to stop the ending of the Fall if ascend too quick
 			set_country_flag = rose_origin_legendary_leader_proclaim
+		}
+	}
+}
+
+country_event = { #Ruler Address The Nation - The Speech
+	id = paragon.5201
+	title = "paragon.5201.name"
+	desc = "paragon.5201.desc"
+	show_sound = event_factions
+
+	diplomatic = yes
+
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = root.owner.ruler
+		planet_background = root.owner
+		graphical_culture = root.owner
+		city_level = root.owner
+		room = root.owner
+	}
+
+	trigger = {
+		exists = ruler
+		ruler = {
+			has_leader_flag = paragon_origin_legendary_leader
+#			has_any_chosen_one_leader_trait = no
+			NOR = {
+				has_trait = leader_trait_the_apparatus_luminary
+				has_trait = leader_trait_the_cybernetic_luminary
+				has_trait = leader_trait_the_psionic_luminary
+				has_trait = leader_trait_the_synth_luminary
+				has_trait = leader_trait_the_genetic_luminary
+			}
+		}
+		NOT = { has_country_flag = luminary_ascension_path }
+	}
+
+	immediate = {
+		set_country_flag = luminary_ascension_path
+	}
+
+	option = {
+		name = paragon.5201.a
+		country_event = {
+			id = paragon.5202
+			days = 30
 		}
 	}
 }
@@ -92,7 +140,65 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 	}
 }
 
-# Story Chain Enging Speech #
+#Psionic
+country_event = {
+	id = paragon.6015
+	title = "paragon.6015.name"
+	desc = {
+		trigger = {
+			text = paragon.6015.desc_1
+			text = newline
+			if = {
+				limit = { founder_species_is_machine = yes }
+				text = paragon.6015.desc_2.machine
+			}
+			else = {
+				text = paragon.6015.desc_2.organic
+			}
+			text = newline
+			text = paragon.6015.desc_3
+		}
+	}
+	picture = GFX_evt_legendary_leader
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = owner.ruler
+		room = owner
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = ruler
+		ruler = { has_leader_flag = paragon_origin_legendary_leader }
+	}
+
+	option = {
+		name = paragon.6015.a
+		custom_tooltip = paragon.leader.growth.positive
+		hidden_effect = {
+			ruler = {
+				change_variable = {
+					which = paragon_origin_story_ruling
+					value = 1
+				}
+			}
+		}
+		ruler = {
+			add_trait = {
+				trait = leader_trait_the_psionic_luminary
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = paragon.6035 days = 15 random = 30
+		}
+	}
+}
+
+# Story Chain Ending Speech #
 country_event = {
 	id = paragon.6035
 	title = "paragon.6035.name"
@@ -114,7 +220,7 @@ country_event = {
 		# Checks the unifying situation is done and you've had the choice to proclaim
 		has_country_flag = rose_origin_legendary_leader_proclaim
 		
-		# Checks you took the imperial path, the questline is done
+		# Checks the imperial questline is done if you took it
 		OR = {
 			has_origin = origin_legendary_leader_dictatorial
 			
@@ -124,7 +230,7 @@ country_event = {
 			}
 		}
 		
-		# Checks you finished the luminary ascension or have a chosen one trait
+		# Checks you finished the luminary ascension
 		ruler = {
 			OR = {
 				has_trait = leader_trait_the_apparatus_luminary
@@ -132,7 +238,6 @@ country_event = {
 				has_trait = leader_trait_the_psionic_luminary
 				has_trait = leader_trait_the_synth_luminary
 				has_trait = leader_trait_the_genetic_luminary
-				has_any_chosen_one_leader_trait = yes
 			}
 		}
 		
@@ -140,11 +245,11 @@ country_event = {
 		NOT = { has_country_flag = rose_origin_legendary_leader_ending }
 	}
 
-	option = { #Null choice, status quo
+	option = { # Null choice, status quo
 		name = paragon.6035.a
 	}
 
-	option = { #Become Democratic/Oligarchic (Authoritarian empires can't be democratic, so they will become Oligarchic instead)
+	option = { # Become Democratic and Egalitarian
 		name = paragon.6035.b
 		trigger = {
 			NOR = {
@@ -165,24 +270,49 @@ country_event = {
 			}
 		}
 		set_origin = origin_default
-		if = {
-			limit = {
-				has_ethic = ethic_authoritarian
-			}
-			change_government = {
-				authority = auth_oligarchic
-				remove_invalid_civics = yes
-			}
-		}
-		else = {
-			change_government = {
-				authority = auth_democratic
-				remove_invalid_civics = yes
-			}
-			shift_ethic = ethic_egalitarian
+		
+		# Needs a custom tooltip because the normal localization of shift_ethic has extra newlines that mess up formatting
+		hidden_effect = { shift_ethic = ethic_egalitarian }
+		custom_tooltip = paragon.6035.b.tt2
+		
+		change_government = {
+			authority = auth_democratic
+			remove_invalid_civics = yes
 		}
 		paragon_origin_gain_modifier = yes
 		custom_tooltip = paragon.6035.b.tt
+		
+		hidden_effect = { set_country_flag = rose_origin_legendary_leader_ending_chose_democracy }
+	}
+	option = { # Become Oligarchic (Authoritarian empires only)
+		name = paragon.6035.c
+		trigger = {
+			has_ethic = ethic_authoritarian
+			NOR = {
+				is_fanatic_authoritarian = yes
+				ruler = { has_trait = leader_trait_legendary_delusional }
+			}
+		}
+		hidden_effect = {
+			ruler = {
+				if = {
+					limit = { has_leader_flag = leader_rift_blocks_death_events }
+					remove_leader_flag = leader_rift_blocks_death_events
+				}
+				else = {
+					remove_leader_flag = leader_death_events_blocked
+				}
+				remove_leader_flag = paragon_origin_legendary_leader
+			}
+		}
+		set_origin = origin_default
+		change_government = {
+			authority = auth_oligarchic
+			remove_invalid_civics = yes
+		}
+
+		paragon_origin_gain_modifier = yes
+		custom_tooltip = paragon.6035.c.tt
 	}
 	after = {
 		hidden_effect = {

@@ -128,7 +128,6 @@ ap_master_builders = {
 	}
 
 	potential = {
-		host_has_dlc = "Utopia"
 		NOT = {
 			has_ascension_perk = ap_master_builders
 		}
@@ -189,12 +188,23 @@ ap_arcology_project = {
 			
 			custom_tooltip = "allow_arcology_project"
 			custom_tooltip = "decision_arcology_project_effects"
-			custom_tooltip = "allow_natural_arcologies_newline"
+			
+			if = { 
+				limit = { NOT = { has_civic = civic_machine_servitor } }
+				custom_tooltip = "allow_natural_arcologies_newline"
+			}
 		}
 		else = {
-			custom_tooltip = "allow_natural_arcologies"
+			if = { 
+				limit = { NOT = { has_civic = civic_machine_servitor } }
+				custom_tooltip = "allow_natural_arcologies"
+			}
 		}
-		custom_tooltip = "decision_rose_natural_arcologies_effects"
+		
+		if = { 
+			limit = { NOT = { has_civic = civic_machine_servitor } }
+			custom_tooltip = "decision_rose_natural_arcologies_effects"
+		}
 	}
 
 	modifier = {

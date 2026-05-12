@@ -127,6 +127,15 @@ country_event = {
 		any_owned_leader = {
 			has_any_chosen_one_leader_trait = yes
 		}
+		
+		# Checks Under One Rule origin is all done
+		OR = {
+			NOR = {
+				has_origin = origin_legendary_leader_dictatorial
+				has_origin = origin_legendary_leader_imperial
+			}
+			has_country_flag = rose_origin_legendary_leader_ending
+		}
 	}
 
 	# Reduced from 10 years to 5 years
@@ -185,6 +194,10 @@ country_event = {
 	
 	# God Empress!!
 	option = {
+		# Prevents this option if you chose democracy in Under One Rule
+		trigger = {
+			NOT = { has_country_flag = rose_origin_legendary_leader_ending_chose_democracy}
+		}
 		name = "utopia.3400.b"
 		ai_chance = {
 			factor = 100

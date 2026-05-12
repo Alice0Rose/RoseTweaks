@@ -90,8 +90,11 @@
 - Here Be Dragons won't punish you for ascending too quickly by making you wait 2400 days before talking to you x-x
 - Here Be Dragons no longer has a limit on the number of baby dragons you can make ^^
 - Slingshot to the Stars starts with the Quantum Catapult on a Neutron Star instead of a Pulsar (won't remove your shields)
-- Under One Rule ascension event changed from 10-30 years to 15-17 years to trigger
-- Under One Rule ending event fixed to not trigger until reformists are gone and given a failsafe trigger
+- Under One Rule ascension event The Fall changed from 10-30 years to 15-17 years to trigger
+- Under One Rule ending event A New Age fixed to not trigger until reformists are gone and given a failsafe trigger, while also being changed to shift you to egalitarian if you chose to give power to the people, with an additional option for authoritarian empires added to let them shift to oligarchy without shifting to egalitarian
+- 
+
+- Authoritarian empires have an additional option for A New Age which lets them become an Oligarchy without shifting towards Egalitarian (the option to shift to Democracy and Egalitarian is still there)
 - Under One Rule English localisation fixed in certain events
 
 ## Opinion Modifiers:
@@ -143,6 +146,9 @@
 		- Non-Cyborg happiness -15%
 		- Pop growth speed +20%
 	- Psionic:
+		- Renamed to "Shroudbound" 
+		- Description changed to better fit Shadows of the Shroud lore
+		- Available alongside the Chosen/Shroudshaper trait
 		- Monthly influence +2
 		- Resources from jobs +20%
 		- Non-psionic happiness -20%
@@ -183,11 +189,10 @@
 - Divine Sovereign civic no longer requires imperial authority
 - MegaCorps have access to Divine Executive (renamed Divine Sovereign with same benefits)
 - Added the Divine Consiousness civic for gestalts which gives +20% bonus workforce for psionic pops, mimicing the bonus of the council position from the Divine Sovereign civic
-- Divine Sovereign event is reworked to trigger for all authorities (including a version for gestalts) and always gives the Divine Sovereign (or Divine Consiousness) civic, regardless of if you choose to switch to imperial or not
+- Divine Sovereign event is reworked to trigger for all authorities (including a version for gestalts) and always gives the Divine Sovereign (or Divine Consiousness) civic, regardless of if you choose to switch to imperial or not, while also not triggering for Under One Rule until the main event chain is done
 - Reworked the bonuses from the Psionic Covenant ship components to be more significant and thematic
 - Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
-- The Powered Exoskeletons tech is given for free when taking the Synthetic Evolution ascension perk if you don't already have it
 - Synthetic Virtuality gives a trait to pops that gives -10% empire size from pops and -50% housing usage upon finishing the authority event chain
 
 ## Zones:
