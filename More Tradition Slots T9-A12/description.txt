@@ -1,19 +1,20 @@
 [h1]Features[/h1]
-Allows a total of 9 tradition slots and 12 ascension perks (2 obtained through a repeatable society tech)! \o/ The planetary ascension maximum is also increased to 14 to match the ascension perk increase, though the effects and costs of planetary ascension are scaled to make max ascension match vanilla max ascension :)
+Allows a total of 9 tradition slots and 12 ascension perks (2 obtained through a repeatable society tech)! \o/ 
+
+The planetary ascension maximum is still 10, but due to game limitations has to be enforced via an event that will pop up if you try to exceed 10 on a planet. You'll also be able to start ascending your planet at 1 ascension perk instead of 3 to make up for the increased number of ascension perks. The goal is vanilla parity :)
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3385410973] 12 Tradition and 15 Ascension Perk Version [/url]
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3642359832] 33 Tradition and 36 Ascension Perk Version [/url]
 
 [h1]Compatibility[/h1]
-This mod overwrites a few defines, a scripted variable, and the tradition interface ui, which are listed below. There shouldn't be any issue with other mods unless they add tradition slots or ascension perk slots :)
+This mod overwrites a few defines, a scripted variable, and the tradition interface ui, which are listed below. There shouldn't be any issue with other mods unless they add tradition slots or ascension perk slots or change the UI :) If you are using UI Overhaul Dynamic, put this mod below it in your load order.
 
 common\defines\00_defines.txt
 - ASCENSION_PERKS_SLOTS
+- PLANET_ASCENSION_STARTING_POINT
 - PLANET_ASCENSION_HARD_CAP
 - PLANET_ASCENSION_SPRAWL_SCALE
 - PLANET_ASCENSION_SUM_SCALE
-- PLANET_ASCENSION_SPRAWL_MODIFIER
-- PLANET_ASCENSION_MODIFIER_SCALE
 - TRADITION_COST_TRADITION
 - TRADITION_COST_TRADITION_EXP
 - TRADITION_COST_MULT_TRADITION_GROUP
@@ -22,6 +23,9 @@ common\defines\00_defines.txt
 
 common\scripted_variables\07_scripted_variables_machine_age.txt
 - max_tradition_trees
+
+events\shroud_events.txt
+- shroud.4845
 
 interface\topbar_traditions_view.gui
 - FULL OVERRIDE

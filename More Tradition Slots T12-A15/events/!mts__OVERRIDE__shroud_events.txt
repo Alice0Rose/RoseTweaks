@@ -1,0 +1,23 @@
+namespace = shroud
+
+# Stop free Planetary Ascension (Ascension Accord)
+planet_event = {
+	id = shroud.4845
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_shroud_dlc = yes
+		owner = {
+			has_country_flag = free_planetary_ascension
+		}
+		# Prevents wasting the free ascension on a planet that is at the limit
+		NOT = { has_planetary_ascension_tier > 10 }
+	}
+
+	immediate = {
+		owner = {
+			remove_country_flag = free_planetary_ascension
+		}
+	}
+}

@@ -1,13 +1,15 @@
 	NGameplay = {
 		ASCENSION_PERKS_SLOTS	= 36
-		PLANET_ASCENSION_HARD_CAP			= 38	# Based of current formula, maximum planetary ascension possible
+
+		# Planetary Ascension Tier cap formula:
+		#     Max( ( Unlocked Ascension Perks Slots - 2 ), PLANET_ASCENSION_MIN ) +
+		#     ( ( Unlocked Ascension Perks Slots == ASCENSION_PERKS_SLOTS ? ) PLANET_ASCENSION_COMPLETION_BONUS : 0 )
+		PLANET_ASCENSION_STARTING_POINT		= 1		# Number of ascension perks unlocked slots required for Planetary Ascension
+		PLANET_ASCENSION_HARD_CAP			= 10	# Based of current formula, maximum planetary ascension possible
 		
 		# Divide each default value by PLANET_ASCENSION_HARD_CAP/10
-		PLANET_ASCENSION_SPRAWL_SCALE		= 2.632	# Scaling factor for Planetary Ascension cost based on the empire Sprawl
-		PLANET_ASCENSION_SUM_SCALE			= 0.157	# Scaling factor for Planetary Ascension cost based on the empire-wide sum of Ascension Tiers
-		PLANET_ASCENSION_SPRAWL_MODIFIER   = -0.014 # Reduction of planet sprawl per level of ascension
-
-		PLANET_ASCENSION_MODIFIER_SCALE		= 0.0264 # Scaling factor of the designation benefits, multiple instances will sum (first will be 1.25, then 1.50...)
+		PLANET_ASCENSION_SPRAWL_SCALE		= 10.0	# Scaling factor for Planetary Ascension cost based on the empire Sprawl
+		PLANET_ASCENSION_SUM_SCALE			= 0.6	# Scaling factor for Planetary Ascension cost based on the empire-wide sum of Ascension Tiers
 		
 		## tradition cost = ( base_cost + ( cost_tradition * num_traditions )^traditions_exponential ) * ( 1 + cost_planet*num_planets + cost_system*num_systems )
 		TRADITION_COST_TRADITION				= 7		# change this value if you want to increase all costs

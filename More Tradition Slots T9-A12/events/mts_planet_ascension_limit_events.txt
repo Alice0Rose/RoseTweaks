@@ -1,0 +1,116 @@
+namespace = mts_planet_ascension_limit
+
+planet_event = {
+	id = mts_planet_ascension_limit.1
+	title = mts_planet_ascension_limit.1.name
+	desc = mts_planet_ascension_limit.1.desc
+	picture = GFX_evt_metropolis
+	hide_window = no
+	is_triggered_only = yes
+
+	trigger = {
+		has_planetary_ascension_tier > 10
+	}
+
+	immediate = {
+		# Resets ascension back to cap of 10
+		set_planetary_ascension_tier = 10
+		
+		if = {
+			limit = { 
+				owner = { 
+					# Doesn't refund unity if the ascension was free
+					NOT = { has_country_flag = free_planetary_ascension } 
+				}
+			}
+			
+			# Ascension cost formula: 
+			# ( trigger:empire_sprawl * PLANET_ASCENSION_SPRAWL_SCALE) * ( 1 + ( (trigger:num_planetary_ascension_tiers - 1) * PLANET_ASCENSION_SUM_SCALE )) * planetary_ascension_cost_mult
+
+			# Gets empire sprawl amount
+			owner = { 
+				export_trigger_value_to_variable = {
+					trigger = empire_sprawl
+					variable = mts_empire_sprawl_trigger
+				}
+			}
+			set_variable = { 
+				which = mts_planet_ascension_cost_sprawl_mod 
+				value = owner.mts_empire_sprawl_trigger
+			}
+
+			# Scale empire sprawl amount by PLANET_ASCENSION_SPRAWL_SCALE modifier
+			multiply_variable = { 
+				which = mts_planet_ascension_cost_sprawl_mod 
+				value = 10.0
+			}
+				
+			# Total amount of ascension tiers across the empire
+			owner = {
+				export_trigger_value_to_variable = {
+					trigger = num_planetary_ascension_tiers
+					variable = mts_num_planetary_ascension_tiers_trigger
+				}
+			}
+			set_variable = { 
+				which = mts_planet_ascension_cost_tier_mod 
+				value = owner.mts_num_planetary_ascension_tiers_trigger
+			}			
+			
+			# Scale amount of tiers by PLANET_ASCENSION_SUM_SCALE modifier
+			multiply_variable = { 
+				which = mts_planet_ascension_cost_tier_mod 
+				value = 0.6
+			}
+
+			# +1 for the current tier that was added and is being refunded
+			change_variable = { 
+				which = mts_planet_ascension_cost_tier_mod 
+				value = 1
+			}
+
+			# Scales ascension tier cost amount by empire sprawl modifier
+			multiply_variable = { 
+				which = mts_planet_ascension_cost_sprawl_mod 
+				value = mts_planet_ascension_cost_tier_mod
+			}
+
+			# Sets new variable for clarity
+			set_variable = { 
+				which = mts_planet_ascension_cost
+				value = mts_planet_ascension_cost_sprawl_mod 
+			}
+			
+			# Gets discount modifier
+			export_modifier_to_variable = { 
+				modifier = planetary_ascension_cost_mult 
+				variable = mts_planet_ascension_discount_mult
+			}
+
+			# Gets discount amount
+			multiply_variable = { 
+				which = mts_planet_ascension_discount_mult 
+				value = mts_planet_ascension_cost
+			}		
+
+			# Removes discount amount from cost
+			change_variable = { 
+				which = mts_planet_ascension_cost
+				value = mts_planet_ascension_discount_mult
+			}
+			
+			# Refunds cost of ascension
+			owner = {
+				add_resource = {
+					unity = 1
+					mult = root.mts_planet_ascension_cost
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = UNDERSTOOD
+		custom_tooltip = mts_planet_ascension_limit.1.a.tt
+	}
+}

@@ -1,0 +1,4 @@
+﻿l_english:
+ mts_planet_ascension_limit.1.name: "Planet Ascension Limit Reached"
+ mts_planet_ascension_limit.1.desc: "[Root.Planet.GetName] has reached the limit for how unified our people can be. Perhaps we should focus our ascension efforts elsewhere..."
+ mts_planet_ascension_limit.1.a.tt: "Planet Ascension for §Y[Root.Planet.GetName]§! has been reset to §YTier 10§! and the cost of the ascension has been refunded."

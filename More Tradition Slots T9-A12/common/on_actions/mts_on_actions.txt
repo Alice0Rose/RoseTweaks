@@ -1,0 +1,7 @@
+# Planet has reached a new ascension tier.
+# This = Planet
+on_planet_ascension_tier_increased = {
+	events = {
+		mts_planet_ascension_limit.1 # Removes and refunds over-cap planet ascensions
+	}
+}
