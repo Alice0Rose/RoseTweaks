@@ -1,0 +1,42 @@
+﻿l_english:
+ # Abandoned Complex
+ astral_rift.2000.a: "Search for the caretakers. §R(Waste of Time)§!" 
+ astral_rift.2000.b: "Open an egg."
+
+ astral_rift.2010.a: "Inject the liquid into the egg. §Y(§RRisks £military_power_boss£§!, £society£, £physics£/£army_power£ Unlock)§!"
+ astral_rift.2010.b: "Euthanize the remaining creatures. §Y(£physics£)§!"
+ 
+ astral_rift.2015.a: "Open an egg."
+ astral_rift.2015.b: "Return with the remains. §R(Ends Rift)§!"
+ 
+ astral_rift.2020.a: "Do not intervene. §R(Kills £scientist£, £physics£)§!"
+ astral_rift.2020.b: "Inject astral thread. §Y(£army_power£ Unlock)§!"
+ 
+ # Genesis
+ astral_rift.2300.a: "Arm them with might. §Y(100 £pops£ and £specimen£)§!"
+ astral_rift.2300.b: "Plant the seeds of knowledge. §Y(100 £pops£ and £specimen£)§!"
+ astral_rift.2300.c: "We play no games. Activate an E.M.P. §Y(£alloys£)§!"
+
+ # Bleached Planet
+ astral_rift.2505.b: "Prepare for contact. §Y(£society£)§!"
+ 
+ astral_rift.2510.a: "Fly towards the distant horizon. §R(£scientist£ Blinded)§!"
+
+ astral_rift.2515.a: "Examine a rock creature. §Y(Bio Tech)§!"
+ 
+ astral_rift.2530.a: "Observe the dark star. §R(£scientist£ Blinded)§!"
+ astral_rift.2530.b: "Retreat. §Y(£physics£ Deposit)§!"
+ 
+ # Entertainment Nexus
+ astral_rift.2925.a: "Meet with the vulpine acrobats. §Y(Genetic Tech/Wormhole Tech)§!"
+ astral_rift.2925.b: "Meet with the cyborg maw. §Y(£mod_job_healthcare_add£ Output/Robotic Tech)§!"
+ astral_rift.2925.c: "Meet with the contortionist. §Y(£rare_crystals£ Edict/£physics£)§!" 
+ 
+ astral_rift.2930.a: "Secure a tissue sample. §Y(£specimen£, Genetic Tech)§!"
+ astral_rift.2930.b: "Tip them some energy credits. §Y(Wormhole Stabilization)§!"
+ 
+ astral_rift.2935.a: "Secure a tissue sample. §Y(£specimen£, £mod_job_healthcare_add£ Output)§!"
+ astral_rift.2935.b: "Offer a snack. §Y(Robotic Tech)§!"
+ 
+ astral_rift.2940.a: "Secure a tissue sample. §Y(£specimen£, £rare_crystals£ Edict)§!"
+ astral_rift.2940.b: "Tip them some energy credits. §Y(£physics£)§!"

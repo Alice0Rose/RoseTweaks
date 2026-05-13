@@ -1,0 +1,17 @@
+[h1]Features[/h1]
+This mod adds additional text to some event options which tells you the hidden effects or consequences of the events. The goal is to reduce how often you have to look up on the wiki the correct way to handle things like the Enigmatic Fortress, Astral Rifts, or advanced authority event chains.
+
+Things this mod works for:
+- Enigmatic Fortress event chain
+- Stellarite Devourer event chain
+- Cybernetic Advanced Authority event chain
+- Synthetic Advanced Authority event chain
+- Psionic Advanced Authority event chain
+- Astral Rifts (still working on adding all of these)
+
+[h1]Compatibility[/h1]
+This mod only overrides localisation files, which means it shouldn't have any issues with other mods (unless they change the events this is providing outcome text to in which case this mod will just be inaccurate). It also means this mod is entirely checksum and multiplayer friendly ^^
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

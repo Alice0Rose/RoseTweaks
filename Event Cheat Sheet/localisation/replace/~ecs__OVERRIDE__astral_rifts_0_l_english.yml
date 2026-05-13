@@ -1,0 +1,18 @@
+﻿l_english:
+ # Ruined Planet
+ astral_rift.3.a: "Visit the §Y[GetStarlightVanguardName]§!. §Y(+10% Kinetic Damage)§!"
+ astral_rift.3.b: "Visit the §YBlack Curtain§!. §Y(+5% £pops£ Growth and Habitability)§!" 
+ 
+ astral_rift.10.a: "Offer alloys. §Y(+10% £ship_stats_armor£ HP and Hardening)§!"
+ astral_rift.10.b: "Offer astral thread. §Y(+10% £ship_stats_shield£ HP and Hardening)§!"
+ 
+ astral_rift.15.a: "Offer food. §Y(+0.5 £food£ from Farmers)§!"
+ astral_rift.15.a.lithoid: "Offer minerals. §Y(+0.5 £minerals£ from Miners)§!"
+ astral_rift.15.a.synthetic: "Offer energy. §Y(+0.5 £energy£ from Technicians)§!"
+ astral_rift.15.b: "Offer astral thread. §Y(+25% £astral_rift£ Speed and -50% Fail Chance)§!"
+ 
+ astral_rift.20.a: "Offer astral thread. §Y(+5% Sublight Speed)§!"
+ astral_rift.20.b: "Offer energy. §Y(+5% Ship Build Speed)§!"
+
+
+ 

@@ -1,0 +1,104 @@
+﻿l_english:
+ cyber.505.a: "We should enhance the democratic process. §Y(Individualist)§!"
+ cyber.505.b: "We must link our minds. §Y(Collectivist)§!"
+ cyber.510.a: "Have the sycophants toil for us. §Y(Individualist)§!"
+ cyber.510.b: "Harness the power of sleep. §Y(Collectivist)§!"
+ cyber.515.a: "Hide surveillance tools in personal implants. §Y(Individualist)§!"
+ cyber.515.b: "Study the personality override. §Y(Collectivist)§!"
+ cyber.520.a: "Preserve the imperial knowledge. §Y(Individualist)§!"
+ cyber.520.b: "Provide entertainment for the masses. §Y(Collectivist)§!"
+ cyber.525.a: "Prototype ad-supported ocular implants. §Y(Individualist)§!"
+ cyber.525.b: "Research implant upgrade schemes. §Y(Collectivist)§!"
+ 
+ cyber.610.a: "Create a stable implant. §Y(Individualist)§!"
+ cyber.610.b: "Appropriate the underground prototype. §Y(Collectivist)§!"
+ cyber.610.c: "Regulate these types of mods. §Y(Neutral)§!"
+ 
+ cyber.615.a: "People must have full control. §Y(Individualist)§!"
+ cyber.615.b: "It is healthy to leave work at the office. §Y(Neutral)§!"
+ cyber.615.c: "Wall off experiences both ways. §Y(Collectivist)§!"
+ 
+ cyber.625.a: "Ban subscriptions on cyberware. §Y(Collectivist)§!"
+ cyber.625.b: "If they can't afford it, they shouldn't buy it. §Y(Individualist)§!"
+ cyber.625.c: "Limit the subscriptions to non-critical functions. §Y(Neutral)§!"
+ cyber.625.d: "Splendid idea! Double down on it. §Y(Individualist)§!"
+
+ cyber.655.a: "Outrageous! §Y(Collectivist)§!"
+ cyber.655.b: "Intriguing. Start making flimsier cyberware. §Y(Individualist)§!"
+ cyber.655.c: "Yes! Coordinate it with a price hike as well. §Y(Individualist)§!"
+ cyber.655.d: "Use this data to improve our cyberization efforts. §Y(Individualist)§!"
+
+ cyber.805.a: "Let adults control their children. §Y(Individualist)§!"
+ cyber.805.b: "Allow limited control. §Y(Neutral)§!"
+ cyber.805.c: "Leave remote body control to enforcers. §Y(Collectivist)§!"
+
+ cyber.810.a: "Transfer Engineering knowledge. §Y(Collectivist)§!"
+ cyber.810.b: "Transfer Physics knowledge. §Y(Collectivist)§!"
+ cyber.810.c: "Transfer Society knowledge. §Y(Collectivist)§!"
+ cyber.810.d: "Keep everyone's minds to themselves. §Y(Individualist)§!"
+
+ cyber.815.a: "How they choose to live and love is not our concern. §Y(Individualist)§!"
+ cyber.815.b: "Bring these families back into the fold. §Y(Collectivist)§!"
+
+ cyber.820.a: "Implement stricter guidelines on body modding. §Y(Collectivist)§!"
+ cyber.820.b: "This is just a phase. It will pass. §Y(Neutral)§!"
+ cyber.820.c: "We might learn something from these young people. §Y(Individualist)§!"
+
+ cyber.821.a: "We will not be swayed. §Y(Collectivist)§!" 
+ cyber.821.b: "We shall consider their demands. §Y(Individualist)§!"
+ 
+ cyber.822.a: "The costs are justified. §Y(Individualist)§!"
+ cyber.822.b: "It was a mistake to allow so much customization. §Y(Collectivist)§!"
+ 
+ cyber.830.a: "Commission a medical study. §Y(Neutral)§!"
+ cyber.830.b: "Their suffering is not our responsibility. §Y(Individualist)§!"
+ 
+ cyber.835.a: "Their pain is all in their heads. §Y(Individualist)§!"
+ cyber.835.b: "Institute a research program. §Y(Collectivist)§!"
+ cyber.835.c: "Resettle the afflicted to a warmer planet. §Y(Neutral)§!"
+ 
+ cyber.840.a: "They're right. Ban tracking technology. §Y(Individualist)§!"
+ cyber.840.b: "This is no cause for alarm. §Y(Individualist)§!"
+ cyber.840.c: "Offer untraceable implants... for a price. §Y(Individualist)§!"
+ cyber.840.d: "Curb the dissenters. Tracking technology is here to stay. §Y(Collectivist)§!"
+ 
+ cyber.855.a: "The cost is too high. §Y(Collectivist)§!"
+ cyber.855.b: "Education must remain accessible to all. §Y(Individualist)§!"
+ 
+ cyber.1005.a: "The unmodified have had their time. §Y(Collectivist)§!"
+ cyber.1005.b: "Relegate enhanced competitors to their own league. §Y(Individualist)§!"
+ cyber.1005.c: "Cap the amount of the modified [GetAthletePlural]. §Y(Neutral)§!"
+ 
+ cyber.1010.a: "Drink Plasma Quench! §Y(Collectivist)§!"
+ cyber.1010.b: "The sky is not for sale! §Y(Individualist)§!"
+ cyber.1010.c: "Let's negotiate the terms. §Y(Collectivist)§!"
+ cyber.1010.d: "Not interested. §Y(Neutral)§!"
+ 
+ cyber.1015.a: "Let the Plasma flow! §Y(Collectivist)§!"
+ cyber.1015.b: "Our digital skies are enough. §Y(Individualist)§!"
+ cyber.1015.c: "Let our people see free again! §Y(Individualist)§!"
+ 
+ cyber.1030.a: "Shut down the industry. It's too dangerous. §Y(Collectivist)§!"
+ cyber.1030.b: "Tax the production. §Y(Individualist)§!"
+ cyber.1030.c: "Jail anyone caught with such recordings. §Y(Neutral)§!"
+ cyber.1030.d: "Sounds decadent. Endorse it. §Y(Individualist)§!"
+ cyber.1030.e: "The endless experience of death? How divine. §Y(Collectivist)§!"
+ 
+ cyber.1055.a: "It was time to modernize the fleet anyway. §Y(Collectivist)§!"
+ cyber.1055.b: "Strengthen our network security measures. §Y(Individualist)§!"
+ cyber.1055.c: "The Council is right: ban the games. §Y(Neutral)§!"
+ cyber.1055.d: "Drown the intel in conflicting reports. §Y(Neutral)§!"
+ 
+ cyber.1205.a: "We must face the truth of our lives. §Y(Collectivist)§!"
+ cyber.1205.b: "Everyone has a right to blissful ignorance. §Y(Individualist)§!"
+ cyber.1205.c: "Cosmetic reshades are fine, censoring is risky. §Y(Neutral)§!"
+ cyber.1205.d: "We will curate their senses. §Y(Collectivist)§!"
+ 
+ cyber.1210.a: "Such practices cannot be tolerated. §Y(Collectivist)§!"
+ cyber.1210.b: "Clever! Allow it. §Y(Individualist)§!"
+ cyber.1210.c: "License the practice. §Y(Neutral)§!"
+ cyber.1210.d: "Use it to spread the faith. §Y(Collectivist)§!"
+  
+ cyber.1265.a: "Build the firewall. §Y(Collectivist)§!"
+ cyber.1265.b: "Reboot the officials. §Y(Individualist)§!"
+ cyber.1265.c: "They're onto us. Build the wall. §Y(Collectivist)§!" 

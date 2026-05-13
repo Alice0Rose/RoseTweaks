@@ -1,0 +1,60 @@
+﻿l_english:
+# Siege on Paradise
+ astral_rift.3000.a: "Contact the planet's inhabitants. §Y(£commander£/£outliner_fleet_cloaked£ Edict/300 £pops£/+5% £ship_stats_shield£)§!"
+ astral_rift.3000.b: "Contact the orbiting fleet. §Y(Possibly +10% Fire Rate/£society£, £army_power£ Unlock)§!" 
+
+ astral_rift.3010.a: "We will help however we can. §Y(£commander£/£outliner_fleet_cloaked£ Edict/300 £pops£/+5% £ship_stats_shield£)§!"
+ astral_rift.3010.b: "It is not our place to interfere. §R(£society£, £engineering£)§!"
+
+ astral_rift.3020.a: "Genetically modify the Baol. §Y(£commander£)§!"
+ astral_rift.3020.b: "Deploy experimental planetary cloaking. §Y(£outliner_fleet_cloaked£ Edict)§!"
+ astral_rift.3020.c: "Preserve the seedlings. §Y(300 £pops£)§!"
+ astral_rift.3020.d: "Generate an astral shield. §Y(+5% £ship_stats_shield£ HP and Hardening)§!"
+ 
+ # ik its +10% fire rate, not damage, but there isn't room for "Fire Rate"
+ astral_rift.3060.a.tech_dragon_armor: "Share $tech_dragon_armor$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_crystal_armor_2: "Share $tech_crystal_armor_2$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_dark_matter_propulsion: "Share $tech_dark_matter_propulsion$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_nanite_repair_system: "Share $tech_nanite_repair_system$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_nanite_autocannon: "Share $tech_nanite_autocannon$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_nanite_flak_batteries: "Share $tech_nanite_flak_batteries$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_strike_craft_skrand: "Share $tech_strike_craft_skrand$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_combat_computers_3: "Share $tech_combat_computers_3$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_combat_computers_autonomous: "Share $tech_combat_computers_autonomous$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_dark_matter_power_core: "Share $tech_dark_matter_power_core$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_jump_drive_1: "Share $tech_jump_drive_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_extradimensional_weapon_1: "Share $tech_extradimensional_weapon_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_quantum_catapult: "Share $tech_quantum_catapult$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_scourge_missile_1: "Share $tech_scourge_missile_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_swarm_strike_craft_1: "Share $tech_swarm_strike_craft_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_precognition_interface: "Share $tech_precognition_interface$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_psi_jump_drive_1: "Share $tech_psi_jump_drive_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_psionic_barrier: "Share $tech_psionic_barrier$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_psionic_shield: "Share $tech_psionic_shield$ with the Grunur. §Y(+10% £military_power£)§!"
+ 
+ astral_rift.3060.b: "Share Baol research data with the Grunur. §Y(£society£, £army_power£ Unlock)§!"
+ astral_rift.3060.c: "Refuse to cooperate. §R(Lose £scientist£ for 6 Years, £engineering£)§!" 
+ 
+ astral_rift.3075.a: "Watch the extermination. §Y(£society£, £army_power£ Unlock)§!"
+ astral_rift.3075.b: "Refuse. §R(Lose £scientist£ for 6 Years, £engineering£)§!"
+ 
+ astral_rift.3065.a: "Respond with bravado. Do not be intimidated. §Y(£society£, £army_power£ Unlock)§!"
+ astral_rift.3065.b: "Attempt to reason with them. §R(Lose £scientist£ for 6 Years, £engineering£)§!"
+ 
+ astral_rift.3076.a: "Press the crystal. Order the launch. §Y(£society£, £army_power£ Unlock)§!"
+
+# Psionic Stranger
+ astral_rift.3210.a: "Reveal the fate of the Zroni. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
+ astral_rift.3210.b: "Reveal what we know of the Zroni. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
+ astral_rift.3210.c: "We can only offer our perspective. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
+ astral_rift.3210.d: "It is not our place to intervene. §Y(£minerals£, £rare_crystals£)§!"
+ astral_rift.3210.e: "Such spiritual pursuits are trivial. §Y(£minerals£, £rare_crystals£)§!"
+ 
+ astral_rift.3215.a: "It is a doomed endeavor. §Y(Particles Tech)§!"
+ astral_rift.3215.b: "This time, it may be different... §Y(£energy£, £rare_crystals£)§!"
+ 
+ astral_rift.3220.a: "Advise against interfering with the Shroud. §Y(Particles Tech)§!"
+ astral_rift.3220.b: "Encourage the Far-Seer to breach the Shroud. §Y(£energy£, £rare_crystals£)§!"
+ 
+ astral_rift.3225.a: "Advise against interfering with the Shroud. §Y(Particles Tech)§!"
+ astral_rift.3225.b: "Encourage the Far-Seer to breach the Shroud. §Y(£energy£, £rare_crystals£)§!"

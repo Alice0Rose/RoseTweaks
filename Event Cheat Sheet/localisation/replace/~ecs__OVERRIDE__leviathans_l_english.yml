@@ -1,0 +1,25 @@
+﻿l_english:
+ # Stellarite Devourer
+ leviathans.1016.a: "Study the corpse. §Y(£energy£, £minerals£, £influence£/Reignite system, §RRisks £scientist£§!)§!"
+ leviathans.1016.c: "Retrieve the egg sac. §Y(Parade and Consume Star Operation)§!"
+
+ leviathans.1017.a: "Try to reignite the star. §Y(Restores system planets, §RRisks £scientist£§!)§!"
+ leviathans.1017.b: "Harvest the body's energy deposits."
+
+ # Enigmatic Fortress
+ leviathans.2111.a: "We'll find someone to assist the team. §Y(Choose $ENIGMATIC_FORTRESS_1B$)§!"
+ leviathans.2113.a: "Go with the higher estimate. §R(Failure)§!"
+ leviathans.2113.b: "Go with the lower estimate. §G(Success)§!"
+
+ leviathans.2131.a: "Place metal rings around the remaining two poles. §R(Failure)§!"
+ leviathans.2131.b: "Search for torus-shaped indentations on the bulkhead. §R(Failure)§!"
+ leviathans.2131.c: "Rearrange the metal tori on the poles. §G(Success)§!"
+ leviathans.2131.d: "Remove center and rightmost poles from the pedestal. §R(Failure)§!"
+
+ leviathans.2150.a: "We'll find a way. §Y(Choose $ENIGMATIC_FORTRESS_5B$)§!"
+ 
+ leviathans.2152.a: "The beginning. §R(Failure)§!"
+ leviathans.2152.b: "The middle. §G(Success)§!"
+ leviathans.2152.c: "The end. §R(Failure)§!"
+ 
+ 

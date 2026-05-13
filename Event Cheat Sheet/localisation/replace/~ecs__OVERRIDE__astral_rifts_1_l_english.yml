@@ -1,0 +1,21 @@
+﻿l_english:
+ # The Crystal Rift
+ astral_rift.1000.a: "Utilize A.I. to check for hidden patterns."
+ astral_rift.1000.b: "E.M.P. the anchor cord. §R(Waste of £energy£)§!"
+
+ astral_rift.1010.b: "Get out! We've only stunned it. §R(Ends Rift)§!"
+
+ astral_rift.1020.a: "We've opened a doorway... §G(Opens Wormhole)§!"
+ astral_rift.1020.b: "Seal it! Quickly! §R(Ends Rift)§!"
+ 
+ # The Microverse
+ astral_rift.1210.a: "Synchronize with the [Fleet.GetName]. §R(Ends Rift)§!"
+ 
+ astral_rift.1220.b: "Observe from the edge of the universe. §R(Ends Rift)§!"
+ 
+ # Strange Station
+ astral_rift.1615.a: "Welcome friendship. §Y(£specimen£, £society£, Trading Contact)§!"
+ astral_rift.1615.b: "Spurn their offer. §Y(£unity£)§!"
+ astral_rift.1615.c: "Accept this opportunity. §Y(£specimen£, £society£, Trading Contact)§!"
+ astral_rift.1615.d: "This is of no interest to us. §Y(£unity£)§!"
+ 
