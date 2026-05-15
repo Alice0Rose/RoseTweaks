@@ -1,6 +1,6 @@
 ﻿l_english:
  citizenship_universal_assimilation: "Universal Assimilation"
- citizenship_universal_assimilation_tooltip: "Pops of this species are §Yaltered§! over time to better match the dominant species of the Empire. Pops that are in the process of being assimilated will not produce any resources."
+ citizenship_universal_assimilation_tooltip: "$citizenship_assimilation_tooltip$"
  citizenship_universal_assimilation_tooltip_delayed: "§LWe will combine your distinctiveness with our own and together we will triumph!§!"
  living_standard_universal_assimilation: "Universal Assimilation"
  living_standard_universal_assimilation_tooltip: "Pops of this species are §Yaltered§! over time to better match the dominant species of the Empire. Pops that are in the process of being assimilated will not produce any resources."

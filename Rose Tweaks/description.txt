@@ -201,4 +201,5 @@
 
 ## Fixes:
 - Removes the alloy cost and upkeep of T2 Spikespores
-- Fixed Scorched World Heralds not having a Casus Beli to attack Fallen Empires 
+- Fixed Scorched World Heralds not having a Casus Beli to attack Fallen Empires
+- Fixed assimilation sometimes getting pops stuck in the wrong strata
