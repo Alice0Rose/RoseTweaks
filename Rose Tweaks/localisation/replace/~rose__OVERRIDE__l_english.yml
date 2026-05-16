@@ -1,2 +1,2 @@
 ﻿l_english:
- trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y70%§! of our collected $r_trade$ earns us earns us £energy£ §Y0.2§!, £minerals£ §Y0.2§!, £food£ §Y0.2§!, and £unity£ §Y0.1§!§!"
+ trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y75%§! of our collected $r_trade$ earns us $r_energy$, $r_minerals$, $r_food$, and $r_unity$. Every £trade£ §Y1§! earns us £energy£ §Y0.27§!, £minerals£ §Y0.27§!, £food£ §Y0.27§!, and £unity£ §Y0.1§!."
