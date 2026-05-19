@@ -1,0 +1,24 @@
+special_project = {
+	key = ROSE_L_CLUSTER_LOCKDOWN
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	cost = 0
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = GFX_evt_l-gateway
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	AI_wait_days = {
+		base = 0
+	}
+
+	on_success = {
+		# Lets country choose which lgate to leave open if they have multiple and then destroys the rest
+		owner = { country_event = { id = rose_l_cluster_lockdown.3 } }
+	}
+}

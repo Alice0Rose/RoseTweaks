@@ -110,7 +110,7 @@
 - Added more designations to nanite worlds for Nanotech empires
 
 ## Policies:
-- Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy (0.3 and 0.3 instead of 0.2, 0.2, and 0.2)
+- Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy
 - Research Focus Policies from taking the Technological Ascendancy ascension perk now give a +100% draw chance and +5% type research speed if specialized
 
 ## Jobs:
@@ -195,9 +195,11 @@
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 - Synthetic Virtuality gives a trait to pops that gives -10% empire size from pops and -50% housing usage upon finishing the authority event chain
 
+## Special Projects:
+- Adds a special project when you control Terminal Egress to destroy all other L-Gates except for one, limiting access to the L-Cluster
+
 ## Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs
-- Added the basic resource support zones to habitat urban zones
 
 ## Fixes:
 - Removes the alloy cost and upkeep of T2 Spikespores
