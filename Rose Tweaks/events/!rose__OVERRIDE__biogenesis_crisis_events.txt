@@ -1,0 +1,68 @@
+namespace = biocrisis
+
+# 190 Behemoth about to win the game
+#If no other tier 5 behemoth country, no voidspawn, and situation complete.
+country_event = {
+	id = biocrisis.190
+	title = "biocrisis.190.name"
+	desc = biocrisis.190.desc
+	picture = GFX_evt_behemoth_fight
+	show_sound = event_dangerous_animals
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_menace_perk = menp_behemoth_ever_hungry
+		has_country_flag = finished_behemoth_situation
+		NOT = { has_country_flag = behemoth_victory }
+		NOT = { any_situation = { is_situation_type = behemoth_finale_situation } }
+		NOT = {
+			any_country = {
+				is_country_type = voidspawn_boss
+			}
+		}
+		NOT = {
+			any_playable_country = {
+				NOT = { is_same_value = root }
+				has_menace_perk = menp_behemoth_ever_hungry
+			}
+		}
+		NOT = { has_country_flag = rose_behemoth_win_waiting }
+	}
+
+	immediate = {
+		save_event_target_as = behemoth_winner
+		set_country_flag = king_of_monsters_achievement
+	}
+
+	option = { #COMPLETE THE TRANSFERENCE!
+		name = biocrisis.190.a
+		custom_tooltip = biocrisis.190.tt
+		hidden_effect = {
+			country_event = { id = biocrisis.191 days = 30 }
+		}
+	}
+
+	option = { #We're not ready just yet
+		name = biocrisis.190.b
+		custom_tooltip = biocrisis.190.b.tt
+		enable_special_project = {
+			name = BEHEMOTH_TRANSFERENCE_PROJECT
+			owner = root
+		}
+		# Prevents being spammed by this event if you decided to wait
+		hidden_effect = {
+			set_country_flag = rose_behemoth_win_waiting
+		}
+	}
+
+	after = {
+		every_playable_country = {
+			limit = {
+				NOT = { is_same_value = root }
+				is_ai = no
+			}
+			country_event = { id = biocrisis.192 days = 1 }
+		}
+	}
+}
