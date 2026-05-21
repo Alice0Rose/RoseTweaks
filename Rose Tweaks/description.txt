@@ -206,3 +206,4 @@
 - Fixed Scorched World Heralds not having a Casus Beli to attack Fallen Empires
 - Fixed assimilation sometimes getting pops stuck in the wrong strata
 - Fixed being spammed by the event to win with Behemoth Crisis if you decided to wait until you complete the win special project
+- Fixed Cybernetic Creed not setting the correct founder species after cyberization if the Unified Creeds option was chosen

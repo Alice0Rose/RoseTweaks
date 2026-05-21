@@ -1,5 +1,100 @@
 namespace = machine_age
 
+#This event fires in the situation to create cyborg pops.
+situation_event = {
+	id = machine_age.2000
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_situation_flag = cybernetic_creed_cyberization_ongoing
+		owner = {
+			OR = {
+				check_variable_arithmetic = { which = value:num_active_buildings|BUILDING|building_augmentation_center| value > 0 }
+				check_variable_arithmetic = { which = value:num_active_buildings|BUILDING|building_augmentation_bazaars| value > 0 }
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			weighted_random_owned_pop_group = {
+				limit = {
+					is_same_species = owner.species
+					NOT = {	has_trait = trait_cybernetic }
+					pop_group_size > 0
+				}
+				species = {
+					if = {
+						limit = {
+							NOT = { exists = event_target:cybercreedspecies@root.owner }
+						}
+						create_cyber_creed_species_effect = yes
+					}
+				}
+			}
+
+			every_owned_pop_group = {
+				limit = {
+					exists = event_target:cyberspecies_current
+					is_same_species = owner.species
+					NOT = {	has_trait = trait_cybernetic }
+					pop_group_size > 0
+					pop_group_size < 5
+				}
+				owner = {
+					cyberize_creed_pops_effect = {
+						SINGLE_LOOP = yes
+						TINY_GROUPS = yes
+					}
+				}
+			}
+
+			cyberize_creed_pops_effect = yes
+			cyberize_creed_leaders_effect = yes
+		}
+		# Check if there are any pops left to cyberize, otherwise remove the cyberization flag to unpause the situation.
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						any_owned_pop_group = {
+							exists = event_target:cybercreedspecies@root.owner
+							is_same_species = owner.species
+							NOT = {	has_trait = trait_cybernetic }
+						}
+					}
+				}
+			}
+			remove_situation_flag = cybernetic_creed_cyberization_ongoing
+			owner = {
+				set_country_flag = cybernetic_creed_cyberization_finished
+				change_dominant_species = { species = event_target:cybercreedspecies@root.owner change_all = yes }
+				
+				# Forces founder species to be set to the new cybernetic species for Unified Creed option
+				if = {
+					limit = { has_country_flag = cybernetic_creed_general }
+					ordered_owned_species = {
+						limit = { 
+							has_trait = trait_cyborg_ritualistic_implants
+							has_trait = trait_cybernetic
+						}
+						position = 0
+						order_by = trigger:pop_amount
+						prev = {
+							change_dominant_species = {
+								species = prev
+								change_all = yes 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 #Everyone is dead
 situation_event = {
 	id = machine_age.3200
