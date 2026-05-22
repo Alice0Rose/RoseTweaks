@@ -9,6 +9,7 @@ on_game_start_country = {
 	events = { # country_event
 		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
 		rose_choose_starting_ruler_ethic.1 # Lets players choose their starting ruler's ethic
+		rose_fe_dragonscale.1 # Gives all FEs dragonscale armor tech
 	}
 }
 

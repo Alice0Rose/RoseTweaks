@@ -39,6 +39,8 @@
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
 - Gave Menacing Corvettes access to artillery combat computers
+- Gave Fallen Empire ships Dragonscale armor so it can be obtained similarly to Dark Matter tech by defeating them
+
 
 ## Federations:
 - "A Union of Faith" Level 5 Holy Covenant perk gives +10% pop growth speed and +5% mechanical pop assembly speed instead of +15% pop growth speed and -30% mechanical pop assembly speed
@@ -92,7 +94,6 @@
 - Slingshot to the Stars starts with the Quantum Catapult on a Neutron Star instead of a Pulsar (won't remove your shields)
 - Under One Rule ascension event The Fall changed from 10-30 years to 15-17 years to trigger
 - Under One Rule ending event A New Age fixed to not trigger until reformists are gone and given a failsafe trigger, while also being changed to shift you to egalitarian if you chose to give power to the people, with an additional option for authoritarian empires added to let them shift to oligarchy without shifting to egalitarian
-- 
 
 - Authoritarian empires have an additional option for A New Age which lets them become an Oligarchy without shifting towards Egalitarian (the option to shift to Democracy and Egalitarian is still there)
 - Under One Rule English localisation fixed in certain events
@@ -117,7 +118,8 @@
 - Virtual Synthetic pops (but not Full Virtual pops) can be used in the Synthetic Lathe
 
 ## Factions:
-- Factions will now spawn after 2 years for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowd Sourcing empires
+- Factions will now spawn after 2 years for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowdsourcing empires
+- Crowdsourcing makes all factions give equal amounts of each research type to allow for more build diversity
 
 ## Techs:
 - Climate Restoration tech is more likely to show up if you have the Adaptability tradition

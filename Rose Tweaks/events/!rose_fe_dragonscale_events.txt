@@ -1,0 +1,16 @@
+namespace = rose_fe_dragonscale
+
+country_event = {
+	id = rose_fe_dragonscale.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_fallen_empire = yes
+	}
+
+	immediate = {
+		give_technology = { tech = tech_dragon_armor }
+	}
+}
