@@ -21,4 +21,9 @@ special_project = {
 		# Lets country choose which lgate to leave open if they have multiple and then destroys the rest
 		owner = { country_event = { id = rose_l_cluster_lockdown.3 } }
 	}
+	
+	abort_trigger = {
+		# Failsafe to prevent multiple lockdown projects
+		has_global_flag = rose_l_cluster_locked_down
+	}
 }

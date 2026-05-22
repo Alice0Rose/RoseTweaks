@@ -36,6 +36,7 @@ country_event = {
 			# Has terminal egress
 			any_system_within_border = {
 				has_star_flag = terminal_egress
+				has_megastructure = lgate_base
 			}
 			
 			# Has another lgate system
@@ -44,6 +45,7 @@ country_event = {
 					has_star_flag = terminal_egress
 				}
 				has_star_flag = lgate
+				has_megastructure = lgate_base
 			}
 		}
 	}
@@ -58,6 +60,10 @@ country_event = {
 					limit = { is_megastructure_type = lgate_base }
 					save_event_target_as = rose_l_cluster_lockdown_terminal_egress_lgate
 				}
+			}
+			
+			every_country = { 
+				abort_special_project = { type = ROSE_L_CLUSTER_LOCKDOWN }
 			}
 		}
 		
@@ -119,20 +125,9 @@ country_event = {
 		}
 	}
 
-	immediate = {			
-		# Get lgate in terminal egress system
-		event_target:lcluster1 = {
-			random_system_megastructure = {
-				limit = { is_megastructure_type = lgate_base }
-				save_event_target_as = rose_l_cluster_lockdown_terminal_egress_lgate
-			}
-		}
-		
-		# Removes special project from terminal egress for previous owner
-		abort_special_project = { 
-			type = "ROSE_L_CLUSTER_LOCKDOWN" 
-			location = event_target:rose_l_cluster_lockdown_terminal_egress_lgate
-		}
+	immediate = {				
+		# Removes special project for previous owner
+		abort_special_project = { type = ROSE_L_CLUSTER_LOCKDOWN }
 	}
 }
 
@@ -154,6 +149,7 @@ country_event = {
 				limit = { 
 					NOT = { has_star_flag = terminal_egress }
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 			}
 			variable = rose_l_cluster_lockdown_lgate_option_num
@@ -175,6 +171,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 0
 				order_by = trigger:distance_to_capital
@@ -200,6 +197,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 1
 				order_by = trigger:distance_to_capital
@@ -225,6 +223,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 2
 				order_by = trigger:distance_to_capital
@@ -250,6 +249,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 5
 				order_by = trigger:distance_to_capital
@@ -275,6 +275,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 4
 				order_by = trigger:distance_to_capital
@@ -300,6 +301,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 5
 				order_by = trigger:distance_to_capital
@@ -325,6 +327,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 6
 				order_by = trigger:distance_to_capital
@@ -350,6 +353,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 7
 				order_by = trigger:distance_to_capital
@@ -375,6 +379,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 8
 				order_by = trigger:distance_to_capital
@@ -400,6 +405,7 @@ country_event = {
 						has_star_flag = terminal_egress
 					}
 					has_star_flag = lgate
+					has_megastructure = lgate_base
 				}
 				position = 9
 				order_by = trigger:distance_to_capital
