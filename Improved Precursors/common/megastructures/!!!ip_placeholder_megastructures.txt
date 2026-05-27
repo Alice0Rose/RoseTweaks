@@ -1,0 +1,9 @@
+#PLACEHOLDER_MEGASTRUCTURE_NAME = {
+#	entity = ""
+#	potential = { always = no }
+#}
+
+gpm_mega_shipyard_ruined_precursor = {
+	entity = ""
+	potential = { always = no }
+}

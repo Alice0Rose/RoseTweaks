@@ -14,6 +14,7 @@ Yuht:
 
 First League:
 	- Homeworld increased to size 30 and given a decision for Hive and Machine empires to convert it to a Hive/Machine world
+	- First League Filing Building bonus increased from +0.25 to +1 unity
 
 Irassian:
 	- Homeworld changed to a tomb world and increased to size 35

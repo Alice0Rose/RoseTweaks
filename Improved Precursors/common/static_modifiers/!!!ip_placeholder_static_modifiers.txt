@@ -1,0 +1,53 @@
+#PLACEHOLDER_STATIC_MODIFIER_NAME = {
+#	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+#	icon_frame = 1
+#}
+
+gpm_precursor_ruins = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_planetary_gun = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_bunker_grid = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_mechs = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_eternal_fortress = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_crashed_spacestation = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_battleground_ruins = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_energy_grid = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_singularity_drive = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_mines = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_manufactorium = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+gpm_precursor_vaults = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}

@@ -1,0 +1,7 @@
+#PLACEHOLDER_TRIGGER_NAME = {
+#	always = no
+#}
+
+gpm_are_precursors_enabled = {
+	always = no
+}

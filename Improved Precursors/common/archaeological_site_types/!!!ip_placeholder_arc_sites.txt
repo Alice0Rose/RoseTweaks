@@ -1,0 +1,41 @@
+#PLACEHOLDER_ARC_SITE_NAME = {
+#	picture = GFX_evt_tomb_world
+#	desc = "site_ruined_starsystem_intro"
+#	max_instances = 1
+#	weight = 0
+#	stages = 1
+#	potential = { always = no }
+#	allow = { always = no }
+#	visible = { always = no }
+#	stage = {
+#		difficulty = 1
+#		icon = GFX_archaeology_runes_E1
+#		event = federations2.2
+#	}
+#	on_roll_failed = {
+#		from = {
+#			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ruins_of_shallash_random_events }
+#		}
+#	}
+#}
+
+gpm_precursor_generic_digsite = {
+	picture = GFX_evt_tomb_world
+	desc = "site_ruined_starsystem_intro"
+	max_instances = 1
+	weight = 0
+	stages = 1
+	potential = { always = no }
+	allow = { always = no }
+	visible = { always = no }
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_E1
+		event = federations2.2
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ruins_of_shallash_random_events }
+		}
+	}
+}

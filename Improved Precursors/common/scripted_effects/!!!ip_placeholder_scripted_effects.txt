@@ -1,0 +1,9 @@
+#PLACEHOLDER_SCRIPTED_EFFECT_NAME = {}
+
+gpm_precursor_star_shipyards = {}
+gpm_precursor_ambient_object_generator = {}
+gpm_precursor_planet_setup_no_modifiers = {}
+gpm_precursor_home_planet_setup = {}
+gpm_roll_planetary_features_unique = {}
+gpm_roll_planetary_features_normal_habitable = {}
+gpm_roll_planetary_blockers_normal_habitable = {}
