@@ -83,6 +83,7 @@
 - Genocidal Civics and Crusader Spirit give an empire buff after winning a purification or liberation war respectively
 - Lubrication Pools is available to Synthetically ascended empires
 - Dark Consortium can be removed after the game has started once you have over 1500 monthly physics research
+- Removed the Spiritualist requirement for Ascensionist for individualist empires
 
 ## Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires
@@ -129,6 +130,7 @@
 - Both defense platform repeatables now give partial Deep Space Citadel capacity
 - Added Habitation Module unlock to Agrarian Idyll housing tech, along with the ability to pick the Arcology Project ascension perk (tho this is only usable to create Natural Arcologies, not full Ecumonopli)
 - Fallen Empire buildings can be progressively unlocked by taking the worlds of Fallen/Awakened Empires or T5 Cosmogenesis empires
+- Gave Ascension Theory +20% planetary ascension effect while reducing the bonuses for Harmony/Synchronicity (+25% -> +20%), Holy Covenant (+20% -> +10%), and Ascensionist (+25% -> +20%) to compensate
 
 ## Tooltips:
 - Hovering over valid systems will show the max output of a Dyson Swarm and Nanite Harvester (if Nanotech) if built in the system

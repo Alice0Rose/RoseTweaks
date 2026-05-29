@@ -1,2 +1,5 @@
 ﻿l_english:
  tr_mercantile_worker_coop_improved_ownership_desc: "Additional §Y$living_standard_worker_ownership$§! Living Standard Effects:$TABBED_NEW_LINE$- £happiness£ Happiness: §G+5%§! $TABBED_NEW_LINE$- £mod_pop_bonus_workforce_mult£ $mod_organic_pop_bonus_workforce_mult$: §G+5%§!\n\nUnlocks §Y$trade_policy_mutual_aid_minerals$§! and §Y$trade_policy_mutual_aid_food$§! §YTrade Policies§!, which allow us to focus on converting our £trade_value£ §YTrade Value§! into £minerals£ §YMinerals§! or £food£ §YFood§!."
+ tr_harmony_federations_finish_desc: "$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!.\nGrants access to the §Y$spiritualist_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
+ tr_synchronicity_machine_finish_desc: "§YUnlocks Edict:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!\nAscension Perks Unlocked: §G+1§!"
+

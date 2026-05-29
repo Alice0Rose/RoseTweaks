@@ -1,3 +1,16 @@
+ascension_shared_1 = {
+	members_modifier = {
+		planetary_ascension_effect_mult = 0.1
+		planetary_ascension_cost_mult = -0.1
+	}
+}
+
+president_spiritualist_2 = {
+	leader_modifier = {
+		planetary_ascension_cost_mult = -0.15
+	}
+}
+
 make_spiritualist_1 = {
 	custom_tooltip = make_spiritualist_1_effect
 	member_triggered_modifier = {

@@ -40,6 +40,37 @@ civic_hive_idyllic_bloom = {
 	}
 }
 
+civic_hive_ascensionists = {
+	potential = {
+		authority = { value = auth_hive_mind }
+	}
+	description = "civic_tooltip_ascensionists_effects"
+	modifier = {
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+		planetary_ascension_effect_mult = 0.2
+		planetary_ascension_cost_mult = -0.1
+		tradition_cost_empire_size_mult = -0.25
+		add_attunement_the_instrument_of_desire = @civic_attunement1
+	}
+	random_weight = {
+		base = @civic_uncommon_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = devouring_swarm
+			}
+		}
+	}
+	swap_type = {
+		name = civic_wilderness_ascensionists
+		trigger = { is_wilderness_empire = yes }
+		description = "civic_tooltip_ascensionists_effects"
+	}
+}
+
 civic_hive_sovereign_guardianship = {
 	playable = { has_astral_planes_dlc = yes }
 	ai_playable = { has_astral_planes_dlc = yes }
@@ -108,6 +139,32 @@ civic_hive_superstitious_beliefs = {
 
 	modifier = {
 		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_ascensionists = {
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	description = "civic_tooltip_ascensionists_effects"
+	modifier = {
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+		planetary_ascension_effect_mult = 0.2
+		planetary_ascension_cost_mult = -0.1
+		tradition_cost_empire_size_mult = -0.25
+		add_attunement_the_instrument_of_desire = @civic_attunement1
+	}
+	random_weight = {
+		base = @civic_uncommon_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = exterminators
+			}
+		}
 	}
 }
 
