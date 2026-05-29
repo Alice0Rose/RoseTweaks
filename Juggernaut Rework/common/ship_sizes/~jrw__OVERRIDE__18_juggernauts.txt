@@ -7,9 +7,9 @@ juggernaut = {
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		ship_armor_mult = 0.75
-		ship_shield_mult = 0.75
-		ship_weapon_damage = 0.5
+		ship_armor_mult = 0.4
+		ship_shield_mult = 0.4
+		ship_weapon_damage = 0.2
 		starbase_shipyard_capacity_add = 10
 	}
 
@@ -131,9 +131,9 @@ juggernaut_cr = {
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		ship_armor_mult = 1.5
-		ship_shield_mult = 1.5
-		ship_weapon_damage = 1
+		ship_armor_mult = 0.8
+		ship_shield_mult = 0.8
+		ship_weapon_damage = 0.4
 	}
 
 	base_buildtime = @juggernaut_build_time

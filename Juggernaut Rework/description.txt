@@ -4,13 +4,13 @@ This mod reworks the Juggernaut and adds an alternative Juggernaut class, the Ju
 The following changes have been made to the Juggernaut (and the Juggernaut CR):
 - Given 3 T slots and 2 modular sections that can be set as Carrier or Artillery sections, giving the Juggernaut orders of magnitude more firepower than any other ship
 - Given more defensive utility slots
-- Given a +75% multiplier to armor and shield health and a +50% multiplier to weapon damage
+- Given a +40% multiplier to armor and shield health and a +20% multiplier to weapon damage
 - Has 3 instead of 4 Aux slots
 
 Additionally, the Juggernaut CR has the following changes from a regular Juggernaut:
 - Designated as a ship instead of a starbase, allowing it to be added to fleets with other ships and equipped with Afterburners
 - Shipyards are removed, but has a hull and armor repair aura to allow system-wide repairs
-- Given an additional +75% multiplier to armor and shield health and a +50% multiplier to weapon damage (totaling +150% armor and shield health and +100% weapon damage respectively)
+- Given an additional +40% multiplier to armor and shield health and a +20% multiplier to weapon damage (totaling +80% armor and shield health and +40% weapon damage respectively)
 
 [h1]Compatibility[/h1]
 This mod overwrites the Juggernaut (duhh), a few triggers related to the Juggernaut, and a few events related to the Juggernaut (files listed below). This mean's it's pretty unlikely it'll cause issues with any other mods unless they add to or modify Juggernaut functionality! ^-^
