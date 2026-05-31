@@ -41,7 +41,6 @@
 - Gave Menacing Corvettes access to artillery combat computers
 - Gave Fallen Empire ships Dragonscale armor so it can be obtained similarly to Dark Matter tech by defeating them
 
-
 ## Federations:
 - "A Union of Faith" Level 5 Holy Covenant perk gives +10% pop growth speed and +5% mechanical pop assembly speed instead of +15% pop growth speed and -30% mechanical pop assembly speed
 - Gestalts can create/change to Trade and Holy federations if they have Logistics or Synchronicity completed respectively
@@ -176,7 +175,8 @@
 - Added Hardwired trait for robots which increases resettlement cost by 200% and prevents pops from auto-resettling for +3 trait points
 - Added Nanotech Enhancements trait for the main species and its leaders of nanotech empires
 - Increased number of destiny trait choices from 3 to 4 at level 8
-	
+- Dark Matter engines production changed from +20% to 30%
+
 ## Politics:
 - Egalitarian governments that become Galactic Emperor maintain their ethics
 - Egalitarian and materialist empires that chose to gain a God Emperor via psionic ascension maintain their ethics
@@ -211,3 +211,4 @@
 - Fixed assimilation sometimes getting pops stuck in the wrong strata
 - Fixed being spammed by the event to win with Behemoth Crisis if you decided to wait until you complete the win special project
 - Fixed Cybernetic Creed not setting the correct founder species after cyberization if the Unified Creeds option was chosen
+- Fixed Justice Complex & upgrade FE building not giving 25%/50% automation for enforcers
