@@ -28,6 +28,7 @@
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 - The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic or T3 of Galactic Hyperthermia, or any natural world with the Environmentalist Civic
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
+- Shutdown Servers decision for Virtual empires also destroys orbital rings to prevent outliner spam
 
 ## Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires
@@ -109,6 +110,7 @@
 - Ring Worlds gives the same bonuses as Ecumonopli
 - Toxic Worlds can be terraformed directly to Gaia worlds if you have both APs
 - Added more designations to nanite worlds for Nanotech empires
+- Nanite worlds in the L-Cluster have the Terraforming Candidate modifier regardless of L-Gate outcome
 
 ## Policies:
 - Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy
