@@ -40,7 +40,7 @@ decision_rose_orbital_ring = {
 		# Doesn't show if a orbital ring is already present or is a ringworld for obvious reasons
 		NOR = {
 			exists = orbital_defence
-			is_ringworld = yes
+			is_artificial = yes
 		}
 	}
 

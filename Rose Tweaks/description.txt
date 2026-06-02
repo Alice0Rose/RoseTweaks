@@ -212,3 +212,4 @@
 - Fixed being spammed by the event to win with Behemoth Crisis if you decided to wait until you complete the win special project
 - Fixed Cybernetic Creed not setting the correct founder species after cyberization if the Unified Creeds option was chosen
 - Fixed Justice Complex & upgrade FE building not giving 25%/50% automation for enforcers
+- Fixed orbital rings not checking if there was already an orbital ring on the planet before letting you start construction
