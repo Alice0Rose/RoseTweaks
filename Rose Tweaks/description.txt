@@ -115,6 +115,8 @@
 ## Policies:
 - Added 2 new Mutual Aid trade policies, one for food and one for minerals, which give more of their resource and energy than the default policy
 - Research Focus Policies from taking the Technological Ascendancy ascension perk now give a +100% draw chance and +5% type research speed if specialized
+- Virtual Focus policy has a Balanced option which gives +5% to everything with no negatives
+- Virtual Focus policies are rebalanced slightly to bring the value of the Leader policy more in line with the others
 
 ## Jobs:
 - Virtual Synthetic pops (but not Full Virtual pops) can be used in the Synthetic Lathe
