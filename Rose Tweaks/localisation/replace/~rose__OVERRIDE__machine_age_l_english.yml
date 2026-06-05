@@ -1,0 +1,2 @@
+﻿l_english: 
+ tr_nanotech_finish_modifier_desc: "§YUnlocks Ship:§! Nanite Interdictor\n§YUnlocks Army:§! Nanite Swarm\n§Y$sm_nanite_harvester_plural$§! yield improvements every §Y5§! years, either increasing the size of $r_nanites$ deposits or yielding a sum of nanites. This effect is limited by the size of the planet that deposits are created upon.\nAll §Y$trait_machine_unit$§! pops and leaders gain §Y$leader_trait_rose_nanotech$§!"

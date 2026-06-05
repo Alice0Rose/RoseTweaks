@@ -1,0 +1,36 @@
+# Nanite Swarm Army 
+# (similar stats to regular warform but faster to make and uses nanites to make)
+rose_nanite_swarm_army = {
+	damage = 4.0
+	health = 6.0
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 4.0
+	war_exhaustion = 4.0
+	time = 250
+	has_species = yes
+	use_armynames_from = machine_assault_3
+
+	icon = GFX_army_type_machine_assault
+
+	resources = {
+		category = armies
+		cost = {
+			nanites = 1000
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	potential_country = {
+		has_tradition = tr_nanotech_5
+	}
+
+	prerequisites = { "tech_biomechanics" }
+
+	ai_weight = {
+		base = 50
+	}
+}

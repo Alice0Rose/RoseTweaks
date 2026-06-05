@@ -1,6 +1,7 @@
 ## Armies:
 - Machine armies (Individualistic and Machine Intelligence) are linked to species, making them affected by species traits.
 - Synthetic empires have access to Individualistic machine armies and associated technologies.
+- Nanotech empires have access to Nanite Swarm armies which are similar to warforms but cost nanites and are faster to create
 
 ## Ascension Perks:
 - Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th

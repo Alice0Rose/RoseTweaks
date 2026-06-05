@@ -1,5 +1,6 @@
 namespace = rose_nanotech_traits
 
+# Gives species the Nanite trait
 country_event = {
 	id = rose_nanotech_traits.0
 	hide_window = yes
@@ -27,6 +28,7 @@ country_event = {
 	}
 }
 
+# Gives leaders the Nanite trait
 country_event = {
 	id = rose_nanotech_traits.1
 	hide_window = yes
@@ -40,13 +42,14 @@ country_event = {
 				}
 				add_trait = {
 					trait = leader_trait_rose_nanotech
-					show_message = no
+					show_message = yes
 				}
 			}
 		}
 	}
 }
 
+# Monthly on_action for players
 event = {
 	id = rose_nanotech_traits.2
 	hide_window = yes
@@ -62,6 +65,7 @@ event = {
 	}
 }
 
+# Yearly on_action for AI empires
 event = {
 	id = rose_nanotech_traits.3
 	hide_window = yes
