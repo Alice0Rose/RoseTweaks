@@ -1,5 +1,5 @@
 ﻿l_english:
- ap_eternal_vigilance_tt: "Every 9 months a §YDefense Platform§! will be built around every §YStarbase§! depending on the §Y$ap_eternal_vigilance$§! policy, up to a max of §Y33%§! capacity at the cost of a percentage of §Y$mod_country_alloys_produces_mult$§!"
+ ap_rose_eternal_vigilance_tt: "Every 9 months a §YDefense Platform§! will be built around every §YStarbase§! depending on the §Y$ap_eternal_vigilance$§! policy, up to a max of §Y33%§! capacity at the cost of a percentage of §Y$mod_country_alloys_produces_mult$§!"
  policy_rose_eternal_vigilance_policy: "$ap_eternal_vigilance$"
  policy_rose_eternal_vigilance_policy_desc: "A shield is only as strong as the one that holds it."
  rose_eternal_vigilance_policy_full_spending: "Full Spending"

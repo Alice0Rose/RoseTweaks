@@ -28,7 +28,7 @@ ap_eternal_vigilance = {
 	}
 
 	on_enabled = {
-		custom_tooltip = ap_eternal_vigilance_tt
+		custom_tooltip = ap_rose_eternal_vigilance_tt
 		hidden_effect = {
 			country_event = {
 				id = rose_eternal_vigilance_policy.1
@@ -133,6 +133,16 @@ ap_master_builders = {
 		}
 	}
 
+	on_enabled = {
+		if = {
+			limit = {
+				is_gestalt = yes
+			}
+			custom_tooltip = "allow_ringworld_arcologies"
+			custom_tooltip = "decision_rose_ringworld_arcologies_effects"
+		}
+	}
+
 	ai_weight = {
 		factor = 10
 		modifier = {
@@ -205,6 +215,9 @@ ap_arcology_project = {
 			limit = { NOT = { has_civic = civic_machine_servitor } }
 			custom_tooltip = "decision_rose_natural_arcologies_effects"
 		}
+		
+		custom_tooltip = "allow_ringworld_arcologies"
+		custom_tooltip = "decision_rose_ringworld_arcologies_effects"
 	}
 
 	modifier = {

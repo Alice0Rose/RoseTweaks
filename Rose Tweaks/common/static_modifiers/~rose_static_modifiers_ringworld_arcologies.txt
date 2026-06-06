@@ -1,0 +1,5 @@
+rose_ringworld_arcologies = {
+	planet_max_districts_add = 6
+	icon = "gfx/interface/icons/planet_modifiers/pm_ringworld_arcologies.dds"
+	icon_frame = 1
+}

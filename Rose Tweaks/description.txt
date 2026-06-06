@@ -28,6 +28,7 @@
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 - The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic or T3 of Galactic Hyperthermia, or any natural world with the Environmentalist Civic
+- The "Create Ringworld Arcologies" Decision can be used to add 6 district slots to a Ringworld, and is only accessible if you have the Arcology Project AP (or the Master Builders AP if gestalt)
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 - Shutdown Servers decision for Virtual empires also destroys orbital rings to prevent outliner spam
 
