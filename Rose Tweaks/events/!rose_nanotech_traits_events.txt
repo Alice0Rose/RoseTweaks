@@ -35,48 +35,23 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_leader = {			
-			if = {
-				limit = {
-					species = { has_trait = trait_rose_nanotech }
-				}
-				add_trait = {
-					trait = leader_trait_rose_nanotech
-					show_message = yes
-				}
+		every_owned_leader = {
+			limit = {
+				species = { has_trait = trait_rose_nanotech }
+			}
+			add_trait = {
+				trait = leader_trait_rose_nanotech
+				show_message = no
 			}
 		}
-	}
-}
-
-# Monthly on_action for players
-event = {
-	id = rose_nanotech_traits.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_country = { 
+		every_pool_leader = {
 			limit = {
-				is_ai = no
+				species = { has_trait = trait_rose_nanotech }
 			}
-			country_event = { id = rose_nanotech_traits.1 }
-		}
-	}
-}
-
-# Yearly on_action for AI empires
-event = {
-	id = rose_nanotech_traits.3
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_country = { 
-			limit = {
-				is_ai = yes
+			add_trait = {
+				trait = leader_trait_rose_nanotech
+				show_message = no
 			}
-			country_event = { id = rose_nanotech_traits.1 }
 		}
 	}
 }

@@ -16,16 +16,15 @@ on_game_start_country = {
 # No scope, like on_game_start
 on_monthly_pulse = {
 	events = {
-		rose_nanotech_traits.2
 		rose_scaling_nanite_harvester_upgrade.1
 		rose_l_cluster_lockdown.5 # Tries to gives L-Cluster lockdown project to any valid non-ai country
 	}
 }
 
-# No scope, like on_game_start
-on_yearly_pulse = {
+# this = country
+on_monthly_pulse_country = {
 	events = {
-		rose_nanotech_traits.3
+		rose_nanotech_traits.1
 	}
 }
 

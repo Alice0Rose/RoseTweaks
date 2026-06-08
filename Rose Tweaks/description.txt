@@ -42,6 +42,7 @@
 - Quantum Catapult windup no longer scales based on fleet size, to accommodate for higher command limit
 - Mercenary Enclaves cannot be created by AI empires to reduce lag
 - Gave Menacing Corvettes access to artillery combat computers
+- Gave Nanite Swarmers access to artillery combat computers
 - Gave Fallen Empire ships Dragonscale armor so it can be obtained similarly to Dark Matter tech by defeating them
 
 ## Federations:
@@ -219,3 +220,4 @@
 - Fixed Cybernetic Creed not setting the correct founder species after cyberization if the Unified Creeds option was chosen
 - Fixed Justice Complex & upgrade FE building not giving 25%/50% automation for enforcers
 - Fixed orbital rings not checking if there was already an orbital ring on the planet before letting you start construction
+- Fixed clones not regaining the Backup Clone trait if the cloning path is chosen for the 2nd flexible tradition and you have a cloning authority
