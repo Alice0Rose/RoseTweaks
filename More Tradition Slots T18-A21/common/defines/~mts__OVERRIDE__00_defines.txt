@@ -1,0 +1,25 @@
+	NGameplay = {
+		ASCENSION_PERKS_SLOTS	= 21
+
+		# Planetary Ascension Tier cap formula:
+		#     Max( ( Unlocked Ascension Perks Slots - 2 ), PLANET_ASCENSION_MIN ) +
+		#     ( ( Unlocked Ascension Perks Slots == ASCENSION_PERKS_SLOTS ? ) PLANET_ASCENSION_COMPLETION_BONUS : 0 )
+		PLANET_ASCENSION_STARTING_POINT		= 1		# Number of ascension perks unlocked slots required for Planetary Ascension
+		PLANET_ASCENSION_HARD_CAP			= 10	# Based of current formula, maximum planetary ascension possible
+		
+		# Divide each default value by PLANET_ASCENSION_HARD_CAP/10
+		PLANET_ASCENSION_SPRAWL_SCALE		= 10.0	# Scaling factor for Planetary Ascension cost based on the empire Sprawl
+		PLANET_ASCENSION_SUM_SCALE			= 0.6	# Scaling factor for Planetary Ascension cost based on the empire-wide sum of Ascension Tiers
+		
+		## tradition cost = ( base_cost + ( cost_tradition * num_traditions )^traditions_exponential ) * ( 1 + cost_planet*num_planets + cost_system*num_systems )
+		TRADITION_COST_TRADITION				= 8		# change this value if you want to increase all costs
+		TRADITION_COST_TRADITION_EXP			= 1.800	# change this value if you want to increase costs at the end
+		TRADITION_COST_MULT_TRADITION_GROUP		= 0.00	# each adopted group adds +X% to total cost
+
+		TRADITION_CATEGORIES_MAX	= 18
+	}
+	
+	NAI = {
+		# 7 * round(TRADITION_CATEGORIES_MAX * 0.9)
+		NUM_TRADITIONS_FOR_EDICTS = 112	# How many traditions does the AI want before spending Unity on edicts (there are 49 in total in the base game counting adoption & completion effects)
+	}

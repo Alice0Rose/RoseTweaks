@@ -3,6 +3,6 @@ tags={
 	"Economy"
 }
 picture="thumbnail.png"
-name="More Tradition Slots T12-A15"
+name="More Tradition Slots T18-A21"
 supported_version="v4.4.*"
-remote_file_id="3385410973"
+remote_file_id="3756476688"

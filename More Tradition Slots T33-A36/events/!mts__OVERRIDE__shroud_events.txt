@@ -1,7 +1,7 @@
 namespace = shroud
 
 # Stop free Planetary Ascension (Ascension Accord)
-planet_event = {
+carrier_event = {
 	id = shroud.4845
 	hide_window = yes
 	is_triggered_only = yes

@@ -19,47 +19,27 @@ guiTypes = {
 	# ASCENSION PERKS ENTRY POSITIONS
 	################################################################
 
-	positionType = { name = "ap_0"	position = { x =  12 y =  47 } }
-	positionType = { name = "ap_1"	position = { x =  70 y =  47 } }
-	positionType = { name = "ap_2"	position = { x = 128 y =  47 } }
-	positionType = { name = "ap_3"	position = { x = 186 y =  47 } }
-	positionType = { name = "ap_4"	position = { x =  41 y =  97 } }
-	positionType = { name = "ap_5"	position = { x =  99 y =  97 } }
-	positionType = { name = "ap_6"	position = { x = 157 y =  97 } }
-	positionType = { name = "ap_7"	position = { x = 215 y =  97 } }
-	
-	positionType = { name = "ap_8"	position = { x =  12 y = 147 } }
-	positionType = { name = "ap_9"	position = { x =  70 y = 147 } }
-	positionType = { name = "ap_10"	position = { x = 128 y = 147 } }
-	positionType = { name = "ap_11"	position = { x = 186 y = 147 } }
-	positionType = { name = "ap_12"	position = { x =  41 y = 197 } }
-	positionType = { name = "ap_13"	position = { x =  99 y = 197 } }
-	positionType = { name = "ap_14"	position = { x = 157 y = 197 } }
-	positionType = { name = "ap_15"	position = { x = 215 y = 197 } }
-	
-	positionType = { name = "ap_16"	position = { x =  12 y = 247 } }
-	positionType = { name = "ap_17"	position = { x =  70 y = 247 } }
-	positionType = { name = "ap_18"	position = { x = 128 y = 247 } }
-	positionType = { name = "ap_19"	position = { x = 186 y = 247 } }
-	positionType = { name = "ap_20"	position = { x =  41 y = 297 } }
-	positionType = { name = "ap_21"	position = { x =  99 y = 297 } }
-	positionType = { name = "ap_22"	position = { x = 157 y = 297 } }
-	positionType = { name = "ap_23"	position = { x = 215 y = 297 } }
-	
-	positionType = { name = "ap_24"	position = { x =  12 y = 347 } }
-	positionType = { name = "ap_25"	position = { x =  70 y = 347 } }
-	positionType = { name = "ap_26"	position = { x = 128 y = 347 } }
-	positionType = { name = "ap_27"	position = { x = 186 y = 347 } }
-	positionType = { name = "ap_28"	position = { x =  41 y = 397 } }
-	positionType = { name = "ap_29"	position = { x =  99 y = 397 } }
-	positionType = { name = "ap_30"	position = { x = 157 y = 397 } }
-	positionType = { name = "ap_31"	position = { x = 215 y = 397 } }
-	
-	positionType = { name = "ap_32"	position = { x =  12 y = 447 } }
-	positionType = { name = "ap_33"	position = { x =  70 y = 447 } }
-	positionType = { name = "ap_34"	position = { x = 128 y = 447 } }
-	positionType = { name = "ap_35"	position = { x = 186 y = 447 } }
-	positionType = { name = "ap_36"	position = { x = 215 y = 447 } }	
+	positionType = { name = "ap_0"	position = { x =  19 y =  31 } }
+	positionType = { name = "ap_1"	position = { x = 109 y =  31 } }
+	positionType = { name = "ap_2"	position = { x = 199 y =  31 } }
+	positionType = { name = "ap_3"	position = { x =  19 y = 101 } } # +69
+	positionType = { name = "ap_4"	position = { x = 109 y = 101 } }
+	positionType = { name = "ap_5"	position = { x = 199 y = 101 } }
+	positionType = { name = "ap_6"	position = { x =  19 y = 171 } }
+	positionType = { name = "ap_7"	position = { x = 109 y = 171 } }
+	positionType = { name = "ap_8"	position = { x = 199 y = 171 } }
+	positionType = { name = "ap_9"	position = { x =  19 y = 241 } }
+	positionType = { name = "ap_10"	position = { x = 109 y = 241 } }
+	positionType = { name = "ap_11"	position = { x = 199 y = 241 } }
+	positionType = { name = "ap_12"	position = { x =  19 y = 311 } }
+	positionType = { name = "ap_13"	position = { x = 109 y = 311 } }
+	positionType = { name = "ap_14"	position = { x = 199 y = 311 } }
+	positionType = { name = "ap_15"	position = { x = 19 y = 381 } }
+	positionType = { name = "ap_16"	position = { x = 109 y = 381 } }
+	positionType = { name = "ap_17"	position = { x = 199 y = 381 } }
+	positionType = { name = "ap_18"	position = { x = 19 y = 451 } }
+	positionType = { name = "ap_19"	position = { x = 109 y = 451 } }
+	positionType = { name = "ap_20"	position = { x = 199 y = 451 } }
 
 	containerWindowType = {
 		name = "traditions_ascension_perk_entry"
@@ -277,7 +257,7 @@ guiTypes = {
 				gridBoxType = {
 					name = "tradition_category_gridbox"
 					position = { x = 0 y = 0 }
-					size = { width = 950 height = 2908 }
+					size = { width = 950 height = 1590 }
 					slotSize = { width = 314 height = 266 }
 					max_slots_horizontal = 3
 					format = "UPPER_LEFT"

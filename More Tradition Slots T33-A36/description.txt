@@ -5,6 +5,7 @@ The planetary ascension maximum is still 10, but due to game limitations has to 
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3385412088]  9 Tradition and 12 Ascension Perk Version [/url]
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3385410973] 12 Tradition and 15 Ascension Perk Version [/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3756476688] 18 Tradition and 21 Ascension Perk Version [/url]
 
 [h1]Compatibility[/h1]
 This mod overwrites a few defines, a scripted variable, and the tradition interface ui, which are listed below. There shouldn't be any issue with other mods unless they add tradition slots or ascension perk slots or change the UI :) If you are using UI Overhaul Dynamic, put this mod below it in your load order.
