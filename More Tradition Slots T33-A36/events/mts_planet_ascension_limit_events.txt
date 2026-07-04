@@ -1,6 +1,6 @@
 namespace = mts_planet_ascension_limit
 
-planet_event = {
+carrier_event = {
 	id = mts_planet_ascension_limit.1
 	title = mts_planet_ascension_limit.1.name
 	desc = mts_planet_ascension_limit.1.desc
