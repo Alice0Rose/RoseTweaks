@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Command Limit Remover"
-supported_version="v4.3.*"
+supported_version="v4.4.*"
 remote_file_id="3650809264"

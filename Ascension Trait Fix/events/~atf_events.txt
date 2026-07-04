@@ -19,11 +19,15 @@ country_event = {
 							has_tradition = tr_modularity_finish
 						}
 					}
-					species = { 
+					species = {
+						OR = {
+							is_archetype = MACHINE
+							is_archetype = ROBOT
+						}
 						NOR = {
-							species = { has_trait = trait_robot_digital_1 }
-							species = { has_trait = trait_robot_digital_2 }
-						} 
+							has_trait = trait_robot_digital_1
+							has_trait = trait_robot_digital_2
+						}
 					}
 					NOT = { has_trait = leader_trait_synthetic }
 				}
@@ -36,9 +40,15 @@ country_event = {
 			# Virtual trait
 			if = {
 				limit = {
-					OR = {
-						species = { has_trait = trait_robot_digital_1 }
-						species = { has_trait = trait_robot_digital_2 }
+					species = {
+						OR = {
+							is_archetype = MACHINE
+							is_archetype = ROBOT
+						}
+						OR = {
+							has_trait = trait_robot_digital_1
+							has_trait = trait_robot_digital_2
+						}
 					}
 					NOT = { has_trait = leader_trait_virtual }
 				}
@@ -104,36 +114,6 @@ country_event = {
 					show_message = no
 				}
 			}
-		}
-	}
-}
-
-event = {
-	id = ascension_trait_fix.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_country = { 
-			limit = {
-				is_ai = no
-			}
-			country_event = { id = ascension_trait_fix.0 }
-		}
-	}
-}
-
-event = {
-	id = ascension_trait_fix.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_country = { 
-			limit = {
-				is_ai = yes
-			}
-			country_event = { id = ascension_trait_fix.0 }
 		}
 	}
 }
