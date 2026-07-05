@@ -852,7 +852,7 @@ shroud_storm = {
 		}
 		modifier = {
 			mult = 0.25
-			from = {
+			from? = {
 				has_megastructure = shroud_seal
 			}
 		}
@@ -872,7 +872,7 @@ shroud_storm = {
 
 	triggered_fleet_modifier = {
 		potential = {
-			owner = { has_country_flag = breached_shroud }
+			owner? = { has_country_flag = breached_shroud }
 		}
 		modifier = {
 			ship_evasion_mult = @shroud_storm_evasion
@@ -882,7 +882,7 @@ shroud_storm = {
 
 	triggered_fleet_modifier = {
 		potential = {
-			owner = { has_country_flag = breached_shroud }
+			owner? = { has_country_flag = breached_shroud }
 		}
 		modifier = {
 			ship_weapon_damage = @shroud_storm_damage

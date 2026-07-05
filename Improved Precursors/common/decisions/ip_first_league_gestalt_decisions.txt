@@ -14,10 +14,11 @@ decision_ip_first_league_gestalt_hive = {
 	potential = {
 		is_planet_class = pc_relic
 		is_artificial = no
-		has_planet_flag = first_league_homeworld
+		has_carrier_flag = first_league_homeworld
 		exists = owner
 		owner = {
 			is_hive_empire = yes
+			is_nomadic = no
 		}
 	}
 
@@ -27,15 +28,15 @@ decision_ip_first_league_gestalt_hive = {
 	}
 
 	on_queued = {
-		set_planet_flag = arcology_project_construction
+		set_carrier_flag = arcology_project_construction
 	}
 
 	on_unqueued = {
-		remove_planet_flag = arcology_project_construction
+		remove_carrier_flag = arcology_project_construction
 	}
 
 	effect = {
-		remove_planet_flag = arcology_project_construction
+		remove_carrier_flag = arcology_project_construction
 		# Make hive world
 		custom_tooltip = decision_arcology_project_effects
 		hidden_effect = {
@@ -43,12 +44,7 @@ decision_ip_first_league_gestalt_hive = {
 			clear_deposits = yes
 			restore_saved_deposits = yes
 			change_pc = pc_hive
-
-			#set_planet_entity = {
-			#	entity = pc_hive
-			#}
-			
-			planet_event = { id = action.68 }
+			carrier_event = { id = action.68 }
 			add_deposit = d_former_relic_world
 			while = {
 				count = 4
@@ -94,10 +90,11 @@ decision_ip_first_league_gestalt_machine = {
 	potential = {
 		is_planet_class = pc_relic
 		is_artificial = no
-		has_planet_flag = first_league_homeworld
+		has_carrier_flag = first_league_homeworld
 		exists = owner
 		owner = {
 			is_machine_empire = yes
+			is_nomadic = no
 		}
 	}
 
@@ -107,15 +104,15 @@ decision_ip_first_league_gestalt_machine = {
 	}
 
 	on_queued = {
-		set_planet_flag = arcology_project_construction
+		set_carrier_flag = arcology_project_construction
 	}
 
 	on_unqueued = {
-		remove_planet_flag = arcology_project_construction
+		remove_carrier_flag = arcology_project_construction
 	}
 
 	effect = {
-		remove_planet_flag = arcology_project_construction
+		remove_carrier_flag = arcology_project_construction
 		# Make machine world
 		custom_tooltip = decision_arcology_project_effects
 		hidden_effect = {
@@ -123,12 +120,7 @@ decision_ip_first_league_gestalt_machine = {
 			clear_deposits = yes
 			restore_saved_deposits = yes
 			change_pc = pc_machine
-
-			#set_planet_entity = {
-			#	entity = pc_machine
-			#}
-			
-			planet_event = { id = action.68 }
+			carrier_event = { id = action.68 }
 			add_deposit = d_former_relic_world
 			while = {
 				count = 4

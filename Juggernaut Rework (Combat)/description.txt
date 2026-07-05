@@ -1,0 +1,19 @@
+[h1]Features[/h1]
+This mod reworks the Juggernaut by greatly enhancing its combat capabilities and removing the shipyards so it can be slotted into fleets with other ships.
+
+The following changes have been made to the Juggernaut:
+- Given 3 T slots and 2 modular sections that can be set as Carrier or Artillery sections, giving the Juggernaut orders of magnitude more firepower than any other ship
+- Given more defensive utility slots
+- Given a +80% multiplier to armor and shield health and a +40% multiplier to weapon damage
+- Has 3 instead of 4 Aux slots
+- Designated as a ship instead of a starbase, allowing it to be added to fleets with other ships and equipped with Afterburners
+- Shipyards are removed, but has a hull and armor repair aura to allow system-wide repairs
+
+If you want the shipyard functionality of the vanilla Juggernaut at the cost of some combat functionality and the ability to add the Juggernaut to fleets with other ships, use the following mod instead:[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3757948872] Juggernaut Rework (Shipyard) [/url]
+
+[h1]Compatibility[/h1]
+This mod only overwrites the Juggernaut ship size. This mean's it's pretty unlikely it'll cause issues with any other mods unless they add to or modify Juggernaut functionality! ^-^
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

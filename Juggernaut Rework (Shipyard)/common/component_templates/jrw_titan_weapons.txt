@@ -14,10 +14,7 @@ weapon_component_template = {
 	component_set = "JUGGERNAUT_PERDITION_BEAM"
 	projectile_gfx = "perdition_beam"
 	potential = {
-		OR = {
-			is_ship_size = juggernaut
-			is_ship_size = juggernaut_cr
-		}
+		is_ship_size = juggernaut
 	}
 	resources = {
 		category = ship_components
@@ -46,14 +43,8 @@ weapon_component_template = {
 		}
 	}
 
-	on_hit = {
-		inline_script = {
-			script = ship_components/collateral_damage
-			RANGE = @perdition_beam_collateral_range
-			DAMAGE = @perdition_beam_fleet_damage
-		}
-		custom_tooltip = "PERDITION_BEAM_FLEET_EFFECT"
-	}
+	collateral_damage = @perdition_beam_fleet_damage
+	collateral_range = @perdition_beam_collateral_range
 
 	target_weights = {
 		titan = 3
@@ -102,10 +93,7 @@ weapon_component_template = {
 	component_set = "JUGGERNAUT_ARCHAEO_TITAN_BEAM"
 	projectile_gfx = "perdition_beam"
 	potential = {
-		OR = {
-			is_ship_size = juggernaut
-			is_ship_size = juggernaut_cr
-		}
+		is_ship_size = juggernaut
 	}
 	resources = {
 		category = ship_components
@@ -134,14 +122,8 @@ weapon_component_template = {
 		}
 	}
 
-	on_hit = {
-		inline_script = {
-			script = ship_components/collateral_damage
-			RANGE = @perdition_beam_collateral_range
-			DAMAGE = @perdition_beam_fleet_damage
-		}
-		custom_tooltip = "PERDITION_BEAM_FLEET_EFFECT"
-	}
+	collateral_damage = @perdition_beam_fleet_damage
+	collateral_range = @perdition_beam_collateral_range
 
 	target_weights = {
 		titan = 3

@@ -1,3 +1,76 @@
+gateway = {
+	name = GATEWAY_GALACTIC
+	is_pathfind = yes
+	uses_action = no
+	requires_exploration = no
+	always_active = no
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0			# 0 means instant
+	icon_frame = 25
+	remember_instances = no	# whether countries remember meeting a specific instance of that type, or if they just remember seeing the type in general
+	galactic_map_tooltip_header=GATEWAY_GALACTIC
+	galactic_map_tooltip_desc=GATEWAY_GALACTIC_DESC
+	connection_type = any_other
+	animation_time = 1
+	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+	prerequisites = {
+		tech_gateway_activation
+	}
+	on_pre_explore = {
+		activate_gateway = fromfrom
+		if = {
+			limit = { num_active_gateways = 1 }
+			random_megastructure = {
+				limit = { is_megastructure_type = gateway_ruined }
+				upgrade_megastructure_to = gateway_restored
+				finish_upgrade = yes
+			}
+		}
+	}
+	
+	country_can_use = {
+		NOR = {
+			is_country_type = synth_queen_convoys
+			
+			# Vanilla crises
+			is_country_type = awakened_marauders
+			is_country_type = swarm
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+			is_country_type = ai_empire
+			is_country_type = cybrex_empire
+			is_country_type = sentinels
+			is_country_type = synth_queen_storm
+			is_country_type = synth_queen
+			is_country_type = awakened_synth_queen
+			is_country_type = gray_goo
+			is_country_type = formless
+			is_country_type = voidworms_crisis
+			is_country_type = voidspawn_boss
+			is_country_type = the_reckoning
+			
+			# Empires with edict active
+			has_edict = bcnhr_ignore_hyper_relays
+			
+			# Modded crises
+			# Gigastructural Engineering
+			is_country_type = compound_empire
+			is_country_type = katzenartig_imperium
+			is_country_type = dormant_aeternum
+			is_country_type = blokkat_stripminers
+			is_country_type = giga_eawaf_sirens
+		}
+	}
+
+	respect_closed_borders = yes
+	block_access_if_hostile = yes
+
+	on_action = "on_entering_gateway"
+}
+
 relay_bypass = {
 	name = HYPER_RELAY_GALACTIC
 	is_pathfind = yes

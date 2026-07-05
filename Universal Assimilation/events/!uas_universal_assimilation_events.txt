@@ -36,7 +36,7 @@ event = {
 						is_planet_class = pc_cosmogenesis_world
 					}
 				}
-				planet_event = { 
+				carrier_event = { 
 					id = uas_universal_assimilation.2 
 				}
 			}
@@ -45,7 +45,7 @@ event = {
 }
 
 # Assimilate Pops
-planet_event = {
+carrier_event = {
 	id = uas_universal_assimilation.2
 	hide_window = yes
 	is_triggered_only = yes
@@ -63,37 +63,36 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_citizenship_type = {
-							type = citizenship_universal_assimilation
-							country = root.owner
-						}
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
 					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
+					has_citizenship_type = {
+						type = citizenship_universal_assimilation
+						country = root.owner
 					}
-					# Universal Assimilation just turns you into the founder species
-					root.owner.species = {
-						save_event_target_as = target_species
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# Universal Assimilation just turns you into the founder species
+				root.owner.species = {
+					save_event_target_as = target_species
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -113,39 +112,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_citizenship_type = {
-							type = citizenship_universal_assimilation
-							country = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# Universal Assimilation just turns you into the founder species
-					root.owner.species = {
-						save_event_target_as = target_species
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					else = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species

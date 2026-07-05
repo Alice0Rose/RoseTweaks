@@ -90,7 +90,7 @@ vultaumar_system = {
 				# space doodad engine
 				gpm_precursor_ambient_object_generator= yes
 				prevent_anomaly = yes
-				set_planet_flag = gpm_is_precursor_homesystem_planet
+				set_carrier_flag = gpm_is_precursor_homesystem_planet
 				gpm_precursor_planet_setup_no_modifiers = yes
 				add_modifier = { modifier = gpm_precursor_ruins }
 				# random themed for precursor story
@@ -124,7 +124,7 @@ vultaumar_system = {
 				if = {
 					limit = { gpm_mod_active = yes }
 					prevent_anomaly = yes
-					set_planet_flag = gpm_is_precursor_homesystem_planet
+					set_carrier_flag = gpm_is_precursor_homesystem_planet
 					gpm_precursor_planet_setup_no_modifiers = yes
 					add_modifier = { modifier = gpm_precursor_ruins }
 					# random themed for precursor story
@@ -327,7 +327,7 @@ yuhtaan_system = {
 				# space doodad engine
 				gpm_precursor_ambient_object_generator= yes
 				prevent_anomaly = yes
-				set_planet_flag = gpm_is_precursor_homesystem_planet
+				set_carrier_flag = gpm_is_precursor_homesystem_planet
 				gpm_precursor_planet_setup_no_modifiers = yes
 				add_modifier = { modifier = gpm_precursor_ruins }
 				# random themed for precursor story
@@ -415,7 +415,7 @@ yuhtaan_system = {
 				if = {
 					limit = { gpm_mod_active = yes }
 					prevent_anomaly = yes
-					set_planet_flag = gpm_is_precursor_homesystem_planet
+					set_carrier_flag = gpm_is_precursor_homesystem_planet
 					gpm_precursor_planet_setup_no_modifiers = yes
 					if = {
 						limit = { gpm_are_precursors_enabled = yes }
@@ -911,7 +911,7 @@ irass_system = {
 					# space doodad engine
 					gpm_precursor_ambient_object_generator= yes
 					prevent_anomaly = yes
-					set_planet_flag = gpm_is_precursor_homesystem_planet
+					set_carrier_flag = gpm_is_precursor_homesystem_planet
 					gpm_precursor_planet_setup_no_modifiers = yes
 					if = {
 						limit = { gpm_are_precursors_enabled = yes }
@@ -949,7 +949,7 @@ irass_system = {
 				if = {
 					limit = { gpm_mod_active = yes }
 					prevent_anomaly = yes
-					set_planet_flag = gpm_is_precursor_homesystem_planet
+					set_carrier_flag = gpm_is_precursor_homesystem_planet
 					gpm_precursor_planet_setup_no_modifiers = yes
 					if = {
 						limit = { gpm_are_precursors_enabled = yes }

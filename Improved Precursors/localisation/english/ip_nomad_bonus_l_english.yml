@@ -1,0 +1,4 @@
+﻿l_english:
+ ip_nomad_bonus.0.name: "$ip_nomad_bonus$"
+ ip_nomad_bonus.0.desc: "By analyzing the home of our precursors, we've learned how to construct more compact districts without sacrificing efficiency. While we have no interest in settling on them, their discovery can still benefit our arkships.."
+ ip_nomad_bonus: "Precursor Construction Techniques"

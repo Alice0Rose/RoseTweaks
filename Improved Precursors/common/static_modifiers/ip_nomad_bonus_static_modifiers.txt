@@ -1,0 +1,4 @@
+ip_nomad_bonus = {
+	planet_max_districts_add = 5
+	icon = "gfx/interface/icons/modifiers/mod_max_districts_add.dds"
+}

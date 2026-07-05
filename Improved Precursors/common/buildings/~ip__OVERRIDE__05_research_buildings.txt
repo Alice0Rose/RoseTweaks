@@ -30,9 +30,15 @@ building_vultaum_reality_computer = {
 
 	resources = {
 		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = exotic_gases
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
 		cost = {
-			minerals = @b2_minerals
-			minor_artifacts = 30
+			minor_artifacts = @b2_rare_cost
 		}
 		cost = {
 			trigger = {
@@ -61,8 +67,8 @@ building_vultaum_reality_computer = {
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
 		planet_physicists_physics_research_produces_add = 0.5
-		planet_biologists_society_research_produces_add = 0.5
-		planet_engineers_engineering_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.25
+		planet_engineers_engineering_research_produces_add = 0.25
 	}
 
 	triggered_planet_modifier = {

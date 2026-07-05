@@ -1,0 +1,72 @@
+namespace = ip_nomad_bonus
+
+country_event = {
+	id = ip_nomad_bonus.0
+	hide_window = no
+	picture = GFX_evt_relic_world_street
+	title = ip_nomad_bonus.0.name
+	desc = ip_nomad_bonus.0.desc
+	is_triggered_only = yes
+
+	trigger = {
+		owner? = {
+			is_nomadic = yes
+			NOT = { has_modifier = ip_nomad_bonus }
+			
+			# Checks they have a precursor relic to signify they finished a precursor chain
+			OR = {
+				# Cybrex
+				has_relic = r_war_forge
+				
+				# First League (there's no relic so this is the best i can do)
+				has_country_flag = league_world_found
+				
+				# Irassian
+				has_relic = r_pox_sample
+				
+				# Vultaum
+				has_relic = r_reality_perforator
+				
+				# Yuht
+				has_relic = r_cryo_core
+				
+				# Baol
+				has_relic = r_the_last_baol
+				
+				# Zroni
+				has_relic = r_zro_crystal
+				
+				# adAkkaria (both options are accounted for)
+				has_country_flag = adakkaria_world_found
+				has_relic = r_the_tempest_invocator
+				
+				# Inetian
+				has_relic = r_weather_manipulator
+			}
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+		add_modifier = {
+			modifier = ip_nomad_bonus
+		}
+	}
+}
+
+country_event = {
+	id = ip_nomad_bonus.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner? = {
+			is_nomadic = no
+			has_modifier = ip_nomad_bonus
+		}
+	}
+	
+	immediate = {
+		remove_modifier = ip_nomad_bonus
+	}
+}

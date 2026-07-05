@@ -29,8 +29,14 @@ building_league_offices = {
 
 	resources = {
 		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
 		cost = {
-			minerals = @b2_minerals
 			rare_crystals = @b2_rare_cost
 			minor_artifacts = 30
 		}

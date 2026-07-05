@@ -1,0 +1,224 @@
+#building_storm_resistant_production = { # see also 'building_wilderness_storm_relief'
+#	base_buildtime = @b1_time
+#	planet_limit = 1
+#	category = resource
+#
+#	building_sets = {
+#		urban
+#		generator
+#		mining
+#		farming
+#	}
+#
+#	potential = {
+#		exists = owner
+#		owner = {
+#			is_wilderness_empire = no
+#			NOT = { has_origin = origin_storm_chasers }
+#		}
+#		OR = {
+#			owner = { is_ai = no }
+#			solar_system? = {
+#				system_has_storm_repelling_tech = no
+#			}
+#		}
+#	}
+#
+#	resources = {
+#		category = planet_buildings_storm_tech
+#		inline_script = {
+#			script = buildings/nomadic_cost_switcher
+#			REGULAR_RESOURCE = minerals
+#			NOMADIC_RESOURCE = alloys
+#			COST = @b1_minerals
+#			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+#		}
+#		upkeep = {
+#			energy = @b1_upkeep
+#		}
+#		upkeep = {
+#			trigger = {
+#				has_modifier = storm_hunkered_down_modifier
+#			}
+#			energy = @b1_upkeep
+#		}
+#	}
+#
+#	prerequisites = {
+#		"tech_industrial_storm_protection"
+#	}
+#	show_tech_unlock_if = {
+#		is_wilderness_empire = no
+#	}
+#
+#	upgrades = {
+#		"building_advanced_storm_resistant_production"
+#	}
+#
+#	inline_script = {
+#		script = cosmic_storms/StormBuildingModifiers
+#	}
+#
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			solar_system? = {
+#				has_star_flag = storm_system
+#			}
+#		}
+#		modifier = {
+#			planet_miners_minerals_produces_add = 0.5
+#			planet_farmers_food_produces_add = 0.5
+#			planet_technician_energy_produces_add = 0.5
+#		}
+#	}
+#
+#	inline_script = {
+#		script = jobs/clerks_add
+#		AMOUNT = @building_static_jobs
+#	}
+#
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = {
+#				is_galactic_community_member = yes
+#			}
+#		}
+#		modifier = {
+#			planet_miners_produces_mult = 1
+#			planet_farmers_produces_mult = 1
+#			planet_technician_produces_mult = 1
+#		}
+#		mult = value:storm_building_production_multiplier
+#	}
+#
+#	custom_tooltip = "building_storm_resistant_production_tt"
+#
+#	custom_storm_ai_weight = {
+#		weight = 0
+#
+#		modifier = {
+#			add = 1
+#			AND = {
+#				exists = owner
+#				owner = { num_unique_cosmic_storms_encountered >= 2 }
+#			}
+#		}
+#	}
+#	destroy_trigger = {
+#		influence_building_destruction_trigger = yes
+#	}
+#}
+#
+#building_advanced_storm_resistant_production = { # see also 'building_wilderness_storm_relief' (non-upgradeable)
+#	base_buildtime = @b2_time
+#	can_build = no
+#	category = resource
+#
+#	building_sets = {
+#		urban
+#		generator
+#		mining
+#		farming
+#	}
+#
+#	potential = {
+#		exists = owner
+#		owner = {
+#			OR = {
+#				is_wilderness_empire = no
+#				NOT = { has_origin = origin_storm_chasers }
+#			}
+#		}
+#		if = {
+#			limit = { owner = { is_ai = yes } }
+#			solar_system? = {
+#				system_has_storm_repelling_tech = no
+#			}
+#		}
+#	}
+#
+#	resources = {
+#		category = planet_buildings_storm_tech
+#		inline_script = {
+#			script = buildings/nomadic_cost_switcher
+#			REGULAR_RESOURCE = minerals
+#			NOMADIC_RESOURCE = alloys
+#			COST = @b2_minerals
+#			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+#		}
+#		cost = {
+#			rare_crystals = @b2_rare_cost
+#		}
+#		upkeep = {
+#			energy = @b2_upkeep
+#		}
+#		upkeep = {
+#			trigger = {
+#				has_modifier = storm_hunkered_down_modifier
+#			}
+#			energy = @b2_upkeep
+#		}
+#	}
+#
+#	prerequisites = {
+#		"tech_advanced_industrial_storm_protection"
+#	}
+#
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			solar_system? = {
+#				is_inside_storm = yes
+#			}
+#		}
+#		modifier = {
+#			planet_miners_minerals_produces_add = 1
+#			planet_farmers_food_produces_add = 1
+#			planet_technician_energy_produces_add = 1
+#		}
+#	}
+#
+#	inline_script = {
+#		script = jobs/clerks_add
+#		AMOUNT = @building_static_jobs
+#	}
+#
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = {
+#				is_galactic_community_member = yes
+#			}
+#		}
+#		modifier = {
+#			planet_miners_produces_mult = 1
+#			planet_farmers_produces_mult = 1
+#			planet_technician_produces_mult = 1
+#		}
+#		mult = value:storm_building_production_multiplier
+#	}
+#
+#	inline_script = {
+#		script = cosmic_storms/StormBuildingModifiers
+#	}
+#
+#	custom_tooltip = "building_advanced_storm_resistant_production_tt"
+#
+#	custom_storm_ai_weight = {
+#		weight = 0
+#
+#		modifier = {
+#			add = 2
+#			AND = {
+#				exists = owner
+#				owner = { num_unique_cosmic_storms_encountered >= 3 }
+#			}
+#		}
+#	}
+#
+#	destroy_trigger = {
+#		influence_building_destruction_trigger = yes
+#	}
+#}

@@ -1,6 +1,8 @@
 [h1]Features[/h1]
 This mod buffs all of the precursors (except the Cybrex because they obviously don't need any buffs) to make them all roughly equal in value. The goal of this mod is to make hunting down your precursor's artifacts and finishing their quest an important part of every match, not just the ones you get lucky enough to roll the Cybrex :P
 
+Additionally, this mod gives Nomadic empires +5 Max Districts to all their arkships once they finish a precursor to make up for them not being able to use the precursor planets ^^
+
 The changes to the precursors are as follows:
 
 Vultaum:
@@ -33,7 +35,7 @@ adAkkaria:
 	- Final event choice between freeing and keeping the souls now changes the homeworld to a size 30 gaia world if you free the souls or changes the homeworld to a tomb world of size 25 if you don't
 
 Inetians:
-	- Precursor system now has 3 habitable worlds, each size 25
+	- Precursor system now has 3 habitable worlds, each size 23
 	- Relic now gives -50% orbital bombardment damage and gives +25% monthly trade and -50% ship logistic upkeep
 
 [h1]Compatibility[/h1]

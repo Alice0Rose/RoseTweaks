@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Better Tech Automation"
-supported_version="v4.3.*"
+supported_version="v4.4.*"
 remote_file_id="3394681431"

@@ -144,8 +144,8 @@ adSul_system = {
 
 		init_effect = {
 			save_global_event_target_as = adSul_capital
-			set_planet_flag = adSul_capital
-			set_planet_flag = precursor_world
+			set_carrier_flag = adSul_capital
+			set_carrier_flag = precursor_world
 		}
 	}
 

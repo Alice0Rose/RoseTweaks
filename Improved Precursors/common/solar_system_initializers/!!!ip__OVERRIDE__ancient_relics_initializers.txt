@@ -238,7 +238,7 @@ Zrocursor_system = {
 				# space doodad engine
 				gpm_precursor_ambient_object_generator= yes
 				prevent_anomaly = yes
-				set_planet_flag = gpm_is_precursor_homesystem_planet
+				set_carrier_flag = gpm_is_precursor_homesystem_planet
 				gpm_precursor_planet_setup_no_modifiers = yes
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
@@ -319,7 +319,7 @@ Zrocursor_system = {
 				if = {
 					limit = { gpm_mod_active = yes }
 					prevent_anomaly = yes
-					set_planet_flag = gpm_is_precursor_homesystem_planet
+					set_carrier_flag = gpm_is_precursor_homesystem_planet
 					gpm_precursor_planet_setup_no_modifiers = yes
 					add_modifier = { modifier = gpm_precursor_ruins }
 					# random themed for precursor story
@@ -509,7 +509,7 @@ last_baol_system = {
 				# space doodad engine
 				gpm_precursor_ambient_object_generator= yes
 				prevent_anomaly = yes
-				set_planet_flag = gpm_is_precursor_homesystem_planet
+				set_carrier_flag = gpm_is_precursor_homesystem_planet
 				gpm_precursor_planet_setup_no_modifiers = yes
 				add_modifier = { modifier = gpm_precursor_ruins }
 				# random themed for precursor story
@@ -571,7 +571,7 @@ last_baol_system = {
 			add_deposit = d_radioactive_wasteland
 			add_deposit = d_city_ruins
 			add_deposit = d_city_ruins
-			set_planet_flag = grunur_prime
+			set_carrier_flag = grunur_prime
 			
 			if = {
 				limit = { gpm_mod_active = yes }
@@ -618,7 +618,7 @@ last_baol_system = {
 				prevent_anomaly = yes
 				if = {
 					limit = { gpm_mod_active = yes }
-					set_planet_flag = gpm_is_precursor_homesystem_planet
+					set_carrier_flag = gpm_is_precursor_homesystem_planet
 					gpm_precursor_planet_setup_no_modifiers = yes
 					add_modifier = { modifier = gpm_precursor_ruins }
 					# random themed for precursor story
@@ -642,7 +642,7 @@ last_baol_system = {
 						limit = {
 							gpm_mod_active = yes 
 						}
-						set_planet_flag = gpm_is_precursor_homesystem_planet
+						set_carrier_flag = gpm_is_precursor_homesystem_planet
 						gpm_precursor_planet_setup_no_modifiers = yes
 						add_modifier = { modifier = gpm_precursor_ruins }
 						# random themed for precursor story

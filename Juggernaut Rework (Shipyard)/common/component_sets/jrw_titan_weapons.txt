@@ -1,0 +1,13 @@
+component_set = {
+	key = "JUGGERNAUT_PERDITION_BEAM"
+
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "JUGGERNAUT_ARCHAEO_TITAN_BEAM"
+
+	icon = "GFX_ship_part_archaeo_titan_beam"
+	icon_frame = 1
+}

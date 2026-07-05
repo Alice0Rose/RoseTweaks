@@ -1,0 +1,7 @@
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		ip_nomad_bonus.0
+		ip_nomad_bonus.1
+	}
+}

@@ -115,6 +115,7 @@ tech_repeatable_improved_military_station_health = {
 	mod_weight_if_group_picked = {
 		repeatable = 0.01
 	}
+
 	modifier = {
 		shipclass_military_station_hull_mult = 0.1
 	}
