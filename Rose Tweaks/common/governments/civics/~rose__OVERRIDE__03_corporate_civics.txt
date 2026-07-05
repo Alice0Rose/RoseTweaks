@@ -182,6 +182,7 @@ civic_corporate_sovereign_guardianship = {
 		}
 	}
 	possible = {
+		is_nomadic = no
 		ethics = {
 			NOR = {
 				value = ethic_fanatic_pacifist

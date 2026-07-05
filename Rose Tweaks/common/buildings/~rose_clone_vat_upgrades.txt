@@ -20,11 +20,6 @@ building_rose_clone_vats_1 = {
 		NOT = { has_modifier = resort_colony }
 		OR = {
 			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
-		OR = {
-			owner = { is_ai = no }
 			NAND = {
 				free_district_slots = 0
 				free_building_slots <= 1
@@ -176,23 +171,29 @@ building_rose_clone_vats_1 = {
 		category = planet_buildings_clone_vats
 
 		# Base cost
-		cost = {
-			minerals = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		# Organic/Lithoid/infernal cost
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_or_infernal_empire = no }
-			}
-			food = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher_with_additional_trigger
+			TRIGGER = "owner? = { is_lithoid_or_infernal_empire = no }"
+			REGULAR_RESOURCE = food
+			NOMADIC_RESOURCE = exotic_gases
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_or_infernal_empire = yes }
-			}
-			energy = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher_with_additional_trigger
+			TRIGGER = "owner? = { is_lithoid_or_infernal_empire = yes }"
+			REGULAR_RESOURCE = energy
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 
 		# Base upkeep
@@ -292,11 +293,6 @@ building_rose_clone_vats_2 = {
 	potential = {
 		exists = owner
 		NOT = { has_modifier = resort_colony }
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
 		OR = {
 			owner = { is_ai = no }
 			NAND = {
@@ -450,23 +446,29 @@ building_rose_clone_vats_2 = {
 		category = planet_buildings_clone_vats
 
 		# Base cost
-		cost = {
-			minerals = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		# Organic/Lithoid/infernal cost
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_or_infernal_empire = no }
-			}
-			food = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher_with_additional_trigger
+			TRIGGER = "owner? = { is_lithoid_or_infernal_empire = no }"
+			REGULAR_RESOURCE = food
+			NOMADIC_RESOURCE = exotic_gases
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_or_infernal_empire = yes }
-			}
-			energy = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher_with_additional_trigger
+			TRIGGER = "owner? = { is_lithoid_or_infernal_empire = yes }"
+			REGULAR_RESOURCE = energy
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 
 		# Base upkeep
@@ -562,11 +564,6 @@ building_rose_clone_vats_3 = {
 	potential = {
 		exists = owner
 		NOT = { has_modifier = resort_colony }
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
 		OR = {
 			owner = { is_ai = no }
 			NAND = {
@@ -720,23 +717,29 @@ building_rose_clone_vats_3 = {
 		category = planet_buildings_clone_vats
 
 		# Base cost
-		cost = {
-			minerals = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		# Organic/Lithoid/infernal cost
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_or_infernal_empire = no }
-			}
-			food = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher_with_additional_trigger
+			TRIGGER = "owner? = { is_lithoid_or_infernal_empire = no }"
+			REGULAR_RESOURCE = food
+			NOMADIC_RESOURCE = exotic_gases
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_or_infernal_empire = yes }
-			}
-			energy = 500
+		inline_script = {
+			script = buildings/nomadic_cost_switcher_with_additional_trigger
+			TRIGGER = "owner? = { is_lithoid_or_infernal_empire = yes }"
+			REGULAR_RESOURCE = energy
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 
 		# Base upkeep

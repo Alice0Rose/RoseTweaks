@@ -80,6 +80,7 @@ prosperity = {
 	can_join_faction = {
 		is_shackled_robot = no
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -155,7 +156,7 @@ prosperity = {
 		potential = {
 			exists = owner
 			owner = {
-				num_owned_planets >= 3
+				num_owned_colonies >= 3
 			}
 		}
 

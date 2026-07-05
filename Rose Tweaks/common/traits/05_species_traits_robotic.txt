@@ -23,7 +23,7 @@ trait_auto_mod_robotic = {
 		always = yes
 	}
 	slave_cost = {
-		energy = 1000
+		trade = 1000
 	}
 	assembly_score = {
 		base = 2
@@ -45,7 +45,7 @@ trait_robot_power_drills = {
 		miner_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 	assembly_score = {
 		modifier = {
@@ -73,7 +73,7 @@ trait_robot_harvesters = {
 		farmer_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 	assembly_score = {
 		modifier = {
@@ -109,7 +109,7 @@ trait_robot_superconductive = {
 		technician_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 	assembly_score = {
 		modifier = {
@@ -135,7 +135,7 @@ trait_robot_efficient_processors = {
 	}
 
 	slave_cost = {
-		energy = 500
+		trade = 500
 	}
 	assembly_score = {
 		modifier = {
@@ -167,7 +167,7 @@ trait_robot_logic_engines = {
 		researcher_jobs_bonus_workforce_mult = 0.10
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 	assembly_score = {
 		modifier = {
@@ -196,7 +196,7 @@ trait_robot_loyalty_circuits = {
 		pop_happiness = 0.1
 	}
 	slave_cost = {
-		energy = 500
+		trade = 500
 	}
 }
 
@@ -223,7 +223,7 @@ trait_robot_domestic_protocols = {
 		influential_jobs_bonus_workforce_mult = 0.20
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	custom_tooltip_with_modifiers = TRAIT_DOMESTIC_PROTOCOLS_EFFECT
@@ -236,19 +236,20 @@ trait_robot_double_jointed = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 	tags = { machine positive housing }
+	opposites = { "trait_interconnected" }
 
 	modifier = {
 		pop_housing_usage_mult = -0.1
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
 trait_robot_bulky = {
 	cost = -1
 	category = robotic
-	opposites = { "trait_robot_double_jointed" }
+	opposites = { "trait_robot_double_jointed" "trait_defence_drones" }
 
 	allowed_archetypes = { ROBOT MACHINE }
 	tags = { machine negative housing }
@@ -260,7 +261,7 @@ trait_robot_bulky = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = -150
+		trade = -150
 	}
 }
 
@@ -287,7 +288,7 @@ trait_robot_enhanced_memory = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -300,11 +301,12 @@ trait_robot_emotion_emulators = {
 		SPECIES_TRAIT_ADAPTIVE_FRAMES
 	}
 	tags = { machine positive pop_output amenities }
+	opposites = { "trait_interconnected" }
 	modifier = {
 		influential_jobs_bonus_workforce_mult = 0.20
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -321,7 +323,7 @@ trait_robot_uncanny = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = -150
+		trade = -150
 	}
 }
 
@@ -337,7 +339,7 @@ trait_robot_durable = {
 		planet_pops_robotics_upkeep_mult = -0.10
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -356,7 +358,7 @@ trait_robot_high_maintenance = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = -150
+		trade = -150
 	}
 }
 
@@ -380,7 +382,7 @@ trait_robot_learning_algorithms = {
 		species_leader_exp_gain = 0.10
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -411,7 +413,7 @@ trait_robot_repurposed_hardware = {
 		}
 	}
 	slave_cost = {
-		energy = -250
+		trade = -250
 	}
 }
 
@@ -427,7 +429,7 @@ trait_robot_mass_produced = {
 		planet_pop_assembly_mult = 0.15
 	}
 	slave_cost = {
-		energy = 1500
+		trade = 1500
 	}
 }
 
@@ -446,7 +448,7 @@ trait_robot_custom_made = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = -200
+		trade = -200
 	}
 }
 
@@ -462,7 +464,7 @@ trait_robot_recycled = {
 		roboticist_jobs_bonus_workforce_mult = 0.20
 	}
 	slave_cost = {
-		energy = 1500
+		trade = 1500
 	}
 }
 
@@ -485,7 +487,7 @@ trait_robot_luxurious = {
 		}
 	}
 	slave_cost = {
-		energy = -200
+		trade = -200
 	}
 }
 
@@ -510,7 +512,7 @@ trait_robot_propaganda_machines = {
 		bureaucrat_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 	assembly_score = {
 		modifier = {
@@ -530,7 +532,7 @@ trait_robot_streamlined_protocols = {
 		species_empire_size_mult = -0.10
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -544,7 +546,7 @@ trait_robot_high_bandwidth = {
 		species_empire_size_mult = 0.10
 	}
 	slave_cost = {
-		energy = -150
+		trade = -150
 	}
 }
 
@@ -569,7 +571,7 @@ trait_robot_trading_algorithms = {
 		trader_jobs_bonus_workforce_mult = 0.25
 	}
 	slave_cost = {
-		energy = 500
+		trade = 500
 	}
 }
 
@@ -602,7 +604,7 @@ trait_robot_quarrelsome = {
 		}
 	}
 	slave_cost = {
-		energy = -200
+		trade = -200
 	}
 }
 
@@ -626,7 +628,7 @@ trait_robot_deviants = {
 		weight = 0
 	}
 	slave_cost = {
-		energy = -200
+		trade = -200
 	}
 }
 
@@ -646,13 +648,13 @@ trait_robot_decadent = {
 	forbidden_ethics = { ethic_gestalt_consciousness }
 	modifier = {
 		pop_cat_worker_happiness = -0.1
-		pop_cat_slave_happiness = -0.1
+		pop_slave_happiness = -0.1
 	}
 	ai_weight = {
 		weight = 0
 	}
 	slave_cost = {
-		energy = -200
+		trade = -200
 	}
 }
 
@@ -677,7 +679,7 @@ trait_robot_wasteful = {
 		weight = 0
 	}
 	slave_cost = {
-		energy = -200
+		trade = -200
 	}
 }
 
@@ -690,6 +692,7 @@ trait_robot_artificial_engineers = {
 	opposites = {
 		"trait_robot_artificial_physicists"
 		"trait_robot_artificial_sociologists"
+		"trait_structural_awareness"
 	}
 	# Droid, Synth, Machine Intelligence or Individualist Machine
 	species_potential_add = {
@@ -704,7 +707,7 @@ trait_robot_artificial_engineers = {
 		engineer_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -717,6 +720,7 @@ trait_robot_artificial_physicists = {
 	opposites = {
 		"trait_robot_artificial_sociologists"
 		"trait_robot_artificial_engineers"
+		"trait_structural_awareness"
 	}
 	# Droid, Synth, Machine Intelligence or Individualist Machine
 	species_potential_add = {
@@ -731,7 +735,7 @@ trait_robot_artificial_physicists = {
 		physicist_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -744,6 +748,7 @@ trait_robot_artificial_sociologists = {
 	opposites = {
 		"trait_robot_artificial_physicists"
 		"trait_robot_artificial_engineers"
+		"trait_structural_awareness"
 	}
 
 	# Droid, Synth, Machine Intelligence or Individualist Machine
@@ -759,7 +764,7 @@ trait_robot_artificial_sociologists = {
 		biologist_jobs_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -788,7 +793,7 @@ trait_robot_integrated_weaponry = {
 	}
 
 	slave_cost = {
-		energy = 1000
+		trade = 1000
 	}
 }
 
@@ -799,7 +804,7 @@ trait_robot_delicate_frames = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 	tags = { machine synthetic negative research army pop_output }
-	opposites = { "trait_robot_integrated_weaponry" }
+	opposites = { "trait_robot_integrated_weaponry" "trait_solar_cells" }
 	# Droid, Synth, Machine Intelligence or Individualist Machine
 	species_potential_add = {
 		OR = {
@@ -817,7 +822,7 @@ trait_robot_delicate_frames = {
 	}
 
 	slave_cost = {
-		energy = -250
+		trade = -250
 	}
 }
 
@@ -844,7 +849,7 @@ trait_robot_scarcity_algorithms = {
 		trader_jobs_bonus_workforce_mult = -0.25
 	}
 	slave_cost = {
-		energy = -150
+		trade = -150
 	}
 }
 
@@ -879,7 +884,7 @@ trait_robot_ancient_dreadnought = {
 	}
 
 	slave_cost = {
-		energy = 1500
+		trade = 1500
 	}
 }
 
@@ -911,7 +916,7 @@ trait_robot_enigmatic_fortress = {
 	}
 
 	slave_cost = {
-		energy = 1500
+		trade = 1500
 	}
 }
 
@@ -943,7 +948,7 @@ trait_robot_infinity_sphere = {
 	}
 
 	slave_cost = {
-		energy = 1500
+		trade = 1500
 	}
 }
 
@@ -975,7 +980,7 @@ trait_robot_scavenger_bot = {
 	}
 
 	slave_cost = {
-		energy = 1500
+		trade = 1500
 	}
 }
 
@@ -1004,7 +1009,7 @@ trait_robot_history_warbot = {
 		army_damage_mult = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1030,7 +1035,7 @@ trait_robot_history_artbot = {
 		influential_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1056,7 +1061,7 @@ trait_robot_history_explorebot = {
 		bureaucrat_jobs_bonus_workforce_mult = 0.02
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1082,7 +1087,7 @@ trait_robot_history_researchbot = {
 		researcher_jobs_bonus_workforce_mult = 0.02
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1108,7 +1113,7 @@ trait_robot_history_resourcebot = {
 		miner_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1134,7 +1139,7 @@ trait_robot_history_chatbot = {
 		trader_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1159,7 +1164,7 @@ trait_robot_survivor = {
 		pop_amenities_usage_mult = -0.15
 	}
 	slave_cost = {
-		energy = 500
+		trade = 500
 	}
 }
 
@@ -1215,7 +1220,7 @@ trait_robot_digital_1 = {
 	custom_tooltip_with_modifiers = trait_robot_digital_1_tt
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1284,7 +1289,7 @@ trait_robot_digital_2 = {
 	custom_tooltip = trait_robot_digital_2_tt
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1318,7 +1323,7 @@ trait_robot_suppressed = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_suppressed_tt
@@ -1351,7 +1356,7 @@ trait_robot_shielded_components = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1381,7 +1386,7 @@ trait_robot_monoform = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1414,7 +1419,7 @@ trait_robot_inquisitative_axioms = {
 	opposites = { trait_robot_suppressed }
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 }
 
@@ -1445,7 +1450,7 @@ trait_robot_ceaseless_symmetric_annihilation_engine = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1509,7 +1514,7 @@ trait_robot_ferro_viscosity_augmentation = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1553,7 +1558,7 @@ trait_robot_biomimetic_assembly = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1604,7 +1609,7 @@ trait_robot_matrix_trading = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1666,7 +1671,7 @@ trait_robot_mote_powered_tools = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1712,7 +1717,7 @@ trait_robot_exotic_fuel_consumption = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1768,7 +1773,7 @@ trait_robot_rare_crystal_exterior = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1813,7 +1818,7 @@ trait_robot_volatile_mote_reactor = {
 	}
 
 	slave_cost = {
-		energy = 750
+		trade = 750
 	}
 
 	resources = {
@@ -1859,7 +1864,7 @@ trait_robot_immortality = {
 	immortal_leaders = yes
 
 	slave_cost = {
-		energy = 1000
+		trade = 1000
 	}
 	custom_tooltip = trait_robot_immortality_tt
 }
@@ -1898,7 +1903,7 @@ trait_robot_synthetic_dawn = {
 	immortal_leaders = no
 
 	slave_cost = {
-		energy = 1000
+		trade = 1000
 	}
 }
 

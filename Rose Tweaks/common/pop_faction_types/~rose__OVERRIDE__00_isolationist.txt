@@ -80,6 +80,7 @@ isolationist = {
 	can_join_faction = {
 		is_shackled_robot = no
 		can_think = yes
+		is_interlink_cyborg_pop = no
 		OR = {
 			NOT = { is_same_species = owner_species }
 			owner = {
@@ -545,6 +546,32 @@ isolationist = {
 		ETHIC = ethic_xenophobe
 		ETHIC_FANATIC = ethic_fanatic_xenophobe
 		ETHIC_OPPOSED = ethic_xenophile
+	}
+
+	demand = { # "ISOLATIONIST_NO_NOMAD_ATROCITIES"
+		title = "ISOLATIONIST_NO_NOMAD_ATROCITIES"
+		unfulfilled_title = "ISOLATIONIST_NOMAD_ATROCITIES"
+		desc = "ISOLATIONIST_NO_NOMAD_ATROCITIES_DESC"
+
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -25
+
+		potential = {
+			exists = owner
+			owner = {
+				is_nomadic = no
+				any_country = {
+					is_nomadic = yes
+					has_communications = root.owner
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = arkship_raid_purge_pops }
+			}
+		}
 	}
 
 	on_create = {

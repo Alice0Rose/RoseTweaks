@@ -1,0 +1,21 @@
+#PLACEHOLDER_TRIGGER_NAME = { always = no }
+
+# More Ethics and Civics
+is_capitalism = { always = no }
+is_green = { always = no }
+is_socialism = { always = no }
+is_industrial = { always = no }
+
+# Planet Diversity
+has_pd_modifier = { always = no }
+pd_is_ocean = { always = no }
+pd_is_desert = { always = no }
+pd_is_continental = { always = no }
+pd_is_savannah = { always = no }
+pd_is_alpine = { always = no }
+pd_is_arctic = { always = no }
+pd_is_arid = { always = no }
+pd_is_tropical = { always = no }
+pd_is_tundra = { always = no }
+pd_is_planet_class_gaia = { always = no }
+pd_ocean_modifier = { always = no }

@@ -106,6 +106,7 @@ civic_mining_guilds = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
+		is_nomadic = no
 		civics = {
 			NOT = {
 				value = civic_tankbound
@@ -136,7 +137,7 @@ civic_mining_guilds = {
 	modifier = {
 		planet_miners_minerals_produces_add = 1
 		add_attunement_the_instrument_of_desire = @civic_attunement1
-		planet_miners_unity_produces_add = 0.5
+		planet_miners_unity_produces_add = 1
 	}
 }
 
@@ -211,6 +212,7 @@ civic_idyllic_bloom = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
+		is_nomadic = no
 		species_class = {
 			OR = {
 				value = FUN
@@ -406,6 +408,7 @@ civic_sovereign_guardianship = {
 		}
 	}
 	possible = {
+		is_nomadic = no
 		ethics = {
 			NOT = {
 				value = ethic_fanatic_pacifist

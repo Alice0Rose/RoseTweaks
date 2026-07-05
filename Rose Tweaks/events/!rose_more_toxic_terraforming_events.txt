@@ -24,7 +24,7 @@ event = {
 						100 = {}
 						15 = { #Detox only gives you this. About 50 planets in a huge galaxy
 							add_modifier = { modifier = toxic_terraforming_candidate }
-							set_planet_flag = toxic_terraforming_candidate
+							set_carrier_flag = toxic_terraforming_candidate
 							complex_trigger_modifier = {
 								trigger = check_galaxy_setup_value
 								parameters = {

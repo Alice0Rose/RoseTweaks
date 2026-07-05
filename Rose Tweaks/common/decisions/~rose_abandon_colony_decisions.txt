@@ -59,7 +59,7 @@ decision_rose_abandon_colony = {
 		
 		# Event to abandon colony
 		hidden_effect = {
-			planet_event = { id = rose_abandon_colony.1 }
+			carrier_event = { id = rose_abandon_colony.1 }
 		}
 	}
 

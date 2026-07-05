@@ -7,26 +7,32 @@ decision_rose_orbital_ring = {
 	resources = {
 		category = decisions
 		cost = {
+			influence = 50
+		}
+		cost = {
 			trigger = {
 				owner = { country_uses_bio_ships = no }
 			}
-			influence = 50
-			alloys = 1000
+			alloys = @starhold_cost
 		}
 		cost = {
 			trigger = {
 				owner = { country_uses_bio_ships = yes }
 			}
-			influence = 50
-			alloys = 500
-			food = 1750
+			alloys = @starhold_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				owner = { country_uses_bio_ships = yes }
+			}
+			food = @starhold_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
 	potential = {
-		exists = owner
-		
-		owner = {
+		owner? = {
 			# Prevents AI empires from getting the decision	
 			is_ai = no
 			
@@ -70,18 +76,18 @@ decision_rose_orbital_ring = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			NOR = {
-				has_planet_flag = megastructure
+				has_carrier_flag = megastructure
 				AND = {
-					has_planet_flag = has_megastructure
+					has_carrier_flag = has_megastructure
 					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
 					NOR = {
-						has_planet_flag = has_payback_habitat
+						has_carrier_flag = has_payback_habitat
 						any_megastructure = {
 							is_megastructure_type = grand_archive_0
 						}
 					}
 				}
-				has_planet_flag = ruined_orbital_ring_planet
+				has_carrier_flag = ruined_orbital_ring_planet
 				solar_system = {
 					has_star_flag = ring_world_built
 				}
@@ -105,7 +111,7 @@ decision_rose_orbital_ring = {
 		custom_tooltip = {
 			fail_text = "requires_no_orbital_debris"
 			NOT = {
-				has_planet_flag = has_orbital_debris
+				has_carrier_flag = has_orbital_debris
 			}
 		}
 		
@@ -155,15 +161,26 @@ decision_rose_orbital_ring = {
 			}
 			
 			# If the planet becomes a megastructure (I don't think this can happen)
-			has_planet_flag = megastructure
+			has_carrier_flag = megastructure
+		
+			# If you build an orbital ring manually before the decision can finish
+			exists = orbital_defence
 		
 			# If the planet gets some other megastructure built on it other than the Grand Archive or Payback habitat
 			AND = {
-				has_planet_flag = has_megastructure
-				NOR = {
-					has_planet_flag = has_payback_habitat
-					any_megastructure = {
-						is_megastructure_type = grand_archive_0
+				has_carrier_flag = has_megastructure
+				NOT = {
+					owner = {
+						# Returns true if there are no unallowed megastructures on the planet
+						count_owned_megastructure = {
+							count = 0
+							limit = {
+								built_on_planet = yes
+								planet = { is_same_value = root } # Is on placement planet
+								NOT = { is_megastructure_type = grand_archive_0 } # Is not Grand Archive
+								NOT = { is_megastructure_type = habitat_central_complex } # Is not Paypack Habitat
+							}
+						}
 					}
 				}
 			}
@@ -172,7 +189,7 @@ decision_rose_orbital_ring = {
 			is_artificial = yes
 		
 			# If the planet liters too much in orbit and creates debris
-			has_planet_flag = has_orbital_debris
+			has_carrier_flag = has_orbital_debris
 		}
  	}
 
@@ -185,7 +202,7 @@ decision_rose_orbital_ring = {
 				}
 				add_resource = {
 					influence = 50
-					alloys = 1000
+					alloys = @starhold_cost
 				}
 			}
 			if = {
@@ -194,8 +211,14 @@ decision_rose_orbital_ring = {
 				}
 				add_resource = {
 					influence = 50
-					alloys = 500
-					food = 1750
+				}
+				add_resource = {
+					alloys = @starhold_cost
+					mult = 0.5
+				}
+				add_resource = {
+					food = @starhold_cost
+					mult = @halved_alloy_to_food_cost_ratio
 				}
 			}
 		}
@@ -205,7 +228,7 @@ decision_rose_orbital_ring = {
 		custom_tooltip = decision_rose_orbital_ring_effects
 		
 		hidden_effect = {
-			set_planet_flag = has_megastructure
+			set_carrier_flag = has_megastructure
 			save_event_target_as = orbital_ring_planet
 
 			if = {
@@ -239,28 +262,40 @@ decision_rose_orbital_ring_2 = {
 	enactment_time = 810
 
 	resources = {
-		category = decisions
+		category = megastructures
 		cost = {
-			trigger = {
-				owner = { country_uses_bio_ships = no }
-			}
-			influence = 150
-			alloys = 2500
+			influence = 100
 		}
 		cost = {
 			trigger = {
-				owner = { country_uses_bio_ships = yes }
+				from = {
+					owner = { country_uses_bio_ships = no }
+				}
 			}
-			influence = 150
-			alloys = 1250
-			food = 4375
+			alloys = @starfort_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					owner = { country_uses_bio_ships = yes }
+				}
+			}
+			alloys = @starfort_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					owner = { country_uses_bio_ships = yes }
+				}
+			}
+			food = @starfort_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
 	potential = {
-		exists = owner
-		
-		owner = {
+		owner? = {
 			# Prevents AI empires from getting the decision	
 			is_ai = no
 			
@@ -304,18 +339,18 @@ decision_rose_orbital_ring_2 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			NOR = {
-				has_planet_flag = megastructure
+				has_carrier_flag = megastructure
 				AND = {
-					has_planet_flag = has_megastructure
+					has_carrier_flag = has_megastructure
 					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
 					NOR = {
-						has_planet_flag = has_payback_habitat
+						has_carrier_flag = has_payback_habitat
 						any_megastructure = {
 							is_megastructure_type = grand_archive_0
 						}
 					}
 				}
-				has_planet_flag = ruined_orbital_ring_planet
+				has_carrier_flag = ruined_orbital_ring_planet
 				solar_system = {
 					has_star_flag = ring_world_built
 				}
@@ -339,7 +374,7 @@ decision_rose_orbital_ring_2 = {
 		custom_tooltip = {
 			fail_text = "requires_no_orbital_debris"
 			NOT = {
-				has_planet_flag = has_orbital_debris
+				has_carrier_flag = has_orbital_debris
 			}
 		}
 		
@@ -396,15 +431,26 @@ decision_rose_orbital_ring_2 = {
 			}
 			
 			# If the planet becomes a megastructure (I don't think this can happen)
-			has_planet_flag = megastructure
+			has_carrier_flag = megastructure
+		
+			# If you build an orbital ring manually before the decision can finish
+			exists = orbital_defence
 		
 			# If the planet gets some other megastructure built on it other than the Grand Archive or Payback habitat
 			AND = {
-				has_planet_flag = has_megastructure
-				NOR = {
-					has_planet_flag = has_payback_habitat
-					any_megastructure = {
-						is_megastructure_type = grand_archive_0
+				has_carrier_flag = has_megastructure
+				NOT = {
+					owner = {
+						# Returns true if there are no unallowed megastructures on the planet
+						count_owned_megastructure = {
+							count = 0
+							limit = {
+								built_on_planet = yes
+								planet = { is_same_value = root } # Is on placement planet
+								NOT = { is_megastructure_type = grand_archive_0 } # Is not Grand Archive
+								NOT = { is_megastructure_type = habitat_central_complex } # Is not Paypack Habitat
+							}
+						}
 					}
 				}
 			}
@@ -413,7 +459,7 @@ decision_rose_orbital_ring_2 = {
 			is_artificial = yes
 		
 			# If the planet liters too much in orbit and creates debris
-			has_planet_flag = has_orbital_debris
+			has_carrier_flag = has_orbital_debris
 		}
  	}
 
@@ -425,8 +471,8 @@ decision_rose_orbital_ring_2 = {
 					owner = { country_uses_bio_ships = no }
 				}
 				add_resource = {
-					influence = 150
-					alloys = 2500
+					influence = 100
+					alloys = @starfort_cost
 				}
 			}
 			if = {
@@ -434,9 +480,15 @@ decision_rose_orbital_ring_2 = {
 					owner = { country_uses_bio_ships = yes }
 				}
 				add_resource = {
-					influence = 150
-					alloys = 1250
-					food = 4375
+					influence = 100
+				}
+				add_resource = {
+					alloys = @starfort_cost
+					mult = 0.5
+				}
+				add_resource = {
+					food = @starfort_cost
+					mult = @halved_alloy_to_food_cost_ratio
 				}
 			}
 		}
@@ -446,7 +498,7 @@ decision_rose_orbital_ring_2 = {
 		custom_tooltip = decision_rose_orbital_ring_2_effects
 		
 		hidden_effect = {
-			set_planet_flag = has_megastructure
+			set_carrier_flag = has_megastructure
 			save_event_target_as = orbital_ring_planet
 
 			if = {
@@ -480,21 +532,35 @@ decision_rose_orbital_ring_3 = {
 	enactment_time = 1350
 
 	resources = {
-		category = decisions
+		category = megastructures
 		cost = {
-			trigger = {
-				owner = { country_uses_bio_ships = no }
-			}
-			influence = 300
-			alloys = 4500
+			influence = 150
 		}
 		cost = {
 			trigger = {
-				owner = { country_uses_bio_ships = yes }
+				from = {
+					owner = { country_uses_bio_ships = no }
+				}
 			}
-			influence = 300
-			alloys = 2250
-			food = 7875
+			alloys = @citadel_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					owner = { country_uses_bio_ships = yes }
+				}
+			}
+			alloys = @citadel_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					owner = { country_uses_bio_ships = yes }
+				}
+			}
+			food = @citadel_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
@@ -545,18 +611,18 @@ decision_rose_orbital_ring_3 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			NOR = {
-				has_planet_flag = megastructure
+				has_carrier_flag = megastructure
 				AND = {
-					has_planet_flag = has_megastructure
+					has_carrier_flag = has_megastructure
 					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
 					NOR = {
-						has_planet_flag = has_payback_habitat
+						has_carrier_flag = has_payback_habitat
 						any_megastructure = {
 							is_megastructure_type = grand_archive_0
 						}
 					}
 				}
-				has_planet_flag = ruined_orbital_ring_planet
+				has_carrier_flag = ruined_orbital_ring_planet
 				solar_system = {
 					has_star_flag = ring_world_built
 				}
@@ -580,7 +646,7 @@ decision_rose_orbital_ring_3 = {
 		custom_tooltip = {
 			fail_text = "requires_no_orbital_debris"
 			NOT = {
-				has_planet_flag = has_orbital_debris
+				has_carrier_flag = has_orbital_debris
 			}
 		}
 		
@@ -637,15 +703,26 @@ decision_rose_orbital_ring_3 = {
 			}
 			
 			# If the planet becomes a megastructure (I don't think this can happen)
-			has_planet_flag = megastructure
+			has_carrier_flag = megastructure
+		
+			# If you build an orbital ring manually before the decision can finish
+			exists = orbital_defence
 		
 			# If the planet gets some other megastructure built on it other than the Grand Archive or Payback habitat
 			AND = {
-				has_planet_flag = has_megastructure
-				NOR = {
-					has_planet_flag = has_payback_habitat
-					any_megastructure = {
-						is_megastructure_type = grand_archive_0
+				has_carrier_flag = has_megastructure
+				NOT = {
+					owner = {
+						# Returns true if there are no unallowed megastructures on the planet
+						count_owned_megastructure = {
+							count = 0
+							limit = {
+								built_on_planet = yes
+								planet = { is_same_value = root } # Is on placement planet
+								NOT = { is_megastructure_type = grand_archive_0 } # Is not Grand Archive
+								NOT = { is_megastructure_type = habitat_central_complex } # Is not Paypack Habitat
+							}
+						}
 					}
 				}
 			}
@@ -654,7 +731,7 @@ decision_rose_orbital_ring_3 = {
 			is_artificial = yes
 		
 			# If the planet liters too much in orbit and creates debris
-			has_planet_flag = has_orbital_debris
+			has_carrier_flag = has_orbital_debris
 		}
  	}
 
@@ -666,8 +743,8 @@ decision_rose_orbital_ring_3 = {
 					owner = { country_uses_bio_ships = no }
 				}
 				add_resource = {
-					influence = 300
-					alloys = 4500
+					influence = 150
+					alloys = @citadel_cost
 				}
 			}
 			if = {
@@ -675,9 +752,15 @@ decision_rose_orbital_ring_3 = {
 					owner = { country_uses_bio_ships = yes }
 				}
 				add_resource = {
-					influence = 300
-					alloys = 2250
-					food = 7875
+					influence = 150
+				}
+				add_resource = {
+					alloys = @citadel_cost
+					mult = 0.5
+				}
+				add_resource = {
+					food = @citadel_cost
+					mult = @halved_alloy_to_food_cost_ratio
 				}
 			}
 		}
@@ -687,7 +770,7 @@ decision_rose_orbital_ring_3 = {
 		custom_tooltip = decision_rose_orbital_ring_3_effects
 		
 		hidden_effect = {
-			set_planet_flag = has_megastructure
+			set_carrier_flag = has_megastructure
 			save_event_target_as = orbital_ring_planet
 
 			if = {

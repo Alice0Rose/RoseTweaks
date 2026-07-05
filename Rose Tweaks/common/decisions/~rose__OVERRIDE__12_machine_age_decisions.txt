@@ -47,7 +47,7 @@ decision_server_shut_down = {
 decision_nanotech_swarm_consume_world = {
 	icon = decision_tidal_lock_planet
 	sound = event_structural_collapse
-
+	important = yes
 	#enactment_time = 360
 	resources = {
 		category = decisions
@@ -62,20 +62,20 @@ decision_nanotech_swarm_consume_world = {
 		can_have_habitable_deposits = yes
 		#is_capital = no
 		NOT = {
-			has_planet_flag = being_devoured
+			has_carrier_flag = being_devoured
 		}
 		NOT = { has_designation = col_nanotech_world }
 	}
 
 	effect = {
 		custom_tooltip = decision_nanotech_swarm_consume_world_effect_desc
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			days = 360
 			flag = recently_eaten_planet
 		}
 		hidden_effect = {
-			set_planet_flag = colony_event
-			set_planet_flag = being_devoured
+			set_carrier_flag = colony_event
+			set_carrier_flag = being_devoured
 			add_modifier = {
 				modifier = being_devoured_modifier_nanotech
 				days = -1

@@ -66,6 +66,7 @@ cyber_creed_labor = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -615,6 +616,7 @@ cyber_creed_war = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -1168,6 +1170,7 @@ cyber_creed_construction = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -1721,6 +1724,7 @@ cyber_creed_research = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -2283,6 +2287,7 @@ cyber_creed_general = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -2693,6 +2698,7 @@ cyber_creed_labor_2 = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -3239,6 +3245,7 @@ cyber_creed_war_2 = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -3789,6 +3796,7 @@ cyber_creed_construction_2 = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -4339,6 +4347,7 @@ cyber_creed_research_2 = {
 
 	can_join_faction = {
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {

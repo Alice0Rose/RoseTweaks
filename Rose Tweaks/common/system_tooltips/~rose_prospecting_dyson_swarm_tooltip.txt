@@ -48,8 +48,8 @@ system_prospecting_dyson_swarm_title_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -223,8 +223,8 @@ system_prospecting_dyson_swarm_energy_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -295,8 +295,8 @@ system_prospecting_dyson_swarm_minerals_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -367,8 +367,8 @@ system_prospecting_dyson_swarm_food_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -430,8 +430,8 @@ system_prospecting_dyson_swarm_consumergoods_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -492,8 +492,8 @@ system_prospecting_dyson_swarm_alloys_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -560,8 +560,8 @@ system_prospecting_dyson_swarm_unity_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -623,8 +623,8 @@ system_prospecting_dyson_swarm_physics_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -696,8 +696,8 @@ system_prospecting_dyson_swarm_society_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -769,8 +769,8 @@ system_prospecting_dyson_swarm_engineering_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -841,8 +841,8 @@ system_prospecting_dyson_swarm_motes_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -907,8 +907,8 @@ system_prospecting_dyson_swarm_gases_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -974,8 +974,8 @@ system_prospecting_dyson_swarm_crystals_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -1040,8 +1040,8 @@ system_prospecting_dyson_swarm_livingmetal_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -1102,8 +1102,8 @@ system_prospecting_dyson_swarm_zro_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -1168,8 +1168,8 @@ system_prospecting_dyson_swarm_darkmatter_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -1233,8 +1233,8 @@ system_prospecting_dyson_swarm_threads_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -1297,8 +1297,8 @@ system_prospecting_dyson_swarm_artifacts_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			
@@ -1367,8 +1367,8 @@ system_prospecting_dyson_swarm_trade_tooltip = {
 			is_star = yes
 			
 			NOR = { 
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				has_anomaly = yes
 			}
 			

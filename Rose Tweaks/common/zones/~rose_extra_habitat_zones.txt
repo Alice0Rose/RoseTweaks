@@ -9,9 +9,13 @@ zone_rose_habitat_food = {
 	}
 
 	unlock = { # planet scope
-		hidden_trigger = { exists = owner }
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
 		owner = {
-			is_wilderness_empire = no
 			has_technology = tech_hydroponics
 		}
 	}
@@ -49,6 +53,29 @@ zone_rose_habitat_food = {
 			planet_is_habitat_equivalent = yes
 		}
 		job_technician_add = -100
+		mult = owner.value:hab_void_dweller_jobs
+	}
+	
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				# "is_regular_empire" scripted trigger but minus the gestalt exclusion
+				OR = {
+					is_country_type = default
+					#for checks in buildings and districts
+					is_country_type = awakened_marauders
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+					is_country_type = exiled
+				}
+				
+				is_fallen_empire_spiritualist = no
+				is_gestalt = yes
+			}
+			planet_is_habitat_equivalent = yes
+		}
+		job_technician_drone_add = -100
 		mult = owner.value:hab_void_dweller_jobs
 	}
 

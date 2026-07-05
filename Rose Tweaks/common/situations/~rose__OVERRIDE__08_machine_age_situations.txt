@@ -3,6 +3,7 @@ situation_synthetic_fertility_synthesization = {
 	picture = GFX_evt_robot_assembly_plant
 	complete_icon_frame = GFX_situation_outcome_frame_green
 	complete_icon = GFX_situation_outcome_ascension
+	situation_log_category = empire_concerns
 	on_progress_complete = {
 		custom_tooltip = situation_synthetic_fertility_synthesization_outcome
 		hidden_effect = {
@@ -125,6 +126,7 @@ situation_digitization = {
 	picture = GFX_evt_synth_situation
 	complete_icon_frame = GFX_situation_outcome_frame_green
 	complete_icon = GFX_situation_outcome_ascension
+	situation_log_category = urgent_matters
 	on_progress_complete = {
 		custom_tooltip = "situation_digitization_outcome"
 		hidden_effect = {
@@ -312,7 +314,7 @@ situation_digitization = {
 			desc = "situation_digitization_ongoing_desc"
 			has_situation_flag = digitization_ongoing
 			owner = {
-				any_owned_planet = {
+				any_owned_colony = {
 					has_active_building = building_identity_complex
 				}
 			}
@@ -322,7 +324,7 @@ situation_digitization = {
 			desc = "situation_identity_complex_needed_desc"
 			owner = {
 				NOT = {
-					any_owned_planet = {
+					any_owned_colony = {
 						has_active_building = building_identity_complex
 					}
 				}
@@ -338,7 +340,7 @@ situation_digitization = {
 		trigger = {
 			owner = {
 				NOT = {
-					any_owned_planet = {
+					any_owned_colony = {
 						has_active_building = building_identity_complex
 					}
 				}

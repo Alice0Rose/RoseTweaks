@@ -74,7 +74,7 @@ leader_trait_rose_nanotech = {
 		}
 		planet_buildings_nanites_upkeep_mult = -0.1
 		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_soldiers_produces_mult = 0.3
+		pop_soldier_bonus_workforce_mult = 0.3
 		planet_soldiers_nanites_upkeep_add = 3
 		planet_soldiers_alloys_upkeep_mult = -0.75
 	}
@@ -85,7 +85,7 @@ leader_trait_rose_nanotech = {
 		}
 		planet_buildings_nanites_upkeep_mult = -0.05
 		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_soldiers_produces_mult = 0.15
+		pop_soldier_bonus_workforce_mult = 0.15
 		planet_soldiers_nanites_upkeep_add = 1.5
 		planet_soldiers_alloys_upkeep_mult = -0.375
 	}

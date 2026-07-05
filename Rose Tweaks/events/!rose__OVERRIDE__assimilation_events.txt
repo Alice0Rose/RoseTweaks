@@ -1,7 +1,7 @@
 namespace = assimilation
 
 # Cyborg Assimilation - Driven Assimilator or Regular Empire
-planet_event = {
+carrier_event = {
 	id = assimilation.200
 	hide_window = yes
 	is_triggered_only = yes
@@ -18,89 +18,88 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_cyborg_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_cyborg_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_cybernetic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_hive_mind
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_cybernetic
+						}
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_hive_mind
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_robot_latent_psionic
+								remove_trait = trait_psionic
+								remove_trait = trait_robot_psionic
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
+								}
+							}
+						}
+					}
+				}
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
+						limit = {
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
+						}
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -120,91 +119,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_cyborg_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_cybernetic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_hive_mind
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
 					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -226,7 +141,7 @@ planet_event = {
 					}
 				}
 			}
-		}	
+		}
 
 		owner = { #Only doing it once since assimilating more than 100 pops a month is hard
 			if = {
@@ -253,7 +168,7 @@ planet_event = {
 }
 
 # Cyborg Assimilation - Hive Mind
-planet_event = {
+carrier_event = {
 	id = assimilation.210
 	hide_window = yes
 	is_triggered_only = yes
@@ -270,210 +185,102 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_cyborg_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_cyborg_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-								trait = trait_cybernetic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = civilian
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 5
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_hive_mind
+							trait = trait_cybernetic
+						}
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_robot_latent_psionic
+								remove_trait = trait_psionic
+								remove_trait = trait_robot_psionic
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
 								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
 							}
 						}
 					}
 				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_cyborg_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
 						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
 						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-								trait = trait_cybernetic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
+						save_event_target_as = target_species
 					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					create_pop_group = {
+						pop_group = event_target:old_pop_group
+						species = event_target:target_species
+						size = 0
+						category = maintenance_drone
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:old_pop_group
+								target = this
+								amount = 5
 							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = maintenance_drone
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 5
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
+							set_timed_pop_group_flag = {
+								flag = already_assimilated
+								days = 15
 							}
+							apply_post_assimilation_effects = yes
 						}
 					}
 				}
@@ -518,7 +325,7 @@ planet_event = {
 }
 
 # Psionic Assimilation
-planet_event = {
+carrier_event = {
 	id = assimilation.300
 	hide_window = yes
 	is_triggered_only = yes
@@ -534,93 +341,92 @@ planet_event = {
 	immediate = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
-		
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+		while = {
+			count = assimilation_counter
+
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_psionic_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_psionic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_hive_mind
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_cybernetic
-									remove_trait = trait_limited_cybernetic
-									inline_script = {
-										script = traits/remove_all_cybernetic_traits
-									}
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_psionic
+						}
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_hive_mind
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_robot_latent_psionic
+								remove_trait = trait_cybernetic
+								remove_trait = trait_limited_cybernetic
+								inline_script = {
+									script = traits/remove_all_cybernetic_traits
+								}
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
+								}
+							}
+						}
+					}
+				}
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
+						limit = {
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
+						}
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -640,94 +446,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_psionic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_hive_mind
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_cybernetic
-									remove_trait = trait_limited_cybernetic
-									inline_script = {
-										script = traits/remove_all_cybernetic_traits
-									}
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
 					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -777,7 +496,7 @@ planet_event = {
 
 
 # Psionic Assimilation - Hive Mind
-planet_event = {
+carrier_event = {
 	id = assimilation.310
 	hide_window = yes
 	is_triggered_only = yes
@@ -794,231 +513,112 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_psionic_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-								trait = trait_psionic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_cybernetic
-									inline_script = {
-										script = traits/remove_all_cybernetic_traits
-									}
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = civilian
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 5
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
-							}
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_hive_mind
+							trait = trait_psionic
 						}
-						owner = {
-							if = {
-								limit = { has_ascension_perk = ap_become_the_crisis }
-								while = {
-									count = 5
-									complete_crisis_objective = crisobj_purge_pops
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_robot_latent_psionic
+								remove_trait = trait_cybernetic
+								inline_script = {
+									script = traits/remove_all_cybernetic_traits
+								}
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
 								}
 							}
 						}
 					}
 				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
 						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
 						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-								trait = trait_psionic
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					create_pop_group = {
+						pop_group = event_target:old_pop_group
+						species = event_target:target_species
+						size = 0
+						category = maintenance_drone
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:old_pop_group
+								target = this
+								amount = 5
 							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_cybernetic
-									inline_script = {
-										script = traits/remove_all_cybernetic_traits
-									}
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
+							set_timed_pop_group_flag = {
+								flag = already_assimilated
+								days = 15
 							}
+							apply_post_assimilation_effects = yes
 						}
 					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = maintenance_drone
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 5
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
-							}
-						}
-						owner = {
-							if = {
-								limit = { has_ascension_perk = ap_become_the_crisis }
-								while = {
-									count = 5
-									complete_crisis_objective = crisobj_purge_pops
-								}
+					owner = {
+						if = {
+							limit = { has_ascension_perk = ap_become_the_crisis }
+							while = {
+								count = 5
+								complete_crisis_objective = crisobj_purge_pops
 							}
 						}
 					}
@@ -1032,7 +632,7 @@ planet_event = {
 }
 
 # Psionic Assimilation - Machine
-planet_event = {
+carrier_event = {
 	id = assimilation.320
 	hide_window = yes
 	is_triggered_only = yes
@@ -1049,121 +649,57 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
 					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# Machine Assimilation just turns you into the founder species
-					root.owner.species = {
-						save_event_target_as = target_species
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = civilian
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 5
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
-							}
-						}
-						owner = {
-							if = {
-								limit = { has_ascension_perk = ap_become_the_crisis }
-								while = {
-									count = 5
-									complete_crisis_objective = crisobj_purge_pops
-								}
-							}
-						}
+					has_psionic_assimilation_living_standard = {
+						COUNTRY = root.owner
 					}
 				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# Machine Assimilation just turns you into the founder species
-					root.owner.species = {
-						save_event_target_as = target_species
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = maintenance_drone
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 5
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# Machine Assimilation just turns you into the founder species
+				root.owner.species = {
+					save_event_target_as = target_species
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					create_pop_group = {
+						pop_group = event_target:old_pop_group
+						species = event_target:target_species
+						size = 0
+						category = maintenance_drone
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:old_pop_group
+								target = this
+								amount = 5
 							}
+							set_timed_pop_group_flag = {
+								flag = already_assimilated
+								days = 15
+							}
+							apply_post_assimilation_effects = yes
 						}
-						owner = {
-							if = {
-								limit = { has_ascension_perk = ap_become_the_crisis }
-								while = {
-									count = 5
-									complete_crisis_objective = crisobj_purge_pops
-								}
+					}
+					owner = {
+						if = {
+							limit = { has_ascension_perk = ap_become_the_crisis }
+							while = {
+								count = 5
+								complete_crisis_objective = crisobj_purge_pops
 							}
 						}
 					}
@@ -1177,7 +713,7 @@ planet_event = {
 }
 
 # Synthetic/Machine Assimilation
-planet_event = {
+carrier_event = {
 	id = assimilation.400
 	hide_window = yes
 	is_triggered_only = yes
@@ -1194,36 +730,35 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_synthetic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
 					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
+					has_synthetic_assimilation_living_standard = {
+						COUNTRY = root.owner
 					}
-					# Synthetic/Machine Assimilation just turns you into the founder species
-					root.owner.species = {
-						save_event_target_as = target_species
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# Synthetic/Machine Assimilation just turns you into the founder species
+				root.owner.species = {
+					save_event_target_as = target_species
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1243,38 +778,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_synthetic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# Synthetic/Machine Assimilation just turns you into the founder species
-					root.owner.species = {
-						save_event_target_as = target_species
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					else = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1322,7 +826,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = assimilation.415
 	hide_window = yes
 	is_triggered_only = yes
@@ -1338,65 +842,64 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						is_robotic_species = yes
-						has_citizenship_type = { type = citizenship_assimilation country = root.owner }
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
 					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# Synthetic/Machine Assimilation just turns you into the founder species
-					root.owner_species = {
-						save_event_target_as = target_species
-						if = {
-							limit = {
-								root.owner = {
-									has_modifier = synthetic_dawn
-								}
-								NOT = {
-									has_trait = trait_robot_synthetic_dawn
-								}
+					is_robotic_species = yes
+					has_citizenship_type = { type = citizenship_assimilation country = root.owner }
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# Synthetic/Machine Assimilation just turns you into the founder species
+				root.owner_species = {
+					save_event_target_as = target_species
+					if = {
+						limit = {
+							root.owner = {
+								has_modifier = synthetic_dawn
 							}
-							create_species = {
-								is_mod = yes
-								name = this
-								plural = this
-								class = this
-								portrait = this
-								traits = this
-								can_be_modified = this
-								homeworld = this
-								namelist = this
-								gender = this
-								effect = {
-									modify_species = {
-										add_trait = trait_robot_synthetic_dawn
-										effect = {
-											save_event_target_as = target_species
-										}
+							NOT = {
+								has_trait = trait_robot_synthetic_dawn
+							}
+						}
+						create_species = {
+							is_mod = yes
+							name = this
+							plural = this
+							class = this
+							portrait = this
+							traits = this
+							can_be_modified = this
+							homeworld = this
+							namelist = this
+							gender = this
+							effect = {
+								modify_species = {
+									add_trait = trait_robot_synthetic_dawn
+									effect = {
+										save_event_target_as = target_species
 									}
 								}
 							}
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1416,67 +919,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						is_robotic_species = yes
-						has_citizenship_type = { type = citizenship_assimilation country = root.owner }
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# Synthetic/Machine Assimilation just turns you into the founder species
-					root.owner_species = {
-						save_event_target_as = target_species
-						if = {
-							limit = {
-								root.owner = {
-									has_modifier = synthetic_dawn
-								}
-								NOT = {
-									has_trait = trait_robot_synthetic_dawn
-								}
-							}
-							create_species = {
-								is_mod = yes
-								name = this
-								plural = this
-								class = this
-								portrait = this
-								traits = this
-								can_be_modified = this
-								homeworld = this
-								namelist = this
-								gender = this
-								effect = {
-									modify_species = {
-										add_trait = trait_robot_synthetic_dawn
-										effect = {
-											save_event_target_as = target_species
-										}
-									}
-								}
-							}
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					else = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1525,7 +968,7 @@ planet_event = {
 }
 
 # Hive Dissociation Assimilation
-planet_event = {
+carrier_event = {
 	id = assimilation.500
 	hide_window = yes
 	is_triggered_only = yes
@@ -1542,82 +985,81 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_dissociation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_dissociation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_hive_mind
-									remove_trait = trait_self_modified
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_hive_mind
+								remove_trait = trait_self_modified
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
+								}
+							}
+						}
+					}
+				}
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
+						limit = {
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
+						}
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1637,84 +1079,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_dissociation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_hive_mind
-									remove_trait = trait_self_modified
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
 					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1763,7 +1128,7 @@ planet_event = {
 }
 
 # Hive Mind Ego Assimilation
-planet_event = {
+carrier_event = {
 	id = assimilation.600
 	hide_window = yes
 	is_triggered_only = yes
@@ -1780,88 +1145,87 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_ego_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_ego_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_hive_mind
+						}
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_robot_latent_psionic
+								remove_trait = trait_psionic
+								remove_trait = trait_robot_psionic
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
+								}
+							}
+						}
+					}
+				}
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
+						limit = {
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
+						}
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -1881,90 +1245,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_ego_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
 					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -2013,7 +1294,7 @@ planet_event = {
 }
 
 # Wilderness Ego Assimilation
-planet_event = {
+carrier_event = {
 	id = assimilation.610
 	hide_window = yes
 	is_triggered_only = yes
@@ -2030,241 +1311,118 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_ego_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_ego_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-								trait = trait_wilderness
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									remove_trait = trait_incubator
-									remove_trait = trait_nomadic
-									remove_trait = trait_sedentary
-									remove_trait = trait_vat_grown
-									remove_trait = trait_nascent_stage
-									remove_trait = trait_auto_mod_biological
-									remove_trait = trait_auto_mod_overtuned
-									remove_trait = trait_auto_mod_cyborg
-									remove_trait = trait_adaptive_mutations
-									remove_trait = trait_malleable_genes
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = civilian
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 1
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
-							}
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_hive_mind
+							trait = trait_wilderness
 						}
-						kill_pop_group = {
-							pop_group = event_target:old_pop_group
-							amount = 4
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_robot_latent_psionic
+								remove_trait = trait_psionic
+								remove_trait = trait_robot_psionic
+								remove_trait = trait_incubator
+								remove_trait = trait_nomadic
+								remove_trait = trait_sedentary
+								remove_trait = trait_vat_grown
+								remove_trait = trait_nascent_stage
+								remove_trait = trait_auto_mod_biological
+								remove_trait = trait_auto_mod_overtuned
+								remove_trait = trait_auto_mod_cyborg
+								remove_trait = trait_adaptive_mutations
+								remove_trait = trait_malleable_genes
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
+								}
+							}
+
 						}
 					}
 				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_ego_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
 						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
 						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_hive_mind
-								trait = trait_wilderness
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					create_pop_group = {
+						pop_group = event_target:old_pop_group
+						species = event_target:target_species
+						size = 0
+						category = maintenance_drone
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:old_pop_group
+								target = this
+								amount = 1
 							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_robot_latent_psionic
-									remove_trait = trait_psionic
-									remove_trait = trait_robot_psionic
-									remove_trait = trait_incubator
-									remove_trait = trait_nomadic
-									remove_trait = trait_sedentary
-									remove_trait = trait_vat_grown
-									remove_trait = trait_nascent_stage
-									remove_trait = trait_auto_mod_biological
-									remove_trait = trait_auto_mod_overtuned
-									remove_trait = trait_auto_mod_cyborg
-									remove_trait = trait_adaptive_mutations
-									remove_trait = trait_malleable_genes
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-
+							set_timed_pop_group_flag = {
+								flag = already_assimilated
+								days = 15
 							}
+							apply_post_assimilation_effects = yes
 						}
 					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
-						create_pop_group = {
-							pop_group = event_target:old_pop_group
-							species = event_target:target_species
-							size = 0
-							category = maintenance_drone
-							effect = {
-								transfer_pop_amount = {
-									source = event_target:old_pop_group
-									target = this
-									amount = 1
-								}
-								set_timed_pop_group_flag = {
-									flag = already_assimilated
-									days = 15
-								}
-								apply_post_assimilation_effects = yes
-							}
-						}
-						kill_pop_group = {
-							pop_group = event_target:old_pop_group
-							amount = 4
-						}
+					kill_pop_group = {
+						pop_group = event_target:old_pop_group
+						amount = 4
 					}
 				}
 			}
@@ -2295,7 +1453,7 @@ planet_event = {
 }
 
 # Shroud Inoculation Assimilation - Mindwardens
-planet_event = {
+carrier_event = {
 	id = assimilation.700
 	hide_window = yes
 	is_triggered_only = yes
@@ -2312,87 +1470,86 @@ planet_event = {
 		set_assimilation_counter_variable = yes		# Sets number of pops to assimilate to 4d25 + Auto-Modded Modifier
 		set_update_modifiers_batch = begin			# Freeze modifier calculation for performance
 
-		# Regular empires
-		if = {
-			limit = { root.owner = { is_gestalt = no } }
-			while = {
-				count = assimilation_counter
+		while = {
+			count = assimilation_counter
 
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
+			# Find a pop group with the right assimilation type
+			random_owned_pop_group = {
+				limit = {
+					NOT = {
+						has_pop_group_flag = already_assimilated
+					}
+					has_anti_psionic_assimilation_living_standard = {
+						COUNTRY = root.owner
+					}
+				}
+				# Save the pop group as an event target
+				save_event_target_as = old_pop_group
+				# Save their species as an event target
+				species = {
+					save_event_target_as = old_species
+				}
+				# If a modified species hasn't been created, create one
+				# and save them as an event target
+				if = {
 					limit = {
 						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_anti_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_cybernetic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_cybernetic
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
-					else = {
-						random_galaxy_species = {
-							limit = {
+							any_galaxy_species = {
 								has_species_flag = assimilation_species_of_species@event_target:old_species
 								has_species_flag = assimilation_species_of_empire@root.owner
 								is_same_species = event_target:old_species
 							}
-							save_event_target_as = target_species
 						}
 					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						traits = {
+							trait = trait_cybernetic
+						}
+						effect = {
+							modify_species = {
+								species = this
+								remove_trait = trait_cybernetic
+								remove_trait = trait_self_modified
+								remove_trait = trait_latent_psionic
+								remove_trait = trait_psionic
+								change_scoped_species = no
+
+								effect = {
+									set_species_flag = assimilation_species_of_species@event_target:old_species
+									set_species_flag = assimilation_species_of_empire@root.owner
+									save_event_target_as = target_species
+								}
+							}
+						}
+					}
+				}
+				# If a modified species does exist, save them as the event target
+				else = {
+					random_galaxy_species = {
+						limit = {
+							has_species_flag = assimilation_species_of_species@event_target:old_species
+							has_species_flag = assimilation_species_of_empire@root.owner
+							is_same_species = event_target:old_species
+						}
+						save_event_target_as = target_species
+					}
+				}
+				# Scope back to the planet
+				# Create the empty pop group
+				# and move pops into it
+				planet = {
+					if = {
+						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species
@@ -2412,89 +1569,7 @@ planet_event = {
 							}
 						}
 					}
-				}
-			}
-		}
-		# Gestalts
-		else = {
-			while = {
-				count = assimilation_counter
-
-				# Find a pop group with the right assimilation type
-				random_owned_pop_group = {
-					limit = {
-						NOT = {
-							has_pop_group_flag = already_assimilated
-						}
-						has_anti_psionic_assimilation_living_standard = {
-							COUNTRY = root.owner
-						}
-					}
-					# Save the pop group as an event target
-					save_event_target_as = old_pop_group
-					# Save their species as an event target
-					species = {
-						save_event_target_as = old_species
-					}
-					# If a modified species hasn't been created, create one
-					# and save them as an event target
-					if = {
-						limit = {
-							NOT = {
-								any_galaxy_species = {
-									has_species_flag = assimilation_species_of_species@event_target:old_species
-									has_species_flag = assimilation_species_of_empire@root.owner
-									is_same_species = event_target:old_species
-								}
-							}
-						}
-						create_species = {
-							is_mod = yes
-							name = this
-							plural = this
-							class = this
-							portrait = this
-							traits = this
-							can_be_modified = this
-							homeworld = this
-							namelist = this
-							gender = this
-							traits = {
-								trait = trait_cybernetic
-							}
-							effect = {
-								modify_species = {
-									species = this
-									remove_trait = trait_cybernetic
-									remove_trait = trait_self_modified
-									remove_trait = trait_latent_psionic
-									remove_trait = trait_psionic
-									change_scoped_species = no
-
-									effect = {
-										set_species_flag = assimilation_species_of_species@event_target:old_species
-										set_species_flag = assimilation_species_of_empire@root.owner
-										save_event_target_as = target_species
-									}
-								}
-							}
-						}
-					}
-					# If a modified species does exist, save them as the event target
 					else = {
-						random_galaxy_species = {
-							limit = {
-								has_species_flag = assimilation_species_of_species@event_target:old_species
-								has_species_flag = assimilation_species_of_empire@root.owner
-								is_same_species = event_target:old_species
-							}
-							save_event_target_as = target_species
-						}
-					}
-					# Scope back to the planet
-					# Create the empty pop group
-					# and move pops into it
-					planet = {
 						create_pop_group = {
 							pop_group = event_target:old_pop_group
 							species = event_target:target_species

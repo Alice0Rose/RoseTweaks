@@ -1,6 +1,6 @@
 wg_rose_blaze_vs_fe = {
 	casus_belli = cb_blaze
-	hide_if_no_cb = yes
+	hide = no_cb
 	total_war = yes
 
 	forbidden_peace_offers = {

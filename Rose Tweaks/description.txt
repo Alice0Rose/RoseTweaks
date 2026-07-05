@@ -20,7 +20,6 @@
 
 ## Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
-- Ascension tech agendas are heavily prioritized by AIs, pushing them to complete their ascensions more reliably and quickly than vanilla
 - Psionic Supremacy agenda is available to psionic individualistic machines
 - Nanotech Unstoppable Swarm agenda includes Nanite Interdictors too
 
@@ -28,7 +27,7 @@
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
 - The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 - The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic or T3 of Galactic Hyperthermia, or any natural world with the Environmentalist Civic
-- The "Create Ringworld Arcologies" Decision can be used to add 6 district slots to a Ringworld, and is only accessible if you have the Arcology Project AP (or the Master Builders AP if gestalt)
+- The "Create Ringworld Arcologies" Decision can be used to add 5 district slots to a Ringworld, and is only accessible if you have the Arcology Project AP (or the Master Builders AP if gestalt)
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 - Shutdown Servers decision for Virtual empires also destroys orbital rings to prevent outliner spam
 
@@ -73,7 +72,7 @@
 ## Civics:
 - Technocracy gives +0.5 Unity per researcher
 - Shadow Council gives +15% council agenda speed and +50% election term instead of election variance
-- Miners Guild gives +0.5 unity per miner
+- Miners Guild gives +1 unity per miner
 - Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
 - Idyllic Bloom gives your species the Bloomed trait from the start of the game and the Gaiaseeder blooms pops yearly and blooms more pops
 - Crusader Spirit gives +0.5 Unity from Soldiers
@@ -205,6 +204,7 @@
 - Clone Vats now can be upgraded 4 times if you have the Cloning Ascension instead of having to waste 4 building slots on building 4 of them o.O
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 - Synthetic Virtuality gives a trait to pops that gives -10% empire size from pops and -50% housing usage upon finishing the authority event chain
+- Nanite Interdictors now have an Artillery section without hangers but with more L slots
 
 ## Special Projects:
 - Adds a special project when you control Terminal Egress to destroy all other L-Gates except for one, limiting access to the L-Cluster
@@ -220,4 +220,3 @@
 - Fixed Cybernetic Creed not setting the correct founder species after cyberization if the Unified Creeds option was chosen
 - Fixed Justice Complex & upgrade FE building not giving 25%/50% automation for enforcers
 - Fixed orbital rings not checking if there was already an orbital ring on the planet before letting you start construction
-- Fixed clones not regaining the Backup Clone trait if the cloning path is chosen for the 2nd flexible tradition and you have a cloning authority

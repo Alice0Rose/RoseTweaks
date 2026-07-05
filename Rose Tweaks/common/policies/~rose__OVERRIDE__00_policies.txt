@@ -13,7 +13,7 @@ physics_research_policy = {
 			country_physics_tech_research_speed = @research_policy_speed
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 10
 		}
 	}
@@ -27,7 +27,7 @@ physics_research_policy = {
 			category_field_manipulation_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -41,7 +41,7 @@ physics_research_policy = {
 			category_particles_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -55,7 +55,7 @@ physics_research_policy = {
 			category_computing_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -73,7 +73,7 @@ society_research_policy = {
 			country_society_tech_research_speed = @research_policy_speed
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 10
 		}
 	}
@@ -87,7 +87,7 @@ society_research_policy = {
 			category_new_worlds_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -101,7 +101,7 @@ society_research_policy = {
 			category_statecraft_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -115,7 +115,7 @@ society_research_policy = {
 			category_biology_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -129,7 +129,7 @@ society_research_policy = {
 			category_military_theory_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -147,7 +147,7 @@ engineering_research_policy = {
 			country_engineering_tech_research_speed = @research_policy_speed
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 10
 		}
 	}
@@ -161,7 +161,7 @@ engineering_research_policy = {
 			category_materials_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -175,7 +175,7 @@ engineering_research_policy = {
 			category_propulsion_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -189,7 +189,7 @@ engineering_research_policy = {
 			category_voidcraft_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -203,7 +203,7 @@ engineering_research_policy = {
 			category_industry_draw_chance_mult = @research_policy_draw_chance
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -236,7 +236,7 @@ trade_policy = {
 			}
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -268,7 +268,7 @@ trade_policy = {
 
 		modifier = {}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1
 		}
 	}
@@ -306,7 +306,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -333,7 +333,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1000
 		}
 	}
@@ -359,7 +359,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1000
 		}
 	}
@@ -387,7 +387,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1000
 		}
 	}
@@ -407,7 +407,7 @@ trade_policy = {
 #			}
 #		}
 #
-#		AI_weight = {
+#		ai_weight = {
 #			factor = 0
 #		}
 #	}
@@ -434,7 +434,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 100
 		}
 	}
@@ -461,7 +461,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 100
 		}
 	}

@@ -3,6 +3,7 @@ orbital_ring_habitation = {
 	section = "HABITAT_ORBITAL_RING_SECTION"
 	construction_days = 360
 	starbase_type = orbital_ring
+	category = sm_colony_cat
 
 	potential = {
 		exists = owner
@@ -17,6 +18,11 @@ orbital_ring_habitation = {
 
 	show_in_tech = "tech_housing_2"
 	show_in_tech = "tech_housing_agrarian_idyll"
+
+	show_tech_unlock_if = {
+		has_overlord_dlc = yes
+		is_nomadic = no
+	}
 
 	resources = {
 		category = starbase_modules
@@ -34,7 +40,6 @@ orbital_ring_habitation = {
 		planet_max_districts_add = 1
 	}
 
-	# TODO_CD: needs new purpose as max buildings modifier is now obsolete
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet

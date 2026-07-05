@@ -9,6 +9,13 @@ ap_eternal_vigilance = {
 		}
 	}
 
+	potential = {
+		is_nomadic = no
+		NOT = {
+			has_ascension_perk = ap_eternal_vigilance
+		}
+	}
+
 	modifier = {
 		country_commander_cap_add = 1
 		shipclass_starbase_damage_mult = 0.25
@@ -34,12 +41,6 @@ ap_eternal_vigilance = {
 				id = rose_eternal_vigilance_policy.1
 				days = 270
 			}
-		}
-	}
-
-	potential = {
-		NOT = {
-			has_ascension_perk = ap_eternal_vigilance
 		}
 	}
 
@@ -128,6 +129,7 @@ ap_master_builders = {
 	}
 
 	potential = {
+		is_nomadic = no
 		NOT = {
 			has_ascension_perk = ap_master_builders
 		}
@@ -174,6 +176,7 @@ ap_arcology_project = {
 		NOT = {
 			has_ascension_perk = ap_arcology_project
 		}
+		is_nomadic = no
 	}
 
 	possible = {
@@ -252,6 +255,7 @@ ap_detox = {
 			has_ascension_perk = ap_detox
 			has_country_flag = knights_detox
 		}
+		is_nomadic = no
 	}
 
 	possible = {

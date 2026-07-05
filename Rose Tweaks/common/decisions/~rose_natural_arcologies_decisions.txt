@@ -26,8 +26,7 @@ decision_rose_natural_arcologies = {
 	potential = {
 		is_potential_for_natural_arcologies = yes	
 		NOT = { has_modifier = rose_natural_arcologies }
-		exists = owner
-		owner = { has_ascension_perk = ap_arcology_project }
+		owner? = { has_ascension_perk = ap_arcology_project }
 	}
 
 	allow = {
@@ -36,7 +35,7 @@ decision_rose_natural_arcologies = {
 			free_district_slots < 1
 			custom_tooltip = {
 				fail_text = legendary_leader_decision_arcology_project
-				NOT = { has_planet_flag = legendary_leader_planet }
+				NOT = { has_carrier_flag = legendary_leader_planet }
 			}
 		}
 		custom_tooltip = {
@@ -58,9 +57,9 @@ decision_rose_natural_arcologies = {
 		hidden_effect = {
 			add_modifier = { modifier = rose_natural_arcologies }
 			
-			set_planet_flag = uncapped_generator_districts
-			set_planet_flag = uncapped_mining_districts
-			set_planet_flag = uncapped_farming_districts
+			set_carrier_flag = uncapped_generator_districts
+			set_carrier_flag = uncapped_mining_districts
+			set_carrier_flag = uncapped_farming_districts
 			
 			relic_world_conversion_effect = {
 				DISTRICT = district_city

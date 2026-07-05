@@ -80,6 +80,7 @@ supremacist = {
 	can_join_faction = {
 		is_shackled_robot = no
 		can_think = yes
+		is_interlink_cyborg_pop = no
 		owner = {
 			is_pacifist = no
 		}
@@ -161,6 +162,7 @@ supremacist = {
 		trigger = {
 			owner = {
 				exists = ruler
+				exists = owner_species
 				OR = {
 					ruler = { is_same_species = owner_species }
 					AND = {
@@ -865,6 +867,32 @@ supremacist = {
 		ETHIC = ethic_xenophobe
 		ETHIC_FANATIC = ethic_fanatic_xenophobe
 		ETHIC_OPPOSED = ethic_xenophile
+	}
+
+	demand = { # "SUPREMACIST_CULL_THE_DRIFTERS"
+		title = "SUPREMACIST_CULL_THE_DRIFTERS"
+		unfulfilled_title = "SUPREMACIST_NO_CULL_THE_DRIFTERS"
+		desc = "SUPREMACIST_CULL_THE_DRIFTERS_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_nomadic = no
+				any_country = {
+					is_nomadic = yes
+					has_communications = root.owner
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = arkship_raid_purge_pops
+			}
+		}
 	}
 
 	on_create = {

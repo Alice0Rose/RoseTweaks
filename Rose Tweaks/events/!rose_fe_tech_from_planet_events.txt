@@ -20,7 +20,7 @@ country_event = {
 # This = Planet scope
 # From = Country scope (new owner)
 # FromFrom = Country scope (previous owner, if any)
-planet_event = {
+carrier_event = {
 	id = rose_fe_tech_from_planet.2
 	hide_window = yes
 	is_triggered_only = yes
@@ -28,12 +28,9 @@ planet_event = {
 	trigger = {
 		# Planet must have be a fallen empire planet or owned by a level 5 cosmogenesis empire
 		OR = {
-			has_planet_flag = fallen_empire_world
-			
+			has_carrier_flag = fallen_empire_world
 			AND = {
-				exists = fromfrom
-			
-				fromfrom = {
+				fromfrom? = {
 					OR = {
 						is_country_type = fallen_empire
 						is_country_type = awakened_fallen_empire

@@ -1,3 +1,0 @@
-﻿l_english:
- mod_job_enforcer_automated_workforce_mult: "[enforcer.GetIcon] [enforcer.GetNamePlural] $MOD_PLANET_AUTOMATED_WORKFORCE$"
- mod_job_patrol_drone_automated_workforce_mult: "[patrol_drone.GetIcon] [patrol_drone.GetNamePlural] $MOD_PLANET_AUTOMATED_WORKFORCE$"

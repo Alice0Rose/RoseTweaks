@@ -7,6 +7,7 @@ civic_hive_idyllic_bloom = {
 		authority = { value = auth_hive_mind }
 	}
 	possible = {
+		is_nomadic = no
 		species_class = {
 			OR = {
 				value = FUN
@@ -79,6 +80,7 @@ civic_hive_sovereign_guardianship = {
 		authority = { value = auth_hive_mind }
 	}
 	possible = {
+		is_nomadic = no
 		civics = {
 			NOR = {
 				value = civic_hive_devouring_swarm
@@ -176,6 +178,7 @@ civic_machine_sovereign_guardianship = {
 		authority = { value = auth_machine_intelligence }
 	}
 	possible = {
+		is_nomadic = no
 		civics = {
 			NOT = { value = civic_machine_terminator }
 		}

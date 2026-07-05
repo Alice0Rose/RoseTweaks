@@ -57,30 +57,28 @@ country_event = {
 }
 
 # Colony Ship stragglers gate
-planet_event = {
+carrier_event = {
 	id = rose_nanotech_traits.10
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		exists = owner
-		owner = { has_tradition = tr_nanotech_finish }
+		owner? = { has_tradition = tr_nanotech_finish }
 	}
 
 	immediate = {
-		planet_event = { id = rose_nanotech_traits.11 days = 2 }
+		carrier_event = { id = rose_nanotech_traits.11 days = 2 }
 	}
 }
 
 # Colony Ship stragglers become nanotech
-planet_event = {
+carrier_event = {
 	id = rose_nanotech_traits.11
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		exists = owner
-		owner = { has_tradition = tr_nanotech_finish }
+		owner? = { has_tradition = tr_nanotech_finish }
 		any_owned_pop_group = {
 			is_same_species = owner_main_species
 			NOT = { has_trait = trait_rose_nanotech }

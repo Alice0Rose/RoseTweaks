@@ -1,0 +1,222 @@
+﻿l_russia:
+ # Virtuality Balanced Policy
+ rose_virtuality_balanced_focus_flag_name: "Virtual Balanced Focus"
+ rose_virtuality_balanced_focus: "Virtual Balanced Focus"
+ rose_virtuality_balanced_focus_desc: "Balance is key, in life and in code.\n\n"
+
+ # Choose Starting Ruler Ethic
+ rose_choose_starting_ruler_ethic.2.name: "Ethical Considerations"
+ rose_choose_starting_ruler_ethic.2.desc: "When we embarked on our journey across the stars, our [Root.GetRulerTitle] [Root.GetRulerName] met with representatives from each of our empire's leading factions to discuss what [Root.Leader.GetHerHim] guiding ethics should be as [Root.Leader.GetSheHe] leads us into the future."
+ 
+ rose_choose_starting_ruler_ethic.2.a: "Focus on how we use force against others."
+ rose_choose_starting_ruler_ethic.2.b: "Focus on how we balance science and belief."
+ rose_choose_starting_ruler_ethic.2.c: "Focus on how we treat our citizens."
+ rose_choose_starting_ruler_ethic.2.d: "Focus on how we view other lifeforms."
+ rose_choose_starting_ruler_ethic.2.e: "Focus on how we conserve or exploit nature."
+ rose_choose_starting_ruler_ethic.2.f: "Focus on how we manage our economy."
+ 
+ # Civic Tooltip
+ CIVIC_NOT_MODDABLE_ONLY_ADD: "§RThis Civic cannot be manually added after the game has started.§!"
+ 
+ # Clone Vat Upgrades
+ building_rose_clone_vats_1: "$building_clone_vats$ Tier 2"
+ building_rose_clone_vats_1_desc: "$building_clone_vats_desc$"
+ building_rose_clone_vats_2: "$building_clone_vats$ Tier 3"
+ building_rose_clone_vats_2_desc: "$building_clone_vats_desc$"
+ building_rose_clone_vats_3: "$building_clone_vats$ Tier 4"
+ building_rose_clone_vats_3_desc: "$building_clone_vats_desc$"
+ 
+ # Eternal Vigilance Policy
+ ap_rose_eternal_vigilance_tt: "Every 9 months a §YDefense Platform§! will be built around every §YStarbase§! depending on the §Y$ap_eternal_vigilance$§! policy, up to a max of §Y33%§! capacity at the cost of a percentage of §Y$mod_country_alloys_produces_mult$§!"
+ policy_rose_eternal_vigilance_policy: "$ap_eternal_vigilance$"
+ policy_rose_eternal_vigilance_policy_desc: "A shield is only as strong as the one that holds it."
+ rose_eternal_vigilance_policy_full_spending: "Full Spending"
+ rose_eternal_vigilance_policy_full_spending_name: "$eternal_vigilance_full_spending$"
+ rose_eternal_vigilance_policy_full_spending_desc: "Every starbase needs to be properly defended. Spare no cost.\nAutomatically builds §YDefense Platforms§! around every §YStarbase§!"
+ rose_eternal_vigilance_policy_half_spending: "Half Spending"
+ rose_eternal_vigilance_policy_half_spending_name: "$eternal_vigilance_half_spending$"
+ rose_eternal_vigilance_policy_half_spending_desc: "Only our strongest redoubts require our support.\nAutomatically builds §YDefense Platforms§! around §YBastion Starbases§!"
+ rose_eternal_vigilance_policy_no_spending: "No Spending"
+ rose_eternal_vigilance_policy_no_spending_name: "$eternal_vigilance_no_spending$"
+ rose_eternal_vigilance_policy_no_spending_desc: "There is no need to further enhance our defenses.\nAutomatically builds §YDefense Platforms§! around no §YStarbases§!"
+ 
+ # Extra Colony Types
+ rose_col_ecu_fortress: "Ecumenopolis Fortress"
+ rose_col_ecu_fortress_tt: "A vast city-planet that specializes in military infrastructure."
+ rose_col_ecu_fortress_desc: "$col_fortress_desc$"
+ 
+ rose_col_ring_fortress: "Fortress Ring World"
+ rose_col_ring_fortress_tt: "Endless strongholds and emplacements cover this ring world creating an impregnable bastion guarding our empire."
+ rose_col_ring_fortress_desc: "$col_fortress_desc$"
+ 
+ # Extra Habitat Zones
+ zone_rose_habitat_food: "Expanded $zone_habitat_hydroponics$"
+ zone_rose_habitat_food_desc: "$zone_food_desc$"
+ 
+ # Extra Mutual Aid Policies
+ trade_policy_mutual_aid_minerals: "Mutual Aid (Mineral Focus)"
+ trade_conversion_mutual_aid_minerals_name: "$trade_policy_mutual_aid_minerals$"
+ trade_policy_mutual_aid_minerals_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y75%§! of our collected $r_trade$ earns us $r_energy$, $r_minerals$, and $r_unity$. Every £trade£ §Y1§! earns us £energy£ §Y0.4§!, £minerals£ §Y0.4§!, and £unity£ §Y0.1§!."
+ 
+ trade_policy_mutual_aid_food: "Mutual Aid (Food Focus)"
+ trade_conversion_mutual_aid_food_name: "$trade_policy_mutual_aid_food$" 
+ trade_policy_mutual_aid_food_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y75%§! of our collected $r_trade$ earns us $r_energy$, $r_food$, and $r_unity$. Every £trade£ §Y1§! earns us £energy£ §Y0.4§!, £food£ §Y0.4§!, and £unity£ §Y0.1§!."
+ 
+ # FE Building Fix
+ mod_job_enforcer_automated_workforce_mult: "[enforcer.GetIcon] [enforcer.GetNamePlural] $MOD_PLANET_AUTOMATED_WORKFORCE$"
+ mod_job_patrol_drone_automated_workforce_mult: "[patrol_drone.GetIcon] [patrol_drone.GetNamePlural] $MOD_PLANET_AUTOMATED_WORKFORCE$"
+ 
+ # FE Tech From Planets
+ rose_fe_tech_from_planet_counter: "Enigmatic Acquisition"
+ rose_fe_tech_from_planet_counter_desc: "Our conquest of technologically advanced empires has given us access to some of their enigmatic designs."
+ rose_fe_tech_from_planet_counter_tt: "Fallen Empire Planets Taken: §Y[This.rose_fe_planets_taken]§!\n\nEach planet taken up to §Y10§! unlocks the ability to research more §YFallen Empire Buildings§!"
+ 
+ # Genocidal Buff
+ rose_genocidal_buff_fanatic_purifier: "Glorious Purpose"
+ rose_genocidal_buff_fanatic_purifier_desc: "There is no greater purpose or motivator than the destruction of the xeno scourge."
+ rose_genocidal_buff_determined_exterminator: "Organic Eradication"
+ rose_genocidal_buff_determined_exterminator_desc: "Organic life is a threat to our existence that must be nullified."
+ rose_genocidal_buff_devouring_swarm: "Ravenous Slaughter"
+ rose_genocidal_buff_devouring_swarm_desc: "Life's purpose is to fuel our limitless expansion."
+ rose_genocidal_buff_scorched_world_herald: "Purifying Flames"
+ rose_genocidal_buff_scorched_world_herald_desc: "It is our responsibility to replace the loud cold of the universe with the silent warmth of our fire."
+ rose_genocidal_buff_crusader_spirit: "Liberation Mandate"
+ rose_genocidal_buff_crusader_spirit_desc: "It is our duty to liberate the people of the galaxy from their tyrannical and oppressive governments and grant them the perfection we have achieved for ourselves."
+ 
+ # Gestalt Federations
+ rose_logistics_traditions_completed: "Has completed §Y$tr_logistics_adopt$§!"
+ rose_synchronicity_traditions_completed: "Has completed §Y$tr_synchronicity_adopt$§!"
+ 
+ # Gestalt Psionic Sovereign
+ civic_rose_psionic_sovereign_gestalt: "Divine Consciousness"
+ civic_rose_psionic_sovereign_gestalt_desc: "This consciousness has achieved unparallelled attunement to the Shroud, enabling greater efficiency throughout its empire."
+ 
+ rose_gestalt_psionic_soverign.1.name: "A $civic_rose_psionic_sovereign_gestalt$"
+ rose_gestalt_psionic_soverign.1.desc: "The [Ruler.GetTitle] §H[Ruler.GetName]§! has reached critical attunement to the Shroud. Our empire will see greater efficiency from all psionic drones."
+ rose_gestalt_psionic_soverign.1.a: "Affirmative."
+ 
+ # L Cluster Lockdown
+ ROSE_L_CLUSTER_LOCKDOWN: "Lock Down L-Cluster"
+ ROSE_L_CLUSTER_LOCKDOWN_DESC: "With control over Terminal Egress, our scientists believe they have found a way to force all other L-Gates, save for one, to self-destruct. This would make the L-Cluster significantly easier to fortify by limiting the routes our enemies have to access it."
+
+ rose_l_cluster_lockdown.1.name: "$ROSE_L_CLUSTER_LOCKDOWN$"
+ rose_l_cluster_lockdown.1.desc: "$ROSE_L_CLUSTER_LOCKDOWN_DESC$"
+
+ rose_l_cluster_lockdown.3.name: "Lock Down L-Cluster"
+ rose_l_cluster_lockdown.3.desc: "We are ready to lock down the L-Cluster. All that is left to do is choose which L-Gate to leave open, as to not repeat the mistakes of the Gate-Builders."
+ rose_l_cluster_lockdown.3.a: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_1.GetName]§! system"
+ rose_l_cluster_lockdown.3.b: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_2.GetName]§! system"
+ rose_l_cluster_lockdown.3.c: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_3.GetName]§! system"
+ rose_l_cluster_lockdown.3.d: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_4.GetName]§! system"
+ rose_l_cluster_lockdown.3.e: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_5.GetName]§! system"
+ rose_l_cluster_lockdown.3.f: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_6.GetName]§! system"
+ rose_l_cluster_lockdown.3.g: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_7.GetName]§! system"
+ rose_l_cluster_lockdown.3.h: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_8.GetName]§! system"
+ rose_l_cluster_lockdown.3.i: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_9.GetName]§! system"
+ rose_l_cluster_lockdown.3.j: "Leave open the §Y[rose_l_cluster_lockdown_lgate_option_10.GetName]§! system"
+ 
+ rose_l_cluster_lockdown.4.name: "L-Cluster Locked Down"
+ rose_l_cluster_lockdown.4.desc: "We have received word that the §Y[from.GetName]§! has initiated a remote self-destruct of all L-Gates save for one. This will make accessing the L-Cluster much more difficult going forward."
+ 
+ # Megacorp Psionic Sovereign
+ civic_rose_psionic_sovereign_megacorp: "Divine Executive"
+ civic_rose_psionic_sovereign_megacorp_desc: "This society has appointed the $leader_trait_chosen_default$ - an individual endowed with unparalleled psionic might - as their chief executive."
+ utopia.3400.c: "Not even they are above profits.."
+ 
+ # Nanotech Armies
+ rose_nanite_swarm_army: "Nanite Swarm"
+ rose_nanite_swarm_army_desc: "An endless and unwavering swarm of nanites able to deconstruct matter, living or otherwise, in an instant."
+ 
+ # Nanotech Colony Types
+ rose_col_trade_nanotech: "Nanotech Trade World"
+ rose_col_trade_nanotech_tt: "$col_city_tt$"
+ rose_col_trade_nanotech_desc: "$col_city_desc$"
+
+ rose_col_mining_nanotech: "Nanotech Mining World"
+ rose_col_mining_nanotech_tt: "$col_mining_tt$"
+ rose_col_mining_nanotech_desc: "$col_mining_desc$"
+
+ rose_col_generator_nanotech: "Nanotech Generator World"
+ rose_col_generator_nanotech_tt: "$col_generator_tt$"
+ rose_col_generator_nanotech_desc: "$col_generator_desc$"
+
+ rose_col_foundry_nanotech: "Nanotech Forge World"
+ rose_col_foundry_nanotech_tt: "$col_foundry_tt$"
+ rose_col_foundry_nanotech_desc: "$col_foundry_desc$"
+
+ rose_col_factory_nanotech: "Nanotech Factory World"
+ rose_col_factory_nanotech_tt: "$col_factory_tt$"
+ rose_col_factory_nanotech_desc: "$col_factory_desc$"
+
+ rose_col_bureau_nanotech: "Nanotech Unification World"
+ rose_col_bureau_nanotech_tt: "$col_bureau_tt$"
+ rose_col_bureau_nanotech_desc: "$col_bureau_desc$"
+
+ rose_col_bureau_spiritualist_nanotech: "Nanotech Ecclesiastical World"
+ rose_col_bureau_spiritualist_nanotech_tt: "$col_bureau_spiritualist_tt$"
+ rose_col_bureau_spiritualist_nanotech_desc: "$col_bureau_spiritualist_desc$"
+
+ rose_col_bureau_machine_nanotech: "Nanotech Unification World"
+ rose_col_bureau_machine_nanotech_tt: "$col_bureau_machine_tt$"
+ rose_col_bureau_machine_nanotech_desc: "$col_bureau_machine_desc$"
+
+ rose_col_research_nanotech: "Nanotech Tech-World"
+ rose_col_research_nanotech_tt: "$col_research_tt$"
+ rose_col_research_nanotech_desc: "$col_research_desc$"
+
+ rose_col_fortress_nanotech: "Nanotech Fortress World"
+ rose_col_fortress_nanotech_tt: "$col_fortress_tt$"
+ rose_col_fortress_nanotech_desc: "$col_fortress_desc$"
+
+ # Nanotech Interdictor Artillery Section
+ rose_nanite_interdictor_artillery_key: "$artillery$"
+  
+ # Nanotech Traits and Modifiers
+ trait_rose_nanotech: "Nanotech Enhancements"
+ trait_rose_nanotech_desc: "Many parts form one whole, be it an empire or an individual."
+ trait_rose_nanotech_tt: "Army Health: §G+300%§!\n$t$- Army Damage: §G+100%§!\n$t$- Army Morale Damage: §G+50%§!\n$t$- Pop Housing Usage: §G-50%§!"
+ 
+ leader_trait_rose_nanotech: "$trait_rose_nanotech$"
+ leader_trait_rose_nanotech_desc: "Made up of billions of nanites, this leader infinitely adapts and evolves to overcome any challenge."
+ 
+ mod_planet_jobs_nanites_produces_mult: "£nanites£ $nanites$ from £job£ Jobs"
+ mod_planet_jobs_nanites_upkeep_mult: "Job Nanite Upkeep"
+ mod_starbase_shipyard_build_nanites_cost_mult: "Nanite Ship Build Cost"
+ mod_planet_buildings_nanites_upkeep_mult: "Building Nanite Upkeep" 
+ mod_shipsize_nanite_interdictor_build_speed_mult: "$nanite_interdictor$ Build Speed"
+
+ # New Species Traits
+ trait_rose_revered: "Revered"
+ trait_rose_revered_desc: "§LHealth and wellness come naturally to this species, giving them an enviable lifespan.§!\n"
+ trait_rose_inflexible_chassis: "Inflexible Chassis"
+ trait_rose_inflexible_chassis_desc: "§LThe chassis of these machines is only designed to function in specific environments.§!\n"
+ trait_rose_hardwired: "Hardwired"
+ trait_rose_hardwired_desc: "§LThese machines require a direct connection to the mainframe to operate, making relocation a highly difficult and expensive endeavor.§!\n"
+ AUTO_MIGRATE_HARDWIRED: "§RHardwired Pops cannot migrate.§!" 
+ trait_rose_hardwired_effect: "§RPops will not Automatically Resettle§!\n    - Resettlement Cost: §R+200%§!"
+ trait_rose_synthetic_virtual_bonus: "Synthetic Surrogates"
+ trait_rose_synthetic_virtual_bonus_desc: "§LThese machines spend the majority of their time in virtual space, only using physical shells when necessary.§!\n"
+ 
+ # Planet Class Bonuses
+ rose_gaia_world_bonus: "$pc_gaia$"
+ rose_gaia_world_bonus_desc: "$pc_gaia_desc$"
+  
+ rose_ring_world_bonus: "$pc_ringworld_habitable$"
+ rose_ring_world_bonus_desc: "$pc_ringworld_habitable_desc$"
+ 
+ # Scorched World Heralds Fix War Goals
+ war_goal_wg_rose_blaze_vs_fe: "$war_goal_wg_blaze$"
+ war_goal_wg_rose_blaze_vs_fe_desc: "$war_goal_wg_blaze_desc$"
+ 
+ # Synthetic Choice
+ rose_synthetic_choice.1.name: "The Shape of Our Future"
+ rose_synthetic_choice.1.desc: "As we approach our ascension, questions are being asked by our citizens as to how our new robotic bodies will look. Some groups are advocating for using this as an opportunity to completely change our appearance, while others are pushing to mimic our current look using synthetic skin."
+ rose_synthetic_choice.1.a: "Our new forms should match our §Ycurrent§! ones."
+ rose_synthetic_choice.1.b: "We should match our §Yexisting robotic§! population."
+ rose_synthetic_choice.1.c: "This is our chance to become something §Ynew§!."
+ 
+ rose_synthetic_choice.2.name: "The Shape of Our Future"
+ rose_synthetic_choice.2.desc: "Before we begin the process of transferring our remaining pops to robotic bodies, we need to decide how these bodies will look. Some groups are advocating for using this as an opportunity to completely change our appearance, while others are pushing to mimic our original look using synthetic skin to honor those who perished from the disease."
+ rose_synthetic_choice.2.a: "Our new forms should match our §Yoriginal§! ones."
+ rose_synthetic_choice.2.b: "We should match our §Yexisting robotic§! population."
+ rose_synthetic_choice.2.c: "This is our chance to become something §Ynew§!."

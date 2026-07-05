@@ -19,6 +19,10 @@ col_trade_machine = {
 		MODIFIER = trader_jobs_bonus_workforce_mult
 	}
 
+	ai_building_set_affinity = {
+		trade = 2.0
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
@@ -52,8 +56,7 @@ col_mac_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner_or_space_owner
-			owner_or_space_owner = {
+			owner_or_space_owner? = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -66,6 +69,11 @@ col_mac_foundry = {
 		}
 	}
 
+	ai_building_set_affinity = {
+		foundry = 2.0
+		industrial = 1.5
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
@@ -73,10 +81,7 @@ col_mac_foundry = {
 		}
 		modifier = {
 			# No mixed industry designation for machine worlds, so any foundries means this one wins
-			num_zones = {
-				type = zone_foundry
-				value > 0
-			}
+			has_any_foundry_zone = yes
 			add = @zone_urban
 		}
 	}
@@ -88,8 +93,7 @@ col_mac_factory = {
 
 	potential = {
 		uses_district_set = machine_world
-		exists = owner_or_space_owner
-		owner_or_space_owner = { country_uses_consumer_goods = yes }
+		owner_or_space_owner? = { country_uses_consumer_goods = yes }
 		is_capital = no
 		NOT = { is_planet_class = pc_nanotech }
 	}
@@ -101,8 +105,7 @@ col_mac_factory = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner_or_space_owner
-			owner_or_space_owner = {
+			owner_or_space_owner? = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -115,20 +118,19 @@ col_mac_factory = {
 		}
 	}
 
+	ai_building_set_affinity = {
+		factory = 2.0
+		industrial = 1.5
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
 			has_designation = col_mac_factory
 		}
 		modifier = {
-			num_zones = {
-				type = zone_foundry
-				value = 0
-			}
-			num_zones = {
-				type = zone_factory
-				value > 0
-			}
+			has_any_foundry_zone = no
+			has_any_factory_zone = yes
 			add = @zone_urban
 		}
 	}
@@ -140,8 +142,7 @@ col_nanotech_world = {
 
 	potential = {
 		is_planet_class = pc_nanotech
-		exists = owner
-		owner = { has_active_tradition = tr_nanotech_3 }
+		owner? = { has_active_tradition = tr_nanotech_3 }
 		is_special_colony_type = no
 		is_capital = no
 	}
@@ -152,6 +153,20 @@ col_nanotech_world = {
 		planet_farmers_nanites_produces_mult = 0.35
 		planet_miners_nanites_produces_mult = 0.35
 		planet_jobs_produces_mult = 0.05
+	}
+
+	# Steer the AI toward buildings the nanotech tradition actually unlocks: nanolabs (research/physics/
+	# society/engineering sets), nanotech cauldron (industrial/foundry), and nanite transmuter
+	# (industrial/factory/foundry). Without this block the AI builds generic urban infrastructure on
+	# pc_nanotech worlds and never specializes them.
+	ai_building_set_affinity = {
+		research = 2.0
+		physics = 1.5
+		society = 1.5
+		engineering = 1.5
+		foundry = 2.0
+		industrial = 1.5
+		factory = 1.5
 	}
 
 	weight_modifier = {

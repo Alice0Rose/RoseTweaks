@@ -1,9 +1,0 @@
-﻿l_english:
- rose_ringworld_arcologies: "Ringworld Arcologies"
- rose_ringworld_arcologies_desc: "Arcologies are built across the surface of the Ringworld, greatly increasing its capacity for expansion."
- 
- decision_rose_ringworld_arcologies: "Create $rose_ringworld_arcologies$"
- decision_rose_ringworld_arcologies_desc: "By adding arcologies to the surface of the Ringworld, the amount of space that can be used for production is greatly increased."
- decision_rose_ringworld_arcologies_effects: "Increases the number of available £district£ §YDistricts§! by §Y6§!"
-
- allow_ringworld_arcologies: "\n§HUnlocks Decision:§! $decision_rose_ringworld_arcologies$"

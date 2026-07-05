@@ -80,6 +80,7 @@ progressive = {
 	can_join_faction = {
 		is_shackled_robot = no
 		can_think = yes
+		is_interlink_cyborg_pop = no
 	}
 
 	attraction = {
@@ -374,6 +375,35 @@ progressive = {
 		ETHIC = ethic_egalitarian
 		ETHIC_FANATIC = ethic_fanatic_egalitarian
 		ETHIC_OPPOSED = ethic_authoritarian
+	}
+
+	demand = { # "PROGRESSIVE_NO_NOMAD_FORCED_LABOR"
+		title = "PROGRESSIVE_NO_NOMAD_FORCED_LABOR"
+		unfulfilled_title = "PROGRESSIVE_NOMAD_FORCED_LABOR"
+		desc = "PROGRESSIVE_NO_NOMAD_FORCED_LABOR_DESC"
+
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -15
+
+		potential = {
+			exists = owner
+			owner = {
+				is_nomadic = no
+				any_country = {
+					is_nomadic = yes
+					has_communications = root.owner
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = arkship_raid_relocate_pops
+					has_policy_flag = arkship_raid_purge_pops
+				}
+			}
+		}
 	}
 
 	on_create = {

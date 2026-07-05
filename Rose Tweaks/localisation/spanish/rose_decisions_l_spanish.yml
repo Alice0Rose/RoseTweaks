@@ -1,0 +1,72 @@
+﻿l_spanish:
+ # Abandon Colony Decision
+ decision_rose_abandon_colony: "Abandon Colony"
+ decision_rose_abandon_colony_desc: "Not all planets are fit for use in our empire. Once they have served their purpose, they are better abandoned than left to strain our administrative capacity."
+ decision_rose_abandon_colony_effects: "Resettles all £pops£ Pops from §Y[This.GetName]§! and then §Rabandons§! the planet."
+ 
+ rose_abandon_colony_fail_virtual: "£trigger_no£ Cannot be Virtual"
+ rose_abandon_colony_fail_horizon_needle: "£trigger_no£ Cannot have the Horizon Needle researched"
+ rose_abandon_colony_fail_capital: "£trigger_no£ Cannot abandon empire capital"
+ rose_abandon_colony_fail_uncontrolled: "£trigger_no£ Cannot abandon if not under our control"
+ rose_abandon_colony_fail_at_war: "£trigger_no£ Cannot be in a non-total war"
+ rose_abandon_colony_fail_unwilling_pops: "£trigger_no£ Cannot abandon if there are unwilling pops"
+ rose_abandon_colony_fail_abandon_presapients: "£trigger_no£ Cannot abandon presapient wards"
+ rose_abandon_colony_fail_abandon_armies: "£trigger_no£ Cannot abandon planets while armies are present"
+ 
+ rose_abandon_colony.1.name: "Abandon [Root.GetName]"
+ rose_abandon_colony.1.desc: "Should we resettle all pops from [Root.GetName] and abandon the colony?"
+ rose_abandon_colony.1.a_choose: "No, we still have use for it."
+ rose_abandon_colony.1.a_virtual: "We should shut down the servers on [Root.GetName] instead."
+ rose_abandon_colony.1.a_horizon_needle: "We are too close to our goal to spare the resources."
+ rose_abandon_colony.1.a_capital: "We can't abandon our capital!"
+ rose_abandon_colony.1.a_uncontrolled: "We must regain control of our colony first!"
+ rose_abandon_colony.1.a_at_war: "Abandoning [Root.GetName] while at war would be a mistake."
+ rose_abandon_colony.1.a_unwilling_pops: "We cannot abandon our citizens that are unwilling to resettle."
+ rose_abandon_colony.1.a_abandon_presapients: "We cannot shirk our responsibility to our presapient wards."
+ rose_abandon_colony.1.a_abandon_armies: "We must embark our armies before abandoning this colony."
+ rose_abandon_colony.1.a.effects: "Refunds cost of abandoning colony."
+ rose_abandon_colony.1.b: "Yes, abandon it."
+ rose_abandon_colony.1.b.effects: "Resettles all £pops£ Pops from §Y[Root.GetName]§! and then §Rabandons§! the planet."
+ 
+ # Natural Arcologies Decision
+ rose_natural_arcologies: "Natural Arcologies"
+ rose_natural_arcologies_desc: "Arcologies compliment the natural landscape of this planet, creating a world of idyllic productivity and prosperity."
+ 
+ decision_rose_natural_arcologies: "Create $rose_natural_arcologies$"
+ decision_rose_natural_arcologies_desc: "Arcologies will be built with an adherence to conservation, resulting in a seamless blend between cities and nature."
+ decision_rose_natural_arcologies_effects: "Increases §Y$mod_district_jobs_mult$§!, £mod_planet_housing_add£ §Y$MOD_PLANET_HOUSING_ADD$§!, and §Y$mod_pop_cat_worker_bonus_workforce_mult$§! and unlocks unlimited £district£ §YRural Districts§!"
+ not_allowed_decision_rose_natural_arcologies: "$TRIGGER_FAIL$Requires a §YGaia§! world, the §Y$civic_environmentalist$§! Civic, an §YOcean§! world and the §Y$ap_hydrocentric$§! Ascension Perk, or a §YVolcanic§! world and the §Y$civic_world_forgers$§! Civic or §Y$ap_galactic_hyperthermia$§! Level 3"
+ 
+ zone_rose_natural_arcologies_research_physics: "$zone_research_physics$"
+ zone_rose_natural_arcologies_research_physics_desc: "$zone_research_physics_desc$" 
+ zone_rose_natural_arcologies_research_society: "$zone_research_society$"
+ zone_rose_natural_arcologies_research_society_desc: "$zone_research_society_desc$" 
+ zone_rose_natural_arcologies_research_engineering: "$zone_research_engineering$"
+ zone_rose_natural_arcologies_research_engineering_desc: "$zone_research_engineering_desc$"
+
+ allow_natural_arcologies: "§HUnlocks Decision:§! $decision_rose_natural_arcologies$"
+ allow_natural_arcologies_newline: "\n$allow_natural_arcologies$"
+ requires_technology_housing_arcology: "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_housing_2$§! technology or the £society£ §Y$tech_housing_agrarian_idyll$§! technology."
+ 
+ # Orbital Ring Decisions
+ decision_rose_orbital_ring: "Construct Orbital Ring"
+ decision_rose_orbital_ring_desc: "By creating the orbital ring from the planet up instead of starting in space, we can finish construction much more quickly, at the cost of temporarily disrupting other planetary construction projects."
+ decision_rose_orbital_ring_effects: "Creates an orbital ring around §Y[This.GetName]§! using the planetary construction queue."
+ 
+ decision_rose_orbital_ring_2: "Construct T2 Orbital Ring"
+ decision_rose_orbital_ring_2_desc: "$decision_rose_orbital_ring_desc$"
+ decision_rose_orbital_ring_2_effects: "Creates a tier 2 orbital ring around §Y[This.GetName]§! using the planetary construction queue."
+ 
+ decision_rose_orbital_ring_3: "Construct T3 Orbital Ring"
+ decision_rose_orbital_ring_3_desc: "$decision_rose_orbital_ring_desc$"
+ decision_rose_orbital_ring_3_effects: "Creates a tier 3 orbital ring around §Y[This.GetName]§! using the planetary construction queue."
+
+ # Ringworld Arcologies Decision
+ rose_ringworld_arcologies: "Ringworld Arcologies"
+ rose_ringworld_arcologies_desc: "Arcologies are built across the surface of the Ringworld, greatly increasing its capacity for expansion."
+ 
+ decision_rose_ringworld_arcologies: "Create $rose_ringworld_arcologies$"
+ decision_rose_ringworld_arcologies_desc: "By adding arcologies to the surface of the Ringworld, the amount of space that can be used for production is greatly increased."
+ decision_rose_ringworld_arcologies_effects: "Increases the number of available £district£ §YDistricts§! by §Y5§!"
+
+ allow_ringworld_arcologies: "\n§HUnlocks Decision:§! $decision_rose_ringworld_arcologies$"

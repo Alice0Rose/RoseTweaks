@@ -14,7 +14,7 @@ event = {
 					is_planet_class = pc_ringworld_habitable
 				}
 			}
-			planet_event = { id = rose_planet_class_bonuses.1 }
+			carrier_event = { id = rose_planet_class_bonuses.1 }
 		}
 	}
 }
@@ -22,7 +22,7 @@ event = {
 # Adds and removes bonus modifiers to planets based on planet class
 # Fired by on_planet_class_changed and on_planet_transfer
 # This = planet
-planet_event = {
+carrier_event = {
 	id = rose_planet_class_bonuses.1
 	hide_window = yes
 	is_triggered_only = yes

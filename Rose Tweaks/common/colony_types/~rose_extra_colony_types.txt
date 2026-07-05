@@ -25,24 +25,24 @@ rose_col_ecu_fortress = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner_or_space_owner
-			owner_or_space_owner = { has_tradition = tr_adaptability_finish }
+			owner_or_space_owner? = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			soldier_jobs_bonus_workforce_mult = 0.05
 		}
 	}
 
+	ai_building_set_affinity = {
+		fortress = 2.0
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
-			has_designation = rose_col_ecu_fortress
+			has_designation = col_fortress
 		}
 		modifier = {
-			num_zones = {
-				type = zone_fortress_arcology
-				value > 0
-			}
+			has_any_fortress_zone = yes
 			add = @zone_urban
 		}
 		complex_trigger_modifier = {
@@ -85,24 +85,24 @@ rose_col_ring_fortress = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner_or_space_owner
-			owner_or_space_owner = { has_tradition = tr_adaptability_finish }
+			owner_or_space_owner? = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			soldier_jobs_bonus_workforce_mult = 0.05
 		}
 	}
 
+	ai_building_set_affinity = {
+		fortress = 2.0
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
-			has_designation = rose_col_ring_fortress
+			has_designation = col_fortress
 		}
 		modifier = {
-			num_zones = {
-				type = zone_fortress_ring_world
-				value > 0
-			}
+			has_any_fortress_zone = yes
 			add = @zone_urban
 		}
 		complex_trigger_modifier = {

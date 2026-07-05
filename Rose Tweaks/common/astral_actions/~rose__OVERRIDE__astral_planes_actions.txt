@@ -18,6 +18,7 @@ action_summon_dimensional_fleet = {
 
 	allow_unlock = {
 		has_technology = tech_psionic_theory
+		is_ai = no
 	}
 
 	effect = {
