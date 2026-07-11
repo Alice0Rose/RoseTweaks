@@ -8,6 +8,7 @@ country_event = {
 
 	trigger = {
 		has_ascension_perk = ap_eternal_vigilance
+		is_nomadic = no
 	}
 
 	immediate = {
