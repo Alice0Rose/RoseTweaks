@@ -52,7 +52,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_pacifist"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_pacifist"
 				}
@@ -70,7 +70,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_militarist"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_militarist"
 				}
@@ -100,7 +100,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_materialist"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_materialist"
 				}
@@ -118,7 +118,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_spiritualist"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_spiritualist"
 				}
@@ -148,7 +148,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_egalitarian"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_egalitarian"
 				}
@@ -166,7 +166,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_authoritarian"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_authoritarian"
 				}
@@ -196,7 +196,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_xenophile"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_xenophile"
 				}
@@ -214,7 +214,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_xenophobe"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_xenophobe"
 				}
@@ -245,7 +245,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_green"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_green"
 				}
@@ -263,7 +263,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_industrial"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_industrial"
 				}
@@ -293,7 +293,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_socialism"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_socialism"
 				}
@@ -311,7 +311,7 @@ country_event = {
 			ruler = {
 				change_background_ethic = "ethic_capitalism"
 			}
-			home_planet = {
+			capital_scope = {
 				leader = {
 					change_background_ethic = "ethic_capitalism"
 				}
