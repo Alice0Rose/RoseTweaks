@@ -1,0 +1,187 @@
+namespace = cybernetics
+
+### Create the Unemployed
+### Fired by cybernetics.2025 and cybernetics.2026
+carrier_event = {
+	id = cybernetics.2027
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		is_under_colonization = no
+		NOT = { is_planet_class = pc_cosmogenesis_world }
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			has_tradition = tr_virtuality_finish
+		}
+		free_jobs > 0
+	}
+
+	immediate = {
+		set_variable = {
+			which = pop_amount
+			value = value:num_free_virtual_jobs
+		}
+		# Create pops for every free job
+		create_pop_group = {
+			species = owner_main_species
+			size = pop_amount
+		}
+		# Kill pops generated in excess (e.g. from forbidden jobs)
+		if = {
+			limit = {
+				OR = {
+					any_owned_pop_group = {
+						is_unemployed = yes
+						is_robotic_species = yes
+						has_virtual_species_trait = yes
+					}
+					any_owned_pop_group = {
+						is_robotic_species = yes
+						has_virtual_species_trait = yes
+						is_pop_category = civilian
+					}
+					any_owned_pop_group = {
+						is_robotic_species = yes
+						has_virtual_species_trait = yes
+						is_pop_category = no_category
+                        root = { is_under_colonization = no }
+					}
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						AND = {
+							is_unemployed = yes
+							is_robotic_species = yes
+							has_virtual_species_trait = yes
+						}
+						AND = {
+							is_robotic_species = yes
+							has_virtual_species_trait = yes
+							is_pop_category = civilian
+						}
+						AND = {
+							is_robotic_species = yes
+							has_virtual_species_trait = yes
+							is_pop_category = no_category
+                            root = { is_under_colonization = no }
+						}
+					}
+				}
+				kill_pop_group = {
+					pop_group = this
+					percentage = 1
+				}
+			}
+		}
+		
+		#########################
+		# Purge excess elite pops
+		#########################
+		# get number of elite jobs and save to evpf_num_elite_jobs
+		export_trigger_value_to_variable = {
+			trigger = free_jobs_of_type
+			parameters = {
+				category = ruler
+			}
+			variable = evpf_num_elite_jobs
+		}
+
+		every_owned_pop_job = { 
+			limit = { 
+				has_job_category = ruler
+			} 
+			
+			root = {
+				change_variable = { 
+					which = evpf_num_elite_jobs 
+					value = prev.trigger:num_pops_assigned_to_job
+				}
+			}
+		}
+
+		# get largest pop group of elite category and save as event_target:evpf_largest_pop_group
+		ordered_owned_pop_group = {
+			limit = { 
+				is_pop_category = ruler 
+				is_robotic_species = yes
+				has_virtual_species_trait = yes
+			}
+			position = 0
+			order_by = trigger:pop_group_size
+
+			save_event_target_as = evpf_largest_pop_group
+		}
+
+		# kill all other pop groups of elite category
+		every_owned_pop_group = {
+			limit = {
+				is_pop_category = ruler
+				is_robotic_species = yes
+				has_virtual_species_trait = yes
+				NOT = { is_same_value = event_target:evpf_largest_pop_group }
+			}
+			
+			kill_pop_group = {
+				pop_group = this
+				percentage = 1
+			}
+		}
+		
+		event_target:evpf_largest_pop_group = {
+			# add pops to largest group if size is less than root.evpf_num_elite_jobs to equal root.evpf_num_elite_jobs
+			if = {
+				limit = {
+					# more jobs than pops, need more pops
+					check_variable = { 
+						which = root.evpf_num_elite_jobs
+						value > trigger:pop_group_size
+					}
+				}
+				
+				set_variable = { 
+					which = evpf_pops_to_add
+					value = root.evpf_num_elite_jobs
+				}
+				
+				subtract_variable = { 
+					which = evpf_pops_to_add
+					value = trigger:pop_group_size
+				}
+				
+				add_pop_amount = evpf_pops_to_add
+				clear_variable = evpf_pops_to_add
+			}
+			
+			# remove pops from largest group if size is greater than root.evpf_num_elite_jobs to equal root.evpf_num_elite_jobs
+			else_if = {
+				limit = {
+					# less jobs than pops, need less pops
+					check_variable = { 
+						which = root.evpf_num_elite_jobs
+						value < trigger:pop_group_size
+					}
+				}
+			
+				set_variable = { 
+					which = evpf_pops_to_subtract
+					value = trigger:pop_group_size
+				}
+				
+				subtract_variable = { 
+					which = evpf_pops_to_subtract
+					value = root.evpf_num_elite_jobs
+				}
+				
+				remove_pop_amount = evpf_pops_to_subtract
+				clear_variable = evpf_pops_to_subtract
+			}
+		}
+		
+		# Clean up used variables
+		clear_variable = evpf_num_elite_jobs
+	}
+}
