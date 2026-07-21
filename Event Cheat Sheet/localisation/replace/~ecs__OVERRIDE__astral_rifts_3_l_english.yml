@@ -1,5 +1,5 @@
 ﻿l_english:
-# Siege on Paradise
+ # Siege on Paradise
  astral_rift.3000.a: "Contact the planet's inhabitants. §Y(£commander£/£outliner_fleet_cloaked£ Edict/300 £pops£/+5% £ship_stats_shield£)§!"
  astral_rift.3000.b: "Contact the orbiting fleet. §Y(Possibly +10% Fire Rate/£society£, £army_power£ Unlock)§!" 
 
@@ -43,7 +43,14 @@
  
  astral_rift.3076.a: "Press the crystal. Order the launch. §Y(£society£, £army_power£ Unlock)§!"
 
-# Psionic Stranger
+ # Tropical Habitat
+ astral_rift.3120.a: "Use caution. Excavate around the chasm. §Y(£minerals£, £exotic_gases£, £society£ Tech)§!"
+ astral_rift.3120.b: "Explore the chasm directly. §Y(Risks £scientist£, £opinion£ Modifier/£society£ Tech)§!"
+ 
+ astral_rift.3130.a: "Extract the mouth. §Y(Risks £scientist£, £opinion£ Modifier)§!"
+ astral_rift.3130.b: "Harvest soil from the deepest walls. §Y(£society£ Tech)§!" 
+
+ # Psionic Stranger
  astral_rift.3210.a: "Reveal the fate of the Zroni. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
  astral_rift.3210.b: "Reveal what we know of the Zroni. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
  astral_rift.3210.c: "We can only offer our perspective. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"

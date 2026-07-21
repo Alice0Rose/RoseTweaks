@@ -11,11 +11,31 @@
  
  astral_rift.2020.a: "Do not intervene. §R(Kills £scientist£, £physics£)§!"
  astral_rift.2020.b: "Inject astral thread. §Y(£army_power£ Unlock)§!"
+
+ # The Mechanism
+ astral_rift.2105.a: "Interfering would be irresponsible. §Y(£engineering£)§!"
+ astral_rift.2105.b: "Jam the gears. §Y(Relic/£engineering£, Risk £scientist£ Aging 20 Years)§!" 
+
+ # Dimensional Dump
+ astral_rift.2205.a: "Dispatch the individual. §Y(Risks £scientist£, £alloys£, £engineering£, £minerals£)§!"
+ astral_rift.2205.b: "Attempt to negotiate. §Y(£society£, Level 6 £commander£)§!"
  
  # Genesis
  astral_rift.2300.a: "Arm them with might. §Y(100 £pops£ and £specimen£)§!"
  astral_rift.2300.b: "Plant the seeds of knowledge. §Y(100 £pops£ and £specimen£)§!"
  astral_rift.2300.c: "We play no games. Activate an E.M.P. §Y(£alloys£)§!"
+
+ # Entangled Dark Matter
+ astral_rift.2405.a: "Remove the device. §R(£sr_dark_matter£, Ends Rift)§!"
+
+ astral_rift.2415.a: "Offer this scientist as a vessel. §Y(Risks £scientist£ for Rift Traits)§!"
+ astral_rift.2415.b: "Deny this proposal. §Y(£sr_dark_matter£/£engineering£, £physics£)§!"
+ astral_rift.2415.c: "Assimilate the entity. §Y(+5% £research£ Speed)§!"
+ astral_rift.2415.d: "Deny assimilation. §Y(£sr_dark_matter£/£engineering£, £physics£)§!"
+
+ astral_rift.2420.a: "Euthanize the ethereal creature. §Y(£sr_dark_matter£)§!"
+ astral_rift.2420.b: "Preserve the captive for study. §Y(£engineering£, £physics£)§!"
+ astral_rift.2420.c: "Kill it. §Y(£engineering£, £physics£)§!"
 
  # Bleached Planet
  astral_rift.2505.b: "Prepare for contact. §Y(£society£)§!"
@@ -26,6 +46,47 @@
  
  astral_rift.2530.a: "Observe the dark star. §R(£scientist£ Blinded)§!"
  astral_rift.2530.b: "Retreat. §Y(£physics£ Deposit)§!"
+ 
+ # Chemical Wasteland
+ astral_rift.2600.a: "Investigate the robots. §Y(Amenities Edict/£energy£/£alloys£)§!"
+ astral_rift.2600.b: "Explore the cave. §Y(£specimen£/Hacking Tech/£scientist£ Rift Skill Trait)§!"
+ 
+ astral_rift.2605.a: "Allow the drones to approach. §R(Prevents £alloys£)§!"
+ 
+ astral_rift.2620.a: "Trace the distress signal. §Y(Amenities Edict/£energy£)§!"
+ astral_rift.2620.b: "Flee before potential reinforcements arrive. §Y(£alloys£)§!"
+ 
+ astral_rift.2645.a: "Document and study the sanitary infrastructure. §Y(Amenities Edict)§!"
+ astral_rift.2645.b: "Shut down the Facility. §Y(£energy£)§!"
+ 
+ astral_rift.2640.a: "Repurpose the drone's technology. §Y(£specimen£)§!"
+ astral_rift.2640.b: "Engineer a virus to disable the sanitation network. §Y(Hacking Tech)§!"
+ astral_rift.2640.c: "Keep this drone as a personal research assistant. §Y(£scientist£ Rift Skill Trait)§!"
+
+ # Windswept Planet
+ astral_rift.2725.a: "Find a way to remove the fungus. §Y(£energy£ Decision, Ends Rift)§!"
+ 
+ astral_rift.2730.a: "Protect the ecosystem against the wind. §Y(+25% £exotic_gases£,£specimen£, Ends Rift)§!"
+ 
+ astral_rift.2745.a: "Fortify the wind. §Y(£energy£ Decision)§!"
+ astral_rift.2745.b: "Nourish the fungus. §Y(+25% £exotic_gases£,£specimen£)§!"
+ astral_rift.2745.c: "Negotiate a compromise. §Y(£society£ Deposit,£exotic_gases£,£energy£,£unity£,£envoy£)§!"
+ astral_rift.2745.d: "Eradicate both species. §Y(£food£,£unity£)§!"
+ 
+ # Tiny Planet
+ astral_rift.2810.a: "Establish contact. §Y(£unity£, £energy£ Decision/£stability£ Decision/£society£  Deposit)§!"
+ astral_rift.2810.b: "Observe passively. §Y(£society£ Deposit, Ends Rift)§!"
+ astral_rift.2810.c: "Demand ransom. §Y(£unity£, £energy£ Decision/£stability£ Decision/£society£  Deposit)§!"
+ astral_rift.2810.d: "Inform them that their doom has come. §Y(£unity£, £society£ Deposit)§!"
+ astral_rift.2810.e: "Watch the destruction unfold. §Y(£society£ Deposit, £unity£, Ends Rift)§!"
+ 
+ astral_rift.2815.a: "Attempt to fix the moon's orbit. §Y(£unity£, £energy£ Decision)§!"
+ astral_rift.2815.b: "Destroy the moon. §Y(£stability£ Decision/£society£  Deposit)§!"
+ astral_rift.2815.c: "Cut communications. Observe passively. §Y(£society£  Deposit)§!"
+ astral_rift.2815.d: "Cut communications. Watch the destruction unfold. §Y(£society£ Deposit, £unity£)§!"
+
+ astral_rift.2825.a: "Put them out of their misery. §Y(£stability£ Decision)§!"
+ astral_rift.2825.b: "Deploy remote research devices. §Y(£society£ Deposit)§!" 
  
  # Entertainment Nexus
  astral_rift.2925.a: "Meet with the vulpine acrobats. §Y(Genetic Tech/Wormhole Tech)§!"

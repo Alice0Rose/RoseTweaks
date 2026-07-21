@@ -7,11 +7,46 @@
 
  astral_rift.1020.a: "We've opened a doorway... §G(Opens Wormhole)§!"
  astral_rift.1020.b: "Seal it! Quickly! §R(Ends Rift)§!"
+
+ # Hatching Ground
+ astral_rift.1105.a: "Get closer. §Y(£engineering£, £unity£)§!"
+ astral_rift.1105.b: "Maintain a safe distance. §Y(Propulsion £research£ Speed)§!" 
  
  # The Microverse
  astral_rift.1210.a: "Synchronize with the [Fleet.GetName]. §R(Ends Rift)§!"
  
  astral_rift.1220.b: "Observe from the edge of the universe. §R(Ends Rift)§!"
+
+ # The Fluid
+ astral_rift.1315.a: "Pull anchor. Return immediately. §Y(+10% Biology £research£)§!"
+ astral_rift.1315.b: "Pump exotic gasses. Neutralize the beast. §Y(Risks £scientist£, Relic)§!" 
+
+ # The Garden
+ astral_rift.1400.b: "Extract the fruit. §R(Risks £scientist£)§!"
+ 
+ astral_rift.1405.a: "Burn the entangling vines. §R(Risks £scientist£)§!"
+ astral_rift.1405.b: "Pull anchor. Escape. §Y(Safely End Rift)§!"
+ 
+ astral_rift.1410.b: "Study this place. §G(£specimen£, Safest Route)§!"
+ 
+ astral_rift.1425.a: "Escape. §Y(Safely End Rift)§!"
+ astral_rift.1425.b: "Do nothing. §R(Kills £scientist£)§!"
+ astral_rift.1425.c: "Burn the Creature. §Y(Risks £scientist£, Relic)§!" 
+ 
+ astral_rift.1430.a: "Escape. §Y(Safely End Rift)§!"
+ astral_rift.1430.b: "Burn the Creature. §Y(Risks £scientist£, Relic)§!"
+
+ astral_rift.1435.a: "Escape. §Y(Safely End Rift)§!"
+ astral_rift.1435.b: "Burn the Creature. §Y(Risks £scientist£, Relic)§!"
+
+ astral_rift.1440.a: "Burn the Creature. §G(Relic)§!"
+ astral_rift.1440.b: "Continue Studies. §R(Risks £scientist£, Relic)§!" 
+ 
+ 
+ # Desert Ruins
+ astral_rift.1520.b: "Press the §Ggreen§! button. §R(Kills £scientist£)§!"
+ astral_rift.1530.a: "Press the triangle button. §R(Kills £scientist£)§!"
+ astral_rift.1550.a: "Press button with four dots. §R(Kills £scientist£)§!"
  
  # Strange Station
  astral_rift.1615.a: "Welcome friendship. §Y(£specimen£, £society£, Trading Contact)§!"
@@ -19,3 +54,30 @@
  astral_rift.1615.c: "Accept this opportunity. §Y(£specimen£, £society£, Trading Contact)§!"
  astral_rift.1615.d: "This is of no interest to us. §Y(£unity£)§!"
  
+ # Lone Object
+ astral_rift.1705.b: "Blast it open. §Y(Risk Spawning Fleet,£minerals£,£alloys£,£rare_crystals£,£unity£)§!" 
+ 
+ astral_rift.1710.b: "Blast it open. §Y(Risk Spawning Fleet,£minerals£,£alloys£,£rare_crystals£,£unity£)§!"
+ 
+ astral_rift.1715.a: "Take samples and return. §Y(Safely Ends Rift)§!"
+ astral_rift.1715.b: "Engage destructive exploration. §Y(Risk Spawning Fleet,£minerals£,£alloys£,£rare_crystals£,£unity£)§!"
+ 
+ # Rockworms
+ astral_rift.1815.a: "Set explosive charges. §Y(Risks £scientist£, £minerals£ Buff Decision)§!"
+ astral_rift.1815.b: "Pull emergency anchor. §Y(Safely Ends Rift)§!"
+ 
+ astral_rift.1820.b: "We've pushed our luck far enough. Return at once. §Y(Safely Ends Rift)§!"
+ astral_rift.1820.b.evopred: "Gather the samples and return. §Y(Safely Ends Rift)§!"
+ 
+ # Volcanic Plane
+ astral_rift.1905.a: "Pull the emergency anchor. §Y(Safely Ends Rift)§!"
+ astral_rift.1905.b: "Hide in the lava." 
+ 
+ astral_rift.1910.a: "Attempt to escape."
+ astral_rift.1910.b: "This is dangerous. Pull the emergency anchor. §Y(Safely Ends Rift)§!"
+ 
+ astral_rift.1915.a: "Decipher the runes."
+ astral_rift.1915.b: "Destroy the obelisk. §Y(Risks £scientist£,£minerals£,£alloys£,£unity£,£specimen£)§!"
+ 
+ astral_rift.1925.a: "Enough. Pull the emergency anchor. §Y(Safely Ends Rift)§!"
+ astral_rift.1925.b: "Destroy this infernal device. §Y(Risks £scientist£,£minerals£,£alloys£,£unity£,£specimen£)§!"

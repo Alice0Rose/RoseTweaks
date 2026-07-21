@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Event Cheat Sheet (Astral Rifts, Advanced Authorities, etc)"
-supported_version="v4.3.*"
+supported_version="v4.*"
 remote_file_id="3725487903"

@@ -7,7 +7,7 @@ Things this mod works for:
 - Cybernetic Advanced Authority event chain
 - Synthetic Advanced Authority event chain
 - Psionic Advanced Authority event chain
-- Astral Rifts (still working on adding all of these)
+- Astral Rifts
 
 [h1]Compatibility[/h1]
 This mod only overrides localisation files, which means it shouldn't have any issues with other mods (unless they change the events this is providing outcome text to in which case this mod will just be inaccurate). It also means this mod is entirely checksum and multiplayer friendly ^^

@@ -14,5 +14,53 @@
  astral_rift.20.a: "Offer astral thread. §Y(+5% Sublight Speed)§!"
  astral_rift.20.b: "Offer energy. §Y(+5% Ship Build Speed)§!"
 
+ # The Corridors
+ astral_rift.115.a: "Hack it. §Y(Risks £scientist£ Lost 5 Years, +1 Max £district£)§!"
+ astral_rift.115.b: "Strip it for parts. §Y(Safely Ends Rift)§!" 
 
+ # Dimensional Conflict
+ astral_rift.200.a: "Study its composition. §Y(£alloys£, Armor Tech, £specimen£)§!" 
+ astral_rift.200.b: "Let's get in there. §Y(Biology Tech)§!"
+
+ astral_rift.215.a: "Try to activate the dodecahedron. §Y(Relic)§!"
+ astral_rift.215.b: "Strip it for parts. §Y(£sr_dark_matter£)§!"
+
+ # The Lattice
+ astral_rift.325.a: "Retrieve the globes. §G(9 Fractal Seeds)§!"
+ astral_rift.325.b: "We are done here. §R(Only 3 Fractal Seeds)§!"
  
+ # Subnautical
+ astral_rift.505.a: "Activate the engines. §Y(Fastest Route)§!"
+ astral_rift.520.b: "Approach the Object. §Y(Fastest Route)§!"
+
+ # The Tower
+ astral_rift.600.a: "Attempt to communicate with the creature. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.600.b: "Observe the creature and report back. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.600.c: "Kill it. §Y(£unity£)§!" 
+ 
+ astral_rift.605.a: "Invite them aboard. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.605.b: "Offer something in return. §Y(£unity£)§!"
+ astral_rift.605.c: "Leave the site. §R(Ends Rift)§!"
+ 
+ astral_rift.610.a: "Invite them aboard. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.610.b: "Offer something in return. §Y(£unity£)§!"
+ astral_rift.610.c: "Leave the site. §R(Ends Rift)§!"
+ astral_rift.610.d: "Kill the creature. §Y(£unity£)§!" 
+
+ # Whiteout
+ astral_rift.700.a: "Maximize propulsion. §Y(£astral_threads£)§!"
+ astral_rift.700.b: "Release a drone. §Y(£physics£)§!"
+
+ astral_rift.715.a: "Take a sample. §Y(£rare_crystals£)§!"
+ astral_rift.715.b: "Trace a map. §Y(£society£)§!" 
+ 
+ # The Advisor
+ astral_rift.805.a: "Ask for FURTHER assistance. §R(Lose £scientist£ for 5 Years)§!"
+ 
+ astral_rift.810.a: "Placate the machine. §R(Lose £scientist£ for 5 Years)§!"
+ 
+ astral_rift.820.a: "Attempt to recover its core. §Y(£specimen£, £alloys£, £physics£ Tech)§!"
+ astral_rift.820.b: "Destroy the machine completely. §Y(£engineering£)§!"
+ 
+ # The Vortex
+ astral_rift.900.b: "Expose sample to flame. §Y(Risks £scientist£, +10% £energy£)§!"
