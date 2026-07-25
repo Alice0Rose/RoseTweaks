@@ -1,0 +1,109 @@
+namespace = rose_scaling_paladins
+
+# Gives/Removes scaled paladin modifier to empire if there's a crisis active
+country_event = {
+	id = rose_scaling_paladins.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_regular_empire = yes
+	}
+
+	immediate = {		
+		# Gives modifier if crisis
+		if = {
+			limit = {
+				has_crisis = yes
+				NOR = {
+					has_modifier = rose_scaling_paladins_0
+					has_modifier = rose_scaling_paladins_1
+					has_modifier = rose_scaling_paladins_2
+					has_modifier = rose_scaling_paladins_3
+					has_modifier = rose_scaling_paladins_4
+					has_modifier = rose_scaling_paladins_5
+					has_modifier = rose_scaling_paladins_6
+				}
+			}
+			
+			# Scales modifier based on crisis strength
+			get_galaxy_setup_value = { 
+				which = rose_scaling_paladins_scalar 
+				setting = crisis_strength_scale 
+			}
+			
+			## Divides crisis strength scalar by 2 so Paladin ships aren't tooo strong
+			#divide_variable = { 
+			#	which = rose_scaling_paladins_scalar 
+			#	value = 2
+			#}
+			
+			# Gives modifier based on difficulty since difficulties scale crisis strength differently
+			switch = {
+				trigger = is_difficulty
+				0 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_0
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				1 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_1
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				2 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_2
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				3 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_3
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				4 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_4
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				5 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_5
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				6 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_6
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+				default = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_0
+						multiplier = rose_scaling_paladins_scalar
+					} 
+				}
+			}
+		}
+		
+		# Removes modifier if no crisis
+		if = {
+			limit = {
+				has_crisis = no
+			}
+			remove_modifier = rose_scaling_paladins_0
+			remove_modifier = rose_scaling_paladins_1
+			remove_modifier = rose_scaling_paladins_2
+			remove_modifier = rose_scaling_paladins_3
+			remove_modifier = rose_scaling_paladins_4
+			remove_modifier = rose_scaling_paladins_5
+			remove_modifier = rose_scaling_paladins_6
+		}
+	}
+}

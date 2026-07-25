@@ -11,6 +11,7 @@
 - Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
 - Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
 - Eternal Vigilance unlocks a policy that builds free defense platforms every 9 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
+- Paladin ships scale their health and damage with crisis strength while a crisis is active
 
 ## Astral Actions:
 - Summon Dimensional Fleet can no longer be used by AI empires.

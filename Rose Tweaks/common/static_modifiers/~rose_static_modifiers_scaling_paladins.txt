@@ -1,0 +1,49 @@
+rose_scaling_paladins_0 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult = 0.01
+	shipsize_paladin_ship_armor_mult = 0.01
+	shipsize_paladin_ship_shield_mult = 0.01
+	shipsize_paladin_ship_weapon_damage = 0.01
+}
+rose_scaling_paladins_1 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult = 0.01
+	shipsize_paladin_ship_armor_mult = 0.01
+	shipsize_paladin_ship_shield_mult = 0.01
+	shipsize_paladin_ship_weapon_damage = 0.01
+}
+rose_scaling_paladins_2 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult =0.9
+	shipsize_paladin_ship_armor_mult = 0.9
+	shipsize_paladin_ship_shield_mult = 0.9
+	shipsize_paladin_ship_weapon_damage = 0.9
+}
+rose_scaling_paladins_3 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult = 1.05
+	shipsize_paladin_ship_armor_mult = 1.05
+	shipsize_paladin_ship_shield_mult = 1.05
+	shipsize_paladin_ship_weapon_damage = 1.05
+}
+rose_scaling_paladins_4 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult = 1.2
+	shipsize_paladin_ship_armor_mult = 1.2
+	shipsize_paladin_ship_shield_mult = 1.2
+	shipsize_paladin_ship_weapon_damage = 1.2
+}
+rose_scaling_paladins_5 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult = 1.35
+	shipsize_paladin_ship_armor_mult = 1.35
+	shipsize_paladin_ship_shield_mult = 1.35
+	shipsize_paladin_ship_weapon_damage = 1.35
+}
+rose_scaling_paladins_6 = {
+	hide_from_country_list = yes
+	shipsize_paladin_ship_hull_mult = 1.5
+	shipsize_paladin_ship_armor_mult = 1.5
+	shipsize_paladin_ship_shield_mult = 1.5
+	shipsize_paladin_ship_weapon_damage = 1.5
+}

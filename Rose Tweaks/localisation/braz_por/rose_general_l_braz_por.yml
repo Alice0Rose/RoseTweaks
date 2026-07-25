@@ -204,6 +204,20 @@
  rose_ring_world_bonus: "$pc_ringworld_habitable$"
  rose_ring_world_bonus_desc: "$pc_ringworld_habitable_desc$"
  
+ # Scaling Paladins
+ mod_shipsize_paladin_ship_hull_mult: "$paladin_ship$ $SHIP_STAT_HITPOINTS$"
+ mod_shipsize_paladin_ship_armor_mult: "$paladin_ship$ $SHIP_STAT_ARMOR$"
+ mod_shipsize_paladin_ship_shield_mult: "$paladin_ship$ $SHIP_STAT_SHIELDS$"
+ mod_shipsize_paladin_ship_weapon_damage: "$paladin_ship$ $SHIP_STAT_DAMAGE$"
+ 
+ rose_scaling_paladins_0: "Paladin Scaling Bonus"
+ rose_scaling_paladins_1: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_2: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_3: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_4: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_5: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_6: "$rose_scaling_paladins_0$"
+ 
  # Scorched World Heralds Fix War Goals
  war_goal_wg_rose_blaze_vs_fe: "$war_goal_wg_blaze$"
  war_goal_wg_rose_blaze_vs_fe_desc: "$war_goal_wg_blaze_desc$"
