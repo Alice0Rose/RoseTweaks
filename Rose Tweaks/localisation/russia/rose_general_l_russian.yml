@@ -1,0 +1,236 @@
+﻿l_russian:
+ # Virtuality Balanced Policy
+ rose_virtuality_balanced_focus_flag_name: "Виртуальный баланс"
+ rose_virtuality_balanced_focus: "Виртуальный баланс"
+ rose_virtuality_balanced_focus_desc: "Баланс — это ключ, как в жизни, так и в коде.\n\n"
+
+ # Choose Starting Ruler Ethic
+ rose_choose_starting_ruler_ethic.2.name: "Этические соображения"
+ rose_choose_starting_ruler_ethic.2.desc: "Ещё до того как отправиться к звёздам, наш [Root.GetRulerTitle] [Root.GetRulerName] встретился с представителями каждой из ведущих фракций империи, дабы понять, какая этика должна стать для [Root.Leader.GetHerHim] направляющей, пока [Root.Leader.GetSheHe] ведет нас в будущее."
+ 
+ rose_choose_starting_ruler_ethic.2.a: "Как мы применяем силу против других?"
+ rose_choose_starting_ruler_ethic.2.b: "Где баланс между наукой и верой?"
+ rose_choose_starting_ruler_ethic.2.c: "Какова роль граждан в государстве?"
+ rose_choose_starting_ruler_ethic.2.d: "Что насчёт других форм жизни?"
+ rose_choose_starting_ruler_ethic.2.e: "Как мы относимся к природе?"
+ rose_choose_starting_ruler_ethic.2.f: "В чём ключ успешной экономики?"
+ 
+ # Civic Tooltip
+ CIVIC_NOT_MODDABLE_ONLY_ADD: "§RЭту гражданскую модель нельзя добавить вручную после начала игры.§!"
+ 
+ # Clone Vat Upgrades
+ building_rose_clone_vats_1: "$building_clone_vats$ (2-й уровень)"
+ building_rose_clone_vats_1_desc: "$building_clone_vats_desc$"
+ building_rose_clone_vats_2: "$building_clone_vats$ (3-й уровень)"
+ building_rose_clone_vats_2_desc: "$building_clone_vats_desc$"
+ building_rose_clone_vats_3: "$building_clone_vats$ (4-й уровень)"
+ building_rose_clone_vats_3_desc: "$building_clone_vats_desc$"
+ 
+ # Eternal Vigilance Policy
+ ap_rose_eternal_vigilance_tt: "Каждые 9 месяцев вокруг каждой §Yзвездной базы§! будет строиться §Yоборонительная платформа§!, вплоть до максимума в §Y33%§! от вместимости, ценой определенного процента §Y$mod_country_alloys_produces_mult$§!."
+ policy_rose_eternal_vigilance_policy: "$ap_eternal_vigilance$"
+ policy_rose_eternal_vigilance_policy_desc: "Щит крепок лишь настолько, насколько крепок тот, кто его держит."
+ rose_eternal_vigilance_policy_full_spending: "Полное финансирование платформ"
+ rose_eternal_vigilance_policy_full_spending_name: "$eternal_vigilance_full_spending$"
+ rose_eternal_vigilance_policy_full_spending_desc: "Каждая звездная база должна быть надежно защищена. Мы не постоим за ценой.\nАвтоматически строит §Yоборонительные платформы§! вокруг каждой §Yзвездной базы§!."
+ rose_eternal_vigilance_policy_half_spending: "Частичное финансирование платформ"
+ rose_eternal_vigilance_policy_half_spending_name: "$eternal_vigilance_half_spending$"
+ rose_eternal_vigilance_policy_half_spending_desc: "Только самые мощные редуты требуют нашей поддержки.\nАвтоматически строит §Yоборонительные платформы§! вокруг §Yзвездных баз типа «Бастион»§!."
+ rose_eternal_vigilance_policy_no_spending: "Без финансирования платформ"
+ rose_eternal_vigilance_policy_no_spending_name: "$eternal_vigilance_no_spending$"
+ rose_eternal_vigilance_policy_no_spending_desc: "Нет необходимости в дальнейшем усилении нашей обороны.\nАвтоматическое строительство §Yоборонительных платформ§! §Rотключено§! для всех §Yзвездных баз§!."
+ 
+ # Extra Colony Types
+ rose_col_ecu_fortress: "Экуменополис-крепость"
+ rose_col_ecu_fortress_tt: "Огромная планета-город, специализирующаяся на военной инфраструктуре."
+ rose_col_ecu_fortress_desc: "$col_fortress_desc$"
+ 
+ rose_col_ring_fortress: "Мир-кольцо (крепость)"
+ rose_col_ring_fortress_tt: "Бесчисленные цитадели и укрепления покрывают этот мир-кольцо, создавая неприступный бастион на страже нашей империи."
+ rose_col_ring_fortress_desc: "$col_fortress_desc$"
+ 
+ # Extra Habitat Zones
+ zone_rose_habitat_food: "Расширенные $zone_habitat_hydroponics$"
+ zone_rose_habitat_food_desc: "$zone_food_desc$"
+ 
+ # Extra Mutual Aid Policies
+ trade_policy_mutual_aid_minerals: "Взаимопомощь (Упор на минералы)"
+ trade_conversion_mutual_aid_minerals_name: "$trade_policy_mutual_aid_minerals$"
+ trade_policy_mutual_aid_minerals_desc: "Реинвестируя наши излишки обратно в кооператив, мы гарантируем, что все наши члены будут процветать в соответствии со своими потребностями и общими стремлениями.\n\n§Y75%§! от собранной нами $r_trade$ приносит нам $r_energy$, $r_minerals$ и $r_unity$. Каждая £trade£ §Y1§! ед. приносит нам £energy£ §Y0.4§!, £minerals£ §Y0.4§! и £unity£ §Y0.1§!."
+ 
+ trade_policy_mutual_aid_food: "Взаимопомощь (Упор на пищу)"
+ trade_conversion_mutual_aid_food_name: "$trade_policy_mutual_aid_food$" 
+ trade_policy_mutual_aid_food_desc: "Реинвестируя наши излишки обратно в кооператив, мы гарантируем, что все наши члены будут процветать в соответствии со своими потребностями и общими стремлениями.\n\n§Y75%§! от собранной нами $r_trade$ приносит нам $r_energy$, $r_food$ и $r_unity$. Каждая £trade£ §Y1§! ед. приносит нам £energy£ §Y0.4§!, £food£ §Y0.4§! и £unity£ §Y0.1§!."
+ 
+ # FE Building Fix
+ mod_job_enforcer_automated_workforce_mult: "[enforcer.GetIcon] [enforcer.GetNamePlural]: $MOD_PLANET_AUTOMATED_WORKFORCE$"
+ mod_job_patrol_drone_automated_workforce_mult: "[patrol_drone.GetIcon] [patrol_drone.GetNamePlural]: $MOD_PLANET_AUTOMATED_WORKFORCE$"
+ 
+ # FE Tech From Planets
+ rose_fe_tech_from_planet_counter: "Загадочные приобретения"
+ rose_fe_tech_from_planet_counter_desc: "Наш великий подвиг по завоеванию угасших империй дал нам доступ к некоторым их технологиям."
+ rose_fe_tech_from_planet_counter_tt: "Захвачено планет угасших империй: §Y[This.rose_fe_planets_taken]§!\n\nКаждая захваченная планета (вплоть до §Y10§!) открывает возможность изучать новые §Yздания угасших империй§!."
+ 
+ # Genocidal Buff
+ rose_genocidal_buff_fanatic_purifier: "Славная цель"
+ rose_genocidal_buff_fanatic_purifier_desc: "Нет более великой цели и лучшей мотивации, чем уничтожение ксеносской заразы."
+ rose_genocidal_buff_determined_exterminator: "Искоренение органики"
+ rose_genocidal_buff_determined_exterminator_desc: "Органическая жизнь — есть вечная угроза."
+ rose_genocidal_buff_devouring_swarm: "Ненасытная резня"
+ rose_genocidal_buff_devouring_swarm_desc: "Смысл жизни в том, чтобы пожирать вселенную."
+ rose_genocidal_buff_scorched_world_herald: "Очищающее пламя"
+ rose_genocidal_buff_scorched_world_herald_desc: "Говорят, что вселенная закончится в тихом холоде. Нет, мы закончим её горячим взрывом."
+ rose_genocidal_buff_crusader_spirit: "Мандат на освобождение"
+ rose_genocidal_buff_crusader_spirit_desc: "Наш долг — освободить народы галактики от их тиранических и деспотичных правительств и даровать им то же совершенство, что мы постигли сами."
+ 
+ # Gestalt Federations
+ rose_logistics_traditions_completed: "Изучена традиция §Y$tr_logistics_adopt$§!"
+ rose_synchronicity_traditions_completed: "Изучена традиция §Y$tr_synchronicity_adopt$§!"
+ 
+ # Gestalt Psionic Sovereign
+ civic_rose_psionic_sovereign_gestalt: "Божественное сознание"
+ civic_rose_psionic_sovereign_gestalt_desc: "Это сознание достигло непревзойденной связи с Покровом, обеспечивая высочайшую эффективность по всей империи."
+ 
+ rose_gestalt_psionic_soverign.1.name: "$civic_rose_psionic_sovereign_gestalt$"
+ rose_gestalt_psionic_soverign.1.desc: "[Ruler.GetTitle] §H[Ruler.GetName]§! достигает критической синхронизации с Покровом. Эффективность всех псионических дронов в нашей империи возрастет."
+ rose_gestalt_psionic_soverign.1.a: "Подтверждаю."
+ 
+ # L Cluster Lockdown
+ ROSE_L_CLUSTER_LOCKDOWN: "Изолировать L-скопление"
+ ROSE_L_CLUSTER_LOCKDOWN_DESC: "Получив контроль над системой Последний Исход, наши ученые считают, что нашли способ заставить все остальные L-врата, кроме одних, самоуничтожиться. Это значительно упростит укрепление L-скопления, ограничив маршруты, по которым наши враги могут получить к нему доступ."
+
+ rose_l_cluster_lockdown.1.name: "$ROSE_L_CLUSTER_LOCKDOWN$"
+ rose_l_cluster_lockdown.1.desc: "$ROSE_L_CLUSTER_LOCKDOWN_DESC$"
+
+ rose_l_cluster_lockdown.3.name: "Изолировать L-скопление"
+ rose_l_cluster_lockdown.3.desc: "Мы готовы заблокировать L-скопление. Осталось лишь выбрать, какие L-врата оставить открытыми, чтобы не повторять ошибок Строителей врат."
+ rose_l_cluster_lockdown.3.a: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_1.GetName]§!"
+ rose_l_cluster_lockdown.3.b: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_2.GetName]§!"
+ rose_l_cluster_lockdown.3.c: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_3.GetName]§!"
+ rose_l_cluster_lockdown.3.d: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_4.GetName]§!"
+ rose_l_cluster_lockdown.3.e: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_5.GetName]§!"
+ rose_l_cluster_lockdown.3.f: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_6.GetName]§!"
+ rose_l_cluster_lockdown.3.g: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_7.GetName]§!"
+ rose_l_cluster_lockdown.3.h: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_8.GetName]§!"
+ rose_l_cluster_lockdown.3.i: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_9.GetName]§!"
+ rose_l_cluster_lockdown.3.j: "Оставить открытой систему §Y[rose_l_cluster_lockdown_lgate_option_10.GetName]§!"
+ 
+ rose_l_cluster_lockdown.4.name: "L-скопление изолировано"
+ rose_l_cluster_lockdown.4.desc: "Мы получили известие, что §Y[from.GetName]§! инициирует дистанционное самоуничтожение всех L-врат, кроме одних. В дальнейшем это значительно усложнит доступ в L-скопление."
+ 
+ # Megacorp Psionic Sovereign
+ civic_rose_psionic_sovereign_megacorp: "Божественный руководитель"
+ civic_rose_psionic_sovereign_megacorp_desc: "Это общество назначило своим главным руководителем Избранного ($leader_trait_chosen_default$) — личность, наделенную беспрецедентной псионической мощью."
+ utopia.3400.c: "Даже они не ставят себя выше прибыли..."
+ 
+ # Nanotech Armies
+ rose_nanite_swarm_army: "Рой нанитов"
+ rose_nanite_swarm_army_desc: "Бесконечный и непоколебимый рой нанитов, способный в мгновение ока разобрать на атомы любую материю, живую или неживую."
+ 
+ # Nanotech Colony Types
+ rose_col_trade_nanotech: "Нанотехнологичный торговый мир"
+ rose_col_trade_nanotech_tt: "$col_city_tt$"
+ rose_col_trade_nanotech_desc: "$col_city_desc$"
+
+ rose_col_mining_nanotech: "Нанотехнологичный добывающий мир"
+ rose_col_mining_nanotech_tt: "$col_mining_tt$"
+ rose_col_mining_nanotech_desc: "$col_mining_desc$"
+
+ rose_col_generator_nanotech: "Нанотехнологичный мир-генератор"
+ rose_col_generator_nanotech_tt: "$col_generator_tt$"
+ rose_col_generator_nanotech_desc: "$col_generator_desc$"
+
+ rose_col_foundry_nanotech: "Нанотехнологичный мир-кузница"
+ rose_col_foundry_nanotech_tt: "$col_foundry_tt$"
+ rose_col_foundry_nanotech_desc: "$col_foundry_desc$"
+
+ rose_col_factory_nanotech: "Нанотехнологичный промышленный мир"
+ rose_col_factory_nanotech_tt: "$col_factory_tt$"
+ rose_col_factory_nanotech_desc: "$col_factory_desc$"
+
+ rose_col_bureau_nanotech: "Нанотехнологичный центр объединения"
+ rose_col_bureau_nanotech_tt: "$col_bureau_tt$"
+ rose_col_bureau_nanotech_desc: "$col_bureau_desc$"
+
+ rose_col_bureau_spiritualist_nanotech: "Нанотехнологичный экклезиастический мир"
+ rose_col_bureau_spiritualist_nanotech_tt: "$col_bureau_spiritualist_tt$"
+ rose_col_bureau_spiritualist_nanotech_desc: "$col_bureau_spiritualist_desc$"
+
+ rose_col_bureau_machine_nanotech: "Нанотехнологичный центр объединения"
+ rose_col_bureau_machine_nanotech_tt: "$col_bureau_machine_tt$"
+ rose_col_bureau_machine_nanotech_desc: "$col_bureau_machine_desc$"
+
+ rose_col_research_nanotech: "Нанотехнологичный техномир"
+ rose_col_research_nanotech_tt: "$col_research_tt$"
+ rose_col_research_nanotech_desc: "$col_research_desc$"
+
+ rose_col_fortress_nanotech: "Нанотехнологичный мир-крепость"
+ rose_col_fortress_nanotech_tt: "$col_fortress_tt$"
+ rose_col_fortress_nanotech_desc: "$col_fortress_desc$"
+
+ # Nanotech Interdictor Artillery Section
+ rose_nanite_interdictor_artillery_key: "$artillery$"
+  
+ # Nanotech Traits and Modifiers
+ trait_rose_nanotech: "Нанотехнологичные улучшения"
+ trait_rose_nanotech_desc: "Множество частей образуют единое целое, будь то империя или индивид."
+ trait_rose_nanotech_tt: "Здоровье армии: §G+300%§!\n$t$- Урон армии: §G+100%§!\n$t$- Урон боевому духу армии: §G+50%§!\n$t$- Использование жилья поселениями: §G-50%§!"
+ 
+ leader_trait_rose_nanotech: "$trait_rose_nanotech$"
+ leader_trait_rose_nanotech_desc: "Состоящий из миллиардов нанитов, этот лидер бесконечно адаптируется и эволюционирует для преодоления любых трудностей."
+ 
+ mod_planet_jobs_nanites_produces_mult: "£nanites£ $nanites$ от £job£ должностей"
+ mod_planet_jobs_nanites_upkeep_mult: "Содержание должностей в нанитах"
+ mod_starbase_shipyard_build_nanites_cost_mult: "Стоимость строительства кораблей в нанитах"
+ mod_planet_buildings_nanites_upkeep_mult: "Содержание сооружений в нанитах" 
+ mod_shipsize_nanite_interdictor_build_speed_mult: "Скорость постройки: $nanite_interdictor$"
+
+ # New Species Traits
+ trait_rose_revered: "Почитаемые"
+ trait_rose_revered_desc: "§LКрепкое здоровье и благополучие естественны для этого вида, что дарует им завидную продолжительность жизни.§!\n"
+ trait_rose_inflexible_chassis: "Негибкий корпус"
+ trait_rose_inflexible_chassis_desc: "§LКорпус этих машин предназначен для работы только в определенных условиях.§!\n"
+ trait_rose_hardwired: "Аппаратная привязка"
+ trait_rose_hardwired_desc: "§LДля работы этим машинам требуется прямое подключение к серверу, что делает их перемещение крайне сложным и дорогостоящим мероприятием.§!\n"
+ AUTO_MIGRATE_HARDWIRED: "§RПоселения с аппаратной привязкой не могут мигрировать.§!" 
+ trait_rose_hardwired_effect: "§RПоселения не будут переселяться автоматически§!\n    - Стоимость переселения: §R+200%§!"
+ trait_rose_synthetic_virtual_bonus: "Синтетические оболочки"
+ trait_rose_synthetic_virtual_bonus_desc: "§LЭти машины проводят большую часть времени в виртуальном пространстве, используя физические оболочки только в случае необходимости.§!\n"
+ 
+ # Planet Class Bonuses
+ rose_gaia_world_bonus: "$pc_gaia$"
+ rose_gaia_world_bonus_desc: "$pc_gaia_desc$"
+  
+ rose_ring_world_bonus: "$pc_ringworld_habitable$"
+ rose_ring_world_bonus_desc: "$pc_ringworld_habitable_desc$"
+ 
+ # Scaling Paladins
+ mod_shipsize_paladin_ship_hull_mult: "$paladin_ship$: $SHIP_STAT_HITPOINTS$"
+ mod_shipsize_paladin_ship_armor_mult: "$paladin_ship$: $SHIP_STAT_ARMOR$"
+ mod_shipsize_paladin_ship_shield_mult: "$paladin_ship$: $SHIP_STAT_SHIELDS$"
+ mod_shipsize_paladin_ship_weapon_damage: "$paladin_ship$: $SHIP_STAT_DAMAGE$"
+ 
+ rose_scaling_paladins_0: "Усиление кораблей типа Паладин"
+ rose_scaling_paladins_1: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_2: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_3: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_4: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_5: "$rose_scaling_paladins_0$"
+ rose_scaling_paladins_6: "$rose_scaling_paladins_0$"
+  
+ # Scorched World Heralds Fix War Goals
+ war_goal_wg_rose_blaze_vs_fe: "$war_goal_wg_blaze$"
+ war_goal_wg_rose_blaze_vs_fe_desc: "$war_goal_wg_blaze_desc$"
+ 
+ # Synthetic Choice
+ rose_synthetic_choice.1.name: "Облик нашего будущего"
+ rose_synthetic_choice.1.desc: "По мере нашего приближения к возвышению граждане всё чаще задаются вопросом, как будут выглядеть наши новые роботизированные тела. Некоторые группы выступают за то, чтобы использовать это как возможность полностью изменить наш облик, в то время как другие настаивают на сохранении текущего вида с помощью синтетической кожи."
+ rose_synthetic_choice.1.a: "Наши новые формы должны соответствовать нашим §Yтекущим§!."
+ rose_synthetic_choice.1.b: "Мы должны соответствовать §Yсуществующему роботизированному§! населению."
+ rose_synthetic_choice.1.c: "Это наш шанс стать чем-то §Yновым§!."
+ 
+ rose_synthetic_choice.2.name: "Облик нашего будущего"
+ rose_synthetic_choice.2.desc: "Прежде чем мы начнем процесс переноса наших оставшихся поселений в роботизированные тела, нам нужно решить, как эти тела будут выглядеть. Некоторые группы выступают за то, чтобы полностью изменить наш облик, в то время как другие настаивают на сохранении первоначального вида с помощью синтетической кожи в память о тех, кто погиб от болезни."
+ rose_synthetic_choice.2.a: "Наши новые формы должны соответствовать нашим §Yоригинальным§! телам."
+ rose_synthetic_choice.2.b: "Мы должны соответствовать §Yсуществующему роботизированному§! населению."
+ rose_synthetic_choice.2.c: "Это наш шанс стать чем-то §Yновым§!."
