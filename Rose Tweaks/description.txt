@@ -222,3 +222,6 @@
 - Fixed Justice Complex & upgrade FE building not giving 25%/50% automation for enforcers
 - Fixed orbital rings not checking if there was already an orbital ring on the planet before letting you start construction
 - Fixed Devastator Cannon not devastating (or shooting at all lol) by removing the firing arc and removing the min range
+
+## Credits
+- Russian localization by Rild2

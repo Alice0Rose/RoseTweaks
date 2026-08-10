@@ -79,6 +79,9 @@ Wherever possible I've implemented things without overriding vanilla files, but 
 
 This mod should be put near or at the top of the load order, and defintely above any mods you want to work more than this one :)
 
+[h1]Credits[/h1]
+- Russian localization by Rild2
+
 [h1]Source Code and Wiki[/h1]
 [url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
 [url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

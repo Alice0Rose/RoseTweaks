@@ -1,0 +1,72 @@
+﻿# Credit to Rild2 for translation :)
+l_russian:
+ # Abandon Colony Decision §§!
+ decision_rose_abandon_colony: "Отказаться от колонии"
+ decision_rose_abandon_colony_desc: "Мы считаем, что колония на этой планете больше не отвечает нашим интересам. Будет разумнее разобрать всё, что мы построили и оставить эту планету бесхозной, чем ей попусту занимать строчку в списках наших владений."
+ decision_rose_abandon_colony_effects: "В равной степени §Yрасселяет§! все £pops£ поселения на другие планеты, §Rуничтожает§! все постройки и районы, и прекращает деятельность колонии."
+ rose_abandon_colony_fail_virtual: "£trigger_no£ Есть традиция §RВиртуальность§!."
+ rose_abandon_colony_fail_horizon_needle: "£trigger_no£ Исследована технология §RИгла Горизонта§!."
+ rose_abandon_colony_fail_capital: "£trigger_no£ Мы не можем отказаться от столицы."
+ rose_abandon_colony_fail_uncontrolled: "£trigger_no£ Колония не под нашим контролем."
+ rose_abandon_colony_fail_at_war: "£trigger_no£ Мы не можем отказаться, пока участвуем в обычной войне."
+ rose_abandon_colony_fail_unwilling_pops: "£trigger_no£ Некоторые поселения не желают перемещаться."
+ rose_abandon_colony_fail_abandon_presapients: "£trigger_no£ Мы не можем бросить предразумных под нашей защитой."
+ rose_abandon_colony_fail_abandon_armies: "£trigger_no£ Необходимо поднять наши армии на орбиту."
+ 
+ rose_abandon_colony.1.name: "Отказаться от колонии [Root.GetName]"
+ rose_abandon_colony.1.desc: "Следует ли нам переселить всё население [Root.GetName] и бросить планету?"
+ rose_abandon_colony.1.a_choose: "Одну секунду, дайте мне ещё подумать..."
+ rose_abandon_colony.1.a_virtual: "Нам лучше просто выключить сервера."
+ rose_abandon_colony.1.a_horizon_needle: "Мы слишком близки к нашей цели, чтобы разбрасываться ресурсами."
+ rose_abandon_colony.1.a_capital: "Мы не можем отказаться от столицы!"
+ rose_abandon_colony.1.a_uncontrolled: "Сперва нам нужно вернуть контроль над колонией!"
+ rose_abandon_colony.1.a_at_war: "Война не позволяет нам отказаться от колонии на [Root.GetName]."
+ rose_abandon_colony.1.a_unwilling_pops: "Мы не можем оставить поселения, которые не желают перемещаться."
+ rose_abandon_colony.1.a_abandon_presapients: "Мы несём ответственность, за тех кого приручили."
+ rose_abandon_colony.1.a_abandon_armies: "Предварительно мы должны поднять наши армии на орбиту."
+ rose_abandon_colony.1.a.effects: "Вернуть стоимость отказа от колонии."
+ rose_abandon_colony.1.b: "Это верное решение."
+ rose_abandon_colony.1.b.effects: "Расселить все £pops£ поселения и §Rуничтожить§! все постройки и районы."
+ 
+ # Natural Arcologies Decision
+ rose_natural_arcologies: "Природные аркологии"
+ rose_natural_arcologies_desc: "Природа только выиграла от нашего преображения естественных ландшафтов. Теперь этот мир станет апологетом нашего процветания."
+ 
+ decision_rose_natural_arcologies: "$rose_natural_arcologies$"
+ decision_rose_natural_arcologies_desc: "Нашим искусным архитекторам по силам преобразить всю планету в органичное слияние множества городов и прекрасной дикой природы."
+ decision_rose_natural_arcologies_effects: "§BУтраивает§! количество §Y$mod_district_jobs_mult$§!, £mod_planet_housing_add£ §Y$MOD_PLANET_HOUSING_ADD$§!, увеличивает §Y$mod_pop_cat_worker_bonus_workforce_mult$§!, и снимает текущие лимиты на все типы £district£ §CРайонов§!"
+ not_allowed_decision_rose_natural_arcologies: "$TRIGGER_FAIL$Требуется §YИдеальный§! мир, гражданская модель §Y$civic_environmentalist$§!, или же §YОкеанический§! мир и бонус за стремление §Y$ap_hydrocentric$§!, или же §YВулканический§! мир и гражданская модель §Y$civic_world_forgers$§! или §Y$ap_galactic_hyperthermia$§! 3-го уровня."
+ 
+ zone_rose_natural_arcologies_research_physics: "$zone_research_physics$"
+ zone_rose_natural_arcologies_research_physics_desc: "$zone_research_physics_desc$" 
+ zone_rose_natural_arcologies_research_society: "$zone_research_society$"
+ zone_rose_natural_arcologies_research_society_desc: "$zone_research_society_desc$" 
+ zone_rose_natural_arcologies_research_engineering: "$zone_research_engineering$"
+ zone_rose_natural_arcologies_research_engineering_desc: "$zone_research_engineering_desc$"
+
+ allow_natural_arcologies: "§HРешение:§! $decision_rose_natural_arcologies$"
+ allow_natural_arcologies_newline: "\n$allow_natural_arcologies$"
+ requires_technology_housing_arcology: "$TRIGGER_FAIL$Требуется £engineering£ технология §Y$tech_housing_2$§! или £society£ технология §Y$tech_housing_agrarian_idyll$§!."
+ 
+ # Orbital Ring Decisions
+ decision_rose_orbital_ring: "Построить орбитальное кольцо"
+ decision_rose_orbital_ring_desc: "Возводя орбитальное кольцо с поверхности планеты, а не начиная из космоса, мы можем завершить его строительство гораздо быстрее, ценой временной остановки других планетарных строительных проектов."
+ decision_rose_orbital_ring_effects: "Создает орбитальное кольцо вокруг §Y[This.GetName]§!, используя планетарную очередь строительства."
+ 
+ decision_rose_orbital_ring_2: "Построить орбитальное кольцо 2-го уровня"
+ decision_rose_orbital_ring_2_desc: "$decision_rose_orbital_ring_desc$"
+ decision_rose_orbital_ring_2_effects: "Создает орбитальное кольцо 2-го уровня вокруг §Y[This.GetName]§!, используя планетарную очередь строительства."
+ 
+ decision_rose_orbital_ring_3: "Построить орбитальное кольцо 3-го уровня"
+ decision_rose_orbital_ring_3_desc: "$decision_rose_orbital_ring_desc$"
+ decision_rose_orbital_ring_3_effects: "Создает орбитальное кольцо 3-го уровня вокруг §Y[This.GetName]§!, используя планетарную очередь строительства."
+
+ # Ringworld Arcologies Decision
+ rose_ringworld_arcologies: "Аркологии мира-кольца"
+ rose_ringworld_arcologies_desc: "Великие города были возведены по всей поверхности сегмента мира-кольца, колоссально расширяя его размеры."
+ 
+ decision_rose_ringworld_arcologies: "$rose_ringworld_arcologies$"
+ decision_rose_ringworld_arcologies_desc: "Наши инженеры проведут по-настоящему гениальную работу. Дополнительные аркологии на этом сегменте мира-кольца значительно увеличат возможное пространство для производства."
+ decision_rose_ringworld_arcologies_effects: "Увеличивает количество доступных £district£ §Yрайонов§! на §Y5§!"
+
+ allow_ringworld_arcologies: "\n§HРешение:§! $decision_rose_ringworld_arcologies$"
