@@ -1,0 +1,16 @@
+[h1]Features[/h1]
+This mod readds the automatic creation of defense platforms via the Eternal Vigilance ascension perk which was added in version 4.0 of Stellaris and then removed in version 4.3. 
+
+Since the vanilla version was removed for balance reasons, this mod aims to readd the feature in a balanced way. This is done by adding a scaling alloy cost based on both the number of starbases having platforms built on them, and the percent of those starbases defense platform cap being built automatically. Both of these variables can be customized with the two policies that are available upon taking the ascension perk.
+
+Just don't set both policies to max unless you have the alloys to pay for it o.o
+
+[h1]Compatibility[/h1]
+This mod only overrides the Eternal Vigilance ascension perk, so it should be compatible with most other mods :)
+
+common\ascension_perks\00_ascension_perks.txt
+- ap_eternal_vigilance
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

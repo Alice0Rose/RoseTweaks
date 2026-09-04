@@ -1,0 +1,236 @@
+bev_eternal_vigilance_starbase_coverage_policy = {
+	potential = {
+		is_country_type = default
+		has_ascension_perk = ap_eternal_vigilance
+		is_nomadic = no
+	}
+	
+	# Full Coverage: all starbases, outposts, orbital rings, and deep space citadels
+	option = {
+		name = bev_eternal_vigilance_starbase_coverage_policy_full
+
+		policy_flags = {
+			bev_eternal_vigilance_starbase_coverage_policy_full
+		}
+
+		AI_weight = {
+			weight = 20
+			modifier = { # Only rich AIs can choose
+				factor = 0
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 2000
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 1000
+					}
+				}
+			}
+			modifier = { # Crazy rich AIs will choose this
+				factor = 50
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value > 5000
+					}
+					has_monthly_income = {
+						resource = alloys
+						value > 2500
+					}
+				}
+			}
+		}
+	}
+	
+	# Standard Coverage: all upgraded starbases, all orbital rings, and all deep space citadels
+	option = {
+		name = bev_eternal_vigilance_starbase_coverage_policy_standard
+
+		policy_flags = {
+			bev_eternal_vigilance_starbase_coverage_policy_standard
+		}
+
+		AI_weight = {
+			weight = 75
+			modifier = { # Only well-off AIs can choose
+				factor = 0
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 1000
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 500
+					}
+				}
+			}
+		}
+	}
+	
+	# Minimal Coverage: all bastion starbases, all bastion orbital rings, and all deep space citadels
+	option = {
+		name = bev_eternal_vigilance_starbase_coverage_policy_minimal
+
+		policy_flags = {
+			bev_eternal_vigilance_starbase_coverage_policy_minimal
+		}
+
+		AI_weight = {
+			weight = 100 # Standard choice for AIs
+			modifier = { # Broke boi AIs will choose this
+				factor = 100
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 200
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 100
+					}
+				}
+			}
+		}
+	}
+	
+	# No Coverage: nothing
+	option = {
+		name = bev_eternal_vigilance_starbase_coverage_policy_no
+
+		policy_flags = {
+			bev_eternal_vigilance_starbase_coverage_policy_no
+		}
+
+		AI_weight = {
+			weight = 20
+			modifier = { # Functioning economies won't choose this
+				factor = 0
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value > 20
+					}
+					has_monthly_income = {
+						resource = alloys
+						value > 10
+					}
+				}
+			}
+			modifier = { # No defense platforms for bankrupt empires
+				factor = 100000
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 10
+					}
+				}
+			}
+		}
+	}
+}
+
+bev_eternal_vigilance_platform_density_policy = {
+	potential = {
+		is_country_type = default
+		has_ascension_perk = ap_eternal_vigilance
+		is_nomadic = no
+	}
+
+	# Maximum Density: 75%
+	option = {
+		name = bev_eternal_vigilance_platform_density_policy_maximum
+
+		policy_flags = {
+			bev_eternal_vigilance_platform_density_policy_maximum
+		}
+
+		AI_weight = {
+			weight = 20
+			modifier = { # Only rich AIs can choose
+				factor = 0
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 2000
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 1000
+					}
+				}
+			}
+			modifier = { # Crazy rich AIs will choose this
+				factor = 50
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value > 5000
+					}
+					has_monthly_income = {
+						resource = alloys
+						value > 2500
+					}
+				}
+			}
+		}
+	}
+	
+	# Moderate Density: 50%
+	option = {
+		name = bev_eternal_vigilance_platform_density_policy_moderate
+
+		policy_flags = {
+			bev_eternal_vigilance_platform_density_policy_moderate
+		}
+
+		AI_weight = {
+			weight = 75
+			modifier = { # Only well-off AIs can choose
+				factor = 0
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 1000
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 500
+					}
+				}
+			}
+		}
+	}
+	
+	# Minimum Density: 25%
+	option = {
+		name = bev_eternal_vigilance_platform_density_policy_minimum
+
+		policy_flags = {
+			bev_eternal_vigilance_platform_density_policy_minimum
+		}
+
+		AI_weight = {
+			weight = 100 # Standard choice for AIs
+			modifier = { # Broke boi AIs will choose this
+				factor = 100
+				AND = {
+					has_monthly_income = {
+						resource = energy
+						value < 200
+					}
+					has_monthly_income = {
+						resource = alloys
+						value < 100
+					}
+				}
+			}
+		}
+	}
+}

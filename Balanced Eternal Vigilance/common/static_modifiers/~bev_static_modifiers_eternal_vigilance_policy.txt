@@ -1,0 +1,15 @@
+bev_eternal_vigilance_platform_density_policy_maximum_modifier = {
+	icon = "gfx/interface/icons/modifiers/mod_starbase_defense_platform_capacity_add.dds"
+	hide_from_country_list = no
+	country_base_alloys_produces_add = -10
+}
+bev_eternal_vigilance_platform_density_policy_moderate_modifier = {
+	icon = "gfx/interface/icons/modifiers/mod_starbase_defense_platform_capacity_add.dds"
+	hide_from_country_list = no
+	country_base_alloys_produces_add = -5
+}
+bev_eternal_vigilance_platform_density_policy_minimum_modifier = {
+	icon = "gfx/interface/icons/modifiers/mod_starbase_defense_platform_capacity_add.dds"
+	hide_from_country_list = no
+	country_base_alloys_produces_add = -2.5
+}

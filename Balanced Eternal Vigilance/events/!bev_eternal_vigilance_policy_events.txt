@@ -1,0 +1,270 @@
+namespace = bev_eternal_vigilance_policy
+
+country_event = {
+	id = bev_eternal_vigilance_policy.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_eternal_vigilance
+		is_nomadic = no
+	}
+
+	immediate = {
+		# Sets what percentage of defense platforms to build based on platform density policy
+		if = {
+			limit = { has_policy_flag = bev_eternal_vigilance_platform_density_policy_maximum }
+			set_variable = { 
+				which = bev_eternal_vigilance_defense_platform_percent 
+				value = 0.75 
+			}
+		}
+		else_if = {
+			limit = { has_policy_flag = bev_eternal_vigilance_platform_density_policy_moderate }
+			set_variable = { 
+				which = bev_eternal_vigilance_defense_platform_percent 
+				value = 0.50 
+			}
+		}
+		else = {
+			set_variable = {
+				which = bev_eternal_vigilance_defense_platform_percent 
+				value = 0.25 
+			}
+		}
+		
+		# Builds defense platforms on policy matching starbases up to policy matching percentage
+		# Full Coverage: Everything
+		if = {
+			limit = {
+				has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_full
+			}
+			every_owned_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+				}
+				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+			}
+			every_owned_nonprimary_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+				}
+				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+			}
+
+		}
+		
+		# Standard Coverage: Everything but outposts
+		else_if = {
+			limit = {
+				has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_standard
+			}
+			every_owned_starbase = {
+				limit = {
+					NOT = { has_starbase_size = starbase_outpost }
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+				}
+				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+			}
+			every_owned_nonprimary_starbase = {
+				limit = {
+					NOT = { has_starbase_size = starbase_outpost }
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+				}
+				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+			}
+		}
+		
+		# Minimal Coverage: Fortress starbases and orbital rings and DSC only
+		else_if = {
+			limit = {
+				has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_minimal
+			}
+			every_owned_starbase = {
+				limit = {
+					is_starbase_type = sfortress
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+				}
+				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+			}
+			every_owned_nonprimary_starbase = {
+				limit = {
+					OR = {
+						is_starbase_type = sorbital_fortress
+						is_starbase_type = sdeepspacecitadel
+					}
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+				}
+				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+			}
+		}
+		
+		# Reruns event in 6 months
+		country_event = {
+			id = bev_eternal_vigilance_policy.1
+			days = 180
+		}
+	}
+}
+
+# Monthly event to apply/update modifier for policy costs based on number of starbases
+country_event = {
+	id = bev_eternal_vigilance_policy.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Removes modifier to be replaced or left off if neither policy is active
+		remove_modifier = bev_eternal_vigilance_platform_density_policy_maximum_modifier
+		remove_modifier = bev_eternal_vigilance_platform_density_policy_moderate_modifier
+		remove_modifier = bev_eternal_vigilance_platform_density_policy_minimum_modifier
+		
+		if = {
+			limit = {
+				has_ascension_perk = ap_eternal_vigilance
+				is_nomadic = no
+				NOT = { has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_no }
+			}
+			
+			# Gets number of starbases to scale by based on coverage policy
+			# Full Coverage: Everything
+			if = {
+				limit = {
+					has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_full
+				}
+				
+				# Starbases
+				export_trigger_value_to_variable = {
+					trigger = count_owned_starbase
+					variable = bev_eternal_vigilance_modifier_scalar_primary
+				}
+				
+				# Orbital rings and deep space citadels
+				export_trigger_value_to_variable = {
+					trigger = count_owned_nonprimary_starbase
+					variable = bev_eternal_vigilance_modifier_scalar_nonprimary
+				}
+				
+				# Combines scalars
+				change_variable = { 
+					which = bev_eternal_vigilance_modifier_scalar_primary 
+					value = bev_eternal_vigilance_modifier_scalar_nonprimary
+				}
+			}
+			
+			# Standard Coverage: Everything but outposts
+			else_if = {
+				limit = {
+					has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_standard
+				}
+				
+				# Starbases
+				export_trigger_value_to_variable = {
+					trigger = count_owned_starbase
+					parameters = { 
+						limit = {
+							NOT = { has_starbase_size = starbase_outpost }
+						}
+					}
+					variable = bev_eternal_vigilance_modifier_scalar_primary
+				}
+				
+				# Orbital rings and deep space citadels
+				export_trigger_value_to_variable = {
+					trigger = count_owned_nonprimary_starbase
+					parameters = { 
+						limit = {
+							NOT = { has_starbase_size = starbase_outpost }
+						}
+					}
+					variable = bev_eternal_vigilance_modifier_scalar_nonprimary
+				}
+				
+				# Combines scalars
+				change_variable = { 
+					which = bev_eternal_vigilance_modifier_scalar_primary 
+					value = bev_eternal_vigilance_modifier_scalar_nonprimary
+				}
+			}
+		
+			# Minimal Coverage: Fortress starbases and orbital rings and DSC only
+			else = {
+				# Starbases
+				export_trigger_value_to_variable = {
+					trigger = count_owned_starbase
+					parameters = { 
+						limit = {
+							is_starbase_type = sfortress
+						}
+					}
+					variable = bev_eternal_vigilance_modifier_scalar_primary
+				}
+				
+				# Orbital rings and deep space citadels
+				export_trigger_value_to_variable = {
+					trigger = count_owned_nonprimary_starbase
+					parameters = { 
+						limit = {
+							OR = {
+								is_starbase_type = sorbital_fortress
+								is_starbase_type = sdeepspacecitadel
+							}
+						}
+					}
+					variable = bev_eternal_vigilance_modifier_scalar_nonprimary
+				}
+				
+				# Combines scalars
+				change_variable = { 
+					which = bev_eternal_vigilance_modifier_scalar_primary 
+					value = bev_eternal_vigilance_modifier_scalar_nonprimary
+				}
+			}
+		
+			# Adds modifier based on density policy scaled by number of starbases based on coverage policy
+			# Maximum
+			if = {
+				limit = { 
+					has_policy_flag = bev_eternal_vigilance_platform_density_policy_maximum
+				}
+				add_modifier = {
+					modifier = bev_eternal_vigilance_platform_density_policy_maximum_modifier
+					multiplier = bev_eternal_vigilance_modifier_scalar_primary
+				}
+			}
+			
+			# Moderate
+			else_if = {
+				limit = { 
+					has_policy_flag = bev_eternal_vigilance_platform_density_policy_moderate
+				}
+				add_modifier = {
+					modifier = bev_eternal_vigilance_platform_density_policy_moderate_modifier
+					multiplier = bev_eternal_vigilance_modifier_scalar_primary
+				}
+			}
+			
+			# Minimum
+			else = {
+				add_modifier = {
+					modifier = bev_eternal_vigilance_platform_density_policy_minimum_modifier
+					multiplier = bev_eternal_vigilance_modifier_scalar_primary
+				}
+			}
+		}
+	}
+}

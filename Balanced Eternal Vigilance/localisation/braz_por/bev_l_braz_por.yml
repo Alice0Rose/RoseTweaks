@@ -1,0 +1,39 @@
+﻿l_braz_por:
+ ap_rose_eternal_vigilance_tt: "Every 6 months a §Y$military_station_small$§! will be built around every §YStarbase§! at the cost of §Y$mod_country_alloys_produces_mult$§! based on the §Y$ap_eternal_vigilance$§! policies."
+ 
+ # Starbase Coverage Policy
+ policy_bev_eternal_vigilance_starbase_coverage_policy: "$ap_eternal_vigilance$: Starbase Coverage"
+ policy_bev_eternal_vigilance_starbase_coverage_policy_desc: "Do we need an all-encompassing wall or a collection of unyielding shields?"
+ bev_eternal_vigilance_starbase_coverage_policy_full: "Full Coverage"
+ bev_eternal_vigilance_starbase_coverage_policy_full_name: "$bev_eternal_vigilance_starbase_coverage_policy_full$"
+ bev_eternal_vigilance_starbase_coverage_policy_full_desc: "Every starbase needs to be properly defended. Spare no cost.\n\nAutomatically builds §Y$military_station_small_plural$§! around §YAll Starbases§!."
+ bev_eternal_vigilance_starbase_coverage_policy_standard: "Standard Coverage"
+ bev_eternal_vigilance_starbase_coverage_policy_standard_name: "$bev_eternal_vigilance_starbase_coverage_policy_standard$"
+ bev_eternal_vigilance_starbase_coverage_policy_standard_desc: "If a starbase is worth outfitting with buildings and modules, it is worth defending.\n\nAutomatically builds §Y$military_station_small_plural$§! around §YUpgraded Starbases§!."
+ bev_eternal_vigilance_starbase_coverage_policy_minimal: "Minimal Coverage"
+ bev_eternal_vigilance_starbase_coverage_policy_minimal_name: "$bev_eternal_vigilance_starbase_coverage_policy_minimal$"
+ bev_eternal_vigilance_starbase_coverage_policy_minimal_desc: "Only our strongest redoubts require our support.\n\nAutomatically builds §Y$military_station_small_plural$§! around §Y$sfortress$ Starbases§!."
+ bev_eternal_vigilance_starbase_coverage_policy_no: "No Coverage"
+ bev_eternal_vigilance_starbase_coverage_policy_no_name: "$bev_eternal_vigilance_starbase_coverage_policy_no$"
+ bev_eternal_vigilance_starbase_coverage_policy_no_desc: "There is no need to further enhance our defenses.\n\nAutomatically builds §Y$military_station_small_plural$§! around §YNo Starbases§!."
+ 
+ # Platform Density Policy
+ policy_bev_eternal_vigilance_platform_density_policy: "$ap_eternal_vigilance$: Platform Density"
+ policy_bev_eternal_vigilance_platform_density_policy_desc: "A concentrated defense is a strong defense."
+ bev_eternal_vigilance_platform_density_policy_maximum: "Maximum Density"
+ bev_eternal_vigilance_platform_density_policy_maximum_name: "$bev_eternal_vigilance_platform_density_policy_maximum$"
+ bev_eternal_vigilance_platform_density_policy_maximum_desc: "An impenetrable shield ensures our survival now and forever.\n\nAutomatically builds up to §Y75%§! of §Y$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$§! at the cost of §R-10§! £alloys£ §Y$mod_country_alloys_produces_mult$§! per §YStarbase§! covered."
+ bev_eternal_vigilance_platform_density_policy_moderate: "Moderate Density"
+ bev_eternal_vigilance_platform_density_policy_moderate_name: "$bev_eternal_vigilance_platform_density_policy_moderate$"
+ bev_eternal_vigilance_platform_density_policy_moderate_desc: "A defense need not be unbreakable so long as it is too costly to pierce.\n\nAutomatically builds up to §Y50%§! of §Y$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$§! at the cost of §R-5§! £alloys£ §Y$mod_country_alloys_produces_mult$§! per §YStarbase§! covered."
+ bev_eternal_vigilance_platform_density_policy_minimum: "Minimum Density"
+ bev_eternal_vigilance_platform_density_policy_minimum_name: "$bev_eternal_vigilance_platform_density_policy_minimum$"
+ bev_eternal_vigilance_platform_density_policy_minimum_desc: "Frugality and defense need not be exclusive concepts.\n\nAutomatically builds up to §Y25%§! of §Y$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$§! at the cost of §R-2.5§! £alloys£ §Y$mod_country_alloys_produces_mult$§! per §YStarbase§! covered."
+ 
+ # Modifiers
+ bev_eternal_vigilance_platform_density_policy_maximum_modifier: "$ap_eternal_vigilance$ $bev_eternal_vigilance_platform_density_policy_maximum$"
+ bev_eternal_vigilance_platform_density_policy_maximum_modifier_desc: "$bev_eternal_vigilance_platform_density_policy_maximum_desc$"
+ bev_eternal_vigilance_platform_density_policy_moderate_modifier: "$ap_eternal_vigilance$ $bev_eternal_vigilance_platform_density_policy_moderate$"
+ bev_eternal_vigilance_platform_density_policy_moderate_modifier_desc: "$bev_eternal_vigilance_platform_density_policy_moderate_desc$"
+ bev_eternal_vigilance_platform_density_policy_minimum_modifier: "$ap_eternal_vigilance$ $bev_eternal_vigilance_platform_density_policy_minimum$"
+ bev_eternal_vigilance_platform_density_policy_minimum_modifier_desc: "$bev_eternal_vigilance_platform_density_policy_minimum_desc$"
