@@ -1,5 +1,5 @@
 [h1]Features[/h1]
-This mod reworks cosmic storms to be less impactful and significantly less punishing if you choose not to interact with them. This is done by removing devastation from all storms except Nexus storms, making Planetary Shields more effective and reducing the negatives of storms, reducing and changing the modifiers for all storms, and making Nexus storms unable to spawn naturally and restricted to specific events like the Storm Chasers final situation or the adAkkaria heckin angy relic.
+This mod reworks cosmic storms to be less impactful and significantly less punishing if you choose not to interact with them. This is done by removing devastation from all storms except Nexus storms, making Planetary Shields more effective at reducing the negatives of storms, reducing and changing the modifiers for all storms, and making Nexus storms unable to spawn naturally and restricted to specific events like the Storm Chasers final situation or the adAkkaria super evil relic.
 
 A detailed breakdown of all storm effects (with reduced negatives from Planetary Shields shown in parentheses) follows:
 [list]
@@ -8,7 +8,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 	[*]Planets:
 		[list]
 		[*] +5% Resources from Jobs
-		[*] +25% (+10%) job upkeep
+		[*] +15% (+5%) job upkeep
 		[/list]
 	[*]Ships:
 		[list]
@@ -26,7 +26,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 	[*]Planets:
 		[list]
 		[*] +0.1 Volatile motes from Farmers, Miners, and Technicians
-		[*] +25% (+10%) job upkeep
+		[*] +15% (+5%) job upkeep
 		[/list]
 	[*]Ships:
 		[list]
@@ -49,7 +49,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 		[*] +25% Entertainer Output
 		[*] +25% Administrator Output
 		[*] +0.25 (+0.1) Consumer Goods for Individualistic or Energy for Gestalt upkeep for Farmers, Miners, and Technicians
-		[*] +25% (+10%) job upkeep 
+		[*] +15% (+5%) job upkeep 
 		[/list]
 	[*]Ships:
 		[list]
@@ -70,7 +70,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 		[*] -75% Metallurgist Upkeep
 		[*] +50% (+10%) Station upkeep
 		[*] -25% (-10%) Planetary build speed
-		[*] +25% (+10%) job upkeep
+		[*] +15% (+5%) job upkeep
 		[/list]
 	[*]Ships:
 		[list]
@@ -90,7 +90,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 		[list]
 		[*] +75% Mining station output
 		[*] +125% Research station output
-		[*] +25% (+10%) job upkeep
+		[*] +15% (+5%) job upkeep
 		[/list]
 	[*]Ships:
 		[list]
@@ -116,7 +116,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 		[*] +15% (+5%) Entertainer upkeep
 		[*] +15% (+5%) Administrator upkeep
 		[*] Lowers Intel
-		[*] +25% (+10%) job upkeep
+		[*] +15% (+5%) job upkeep
 		[/list]
 	[*]Ships:
 		[list]
@@ -146,7 +146,7 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 				[*]	Shrouded World with a 1-5 Zro deposit
 				[*]	Nanite World with a 1 Nanites deposit
 				[/list]
-		[*] +25% (+10%) job upkeep
+		[*] +15% (+5%) job upkeep
 		[/list]
 	[*]Ships:
 		[list]

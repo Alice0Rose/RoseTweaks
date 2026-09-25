@@ -1,0 +1,64 @@
+﻿l_english:
+ ###########################
+ ### Vanilla Repeatables ###
+ ###########################
+ edict_bta_no_energy_repeatables: "BTA: No §BEnergy§! Repeatables"
+ edict_bta_no_energy_repeatables_desc: "Prevents tech automation from picking energy repeatables."
+ edict_bta_no_cosmogenesis_repeatables: "BTA: No §BCosmogenesis§! Repeatables" 
+ edict_bta_no_cosmogenesis_repeatables_desc: "Prevents tech automation from picking the Applied Infinity Thesis repeatable or the level 5 Cosmogenesis technology." 
+ edict_bta_no_shield_repeatables: "BTA: No §BShield§! Repeatables"
+ edict_bta_no_shield_repeatables_desc: "Prevents tech automation from picking shield repeatables."
+ edict_bta_no_energyweapons_repeatables: "BTA: No §BEnergy Weapon§! Repeatables"
+ edict_bta_no_energyweapons_repeatables_desc: "Prevents tech automation from picking energy weapon repeatables."
+
+ edict_bta_no_food_repeatables: "BTA: No §GFood§! Repeatables"
+ edict_bta_no_food_repeatables_desc: "Prevents tech automation from picking food repeatables."
+ edict_bta_no_unity_repeatables: "BTA: No §GUnity§! Repeatables"
+ edict_bta_no_unity_repeatables_desc: "Prevents tech automation from picking unity repeatables."
+ edict_bta_no_lifespan_repeatables: "BTA: No §GLeader Lifespan§! Repeatables"
+ edict_bta_no_lifespan_repeatables_desc: "Prevents tech automation from picking leader lifespan repeatables."
+ edict_bta_no_army_repeatables: "BTA: No §GArmy§! Repeatables"
+ edict_bta_no_army_repeatables_desc: "Prevents tech automation from picking army repeatables."
+ edict_bta_no_strikecraft_repeatables: "BTA: No §GStrike Craft§! Repeatables"
+ edict_bta_no_strikecraft_repeatables_desc: "Prevents tech automation from picking strike craft repeatables."
+
+ edict_bta_no_mineral_repeatables: "BTA: No §HMineral§! Repeatables"
+ edict_bta_no_mineral_repeatables_desc: "Prevents tech automation from picking mineral repeatables."
+ edict_bta_no_platform_repeatables: "BTA: No §HDefense Platform§! Repeatables"
+ edict_bta_no_platform_repeatables_desc: "Prevents tech automation from picking defense platform repeatables."
+ edict_bta_no_armor_repeatables: "BTA: No §HArmor§! Repeatables"
+ edict_bta_no_armor_repeatables_desc: "Prevents tech automation from picking armor repeatables."
+ edict_bta_no_explosive_repeatables: "BTA: No §HExplosive Weapon§! Repeatables"
+ edict_bta_no_explosive_repeatables_desc: "Prevents tech automation from picking explosive weapon repeatables."
+ edict_bta_no_kinetic_repeatables: "BTA: No §HKinetic Weapon§! Repeatables"
+ edict_bta_no_kinetic_repeatables_desc: "Prevents tech automation from picking kinetic weapon repeatables."
+ 
+ ##################################
+ ### Gigastructures Repeatables ###
+ ##################################
+ edict_bta_no_blokkat_research_repeatables: "BTA: No Blokkat Repeatables"
+ edict_bta_no_blokkat_research_repeatables_desc: "Prevents tech automation from picking blokkat research repeatables." 
+
+ edict_bta_no_storage_repeatables: "BTA: No §BStorage§! Repeatables"
+ edict_bta_no_storage_repeatables_desc: "Prevents tech automation from picking resource storage repeatables."
+
+ edict_bta_no_mega_speed_repeatables: "BTA: No §HMegastructure§! Repeatables"
+ edict_bta_no_mega_speed_repeatables_desc: "Prevents tech automation from picking megastructure build speed repeatables."
+ 
+ edict_bta_no_asteroid_artillery_repeatables: "BTA: No §HAsteroid§! Repeatables"
+ edict_bta_no_asteroid_artillery_repeatables_desc: "Prevents tech automation from picking asteroid artillery repeatables."
+ 
+ edict_bta_no_strike_corvette_repeatables: "BTA: No §HStrike Corvette§! Repeatables"
+ edict_bta_no_strike_corvette_repeatables_desc: "Prevents tech automation from picking strike corvette repeatables." 
+ 
+ ##############################################
+ ### Extra Ship Components NEXT Repeatables ###
+ ##############################################
+ edict_bta_no_nanite_weapon_repeatables: "BTA: No §BNanite Weapon§! Repeatables"
+ edict_bta_no_nanite_weapon_repeatables_desc: "Prevents tech automation from picking nanite weapon damage or fire-rate repeatables."
+
+ edict_bta_no_bio_weapon_repeatables: "BTA: No §GBio Weapon§! Repeatables"
+ edict_bta_no_bio_weapon_repeatables_desc: "Prevents tech automation from picking bio weapon damage or fire-rate repeatables." 
+
+ edict_bta_no_psionic_weapon_repeatables: "BTA: No §GPsionic Weapon§! Repeatables"
+ edict_bta_no_psionic_weapon_repeatables_desc: "Prevents tech automation from picking psionic weapon damage or fire-rate repeatables."

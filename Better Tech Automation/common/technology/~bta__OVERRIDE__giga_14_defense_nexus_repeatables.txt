@@ -12,7 +12,6 @@ giga_tech_repeatable_defense_nexus_capacity_upgrade = {
 
 	potential = {
 		has_gigastructures = yes
-		has_any_megastructure_dlc = yes
 		NOT = { has_global_flag = planetshipyard_disabled }
 	}
 

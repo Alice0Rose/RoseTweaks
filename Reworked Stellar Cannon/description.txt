@@ -1,0 +1,20 @@
+[h1]Features[/h1]
+This mod reworks the Stellar Cannon from a lackluster waste of alloys to the galactic super-weapon it was always meant to be. It also indirectly reduces the amount the AI spams the Stellar Cannon due to it requiring a higher tier tech that is locked behind the Colossus Project AP (or Galactic Wonders AP if you don't have the Apocalypse DLC).
+
+Stellar Cannon Changes:
+- the ai cannot draw the tech for it and wont build it
+- more to come this is just a placeholder lol
+
+[h1]Compatibility[/h1]
+This mod overrides several files related to the Stellar Cannon, so if another mod changes the way it works, there may be conflicts.
+
+common\megastructures\31_dyson_gun.txt
+- dyson_gun_0
+- dyson_gun_1
+- dyson_gun_2
+- dyson_gun_3
+- dyson_gun_0_restored
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

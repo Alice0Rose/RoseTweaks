@@ -4,6 +4,7 @@ This mod adds additional text to some event options which tells you the hidden e
 Things this mod works for:
 - Enigmatic Fortress event chain
 - Stellarite Devourer event chain
+- Kaleidoscope situation approaches
 - Cybernetic Advanced Authority event chain
 - Synthetic Advanced Authority event chain
 - Psionic Advanced Authority event chain

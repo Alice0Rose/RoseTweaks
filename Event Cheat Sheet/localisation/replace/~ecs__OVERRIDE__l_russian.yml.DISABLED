@@ -1,0 +1,522 @@
+﻿l_russian:
+ ##########################
+ ### astral_rifts_0.yml ###
+ ##########################
+ # Ruined Planet
+ astral_rift.3.a: "Visit the §Y[GetStarlightVanguardName]§!. §Y(+10% Kinetic Damage)§!"
+ astral_rift.3.b: "Visit the §YBlack Curtain§!. §Y(+5% £pops£ Growth and Habitability)§!" 
+ 
+ astral_rift.10.a: "Offer alloys. §Y(+10% £ship_stats_armor£ HP and Hardening)§!"
+ astral_rift.10.b: "Offer astral thread. §Y(+10% £ship_stats_shield£ HP and Hardening)§!"
+ 
+ astral_rift.15.a: "Offer food. §Y(+0.5 £food£ from Farmers)§!"
+ astral_rift.15.a.lithoid: "Offer minerals. §Y(+0.5 £minerals£ from Miners)§!"
+ astral_rift.15.a.synthetic: "Offer energy. §Y(+0.5 £energy£ from Technicians)§!"
+ astral_rift.15.b: "Offer astral thread. §Y(+25% £astral_rift£ Speed and -50% Fail Chance)§!"
+ 
+ astral_rift.20.a: "Offer astral thread. §Y(+5% Sublight Speed)§!"
+ astral_rift.20.b: "Offer energy. §Y(+5% Ship Build Speed)§!"
+
+ # The Corridors
+ astral_rift.115.a: "Hack it. §Y(Risks £scientist£ Lost 5 Years, +1 Max £district£)§!"
+ astral_rift.115.b: "Strip it for parts. §Y(Safely Ends Rift)§!" 
+
+ # Dimensional Conflict
+ astral_rift.200.a: "Study its composition. §Y(£alloys£, Armor Tech, £specimen£)§!" 
+ astral_rift.200.b: "Let's get in there. §Y(Biology Tech)§!"
+
+ astral_rift.215.a: "Try to activate the dodecahedron. §Y(Relic)§!"
+ astral_rift.215.b: "Strip it for parts. §Y(£sr_dark_matter£)§!"
+
+ # The Lattice
+ astral_rift.325.a: "Retrieve the globes. §G(9 Fractal Seeds)§!"
+ astral_rift.325.b: "We are done here. §R(Only 3 Fractal Seeds)§!"
+ 
+ # Subnautical
+ astral_rift.505.a: "Activate the engines. §Y(Fastest Route)§!"
+ astral_rift.520.b: "Approach the Object. §Y(Fastest Route)§!"
+
+ # The Tower
+ astral_rift.600.a: "Attempt to communicate with the creature. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.600.b: "Observe the creature and report back. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.600.c: "Kill it. §Y(£unity£)§!" 
+ 
+ astral_rift.605.a: "Invite them aboard. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.605.b: "Offer something in return. §Y(£unity£)§!"
+ astral_rift.605.c: "Leave the site. §R(Ends Rift)§!"
+ 
+ astral_rift.610.a: "Invite them aboard. §Y(New £scientist£/£society£ £research£)§!"
+ astral_rift.610.b: "Offer something in return. §Y(£unity£)§!"
+ astral_rift.610.c: "Leave the site. §R(Ends Rift)§!"
+ astral_rift.610.d: "Kill the creature. §Y(£unity£)§!" 
+
+ # Whiteout
+ astral_rift.700.a: "Maximize propulsion. §Y(£astral_threads£)§!"
+ astral_rift.700.b: "Release a drone. §Y(£physics£)§!"
+
+ astral_rift.715.a: "Take a sample. §Y(£rare_crystals£)§!"
+ astral_rift.715.b: "Trace a map. §Y(£society£)§!" 
+ 
+ # The Advisor
+ astral_rift.805.a: "Ask for FURTHER assistance. §R(Lose £scientist£ for 5 Years)§!"
+ 
+ astral_rift.810.a: "Placate the machine. §R(Lose £scientist£ for 5 Years)§!"
+ 
+ astral_rift.820.a: "Attempt to recover its core. §Y(£specimen£, £alloys£, £physics£ Tech)§!"
+ astral_rift.820.b: "Destroy the machine completely. §Y(£engineering£)§!"
+ 
+ # The Vortex
+ astral_rift.900.b: "Expose sample to flame. §Y(Risks £scientist£, +10% £energy£)§!"
+
+ ##########################
+ ### astral_rifts_1.yml ###
+ ##########################
+ # The Crystal Rift
+ astral_rift.1000.a: "Utilize A.I. to check for hidden patterns."
+ astral_rift.1000.b: "E.M.P. the anchor cord. §R(Waste of £energy£)§!"
+
+ astral_rift.1010.b: "Get out! We've only stunned it. §R(Ends Rift)§!"
+
+ astral_rift.1020.a: "We've opened a doorway... §G(Opens Wormhole)§!"
+ astral_rift.1020.b: "Seal it! Quickly! §R(Ends Rift)§!"
+
+ # Hatching Ground
+ astral_rift.1105.a: "Get closer. §Y(£engineering£, £unity£)§!"
+ astral_rift.1105.b: "Maintain a safe distance. §Y(Propulsion £research£ Speed)§!" 
+ 
+ # The Microverse
+ astral_rift.1210.a: "Synchronize with the [Fleet.GetName]. §R(Ends Rift)§!"
+ 
+ astral_rift.1220.b: "Observe from the edge of the universe. §R(Ends Rift)§!"
+
+ # The Fluid
+ astral_rift.1315.a: "Pull anchor. Return immediately. §Y(+10% Biology £research£)§!"
+ astral_rift.1315.b: "Pump exotic gasses. Neutralize the beast. §Y(Risks £scientist£, Relic)§!" 
+
+ # The Garden
+ astral_rift.1400.b: "Extract the fruit. §R(Risks £scientist£)§!"
+ 
+ astral_rift.1405.a: "Burn the entangling vines. §R(Risks £scientist£)§!"
+ astral_rift.1405.b: "Pull anchor. Escape. §Y(Safely End Rift)§!"
+ 
+ astral_rift.1410.b: "Study this place. §G(£specimen£, Safest Route)§!"
+ 
+ astral_rift.1425.a: "Escape. §Y(Safely End Rift)§!"
+ astral_rift.1425.b: "Do nothing. §R(Kills £scientist£)§!"
+ astral_rift.1425.c: "Burn the Creature. §Y(Risks £scientist£, Relic)§!" 
+ 
+ astral_rift.1430.a: "Escape. §Y(Safely End Rift)§!"
+ astral_rift.1430.b: "Burn the Creature. §Y(Risks £scientist£, Relic)§!"
+
+ astral_rift.1435.a: "Escape. §Y(Safely End Rift)§!"
+ astral_rift.1435.b: "Burn the Creature. §Y(Risks £scientist£, Relic)§!"
+
+ astral_rift.1440.a: "Burn the Creature. §G(Relic)§!"
+ astral_rift.1440.b: "Continue Studies. §R(Risks £scientist£, Relic)§!" 
+ 
+ 
+ # Desert Ruins
+ astral_rift.1520.b: "Press the §Ggreen§! button. §R(Kills £scientist£)§!"
+ astral_rift.1530.a: "Press the triangle button. §R(Kills £scientist£)§!"
+ astral_rift.1550.a: "Press button with four dots. §R(Kills £scientist£)§!"
+ 
+ # Strange Station
+ astral_rift.1615.a: "Welcome friendship. §Y(£specimen£, £society£, Trading Contact)§!"
+ astral_rift.1615.b: "Spurn their offer. §Y(£unity£)§!"
+ astral_rift.1615.c: "Accept this opportunity. §Y(£specimen£, £society£, Trading Contact)§!"
+ astral_rift.1615.d: "This is of no interest to us. §Y(£unity£)§!"
+ 
+ # Lone Object
+ astral_rift.1705.b: "Blast it open. §Y(Risk Spawning Fleet,£minerals£,£alloys£,£rare_crystals£,£unity£)§!" 
+ 
+ astral_rift.1710.b: "Blast it open. §Y(Risk Spawning Fleet,£minerals£,£alloys£,£rare_crystals£,£unity£)§!"
+ 
+ astral_rift.1715.a: "Take samples and return. §Y(Safely Ends Rift)§!"
+ astral_rift.1715.b: "Engage destructive exploration. §Y(Risk Spawning Fleet,£minerals£,£alloys£,£rare_crystals£,£unity£)§!"
+ 
+ # Rockworms
+ astral_rift.1815.a: "Set explosive charges. §Y(Risks £scientist£, £minerals£ Buff Decision)§!"
+ astral_rift.1815.b: "Pull emergency anchor. §Y(Safely Ends Rift)§!"
+ 
+ astral_rift.1820.b: "We've pushed our luck far enough. Return at once. §Y(Safely Ends Rift)§!"
+ astral_rift.1820.b.evopred: "Gather the samples and return. §Y(Safely Ends Rift)§!"
+ 
+ # Volcanic Plane
+ astral_rift.1905.a: "Pull the emergency anchor. §Y(Safely Ends Rift)§!"
+ astral_rift.1905.b: "Hide in the lava." 
+ 
+ astral_rift.1910.a: "Attempt to escape."
+ astral_rift.1910.b: "This is dangerous. Pull the emergency anchor. §Y(Safely Ends Rift)§!"
+ 
+ astral_rift.1915.a: "Decipher the runes."
+ astral_rift.1915.b: "Destroy the obelisk. §Y(Risks £scientist£,£minerals£,£alloys£,£unity£,£specimen£)§!"
+ 
+ astral_rift.1925.a: "Enough. Pull the emergency anchor. §Y(Safely Ends Rift)§!"
+ astral_rift.1925.b: "Destroy this infernal device. §Y(Risks £scientist£,£minerals£,£alloys£,£unity£,£specimen£)§!"
+ 
+ ##########################
+ ### astral_rifts_2.yml ###
+ ##########################
+ # Abandoned Complex
+ astral_rift.2000.a: "Search for the caretakers. §R(Waste of Time)§!" 
+ astral_rift.2000.b: "Open an egg."
+
+ astral_rift.2010.a: "Inject the liquid into the egg. §Y(§RRisks £military_power_boss£§!, £society£, £physics£/£army_power£ Unlock)§!"
+ astral_rift.2010.b: "Euthanize the remaining creatures. §Y(£physics£)§!"
+ 
+ astral_rift.2015.a: "Open an egg."
+ astral_rift.2015.b: "Return with the remains. §R(Ends Rift)§!"
+ 
+ astral_rift.2020.a: "Do not intervene. §R(Kills £scientist£, £physics£)§!"
+ astral_rift.2020.b: "Inject astral thread. §Y(£army_power£ Unlock)§!"
+
+ # The Mechanism
+ astral_rift.2105.a: "Interfering would be irresponsible. §Y(£engineering£)§!"
+ astral_rift.2105.b: "Jam the gears. §Y(Relic/£engineering£, Risk £scientist£ Aging 20 Years)§!" 
+
+ # Dimensional Dump
+ astral_rift.2205.a: "Dispatch the individual. §Y(Risks £scientist£, £alloys£, £engineering£, £minerals£)§!"
+ astral_rift.2205.b: "Attempt to negotiate. §Y(£society£, Level 6 £commander£)§!"
+ 
+ # Genesis
+ astral_rift.2300.a: "Arm them with might. §Y(100 £pops£ and £specimen£)§!"
+ astral_rift.2300.b: "Plant the seeds of knowledge. §Y(100 £pops£ and £specimen£)§!"
+ astral_rift.2300.c: "We play no games. Activate an E.M.P. §Y(£alloys£)§!"
+
+ # Entangled Dark Matter
+ astral_rift.2405.a: "Remove the device. §R(£sr_dark_matter£, Ends Rift)§!"
+
+ astral_rift.2415.a: "Offer this scientist as a vessel. §Y(Risks £scientist£ for Rift Traits)§!"
+ astral_rift.2415.b: "Deny this proposal. §Y(£sr_dark_matter£/£engineering£, £physics£)§!"
+ astral_rift.2415.c: "Assimilate the entity. §Y(+5% £research£ Speed)§!"
+ astral_rift.2415.d: "Deny assimilation. §Y(£sr_dark_matter£/£engineering£, £physics£)§!"
+
+ astral_rift.2420.a: "Euthanize the ethereal creature. §Y(£sr_dark_matter£)§!"
+ astral_rift.2420.b: "Preserve the captive for study. §Y(£engineering£, £physics£)§!"
+ astral_rift.2420.c: "Kill it. §Y(£engineering£, £physics£)§!"
+
+ # Bleached Planet
+ astral_rift.2505.b: "Prepare for contact. §Y(£society£)§!"
+ 
+ astral_rift.2510.a: "Fly towards the distant horizon. §R(£scientist£ Blinded)§!"
+
+ astral_rift.2515.a: "Examine a rock creature. §Y(Bio Tech)§!"
+ 
+ astral_rift.2530.a: "Observe the dark star. §R(£scientist£ Blinded)§!"
+ astral_rift.2530.b: "Retreat. §Y(£physics£ Deposit)§!"
+ 
+ # Chemical Wasteland
+ astral_rift.2600.a: "Investigate the robots. §Y(Amenities Edict/£energy£/£alloys£)§!"
+ astral_rift.2600.b: "Explore the cave. §Y(£specimen£/Hacking Tech/£scientist£ Rift Skill Trait)§!"
+ 
+ astral_rift.2605.a: "Allow the drones to approach. §R(Prevents £alloys£)§!"
+ 
+ astral_rift.2620.a: "Trace the distress signal. §Y(Amenities Edict/£energy£)§!"
+ astral_rift.2620.b: "Flee before potential reinforcements arrive. §Y(£alloys£)§!"
+ 
+ astral_rift.2645.a: "Document and study the sanitary infrastructure. §Y(Amenities Edict)§!"
+ astral_rift.2645.b: "Shut down the Facility. §Y(£energy£)§!"
+ 
+ astral_rift.2640.a: "Repurpose the drone's technology. §Y(£specimen£)§!"
+ astral_rift.2640.b: "Engineer a virus to disable the sanitation network. §Y(Hacking Tech)§!"
+ astral_rift.2640.c: "Keep this drone as a personal research assistant. §Y(£scientist£ Rift Skill Trait)§!"
+
+ # Windswept Planet
+ astral_rift.2725.a: "Find a way to remove the fungus. §Y(£energy£ Decision, Ends Rift)§!"
+ 
+ astral_rift.2730.a: "Protect the ecosystem against the wind. §Y(+25% £exotic_gases£,£specimen£, Ends Rift)§!"
+ 
+ astral_rift.2745.a: "Fortify the wind. §Y(£energy£ Decision)§!"
+ astral_rift.2745.b: "Nourish the fungus. §Y(+25% £exotic_gases£,£specimen£)§!"
+ astral_rift.2745.c: "Negotiate a compromise. §Y(£society£ Deposit,£exotic_gases£,£energy£,£unity£,£envoy£)§!"
+ astral_rift.2745.d: "Eradicate both species. §Y(£food£,£unity£)§!"
+ 
+ # Tiny Planet
+ astral_rift.2810.a: "Establish contact. §Y(£unity£, £energy£ Decision/£stability£ Decision/£society£  Deposit)§!"
+ astral_rift.2810.b: "Observe passively. §Y(£society£ Deposit, Ends Rift)§!"
+ astral_rift.2810.c: "Demand ransom. §Y(£unity£, £energy£ Decision/£stability£ Decision/£society£  Deposit)§!"
+ astral_rift.2810.d: "Inform them that their doom has come. §Y(£unity£, £society£ Deposit)§!"
+ astral_rift.2810.e: "Watch the destruction unfold. §Y(£society£ Deposit, £unity£, Ends Rift)§!"
+ 
+ astral_rift.2815.a: "Attempt to fix the moon's orbit. §Y(£unity£, £energy£ Decision)§!"
+ astral_rift.2815.b: "Destroy the moon. §Y(£stability£ Decision/£society£  Deposit)§!"
+ astral_rift.2815.c: "Cut communications. Observe passively. §Y(£society£  Deposit)§!"
+ astral_rift.2815.d: "Cut communications. Watch the destruction unfold. §Y(£society£ Deposit, £unity£)§!"
+
+ astral_rift.2825.a: "Put them out of their misery. §Y(£stability£ Decision)§!"
+ astral_rift.2825.b: "Deploy remote research devices. §Y(£society£ Deposit)§!" 
+ 
+ # Entertainment Nexus
+ astral_rift.2925.a: "Meet with the vulpine acrobats. §Y(Genetic Tech/Wormhole Tech)§!"
+ astral_rift.2925.b: "Meet with the cyborg maw. §Y(£mod_job_healthcare_add£ Output/Robotic Tech)§!"
+ astral_rift.2925.c: "Meet with the contortionist. §Y(£rare_crystals£ Edict/£physics£)§!" 
+ 
+ astral_rift.2930.a: "Secure a tissue sample. §Y(£specimen£, Genetic Tech)§!"
+ astral_rift.2930.b: "Tip them some energy credits. §Y(Wormhole Stabilization)§!"
+ 
+ astral_rift.2935.a: "Secure a tissue sample. §Y(£specimen£, £mod_job_healthcare_add£ Output)§!"
+ astral_rift.2935.b: "Offer a snack. §Y(Robotic Tech)§!"
+ 
+ astral_rift.2940.a: "Secure a tissue sample. §Y(£specimen£, £rare_crystals£ Edict)§!"
+ astral_rift.2940.b: "Tip them some energy credits. §Y(£physics£)§!"
+ 
+ ##########################
+ ### astral_rifts_3.yml ###
+ ##########################
+ # Siege on Paradise
+ astral_rift.3000.a: "Contact the planet's inhabitants. §Y(£commander£/£outliner_fleet_cloaked£ Edict/300 £pops£/+5% £ship_stats_shield£)§!"
+ astral_rift.3000.b: "Contact the orbiting fleet. §Y(Possibly +10% Fire Rate/£society£, £army_power£ Unlock)§!" 
+
+ astral_rift.3010.a: "We will help however we can. §Y(£commander£/£outliner_fleet_cloaked£ Edict/300 £pops£/+5% £ship_stats_shield£)§!"
+ astral_rift.3010.b: "It is not our place to interfere. §R(£society£, £engineering£)§!"
+
+ astral_rift.3020.a: "Genetically modify the Baol. §Y(£commander£)§!"
+ astral_rift.3020.b: "Deploy experimental planetary cloaking. §Y(£outliner_fleet_cloaked£ Edict)§!"
+ astral_rift.3020.c: "Preserve the seedlings. §Y(300 £pops£)§!"
+ astral_rift.3020.d: "Generate an astral shield. §Y(+5% £ship_stats_shield£ HP and Hardening)§!"
+ 
+ # ik its +10% fire rate, not damage, but there isn't room for "Fire Rate"
+ astral_rift.3060.a.tech_dragon_armor: "Share $tech_dragon_armor$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_crystal_armor_2: "Share $tech_crystal_armor_2$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_dark_matter_propulsion: "Share $tech_dark_matter_propulsion$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_nanite_repair_system: "Share $tech_nanite_repair_system$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_nanite_autocannon: "Share $tech_nanite_autocannon$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_nanite_flak_batteries: "Share $tech_nanite_flak_batteries$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_strike_craft_skrand: "Share $tech_strike_craft_skrand$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_combat_computers_3: "Share $tech_combat_computers_3$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_combat_computers_autonomous: "Share $tech_combat_computers_autonomous$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_dark_matter_power_core: "Share $tech_dark_matter_power_core$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_jump_drive_1: "Share $tech_jump_drive_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_extradimensional_weapon_1: "Share $tech_extradimensional_weapon_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_quantum_catapult: "Share $tech_quantum_catapult$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_scourge_missile_1: "Share $tech_scourge_missile_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_swarm_strike_craft_1: "Share $tech_swarm_strike_craft_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_precognition_interface: "Share $tech_precognition_interface$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_psi_jump_drive_1: "Share $tech_psi_jump_drive_1$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_psionic_barrier: "Share $tech_psionic_barrier$ with the Grunur. §Y(+10% £military_power£)§!"
+ astral_rift.3060.a.tech_psionic_shield: "Share $tech_psionic_shield$ with the Grunur. §Y(+10% £military_power£)§!"
+ 
+ astral_rift.3060.b: "Share Baol research data with the Grunur. §Y(£society£, £army_power£ Unlock)§!"
+ astral_rift.3060.c: "Refuse to cooperate. §R(Lose £scientist£ for 6 Years, £engineering£)§!" 
+ 
+ astral_rift.3075.a: "Watch the extermination. §Y(£society£, £army_power£ Unlock)§!"
+ astral_rift.3075.b: "Refuse. §R(Lose £scientist£ for 6 Years, £engineering£)§!"
+ 
+ astral_rift.3065.a: "Respond with bravado. Do not be intimidated. §Y(£society£, £army_power£ Unlock)§!"
+ astral_rift.3065.b: "Attempt to reason with them. §R(Lose £scientist£ for 6 Years, £engineering£)§!"
+ 
+ astral_rift.3076.a: "Press the crystal. Order the launch. §Y(£society£, £army_power£ Unlock)§!"
+
+ # Tropical Habitat
+ astral_rift.3120.a: "Use caution. Excavate around the chasm. §Y(£minerals£, £exotic_gases£, £society£ Tech)§!"
+ astral_rift.3120.b: "Explore the chasm directly. §Y(Risks £scientist£, £opinion£ Modifier/£society£ Tech)§!"
+ 
+ astral_rift.3130.a: "Extract the mouth. §Y(Risks £scientist£, £opinion£ Modifier)§!"
+ astral_rift.3130.b: "Harvest soil from the deepest walls. §Y(£society£ Tech)§!" 
+
+ # Psionic Stranger
+ astral_rift.3210.a: "Reveal the fate of the Zroni. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
+ astral_rift.3210.b: "Reveal what we know of the Zroni. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
+ astral_rift.3210.c: "We can only offer our perspective. §Y(Psi Tech, Tech or £energy£, £rare_crystals£)§!"
+ astral_rift.3210.d: "It is not our place to intervene. §Y(£minerals£, £rare_crystals£)§!"
+ astral_rift.3210.e: "Such spiritual pursuits are trivial. §Y(£minerals£, £rare_crystals£)§!"
+ 
+ astral_rift.3215.a: "It is a doomed endeavor. §Y(Particles Tech)§!"
+ astral_rift.3215.b: "This time, it may be different... §Y(£energy£, £rare_crystals£)§!"
+ 
+ astral_rift.3220.a: "Advise against interfering with the Shroud. §Y(Particles Tech)§!"
+ astral_rift.3220.b: "Encourage the Far-Seer to breach the Shroud. §Y(£energy£, £rare_crystals£)§!"
+ 
+ astral_rift.3225.a: "Advise against interfering with the Shroud. §Y(Particles Tech)§!"
+ astral_rift.3225.b: "Encourage the Far-Seer to breach the Shroud. §Y(£energy£, £rare_crystals£)§!"
+ 
+ ######################
+ ### leviathans.yml ###
+ ######################
+ # Stellarite Devourer
+ leviathans.1016.a: "Study the corpse. §Y(£energy£, £minerals£, £influence£/Reignite system, §RRisks £scientist£§!)§!"
+ leviathans.1016.c: "Retrieve the egg sac. §Y(Parade and Consume Star Operation)§!"
+
+ leviathans.1017.a: "Try to reignite the star. §Y(Restores system planets, §RRisks £scientist£§!)§!"
+ leviathans.1017.b: "Harvest the body's energy deposits."
+
+ # Enigmatic Fortress
+ leviathans.2111.a: "We'll find someone to assist the team. §Y(Choose $ENIGMATIC_FORTRESS_1B$)§!"
+ leviathans.2113.a: "Go with the higher estimate. §R(Failure)§!"
+ leviathans.2113.b: "Go with the lower estimate. §G(Success)§!"
+
+ leviathans.2131.a: "Place metal rings around the remaining two poles. §R(Failure)§!"
+ leviathans.2131.b: "Search for torus-shaped indentations on the bulkhead. §R(Failure)§!"
+ leviathans.2131.c: "Rearrange the metal tori on the poles. §G(Success)§!"
+ leviathans.2131.d: "Remove center and rightmost poles from the pedestal. §R(Failure)§!"
+
+ leviathans.2150.a: "We'll find a way. §Y(Choose $ENIGMATIC_FORTRESS_5B$)§!"
+ 
+ leviathans.2152.a: "The beginning. §R(Failure)§!"
+ leviathans.2152.b: "The middle. §G(Success)§!"
+ leviathans.2152.c: "The end. §R(Failure)§!"
+ 
+ ####################################
+ ### machine_age_situations_1.yml ###
+ ####################################
+ cyber.505.a: "We should enhance the democratic process. §Y(Individualist)§!"
+ cyber.505.b: "We must link our minds. §Y(Collectivist)§!"
+ cyber.510.a: "Have the sycophants toil for us. §Y(Individualist)§!"
+ cyber.510.b: "Harness the power of sleep. §Y(Collectivist)§!"
+ cyber.515.a: "Hide surveillance tools in personal implants. §Y(Individualist)§!"
+ cyber.515.b: "Study the personality override. §Y(Collectivist)§!"
+ cyber.520.a: "Preserve the imperial knowledge. §Y(Individualist)§!"
+ cyber.520.b: "Provide entertainment for the masses. §Y(Collectivist)§!"
+ cyber.525.a: "Prototype ad-supported ocular implants. §Y(Individualist)§!"
+ cyber.525.b: "Research implant upgrade schemes. §Y(Collectivist)§!"
+ 
+ cyber.610.a: "Create a stable implant. §Y(Individualist)§!"
+ cyber.610.b: "Appropriate the underground prototype. §Y(Collectivist)§!"
+ cyber.610.c: "Regulate these types of mods. §Y(Neutral)§!"
+ 
+ cyber.615.a: "People must have full control. §Y(Individualist)§!"
+ cyber.615.b: "It is healthy to leave work at the office. §Y(Neutral)§!"
+ cyber.615.c: "Wall off experiences both ways. §Y(Collectivist)§!"
+ 
+ cyber.625.a: "Ban subscriptions on cyberware. §Y(Collectivist)§!"
+ cyber.625.b: "If they can't afford it, they shouldn't buy it. §Y(Individualist)§!"
+ cyber.625.c: "Limit the subscriptions to non-critical functions. §Y(Neutral)§!"
+ cyber.625.d: "Splendid idea! Double down on it. §Y(Individualist)§!"
+
+ cyber.655.a: "Outrageous! §Y(Collectivist)§!"
+ cyber.655.b: "Intriguing. Start making flimsier cyberware. §Y(Individualist)§!"
+ cyber.655.c: "Yes! Coordinate it with a price hike as well. §Y(Individualist)§!"
+ cyber.655.d: "Use this data to improve our cyberization efforts. §Y(Individualist)§!"
+
+ cyber.805.a: "Let adults control their children. §Y(Individualist)§!"
+ cyber.805.b: "Allow limited control. §Y(Neutral)§!"
+ cyber.805.c: "Leave remote body control to enforcers. §Y(Collectivist)§!"
+
+ cyber.810.a: "Transfer Engineering knowledge. §Y(Collectivist)§!"
+ cyber.810.b: "Transfer Physics knowledge. §Y(Collectivist)§!"
+ cyber.810.c: "Transfer Society knowledge. §Y(Collectivist)§!"
+ cyber.810.d: "Keep everyone's minds to themselves. §Y(Individualist)§!"
+
+ cyber.815.a: "How they choose to live and love is not our concern. §Y(Individualist)§!"
+ cyber.815.b: "Bring these families back into the fold. §Y(Collectivist)§!"
+
+ cyber.820.a: "Implement stricter guidelines on body modding. §Y(Collectivist)§!"
+ cyber.820.b: "This is just a phase. It will pass. §Y(Neutral)§!"
+ cyber.820.c: "We might learn something from these young people. §Y(Individualist)§!"
+
+ cyber.821.a: "We will not be swayed. §Y(Collectivist)§!" 
+ cyber.821.b: "We shall consider their demands. §Y(Individualist)§!"
+ 
+ cyber.822.a: "The costs are justified. §Y(Individualist)§!"
+ cyber.822.b: "It was a mistake to allow so much customization. §Y(Collectivist)§!"
+ 
+ cyber.830.a: "Commission a medical study. §Y(Neutral)§!"
+ cyber.830.b: "Their suffering is not our responsibility. §Y(Individualist)§!"
+ 
+ cyber.835.a: "Their pain is all in their heads. §Y(Individualist)§!"
+ cyber.835.b: "Institute a research program. §Y(Collectivist)§!"
+ cyber.835.c: "Resettle the afflicted to a warmer planet. §Y(Neutral)§!"
+ 
+ cyber.840.a: "They're right. Ban tracking technology. §Y(Individualist)§!"
+ cyber.840.b: "This is no cause for alarm. §Y(Individualist)§!"
+ cyber.840.c: "Offer untraceable implants... for a price. §Y(Individualist)§!"
+ cyber.840.d: "Curb the dissenters. Tracking technology is here to stay. §Y(Collectivist)§!"
+ 
+ cyber.855.a: "The cost is too high. §Y(Collectivist)§!"
+ cyber.855.b: "Education must remain accessible to all. §Y(Individualist)§!"
+ 
+ cyber.1005.a: "The unmodified have had their time. §Y(Collectivist)§!"
+ cyber.1005.b: "Relegate enhanced competitors to their own league. §Y(Individualist)§!"
+ cyber.1005.c: "Cap the amount of the modified [GetAthletePlural]. §Y(Neutral)§!"
+ 
+ cyber.1010.a: "Drink Plasma Quench! §Y(Collectivist)§!"
+ cyber.1010.b: "The sky is not for sale! §Y(Individualist)§!"
+ cyber.1010.c: "Let's negotiate the terms. §Y(Collectivist)§!"
+ cyber.1010.d: "Not interested. §Y(Neutral)§!"
+ 
+ cyber.1015.a: "Let the Plasma flow! §Y(Collectivist)§!"
+ cyber.1015.b: "Our digital skies are enough. §Y(Individualist)§!"
+ cyber.1015.c: "Let our people see free again! §Y(Individualist)§!"
+ 
+ cyber.1030.a: "Shut down the industry. It's too dangerous. §Y(Collectivist)§!"
+ cyber.1030.b: "Tax the production. §Y(Individualist)§!"
+ cyber.1030.c: "Jail anyone caught with such recordings. §Y(Neutral)§!"
+ cyber.1030.d: "Sounds decadent. Endorse it. §Y(Individualist)§!"
+ cyber.1030.e: "The endless experience of death? How divine. §Y(Collectivist)§!"
+ 
+ cyber.1055.a: "It was time to modernize the fleet anyway. §Y(Collectivist)§!"
+ cyber.1055.b: "Strengthen our network security measures. §Y(Individualist)§!"
+ cyber.1055.c: "The Council is right: ban the games. §Y(Neutral)§!"
+ cyber.1055.d: "Drown the intel in conflicting reports. §Y(Neutral)§!"
+ 
+ cyber.1205.a: "We must face the truth of our lives. §Y(Collectivist)§!"
+ cyber.1205.b: "Everyone has a right to blissful ignorance. §Y(Individualist)§!"
+ cyber.1205.c: "Cosmetic reshades are fine, censoring is risky. §Y(Neutral)§!"
+ cyber.1205.d: "We will curate their senses. §Y(Collectivist)§!"
+ 
+ cyber.1210.a: "Such practices cannot be tolerated. §Y(Collectivist)§!"
+ cyber.1210.b: "Clever! Allow it. §Y(Individualist)§!"
+ cyber.1210.c: "License the practice. §Y(Neutral)§!"
+ cyber.1210.d: "Use it to spread the faith. §Y(Collectivist)§!"
+  
+ cyber.1265.a: "Build the firewall. §Y(Collectivist)§!"
+ cyber.1265.b: "Reboot the officials. §Y(Individualist)§!"
+ cyber.1265.c: "They're onto us. Build the wall. §Y(Collectivist)§!" 
+ 
+ ####################################
+ ### machine_age_situations_2.yml ###
+ ####################################
+ synth.505.a: "We should focus on freedom of movement. §Y(Physical)§!"
+ synth.505.b: "We must prepare for the horrors of war. §Y(Virtual)§!"
+ synth.510.a: "Focus taking over ineffectual bodies. §Y(Physical)§!"
+ synth.510.b: "Study holistic virtual overseeing options. §Y(Virtual)§!"
+ synth.515.a: "Focus on neuro-synched bodies. §Y(Physical)§!"
+ synth.515.b: "Concentrate on virtual manipulation. §Y(Virtual)§!"
+ synth.520.a: "Look into extracting knowledge from the deceased. §Y(Physical)§!"
+ synth.520.b: "Study rapid consciousness transfer. §Y(Virtual)§!"
+ synth.525.a: "Study incorporation of AIs. §Y(Physical)§!"
+ synth.525.b: "Research turning memories into profit. §Y(Virtual)§!"
+ 
+ synth.610.a: "Maintain our original form. §Y(Physical)§!"
+ synth.610.b: "Allow unrestricted body modification. §Y(Virtual)§!"
+ synth.610.c: "Enact moderate limits for identity customization. §Y(Neutral)§!"
+ synth.610.d: "Visible status symbols must remain. §Y(Virtual)§!"
+ synth.610.e: "Naturally this can be monetized...? §Y(Virtual)§!"
+ 
+ synth.620.a: "Introduce planned imperfections to synth bodies. §Y(Physical)§!"
+ synth.620.b: "Provide them with an imperfect world. §Y(Virtual)§!"
+ synth.620.c: "It's foolish to romanticize the past. §Y(Neutral)§!"
+ synth.620.d: "Pain will remind them of their purpose. §Y(Virtual)§!"
+ 
+ synth.630.a: "Centralized servers are most efficient. §Y(Virtual)§!"
+ synth.630.b: "Individual servers can be stored in existing homes. §Y(Physical)§!"
+ synth.630.c: "Start selling digital homes. §Y(Virtual)§!"
+ 
+ synth.1010.a: "Ban persistently addictive virtual worlds. §Y(Physical)§!"
+ synth.1010.b: "Promote these virtual paradises. §Y(Virtual)§!"
+ synth.1010.b.hedonist: "Finally, the ultimate paradise! §Y(Virtual)§!"
+ synth.1010.c: "Regulate the industry. §Y(Neutral)§!"
+ 
+ synth.1020.a: "We must continue to protect the body. §Y(Physical)§!"
+ synth.1020.a.spiritual: "Body is a sacred container for the soul. §Y(Physical)§!"
+ synth.1020.b: "Concentrate on protecting the mind. §Y(Virtual)§!"
+ synth.1020.b.spiritual: "We have already transcended the physical form. §Y(Virtual)§!"
+ synth.1020.c: "Balance is the key. §Y(Neutral)§!"
+ synth.1020.d: "These new ailments offer serious growth potential... §Y(Physical)§!"
+ 
+ synth.1030.a: "Continue to push the limits. §Y(Physical)§!"
+ synth.1030.b: "Exercise caution. §Y(Virtual)§!"
+ synth.1030.c: "The elite should not be placed at risk. §Y(Physical)§!"
+ 
+ ##################
+ ### shroud.yml ###
+ ##################
+ shroud.7100.a: "[GetRolledShroudSongOptionA] §Y(Transcendent)§!"
+ shroud.7100.b: "[GetRolledShroudSongOptionB] §Y(Corporeal)§!"
+ 
+ ######################
+ ### situations.yml ###
+ ######################
+ approach_no_food: "Do not feed it §R(+50 Capital $DEVASTATION$)§!"
+ approach_little_food: "Feed it §Y(Relic)§!"
+ approach_a_lot_of_food: "Overfeed it §Y(Cheaper Overall, Relic)§!"

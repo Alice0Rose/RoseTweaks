@@ -184,7 +184,6 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { military_theory }
-	ai_update_type = military
 	levels = -1
 	prerequisites = { "tech_strike_craft_3" }
 	weight = @repeatableTechWeight
@@ -200,13 +199,9 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_strike_craft
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_strike_craft
 		}
 	}
 
@@ -228,7 +223,6 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { military_theory }
-	ai_update_type = military
 	levels = -1
 	prerequisites = { "tech_strike_craft_3" }
 	weight = @repeatableTechWeight
@@ -244,13 +238,9 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_strike_craft
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_strike_craft
 		}
 	}
 

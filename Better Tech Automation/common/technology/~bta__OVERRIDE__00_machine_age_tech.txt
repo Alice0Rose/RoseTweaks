@@ -3,7 +3,6 @@ tech_cosmogenesis_crisis_4 = {
     cost = 200000
     tier = 5
     category = { computing }
-    ai_update_type = all
     is_rare = yes
     weight = 9999
 
@@ -27,7 +26,6 @@ tech_cosmogenesis_crisis_5 = {
     cost = 300000
     tier = 5
     category = { computing }
-    ai_update_type = all
     is_rare = yes
     weight = 9999
 

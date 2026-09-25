@@ -90,7 +90,7 @@ carrier_event = {
 				# Scope back to the planet
 				# Create the empty pop group
 				# and move pops into it
-				planet = {
+				colony = {
 					if = {
 						limit = { root.owner = { is_gestalt = no } }
 						create_pop_group = {
@@ -137,10 +137,7 @@ carrier_event = {
 		}
 
 		owner = { #Only doing it once since assimilating more than 100 pops a month is hard
-			if = {
-				limit = { has_ascension_perk = ap_become_the_crisis }
-				complete_crisis_objective = crisobj_purge_pops
-			}
+			credit_assimilation_purge_crisis = { COUNT = 1 }
 			assimilate_armies = {
 				SOURCE = event_target:old_species
 				TARGET = event_target:target_species

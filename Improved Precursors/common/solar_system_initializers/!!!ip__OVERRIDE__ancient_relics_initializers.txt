@@ -298,6 +298,20 @@ Zrocursor_system = {
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
+				add_deposit = d_shroud_rift_deposit
+				add_deposit = d_shroud_rift_deposit
+				add_deposit = d_irradiated_valley
+				add_deposit = d_irradiated_valley
+				add_deposit = d_irradiated_valley
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_rich_mountain
+				add_deposit = d_radioactive_wasteland
+				add_deposit = d_radioactive_wasteland
+				add_deposit = d_radioactive_wasteland
+				add_deposit = d_radioactive_wasteland
+				add_deposit = d_city_ruins
+				add_deposit = d_city_ruins
 			}
 		}
 	}

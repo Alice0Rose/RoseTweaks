@@ -1,0 +1,20 @@
+[h1]Features[/h1]
+This mod adds an optional side path to each crisis ambition which locks you out of doing the more crisisey things while still being able to fulfill the ambition without opinion maluses from other empires or being declared a crisis by the Galactic Community. (NYI)
+
+On top of these peaceful side paths, this mod also removes the ethic restrictions from all the crisis ambitions and lets you become the galactic custodian/emperor despite having a crisis ambition :o (CURRENTLY THIS IS ALL THAT'S IMPLEMENTED)
+
+[h1]Compatibility[/h1]
+This mod overrides the following files, most of which relate to the crisis ambitions in some way:
+
+common\ascension_perks\00_ascension_perks.txt
+- ap_become_the_crisis
+- ap_cosmogenesis
+- ap_behemoths
+- ap_galactic_hyperthermia
+
+common\resolutions\01_resolutions_nemesis.txt
+- resolution_galacticreforms_nominate_custodian
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]

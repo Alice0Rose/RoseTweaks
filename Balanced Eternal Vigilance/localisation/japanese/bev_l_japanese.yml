@@ -1,9 +1,9 @@
 ﻿l_japanese:
- ap_rose_eternal_vigilance_tt: "Every 6 months a §Y$military_station_small$§! will be built around every §YStarbase§! at the cost of §Y$mod_country_alloys_produces_mult$§! based on the §Y$ap_eternal_vigilance$§! policies."
+ ap_rose_eternal_vigilance_tt: "Unlocks the §Y$ap_eternal_vigilance$ Policies§! under §H$policy_category_military$§! which enable the automatic construction of §Y$military_station_small_plural$§! around owned §YStarbases§! every 6 months at the cost of §Y$mod_country_alloys_produces_mult$§!."
  
  # Starbase Coverage Policy
- policy_bev_eternal_vigilance_starbase_coverage_policy: "$ap_eternal_vigilance$: Starbase Coverage"
- policy_bev_eternal_vigilance_starbase_coverage_policy_desc: "Do we need an all-encompassing wall or a collection of unyielding shields?"
+ policy_bev_eternal_vigilance_starbase_coverage_policy: "$ap_eternal_vigilance$ Coverage"
+ policy_bev_eternal_vigilance_starbase_coverage_policy_desc: "Determines which Starbases, if any, should have $military_station_small_plural$ built around them every 6 months."
  bev_eternal_vigilance_starbase_coverage_policy_full: "Full Coverage"
  bev_eternal_vigilance_starbase_coverage_policy_full_name: "$bev_eternal_vigilance_starbase_coverage_policy_full$"
  bev_eternal_vigilance_starbase_coverage_policy_full_desc: "Every starbase needs to be properly defended. Spare no cost.\n\nAutomatically builds §Y$military_station_small_plural$§! around §YAll Starbases§!."
@@ -18,8 +18,8 @@
  bev_eternal_vigilance_starbase_coverage_policy_no_desc: "There is no need to further enhance our defenses.\n\nAutomatically builds §Y$military_station_small_plural$§! around §YNo Starbases§!."
  
  # Platform Density Policy
- policy_bev_eternal_vigilance_platform_density_policy: "$ap_eternal_vigilance$: Platform Density"
- policy_bev_eternal_vigilance_platform_density_policy_desc: "A concentrated defense is a strong defense."
+ policy_bev_eternal_vigilance_platform_density_policy: "$ap_eternal_vigilance$ Density"
+ policy_bev_eternal_vigilance_platform_density_policy_desc: "Determines what percent of the $MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$ for each Starbase should be automatically built to."
  bev_eternal_vigilance_platform_density_policy_maximum: "Maximum Density"
  bev_eternal_vigilance_platform_density_policy_maximum_name: "$bev_eternal_vigilance_platform_density_policy_maximum$"
  bev_eternal_vigilance_platform_density_policy_maximum_desc: "An impenetrable shield ensures our survival now and forever.\n\nAutomatically builds up to §Y75%§! of §Y$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$§! at the cost of §R-10§! £alloys£ §Y$mod_country_alloys_produces_mult$§! per §YStarbase§! covered."
@@ -36,4 +36,4 @@
  bev_eternal_vigilance_platform_density_policy_moderate_modifier: "$ap_eternal_vigilance$ $bev_eternal_vigilance_platform_density_policy_moderate$"
  bev_eternal_vigilance_platform_density_policy_moderate_modifier_desc: "$bev_eternal_vigilance_platform_density_policy_moderate_desc$"
  bev_eternal_vigilance_platform_density_policy_minimum_modifier: "$ap_eternal_vigilance$ $bev_eternal_vigilance_platform_density_policy_minimum$"
- bev_eternal_vigilance_platform_density_policy_minimum_modifier_desc: "$bev_eternal_vigilance_platform_density_policy_minimum_desc$" 
+ bev_eternal_vigilance_platform_density_policy_minimum_modifier_desc: "$bev_eternal_vigilance_platform_density_policy_minimum_desc$"

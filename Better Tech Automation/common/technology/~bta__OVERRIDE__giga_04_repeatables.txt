@@ -40,7 +40,6 @@ giga_tech_repeatable_reduced_mega_building_time = {
 
 	potential = {
 		has_gigastructures = yes
-		has_any_megastructure_dlc = yes
 	}
 
 	weight = @giga_expensive_repeatable_weight

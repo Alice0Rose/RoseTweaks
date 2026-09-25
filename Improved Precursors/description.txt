@@ -32,7 +32,7 @@ Baol:
 	- Completeing the Secrets of the Baol special project now gives Terrestrial Sculpting and Ecological Adaptation techs and gives Climate Restoration as a guarenteed research option
 
 adAkkaria:
-	- Final event choice between freeing and keeping the souls now changes the homeworld to a size 30 gaia world if you free the souls or changes the homeworld to a tomb world of size 25 if you don't
+	- Final event choice between freeing and keeping the souls now changes the homeworld to a size 30 gaia world if you free the souls or changes the homeworld to a tomb world of size 20 if you don't
 
 Inetians:
 	- Precursor system now has 3 habitable worlds, each size 23

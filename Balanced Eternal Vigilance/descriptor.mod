@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Balanced Eternal Vigilance"
-supported_version="v4.*"
+supported_version="v4.5.*"
 remote_file_id="3795328698"

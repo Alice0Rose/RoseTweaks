@@ -39,7 +39,6 @@ tech_repeatable_improved_shield_output = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { field_manipulation }
-	ai_update_type = all
 	levels = -1
 	prerequisites = { "tech_shields_4" }
 	weight = @repeatableTechWeight
@@ -75,7 +74,6 @@ tech_repeatable_weapon_type_energy_damage = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { particles }
-	ai_update_type = military
 	levels = -1
 	prerequisites = { "tech_lasers_4" }
 	weight = @repeatableTechWeight
@@ -91,13 +89,9 @@ tech_repeatable_weapon_type_energy_damage = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_energy
 		}
 	}
 
@@ -119,7 +113,6 @@ tech_repeatable_weapon_type_energy_fire_rate = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { particles }
-	ai_update_type = military
 	levels = -1
 	prerequisites = { "tech_lasers_2" }
 	weight = @repeatableTechWeight
@@ -135,13 +128,9 @@ tech_repeatable_weapon_type_energy_fire_rate = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_energy
 		}
 	}
 

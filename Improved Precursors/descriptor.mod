@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Improved Precursors"
-supported_version="v4.4.*"
+supported_version="v4.5.*"
 remote_file_id="3663534784"

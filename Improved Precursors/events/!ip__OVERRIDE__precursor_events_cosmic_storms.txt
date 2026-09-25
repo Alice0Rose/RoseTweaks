@@ -35,10 +35,6 @@ country_event = {
 			set_planet_entity = {
 				entity = "pc_gaia"
 			}
-			add_modifier = {
-				modifier = previously_terraformed_planet
-				days = -1
-			}
 			if = {
 				limit = { is_colony = yes }
 				set_timed_carrier_flag = {
@@ -87,7 +83,7 @@ country_event = {
 				clear_blockers = yes
 				# Adding the zro deposit back, since it was a shrouded world
 				add_deposit = d_zro_deposit_2
-				set_planet_size = 25
+				set_planet_size = 20
 			}
 			set_planet_entity = {
 				entity = "pc_nuked"

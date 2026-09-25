@@ -141,7 +141,6 @@ tech_repeatable_improved_armor_output = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { materials }
-	ai_update_type = all
 	levels = -1
 	prerequisites = { "tech_ship_armor_3" }
 	weight = @repeatableTechWeight
@@ -177,7 +176,6 @@ tech_repeatable_weapon_type_explosive_damage = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { propulsion }
-	ai_update_type = military
 	levels = -1
 	prerequisites = {
 		OR = {
@@ -198,13 +196,9 @@ tech_repeatable_weapon_type_explosive_damage = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_explosive
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_explosive }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_explosive
 		}
 	}
 
@@ -226,7 +220,6 @@ tech_repeatable_weapon_type_explosive_fire_rate = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { propulsion }
-	ai_update_type = military
 	levels = -1
 	prerequisites = {
 		OR = {
@@ -247,13 +240,9 @@ tech_repeatable_weapon_type_explosive_fire_rate = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_explosive
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_explosive }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_explosive
 		}
 	}
 
@@ -275,7 +264,6 @@ tech_repeatable_weapon_type_kinetic_damage = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { propulsion }
-	ai_update_type = military
 	levels = -1
 	prerequisites = { "tech_mass_drivers_3" }
 	weight = @repeatableTechWeight
@@ -291,13 +279,9 @@ tech_repeatable_weapon_type_kinetic_damage = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_kinetic
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_kinetic
 		}
 	}
 
@@ -319,7 +303,6 @@ tech_repeatable_weapon_type_kinetic_fire_rate = {
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
 	category = { propulsion }
-	ai_update_type = military
 	levels = -1
 	prerequisites = { "tech_mass_drivers_3" }
 	weight = @repeatableTechWeight
@@ -335,13 +318,9 @@ tech_repeatable_weapon_type_kinetic_fire_rate = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_kinetic
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_kinetic
 		}
 	}
 

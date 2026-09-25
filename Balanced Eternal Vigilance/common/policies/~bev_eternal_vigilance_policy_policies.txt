@@ -1,4 +1,5 @@
 bev_eternal_vigilance_starbase_coverage_policy = {
+	category = military
 	potential = {
 		is_country_type = default
 		has_ascension_perk = ap_eternal_vigilance
@@ -137,6 +138,7 @@ bev_eternal_vigilance_starbase_coverage_policy = {
 }
 
 bev_eternal_vigilance_platform_density_policy = {
+	category = military
 	potential = {
 		is_country_type = default
 		has_ascension_perk = ap_eternal_vigilance
