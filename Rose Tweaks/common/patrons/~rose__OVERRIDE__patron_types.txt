@@ -122,8 +122,40 @@ the_composer_of_strands = {
 			}
 		}
 
+		possible = {
+			if = {
+				limit = {
+					is_nomadic = no
+				}
+				custom_tooltip = {
+					text = requires_valid_transformation_target
+					any_planet_within_border = {
+						is_colony = no
+						uninhabitable_regular_planet = yes
+					}
+				}
+			}
+			else = {
+				custom_tooltip = {
+					text = requires_valid_transformation_target_nomad
+					any_owned_colony = {
+						is_planet_class = pc_ark
+						NOT = {
+							has_modifier = transformation_arkship_modifier
+						}
+					}
+				}
+			}
+		}
+
 		effect = {
-			custom_tooltip = ACCORD_TRANSFORMATION_TT
+			if = {
+				limit = { is_nomadic = no }
+				custom_tooltip = ACCORD_TRANSFORMATION_TT
+			}
+			else = {
+				custom_tooltip = ACCORD_TRANSFORMATION_TT_NOMAD
+			}
 			hidden_effect = {
 				country_event = { id = shroud.4860 }
 			}

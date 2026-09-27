@@ -31,15 +31,13 @@ This mod adds a variety of balance changes, bug fixes, and new features. These r
 
 [*]Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th
 
-[*]Executive Vigor gives +2 sector size.
+[*]Executive Vigor gives +2 sector size or +20% arkship action speed if nomad.
 
 [*]Transcendent Learning gives +10% leader lifespan.
 
 [*]Master Builders gives +1 building queue capacity.
 
 [*]Synthetic empires have access to Individualistic machine armies and associated technologies.
-
-[*]Eternal Vigilance unlocks a policy that builds free defense platforms every 6 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
 
 [*]Orbital habitat tooltip shows the potential districts of each type again (why did they remove this oml)
 [/list]

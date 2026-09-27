@@ -1,4 +1,5 @@
 decision_rose_natural_arcologies = {
+	important = yes
 	owned_planets_only = yes
 	icon = decision_rose_natural_arcologies
 
@@ -69,7 +70,7 @@ decision_rose_natural_arcologies = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 5
 		modifier = {
 			factor = 100
 			exists = owner

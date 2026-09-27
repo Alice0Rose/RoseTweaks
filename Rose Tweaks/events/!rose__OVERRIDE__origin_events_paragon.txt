@@ -198,7 +198,7 @@ country_event = {
 	}
 }
 
-# Story Chain Ending Speech #
+# Story Chain Enging Speech #
 country_event = {
 	id = paragon.6035
 	title = "paragon.6035.name"
@@ -245,7 +245,7 @@ country_event = {
 		NOT = { has_country_flag = rose_origin_legendary_leader_ending }
 	}
 
-	option = { # Null choice, status quo
+	option = { #Null choice, status quo
 		name = paragon.6035.a
 	}
 

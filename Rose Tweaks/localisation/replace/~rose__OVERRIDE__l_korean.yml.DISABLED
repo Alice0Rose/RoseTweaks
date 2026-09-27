@@ -1,0 +1,82 @@
+﻿l_korean:
+ ###################
+ ### english.yml ###
+ ###################
+ trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§Y75%§! of our collected $r_trade$ earns us $r_energy$, $r_minerals$, $r_food$, and $r_unity$. Every £trade£ §Y1§! earns us £energy£ §Y0.27§!, £minerals£ §Y0.27§!, £food£ §Y0.27§!, and £unity£ §Y0.1§!."
+
+ ####################
+ ### aquatics.yml ###
+ ####################
+ trait_aquatic_tooltip: "Housing Usage on §YWet§! worlds: §G-10%§!$TABBED_NEW_LINE$- $mod_pop_cat_worker_bonus_workforce_mult$ on §YWet§! worlds: §G+10%§!$TABBED_NEW_LINE$- Housing Usage on non-§YWet§! worlds: §R+30%§!$TABBED_NEW_LINE$- Habitability on non-§YWet§! worlds: §R-20%§!\n\nThe §H$ap_hydrocentric$§! Ascension Perk changes this trait's effects to:$TABBED_NEW_LINE$- Housing Usage on §YWet§! worlds: §G-15%§!$TABBED_NEW_LINE$- $MOD_POP_BONUS_WORKFORCE_MULT$ on §YWet§! worlds: §G+15%§!$TABBED_NEW_LINE$- Pop Amenity Usage on §YWet§! worlds: §G-15%§!$TABBED_NEW_LINE$- Housing Usage on non-§YWet§! worlds: §R+45%§!$TABBED_NEW_LINE$- Habitability on non-§YWet§! worlds: §R-30%§!\n"
+ ap_hydrocentric_tooltip: "Allows the construction of §YIce Mining Stations§! on starbases, which enable the §Y$decision_expand_planetary_sea$§! decision on §YOcean§! worlds and §Y$decision_flood_habitat$§! decision on §YHabitats§!.\nSpecies with the §Y$trait_aquatic$§! or §Y$trait_robot_aquatic$§! trait gain greater benefits for living on §YOcean§! worlds, but penalties for living on non-§YWet§! worlds are amplified by 50%.\nUnlocks the §Y$rose_natural_arcologies$§! Decision on §YOcean§! worlds §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!"
+ 
+ ######################
+ ### biogenesis.yml ###
+ ######################
+ tr_cloning_finish_tt: "Allows the adoption of ['concept_cloning_authorities']\n£building£ $building_clone_vats$ Upgrade Tier per £building£ §YCapital Building§! Tier: §G+1§!"
+ 
+ ##################################
+ ### federation_anniversary.yml ###
+ ##################################
+ habitat_system_tt: "§EHabitat Potential:§!$TABBED_NEW_LINE$- Maximum Districts: §Y[root.GetHabitatMaxDistricts]§!$TABBED_NEW_LINE$- £energy£: §Y[root.HabitatTooltipEnergyDistrictMax]§! | £minerals£: §Y[root.HabitatTooltipMiningDistrictMax]§! | £research£: §Y[root.HabitatTooltipScienceDistrictMax]§!"
+ 
+ #######################
+ ### federations.yml ###
+ #######################
+ make_spiritualist_1_effect: "Non-spiritualist non-gestalt empires have §YBureaucratic§! buildings swapped for §YTemples§!.\nSpiritualist empires gain §G+1§! £unity£ §YUnity§! from £job_priest£ §Y$job_priest_plural$§!.\nAll empires gain §G+10%§! faster organic pop growth and §G+5%§! faster robotic pop assembly."
+ 
+ #####################
+ ### infernals.yml ###
+ #####################
+ civic_world_forgers_effects: "- Unlocks starting planet: ['concept_pc_volcanic']. \n- $GUARANTEED_RESEARCH_OPTION_STRING$ £society_research£ ['concept_volcanic_forge']. \n- Can construct £building£ §Y$building_volcanic_forge_1$§! building which adds £job_polytechnic_mentor£ ['concept_polytechnic_mentor']. \n- Planets with a £building£ §Y$building_volcanic_forge_1$§! will gradually turn into a §Y$pc_volcanic$§!. \n- ['concept_guaranteed_colonies'] will be §Y$climate_dry$§! worlds. \n- Unlocks the §Y$rose_natural_arcologies$§! Decision on §Y$pc_volcanic_plural$§! §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!""
+ 
+ #######################
+ ### machine_age.yml ###
+ #######################
+ tr_nanotech_finish_modifier_desc: "§YUnlocks Ship:§! Nanite Interdictor\n§YUnlocks Army:§! Nanite Swarm\n§Y$sm_nanite_harvester_plural$§! yield improvements every §Y5§! years, either increasing the size of $r_nanites$ deposits or yielding a sum of nanites. This effect is limited by the size of the planet that deposits are created upon.\nAll §Y$trait_machine_unit$§! pops and leaders gain §Y$leader_trait_rose_nanotech$§!"
+ 
+ ###################
+ ### main_2.yml ####
+ ###################
+ civic_tooltip_environmentalist_effects: "$t$- $AVAILABLE_BUILDINGS$ £building£ ['building:building_ranger_lodge']$TABBED_NEW_LINE$- $ADDITIONAL_BUILDINGS_STRING$ £building£ §Y$building_ranger_lodge$§!\n$t$- $AVAILABLE_HOLDINGS$ £building£ ['building:holding_park_ranger_lodge']$TABBED_NEW_LINE$- Unlocks the §Y$rose_natural_arcologies$§! Decision on all natural worlds §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!"
+ 
+ #####################
+ ### paragon_3.yml ###
+ #####################
+ paragon.5202.regular: "The news didn't take long to spread among the population; §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§! is dying. While the cause of this mysterious illness remains unknown, it does not appear to be immediately terminal.\n\nFor now, §Y[Ruler.GetRegnalName]§! can remain at [Ruler.GetHerHis] post. However, unorthodox methods will be necessary to extend our leader's life by any significant amount of time."
+ paragon.5202.synth: "The news didn't take long to spread among the population; §Y[Ruler.GetTitle] [Ruler.GetRegnalName]'s§! neural net is failing. While the cause of this mysterious error has eluded our best minds, it is not immediately terminal.\n\nFor now, §Y[Ruler.GetRegnalName]§! can remain at [Ruler.GetHerHis] post. However, unorthodox methods will be necessary to repair and extend [Ruler.GetHerHis] functionality by any significant amount of time."
+ paragon.5202.b: "Grant [Ruler.GetRegnalName] the rest [Ruler.GetSheHe] deserves."
+ paragon.6000.desc.ap_mind_over_matter: "$paragon.6000.desc$\n\nOur [GetPsychicNounPlural] have also devised a plan. By harnessing the collective [GetSorrow] of our people, the myriad energies of the Shroud could be manipulated to [GetRejuvenate] our fallen leader. For a price, §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§! can be kept alive indefinitely."
+ paragon.6000.desc.ap_synthetic_evolution: "Our roboticists have a suggestion to repair §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§!: while expensive, we can move [Ruler.GetHerHis] mind into a new, self-correcting, positronic network. This would give [Ruler.GetHerHis] the ability to network with the entire population, improving [Ruler.GetHerHis] already considerable skills."
+ paragon.6015.desc_1: "Our work was a success. By invoking the power of the §HShroud§!, §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§! has been saved. With unprecedented levels of psionic energies coursing through [Ruler.GetHimHer], [Ruler.GetHeShe] has achieved immortality."
+ paragon.6015.desc_2.organic: "However, the ordeal has left [Ruler.GetHimHer] subtly changed...those close to [Ruler.GetHimHer] whisper of [Ruler.GetHimHer] being regularly distracted, as if talking with invisible advisors and detractors. It appears the Shroud's energies are keeping the Luminary alive at a steeper, more corrosive cost than initially expected."
+ paragon.6020.desc: "Success! §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§!'s consciousness has been transferred to a new synthetic frame. Quantum processing allows [Ruler.GetHimHer] instantaneous networking with every synthetic unit.\n\nThis powerful meta-awareness has begun to change [Ruler.GetHerHis] point of view. Now, [Ruler.GetRegnalName] is focused on macro processing patterns, aiming to improve the overall efficiency of our civilization."
+ paragon.6035.desc: "Marking the end of the recent tumultuous events, a grand celebration was held on [capital_scope.GetName]. §Y[Ruler.GetTitle] [Ruler.GetRegnalName]§! gave a speech thanking citizens and scientists, and spoke of the bright and prosperous future [Ruler.GetSheHe] has planned for the §Y[Owner.GetName]§!."
+ paragon.6035.b.tt2: "§Y[Owner.GetName]§! shifts its ethics towards §Y$ethic_egalitarian$§!\n"
+ paragon.6035.c: "Our people have earned some freedom."
+ paragon.6035.c.tt: "The government will be reformed. The $leader_trait_legendary_leader$ will continue to support and guide us, but now the people will have a say in their government."
+ leader_trait_the_psionic_luminary: "Shroudbound"
+ leader_trait_the_psionic_luminary_desc: "By opening a permanent link to the Shroud in this leader's mind, they have become a fixed point in both worlds. This unique dual perspective allows them to manage the population more efficiently and securely." 
+ 
+ ###################
+ ### paragon.yml ###
+ ###################
+ council_agenda_agenda_leadership_conditioning_effect: "§Y$@agenda_leadership_conditioning_exp_reward|0$§! Experience will be shared between all §YLeaders§! below §YSkill Level 10§! and all negative traits will be removed from a random council member"
+ 
+ #####################
+ ### plantoids.yml ###
+ #####################
+ civic_tooltip_idyllic_bloom_effects: "Can build £building£ §Y$building_gaiaseeders$§! on your and your vassal's worlds ideal to your starting species.\n$building_gaiaseeders_all_desc$\nAs you unlock improved £society£ §YTerraforming§! technologies, £building£ §Y$building_gaiaseeders$§! can be constructed on additional planet types.\nAdds the §H$trait_plantoid_bloomed$§! trait."
+ 
+ ###################
+ ### shroud.yml ####
+ ###################
+ civic_secret_societies_effects: "Clandestine ['concept_ss_factions'] will emerge after contacting other empires.\nStarts with the ability to conduct ['concept_proxy_wars'].\n$job_bureaucrat_plural_with_icon$ will produce $i_unity$ per started §YProxy War§!.\nStarts in ['concept_first_contact'] with two neighboring empires.\n$INFILTRATION_LEVEL$ gained on empires after §Y$first_contact$§!: §G+$@secret_society_infiltration_gain|0$§!"
+ secret_societies_proxy_war_bonus_tt: "[GetBureaucratPluralWithIcon] produces §G+$@secret_societies_unity_per_proxy_war|1$§! $i_unity$ per started §HProxy War§!."
+ 
+ ######################
+ ### traditions.yml ###
+ ######################
+ tr_mercantile_worker_coop_improved_ownership_desc: "Additional §Y$living_standard_worker_ownership$§! Living Standard Effects:$TABBED_NEW_LINE$- £happiness£ Happiness: §G+5%§! $TABBED_NEW_LINE$- £mod_pop_bonus_workforce_mult£ $mod_organic_pop_bonus_workforce_mult$: §G+5%§!\n\nUnlocks §Y$trade_policy_mutual_aid_minerals$§! and §Y$trade_policy_mutual_aid_food$§! §YTrade Policies§!, which allow us to focus on converting our £trade_value£ §YTrade Value§! into £minerals£ §YMinerals§! or £food£ §YFood§!."
+ tr_harmony_federations_finish_desc: "$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!.\nGrants access to the §Y$spiritualist_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
+ tr_synchronicity_machine_finish_desc: "§YUnlocks Edict:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!\nAscension Perks Unlocked: §G+1§!"

@@ -200,7 +200,7 @@ country_event = {
 		}
 		name = "utopia.3400.b"
 		ai_chance = {
-			factor = 100
+			factor = 150
 			modifier = {
 				factor = 40
 				has_ethic = ethic_authoritarian

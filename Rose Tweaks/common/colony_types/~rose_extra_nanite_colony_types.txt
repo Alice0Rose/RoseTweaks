@@ -1,4 +1,4 @@
-# Urban Planet
+# Urban World
 rose_col_trade_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_trade
 
@@ -20,7 +20,7 @@ rose_col_trade_nanotech = {
 	}
 
 	ai_building_set_affinity = {
-		trade = 2.0
+		trade = 3.0
 	}
 
 	weight_modifier = {
@@ -38,7 +38,7 @@ rose_col_trade_nanotech = {
 	}
 }
 
-# Mining Planet
+# Mining World
 rose_col_mining_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_mining
 
@@ -130,7 +130,7 @@ rose_col_mining_nanotech = {
 	}
 }
 
-# Generator Planet
+# Generator World
 rose_col_generator_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_generator
 
@@ -211,7 +211,7 @@ rose_col_generator_nanotech = {
 	}
 }
 
-# Forge Planet
+# Forge World
 rose_col_foundry_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_foundry
 
@@ -268,7 +268,7 @@ rose_col_foundry_nanotech = {
 	}
 }
 
-# Factory Planet
+# Factory World
 rose_col_factory_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_factory
 
@@ -397,6 +397,7 @@ inline_script = {
 	}
 }
 
+# Ecclesiastical Center
 rose_col_bureau_spiritualist_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_bureaucratic
 
@@ -469,6 +470,7 @@ rose_col_bureau_spiritualist_nanotech = {
 	}
 }
 
+# Unification Center (Machine Intelligence)
 rose_col_bureau_machine_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_bureaucratic
 
@@ -516,7 +518,7 @@ rose_col_bureau_machine_nanotech = {
 	}
 }
 
-# Research Planet
+# Tech-World
 rose_col_research_nanotech = {
 	icon = GFX_rose_colony_type_nanotech_research
 

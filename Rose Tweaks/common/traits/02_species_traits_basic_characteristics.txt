@@ -236,10 +236,7 @@ trait_organic = {
 		}
 		upkeep = {
 			trigger = {
-				OR = {
-					has_trait = trait_cybernetic
-					has_trait = trait_limited_cybernetic
-				}
+				has_trait = trait_cybernetic
 				is_being_purged = no
 				is_sapient = yes
 			}
@@ -305,10 +302,7 @@ trait_lithoid = {
 		}
 		upkeep = {
 			trigger = {
-				OR = {
-					has_trait = trait_cybernetic
-					has_trait = trait_limited_cybernetic
-				}
+				has_trait = trait_cybernetic
 				is_being_purged = no
 				is_sapient = yes
 			}
@@ -726,7 +720,7 @@ trait_necrophage = {
 
 trait_clone_soldier_infertile = {
 	cost = 0
-	opposites = { "trait_fertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_clone_soldier_infertile_full_potential" "trait_clone_soldier_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" "trait_egg_laying" }
+	opposites = { "trait_fertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_clone_soldier_infertile_full_potential" "trait_clone_soldier_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" "trait_egg_laying" "trait_incubator" }
 	sorting_priority = 20
 
 	initial = no
@@ -782,7 +776,7 @@ trait_clone_soldier_infertile = {
 
 trait_clone_soldier_infertile_full_potential = {
 	cost = 0
-	opposites = { "trait_fertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_clone_soldier_infertile" "trait_clone_soldier_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" "trait_egg_laying" }
+	opposites = { "trait_fertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_clone_soldier_infertile" "trait_clone_soldier_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" "trait_egg_laying" "trait_incubator" }
 	sorting_priority = 20
 
 	initial = no

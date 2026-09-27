@@ -3,19 +3,25 @@ Aside from files with "__OVERRIDE__" in their name, the following files are full
 	- relies on stats of building_clone_vats
 		- common\buildings\pop_assembly_buildings
 
+- common\colony_types\~rose_extra_colony_types.txt
+	- relies on stats of respective regular fortress designation
+		- common\colony_types\00_colony_types.txt
+
 - common\colony_types\~rose_extra_nanite_colony_types.txt
-	- relies on stats of nanite designations
+	- relies on stats of respective regular designations
 		- common\colony_types\00_colony_types.txt
 
 - common\component_templates\!rose_bomber_strike_craft.txt
 	- relies on stats of T3 strike craft for regular, bio, and fauna ships
-		- common\component_templates\00_strike_craft.txt
 		- common\component_templates\00_biogenesis_weapons.txt
+		- common\component_templates\00_strike_craft.txt
 		- common\component_templates\01_mutation_strike_craft_components.txt
 
 - common\component_templates\!rose_menacing_corvette_artillery_computers.txt
+- common\component_templates\!!rose_nanite_swarmer_artillery_computers.txt
 	- relies on stats of artillery computers
 		- common\component_templates\00_utilities_roles.txt
+		- common\component_templates\00_biogenesis_utilities.txt
 
 - common\decisions\~rose_natural_arcologies_decisions.txt
 	- relies on some restrictions of ecumonopolis decision
@@ -31,7 +37,7 @@ Aside from files with "__OVERRIDE__" in their name, the following files are full
 
 - common\scripted_triggers\~rose_natural_arcologies_triggers.txt
 	- relies on some restrictions of ecumonopolis decision along with changes/additions to planet classes
-		- common\Stellaris\common\planet_classes\00_planet_classes.txt
+		- common\planet_classes\00_planet_classes.txt
 
 - common\terraform\rose_extra_toxic_terraform_links.txt
 	- relies on terraforming options for the other from = "pc_toxic" links but at 1.5x rates
@@ -47,10 +53,12 @@ Aside from files with "__OVERRIDE__" in their name, the following files are full
 	- FULL OVERRIDE
 
 - common\zones\~rose_extra_habitat_zones.txt
-	- relies on combination of stats of habitat energy zone and regular food zones
+	- relies on modified stats of zone_habitat_hydroponics
+		- common\zones\01_habitat_zones.txt
 
 - common\zones\~rose_natural_arcologies_zones.txt
-	- relies on stats of specified science zones of ecumonopolis
+	- relies on stats of corresponding arcology research zones and regular research zones
+		- common\zones\04_secondary_zones.txt
 
 - events\!rose_choose_starting_ruler_ethic.txt
 	- relies on names of ethics
@@ -61,3 +69,6 @@ Aside from files with "__OVERRIDE__" in their name, the following files are full
 
 - events\!rose_gestalt_psionic_soverign.txt
 	- relies on regular psionic sovereign event (tho moreso my modified version of the event)
+	
+- events\!rose_scaling_nanite_harvester_upgrade_events.txt
+	- relies on much of event cybernetics.5053 in machine_age_events_2.txt

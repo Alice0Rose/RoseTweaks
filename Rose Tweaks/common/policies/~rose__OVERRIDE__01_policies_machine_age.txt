@@ -1,4 +1,5 @@
 virtuality_focus = {
+	category = society
 	potential = {
 		OR = {
 			has_active_tradition = tr_virtuality_3

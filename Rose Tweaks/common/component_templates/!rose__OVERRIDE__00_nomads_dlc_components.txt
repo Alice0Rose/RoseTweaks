@@ -34,7 +34,16 @@ weapon_component_template = {
 	#firing_arc = 15.0
 	#min_range = 30.0
 
-	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	tags = {
+		weapon_type_energy
+		weapon_role_artillery
+		t_slot
+	}
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	component_set = "ARKSHIP_DEVASTATOR_WEAPON"
 	projectile_gfx = "arkship_01_devastator_laser"
 }

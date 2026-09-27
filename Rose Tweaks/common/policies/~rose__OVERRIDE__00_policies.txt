@@ -3,6 +3,7 @@
 @research_policy_draw_chance = 1.00
 
 physics_research_policy = {
+	category = research
 	potential = {
 		has_ascension_perk = ap_technological_ascendancy
 	}
@@ -62,6 +63,7 @@ physics_research_policy = {
 }
 
 society_research_policy = {
+	category = research
 	potential = {
 		has_ascension_perk = ap_technological_ascendancy
 	}
@@ -136,6 +138,7 @@ society_research_policy = {
 }
 
 engineering_research_policy = {
+	category = research
 	potential = {
 		has_ascension_perk = ap_technological_ascendancy
 	}
@@ -210,6 +213,7 @@ engineering_research_policy = {
 }
 
 trade_policy = {
+	category = economy
 	potential = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}

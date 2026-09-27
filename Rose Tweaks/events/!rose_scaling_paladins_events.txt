@@ -32,7 +32,7 @@ country_event = {
 				setting = crisis_strength_scale 
 			}
 			
-			## Divides crisis strength scalar by 2 so Paladin ships aren't tooo strong
+			## Divides crisis strength scalar so Paladin ships aren't tooo strong
 			#divide_variable = { 
 			#	which = rose_scaling_paladins_scalar 
 			#	value = 2

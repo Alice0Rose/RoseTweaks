@@ -1,23 +1,23 @@
+# Changes
 ## Armies:
-- Machine armies (Individualistic and Machine Intelligence) are linked to species, making them affected by species traits.
-- Synthetic empires have access to Individualistic machine armies and associated technologies.
+- Machine armies (Individualistic and Machine Intelligence) are linked to species, making them affected by species traits
+- Synthetic empires have access to Individualistic machine armies and associated technologies
 - Nanotech empires have access to Nanite Swarm armies which are similar to warforms but cost nanites and are faster to create
 
 ## Ascension Perks:
 - Machine empires (gestalt and individualistic) can take Psionic Ascension as their 3rd AP instead of 4th
-- Executive Vigor gives +2 sector size.
-- Transcendent Learning gives +10% leader lifespan.
-- Master Builders gives +1 building queue capacity.
-- Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates.
+- Executive Vigor gives +2 sector size or +20% arkship action speed if nomad
+- Transcendent Learning gives +10% leader lifespan and -35% leader upkeep
+- Master Builders gives +1 building queue capacity
+- Detox reduces terraforming time by 33% and there are twice as many toxic terraforming candidates
 - Hydrocentric changes the Aquatic trait to buff all jobs instead of just worker jobs while also reducing amenities usage 
-- Eternal Vigilance unlocks a policy that builds free defense platforms every 9 months up to 33% of the platform cap at the cost of a percentage of Monthly Alloys
-- Paladin ships scale their health and damage with crisis strength while a crisis is active
+- Paladin ships scale their health, damage, and disengagement chance with crisis strength while a crisis is active
 
 ## Astral Actions:
-- Summon Dimensional Fleet can no longer be used by AI empires.
+- Summon Dimensional Fleet can no longer be used by AI empires
 
 ## Components:
-- Added Advanced Bomber Wings (along with versions for bio ships and space fauna) which have equivalent stats to Advanced Strike Craft, but only target enemy ships, ignoring other strike craft. Unlocked alongside tier 3 strike craft with the corresponding tech.
+- Added Advanced Bomber Wings (along with versions for bio ships and space fauna) which have equivalent stats to Advanced Strike Craft, but only target enemy ships, ignoring other strike craft. Unlocked alongside tier 3 strike craft with the corresponding tech
 
 ## Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
@@ -34,7 +34,6 @@
 
 ## Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires
-- Vassalization acceptance loss scales less with distance, making vassalization across large distances easier
 
 ## Fleet Management:
 - Maximum possible command limit raised from 500 to 10000
@@ -150,32 +149,33 @@
 	- Cybernetic: 
 		- Leader pool size +1
 		- Leader cap for all categories +2
-		- Leader XP gain +25%
-		- Resources from jobs +10%
-		- Cyborg happiness +10%
-		- Non-Cyborg happiness -15%
-		- Pop growth speed +20%
+		- Leader XP gain +20%
+		- Job Efficiency for Cybernetic Pops +5%
+		- Cyborg happiness +5%
+		- Non-Cyborg happiness -10%
+		- Pop growth speed +15%
+		- -70% XP gain for Luminary (effectively -50% due to +20% bonus)
 	- Psionic:
 		- Renamed to "Shroudbound" 
 		- Description changed to better fit Shadows of the Shroud lore
 		- Available alongside the Chosen/Shroudshaper trait
 		- Monthly influence +2
-		- Resources from jobs +20%
-		- Non-psionic happiness -20%
-		- Governing ethics attraction +25%
-		- Crime -20
+		- Job Efficiency for Psionic Pops +10%
+		- Non-psionic happiness -15%
+		- Governing ethics attraction +15%
+		- Crime -15
 		- Decryption and encryption +2
 	- Synthetic:
-		- Resources from jobs +25%
+		- Job Efficiency for Robotic Pops +15%
 		- Ethics shift speed +25%
 		- Mechanical pop assembly +1
-		- Pop happiness -15%
+		- Pop happiness -10%
 	- Genetic:
 		- Biological species trait points and picks +2
 		- Modify species cost -20%
-		- Organic pop assembly +1.5
-		- Organic pop assembly +25%
-		- Pop growth speed -15%
+		- Organic pop assembly +1
+		- Organic pop assembly +15%
+		- Pop growth speed -10%
 - Psionic starting traits are available to all portraits :)
 - Added the Revered trait which gives +40 lifespan for 2 trait points
 - Added Inflexible Chassis trait for robots which reduces minimum habitability by 25% for +2 trait points
@@ -213,8 +213,7 @@
 ## Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs
 
-## Fixes:
-- Removes the alloy cost and upkeep of T2 Spikespores
+# Fixes:
 - Fixed Scorched World Heralds not having a Casus Beli to attack Fallen Empires
 - Fixed assimilation sometimes getting pops stuck in the wrong strata
 - Fixed being spammed by the event to win with Behemoth Crisis if you decided to wait until you complete the win special project
@@ -223,5 +222,5 @@
 - Fixed orbital rings not checking if there was already an orbital ring on the planet before letting you start construction
 - Fixed Devastator Cannon not devastating (or shooting at all lol) by removing the firing arc and removing the min range
 
-## Credits
+# Credits
 - Russian localization by Rild2

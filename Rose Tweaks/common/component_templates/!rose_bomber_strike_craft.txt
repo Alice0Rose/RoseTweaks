@@ -39,10 +39,10 @@ strike_craft_component_template = {
 	key = "ROSE_BOMBER_STRIKE_CRAFT"
 	size = LARGE
 	entity = "bomber_entity"
-
+	
 	weapon_type = instant
 	projectile_gfx = "strike_craft_laser_3"
-
+	
 	power = @power4
 	resources = {
 		category = ship_components
@@ -96,8 +96,13 @@ strike_craft_component_template = {
 	component_set = "ROSE_BOMBER_STRIKE_CRAFT"
 	prerequisites = { "tech_strike_craft_3" }
 
-	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier }
+	tags = {
+		weapon_type_strike_craft
+	}
+	ai_tags = {
+		carrier
+		carrier_stealth
+	}
 }
 
 # 00_biogenesis_weapons.txt - BIO_STRIKE_CRAFT_HANGAR_3
@@ -161,8 +166,13 @@ strike_craft_component_template = {
 	component_set = "ROSE_BOMBER_BIO_STRIKE_CRAFT"
 	prerequisites = { "tech_strike_craft_3" }
 
-	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier }
+	tags = {
+		weapon_type_strike_craft
+	}
+	ai_tags = {
+		carrier
+		carrier_stealth
+	}
 }
 
 # 01_mutation_strike_craft_components.txt - SUPER_FLAGELLA_SMALL

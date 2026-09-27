@@ -92,11 +92,11 @@ orbital_ring = {
 				#can_build_megastructure_on_planet = yes
 				NOR = {
 					exists = orbital_defence # Prevents duplicate orbital rings
-					has_carrier_flag = megastructure
+					has_planet_flag = megastructure
 					
 					# Allows building orbital ring even if allowed megastructures are present
 					AND = {
-						has_carrier_flag = has_megastructure
+						has_planet_flag = has_megastructure
 						NOT = {
 							owner = {
 								# Returns true if there are no unallowed megastructures on the planet
@@ -112,7 +112,7 @@ orbital_ring = {
 							}
 						}
 					}
-					has_carrier_flag = ruined_orbital_ring_planet
+					has_planet_flag = ruined_orbital_ring_planet
 					solar_system = {
 						has_star_flag = ring_world_built
 					}
@@ -173,7 +173,7 @@ orbital_ring = {
 
 	on_build_complete = {
 		fromfrom.planet = {
-			set_carrier_flag = has_megastructure
+			set_planet_flag = has_megastructure
 			save_event_target_as = orbital_ring_planet
 		}
 		remove_megastructure = fromfrom

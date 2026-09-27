@@ -20,7 +20,7 @@ rose_col_ecu_fortress = {
 		planet_army_build_speed_mult = 0.25
 		planet_orbital_bombardment_damage = -0.10
 		army_defense_damage_mult = 0.20
-		soldier_jobs_bonus_workforce_mult = 0.10
+		soldier_jobs_bonus_workforce_mult = 0.15
 	}
 
 	triggered_planet_modifier = {
@@ -80,7 +80,7 @@ rose_col_ring_fortress = {
 		planet_army_build_speed_mult = 0.25
 		planet_orbital_bombardment_damage = -0.10
 		army_defense_damage_mult = 0.20
-		soldier_jobs_bonus_workforce_mult = 0.10
+		soldier_jobs_bonus_workforce_mult = 0.15
 	}
 
 	triggered_planet_modifier = {

@@ -1570,15 +1570,15 @@ leader_trait_the_cybernetic_luminary = {
 		country_official_cap_add = 2
 		country_commander_cap_add = 2
 		country_scientist_cap_add = 2
-		species_leader_exp_gain = 0.25
-		planet_jobs_produces_mult = 0.1
-		pop_cyborg_happiness = 0.1
-		pop_non_cyborg_happiness = -0.15
-		logistic_growth_mult = 0.20
+		species_leader_exp_gain = 0.2
+		cyborg_pop_bonus_workforce_mult = 0.05
+		pop_cyborg_happiness = 0.05
+		pop_non_cyborg_happiness = -0.1
+		logistic_growth_mult = 0.15
 	}
 	
 	self_modifier = {
-		species_leader_exp_gain = -0.75
+		species_leader_exp_gain = -0.7
 	}
 
 	leader_class = { official commander scientist }
@@ -1606,10 +1606,10 @@ leader_trait_the_psionic_luminary = {
 
 	councilor_modifier = {
 		country_councilor_influence_produces_add = 2
-		planet_jobs_produces_mult = 0.2
-		pop_non_psionic_happiness = -0.2
-		pop_government_ethic_attraction = 0.25
-		planet_crime_add = -20
+		psionic_pop_bonus_workforce_mult = 0.1
+		pop_non_psionic_happiness = -0.15
+		pop_government_ethic_attraction = 0.15
+		planet_crime_add = -15
 		intel_decryption_add = 2
 		intel_encryption_add = 2
 	}
@@ -1638,10 +1638,10 @@ leader_trait_the_synth_luminary = {
 	}
 
 	councilor_modifier = {
-		planet_jobs_produces_mult = 0.25
+		robotic_pop_bonus_workforce_mult = 0.15
 		pop_ethics_shift_speed_mult = 0.25
 		planet_pop_assembly_add = 1
-		pop_happiness = -0.15
+		pop_happiness = -0.1
 	}
 
 	leader_class = { official commander scientist }
@@ -1671,9 +1671,9 @@ leader_trait_the_genetic_luminary = {
 		BIOLOGICAL_species_trait_points_add = 2
 		BIOLOGICAL_species_trait_picks_add = 2
 		modify_species_cost_mult = -0.2
-		bonus_pop_growth = 1.5
-		bonus_pop_growth_mult = 0.25
-		logistic_growth_mult = -0.15
+		bonus_pop_growth = 1
+		bonus_pop_growth_mult = 0.15
+		logistic_growth_mult = -0.1
 	}
 
 	leader_class = { official commander scientist }

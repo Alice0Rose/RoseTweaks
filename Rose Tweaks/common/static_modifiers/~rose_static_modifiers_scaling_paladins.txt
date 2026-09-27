@@ -4,6 +4,9 @@ rose_scaling_paladins_0 = {
 	shipsize_paladin_ship_armor_mult = 0.01
 	shipsize_paladin_ship_shield_mult = 0.01
 	shipsize_paladin_ship_weapon_damage = 0.01
+	shipsize_paladin_ship_shield_regen_mult = 0.005
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }
 rose_scaling_paladins_1 = {
 	hide_from_country_list = yes
@@ -11,6 +14,9 @@ rose_scaling_paladins_1 = {
 	shipsize_paladin_ship_armor_mult = 0.01
 	shipsize_paladin_ship_shield_mult = 0.01
 	shipsize_paladin_ship_weapon_damage = 0.01
+	shipsize_paladin_ship_shield_regen_mult = 0.005
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }
 rose_scaling_paladins_2 = {
 	hide_from_country_list = yes
@@ -18,6 +24,9 @@ rose_scaling_paladins_2 = {
 	shipsize_paladin_ship_armor_mult = 0.9
 	shipsize_paladin_ship_shield_mult = 0.9
 	shipsize_paladin_ship_weapon_damage = 0.9
+	shipsize_paladin_ship_shield_regen_mult = 0.45
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }
 rose_scaling_paladins_3 = {
 	hide_from_country_list = yes
@@ -25,6 +34,9 @@ rose_scaling_paladins_3 = {
 	shipsize_paladin_ship_armor_mult = 1.05
 	shipsize_paladin_ship_shield_mult = 1.05
 	shipsize_paladin_ship_weapon_damage = 1.05
+	shipsize_paladin_ship_shield_regen_mult = 0.525
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }
 rose_scaling_paladins_4 = {
 	hide_from_country_list = yes
@@ -32,6 +44,9 @@ rose_scaling_paladins_4 = {
 	shipsize_paladin_ship_armor_mult = 1.2
 	shipsize_paladin_ship_shield_mult = 1.2
 	shipsize_paladin_ship_weapon_damage = 1.2
+	shipsize_paladin_ship_shield_regen_mult = 0.6
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }
 rose_scaling_paladins_5 = {
 	hide_from_country_list = yes
@@ -39,6 +54,9 @@ rose_scaling_paladins_5 = {
 	shipsize_paladin_ship_armor_mult = 1.35
 	shipsize_paladin_ship_shield_mult = 1.35
 	shipsize_paladin_ship_weapon_damage = 1.35
+	shipsize_paladin_ship_shield_regen_mult = 0.675
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }
 rose_scaling_paladins_6 = {
 	hide_from_country_list = yes
@@ -46,4 +64,7 @@ rose_scaling_paladins_6 = {
 	shipsize_paladin_ship_armor_mult = 1.5
 	shipsize_paladin_ship_shield_mult = 1.5
 	shipsize_paladin_ship_weapon_damage = 1.5
+	shipsize_paladin_ship_shield_regen_mult = 0.75
+	shipsize_paladin_ship_disengage_opportunities_add = 0.2
+	shipsize_paladin_ship_disengage_chance_mult = 0.2
 }

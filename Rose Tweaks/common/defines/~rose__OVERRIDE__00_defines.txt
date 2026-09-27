@@ -1,12 +1,8 @@
 	NGameplay = {
 		NUM_DESTINY_TRAIT_OPTIONS				= 4	# Default number of destiny traits to select from
-		POP_ETHOS_LOWER_ETHIC_THRESHOLD					= 0.75	# If the % of pops following an ethic is <= this relative to its attraction do not diverge away from it
-		POP_ETHOS_UPPER_ETHIC_THRESHOLD					= 1.25	# If the % of pops following an ethic is >= this relative to its attraction do not diverge to it		
-		POP_MIN_ETHIC_RELATIVE_ATTRACTION				= 0.20	# If relative attraction is less than this, do not diverge to this ethic
-		POP_ETHOS_DIVERGENCE_RATE_MULT					= 0.30	# Chance of a pop evaluating its ethics every year
-		POP_ETHOS_DIVERGENCE_SIZE_CHANGE_MIN			= 0.15	# Minimum % of pop size that will switch
-		POP_ETHOS_DIVERGENCE_SIZE_CHANGE_MAX			= 0.30	# Maximum % of pop size that will switch
-		POP_ETHOS_DIVERGENCE_MIN_POP_AMOUNT			= 400	# Pop groups with amount less or equal this will change fully
+		#POP_ETHOS_DIVERGENCE_RATE_MULT					= 0.10	# Chance of a pop evaluating its ethics every year
+		#POP_ETHOS_DIVERGENCE_SIZE_CHANGE_MIN			= 0.15	# Minimum % of pop size that will switch
+		#POP_ETHOS_DIVERGENCE_SIZE_CHANGE_MAX			= 0.30	# Maximum % of pop size that will switch
 		COMMAND_LIMIT_MAX										= 10000	# Max value of Command Limit
 		COMMAND_LIMIT_BASE										= 100	# Base value of Command Limit
 	}
@@ -17,5 +13,4 @@
 
 	NAI = {
 		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MAX = 1000
-		VASSALIZATION_ACCEPTANCE_DISTANCE_MULT = -0.125 # per 1 border distance
 	}

@@ -37,6 +37,8 @@
 #  ship_roles = {
 #    destroyer = gunship
 #  }
+#  NOTE: Ship role assignment is now primarily driven by the fleet_doctrine policy in 00_policies.txt.
+#  When adding a new personality, add ai_weight modifiers for it in the relevant fleet doctrine policy options.
 
 ##### Diplomacy:
 # federation_acceptance -> Added directly to chance of accepting to form/join a federation
@@ -71,7 +73,7 @@ honorbound_warriors = {
 
 	advanced_start_chance = 50
 
-	weapon_preferences = weapon_type_strike_craft
+	weapon_preferences = weapon_type_energy
 	armor_ratio = 0.4
 	shields_ratio = 0.4
 	hull_ratio = 0.2
@@ -261,10 +263,6 @@ erudite_explorers = {
 		multispecies = yes
 		crisis_fighter = yes
 		sneak_attacker = yes
-	}
-
-	ship_roles = {
-		frigate = explosive_stealth
 	}
 
 	allow = {
@@ -460,10 +458,6 @@ ruthless_capitalists = {
 		crisis_fighter = yes
 		wants_tribute = yes
 		sneak_attacker = yes
-	}
-
-	ship_roles = {
-		frigate = explosive_stealth
 	}
 
 	allow = {
@@ -683,10 +677,6 @@ slaving_despots = {
 		sneak_attacker = yes
 	}
 
-	ship_roles = {
-		frigate = explosive_stealth
-	}
-
 	allow = {
 		is_country_type = default
 		has_valid_civic = civic_slaver_guilds
@@ -749,10 +739,6 @@ decadent_hierarchy = {
 		multispecies = no
 		crisis_fighter = yes
 		sneak_attacker = yes
-	}
-
-	ship_roles = {
-		frigate = explosive_stealth
 	}
 
 	allow = {
@@ -1068,10 +1054,6 @@ xenophobic_isolationists = {
 		sneak_attacker = yes
 	}
 
-	ship_roles = {
-		frigate = explosive_stealth
-	}
-
 	allow = {
 		is_country_type = default
 		OR = {
@@ -1343,10 +1325,6 @@ migrating_flock = {
 		sneak_attacker = yes
 	}
 
-	ship_roles = {
-		frigate = explosive_stealth
-	}
-
 	allow = {
 		is_country_type = default
 		OR = {
@@ -1545,10 +1523,6 @@ assimilators = {
 		multispecies = no
 		crisis_fighter = yes
 		sneak_attacker = yes
-	}
-
-	ship_roles = {
-		frigate = explosive_stealth
 	}
 
 	allow = {
@@ -1877,7 +1851,7 @@ hive_mind_friend = {
 
 	advanced_start_chance = 50
 
-	weapon_preferences = weapon_type_kinetic
+	weapon_preferences = weapon_type_strike_craft
 	armor_ratio = 0.2
 	shields_ratio = 0.4
 	hull_ratio = 0.4
@@ -1968,10 +1942,6 @@ decadent_capitalists = {
 		crisis_fighter = yes
 		wants_tribute = yes
 		sneak_attacker = yes
-	}
-
-	ship_roles = {
-		frigate = explosive_stealth
 	}
 
 	allow = {

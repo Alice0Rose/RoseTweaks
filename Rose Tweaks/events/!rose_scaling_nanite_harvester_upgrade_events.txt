@@ -40,13 +40,23 @@ event = {
 
 				every_system = {
 					limit = {
-						exists = owner
-						owner = {
-							has_tradition = tr_nanotech_finish
-						}
-						exists = starbase
-						starbase = {
-							has_starbase_building = nanite_harvester
+						OR = {
+							AND = {
+								exists = owner
+								owner = {
+									has_tradition = tr_nanotech_finish
+								}
+								exists = starbase
+								starbase = {
+									has_starbase_building = nanite_harvester
+								}
+							}
+							any_ship_in_system = {
+								is_waystation_ship = yes
+								starbase = {
+									has_starbase_module = waystation_nanotech_module
+								}
+							}
 						}
 					}
 					system_event = { id = cybernetics.5054 }

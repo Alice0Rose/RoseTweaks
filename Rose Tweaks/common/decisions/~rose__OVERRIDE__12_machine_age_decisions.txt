@@ -62,20 +62,20 @@ decision_nanotech_swarm_consume_world = {
 		can_have_habitable_deposits = yes
 		#is_capital = no
 		NOT = {
-			has_carrier_flag = being_devoured
+			has_planet_flag = being_devoured
 		}
 		NOT = { has_designation = col_nanotech_world }
 	}
 
 	effect = {
 		custom_tooltip = decision_nanotech_swarm_consume_world_effect_desc
-		set_timed_carrier_flag = {
+		set_timed_planet_flag = {
 			days = 360
 			flag = recently_eaten_planet
 		}
 		hidden_effect = {
 			set_carrier_flag = colony_event
-			set_carrier_flag = being_devoured
+			set_planet_flag = being_devoured
 			add_modifier = {
 				modifier = being_devoured_modifier_nanotech
 				days = -1

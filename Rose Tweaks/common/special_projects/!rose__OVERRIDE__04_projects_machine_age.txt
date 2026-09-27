@@ -3,6 +3,7 @@ special_project = {
 	event_chain = "the_synth_queen_raids_chain"
 	picture = GFX_evt_cargoship_caravan
 	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
+	situation_log_category = crises
 	cost = 0
 	days_to_research = 1
 	sound = yes

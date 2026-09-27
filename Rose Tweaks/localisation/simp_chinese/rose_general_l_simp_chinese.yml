@@ -26,20 +26,6 @@
  building_rose_clone_vats_3: "$building_clone_vats$ Tier 4"
  building_rose_clone_vats_3_desc: "$building_clone_vats_desc$"
  
- # Eternal Vigilance Policy
- ap_rose_eternal_vigilance_tt: "Every 9 months a §YDefense Platform§! will be built around every §YStarbase§! depending on the §Y$ap_eternal_vigilance$§! policy, up to a max of §Y33%§! capacity at the cost of a percentage of §Y$mod_country_alloys_produces_mult$§!"
- policy_rose_eternal_vigilance_policy: "$ap_eternal_vigilance$"
- policy_rose_eternal_vigilance_policy_desc: "A shield is only as strong as the one that holds it."
- rose_eternal_vigilance_policy_full_spending: "Full Spending"
- rose_eternal_vigilance_policy_full_spending_name: "$eternal_vigilance_full_spending$"
- rose_eternal_vigilance_policy_full_spending_desc: "Every starbase needs to be properly defended. Spare no cost.\nAutomatically builds §YDefense Platforms§! around every §YStarbase§!"
- rose_eternal_vigilance_policy_half_spending: "Half Spending"
- rose_eternal_vigilance_policy_half_spending_name: "$eternal_vigilance_half_spending$"
- rose_eternal_vigilance_policy_half_spending_desc: "Only our strongest redoubts require our support.\nAutomatically builds §YDefense Platforms§! around §YBastion Starbases§!"
- rose_eternal_vigilance_policy_no_spending: "No Spending"
- rose_eternal_vigilance_policy_no_spending_name: "$eternal_vigilance_no_spending$"
- rose_eternal_vigilance_policy_no_spending_desc: "There is no need to further enhance our defenses.\nAutomatically builds §YDefense Platforms§! around no §YStarbases§!"
- 
  # Extra Colony Types
  rose_col_ecu_fortress: "Ecumenopolis Fortress"
  rose_col_ecu_fortress_tt: "A vast city-planet that specializes in military infrastructure."
@@ -209,6 +195,9 @@
  mod_shipsize_paladin_ship_armor_mult: "$paladin_ship$ $SHIP_STAT_ARMOR$"
  mod_shipsize_paladin_ship_shield_mult: "$paladin_ship$ $SHIP_STAT_SHIELDS$"
  mod_shipsize_paladin_ship_weapon_damage: "$paladin_ship$ $SHIP_STAT_DAMAGE$"
+ mod_shipsize_paladin_ship_shield_regen_mult: "$paladin_ship$ $MOD_SHIP_SHIELD_REGEN_MULT$"
+ mod_shipsize_paladin_ship_disengage_chance_mult: "$paladin_ship$ $MOD_SHIP_DISENGAGE_CHANCE_MULT$"
+ mod_shipsize_paladin_ship_disengage_opportunities_add: "$paladin_ship$ $MOD_SHIP_DISENGAGE_OPPORTUNITIES_ADD$"
  
  rose_scaling_paladins_0: "Paladin Scaling Bonus"
  rose_scaling_paladins_1: "$rose_scaling_paladins_0$"
@@ -217,7 +206,7 @@
  rose_scaling_paladins_4: "$rose_scaling_paladins_0$"
  rose_scaling_paladins_5: "$rose_scaling_paladins_0$"
  rose_scaling_paladins_6: "$rose_scaling_paladins_0$"
-  
+ 
  # Scorched World Heralds Fix War Goals
  war_goal_wg_rose_blaze_vs_fe: "$war_goal_wg_blaze$"
  war_goal_wg_rose_blaze_vs_fe_desc: "$war_goal_wg_blaze_desc$"
