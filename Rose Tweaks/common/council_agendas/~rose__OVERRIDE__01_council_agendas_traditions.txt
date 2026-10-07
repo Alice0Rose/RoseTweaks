@@ -29,7 +29,6 @@ agenda_leadership_conditioning = {
 						negative = yes 
 					}
 				}
-				
 				remove_all_negative_traits = yes
 			}
 		}

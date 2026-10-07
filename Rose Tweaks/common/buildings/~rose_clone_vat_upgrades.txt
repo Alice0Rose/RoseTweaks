@@ -50,7 +50,8 @@ building_rose_clone_vats_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				has_technology = tech_gene_tailoring
 			}
 			any_owned_pop_group = {
@@ -64,7 +65,8 @@ building_rose_clone_vats_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				game_start_auto_mod_empire = yes
 			}
 			any_owned_pop_group = {
@@ -76,71 +78,39 @@ building_rose_clone_vats_1 = {
 		}
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = no
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = no
+		}"
+		AMOUNT = 3
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = yes
+			NOT = {
+				has_tradition = tr_genetics_efficient_cloning
 			}
-		}
-		bonus_pop_growth = 3
+		}"
+		AMOUNT = 6
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = yes
+		   
+			has_tradition = tr_genetics_efficient_cloning
+		}"
+		AMOUNT = 9
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
-				has_cloning_tradition = no
-			}
-		}
-		fake_pop_growth_mod = 3
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				NOT = {
-					has_tradition = tr_genetics_efficient_cloning
-				}
-			}
-		}
-		bonus_pop_growth = 6
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				NOT = {
-					has_tradition = tr_genetics_efficient_cloning
-				}
-			}
-		}
-		fake_pop_growth_mod = 6
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
+			exists = owner
 			owner = {
-				has_cloning_tradition = yes
-				has_tradition = tr_genetics_efficient_cloning
-			}
-		}
-		bonus_pop_growth = 9
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				has_tradition = tr_genetics_efficient_cloning
-			}
-		}
-		fake_pop_growth_mod = 9
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
 				has_country_flag = clone_army_full_potential
 				has_active_tradition = tr_cloning_adopt_clone_army
 			}
@@ -150,7 +120,8 @@ building_rose_clone_vats_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				has_country_flag = clone_army_full_potential
 				has_active_tradition = tr_cloning_finish_clone_army
 			}
@@ -194,7 +165,8 @@ building_rose_clone_vats_1 = {
 		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_or_infernal_empire = no
 				}
 			}
@@ -202,7 +174,8 @@ building_rose_clone_vats_1 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
@@ -211,7 +184,8 @@ building_rose_clone_vats_1 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_empire = yes
 				}
 			}
@@ -219,7 +193,8 @@ building_rose_clone_vats_1 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_empire = yes
 					has_cloning_tradition = yes
 				}
@@ -228,7 +203,8 @@ building_rose_clone_vats_1 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_infernal_empire = yes
 				}
 			}
@@ -236,7 +212,8 @@ building_rose_clone_vats_1 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_infernal_empire = yes
 					has_cloning_tradition = yes
 				}
@@ -247,7 +224,8 @@ building_rose_clone_vats_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				is_cloning_authority = yes
 				is_megacorp = yes
 			}
@@ -260,7 +238,7 @@ building_rose_clone_vats_1 = {
 building_rose_clone_vats_2 = {
 	base_buildtime = @b1_time
 	can_build = no
-	
+
 	category = pop_assembly
 
 	upgrades = {
@@ -309,7 +287,8 @@ building_rose_clone_vats_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				has_technology = tech_gene_tailoring
 			}
 			any_owned_pop_group = {
@@ -323,7 +302,8 @@ building_rose_clone_vats_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				game_start_auto_mod_empire = yes
 			}
 			any_owned_pop_group = {
@@ -335,71 +315,39 @@ building_rose_clone_vats_2 = {
 		}
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = no
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = no
+		}"
+		AMOUNT = 4.5
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = yes
+			NOT = {
+				has_tradition = tr_genetics_efficient_cloning
 			}
-		}
-		bonus_pop_growth = 4.5
+		}"
+		AMOUNT = 9
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = yes
+		   
+			has_tradition = tr_genetics_efficient_cloning
+		}"
+		AMOUNT = 13.5
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
-				has_cloning_tradition = no
-			}
-		}
-		fake_pop_growth_mod = 4.5
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				NOT = {
-					has_tradition = tr_genetics_efficient_cloning
-				}
-			}
-		}
-		bonus_pop_growth = 9
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				NOT = {
-					has_tradition = tr_genetics_efficient_cloning
-				}
-			}
-		}
-		fake_pop_growth_mod = 9
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
+			exists = owner
 			owner = {
-				has_cloning_tradition = yes
-				has_tradition = tr_genetics_efficient_cloning
-			}
-		}
-		bonus_pop_growth = 13.5
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				has_tradition = tr_genetics_efficient_cloning
-			}
-		}
-		fake_pop_growth_mod = 13.5
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
 				has_country_flag = clone_army_full_potential
 				has_active_tradition = tr_cloning_adopt_clone_army
 			}
@@ -409,7 +357,8 @@ building_rose_clone_vats_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				has_country_flag = clone_army_full_potential
 				has_active_tradition = tr_cloning_finish_clone_army
 			}
@@ -453,7 +402,8 @@ building_rose_clone_vats_2 = {
 		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_or_infernal_empire = no
 				}
 			}
@@ -461,7 +411,8 @@ building_rose_clone_vats_2 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
@@ -470,7 +421,8 @@ building_rose_clone_vats_2 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_empire = yes
 				}
 			}
@@ -478,7 +430,8 @@ building_rose_clone_vats_2 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_empire = yes
 					has_cloning_tradition = yes
 				}
@@ -487,7 +440,8 @@ building_rose_clone_vats_2 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_infernal_empire = yes
 				}
 			}
@@ -495,7 +449,8 @@ building_rose_clone_vats_2 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_infernal_empire = yes
 					has_cloning_tradition = yes
 				}
@@ -506,7 +461,8 @@ building_rose_clone_vats_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				is_cloning_authority = yes
 				is_megacorp = yes
 			}
@@ -564,7 +520,8 @@ building_rose_clone_vats_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				has_technology = tech_gene_tailoring
 			}
 			any_owned_pop_group = {
@@ -578,7 +535,8 @@ building_rose_clone_vats_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				game_start_auto_mod_empire = yes
 			}
 			any_owned_pop_group = {
@@ -590,71 +548,39 @@ building_rose_clone_vats_3 = {
 		}
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = no
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = no
+		}"
+		AMOUNT = 6
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = yes
+			NOT = {
+				has_tradition = tr_genetics_efficient_cloning
 			}
-		}
-		bonus_pop_growth = 6
+		}"
+		AMOUNT = 12
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_cloning_tradition = yes
+		   
+			has_tradition = tr_genetics_efficient_cloning
+		}"
+		AMOUNT = 18
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
-				has_cloning_tradition = no
-			}
-		}
-		fake_pop_growth_mod = 6
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				NOT = {
-					has_tradition = tr_genetics_efficient_cloning
-				}
-			}
-		}
-		bonus_pop_growth = 12
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				NOT = {
-					has_tradition = tr_genetics_efficient_cloning
-				}
-			}
-		}
-		fake_pop_growth_mod = 12
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		potential = {
+			exists = owner
 			owner = {
-				has_cloning_tradition = yes
-				has_tradition = tr_genetics_efficient_cloning
-			}
-		}
-		bonus_pop_growth = 18
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
-				has_cloning_tradition = yes
-				has_tradition = tr_genetics_efficient_cloning
-			}
-		}
-		fake_pop_growth_mod = 18
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = {
 				has_country_flag = clone_army_full_potential
 				has_active_tradition = tr_cloning_adopt_clone_army
 			}
@@ -664,7 +590,8 @@ building_rose_clone_vats_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				has_country_flag = clone_army_full_potential
 				has_active_tradition = tr_cloning_finish_clone_army
 			}
@@ -708,7 +635,8 @@ building_rose_clone_vats_3 = {
 		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_or_infernal_empire = no
 				}
 			}
@@ -716,7 +644,8 @@ building_rose_clone_vats_3 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
@@ -725,7 +654,8 @@ building_rose_clone_vats_3 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_empire = yes
 				}
 			}
@@ -733,7 +663,8 @@ building_rose_clone_vats_3 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_lithoid_empire = yes
 					has_cloning_tradition = yes
 				}
@@ -742,7 +673,8 @@ building_rose_clone_vats_3 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_infernal_empire = yes
 				}
 			}
@@ -750,7 +682,8 @@ building_rose_clone_vats_3 = {
 		}
 		upkeep = {
 			trigger = {
-				owner? = {
+				exists = owner
+				owner = {
 					is_infernal_empire = yes
 					has_cloning_tradition = yes
 				}
@@ -761,7 +694,8 @@ building_rose_clone_vats_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner? = {
+			exists = owner
+			owner = {
 				is_cloning_authority = yes
 				is_megacorp = yes
 			}
@@ -770,4 +704,3 @@ building_rose_clone_vats_3 = {
 		planet_amenities_add = 2000
 	}
 }
-

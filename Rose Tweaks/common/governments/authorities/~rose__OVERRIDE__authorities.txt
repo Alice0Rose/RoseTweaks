@@ -105,7 +105,7 @@ auth_oligarchic = {
 			has_country_flag = synth_physical
 		}
 		modifier = {
-			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
+			custom_tooltip = auth_synth_oligarch_ruler_enforcers_tt
 			pop_category_rulers_upkeep_mult = 0.15
 			planet_bureaucrats_unity_produces_mult = 0.25
 			planet_bureaucrats_upkeep_mult = -0.10
@@ -123,12 +123,12 @@ auth_oligarchic = {
 			has_country_flag = synth_virtual
 		}
 		modifier = {
-			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
+			custom_tooltip = auth_synth_oligarch_ruler_enforcers_tt
 			pop_category_rulers_upkeep_mult = 0.15
 			edicts_upkeep_mult = -0.2
 			edicts_cost_mult = -0.75
-			empire_size_districts_mult = -0.10
-			empire_size_colonies_mult = -0.50
+			empire_size_districts_mult = -0.15
+			empire_size_colonies_mult = -0.30
 			show_only_custom_tooltip = no
 		}
 	}
@@ -233,6 +233,7 @@ auth_oligarchic = {
 			councilor_exp_gain = 0.25
 			leaders_upkeep_mult = -0.25
 			election_term_years_add = 20
+			show_only_custom_tooltip = no
 		}
 	}
 
@@ -251,6 +252,8 @@ auth_oligarchic = {
 			leader_initial_skill = 2
 			leaders_upkeep_mult = -0.25
 			leader_recruitment_age = -15
+			negative_traits_leader = 1
+			show_only_custom_tooltip = no
 		}
 	}
 
@@ -488,6 +491,7 @@ auth_corporate = {
 			operations_influence_cost_mult = -0.2
 			branch_office_value_mult = 0.2
 			envoys_add = 1
+			show_only_custom_tooltip = no
 		}
 	}
 
@@ -507,6 +511,7 @@ auth_corporate = {
 			council_agenda_early_activation_cost_mult = -0.25
 			council_agenda_cooldown_mult = -0.25
 			species_leader_exp_gain = 0.25
+			show_only_custom_tooltip = no
 		}
 	}
 

@@ -1,0 +1,3 @@
+agenda_inner_stability_finish = {
+	planet_stability_add = 10
+}

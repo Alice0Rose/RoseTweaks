@@ -55,3 +55,50 @@ give_next_terraforming_tech_effect = {
 		}
 	}
 }
+
+# pop group scope. Moves AMOUNT pops into the assimilated species group
+assimilate_pop_group_effect = {
+	colony = {
+		if = {
+			limit = { root.owner = { is_gestalt = no } }
+			create_pop_group = {
+				pop_group = event_target:old_pop_group
+				species = event_target:target_species
+				size = 0
+				category = civilian
+				effect = {
+					transfer_pop_amount = {
+						source = event_target:old_pop_group
+						target = this
+						amount = $AMOUNT|5$
+					}
+					set_timed_pop_group_flag = {
+						flag = already_assimilated
+						days = 15
+					}
+					apply_post_assimilation_effects = yes
+				}
+			}
+		}
+		else = {
+			create_pop_group = {
+				pop_group = event_target:old_pop_group
+				species = event_target:target_species
+				size = 0
+				category = maintenance_drone
+				effect = {
+					transfer_pop_amount = {
+						source = event_target:old_pop_group
+						target = this
+						amount = $AMOUNT|5$
+					}
+					set_timed_pop_group_flag = {
+						flag = already_assimilated
+						days = 15
+					}
+					apply_post_assimilation_effects = yes
+				}
+			}
+		}
+	}
+}

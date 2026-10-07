@@ -102,18 +102,6 @@ country_event = {
 					show_message = no
 				}
 			}
-			
-			# Limited Cyborg trait
-			if = {
-				limit = {
-					species = { has_trait = trait_limited_cybernetic }
-					NOT = { has_trait = leader_trait_limited_cyborg }
-				}
-				add_trait = {
-					trait = leader_trait_limited_cyborg
-					show_message = no
-				}
-			}
 		}
 	}
 }

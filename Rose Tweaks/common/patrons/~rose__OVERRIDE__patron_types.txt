@@ -42,7 +42,6 @@ the_composer_of_strands = {
 		icon = "GFX_composer_covenant"
 		desc = covenant_composer_desc
 		triggered_modifier = {
-			potential = { has_country_flag = composer_covenant_confirmed }
 			custom_tooltip = covenant_composer_telepath_tt
 			show_only_custom_tooltip = no
 		}

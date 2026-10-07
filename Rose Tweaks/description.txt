@@ -21,6 +21,7 @@
 
 ## Agendas:
 - Leadership Conditioning (Aptitude agenda) removes all negative traits from one of your council members (randomly chosen from the councilors with at least 1 negative trait) when launched
+- Inner Stability gives +10 on launch instead of +5
 - Psionic Supremacy agenda is available to psionic individualistic machines
 - Nanotech Unstoppable Swarm agenda includes Nanite Interdictors too
 

@@ -166,7 +166,7 @@ utility_component_template = {
 	prerequisites = { "tech_covenant_eater" }
 	component_set = "EATER_BLESSING"
 
-	modifier = {
+	ship_modifier = {
 		ship_speed_mult = 0.15
 		ship_orbital_bombardment_mult = 0.5
 		ship_orbital_bombardment_army_damage_mult = 1
@@ -206,7 +206,7 @@ utility_component_template = {
 	prerequisites = { "tech_covenant_eater" }
 	component_set = "EATER_BLESSING"
 
-	modifier = {
+	ship_modifier = {
 		ship_speed_mult = 0.15
 		ship_orbital_bombardment_mult = 0.5
 		ship_orbital_bombardment_army_damage_mult = 1
@@ -246,7 +246,7 @@ utility_component_template = {
 	prerequisites = { "tech_covenant_eater" }
 	component_set = "EATER_BLESSING"
 
-	modifier = {
+	ship_modifier = {
 		ship_speed_mult = 0.15
 		ship_orbital_bombardment_mult = 0.5
 		ship_orbital_bombardment_army_damage_mult = 1
@@ -286,7 +286,7 @@ utility_component_template = {
 	prerequisites = { "tech_covenant_eater" }
 	component_set = "EATER_BLESSING"
 
-	modifier = {
+	ship_modifier = {
 		ship_speed_mult = 0.15
 		ship_orbital_bombardment_mult = 0.5
 		ship_orbital_bombardment_army_damage_mult = 1

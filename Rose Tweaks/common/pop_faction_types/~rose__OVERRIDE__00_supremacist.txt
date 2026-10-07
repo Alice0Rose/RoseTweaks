@@ -165,14 +165,13 @@ supremacist = {
 		}
 
 		trigger = {
-			owner = {
-				exists = ruler
+			owner.ruler? = {
 				exists = owner_species
 				OR = {
-					ruler = { is_same_species = owner_species }
+					is_same_species = owner_species
 					AND = {
 						owner = { has_valid_civic = civic_selective_kinship }
-						ruler = { is_same_species_class = owner_species }
+						is_same_species_class = owner_species
 					}
 				}
 			}

@@ -31,6 +31,8 @@
 # Ships
 # armor_ratio -> Amount of armor they should aim for on ships
 # shields_ratio -> Amount of shields they should aim for on ships
+# weapon_preferences, armor_ratio and shields_ratio weight the starting roll of the weapon and defense preference policies (game_start.140)
+# Once rolled, the chosen policy options override these values
 # hull_ratio -> Amount of hull boosters they should aim for on ships (if available)
 # ship_roles: List of "<ship_size> = <role>" statements; AI will use the corresponding role for that size
 #  Example:
