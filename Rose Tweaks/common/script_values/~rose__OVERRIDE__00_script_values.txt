@@ -1,0 +1,16 @@
+# Pop group scope. The habitability shortfall times the rate declared per 10 percent.
+low_habitability_bureaucrat_workforce = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = habitability
+		trigger_scope = colony
+		parameters = {
+			who = prev
+		}
+		mode = subtract
+	}
+	min = 0
+	max = 10
+	mult = 10
+	mult = owner.modifier:low_habitability_bureaucrat_bonus_workforce_mult
+}
