@@ -33,6 +33,7 @@ country_event = { #Little conclusion of first situation
 		change_government = {
 			authority = auth_imperial
 			remove_invalid_civics = yes
+			cooldown = no
 		}
 	}
 	option = { #Stay Dictatorship
@@ -278,6 +279,7 @@ country_event = {
 		change_government = {
 			authority = auth_democratic
 			remove_invalid_civics = yes
+			cooldown = no
 		}
 		paragon_origin_gain_modifier = yes
 		custom_tooltip = paragon.6035.b.tt
@@ -309,6 +311,7 @@ country_event = {
 		change_government = {
 			authority = auth_oligarchic
 			remove_invalid_civics = yes
+			cooldown = no
 		}
 
 		paragon_origin_gain_modifier = yes
