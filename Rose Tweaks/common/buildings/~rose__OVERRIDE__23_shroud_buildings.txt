@@ -1,0 +1,365 @@
+building_ancient_ward_1 = {
+	base_buildtime = @b3_time
+	category = army
+	can_build = no
+	can_demolish = no
+
+	empire_limit = {
+		base = 1
+	}
+
+	building_sets = {
+		government
+		fortress
+	}
+
+	potential = {
+		has_shroud_dlc = yes
+		exists = owner
+		owner = {
+			has_origin = origin_mindwardens
+		}
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.25
+	}
+
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = 200
+	}
+
+	upgrades = {
+		building_ancient_ward_2
+	}
+	is_essential = yes
+}
+
+building_ancient_ward_2 = {
+	base_buildtime = @b3_time
+	category = army
+	can_build = no
+	can_demolish = no
+
+	building_sets = {
+		government
+		fortress
+	}
+
+	potential = {
+		has_shroud_dlc = yes
+		exists = owner
+		owner = {
+			has_origin = origin_mindwardens
+			has_country_flag = unlocked_ancient_ward_upgrade
+		}
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.5
+	}
+
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = 200
+	}
+
+	system_modifier = {
+		mindwarden_aura_immunity = 1
+	}
+
+	triggered_desc = {
+		text = psionic_auras_immunity
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { has_origin = origin_mindwardens }
+			}
+			owner = {
+				if = {
+					limit = {
+						has_event_chain = ancient_ward_upgrade_chain
+					}
+					add_event_chain_counter = {
+						event_chain = ancient_ward_upgrade_chain
+						counter = ancient_ward_upgraded
+						amount = 1
+					}
+					if = {
+						limit = {
+							has_completed_event_chain_counter = {
+								event_chain = ancient_ward_upgrade_chain
+								counter = ancient_ward_upgraded
+							}
+						}
+						country_event = { id = shroud.6215 }
+					}
+				}
+			}
+		}
+		add_eotc_aura_grand_ward = yes
+	}
+
+	on_destroy = {
+		remove_eotc_aura_grand_ward = yes
+	}
+
+	on_repaired = {
+		add_eotc_aura_grand_ward = yes
+	}
+	is_essential = yes
+}
+
+building_materiality_engine = {
+	base_buildtime = @b2_time
+	category = manufacturing
+	can_be_ruined = no
+	can_be_disabled = no
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		has_shroud_dlc = yes
+		exists = owner
+		owner = { has_origin = origin_shroud_forged }
+	}
+
+	empire_limit = {
+		base = 1
+		modifier = {
+			add = materiality_engine_available
+			check_variable = {
+				which = materiality_engine_available
+				value > 0
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_materiality_engine"
+	}
+
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = volatile_motes
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		cost = {
+			sr_zro = @b1_rare_cost
+		}
+		produces = {
+			alloys = 6
+			minerals = 12
+		}
+		upkeep = {
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = @building_static_jobs_high
+	}
+
+	country_modifier = {
+		damage_vs_psionic_empires_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = physics_unit_is_extradimensional_research_unit_tt
+	}
+	triggered_desc = {
+		text = NEW_LINE
+	}
+	triggered_desc = {
+		text = building_materiality_engine_tt
+	}
+
+	on_built = {
+		materiality_engine_on_built_effect = yes
+	}
+	on_destroy = {
+		if = {
+			limit = { exists = event_target:mindwarden_enclave_country }
+			event_target:mindwarden_enclave_country = {
+				add_trust = {
+					who = root.owner
+					amount = @mindwarden_opinion_lost_materiality_engine
+				}
+			}
+		}
+	}
+	is_essential = yes
+}
+
+building_chamber_of_silence = {
+	base_buildtime = @b2_time
+	category = government
+	can_be_disabled = no
+
+	building_sets = {
+		government
+		urban
+	}
+
+	base_cap_amount = 1
+
+	potential = {
+		owner = {
+			has_tradition = tr_psionics_shroud_psi_corps
+			has_origin = origin_endbringers
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOR = {
+				has_tradition = tr_psionics_shroud_psi_corps
+				has_origin = origin_endbringers
+			}
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			if = {
+				limit = {
+					exists = owner
+				}
+				if = {
+					limit = {
+						owner = { has_modifier = endbringers_paranoia }
+					}
+					text = building_chamber_of_silence_paranoia_tt
+				}
+				if = {
+					limit = {
+						owner = { has_modifier = endbringers_madness_1 }
+					}
+					text = building_chamber_of_silence_madness_1_tt
+				}
+				else_if = {
+					limit = {
+						owner = { has_modifier = endbringers_madness_2 }
+					}
+					text = building_chamber_of_silence_madness_2_tt
+				}
+				else_if = {
+					limit = {
+						owner = { has_modifier = endbringers_madness_3 }
+					}
+					text = building_chamber_of_silence_madness_3_tt
+				}
+				if = {
+					limit = {
+						owner = {
+							OR = {
+								has_modifier = endbringers_paranoia
+								has_modifier = endbringers_madness_1
+								has_modifier = endbringers_madness_2
+								has_modifier = endbringers_madness_3
+							}
+						}
+					}
+					text = newline
+				}
+				text = building_chamber_of_silence_destroyed_tt
+			}
+
+		}
+	}
+
+	inline_script = {
+		script = jobs/telepaths_add
+		AMOUNT = 200
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				num_assigned_jobs = {
+					job = telepath
+					value > 0
+				}
+			}
+		}
+		psionic_pop_bonus_workforce_mult = 1
+		mult = value:psionic_workforce_from_telepaths
+		# This is on the building instead of the jobs to prevent an infinite workforce loop
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_aura_intensification
+			}
+		}
+		psionic_aura_intensity_mult = 0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 500
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	on_built = {
+		owner = {
+			set_variable = {
+				which = num_chambers_of_silence
+				value = value:count_building_chamber_of_silence
+			}
+			refresh_endbringers_paranoia_modifier = yes
+			refresh_endbringers_madness_modifier = yes
+		}
+	}
+
+	on_destroy = {
+		# Building here is already removed from the planet
+		owner = {
+			set_variable = {
+				which = num_chambers_of_silence
+				value = value:count_building_chamber_of_silence
+			}
+			refresh_endbringers_paranoia_modifier = yes
+			refresh_endbringers_madness_modifier = yes
+		}
+	}
+
+	on_repaired = {
+		owner = {
+			set_variable = {
+				which = num_chambers_of_silence
+				value = value:count_building_chamber_of_silence
+			}
+			refresh_endbringers_paranoia_modifier = yes
+			refresh_endbringers_madness_modifier = yes
+		}
+	}
+	is_essential = yes
+}

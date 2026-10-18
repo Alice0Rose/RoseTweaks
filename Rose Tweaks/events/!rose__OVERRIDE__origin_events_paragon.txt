@@ -112,15 +112,12 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 	trigger = {
 		OR = {
 			has_origin = origin_legendary_leader_dictatorial
-			AND = {
-				has_country_flag = paragon_origin_reformists_gone
-				has_origin = origin_legendary_leader_imperial
-			}
+			has_origin = origin_legendary_leader_imperial
 		}
 		OR = {
 			has_finished_psionic_tradition = yes
 			has_tradition = tr_cybernetics_finish
-			has_country_flag = synthetic_empire
+			has_tradition = tr_synthetics_finish
 			has_tradition = tr_genetics_finish
 			has_tradition = tr_cloning_finish
 			has_tradition = tr_purity_finish
@@ -134,8 +131,8 @@ country_event = { #UTILITY - ascension launcher failsafe event, for players cont
 
 	immediate = {
 		country_event = {
-			# Change from 7200 (20 years) randomness to 720 (2 years) randomness
-			id = paragon.5201 days = 3600 random = 720 
+			# Change from 7200 (20 years) randomness to 480 (2 years) randomness
+			id = paragon.5201 days = 3600 random = 720
 		}
 		set_country_flag = rose_origin_legendary_leader_ascension_failsafe_triggered
 	}
