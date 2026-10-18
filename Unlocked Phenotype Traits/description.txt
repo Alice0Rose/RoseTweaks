@@ -1,0 +1,14 @@
+[h1]Features[/h1]
+This mod lets you add any phenotype trait to any phenotype! Genetic trait diversity can go crazy now :D And while it might seeeeem this is a little unbalanced, remember that there are specific portrait exceptions within phenotypes that let you cross phenotype trait lines normally anyways, this just lets you do that without having to use very specific portraits.
+
+As a side effect of this change, you can also remove positive phenotype traits without the ability to remove positive traits. This can't be fixed without doing a whole bunch of trait overriding which would greatly reduce the compatibility of this mod.
+
+[h1]Compatibility[/h1]
+This mod only overrides 1 vanilla scripted trigger, specifically the one which controls if you can add or remove phenotype traits (kinda obviously have to override that lol), which means it should be compatible with basically all other mods unless the mod is doing something which would make this mod redundant anyways :)
+
+common\scripted_triggers\05_scripted_triggers_traits.txt
+- can_add_or_remove_phenotype_traits
+
+[h1]Source Code and Wiki[/h1]
+[url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
+[url=https://github.com/Alice0Rose/RoseTweaks/wiki] Wiki [/url]
