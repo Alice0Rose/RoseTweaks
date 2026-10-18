@@ -224,6 +224,7 @@
 - Fixed Devastator Cannon not devastating (or shooting at all lol) by removing the firing arc and removing the min range
 - Fixed the script value low_habitability_bureaucrat_workforce for Fire Cult to allow it to scale with negative habitability again
 - Fixed a few Under One Rule events/effects which could lead to duplicate or no civics
+- Fixed Endbringers, Mindwardens, and Shroud-Forged AI empires having issues ascending because they wouldn't build their buildings
 
 # Credits
 - Russian localization by Rild2
