@@ -1,4 +1,0 @@
-#this = species, from = country
-can_add_or_remove_phenotype_traits = {
-	always = yes
-}

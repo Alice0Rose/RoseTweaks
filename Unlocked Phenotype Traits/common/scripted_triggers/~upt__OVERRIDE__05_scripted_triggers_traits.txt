@@ -1,0 +1,10 @@
+#this = species, from = country
+can_add_or_remove_phenotype_traits = {
+	OR = {
+		# Empire Creation
+		days_passed < 0
+		
+		# Genetic Ascension
+		can_do_advanced_gene_modding = yes
+	}
+}

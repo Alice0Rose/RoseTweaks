@@ -1,7 +1,5 @@
 [h1]Features[/h1]
-This mod lets you add any phenotype trait to any phenotype! Genetic trait diversity can go crazy now :D And while it might seeeeem this is a little unbalanced, remember that there are specific portrait exceptions within phenotypes that let you cross phenotype trait lines normally anyways, this just lets you do that without having to use very specific portraits.
-
-As a side effect of this change, you can also remove positive phenotype traits without the ability to remove positive traits. This can't be fixed without doing a whole bunch of trait overriding which would greatly reduce the compatibility of this mod.
+This mod lets you add any phenotype trait to any phenotype, so long as you are in empire creation or have one of the genetic ascensions. Genetic trait diversity can go crazy now :D And while it might seeeeem this is a little unbalanced, remember that there are specific portrait exceptions within phenotypes that let you cross phenotype trait lines normally anyways, this just lets you do that without having to use very specific portraits.
 
 [h1]Compatibility[/h1]
 This mod only overrides 1 vanilla scripted trigger, specifically the one which controls if you can add or remove phenotype traits (kinda obviously have to override that lol), which means it should be compatible with basically all other mods unless the mod is doing something which would make this mod redundant anyways :)
