@@ -87,6 +87,8 @@
 - Lubrication Pools is available to Synthetically ascended empires
 - Dark Consortium can be removed after the game has started once you have over 1500 monthly physics research
 - Removed the Spiritualist requirement for Ascensionist for individualist empires
+- Buffed Entropy Drinkers by halving the pop growth reduction of all the edicts and added a note to the tooltip of the edicts communicating that the number of Energy Thralls reduces the pop growth reduction
+- Buffed Superstitious Beliefs edict to give +0.5 Unity to Priests instead of +0.25
 
 ## Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires

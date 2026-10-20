@@ -1,0 +1,308 @@
+@Edict1Cost = 10
+@Edict2Cost = 15
+@Edict3Cost = 20
+
+@EdictPerpetual = -1
+
+#===================
+# Shroud Edicts
+#================
+
+# Entropy Drinkers
+energy_drain = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_entropy_drinkers_empire = yes
+	}
+
+	show_tech_unlock_if = {
+		is_entropy_drinkers_empire = yes
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = no 
+		}
+		logistic_growth_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.2|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = yes 
+		}
+		planet_pop_assembly_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.2|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	effect = {
+		custom_tooltip = edict_energy_drain_tt
+		
+		# Individualistic
+		if = {
+			limit = { is_gestalt = no }
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination
+		}
+		# Gestalt
+		else = {
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination_gestalt
+		}
+	}
+}
+
+sanguine_council = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_entropy_drinkers_empire = yes
+		is_machine_empire = no
+	}
+
+	show_tech_unlock_if = {
+		is_entropy_drinkers_empire = yes
+		is_machine_empire = no
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = no 
+		}
+		logistic_growth_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.1|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = yes 
+		}
+		planet_pop_assembly_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.1|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	modifier = {
+		council_agenda_progress_speed = 0.25
+	}
+	
+	effect = {
+		# Individualistic
+		if = {
+			limit = { is_gestalt = no }
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination
+		}
+		# Gestalt
+		else = {
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination_gestalt
+		}
+	}
+}
+
+sanguine_council_machine = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_entropy_drinkers_empire = yes
+		is_machine_empire = yes
+	}
+
+	show_tech_unlock_if = {
+		is_entropy_drinkers_empire = yes
+		is_machine_empire = yes
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = no 
+		}
+		logistic_growth_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.1|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = yes 
+		}
+		planet_pop_assembly_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.1|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	modifier = {
+		council_agenda_progress_speed = 0.25
+	}
+	
+	effect = {
+		# Individualistic
+		if = {
+			limit = { is_gestalt = no }
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination
+		}
+		# Gestalt
+		else = {
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination_gestalt
+		}
+	}
+}
+
+psychic_feast = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			sr_zro = 3
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			sr_zro = 3
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_entropy_drinkers_empire = yes
+	}
+
+	show_tech_unlock_if = {
+		is_entropy_drinkers_empire = yes
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = no 
+		}
+		logistic_growth_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.3|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_synthetic_empire = yes 
+		}
+		planet_pop_assembly_mult = 1
+		multiplier = value:entropy_drinkers_edicts_pop_growth|POP_GROWTH|-0.3|JOB_GROWTH_COMPENSATION|0.0002|
+	}
+
+	modifier = {
+		councilor_skill_add = 2
+	}
+	
+	effect = {
+		# Individualistic
+		if = {
+			limit = { is_gestalt = no }
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination
+		}
+		# Gestalt
+		else = {
+			custom_tooltip = rose_entropy_drinkers_edict_compensation_explaination_gestalt
+		}
+	}
+}
+
+# Superstitious Beliefs
+galactic_dowsing = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		planet_bureaucrats_unity_produces_add = 0.5
+		deposit_increase_on_survey_chance_mult = 0.1
+	}
+
+	potential = {
+		is_superstitious_beliefs_empire = yes
+		is_gestalt = no
+	}
+
+	show_tech_unlock_if = {
+		is_superstitious_beliefs_empire = yes
+		is_gestalt = no
+	}
+}
+
+galactic_dowsing_gestalt = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		planet_bureaucrats_unity_produces_add = 0.5
+		deposit_increase_on_survey_chance_mult = 0.1
+	}
+
+	potential = {
+		is_superstitious_beliefs_empire = yes
+		is_gestalt = yes
+	}
+
+	show_tech_unlock_if = {
+		is_superstitious_beliefs_empire = yes
+		is_gestalt = yes
+	}
+}
+

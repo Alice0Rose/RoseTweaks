@@ -223,3 +223,7 @@
  rose_synthetic_choice.2.a: "Our new forms should match our §Yoriginal§! ones."
  rose_synthetic_choice.2.b: "We should match our §Yexisting robotic§! population."
  rose_synthetic_choice.2.c: "This is our chance to become something §Ynew§!."
+ 
+ # Entropy Drinkers Edict Compensation 
+ rose_entropy_drinkers_edict_compensation_explaination: "Each $job_energy_thrall$ reduces the §YPop Growth/Assembly Penalty§! by §G0.02%§!.\n"
+ rose_entropy_drinkers_edict_compensation_explaination_gestalt: "Each $job_drone_energy_thrall$ reduces the §YPop Growth/Assembly Penalty§! by §G0.02%§!.\n"
