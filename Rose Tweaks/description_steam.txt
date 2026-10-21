@@ -1,5 +1,5 @@
 [h1]Features[/h1]
-This mod adds a variety of balance changes, bug fixes, and new features. These range from small things, like fixing the incorrect alloy cost on a specific space fauna component, to game-changing features like Natural Arcologies, which alloy individualistic empires to turn Gaia worlds (or non-Gaia worlds with specific civics/traits) into the equivalent of a Hive or Machine world. 
+This mod adds a variety of balance changes, bug fixes, and new features. These range from small things, like fixing some of the many Under One Rule event chain bugs, to game-changing features like Natural Arcologies, which allow individualistic empires to turn Gaia worlds (or non-Gaia worlds with specific civics/traits) into the equivalent of a Hive or Machine world. 
 
 [h2]Tweaked Stuff[/h2]
 [list]
@@ -75,7 +75,7 @@ This is just a highlight of the the things added/changed because listing them al
 [h1]Compatibility[/h1]
 Wherever possible I've implemented things without overriding vanilla files, but that's only possible sometimes. Due to the extent of changes, there are a lot of files overridden, more than can be listed here. However I've tested this mod with both Gigastructures and ACoT, and it doesn't have any conflicts I've noticed.
 
-This mod should be put near or at the top of the load order, and defintely above any mods you want to work more than this one :)
+This mod should be put near or at the top of the load order, and definitely above any mods you want to work more than this one :)
 
 [h1]Credits[/h1]
 - Russian localization by Rild2

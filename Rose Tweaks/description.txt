@@ -209,6 +209,7 @@
 - Nanite Harvesters now upgrade at a scaling rate based on midgame and endgame dates instead of a static 5 years (at default dates it's still every 5 years)
 - Synthetic Virtuality gives a trait to pops that gives -10% empire size from pops and -50% housing usage upon finishing the authority event chain
 - Nanite Interdictors now have an Artillery section without hangers but with more L slots
+- Removed the annoying and buggy galaxy-wide notifications for empires that Psionically ascend
 
 ## Special Projects:
 - Adds a special project when you control Terminal Egress to destroy all other L-Gates except for one, limiting access to the L-Cluster
