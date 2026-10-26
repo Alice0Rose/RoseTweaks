@@ -1,0 +1,127 @@
+# Saves crisis strength from scoped crisis country as rose_scaling_paladins_crisis_strength
+# Credit to Dynamic Crisis Strength by Kano for this method
+# Scope: country (should be a crisis faction)
+rose_scaling_paladins_get_crisis_strength = {
+	# Gets the crisis's combat bonuses
+	export_modifier_to_variable = { 
+		modifier = ship_weapon_damage 
+		variable = rose_scaling_paladins_crisis_ship_weapon_damage
+	}
+	export_modifier_to_variable = { 
+		modifier = ship_hull_mult 
+		variable = rose_scaling_paladins_crisis_ship_hull_mult
+	}
+	export_modifier_to_variable = { 
+		modifier = ship_armor_mult 
+		variable = rose_scaling_paladins_crisis_ship_armor_mult
+	}
+	export_modifier_to_variable = { 
+		modifier = ship_shield_mult 
+		variable = rose_scaling_paladins_crisis_ship_shield_mult
+	}
+	
+	# Gets the lowest of the combat bonuses as some of them may be boosted from other sources but its unlikely they all will be
+	set_variable = { 
+		which = rose_scaling_paladins_crisis_strength 
+		value = rose_scaling_paladins_crisis_ship_weapon_damage
+	}
+	
+	if = {
+		limit = {
+			check_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value > rose_scaling_paladins_crisis_ship_hull_mult
+			}
+		}
+		set_variable = { 
+			which = rose_scaling_paladins_crisis_strength 
+			value = rose_scaling_paladins_crisis_ship_hull_mult
+		}
+	}
+	
+	if = {
+		limit = {
+			check_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value > rose_scaling_paladins_crisis_ship_armor_mult
+			}
+		}
+		set_variable = { 
+			which = rose_scaling_paladins_crisis_strength 
+			value = rose_scaling_paladins_crisis_ship_armor_mult
+		}
+	}
+	
+	if = {
+		limit = {
+			check_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value > rose_scaling_paladins_crisis_ship_shield_mult
+			}
+		}
+		set_variable = { 
+			which = rose_scaling_paladins_crisis_strength 
+			value = rose_scaling_paladins_crisis_ship_shield_mult
+		}
+	}
+	
+	clear_variable = rose_scaling_paladins_crisis_ship_weapon_damage
+	clear_variable = rose_scaling_paladins_crisis_ship_hull_mult
+	clear_variable = rose_scaling_paladins_crisis_ship_armor_mult
+	clear_variable = rose_scaling_paladins_crisis_ship_shield_mult
+	
+	# Divides the modifier by the difficulty's crisis modifier to get the actual crisis strength
+	switch = {
+		trigger = is_difficulty
+		0 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 0.01
+			} 
+		}
+		1 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 0.01
+			} 
+		}
+		2 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 0.9
+			} 
+		}
+		3 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 1.05
+			}
+		}
+		4 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 1.2
+			}
+		}
+		5 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 1.35
+			}
+		}
+		6 = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 1.5
+			}
+		}
+		default = { 
+			divide_variable = { 
+				which = rose_scaling_paladins_crisis_strength 
+				value = 0.01
+			}
+		}
+	}
+	
+	log = "Crisis \\[Root.GetName] has a strength of \\[Root.rose_scaling_paladins_crisis_strength]"
+}	

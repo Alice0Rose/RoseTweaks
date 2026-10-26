@@ -25,7 +25,6 @@ on_monthly_pulse = {
 on_monthly_pulse_country = {
 	events = {
 		rose_nanotech_traits.1
-		rose_scaling_paladins.1 # Gives the scaled paladin buff to all regular empires if crisis is on-going
 	}
 }
 
@@ -92,6 +91,15 @@ on_colony_transfer = {
 on_country_created = {
 	events = { # country_event
 		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
+		rose_scaling_paladins.1 # Gives/updates scaling paladin buff when crisis country spawns
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		rose_scaling_paladins.2 # Removes scaling paladin buff when crisis country is defeated if no others are present
 	}
 }
 

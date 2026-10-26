@@ -1,102 +1,24 @@
 namespace = rose_scaling_paladins
 
-# Gives/Removes scaled paladin modifier to empire if there's a crisis active
+# Gives/updates scaled paladin modifier to all regular empire if a crisis spawned
+# Triggered by on_country_created
 country_event = {
 	id = rose_scaling_paladins.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		is_regular_empire = yes
+		is_crisis_faction = yes
 	}
 
-	immediate = {		
-		# Gives modifier if crisis
-		if = {
-			limit = {
-				has_crisis = yes
-				NOR = {
-					has_modifier = rose_scaling_paladins_0
-					has_modifier = rose_scaling_paladins_1
-					has_modifier = rose_scaling_paladins_2
-					has_modifier = rose_scaling_paladins_3
-					has_modifier = rose_scaling_paladins_4
-					has_modifier = rose_scaling_paladins_5
-					has_modifier = rose_scaling_paladins_6
-				}
-			}
-			
-			# Scales modifier based on crisis strength
-			get_galaxy_setup_value = { 
-				which = rose_scaling_paladins_scalar 
-				setting = crisis_strength_scale 
-			}
-			
-			## Divides crisis strength scalar so Paladin ships aren't tooo strong
-			#divide_variable = { 
-			#	which = rose_scaling_paladins_scalar 
-			#	value = 2
-			#}
-			
-			# Gives modifier based on difficulty since difficulties scale crisis strength differently
-			switch = {
-				trigger = is_difficulty
-				0 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_0
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				1 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_1
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				2 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_2
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				3 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_3
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				4 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_4
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				5 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_5
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				6 = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_6
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-				default = { 
-					add_modifier = {
-						modifier = rose_scaling_paladins_0
-						multiplier = rose_scaling_paladins_scalar
-					} 
-				}
-			}
-		}
+	immediate = {
+		# Gets crisis strength as variable rose_scaling_paladins_crisis_strength
+		rose_scaling_paladins_get_crisis_strength = yes
+
+		every_country = {
+			limit = { is_country_type = default } 
 		
-		# Removes modifier if no crisis
-		if = {
-			limit = {
-				has_crisis = no
-			}
+			# Removes existing modifier if present
 			remove_modifier = rose_scaling_paladins_0
 			remove_modifier = rose_scaling_paladins_1
 			remove_modifier = rose_scaling_paladins_2
@@ -104,6 +26,110 @@ country_event = {
 			remove_modifier = rose_scaling_paladins_4
 			remove_modifier = rose_scaling_paladins_5
 			remove_modifier = rose_scaling_paladins_6
+				
+			# Gives modifier corresponding to difficulty scaled by crisis strength
+			switch = {
+				trigger = is_difficulty
+				0 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_0
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				1 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_1
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				2 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_2
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				3 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_3
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				4 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_4
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				5 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_5
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				6 = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_6
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+				default = { 
+					add_modifier = {
+						modifier = rose_scaling_paladins_0
+						multiplier = root.rose_scaling_paladins_crisis_strength
+					} 
+				}
+			}
 		}
+		clear_variable = rose_scaling_paladins_crisis_strength
+	}
+}
+
+# Triggers rose_scaling_paladins.3 in 30 days if a crisis dies to remove the scaled paladin modifier if no other crises are present
+# Triggered by on_country_destroyed
+country_event = {
+	id = rose_scaling_paladins.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_crisis_faction = yes
+	}
+
+	immediate = {		
+		every_country = {
+			limit = { is_country_type = default } 
+		
+			country_event = {
+				id = rose_scaling_paladins.3
+				days = 30
+			}
+		}
+	}
+}
+
+# Removes scaled paladin modifier if there are no crises active
+# Triggered by rose_scaling_paladins.2 30 days after a crisis is destroyed
+country_event = {
+	id = rose_scaling_paladins.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			any_country = { 
+				is_crisis_faction = yes
+			}
+		}
+	}
+
+	immediate = {		
+		# Removes modifier if present
+		remove_modifier = rose_scaling_paladins_0
+		remove_modifier = rose_scaling_paladins_1
+		remove_modifier = rose_scaling_paladins_2
+		remove_modifier = rose_scaling_paladins_3
+		remove_modifier = rose_scaling_paladins_4
+		remove_modifier = rose_scaling_paladins_5
+		remove_modifier = rose_scaling_paladins_6
 	}
 }

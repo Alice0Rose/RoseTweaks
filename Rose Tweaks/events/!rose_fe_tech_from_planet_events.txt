@@ -8,6 +8,10 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		is_country_type = default
+	}
+
 	immediate = {
 		set_variable = {
 			which = "rose_fe_planets_taken"
@@ -26,6 +30,7 @@ carrier_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		from = { is_country_type = default }
 		# Planet must have be a fallen empire planet or owned by a level 5 cosmogenesis empire
 		OR = {
 			has_carrier_flag = fallen_empire_world
