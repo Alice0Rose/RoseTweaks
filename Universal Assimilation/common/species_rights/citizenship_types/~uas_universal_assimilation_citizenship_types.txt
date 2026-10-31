@@ -9,20 +9,24 @@ citizenship_universal_assimilation = {
 			AND = {
 				has_technology = tech_universal_assimilation
 				
-				# Genocidal/assimilator civic empires wouldn't universally assimilate other species
+				# Fully genocidal empires wouldn't universally assimilate other species
+				# is_homicidal trigger but with the following exceptions:
+				# - scorched world heralds excluded because they can enslave non-thermophiles
+				# - behemoth crisis t5 because they can use other pops
+				# + purge vassals for nomadic empires
 				NOR = {
 					has_valid_civic = civic_fanatic_purifiers
 					has_valid_civic = civic_machine_terminator
-					has_valid_civic = civic_machine_assimilator
 					has_valid_civic = civic_hive_devouring_swarm
+					has_origin = origin_nomadic_purger
 				}
 				
-				# Virtual empires would cause jank with universal assimilation lol
+				# Virtual empires don't need this
 				NOT = { 	
 					has_tradition = tr_virtuality_adopt
 				}
 				
-				# Wilderness empires wouldn't make sense for this
+				# Wilderness empires use pops very differently
 				is_wilderness_empire = no
 			}
 		}
@@ -127,23 +131,49 @@ citizenship_universal_assimilation = {
 				}
 			}
 		}
+		custom_tooltip = {
+			fail_text = "universal_assimilation_forever_cruise_ongoing_fail_citizenship"
+			OR = {
+				from = {
+					NOT = { has_origin = origin_forever_cruise }
+					has_country_flag = forever_cruise_over
+				}
+				AND = {
+					is_founding_cruise_crew = no
+					is_founding_cruise_passenger = no
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
 		factor = 100
+		# Xenophobes would probably rather do a bit of purging or enslaving
+		modifier = {
+			factor = 0.2
+			from = {
+				is_xenophobe = yes
+			}
+		}
+		# Xenophiles would probably rather get freaky with xenos
+		modifier = {
+			factor = 0.02
+			from = {
+				is_xenophile = yes
+			}
+		}
+		# Xeno-Compatibility empires would DEFINITELY rather get freaky with xenos
 		modifier = {
 			factor = 0
 			from = {
-				OR = {
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_machine_terminator
-					has_valid_civic = civic_machine_assimilator
-					has_valid_civic = civic_hive_devouring_swarm
-
-					has_tradition = tr_virtuality_adopt
-					
-					is_wilderness_empire = no
-				}
+				has_ascension_perk = ap_xeno_compatibility
+			}
+		}
+		# Players can choose for themselves
+		modifier = {
+			factor = 0.005
+			from = {
+				is_ai = no
 			}
 		}
 	}
