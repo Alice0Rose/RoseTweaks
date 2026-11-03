@@ -1,0 +1,26 @@
+namespace = rose_here_be_dragons_peaceful_dragonscale
+
+# Gives dragonscale armor to a Here Be Dragons empire that has completed the full event chain and created a baby dragon
+# Trigged by on_ship_built
+# Root = Ship
+# From = Planet
+ship_event = {
+	id = rose_here_be_dragons_peaceful_dragonscale.0
+	title = rose_here_be_dragons_peaceful_dragonscale.0.name
+	desc = rose_here_be_dragons_peaceful_dragonscale.0.desc
+	picture = GFX_evt_here_be_dragons
+	show_sound = event_aqu_dragon
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ship_class = space_dragon_origin_baby
+		owner = { has_country_flag = dragon_breeders }
+	}
+	
+	option = {
+		name = EXCELLENT
+		owner = {
+			grant_dragon_armor_effect = yes
+		}
+	}
+}

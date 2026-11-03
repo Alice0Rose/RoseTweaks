@@ -574,6 +574,65 @@ civic_superstitious_beliefs = {
 	random_weight = { base = @civic_default_random_weight }
 }
 
+civic_secret_societies = {
+	playable = { has_shroud_dlc = yes }
+	ai_playable = { has_shroud_dlc = yes }
+	flags = { suppress_vanilla_factions }
+	description = "civic_secret_societies_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+		civics = { NOT = { value = civic_secret_societies_corporate } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_parliamentary_system
+				value = civic_media_conglomerate
+				value = civic_crowdsourcing
+				value = civic_corporate_crowdsourcing
+				value = civic_fanatic_purifiers
+				value = civic_secret_societies_corporate
+			}
+			NOR = {
+				text = civic_tooltip_not_scorched_earth
+				value = civic_scorched_earth
+				value = civic_hive_scorched_earth
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_broken_shackles
+				value = origin_cybernetic_creed
+				value = origin_unplugged
+			}
+		}
+	}
+	modification = {
+		add = {
+			hidden_trigger = {
+				has_civic = civic_secret_societies_corporate
+			}
+		}
+		remove = {
+			always = no
+		}
+	}
+	alternate_civic_version = civic_secret_societies_corporate
+
+	modifier = {
+		proxy_war_cost_mult = -0.25
+		operations_cost_mult = -0.5
+		espionage_operation_cost_mult = -0.25
+		envoys_add = 1
+		intel_encryption_add = 1
+	}
+
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+}
+
 civic_tankbound = {
 	playable = { has_shroud_dlc = yes }
 	ai_playable = { has_shroud_dlc = yes }

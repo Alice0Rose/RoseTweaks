@@ -1,0 +1,10 @@
+rose_nomadic_spirit = {
+	planet_building_build_speed_mult = 1
+	planet_building_capacity_add = 1
+	icon = "gfx/interface/icons/modifiers/mod_planet_building_time_mult.dds"
+}
+rose_settled_spirit = {
+	planet_building_build_speed_mult = 1
+	planet_building_capacity_add = 1
+	icon = "gfx/interface/icons/modifiers/mod_planet_building_time_mult.dds"
+}

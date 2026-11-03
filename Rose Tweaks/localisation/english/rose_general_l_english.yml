@@ -227,3 +227,13 @@
  # Entropy Drinkers Edict Compensation 
  rose_entropy_drinkers_edict_compensation_explaination: "Each $job_energy_thrall$ reduces the §YPop Growth/Assembly Penalty§! by §G0.02%§!.\n"
  rose_entropy_drinkers_edict_compensation_explaination_gestalt: "Each $job_drone_energy_thrall$ reduces the §YPop Growth/Assembly Penalty§! by §G0.02%§!.\n"
+ 
+ # Embarking and Settling Bonuses
+ rose_nomadic_spirit: "Nomadic Spirit"
+ rose_nomadic_spirit_desc: "Our people are galvanized as we take to the stars, making the initial outfitting of our new arkship an easier process."
+ rose_settled_spirit: "Settled Spirit"
+ rose_settled_spirit_desc: "Our people are galvanized as we settle this new planet, making the establishment and building-out of our new colony an easier process."
+ 
+ # Here Be Dragons Peaceful Dragon Scale
+ rose_here_be_dragons_peaceful_dragonscale.0.name: "A Promise Fulfilled"
+ rose_here_be_dragons_peaceful_dragonscale.0.desc: "With the birth of our first §Y$space_dragon_origin_baby$§!, §YHrozgar§! gifted us one of its scales. The material is stronger than anything we've seen before and will make a formidable armor for our ships."

@@ -1,0 +1,445 @@
+arkship_settle_planet_effect = {
+	hidden_effect = {
+		$SETTLING_COUNTRY$ = {
+			set_country_as_nomad_effect = { IS_NOMAD = no }
+			set_resource_converter = none
+			set_country_flag = settled_as_nomadic_empire
+			set_faction_properties = {
+				needs_border_access = yes
+			}
+			set_resource_converter = none
+			# Grant starting techs that are blocked for nomadic empires via starting_potential.
+			give_technology = { tech = tech_colonization_1				message = no }
+			give_technology = { tech = tech_starbase_1					message = no }
+			give_technology = { tech = tech_starbase_2					message = no }
+			give_technology = { tech = tech_space_defense_station_1		message = no }
+			give_technology = { tech = tech_solar_panel_network			message = no }
+			give_technology = { tech = tech_mechanized_mining			message = no }
+			# Grant higher-tier starbase techs if the empire has researched equivalent waystation technologies.
+			if = {
+				limit = { has_technology = tech_waystation_2 }
+				give_technology = { tech = tech_starbase_3				message = no }
+			}
+			if = {
+				limit = { has_technology = tech_waystation_3 }
+				give_technology = { tech = tech_starbase_4				message = no }
+			}
+			refresh_auto_generated_ship_designs = yes
+			every_issued_mission = {
+				cancel_contract = {
+					refund = no
+					show_message = no
+				}
+			}
+			every_owned_contract = {
+				cancel_contract = {
+					refund = no
+				}
+			}
+			if = {
+				limit = { has_country_flag = has_arkship_grand_archive_module }
+				remove_country_flag = ga_destroyed_contains_space_fauna
+				if = {
+					limit = { num_vivarium_slots > 0 }
+					set_country_flag = ga_destroyed_contains_space_fauna
+					release_all_vivarium_fauna = { LOCATION = $SETTLED_SYSTEM$ }
+				}
+				set_country_flag = grand_archive_destroyed
+				remove_country_flag = has_arkship_grand_archive_module
+			}
+			if = {
+				limit = { has_ascension_perk = ap_eternal_vigilance_nomads }
+				remove_ascension_perk = ap_eternal_vigilance_nomads
+				add_ascension_perk = ap_eternal_vigilance
+			}
+		}
+		$SETTLED_SYSTEM$ = {
+			remove_star_flag = nomad_settling_in_progress
+			create_starbase = {
+				size = starbase_starport
+				module = shipyard
+				module = solar_panel_network
+				building = crew_quarters
+				owner = $SETTLING_COUNTRY$
+			}
+			every_system_planet = {
+				limit = { has_deposit_for = shipclass_mining_station }
+				create_mining_station = { owner = $SETTLING_COUNTRY$ }
+			}
+			every_system_planet = {
+				limit = { has_deposit_for = shipclass_research_station }
+				create_research_station = { owner = $SETTLING_COUNTRY$ }
+			}
+		}
+		$SETTLED_PLANET$ = {
+			set_timed_carrier_flag = {
+				flag = nomad_recently_settled_flag
+				days = 1
+			}
+			if = {
+				limit = {
+					$SETTLING_COUNTRY$ = {
+						has_origin = origin_toxic_knights
+					}
+				}
+				$SETTLING_COUNTRY$ = {
+					remove_modifier = knights_detox_unlocked
+				}
+				if = {
+					limit = {
+						$SETTLING_ARKSHIP$ = {
+							has_carrier_flag = toxic_knights_arkship
+						}
+					}
+					if = {
+						limit = {
+							uses_district_set = habitat
+						}
+						set_planet_flag = toxic_knights_habitat
+					}
+					else = {
+						set_planet_flag = toxic_knights_settled_world
+					}
+				}
+				copy_deposit_from = {
+					SCOPE = $SETTLING_ARKSHIP$
+					DEPOSIT = d_toxic_god_pools_most_venemous_upgraded
+				}
+				copy_deposit_from = {
+					SCOPE = $SETTLING_ARKSHIP$
+					DEPOSIT = d_toxic_god_blight_upon_the_land_upgraded
+				}
+				copy_deposit_from = {
+					SCOPE = $SETTLING_ARKSHIP$
+					DEPOSIT = d_toxic_god_pestilential_wasteland_upgraded
+				}
+				copy_deposit_from = {
+					SCOPE = $SETTLING_ARKSHIP$
+					DEPOSIT = d_toxic_god_deitys_swarms_upgraded
+				}
+				copy_deposit_from = {
+					SCOPE = $SETTLING_ARKSHIP$
+					DEPOSIT = d_toxic_god_envenomed_seas_upgraded
+				}
+				if = {
+					limit = {
+						has_carrier_flag = toxic_knights_homeworld
+					}
+					$SETTLING_COUNTRY$ = {
+						country_event = {
+							id = toxoids.8030
+						}
+					}
+				}
+			}
+			transfer_carrier = {
+				source = $SETTLING_ARKSHIP$
+				target = this
+				transfer_ownership = yes
+				transfer_controller = yes
+				merge_pops = yes
+				destroy_colony = yes
+			}
+			create_sector = yes
+		}
+
+		$SETTLING_ARKSHIP$.fleet? = {
+			destroy_fleet = {
+				target = this
+				kill_leader = no
+			}
+		}
+		create_fleet = {
+			effect = {
+				set_owner = $SETTLING_COUNTRY$
+				create_ship = {
+					name = random
+					random_existing_design = constructor
+				}
+				set_fleet_stance = evasive
+				set_location = $SETTLED_PLANET$
+			}
+		}
+		create_ambient_object = {
+			type = ambient_arkship_destroyed
+		}
+	}
+	$SETTLED_PLANET$ = {
+		add_modifier = {
+			modifier = arkship_parts
+		}
+	}
+	# Gives settling empire a construction bonus for 5 years to help adjust to the settled lifestyle
+	add_modifier = {
+		modifier = rose_settled_spirit
+		years = 5
+	}
+}
+
+create_embarking_arkship = {
+	$NOMAD_COUNTRY$ = {
+		set_country_as_nomad_effect = { IS_NOMAD = yes }
+		country_event = {
+			id = nomads.20
+		}
+		set_resource_converter = nomadic_operational_reserves
+		set_variable = { which = contract_completed value = 0 }
+		# Arkship Random Event Director
+		country_event = {
+			id = arkship.1
+			random = 1800
+		}
+		set_country_flag = embarked_as_settled_empire
+		if = {
+			limit = {
+				$EMBARKED_PLANET$ = {
+					planet_devastation >= 70
+				}
+			}
+			set_country_flag = embarked_from_devastated_homeworld
+		}
+		set_faction_properties = {
+			needs_border_access = no
+		}
+		give_technology = { tech = tech_$ARKSHIP_TYPE$_arkship }
+		give_technology = { tech = tech_waystation_1 }
+		give_technology = { tech = tech_arkship_construction }
+		
+		# Gets the number of employed pops on the planet
+		$EMBARKED_PLANET$ = {
+			export_trigger_value_to_variable = {
+				trigger = count_owned_pop_amount
+				parameters = { 
+					limit = { 
+						is_unemployed = no
+						NOT = { is_pop_category = civilian }
+						NOT = { is_pop_category = maintenance_drone }
+					} 
+				}
+				variable = rose_embark_employed_pops
+			}
+			log = "Embarking planet \\[This.GetName] has a \\[This.rose_embark_employed_pops] employed pops."
+		}
+		
+		# Gives T2 and T3 arkship tech if embarked planet was big enough
+		if = {
+			limit = {
+				$EMBARKED_PLANET$ = { check_variable = { which = rose_embark_employed_pops value >= 8000 } }
+			}
+			give_technology = { tech = tech_arkship_tier_2 }
+		}
+		if = {
+			limit = {
+				$EMBARKED_PLANET$ = { check_variable = { which = rose_embark_employed_pops value >= 16000 } }
+			}
+			give_technology = { tech = tech_arkship_tier_3 }
+		}
+		
+		# Sets country flag to allow using the corresponding arkship agenda
+		if = {
+			limit = {
+				has_technology = tech_civilian_arkship
+			}
+			set_country_flag = starting_civilian_arkship
+		}
+		else_if = {
+			limit = {
+				has_technology = tech_science_arkship
+			}
+			set_country_flag = starting_science_arkship
+		}
+		else_if = {
+			limit = {
+				has_technology = tech_military_arkship
+			}
+			set_country_flag = starting_military_arkship
+		}
+		
+		# Gives embarking empire a construction bonus for 5 years to help adjust to the nomad lifestyle
+		add_modifier = {
+			modifier = rose_nomadic_spirit
+			years = 5
+		}
+		
+		refresh_auto_generated_ship_designs = yes
+		# Creates an arkship of with T1-3 based on employed pops on embarking planet
+		# T1: <8000
+		# T2: >=8000 and <16000
+		# T3: >=16000
+		if = {
+			limit = {
+				$EMBARKED_PLANET$ = { check_variable = { which = rose_embark_employed_pops value < 8000 } }
+			}
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					create_ship = {
+						create_colony = no
+						random_existing_design = $ARKSHIP_TYPE$_arkship_tier_1
+						effect = {
+							save_event_target_as = embarking_arkship
+							initialize_arkship_starbase_effect = yes
+							switch = {
+								trigger = is_ship_size
+								civilian_arkship_tier_1 = {
+									set_graphical_culture = civilian_arkship
+								}
+								science_arkship_tier_1 = {
+									set_graphical_culture = science_arkship
+								}
+								military_arkship_tier_1 = {
+									set_graphical_culture = military_arkship
+								}
+							}
+						}
+					}
+					set_location = {
+						target = $EMBARKED_PLANET$
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				$EMBARKED_PLANET$ = { 
+					AND = {
+						check_variable = { which = rose_embark_employed_pops value >= 8000 }
+						check_variable = { which = rose_embark_employed_pops value < 16000 }
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					create_ship = {
+						create_colony = no
+						random_existing_design = $ARKSHIP_TYPE$_arkship_tier_2
+						effect = {
+							save_event_target_as = embarking_arkship
+							initialize_arkship_starbase_effect = yes
+							switch = {
+								trigger = is_ship_size
+								civilian_arkship_tier_2 = {
+									set_graphical_culture = civilian_arkship
+								}
+								science_arkship_tier_2 = {
+									set_graphical_culture = science_arkship
+								}
+								military_arkship_tier_2 = {
+									set_graphical_culture = military_arkship
+								}
+							}
+						}
+					}
+					set_location = {
+						target = $EMBARKED_PLANET$
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				$EMBARKED_PLANET$ = { check_variable = { which = rose_embark_employed_pops value >= 16000 } }
+			}
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					create_ship = {
+						create_colony = no
+						random_existing_design = $ARKSHIP_TYPE$_arkship_tier_3
+						effect = {
+							save_event_target_as = embarking_arkship
+							initialize_arkship_starbase_effect = yes
+							switch = {
+								trigger = is_ship_size
+								civilian_arkship_tier_3 = {
+									set_graphical_culture = civilian_arkship
+								}
+								science_arkship_tier_3 = {
+									set_graphical_culture = science_arkship
+								}
+								military_arkship_tier_3 = {
+									set_graphical_culture = military_arkship
+								}
+							}
+						}
+					}
+					set_location = {
+						target = $EMBARKED_PLANET$
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}
+		$EMBARKED_PLANET$ = { clear_variable = rose_embark_employed_pops }
+	}
+}
+
+clean_up_settlement_subject_country_effect = {
+	refresh_auto_generated_ship_designs = yes
+	add_opinion_modifier = {
+		modifier = opinion_liberated_us
+		who = $OVERLORD$
+	}
+	copy_techs_from = {
+		target = $OVERLORD$
+		except = {
+			# Horizon Signal
+			tech_akx_worm_1
+			tech_akx_worm_2
+			tech_akx_worm_3
+		}
+	}
+	copy_traditions_from = {
+		target = $OVERLORD$
+	}
+	copy_ascension_perks_from = {
+		target = $OVERLORD$
+		exceptions = {
+			ap_defender_of_the_galaxy
+			ap_become_the_crisis
+			ap_cosmogenesis
+			ap_behemoths
+			ap_galactic_hyperthermia
+		}
+	}
+	set_subject_of = {
+		who = $OVERLORD$
+		preset = preset_vassal
+		allow_instant_negotiation = yes
+	}
+	$OVERLORD$ = {
+		add_intel = {
+			amount = 100
+			who = event_target:subject_country
+		}
+	}
+	random_agreement = {
+		add_loyalty = 200
+		if = {
+			limit = {
+				$OVERLORD$ = {
+					is_megacorp = yes
+				}
+			}
+			set_agreement_preset = {
+				preset = preset_subsidiary
+			}
+		}
+		if = {
+			limit = {
+				$OVERLORD$ = {
+					has_valid_civic = civic_inwards_perfection
+				}
+			}
+			set_agreement_preset = {
+				preset = preset_tributary
+			}
+		}
+	}
+}

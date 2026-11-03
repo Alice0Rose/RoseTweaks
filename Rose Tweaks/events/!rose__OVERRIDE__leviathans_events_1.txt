@@ -1,0 +1,150 @@
+namespace = leviathans
+
+# victorious admiral gains dragonslayer trait
+country_event = {
+	id = leviathans.670
+	title = leviathans.670.name
+	desc = {
+		text = leviathans.670.desc
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			fromfrom = {
+				exists = leader
+			}
+		}
+	}
+	desc = {
+		text = leviathans.670.desc.noleader
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			fromfrom = {
+				NOT = { exists = leader }
+			}
+		}
+	}
+	desc = {
+		text = leviathans.670.desc.gesta
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	picture = GFX_evt_space_dragon
+	location = fromfrom
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_country_type = guardian_dragon
+			NOR = {
+				has_country_flag = rubricator_dragon_country
+				has_country_flag = here_be_the_dragon
+			}
+		}
+		#fromfromfrom = {
+		#	has_fleet_flag = dragon_fleet
+		#}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_modifier = draconic_beats
+			}
+			remove_modifier = draconic_beats
+		}
+		fromfrom.solar_system = {
+			save_event_target_as = slain_guardian_system
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_event_chain = curator_poi_chain
+				event_target:slain_guardian_system = {
+					is_point_of_interest = {
+						id = curator_poi_dragon
+						event_chain = curator_poi_chain
+						owner = prev
+					}
+				}
+			}
+			remove_point_of_interest = curator_poi_dragon
+			end_curator_chain = yes
+		}
+	}
+
+	option = {
+		name = leviathans.670.a
+		trigger = {
+			can_harvest_dna = no
+		}
+		add_resource = { influence = 300 }
+		add_relic = r_dragon_trophy
+	}
+
+	option = {
+		name = galactic_features.385.reanimated
+
+		trigger = {
+			is_reanimator = yes
+		}
+
+		enable_special_project = {
+			name = "REANIMATE_GUARDIAN_DRAGON"
+			location = fromfrom.solar_system.star
+			owner = root.owner
+		}
+		
+		if = {
+			limit = { 
+				can_harvest_dna = yes 
+			}
+			set_country_flag = harvested_dragon_dna
+			custom_tooltip = aquatics.105.A.tooltip
+		}
+		add_resource = { influence = 300 }
+		add_relic = r_dragon_trophy
+	}
+
+	option = {
+		name = aquatics.105.A
+		trigger = {
+			can_harvest_dna = yes
+		}
+		set_country_flag = harvested_dragon_dna
+		custom_tooltip = aquatics.105.A.tooltip
+		add_resource = { influence = 300 }
+		add_relic = r_dragon_trophy
+	}
+
+
+	after = {
+		if = {
+			limit = { exists = fromfrom.leader }
+			fromfrom.leader = {
+				if = {
+					limit = {
+						leader_class = commander
+					}
+					add_trait = {
+						trait = leader_trait_dragonslayer
+					}
+				}
+			}
+		}
+		if = {
+			limit = { num_owned_planets > 0 }
+			generate_parade_city = yes
+			start_situation = {
+				type = leviathan_celebration_opportunity
+				target = event_target:parade_city
+				effect = {
+					set_situation_flag = celebration_ether_drake
+					set_situation_flag = standard_unity_reward
+				}
+			}
+		}
+	}
+}

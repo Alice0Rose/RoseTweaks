@@ -52,6 +52,16 @@ on_planet_class_changed = {
 	}
 }
 
+# Scope: Ship Event
+#A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		rose_here_be_dragons_peaceful_dragonscale.0 # Gives dragonscale armor on creation of first dragon baby
+	}
+}
+
 # A war has ended
 # Root = Loser
 # From = Main Winner

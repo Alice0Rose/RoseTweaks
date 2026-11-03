@@ -24,6 +24,7 @@
 - Inner Stability gives +10 on launch instead of +5
 - Psionic Supremacy agenda is available to psionic individualistic machines
 - Nanotech Unstoppable Swarm agenda includes Nanite Interdictors too
+- Arkship Development is available to Nomadic empires that Embarked
 
 ## Decisions:
 - The "Abandon Colony" Decision can be used to instantly resettle all pops from a planet (distributed to all other planets), destroy all buildings and districts, and destroy the colony at the cost of Energy Credits and Unity
@@ -32,6 +33,11 @@
 - The "Create Ringworld Arcologies" Decision can be used to add 5 district slots to a Ringworld, and is only accessible if you have the Arcology Project AP (or the Master Builders AP if gestalt)
 - "Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 - Shutdown Servers decision for Virtual empires also destroys orbital rings to prevent outliner spam
+- Embarking gives the Arkship Construction tech
+- Embarking from a planet with >8000 employed pops creates a T2 Arkship (and gives the corresponding tech)
+- Embarking from a planet with >16000 employed pops creates a T3 Arkship (and gives the corresponding tech
+- Embarking empires that leave behind a subject can immediately change the subject agreement
+- Embarking or Settling a planet gives +100% infrastructure build speed and +1 building queue capacity for 5 years
 
 ## Diplomacy:
 - Vassalization acceptance scales much higher (up to +1000) based on the power difference between empires
@@ -79,7 +85,8 @@
 - Crusader Spirit gives +0.5 Unity from Soldiers
 - Sovereign Guardianship no longer requires the Militarist ethic, only requiring not being Fanatic Pacifist, and is changed to +50% empire size from planets and -30% empire size from pops 
 - Superstitious Beliefs civic can be removed if you have over 500 of each science category
-- Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore 
+- Superstitious Beliefs civic can't snipe your leaders with Bad Luck Event 6 anymore
+- Superstitious Beliefs' edict gives +0.5 Unity to Priests instead of +0.25
 - Tankbound has its portrait restrictions lifted to allow any necroid, toxoid, or aquatic and it no longer stops working if you synthetically ascended
 - Environmentalist allows building Natural Arcologies without needing to clear all blockers first
 - Secret Societies gets a unity bonus from the total number of proxy wars started (up to 10) instead of only the current number active
@@ -87,8 +94,8 @@
 - Lubrication Pools is available to Synthetically ascended empires
 - Dark Consortium can be removed after the game has started once you have over 1500 monthly physics research
 - Removed the Spiritualist requirement for Ascensionist for individualist empires
-- Buffed Entropy Drinkers by halving the pop growth reduction of all the edicts and added a note to the tooltip of the edicts communicating that the number of Energy Thralls reduces the pop growth reduction
-- Buffed Superstitious Beliefs edict to give +0.5 Unity to Priests instead of +0.25
+- Entropy Drinkers' pop growth reduction of all the edicts is halved and there is now a note on the tooltip of the edicts communicating that the number of Energy Thralls reduces the pop growth reduction
+- Secret Societies gives -25% operation infiltration cost
 
 ## Origins:
 - Origins which spawn other AI empires cannot be selected by randomly generated AI empires
@@ -97,11 +104,11 @@
 	- Lost Colony
 - Here Be Dragons won't punish you for ascending too quickly by making you wait 2400 days before talking to you x-x
 - Here Be Dragons no longer has a limit on the number of baby dragons you can make ^^
+- Here Be Dragons Dragon Communication special project has an additionally potential trigger of reaching 5 ascension perks in-case the galaxy is exceptionally empty
+- Here Be Dragons empires that start a family with Hrozgar will receive the tech for dragonscale armor
 - Slingshot to the Stars starts with the Quantum Catapult on a Neutron Star instead of a Pulsar (won't remove your shields)
 - Under One Rule ascension event The Fall changed from 10-30 years to 15-17 years to trigger
 - Under One Rule ending event A New Age fixed to not trigger until reformists are gone and given a failsafe trigger, while also being changed to shift you to egalitarian if you chose to give power to the people, with an additional option for authoritarian empires added to let them shift to oligarchy without shifting to egalitarian
-
-- Authoritarian empires have an additional option for A New Age which lets them become an Oligarchy without shifting towards Egalitarian (the option to shift to Democracy and Egalitarian is still there)
 - Under One Rule English localisation fixed in certain events
 
 ## Opinion Modifiers:
@@ -213,6 +220,7 @@
 
 ## Special Projects:
 - Adds a special project when you control Terminal Egress to destroy all other L-Gates except for one, limiting access to the L-Cluster
+- Choosing to reanimate defeated leviathans will give all normal rewards instead of leaving some out
 
 ## Zones:
 - Added a full food zone to energy districts on habitats that gives them double the food jobs but no energy jobs
