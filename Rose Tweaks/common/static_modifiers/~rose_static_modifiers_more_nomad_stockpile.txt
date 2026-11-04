@@ -1,0 +1,4 @@
+rose_more_nomad_stockpile = {
+	hide_from_country_list = yes
+	situation_nomad_economy_max_progress_mult = 1
+}

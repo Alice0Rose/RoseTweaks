@@ -200,6 +200,7 @@
 
 ## Government:
 - Empires with 2 or more ethics will get an event at the start of the game to choose what their ruler's and homeworld governor's ethic will be
+- Arkship stockpiles are 100% larger from all sources
 
 ## Ascension:
 - Psionic covenant negative side effects no longer can randomly kill your leaders

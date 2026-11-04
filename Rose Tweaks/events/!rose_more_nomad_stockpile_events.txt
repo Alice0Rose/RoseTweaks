@@ -1,0 +1,20 @@
+namespace = rose_more_nomad_stockpile
+
+# Gives modifier to add more stockpile to all empires
+# Fire on_create_country and on_yearly_pulse to catch any stragglers
+country_event = {
+	id = rose_more_nomad_stockpile.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		NOT = { has_modifier = rose_more_nomad_stockpile }
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = rose_more_nomad_stockpile
+		}
+	}
+}

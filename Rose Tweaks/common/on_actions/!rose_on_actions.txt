@@ -32,6 +32,7 @@ on_monthly_pulse_country = {
 on_yearly_pulse_country = {
 	events = {
 		paragon.6035 # Ending of "Under One Rule" event failsafe if reformists are still vibin when it triggers naturally
+		rose_more_nomad_stockpile.0 # Gives extra stockpile modifier
 	}
 }
 
@@ -102,6 +103,7 @@ on_country_created = {
 	events = { # country_event
 		rose_fe_tech_from_planet.1 # Creates variable for number of FE planets taken
 		rose_scaling_paladins.1 # Gives/updates scaling paladin buff when crisis country spawns
+		rose_more_nomad_stockpile.0 # Gives extra stockpile modifier
 	}
 }
 
