@@ -1,0 +1,5 @@
+the_eater_of_worlds_blessing = {
+	icon = "gfx/interface/icons/modifiers/mod_add_attunement_the_eater_of_worlds.dds"
+	command_limit_mult = 0.10
+	country_naval_cap_mult = 0.15
+}

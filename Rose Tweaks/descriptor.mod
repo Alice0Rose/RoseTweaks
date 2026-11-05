@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Rose Tweaks"
-supported_version="v4.5.2"
+supported_version="v4.5.3"
 remote_file_id="3239568814"

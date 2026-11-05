@@ -1,8 +1,5 @@
 	NGameplay = {
 		NUM_DESTINY_TRAIT_OPTIONS				= 4	# Default number of destiny traits to select from
-		#POP_ETHOS_DIVERGENCE_RATE_MULT					= 0.10	# Chance of a pop evaluating its ethics every year
-		#POP_ETHOS_DIVERGENCE_SIZE_CHANGE_MIN			= 0.15	# Minimum % of pop size that will switch
-		#POP_ETHOS_DIVERGENCE_SIZE_CHANGE_MAX			= 0.30	# Maximum % of pop size that will switch
 		COMMAND_LIMIT_MAX										= 10000	# Max value of Command Limit
 		COMMAND_LIMIT_BASE										= 100	# Base value of Command Limit
 	}

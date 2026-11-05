@@ -15,8 +15,7 @@ country_event = {
 					NOR = {
 						has_star_flag = empire_home_system
 						has_star_flag = hostile_system
-						is_binary_star = yes
-						is_trinary_star = yes
+						is_multiple_star = yes
 					}
 				}
 				save_event_target_as = quantum_catapult_system
