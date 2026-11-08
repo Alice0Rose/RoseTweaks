@@ -1,4 +1,4 @@
 NGameplay = {
-	COMMAND_LIMIT_MAX										= 9999	# Max value of Command Limit
-	COMMAND_LIMIT_BASE										= 9999	# Base value of Command Limit
+	COMMAND_LIMIT_MAX										= 20000	# Max value of Command Limit
+	COMMAND_LIMIT_BASE										= 20000	# Base value of Command Limit
 }

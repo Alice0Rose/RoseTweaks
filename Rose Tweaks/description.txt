@@ -238,6 +238,8 @@
 - Fixed the script value low_habitability_bureaucrat_workforce for Fire Cult to allow it to scale with negative habitability again
 - Fixed a few Under One Rule events/effects which could lead to duplicate or no civics
 - Fixed Endbringers, Mindwardens, and Shroud-Forged AI empires having issues ascending because they wouldn't build their buildings
+- Fixed Telepath Drones not having the same job priority as regular Telepaths
+- Fixed Subterfuge finisher infiltration refund not working
 
 # Credits
 - Russian localization by Rild2

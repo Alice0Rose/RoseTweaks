@@ -90,13 +90,12 @@ building_fe_security_1 = {
 		script = jobs/enforcers_add
 		AMOUNT = @fe_jobs
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner? = { is_wilderness_empire = no }
-		}
-		job_enforcer_automated_workforce_mult = @fe_automation_specialist_1
-		job_patrol_drone_automated_workforce_mult = @fe_automation_specialist_1
+	
+	inline_script = {
+		script = jobs/fe_automation
+		JOB = enforcer
+		GESTALT_JOB = patrol_drone
+		TIER = specialist_1
 	}
 
 	triggered_desc = {
@@ -287,13 +286,11 @@ building_fe_security_2 = {
 		AMOUNT = @fe_jobs
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-		}
-		job_enforcer_automated_workforce_mult = @fe_automation_specialist_2
-		job_patrol_drone_automated_workforce_mult = @fe_automation_specialist_2
+	inline_script = {
+		script = jobs/fe_automation
+		JOB = enforcer
+		GESTALT_JOB = patrol_drone
+		TIER = specialist_2
 	}
 
 	triggered_desc = {

@@ -1,0 +1,6 @@
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		cybernetics.2026 # Runs yearly in case extra pops start spawning on already fully developed colonies
+	}
+}

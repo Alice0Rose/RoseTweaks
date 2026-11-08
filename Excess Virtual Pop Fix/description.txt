@@ -1,8 +1,8 @@
 [h1]Features[/h1]
-This mod fixes the issue of wayyyy too many virtual pops spawning on your colonies (especially noticeable with arkships after v4.4) by ethically removing all the extra pops :)
+This mod fixes the issue of wayyyy too many virtual pops spawning on your colonies (especially noticeable with arkships after v4.4) by "ethically" removing all the extra pops via a yearly pulse event and whenever colony infrastructure is changed :)
 
 [h1]Compatibility[/h1]
-This mod only overrides the cybernetics.2027 event in machine_age_events_2, which handles creating and destroying virtual pops, so its unlikely to have many compatibility issues with other mods.
+This mod overrides the cybernetics.2026 and cybernetics.2027 events in machine_age_events_2.txt, which handles creating and destroying virtual pops, so its unlikely to have many compatibility issues with other mods.
 
 [h1]Source Code and Wiki[/h1]
 [url=https://github.com/Alice0Rose/RoseTweaks] Source Code [/url]
