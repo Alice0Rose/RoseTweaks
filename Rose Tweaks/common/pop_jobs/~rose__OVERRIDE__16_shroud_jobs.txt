@@ -35,6 +35,6 @@ telepath_drone = {
 
 	weight = {
 		weight = @complex_drone_job_weight
-		mult = 2
+		mult = 5
 	}
 }

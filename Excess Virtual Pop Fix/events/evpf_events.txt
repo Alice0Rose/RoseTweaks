@@ -1,0 +1,19 @@
+namespace = evpf
+
+country_event = {
+	id = evpf.0
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_fallen_empire = no
+		has_active_tradition = tr_virtuality_finish
+	}
+
+	immediate = {
+		every_owned_colony = {
+			carrier_event = { id = cybernetics.2026 }
+		}
+	}
+}

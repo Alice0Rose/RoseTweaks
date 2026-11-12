@@ -78,6 +78,7 @@
 
 ## Civics:
 - Technocracy gives +0.5 Unity per researcher
+- Technocracy Council Position gives research to the corresponding researcher type instead of mixing up the types
 - Shadow Council gives +15% council agenda speed and +50% election term instead of election variance
 - Miners Guild gives +1 unity per miner
 - Shared Burdens and Worker Coop give +5% happiness and -5% empire size from pops
@@ -133,6 +134,7 @@
 
 ## Jobs:
 - Virtual Synthetic pops (but not Full Virtual pops) can be used in the Synthetic Lathe
+- Synapse Drone and Coordinator priority decreased from 1000 to 15 because it has no reason to be so high
 
 ## Factions:
 - Factions will now spawn after 2 years for all empires, regardless of if they've made contact with other empires, and will spawn immediately for Parliamentary System or Crowdsourcing empires
