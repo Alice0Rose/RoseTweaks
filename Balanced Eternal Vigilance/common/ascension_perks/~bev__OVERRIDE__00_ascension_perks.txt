@@ -35,7 +35,7 @@ ap_eternal_vigilance = {
 	}
 
 	on_enabled = {
-		custom_tooltip = ap_rose_eternal_vigilance_tt
+		custom_tooltip = ap_bev_eternal_vigilance_tt
 		hidden_effect = {
 			country_event = {
 				id = bev_eternal_vigilance_policy.1

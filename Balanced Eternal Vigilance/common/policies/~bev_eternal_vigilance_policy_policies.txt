@@ -145,12 +145,17 @@ bev_eternal_vigilance_platform_density_policy = {
 		is_nomadic = no
 	}
 
-	# Maximum Density: 75%
+	# 75% Density
+	# Requires Star Fortress
 	option = {
 		name = bev_eternal_vigilance_platform_density_policy_maximum
 
 		policy_flags = {
 			bev_eternal_vigilance_platform_density_policy_maximum
+		}
+
+		valid = {
+			has_technology = tech_starbase_4
 		}
 
 		AI_weight = {
@@ -184,12 +189,17 @@ bev_eternal_vigilance_platform_density_policy = {
 		}
 	}
 	
-	# Moderate Density: 50%
+	# 50% Density
+	# Requires Starhold
 	option = {
 		name = bev_eternal_vigilance_platform_density_policy_moderate
 
 		policy_flags = {
 			bev_eternal_vigilance_platform_density_policy_moderate
+		}
+
+		valid = {
+			has_technology = tech_starbase_3
 		}
 
 		AI_weight = {
@@ -210,7 +220,7 @@ bev_eternal_vigilance_platform_density_policy = {
 		}
 	}
 	
-	# Minimum Density: 25%
+	# 25% Density
 	option = {
 		name = bev_eternal_vigilance_platform_density_policy_minimum
 

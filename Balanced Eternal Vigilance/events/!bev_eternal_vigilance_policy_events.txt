@@ -34,7 +34,7 @@ country_event = {
 			}
 		}
 		
-		# Builds defense platforms on policy matching starbases up to policy matching percentage
+		# Builds or upgrades defense platforms on policy matching starbases up to policy matching percentage
 		# Full Coverage: Everything
 		if = {
 			limit = {
@@ -44,19 +44,20 @@ country_event = {
 				limit = {
 					fleet = { is_in_combat = no }
 					is_controlled_by = owner
-					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
 				}
-				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+				bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = { 
+					DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent 
+				}
 			}
 			every_owned_nonprimary_starbase = {
 				limit = {
 					fleet = { is_in_combat = no }
 					is_controlled_by = owner
-					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
 				}
-				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+				bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = { 
+					DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent 
+				}			
 			}
-
 		}
 		
 		# Standard Coverage: Everything but outposts
@@ -66,21 +67,25 @@ country_event = {
 			}
 			every_owned_starbase = {
 				limit = {
-					NOT = { has_starbase_size = starbase_outpost }
 					fleet = { is_in_combat = no }
 					is_controlled_by = owner
-					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+					
+					NOT = { has_starbase_size = starbase_outpost }
 				}
-				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+				bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = { 
+					DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent 
+				}
 			}
 			every_owned_nonprimary_starbase = {
 				limit = {
-					NOT = { has_starbase_size = starbase_outpost }
 					fleet = { is_in_combat = no }
 					is_controlled_by = owner
-					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+					
+					NOT = { has_starbase_size = starbase_outpost }
 				}
-				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+				bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = { 
+					DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent 
+				}
 			}
 		}
 		
@@ -91,24 +96,128 @@ country_event = {
 			}
 			every_owned_starbase = {
 				limit = {
-					is_starbase_type = sfortress
 					fleet = { is_in_combat = no }
 					is_controlled_by = owner
-					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
+					
+					is_starbase_type = sfortress
+					NOT = { has_starbase_size = starbase_outpost }
 				}
-				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+				bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = { 
+					DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent 
+				}
 			}
 			every_owned_nonprimary_starbase = {
 				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					
 					OR = {
 						is_starbase_type = sorbital_fortress
 						is_starbase_type = sdeepspacecitadel
 					}
+					NOT = { has_starbase_size = starbase_outpost }
+				}
+				bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = { 
+					DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent 
+				}
+			}
+		}
+		
+		# Deletes a free platform on starbases no long covered by policy
+		# No Coverage: deletes one from all starbases
+		if = {
+			limit = {
+				has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_no
+			}
+			every_owned_starbase = {
+				limit = {
 					fleet = { is_in_combat = no }
 					is_controlled_by = owner
-					used_defense_platform_capacity_percent < root.bev_eternal_vigilance_defense_platform_percent
 				}
-				bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+				bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+			}
+			every_owned_nonprimary_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+				}
+				bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+			}
+		}
+		
+		# Minimal Coverage: deletes one from all non-fortress starbases/orbital rings and DSC
+		else_if = {
+			limit = {
+				has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_minimal
+			}
+			every_owned_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					
+					OR = {
+						has_starbase_size = starbase_outpost
+						NOT = { is_starbase_type = sfortress }
+					}
+				}
+				bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+			}
+			every_owned_nonprimary_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					
+					NOR = {
+						is_starbase_type = sorbital_fortress
+						is_starbase_type = sdeepspacecitadel
+					}
+				}
+				bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+			}
+		}
+		
+		# Standard Coverage: deletes one from all unupgraded outposts
+		else_if = {
+			limit = {
+				has_policy_flag = bev_eternal_vigilance_starbase_coverage_policy_standard
+			}
+			every_owned_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					
+					has_starbase_size = starbase_outpost
+				}
+				bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+			}
+			every_owned_nonprimary_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					is_controlled_by = owner
+					
+					has_starbase_size = starbase_outpost
+				}
+				bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+			}
+		}
+		
+		# Removes a free platform on starbases above the density percentage, counting only free platforms
+		every_owned_starbase = {
+			limit = {
+				fleet = { is_in_combat = no }
+				is_controlled_by = owner
+			}
+			bev_eternal_vigilance_policy_remove_based_on_density = {
+				DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent
+			}
+		}
+		every_owned_nonprimary_starbase = {
+			limit = {
+				fleet = { is_in_combat = no }
+				is_controlled_by = owner
+			}
+			bev_eternal_vigilance_policy_remove_based_on_density = {
+				DENSITY_PERCENT = root.bev_eternal_vigilance_defense_platform_percent
 			}
 		}
 		
@@ -209,6 +318,7 @@ country_event = {
 					parameters = { 
 						limit = {
 							is_starbase_type = sfortress
+							NOT = { has_starbase_size = starbase_outpost }
 						}
 					}
 					variable = bev_eternal_vigilance_modifier_scalar_primary
@@ -223,6 +333,7 @@ country_event = {
 								is_starbase_type = sorbital_fortress
 								is_starbase_type = sdeepspacecitadel
 							}
+							NOT = { has_starbase_size = starbase_outpost }
 						}
 					}
 					variable = bev_eternal_vigilance_modifier_scalar_nonprimary
@@ -236,7 +347,7 @@ country_event = {
 			}
 		
 			# Adds modifier based on density policy scaled by number of starbases based on coverage policy
-			# Maximum
+			# Maximum: 75%
 			if = {
 				limit = { 
 					has_policy_flag = bev_eternal_vigilance_platform_density_policy_maximum
@@ -247,7 +358,7 @@ country_event = {
 				}
 			}
 			
-			# Moderate
+			# Moderate: 50%
 			else_if = {
 				limit = { 
 					has_policy_flag = bev_eternal_vigilance_platform_density_policy_moderate
@@ -258,7 +369,7 @@ country_event = {
 				}
 			}
 			
-			# Minimum
+			# Minimum: 25%
 			else = {
 				add_modifier = {
 					modifier = bev_eternal_vigilance_platform_density_policy_minimum_modifier

@@ -1,3 +1,4 @@
+# Scope: Starbase
 bev_eternal_vigilance_policy_spawn_free_defense_platform = {
 	fleet = {
 		owner = {
@@ -12,6 +13,152 @@ bev_eternal_vigilance_policy_spawn_free_defense_platform = {
 			name = random
 			design = event_target:target_platform
 			graphical_culture = owner
+			effect = { set_ship_flag = bev_eternal_vigilance_free_platform }
 		}
 	}
+}
+
+# Scope: Starbase
+bev_eternal_vigilance_policy_remove_free_defense_platform = {
+	fleet = {
+		# Deletes a random free defense platform, prioritizing upgradable ones
+		random_owned_ship = {
+			limit = { 
+				has_ship_flag = bev_eternal_vigilance_free_platform 
+			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 1000000
+					can_be_upgraded = yes
+				}
+			}
+			delete_ship = this
+		}
+	}		
+}
+
+# Scope: Starbase
+bev_eternal_vigilance_policy_upgrade_free_defense_platform = {
+	# Deletes the lowest ID defense platform and then recreates it
+	bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+	bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+}
+
+# Scope: Starbase
+bev_eternal_vigilance_policy_build_or_upgrade_based_on_density = {
+	# Build free platform if below density
+	if = {
+		limit = {
+			used_defense_platform_capacity_percent < $DENSITY_PERCENT$
+		}
+		bev_eternal_vigilance_policy_spawn_free_defense_platform = yes
+	}
+	# Upgrade free platform instead if above or at density
+	else_if = {
+		limit = {
+			used_defense_platform_capacity_percent >= $DENSITY_PERCENT$
+		}
+		bev_eternal_vigilance_policy_upgrade_free_defense_platform = yes
+	}
+}
+
+# Scope: Starbase
+bev_eternal_vigilance_policy_remove_based_on_density = {
+	# Gets number of free platforms and divides it by the starbase's cap to get percentage used by free platforms
+	fleet = {
+		export_trigger_value_to_variable = {
+			trigger = count_owned_ship
+			parameters = { 
+				limit = {
+					has_ship_flag = bev_eternal_vigilance_free_platform 
+				}
+			}
+			variable = bev_eternal_vigilance_num_free_platforms
+		}
+		
+		# Only tries to delete free platforms if there are free platforms to delete
+		if = {
+			limit = {
+				check_variable = {
+					which = bev_eternal_vigilance_num_free_platforms
+					value > 0
+				}
+			}
+
+			export_trigger_value_to_variable = {
+				trigger = count_owned_ship
+				parameters = { 
+					limit = { 
+						is_ship_size = military_station_small
+					}
+				}
+				variable = bev_eternal_vigilance_num_platforms
+			}
+			
+			export_trigger_value_to_variable = {
+				trigger = count_owned_ship
+				parameters = { 
+					limit = { 
+						is_ship_size = ion_cannon
+					}
+				}
+				variable = bev_eternal_vigilance_num_ion_cannons
+			}
+			
+			# Accounts for ion cannons which take 8 slots
+			multiply_variable = {
+				which = bev_eternal_vigilance_num_ion_cannons
+				value = 8
+			}
+			change_variable = {
+				which = bev_eternal_vigilance_num_platforms
+				value = bev_eternal_vigilance_num_ion_cannons
+			}
+			
+			prev = {
+				export_trigger_value_to_variable = {
+					trigger = used_defense_platform_capacity_percent
+					variable = bev_eternal_vigilance_used_platform_cap
+					rounded = no
+				}
+			}
+			
+			# Gets platform cap by dividing current number of platforms by used percent of cap
+			divide_variable = {
+				which = bev_eternal_vigilance_num_platforms
+				value = prev.bev_eternal_vigilance_used_platform_cap
+			}
+			floor_variable = bev_eternal_vigilance_num_platforms
+			
+			# Gets percent of platform cap used by free platforms - 1
+			# Subtracts 1 so number of free platforms can always be 1 platform above density percentage cap
+			subtract_variable = {
+				which = bev_eternal_vigilance_num_free_platforms
+				value = 1
+			}
+			divide_variable = {
+				which = bev_eternal_vigilance_num_free_platforms
+				value = bev_eternal_vigilance_num_platforms
+			}
+			
+			clear_variable = bev_eternal_vigilance_num_platforms
+			clear_variable = bev_eternal_vigilance_num_ion_cannons
+			clear_variable = bev_eternal_vigilance_used_platform_cap
+		}
+	}
+	
+	# Deletes a platform if percent free plats is over policy percentage
+	if = {
+		limit = { 
+			fleet = {
+				check_variable = {
+					which = bev_eternal_vigilance_num_free_platforms
+					value > $DENSITY_PERCENT$
+				}
+			}
+		}
+		bev_eternal_vigilance_policy_remove_free_defense_platform = yes
+	}
+	fleet = { clear_variable = bev_eternal_vigilance_num_free_platforms }
 }
