@@ -52,7 +52,7 @@ This mod adds a variety of balance changes, bug fixes, and new features. These r
 
 [*]The "Construct Orbital Ring" Decision can be used to construct an orbital ring from the planet's build queue instead of with a construction ship. There are 3 versions for each of the orbital ring tiers
 
-[*]The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, or any natural world with the Environmentalist Civic
+[*]The "Create Natural Arcologies" Decision can be used to add most of the features of Ecumonopli to Gaia worlds, Ocean worlds with the Hydrocentric Ascension Perk, Volcanic worlds with the Planet Forgers civic, Tomb worlds with the Post-Apocalyptic Origin, or any natural world with the Environmentalist Civic
 
 [*]"Subsume World" agenda can be used by nanotech empires on their capital, and also give a clump of nanites on completion based on world size along wit doing less devastation
 

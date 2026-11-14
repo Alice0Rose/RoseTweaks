@@ -35,7 +35,7 @@ l_russian:
  decision_rose_natural_arcologies: "$rose_natural_arcologies$"
  decision_rose_natural_arcologies_desc: "Нашим искусным архитекторам по силам преобразить всю планету в органичное слияние множества городов и прекрасной дикой природы."
  decision_rose_natural_arcologies_effects: "§BУтраивает§! количество §Y$mod_district_jobs_mult$§!, £mod_planet_housing_add£ §Y$MOD_PLANET_HOUSING_ADD$§!, увеличивает §Y$mod_pop_cat_worker_bonus_workforce_mult$§!, и снимает текущие лимиты на все типы £district£ §CРайонов§!"
- not_allowed_decision_rose_natural_arcologies: "$TRIGGER_FAIL$Требуется §YИдеальный§! мир, гражданская модель §Y$civic_environmentalist$§!, или же §YОкеанический§! мир и бонус за стремление §Y$ap_hydrocentric$§!, или же §YВулканический§! мир и гражданская модель §Y$civic_world_forgers$§! или §Y$ap_galactic_hyperthermia$§! 3-го уровня."
+ not_allowed_decision_rose_natural_arcologies: "$TRIGGER_FAIL$Requires a §YGaia§! world, the §Y$civic_environmentalist$§! Civic, an §YOcean§! world and the §Y$ap_hydrocentric$§! Ascension Perk, a §YVolcanic§! world and the §Y$civic_world_forgers$§! Civic or §Y$ap_galactic_hyperthermia$§! Level 3, or a §YTomb§! world and the §Y$origin_post_apocalyptic$§! Origin"
  
  zone_rose_natural_arcologies_research_physics: "$zone_research_physics$"
  zone_rose_natural_arcologies_research_physics_desc: "$zone_research_physics_desc$" 

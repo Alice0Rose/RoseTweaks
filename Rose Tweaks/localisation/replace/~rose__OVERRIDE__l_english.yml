@@ -23,12 +23,14 @@
  #######################
  ### federations.yml ###
  #######################
+ origin_tooltip_post_apocalyptic_effects: "- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $SPECIES_TRAITS$ ['concept_survivor']\n- Unlocks the §Y$rose_natural_arcologies$§! Decision on §Y$pc_nuked_plural$§! §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!"
+ origin_tooltip_post_apocalyptic_machines_effects: "- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $SPECIES_TRAITS$ ['concept_robot_survivor']\n- Unlocks the §Y$rose_natural_arcologies$§! Decision on §Y$pc_nuked_plural$§! §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!"
  make_spiritualist_1_effect: "Non-spiritualist non-gestalt empires have §YBureaucratic§! buildings swapped for §YTemples§!.\nSpiritualist empires gain §G+1§! £unity£ §YUnity§! from £job_priest£ §Y$job_priest_plural$§!.\nAll empires gain §G+10%§! faster organic pop growth and §G+5%§! faster robotic pop assembly."
  
  #####################
  ### infernals.yml ###
  #####################
- civic_world_forgers_effects: "- Unlocks starting planet: ['concept_pc_volcanic']. \n- $GUARANTEED_RESEARCH_OPTION_STRING$ £society_research£ ['concept_volcanic_forge']. \n- Can construct £building£ §Y$building_volcanic_forge_1$§! building which adds £job_polytechnic_mentor£ ['concept_polytechnic_mentor']. \n- Planets with a £building£ §Y$building_volcanic_forge_1$§! will gradually turn into a §Y$pc_volcanic$§!. \n- ['concept_guaranteed_colonies'] will be §Y$climate_dry$§! worlds. \n- Unlocks the §Y$rose_natural_arcologies$§! Decision on §Y$pc_volcanic_plural$§! §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!""
+ civic_world_forgers_effects: "- Unlocks starting planet: ['concept_pc_volcanic']. \n- $GUARANTEED_RESEARCH_OPTION_STRING$ £society_research£ ['concept_volcanic_forge']. \n- Can construct £building£ §Y$building_volcanic_forge_1$§! building which adds £job_polytechnic_mentor£ ['concept_polytechnic_mentor']. \n- Planets with a £building£ §Y$building_volcanic_forge_1$§! will gradually turn into a §Y$pc_volcanic$§!. \n- ['concept_guaranteed_colonies'] will be §Y$climate_dry$§! worlds. \n- Unlocks the §Y$rose_natural_arcologies$§! Decision on §Y$pc_volcanic_plural$§! §R(requires §Y$ap_arcology_project$§! Ascension Perk)§!"
  
  #######################
  ### machine_age.yml ###
