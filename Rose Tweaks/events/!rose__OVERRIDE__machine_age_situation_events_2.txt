@@ -254,3 +254,83 @@ situation_event = { # Event to digitize pops
 		}
 	}
 }
+
+# Reassembled Armies: Upload new minds to defeated robot armies
+# An army has been killed in ground combat
+#	This = owner
+#	From = army
+#	FromFrom = opponent
+#	FromFromFrom = planet
+# Fired by: on_army_killed_in_combat
+country_event = {
+	id = synth.1550
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_synth_imperial = yes
+		has_country_flag = synth_virtual
+		from = {
+			OR = {
+				army_type = robotic_army
+				army_type = robotic_defense_army
+				army_type = machine_assault_3
+				army_type = individual_machine_assault_2
+				army_type = individual_machine_assault_3
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			2 = { }
+			1 = {
+				from = {
+					switch = {
+						trigger = army_type
+						robotic_army = {
+							create_army_on_planet = {
+								PLANET = fromfrom # Relative to the from scope wrapper
+								OWNER = root
+								TYPE = robotic_army
+								SPECIES = root.from.species
+							}
+						}
+						robotic_defense_army = {
+							create_army_on_planet = {
+								PLANET = fromfrom # Relative to the from scope wrapper
+								OWNER = root
+								TYPE = robotic_defense_army
+								SPECIES = root.from.species
+							}
+						}
+						machine_assault_3 = {
+							create_army_on_planet = {
+								PLANET = fromfrom # Relative to the from scope wrapper
+								OWNER = root
+								TYPE = machine_assault_3
+								SPECIES = root.from.species
+							}
+						}
+						individual_machine_assault_2 = {
+							create_army_on_planet = {
+								PLANET = fromfrom # Relative to the from scope wrapper
+								OWNER = root
+								TYPE = individual_machine_assault_2
+								SPECIES = root.from.species
+							}
+						}
+						individual_machine_assault_3 = {
+							create_army_on_planet = {
+								PLANET = fromfrom # Relative to the from scope wrapper
+								OWNER = root
+								TYPE = individual_machine_assault_3
+								SPECIES = root.from.species
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -2,6 +2,7 @@
 ## Armies:
 - Machine armies (Individualistic and Machine Intelligence) are linked to species, making them affected by species traits
 - Synthetic empires have access to Individualistic machine armies and associated technologies
+- Imperial Virtual Synthetic's army affect work for all robotic armies
 - Nanotech empires have access to Nanite Swarm armies which are similar to warforms but cost nanites and are faster to create
 
 ## Ascension Perks:
