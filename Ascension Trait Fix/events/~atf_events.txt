@@ -94,7 +94,23 @@ country_event = {
 			# Cyborg trait
 			if = {
 				limit = {
-					species = { has_trait = trait_cybernetic }
+					# Checks the leader's species or one of the subspecies of the owner's species has the cybernetic trait, cus cybernetic ascension doesn't always properly modify leader species
+					OR = {
+						species = { has_trait = trait_cybernetic }
+						owner = {
+							any_owned_species = {
+								is_subspecies = prevprev.species # Leader species
+								has_trait = trait_cybernetic
+							}
+						}
+					}
+					
+					# Respects the cyberization standards policy
+					NAND = {
+						owner = { has_policy_flag = cyberization_standards_limited }
+						has_ethic = ethic_spiritualist
+					}
+					
 					NOT = { has_trait = leader_trait_cyborg }
 				}
 				add_trait = {
