@@ -556,7 +556,7 @@ last_baol_system = {
 		init_effect = {
 			prevent_anomaly = yes
 			create_ambient_object = {
-				type = "abandoned_starbase_01_object"
+				type = "abandoned_grunur_starbase_01_object"
 			}
 			last_created_ambient_object = {
 				set_location = {

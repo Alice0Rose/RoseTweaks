@@ -54,6 +54,21 @@ country_event = {
 			}
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			owner = {
+				if = {
+					limit = { has_origin = origin_lost_makers }
+					country_event = {
+						id = forceofwill.3400
+						days = 10
+						scopes = { from = event_target:adSul_capital }
+					}
+				}
+			}
+		}
+	}
 }
 
 # Pain Rage Grief Fear
@@ -87,6 +102,21 @@ country_event = {
 			}
 			set_planet_entity = {
 				entity = "pc_nuked"
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			owner = {
+				if = {
+					limit = { has_origin = origin_lost_makers }
+					country_event = {
+						id = forceofwill.3400
+						days = 10
+						scopes = { from = event_target:adSul_capital }
+					}
+				}
 			}
 		}
 	}

@@ -89,8 +89,7 @@ dyson_gun_0 = {
 				is_star = yes
 				if = {
 					limit = {
-						is_trinary_star = no
-						is_binary_star = no
+						is_multiple_star = no
 					}
 					OR = {
 						is_star_class = sc_neutron_star
@@ -110,10 +109,10 @@ dyson_gun_0 = {
 	# root = system
 	# from = country
 	ai_weight = {
-		factor = 0 #15
+		factor = 0
 
 		modifier = {
-			factor = 2
+			factor = 0
 			owner? = {
 				resource_stockpile_compare = {
 					resource = energy
@@ -123,35 +122,35 @@ dyson_gun_0 = {
 		}
 
 		modifier = {
-			factor = 0.1
+			factor = 0
 			owner? = {
 				is_pacifist = yes
 			}
 		}
 
 		modifier = {
-			factor = 2
+			factor = 0
 			owner? = {
 				is_militarist = yes
 			}
 		}
 
 		modifier = {
-			factor = 0.1
+			factor = 0
 			owner? = {
 				is_xenophile = yes
 			}
 		}
 
 		modifier = {
-			factor = 2
+			factor = 0
 			owner? = {
 				is_xenophobe = yes
 			}
 		}
 
 		modifier = {
-			factor = 0.1
+			factor = 0
 			any_neighbor_system = {
 				exists = owner
 				NOT = {

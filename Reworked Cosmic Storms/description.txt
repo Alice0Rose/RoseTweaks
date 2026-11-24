@@ -1,6 +1,8 @@
 [h1]Features[/h1]
 This mod reworks cosmic storms to be less impactful and significantly less punishing if you choose not to interact with them. This is done by removing devastation from all storms except Nexus storms, making Planetary Shields more effective at reducing the negatives of storms, reducing and changing the modifiers for all storms, and making Nexus storms unable to spawn naturally and restricted to specific events like the Storm Chasers final situation or the adAkkaria super evil relic.
 
+Also all Galactic Community resolutions related to Cosmic Storms are removed by this mod :D
+
 A detailed breakdown of all storm effects (with reduced negatives from Planetary Shields shown in parentheses) follows:
 [list]
 [*]Electrical Storm
@@ -188,6 +190,28 @@ A detailed breakdown of all storm effects (with reduced negatives from Planetary
 
 [h1]Compatibility[/h1]
 This mod only overwrites files related to cosmic storms, so it should generally be compatible with other mods ^-^
+
+common\resolutions\04_resolutions_cosmic_storms_dlc.txt
+- resolution_cosmic_storms_shared_knowledge
+- resolution_cosmic_storms_shared_knowledge_repeal
+- resolution_cosmic_storms_protection_initiative
+- resolution_cosmic_storms_protection_initiative_repeal
+- resolution_cosmic_storms_galactic_management
+- resolution_cosmic_storms_galactic_management_repeal
+- resolution_cosmic_storms_utilization_protocols
+- resolution_cosmic_storms_utilization_protocols_repeal
+- resolution_cosmic_storms_manipulation_mandate
+- resolution_cosmic_storms_manipulation_mandate_repeal
+- resolution_cosmic_storms_advanced_storm_studies
+- resolution_cosmic_storms_advanced_storm_studies_repeal
+- resolution_cosmic_storms_galactic_emergency_relief
+- resolution_cosmic_storms_galactic_emergency_relief_repeal
+- resolution_cosmic_storms_storm_encouragement_mandate
+- resolution_cosmic_storms_storm_encouragement_mandate_repeal
+- resolution_cosmic_storms_control_restrictions
+- resolution_cosmic_storms_control_restrictions_repeal
+- resolution_cosmic_storms_preservation_initiative
+- resolution_cosmic_storms_preservation_initiative_repeal
 
 common\scripted_variables\07_scripted_variables_cosmic_storms.txt
 - cosmic_storm_base_monthly_devastation

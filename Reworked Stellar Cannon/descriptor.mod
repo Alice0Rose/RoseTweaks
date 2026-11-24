@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Reworked Stellar Cannon"
-supported_version="v4.5.*"
+supported_version="v4.6.*"
 remote_file_id="3769979377"
