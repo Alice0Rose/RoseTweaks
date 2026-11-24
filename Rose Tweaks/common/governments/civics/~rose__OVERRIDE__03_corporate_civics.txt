@@ -75,14 +75,15 @@ civic_worker_coop = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_egalitarian
-				value = ethic_egalitarian
+				text = civic_tooltip_fan_egalitarian
 				value = ethic_fanatic_egalitarian
+				value = ethic_absolute_egalitarian
 			}
 			NOR = {
 				text = civic_tooltip_not_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+				value = ethic_absolute_xenophobe
 			}
 		}
 		civics = {
@@ -186,6 +187,7 @@ civic_corporate_sovereign_guardianship = {
 		ethics = {
 			NOR = {
 				value = ethic_fanatic_pacifist
+				value = ethic_absolute_pacifist
 			}
 		}
 		origin = {
@@ -247,6 +249,7 @@ civic_corporate_superstitious_beliefs = {
 				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+				value = ethic_absolute_spiritualist
 			}
 		}
 		origin = {

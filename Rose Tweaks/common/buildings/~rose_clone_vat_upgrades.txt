@@ -106,6 +106,14 @@ building_rose_clone_vats_1 = {
 		}"
 		AMOUNT = 9
 	}
+	
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_country_flag = has_hall_module_propagation
+		}"
+		AMOUNT = 3
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -344,6 +352,14 @@ building_rose_clone_vats_2 = {
 		AMOUNT = 13.5
 	}
 
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_country_flag = has_hall_module_propagation
+		}"
+		AMOUNT = 4.5
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -575,6 +591,14 @@ building_rose_clone_vats_3 = {
 			has_tradition = tr_genetics_efficient_cloning
 		}"
 		AMOUNT = 18
+	}
+
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "owner? = {
+			has_country_flag = has_hall_module_propagation
+		}"
+		AMOUNT = 6
 	}
 
 	triggered_planet_modifier = {

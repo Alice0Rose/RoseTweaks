@@ -72,6 +72,7 @@ trait_uncanny_intuition = {
 	tags = { organic positive psionic species }
 
 	modifier = {
+		leader_species_weight_mult = 0.15
 		councilor_skill_add = 2
 	}
 

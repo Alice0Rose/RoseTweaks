@@ -14,6 +14,7 @@ origin_common_ground = {
 				text = civic_tooltip_not_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+				value = ethic_absolute_xenophobe
 			}
 		}
 		civics = {
@@ -59,11 +60,13 @@ origin_hegemon = {
 				text = civic_tooltip_not_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+				value = ethic_absolute_xenophobe
 			}
 			NOR = {
 				text = civic_tooltip_not_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
+				value = ethic_absolute_egalitarian
 			}
 		}
 		civics = {

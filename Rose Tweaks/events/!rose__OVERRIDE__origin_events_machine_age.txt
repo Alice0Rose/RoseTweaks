@@ -22,6 +22,7 @@ situation_event = {
 			weighted_random_owned_pop_group = {
 				limit = {
 					is_same_species = owner.species
+					is_sapient = yes
 					NOT = {	has_trait = trait_cybernetic }
 					pop_group_size > 0
 				}
@@ -29,6 +30,26 @@ situation_event = {
 					if = {
 						limit = {
 							NOT = { exists = event_target:cybercreedspecies@root.owner }
+						}
+						create_cyber_creed_species_effect = yes
+						event_target:cybercreedspecies_of_@species = {
+							save_global_event_target_as = cybercreedspecies@root.owner
+						}
+					}
+				}
+			}
+
+			every_owned_pop_group = {
+				limit = {
+					is_same_species = owner.species
+					is_sapient = no
+					NOT = {	has_trait = trait_cybernetic }
+					pop_group_size > 0
+				}
+				species = {
+					if = {
+						limit = {
+							NOT = { exists = event_target:cybercreedspecies_of_@species }
 						}
 						create_cyber_creed_species_effect = yes
 					}

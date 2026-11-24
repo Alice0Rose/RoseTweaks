@@ -20,10 +20,16 @@ auth_oligarchic = {
 			}
 		}
 		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
 			NOR = {
-				value = ethic_gestalt_consciousness
+				text = civic_tooltip_not_fan_egalitarian
 				value = ethic_fanatic_egalitarian
+				value = ethic_absolute_egalitarian
+			}
+			NOR = {
+				text = civic_tooltip_not_fan_authoritarian
 				value = ethic_fanatic_authoritarian
+				value = ethic_absolute_authoritarian
 			}
 		}
 	}
@@ -282,7 +288,7 @@ auth_corporate = {
 	}
 
 	playable = {
-		has_megacorp = yes
+		has_megacorp_dlc = yes
 	}
 	possible = {
 		origin = {
@@ -293,10 +299,11 @@ auth_corporate = {
 			}
 		}
 		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
 			NOR = {
-				value = ethic_gestalt_consciousness
-				value = ethic_fanatic_egalitarian
-				value = ethic_fanatic_authoritarian
+				show_at_empire_creation = no
+				value = ethic_absolute_egalitarian
+				value = ethic_absolute_authoritarian
 			}
 		}
 	}

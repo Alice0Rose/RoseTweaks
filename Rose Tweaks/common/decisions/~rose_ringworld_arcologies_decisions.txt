@@ -14,9 +14,9 @@ decision_rose_ringworld_arcologies = {
 
 	potential = {
 		is_ringworld = yes
+		NOT = { uses_district_set = shattered_ring_world }
 		NOT = { has_modifier = rose_ringworld_arcologies }
-		exists = owner
-		owner = {
+		owner? = {
 			OR = { 
 				has_ascension_perk = ap_arcology_project
 				

@@ -13,7 +13,7 @@ trade_federation = {
 	allow = {
 		federation_check_for_subject_trigger = yes
 		if = {
-			limit = { host_has_dlc = "Megacorp" }
+			limit = { has_megacorp_dlc = yes }
 			OR = {
 				is_megacorp = yes
 				has_valid_civic = civic_merchant_guilds
@@ -104,6 +104,7 @@ trade_federation = {
 		set_federation_law = treaties_separate_yes
 		set_federation_law = research_pact_no
 		set_federation_law = allow_subjects_to_join_no
+		set_federation_law = official_ideology_no
 		set_federation_flag = enable_federation_cooldowns
 		every_member = {
 			limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
@@ -397,6 +398,7 @@ spiritualist_federation = {
 		set_federation_law = commercial_pact_no
 		set_federation_law = research_pact_no
 		set_federation_law = allow_subjects_to_join_no
+		set_federation_law = official_ideology_no
 		set_federation_flag = enable_federation_cooldowns
 	}
 	ai_weight = {

@@ -23,13 +23,10 @@ ap_mind_over_matter = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_ascension_perks_2"
-				num_ascension_perks > 1
-			}
-		}
-		else_if = {
-			custom_tooltip = {
-				fail_text = "requires_ascension_perks_2"
-				num_ascension_perks > 1
+				OR = {
+					num_ascension_perks > 1
+					is_country_type = awakened_fallen_empire
+				}
 			}
 		}
 		custom_tooltip = {

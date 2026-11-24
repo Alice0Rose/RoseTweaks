@@ -6,8 +6,7 @@ orbital_ring_habitation = {
 	category = sm_colony_cat
 
 	potential = {
-		exists = owner
-		owner = { 
+		owner? = { 
 			OR = {
 				has_technology = tech_housing_2
 				has_technology = tech_housing_agrarian_idyll
@@ -42,8 +41,7 @@ orbital_ring_habitation = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = planet
-			planet = {
+			planet? = {
 				exists = owner.overlord
 				has_holding = {
 					holding = holding_orbital_assembly_complex

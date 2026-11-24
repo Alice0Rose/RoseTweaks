@@ -164,6 +164,21 @@ leader_election_weight = {
 		}
 		mult = 0.5
 	}
+	# Abysmal reduction if you are absolute xenophobic and the candidate is a xeno
+	modifier = {
+		custom_tooltip = {
+			success_text = Xeno
+			owner = {
+				has_ethic = ethic_absolute_xenophobe
+				NOT = { is_same_species = prev } #Invalidated if you have selective kinship
+				NAND = {
+					has_valid_civic = civic_selective_kinship
+					is_same_species_class = prev
+				}
+			}
+		}
+		mult = 0.0001
+	}
 	# Titanic reduction if you are fanatic xenophobic and the candidate is a xeno
 	modifier = {
 		custom_tooltip = {

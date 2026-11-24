@@ -3,7 +3,13 @@ decision_rose_natural_arcologies = {
 	owned_planets_only = yes
 	icon = decision_rose_natural_arcologies
 
-	enactment_time = 3600
+	enactment_time = {
+		base = 3600
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
@@ -13,6 +19,7 @@ decision_rose_natural_arcologies = {
 			influence = 200
 			alloys = 6250
 			food = 12500
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 		cost = {
 			trigger = {
@@ -21,6 +28,7 @@ decision_rose_natural_arcologies = {
 			influence = 200
 			alloys = 6250
 			minerals = 12500
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 

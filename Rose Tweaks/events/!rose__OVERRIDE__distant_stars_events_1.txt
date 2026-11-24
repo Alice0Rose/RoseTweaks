@@ -90,11 +90,8 @@ country_event = { #Death of the Matriarch
 		}
 
 		hidden_effect = {
-			if = {
-				limit = { is_country_type = default }
-				country_event = { id = distar.213 }
-				country_event = { id = galcom.110 days = 60 }
-			}
+			country_event = { id = distar.213 }
+			country_event = { id = galcom.110 days = 60 }
 		}
 	}
 

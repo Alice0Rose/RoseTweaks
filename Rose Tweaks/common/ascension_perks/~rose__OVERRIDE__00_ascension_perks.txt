@@ -100,6 +100,10 @@ ap_master_builders = {
 			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
+			factor = 4
+			has_ethic = ethic_absolute_pacifist
+		}
+		modifier = {
 			factor = 2
 			has_galactic_wonders = yes
 		}
@@ -108,10 +112,15 @@ ap_master_builders = {
 
 ap_arcology_project = {
 	potential = {
-		host_has_dlc = "Megacorp"
 		OR = {
-			is_regular_empire = yes
-			has_valid_civic = civic_machine_servitor
+			is_megacity_architects_empire = yes
+			AND = {
+				has_megacorp_dlc = yes
+				OR = {
+					is_regular_empire = yes
+					has_valid_civic = civic_machine_servitor
+				}
+			}
 		}
 		NOT = {
 			has_ascension_perk = ap_arcology_project
@@ -127,9 +136,20 @@ ap_arcology_project = {
 				has_technology = tech_housing_agrarian_idyll
 			}
 		}
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_2"
-			num_ascension_perks > 1
+		if = {
+			limit = {
+				is_megacity_architects_empire = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_ascension_perks_1"
+				num_ascension_perks > 0
+			}
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = "requires_ascension_perks_2"
+				num_ascension_perks > 1
+			}
 		}
 	}
 
@@ -178,12 +198,24 @@ ap_arcology_project = {
 			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
+			factor = 4
+			has_ethic = ethic_absolute_pacifist
+		}
+		modifier = {
 			factor = 2
 			has_ethic = ethic_materialist
 		}
 		modifier = {
 			factor = 3
 			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_absolute_materialist
+		}
+		modifier = {
+			factor = 100
+			is_megacity_architects_empire = yes
 		}
 	}
 }

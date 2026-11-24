@@ -47,6 +47,7 @@ arkship_settle_planet_effect = {
 				set_country_flag = grand_archive_destroyed
 				remove_country_flag = has_arkship_grand_archive_module
 			}
+			clear_arkship_galactic_hall_flags = yes
 			if = {
 				limit = { has_ascension_perk = ap_eternal_vigilance_nomads }
 				remove_ascension_perk = ap_eternal_vigilance_nomads
@@ -162,6 +163,13 @@ arkship_settle_planet_effect = {
 		}
 		create_ambient_object = {
 			type = ambient_arkship_destroyed
+		}
+		# Delayed so any scuttled arkship's pops have arrived and the converted districts have recalculated their jobs.
+		$SETTLED_PLANET$ = {
+			carrier_event = {
+				id = nomads.4706
+				days = 1
+			}
 		}
 	}
 	$SETTLED_PLANET$ = {

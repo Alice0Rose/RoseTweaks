@@ -34,23 +34,35 @@ give_next_terraforming_tech_option_effect = {
 }
 
 give_next_terraforming_tech_effect = {
-	inverted_switch = {
-		trigger = has_technology
-		tech_terrestrial_sculpting = {
-			give_technology = { tech = tech_terrestrial_sculpting }
+	if = {
+		limit = { is_nomadic = yes }
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
 		}
-		tech_climate_restoration = {
-			give_technology = { tech = tech_climate_restoration }
-		}
-		tech_ecological_adaptation = {
-			give_technology = { tech = tech_ecological_adaptation }
-		}
-		default = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier3researchreward
-				min = @tier3researchmin
-				max = @tier3researchmax
+	}
+	else_if = {
+		limit = { is_nomadic = no }
+		inverted_switch = {
+			trigger = has_technology
+			tech_terrestrial_sculpting = {
+				give_technology = { tech = tech_terrestrial_sculpting }
+			}
+			tech_climate_restoration = {
+				give_technology = { tech = tech_climate_restoration }
+			}
+			tech_ecological_adaptation = {
+				give_technology = { tech = tech_ecological_adaptation }
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
 			}
 		}
 	}
