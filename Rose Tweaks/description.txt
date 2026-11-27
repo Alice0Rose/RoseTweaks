@@ -113,6 +113,7 @@
 - Under One Rule ascension event The Fall changed from 10-30 years to 15-17 years to trigger
 - Under One Rule ending event A New Age fixed to not trigger until reformists are gone and given a failsafe trigger, while also being changed to shift you to egalitarian if you chose to give power to the people, with an additional option for authoritarian empires added to let them shift to oligarchy without shifting to egalitarian
 - Under One Rule English localisation fixed in certain events
+- Great Mosaic now has an event to focus your empires ethics on your ruling ethics, removing the innate +1 to all ethics after a few years of the start of the game
 
 ## Opinion Modifiers:
 - Fallen Empires dislike you 5x less for researching their tech if you aren't Cosmogenesis, since you aren't as much of a threat ;)
@@ -222,6 +223,8 @@
 - Synthetic Virtuality gives a trait to pops that gives -10% empire size from pops and -50% housing usage upon finishing the authority event chain
 - Nanite Interdictors now have an Artillery section without hangers but with more L slots
 - Removed the annoying and buggy galaxy-wide notifications for empires that Psionically ascend
+- Buffed Genomic Growth to give +1 Monthly organic pop growth per medical building tier and +3 Monthly organic pop growth Genomic Research Facilities
+- Buffed Environmental Integration to give +5% habitability per medical building tier and +20% habitability Genomic Research Facilities
 
 ## Special Projects:
 - Adds a special project when you control Terminal Egress to destroy all other L-Gates except for one, limiting access to the L-Cluster
@@ -242,6 +245,8 @@
 - Fixed a few Under One Rule events/effects which could lead to duplicate or no civics
 - Fixed Endbringers, Mindwardens, and Shroud-Forged AI empires having issues ascending because they wouldn't build their buildings
 - Fixed Telepath Drones not having the same job priority as regular Telepaths
+- Fixed the Utopian Communal Housing building that Pacifist Shared Burdens empires start with having a Rare Crystal upkeep that cannot be paid (only applies to the one you start with)
+- Fixed the tooltip for Exotic Metabolism so its not so janky
 
 # Credits
 - Russian localization by Rild2

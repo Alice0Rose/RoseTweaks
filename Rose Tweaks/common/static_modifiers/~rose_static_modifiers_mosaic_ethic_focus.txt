@@ -1,0 +1,4 @@
+rose_mosaic_ethic_focus = {
+	hide_from_country_list = yes
+	pop_ethic_attraction_add = -1 # Counters origin effect
+}

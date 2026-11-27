@@ -1,0 +1,52 @@
+namespace = rose_mosaic_ethic_focus
+
+# Triggered on_country_created
+# Gives event to choose
+country_event = {
+	id = rose_mosaic_ethic_focus.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_gestalt = no
+		has_origin = origin_great_mosaic
+	}
+
+	immediate = {
+		country_event = {
+			id = rose_mosaic_ethic_focus.1
+			days = 360
+			random = 60
+		}
+	}
+}
+
+# Triggered by rose_mosaic_ethic_focus.0 about 1 year after empire creation
+# Lets country choose if they wanna remove the ethic bonus or not
+country_event = {
+	id = rose_mosaic_ethic_focus.1
+	title = rose_mosaic_ethic_focus.1.name
+	desc = rose_mosaic_ethic_focus.1.desc
+	picture = GFX_evt_alien_propaganda
+	hide_window = no
+	is_triggered_only = yes
+
+	option = {
+		name = rose_mosaic_ethic_focus.1.a
+		custom_tooltip = "rose_mosaic_ethic_focus.1.a.desc"
+		hidden_effect = {
+			add_modifier = {
+				modifier = rose_mosaic_ethic_focus
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = rose_mosaic_ethic_focus.1.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

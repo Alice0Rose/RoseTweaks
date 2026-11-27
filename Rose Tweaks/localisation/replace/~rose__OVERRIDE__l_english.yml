@@ -9,6 +9,10 @@
  ### biogenesis.yml ###
  ######################
  tr_cloning_finish_tt: "Allows the adoption of ['concept_cloning_authorities']\n£building£ $building_clone_vats$ Upgrade Tier per £building£ §YCapital Building§! Tier: §G+1§!"
+ tr_cloning_genomic_growth_tt: "£mod_bonus_pop_growth£ $MOD_BONUS_POP_GROWTH$:\n$t$- per £building£ §YMedical Building§! Tier: §G+1§!\n$t$- from £building£ §Y$building_genomic_facility$§!: §G+3§!"
+ tr_cloning_genomic_growth_clone_army_tt: "£mod_bonus_pop_growth£ $MOD_BONUS_POP_GROWTH$:\n$t$- per £building£ §YMedical Building§! Tier: §G+1§!\n$t$- from £building£ §Y$building_genomic_facility$§!: §G+3§!\n£pop£ §Y$clone_soldier$ Pops§! sustained by ['building:building_genomic_facility', $building_genomic_facility_plural$]: §G+$@clones_sustained_basic|0$§!"
+ tr_mutation_environmental_integration_tt: "£mod_pop_environment_tolerance£ $MOD_POP_ENVIRONMENT_TOLERANCE$:\n$t$- per £building£ §YMedical Building§! Tier: §G+5%§!\n$t$- from £building£ §Y$building_genomic_facility$§!: §G+20%§!\n[GetEnvironmentalIntegrationEffects]"
+ tr_mutation_empowered_environmental_integration_tt: "£mod_pop_environment_tolerance£ $MOD_POP_ENVIRONMENT_TOLERANCE$:\n$t$- per £building£ §YMedical Building§! Tier: §G+5%§!\n$t$- from £building£ §Y$building_genomic_facility$§!: §G+20%§!\n[GetEmpoweredEnvironmentalIntegrationEffects]"
 
  ###################
  ### english.yml ###
@@ -88,3 +92,8 @@
  ### paragon_1.yml ###
  #####################
  councilor_technocracy_tt: "£society_research£ $produced_per_pop_group_unit$ $biologist_type_plural_with_icon$: §G+0.05§!\n£engineering_research£ $produced_per_pop_group_unit$ $engineer_type_plural_with_icon$: §G+0.05§!\n£physics_research£ $produced_per_pop_group_unit$ $physicist_type_plural_with_icon$: §G+0.05§!\n$consumer_goods_upkeep_per_pop_group_unit$ $researcher_type_plural_with_icon$: §R+0.1§!"
+ 
+ ###################
+ ### toxoids.yml ###
+ ###################
+ exotic_metabolism_tooltip: "$MOD_LOGISTIC_GROWTH_MULT$: §G+25%§!\n$t$- $MOD_POP_ENVIRONMENT_TOLERANCE$: §G+25%§!\n$t$- £exotic_gases£ §YExotic Gases§! Upkeep: §R+0.125§!"

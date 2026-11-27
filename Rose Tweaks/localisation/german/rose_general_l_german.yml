@@ -237,3 +237,12 @@
  # Here Be Dragons Peaceful Dragon Scale
  rose_here_be_dragons_peaceful_dragonscale.0.name: "A Promise Fulfilled"
  rose_here_be_dragons_peaceful_dragonscale.0.desc: "With the birth of our first §Y$space_dragon_origin_baby$§!, §YHrozgar§! gifted us one of its scales. The material is stronger than anything we've seen before and will make a formidable armor for our ships."
+
+ # Mosaic Ethic Focus
+ rose_mosaic_ethic_focus.1.name: "Focus Population's Ethics"
+ rose_mosaic_ethic_focus.1.desc: "While we have long celebrated the variety of ethics within our people, a more focused population may be more successful as we expand into the stars. A team of advisors have devised a plan to guide our population towards only the ethics our empire holds dearest."
+ rose_mosaic_ethic_focus.1.a: "Deploy the plan, our people need guidance"
+ rose_mosaic_ethic_focus.1.a.desc: "Our population will lose their innate attraction to all ethics, making them more receptive towards our governing ethics."
+ rose_mosaic_ethic_focus.1.b: "Scrap the plan, diversity is our strength"
+ 
+ rose_mosaic_ethic_focus: "Focused Mosaic Population"
